@@ -1,9 +1,14 @@
 # TFG
 *Estructura de carpetas*
+
 	- bin/ -> carpeta que contiene el ejecutable
+	
 	- data/ -> carpeta donde se encuentran los ficheros de datos que utilizaremos
+	
 	- include/ -> carpeta que contiene los archivos de cabecera (QKP.h y random.hpp)
+	
 	- src/ -> carpeta que contiene los archivos fuente (QKP.cpp y main.cpp)
+	
 	- obj/ -> carpeta que contiene los archivos objetos
 	
 *Contenido de los distintos archivos*
