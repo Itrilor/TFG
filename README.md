@@ -33,6 +33,6 @@ Ejecutar 'make' en el directorio donde se encuentra este archivo
 
 Ejecutar lo siguiente en el directorio 'bin/', es decir, donde está el ejecutable
 
-	'./ejecutable [seed] [nombre_datos]'
+	./QKP [seed] [nombre_datos]
 	
  Donde [nombre_datos] es el nombre del archivo de los datos
