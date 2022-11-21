@@ -19,10 +19,10 @@ using Random = effolkronium::random_static;
 
 QKP::QKP(){
   _n = 0;
-	_MatrizCoef = NULL;
-	_capacidad = 0;
-	_pesos = NULL;
-	_seed = 0;
+  _MatrizCoef = NULL;
+  _capacidad = 0;
+  _pesos = NULL;
+  _seed = 0;
   _solucion.clear();
   //_valoresActual.clear();
   _valorSolucion = 0;
