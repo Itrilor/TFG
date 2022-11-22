@@ -176,6 +176,23 @@ class QKP{
 	  
 	  bool checkAdd(int pos);
 	
+		/**
+		 * @brief Devuelve el valor de añadir un objeto considerando su peso
+		 * @param pos Índice del elemento que estamos considerando añadir
+		 * @param sol Solución que estamos considerando
+		 * @return El valor de añadir un objeto considerando su peso
+		 */
+
+		double valueIfAdded(int pos, vector<int> sol);
+		
+		
+		/**
+		 * @brief Devuelve el valor de añadir un objeto a la solución actual considerando su peso
+		 * @param pos Índice del elemento que estamos considerando añadir
+		 * @return El valor de añadir un objeto considerando su peso
+		 */
+		double valueIfAdded(int pos);
+	
 	  /**
 	   * @brief Recupera la información del problema desde un fichero y lo reconstruye
 	   * @param fDatos Fichero que contiene los datos
@@ -184,11 +201,11 @@ class QKP{
 		bool leerFicheroDatos(const char* fDatos);
 	
 	
-	//-----------------ALGORITMOS-----------------
-	void GreedyQKP(int max=0);
-	int busquedaLocal(const int nEvaluacionesMAX);
-	void RandomQKP();
-	void AGQKP();
+		//-----------------ALGORITMOS-----------------
+		void RandomQKP();
+		void GreedyQKP(int max=0);
+		//int busquedaLocal(const int nEvaluacionesMAX);
+		//void AGQKP();
 	
 	private:
 		int _n;								//Nº elementos
