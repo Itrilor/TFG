@@ -167,14 +167,14 @@ class QKP{
 	
 	  
 	  
-	  	/**
-	  	 *
-	  	 */
-		  void calcularPeso();
+	  /**
+	   *
+	   */
+	  void calcularPeso();
 	  
-	 	 bool checkAdd(int pos, double peso, vector<int> sol);
+	  bool checkAdd(int pos, double peso, vector<int> sol);
 	  
-		  bool checkAdd(int pos);
+	  bool checkAdd(int pos);
 	
 		/**
 		 * @brief Devuelve el valor de añadir un objeto considerando su peso
@@ -193,22 +193,22 @@ class QKP{
 		 */
 		double valueIfAdded(int pos);
 	
-		/**
-		 * @brief Recupera la información del problema desde un fichero y lo reconstruye
-		 * @param fDatos Fichero que contiene los datos
-		 * @return @b false si ha habido algún tipo de error, @b true en otro caso
- 		 */
+	  /**
+	   * @brief Recupera la información del problema desde un fichero y lo reconstruye
+	   * @param fDatos Fichero que contiene los datos
+	   * @return @b false si ha habido algún tipo de error, @b true en otro caso
+ 	   */
 		bool leerFicheroDatos(const char* fDatos);
 	
 	
 		//-----------------ALGORITMOS-----------------
-		void RandomQKP();
-		void GreedyQKP(int max=0);
+		void RandomQKP(int max=0);
+		void Greedy(int max_op=0);
 		//int busquedaLocal(const int nEvaluacionesMAX);
 		//void AGQKP();
 	
 	private:
-		int _n;				//Nº elementos
+		int _n;								//Nº elementos
 		double **_MatrizCoef; //
 		double _capacidad;
 		double *_pesos;
