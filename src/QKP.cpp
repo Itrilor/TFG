@@ -223,6 +223,8 @@ void QKP::Greedy(int max_op){
   double aux = 0;
   double max = 0;
   int pos_max = 0;
+  int aux_j=0;
+  bool inser=false;
 
   for(int i = 0; i < getSize();++i){
     indicesDatos.push_back(i);
@@ -232,20 +234,25 @@ void QKP::Greedy(int max_op){
   for(int i = 0; i < getSize() && !cond; ++i){
     for(int j = 0; j < indicesDatos.size(); ++j){
       if(checkAdd(indicesDatos[j])){
+        inser=true;
         aux = valueIfAdded(indicesDatos[j]);
         if(aux > max){
           max = aux;
           pos_max = indicesDatos[j];
+          aux_j = j;
         }
       }
     }
-    addSolucion(pos_max);
-    contador++;
-    indicesDatos.erase(indicesDatos.begin()+pos_max);
+    if(inser==true){
+      addSolucion(pos_max);
+      contador++;
+      indicesDatos.erase(indicesDatos.begin()+aux_j);
+    }
     max = 0;
-    if(max_op!=0 && max==contador){
+    if(max_op!=0 && max_op==contador){
       cond=true;
     }
+    inser=false;
   }
 }
 
@@ -354,6 +361,8 @@ void QKP::liberarMemoria(){
   if(!_solucion.empty()){
     _solucion.clear();
   }
+  _valorSolucion=0;
+  _pesoSolucion=0;
   /*if(!_valoresActual.empty()){
     _valoresActual.clear();
   }*/
