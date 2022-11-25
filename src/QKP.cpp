@@ -54,8 +54,8 @@ QKP & QKP::operator=(const QKP& orig){
 
 void QKP::setValor(int i, int j, double valor){
   if(i<0 || i>=_n || j<0 || j>= _n){
-    cerr << "Error en el acceso a la matriz, posición errónea.";
-    cerr << "\n " << i << "  "<< j << "\n";
+    cerr << "Error en el acceso a la matriz, posición errónea. (setValor)";
+    cerr << "\n " << i << "      "<< j << "\n";
   }
   else{
     _MatrizCoef[i][j] = valor;
@@ -67,8 +67,8 @@ void QKP::setValor(int i, int j, double valor){
 
 double QKP::getValor(int i, int j) const{
   if(i<0 || i>=_n || j<0 || j>= _n){
-    cerr << "Error en el acceso a la matriz, posición errónea.";
-    cerr << "\n " << i << "  "<< j << "\n";
+    cerr << "Error en el acceso a la matriz, posición errónea. (getValor)";
+    cerr << "\n " << i << "      "<< j << "\n";
     return -1;
   }
   else{
@@ -78,7 +78,7 @@ double QKP::getValor(int i, int j) const{
 
 void QKP::setPeso(int i, double peso){
   if(i<0 || i>=_n){
-    cerr << "Error en el acceso a la matriz, posición errónea.";
+    cerr << "Error en el acceso a la matriz, posición errónea (setPeso).";
     cerr << "\n " << i << "\n";
   }
   else{
@@ -88,7 +88,7 @@ void QKP::setPeso(int i, double peso){
 
 double QKP::getPeso(int i) const{
   if(i<0 || i>=_n){
-    cerr << "Error en el acceso a la matriz, posición errónea.";
+    cerr << "Error en el acceso a la matriz, posición errónea (getPeso).";
     cerr << "\n " << i << "\n";
     return -1;
   }
@@ -126,8 +126,11 @@ void QKP::setSeed(int seed){
 
 /********FUNCIONES ADICIONALES**************/
 void QKP::addSolucion(int pos, vector<int> sol, double val, double peso){
-  for(int i = 0; i<sol.size(); ++i){
-    val += getValor(pos,sol[i]);
+  if(!sol.empty()){
+    cout << "Vacio?\n";
+    for(int i = 0; i<sol.size(); ++i){
+      val += getValor(pos,sol[i]);
+    }
   }
   val+=getValor(pos,pos);
   peso+=getPeso(pos);
@@ -135,7 +138,16 @@ void QKP::addSolucion(int pos, vector<int> sol, double val, double peso){
 }
 
 void QKP::addSolucion(int pos){
-  addSolucion(pos, _solucion, _valorSolucion, _pesoSolucion);
+  //addSolucion(pos, _solucion, _valorSolucion, _pesoSolucion);
+  if(!_solucion.empty()){
+    for(int i = 0; i<_solucion.size(); ++i){
+      _valorSolucion += getValor(pos,_solucion[i]);
+    }
+  }
+
+  _valorSolucion+=getValor(pos,pos);
+  _pesoSolucion+=getPeso(pos);
+  _solucion.push_back(pos);
 }
 
 void QKP::calcularPeso(){
@@ -148,14 +160,19 @@ void QKP::calcularPeso(){
 
 bool QKP::checkAdd(int pos, double peso, vector<int> sol){
   bool contained = false;
+  if(sol.empty()){
+    return true;
+  }
   for(int i = 0; i < sol.size(); ++i){
     if(pos == sol[i])
       contained = true;
   }
   if(contained == true)
     return false;
-  else
-    return(getPeso(_solucion[pos])+peso < _capacidad);
+  else{
+    return(getPeso(pos)+peso < _capacidad);
+  }
+
 }
 
 bool QKP::checkAdd(int pos){
@@ -182,6 +199,7 @@ void QKP::RandomQKP(int max){
   bool cond = false;
   Random::seed(getSeed());
 
+
   for(int i = 0; i < getSize();++i){
     indicesDatos.push_back(i);
   }
@@ -198,7 +216,7 @@ void QKP::RandomQKP(int max){
   }
 }
 
-void QKP::Greedy(int max){
+void QKP::Greedy(int max_op){
   vector<int> indicesDatos;
   int contador = 0;
   bool cond = false;
@@ -225,7 +243,7 @@ void QKP::Greedy(int max){
     contador++;
     indicesDatos.erase(indicesDatos.begin()+pos_max);
     max = 0;
-    if(max!=0 && max==contador){
+    if(max_op!=0 && max==contador){
       cond=true;
     }
   }
