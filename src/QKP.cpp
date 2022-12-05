@@ -8,6 +8,7 @@
 #include <sstream>
 #include <math.h>
 #include <vector>
+#include <chrono>
 #include "QKP.h"
 #include "random.hpp"
 
@@ -172,7 +173,15 @@ bool QKP::checkAdd(int pos, double peso, vector<int> sol){
   else{
     return(getPeso(pos)+peso < _capacidad);
   }
+}
 
+bool QKP::checkAdd(int pos, double peso, int sol[]){
+  vector<int> sol_aux;
+  for(int i = 0; i < getSize(); ++i){
+    if(sol[i]==1)
+      sol_aux.push_back(i);
+  }
+  return checkAdd(pos, peso, sol_aux);
 }
 
 bool QKP::checkAdd(int pos){
@@ -191,6 +200,105 @@ double QKP::valueIfAdded(int pos){
   return valueIfAdded(pos, _solucion);
 }
 
+void QKP::generaSeleccionAleatoria(int sol[], double val){
+  vector<int> indices;
+  for(int i = 0; i < getSize(); ++i){
+    sol[i]=0;
+    indices.push_back(i);
+  }
+  val = 0;
+  Random::shuffle(indices);
+  for(int i = 0; i<getSize(); ++i){
+    if(checkAdd(indicesDatos[i], val, sol)){
+      sol[indicesDatos[i]]=1;
+      val += getPeso(indicesDatos[i]);
+    }
+  }
+}
+
+vector<int> QKP::torneoBinario(int numTorneos, double val[], int tam){
+  vector<int> index;
+  vector<int> res;
+
+  for(int i = 0; i<tam*2; ++i){
+    index.push_back(Random::get(0,tam-1));
+  }
+
+  for(int i = 0; i < numTorneos*2; i+=2){
+    if(val[index[i]]<val[index[i+1]]){
+      res.push_back(index[i]);
+    }
+    else{
+      res.push_back(index[i+1]);
+    }
+  }
+  return res;
+}
+
+void QKP::cruceUniforme(int p1[], int p2[], int h1[], int h2[]){
+  vector<int> indices;
+  for(int i = 0; i<getSize(); ++i){
+    indices.push_back(i);
+  }
+  indices.shuffle();
+
+  for(int i = 0; i<getSize; ++i){
+    if(i<getSize/2){
+      h1[indices[i]] = p1[indices[i]];
+      h2[indices[i]] = p2[indices[i]];
+    }
+    else{
+      h1[indices[i]] = p2[indices[i]];
+      h2[indices[i]] = p1[indices[i]];
+    }
+  }
+
+  // Rellenamos los hijos de forma aleatoria
+  //rellenaHijoAleatorio(h1,0.6);
+  //rellenaHijoAleatorio(h2,0.4);
+
+  // Hacemos las soluciones factibles
+  operadorReparacion(h1);
+  operadorReparacion(h2);
+}
+
+void QKP::operadorReparacion(int hijo[]){
+  double pesoHijo = calcularPeso(hijo);
+
+  //Tenemos que eliminar elementos
+  if(pesoHijo > getCapacidad()){
+
+  }
+  //Tendríamos que añadir elementos (más adelante)
+  else{
+
+  }
+}
+
+double QKP::calcularPeso(int sol[]){
+  double peso = 0;
+  for(int i = 0; i < getSize(); ++i){
+    if(sol[i]==1){
+      peso += getPeso(i);
+    }
+  }
+  return peso;
+}
+
+double QKP::calcularValor(int sol[]){
+  double valor = 0;
+  vector<int> indices;
+
+  for(int i = 0; i < getSize(); ++i){
+    if(sol[i]==1){
+      indices.push_back(i);
+      for(int j = 0; j<indices.size(); ++j){
+        valor+=getValor(i,j);
+      }
+    }
+  }
+  return valor;
+}
 
 /***********ALGORITMOS***********************/
 void QKP::RandomQKP(int max){
@@ -268,6 +376,47 @@ void QKP::Greedy(int max_op){
 
 }*/
 
+void QKP::AGEU(int numcro, double probm, const int tEvaluacionMAX){
+  //Inicializamos la semilla
+  Random::seed(getSeed());
+
+  //Variables
+  int numEsperadoCruces=1;
+  int matrizSoluciones[numcro][getSize()];
+  int matrizHijos[numEsperadoCruces*2][getSize()];
+  double dispersionPadre[numcro];
+
+  //Empezamos el cronómetro
+  auto start = std::chrono::high_resolution_clock::now();
+  //Creamos la población inicial
+  vector<int> indices;
+  for(int i = 0; i < numcro; ++i){
+    generaSeleccionAleatoria(matrizSoluciones[i],dispersionPadre[i]);
+  }
+
+  auto end = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> duration = end-start;
+
+  while(duration < tEvaluacionMAX){
+    //Estacionario
+    /*
+    Realizamos 2 torneos binarios aleatorios entre 4 elementos de la población
+    para obtener a los 2 padres que vamos a cruzar
+    */
+    indices = torneoBinario(2, dispersionPadre, numcro);
+    while(indices[0] == indices[1]){
+      indices = torneoBinario(2, dispersionPadre, numcro);
+    }
+
+    for(int i = 0; i < numcro; ++i){
+      if(i<numEsperadoCruces*2){
+        cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
+                      matrizHijos[i], matrizHijos[i+1]);
+      }
+    }
+
+  }
+}
 
 /********LEER FICHERO DE DATOS*****************/
 bool QKP::leerFicheroDatos(const char* fDatos){

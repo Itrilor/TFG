@@ -174,6 +174,8 @@ class QKP{
 	  
 	  bool checkAdd(int pos, double peso, vector<int> sol);
 	  
+	  bool checkAdd(int pos, double peso, int sol[]);
+	  
 	  bool checkAdd(int pos);
 	
 		/**
@@ -199,6 +201,15 @@ class QKP{
 	   * @return @b false si ha habido algún tipo de error, @b true en otro caso
  	   */
 		bool leerFicheroDatos(const char* fDatos);
+		
+		
+		//Funciones para Algoritmo Genético
+		void generaSeleccionAleatoria(int sol[], double val);		
+		vector<int> torneoBinario(int numTorneos, double val[], int tam);
+		void cruceUniforme(int p1[], int p2[], int h1[], int h2[]);
+		void operadorReparacion(int hijo[]);
+		double calcularPeso(int sol[]);
+		double calcularValor(int sol[]);
 	
 	
 		//-----------------ALGORITMOS-----------------
@@ -206,6 +217,7 @@ class QKP{
 		void Greedy(int max_op=0);
 		//int busquedaLocal(const int nEvaluacionesMAX);
 		//void AGQKP();
+		void AGEU(int numcro, double probm, const int tEvaluacionMAX);
 	
 	private:
 		int _n;								//Nº elementos
