@@ -267,7 +267,7 @@ void QKP::operadorReparacion(int hijo[]){
 
   //Tenemos que eliminar elementos
   if(pesoHijo > getCapacidad()){
-
+    eliminarElemento(hijo, pesoHijo);
   }
   //Tendríamos que añadir elementos (más adelante)
   else{
@@ -298,6 +298,44 @@ double QKP::calcularValor(int sol[]){
     }
   }
   return valor;
+}
+
+double QKP::calcularRelValor(int index, int sol[]){
+  double relValor=0;
+  if(sol[index==1]){
+    for(int i = 0; i < getSize(); ++i){
+      if(sol[i]==1){
+        relValor+=getValor(i,index);
+      }
+    }
+  }
+  relValor = relValor/getPeso(index);
+  return relValor;
+}
+
+void QKP::eliminarElemento(int hijo[], double peso){
+  double minRelValor = 0;
+  int indexMinRelValor;
+  double relValor = 0;
+  double valor_aux=0;
+  for(int i = 0; i < getSize(); ++i){
+    if(hijo[i]==1){
+      if(relValor==0){
+        minRelValor=calcularRelValor(i,hijo);
+        indexMinRelValor=i;
+      }
+      else{
+        relValor = calcularRelValor(i,hijo);
+        if(minRelValor > relValor){
+          indexMinRelValor = i;
+          minRelValor = relValor;
+        }
+      }
+    }
+  }
+  //Eliminamos el peor elemento
+  hijo[indexMinRelValor]=0;
+  peso = peso - getPeso(indexMinRelValor);
 }
 
 /***********ALGORITMOS***********************/

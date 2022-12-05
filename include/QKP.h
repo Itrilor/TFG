@@ -210,6 +210,8 @@ class QKP{
 		void operadorReparacion(int hijo[]);
 		double calcularPeso(int sol[]);
 		double calcularValor(int sol[]);
+		double calcularRelValor(int index, int sol[]);
+		void eliminarElemento(int hijo[], double peso);
 	
 	
 		//-----------------ALGORITMOS-----------------
