@@ -61,6 +61,27 @@ int main(int argc, char ** argv){
   cout << "El peso alcanzado sería: " << sequence.getPesoSolucion() << "\n";
   cout << "Tiempo de ejecución: " << tiempoGreedy << "microsegundos\n";
 
+  //------------ALGORITMO GENETICO ESTACIONARIO UNIFORME ----------------
+  cout << "Leemos " << argv[1] << "\n";
+  estado = sequence.leerFicheroDatos(argv[1]);
+  if(!estado){
+    cerr << "No se ha poddio leer correctamente\n";
+    exit(-1);
+  }
+
+  start = std::chrono::high_resolution_clock::now();
+  sequence.AGEU(10, 0.1, 5);
+  end = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> float_s = end-start;//seconds
+  double tiempoAGEU = float_s.count();
+
+  cout << "La secuencia obtenida por el Algoritmo Genético Estacionario Uniforme es:\n {";
+  for(int i = 0; i < sequence.getSolucion().size(); ++i){
+    cout << sequence.getSolucion()[i] << ",";
+  }
+  cout << "}\nEl valor alcanzado sería: " << sequence.getValorSolucion() << "\n";
+  cout << "El peso alcanzado sería: " << sequence.getPesoSolucion() << "\n";
+  cout << "Tiempo de ejecución: " << tiempoAGEU << "segundos\n";
 }
 
 void mensajeError(){

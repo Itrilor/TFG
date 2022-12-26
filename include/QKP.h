@@ -135,6 +135,8 @@ class QKP{
 		 */
 		void addSolucion(int pos, vector<int> sol, double val, double peso);
 		
+		//void addSolucion(int pos, int[] sol, double val, double peso);
+		
 		/**
 		 * @brief Añade un elemento a la solución actual, actualizando los valores
 		 * @param pos El id del elemento a añadir a la solución
@@ -187,6 +189,8 @@ class QKP{
 
 		double valueIfAdded(int pos, vector<int> sol);
 		
+		double valueIfAdded(int pos, int sol[]);	
+		
 		
 		/**
 		 * @brief Devuelve el valor de añadir un objeto a la solución actual considerando su peso
@@ -204,14 +208,25 @@ class QKP{
 		
 		
 		//Funciones para Algoritmo Genético
-		void generaSeleccionAleatoria(int sol[], double val);		
+		void generaSeleccionAleatoria(int sol[], double &val);		
 		vector<int> torneoBinario(int numTorneos, double val[], int tam);
 		void cruceUniforme(int p1[], int p2[], int h1[], int h2[]);
 		void operadorReparacion(int hijo[]);
 		double calcularPeso(int sol[]);
 		double calcularValor(int sol[]);
 		double calcularRelValor(int index, int sol[]);
-		void eliminarElemento(int hijo[], double peso);
+		void eliminarElemento(int hijo[], double &peso);
+		void anadirElemento(int hijo[], double &peso, int pos);
+		// Si ha podido añadir elemento -> true, si no -> false
+		bool anadirElementoGreedy(int hijo[], double &peso);
+		void cambioMutante(int bin[]);
+		bool checkSustituir(double peso, int pos1, int pos2);
+		void sustituirCrom(int bin[], double &peso, int pos1, int pos2);
+		int calcularMejorValor(double valor[], int tam);
+		int calcularPeorValor(double valor[], int tam);
+		vector<int> calcular2Peores(double valor[], int tam);
+		
+		vector<int> intToVector(int sol[]);
 	
 	
 		//-----------------ALGORITMOS-----------------
@@ -219,7 +234,7 @@ class QKP{
 		void Greedy(int max_op=0);
 		//int busquedaLocal(const int nEvaluacionesMAX);
 		//void AGQKP();
-		void AGEU(int numcro, double probm, const int tEvaluacionMAX);
+		void AGEU(int numcro, double probm, const double tEvaluacionMAX);
 	
 	private:
 		int _n;								//Nº elementos
