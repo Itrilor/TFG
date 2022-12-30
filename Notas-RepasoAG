@@ -1,0 +1,2 @@
+Pasar por referencia los parámetros de:
+  - addSolucion(int pos, vector<int> sol, double val, double peso) -> addSolucion(int pos, vector<int>& sol, double &val, double &peso)
