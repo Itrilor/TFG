@@ -1,4 +1,0 @@
-Pasar por referencia los parámetros de:
-  - addSolucion(int pos, vector<int> sol, double val, double peso) -> addSolucion(int pos, vector<int>& sol, double &val, double &peso)
-
-En la función calcularValor(int sol[]) el valor que se suma es getValor(i,indices[j]), no getValor(i,j) -> valor+=getValor(i,indices[j]);
