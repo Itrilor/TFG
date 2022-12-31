@@ -133,7 +133,7 @@ class QKP{
 		 * @param val Valor total que tiene la solución que estamos considerando
 		 * @param peso Peso total que tiene la solución que estamos considerando
 		 */
-		void addSolucion(int pos, vector<int> sol, double val, double peso);
+		void addSolucion(int pos, vector<int> &sol, double &val, double &peso);
 		
 		//void addSolucion(int pos, int[] sol, double val, double peso);
 		

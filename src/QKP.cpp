@@ -126,7 +126,7 @@ void QKP::setSeed(int seed){
 }
 
 /********FUNCIONES ADICIONALES**************/
-void QKP::addSolucion(int pos, vector<int> sol, double val, double peso){
+void QKP::addSolucion(int pos, vector<int> &sol, double &val, double &peso){
   if(!sol.empty()){
     //cout << "Vacio?\n";
     for(int i = 0; i<sol.size(); ++i){
@@ -139,8 +139,8 @@ void QKP::addSolucion(int pos, vector<int> sol, double val, double peso){
 }
 
 void QKP::addSolucion(int pos){
-  //addSolucion(pos, _solucion, _valorSolucion, _pesoSolucion);
-  if(!_solucion.empty()){
+  addSolucion(pos, _solucion, _valorSolucion, _pesoSolucion);
+  /*if(!_solucion.empty()){
     for(int i = 0; i<_solucion.size(); ++i){
       _valorSolucion += getValor(pos,_solucion[i]);
     }
@@ -148,7 +148,7 @@ void QKP::addSolucion(int pos){
 
   _valorSolucion+=getValor(pos,pos);
   _pesoSolucion+=getPeso(pos);
-  _solucion.push_back(pos);
+  _solucion.push_back(pos);*/
 }
 
 void QKP::calcularPeso(){
@@ -306,7 +306,7 @@ double QKP::calcularValor(int sol[]){
     if(sol[i]==1){
       indices.push_back(i);
       for(int j = 0; j<indices.size(); ++j){
-        valor+=getValor(i,j);
+        valor+=getValor(i,indices[j]);
       }
     }
   }
@@ -630,7 +630,7 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
     duration = end -start;
   }
   // Elegir
-  index = calcularMejorValor(valorPadre, numcro);
+  int index = calcularMejorValor(valorPadre, numcro);
   for(int i = 0; i < getSize(); ++i){
     if(matrizSoluciones[index][i]==1){
       addSolucion(i);
@@ -650,7 +650,7 @@ bool QKP::leerFicheroDatos(const char* fDatos){
 
   fin.open(fDatos);
   if(fin){
-    cout << "He abierto el fichero\n";
+    //cout << "He abierto el fichero\n";
     fin >> aux;
     if(fin){
       string part;
@@ -684,7 +684,7 @@ bool QKP::leerFicheroDatos(const char* fDatos){
                 setPeso(i,valor);
               }
               if(fin){
-                cout << "Leido correctamente\n";
+                //cout << "Leido correctamente\n";
                 salida = true;
               }
               else cerr << "Error. No se ha podido cargar el archivo. Pesos\n";
