@@ -14,6 +14,10 @@
 *Contenido de los distintos archivos*
 
   - Makefile -> Implementado con el fin de poder compilar el programa y generar el ejecutable
+  
+  - script.sh -> Implementado con el fin de guardar los resultados de todas las ejecuciones en un archivo .txt
+  
+  - resultados.txt -> Archivo obtenido de la ejecución de script.sh. Contiene los resultados (valor y tiempo) de las ejecuciones de todos los datos con los distintos algoritmos implementados.
 	
   - include/random.hpp -> Archivo aportado por el profesor Daniel Molina Cabrera durante la asignatura Metaheurísticas para poder generar números aleatorios
 	
@@ -24,6 +28,7 @@
   - src/main.cpp
 	
   - bin/QKP -> ejecutable
+
 	
 *Compilación*
 
