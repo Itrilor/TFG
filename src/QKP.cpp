@@ -473,12 +473,11 @@ vector<int> QKP::intToVector(int sol[]){
 }
 
 /***********ALGORITMOS***********************/
-void QKP::RandomQKP(int max){
+void QKP::RandomQKP(vector<int> &sol, double &valor){
   vector<int> indicesDatos;
   int contador = 0;
+  double peso = 0;
   bool cond = false;
-  Random::seed(getSeed());
-
 
   for(int i = 0; i < getSize();++i){
     indicesDatos.push_back(i);
@@ -486,13 +485,37 @@ void QKP::RandomQKP(int max){
   Random::shuffle(indicesDatos);
 
   for(int i = 0; i<getSize() && !cond; ++i){
-    if(checkAdd(indicesDatos[i])){
-      addSolucion(indicesDatos[i]);
+    if(checkAdd(indicesDatos[i], peso, sol)){
+      addSolucion(indicesDatos[i], sol, valor, peso);
       contador++;
     }
-    if(max!=0 && max==contador){
-      cond = true;
+  }
+}
+
+void QKP::RandomQKP(double tEvaluacionMAX){
+  Random::seed(getSeed());
+  vector<int> sol;
+  double valor=0;
+  vector<int> bestsol;
+  double bestvalor=0;
+
+  auto start = std::chrono::high_resolution_clock::now();
+  auto end = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> duration = end-start;
+
+  while(duration.count() < tEvaluacionMAX){
+    RandomQKP(sol, valor);
+    if(valor > bestvalor){
+      bestsol = sol;
+      bestvalor = valor;
     }
+    sol.clear();
+    valor = 0;
+    end = std::chrono::high_resolution_clock::now();
+    duration = end -start;
+  }
+  for(int i = 0; i < bestsol.size(); ++i){
+    addSolucion(bestsol[i]);
   }
 }
 

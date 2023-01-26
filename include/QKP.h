@@ -230,7 +230,8 @@ class QKP{
 	
 	
 		//-----------------ALGORITMOS-----------------
-		void RandomQKP(int max=0);
+		void RandomQKP(vector<int> &sol, double &valor);
+		void RandomQKP(double tEvaluacionMAX);
 		void Greedy(int max_op=0);
 		//int busquedaLocal(const int nEvaluacionesMAX);
 		//void AGQKP();

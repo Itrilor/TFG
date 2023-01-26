@@ -26,10 +26,16 @@ int main(int argc, char ** argv){
   }
 
   auto start = std::chrono::high_resolution_clock::now();
-  sequence.RandomQKP();
+  if(sequence.getSize()<=100){
+    sequence.RandomQKP(5);
+  }
+  else{
+    sequence.RandomQKP(30);
+  }
+  //sequence.RandomQKP();
   auto end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double,std::micro> float_ms = end-start;
-  double tiempoRandom = float_ms.count();
+  std::chrono::duration<double> float_s = end-start;
+  double tiempoRandom = float_s.count();
 
   /*cout << "La secuencia obtenida por el algoritmo Random es:\n { ";
   for(int i = 0; i < sequence.getSolucion().size(); ++i){
@@ -51,7 +57,7 @@ int main(int argc, char ** argv){
   start = std::chrono::high_resolution_clock::now();
   sequence.Greedy();
   end = std::chrono::high_resolution_clock::now();
-  float_ms = end-start;
+  std::chrono::duration<double,std::micro> float_ms = end-start;
   double tiempoGreedy = float_ms.count();
 
   /*cout << "La secuencia obtenida por el algoritmo Greedy es:\n { ";
@@ -80,7 +86,7 @@ int main(int argc, char ** argv){
     sequence.AGEU(10, 0.1, 30);
   }
   end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> float_s = end-start;//seconds
+  float_s = end-start;//seconds
   double tiempoAGEU = float_s.count();
 
   /*cout << "La secuencia obtenida por el Algoritmo Genético Estacionario Uniforme es:\n {";
