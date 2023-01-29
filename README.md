@@ -22,8 +22,12 @@
   - include/random.hpp -> Archivo aportado por el profesor Daniel Molina Cabrera durante la asignatura Metaheurísticas para poder generar números aleatorios
 	
   - include/QKP.h -> archivo de cabecera que define todas las funciones propias de la clase que se utilizará en este trabajo
+  
+  - include/AG.h -> archivo de cabecera que define las funciones propias del algoritmo genético
 	
-  - include/QKP.cpp -> archivo fuente que incluye la implementación de todas las funciones de la clase y que se utilizarán para resolver el problema
+  - src/QKP.cpp -> archivo fuente que incluye la implementación de todas las funciones de la clase y que se utilizarán para resolver el problema
+
+  - src/AG.cpp -> archivo fuente que incluye la implementación de las funciones propias del algoritmo genético
 	
   - src/main.cpp
 	
