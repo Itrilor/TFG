@@ -3,6 +3,7 @@
 #include <chrono>
 #include <fstream>
 #include "QKP.h"
+#include "AG.h"
 #include "random.hpp"
 
 using namespace std;

@@ -101,19 +101,6 @@ class QKP{
 		inline double getCapacidad() const{return _capacidad;};
 		
 		/**
-		 * @brief Establece la densidad del problema
-		 * @param den El valor de la densidad del problema
-		 * @precond den es un valor real positivo
-		 */
-		//inline void setDensidad(double den){_density = den;};
-		
-		/**
-		 * @brief Consulta la densidad del problema
-		 * @return Densidad del problema
-		 */		
-		//inline double getDensidad() const{return _densidad;};
-		
-		/**
 		 * @brief Establece la semilla
 		 * @param seed El valor de la semilla
 		 * @precond seed es un valor entero positivo	
@@ -168,16 +155,25 @@ class QKP{
 		inline double getPesoSolucion() const{return _pesoSolucion;};		
 	
 	  
-	  
 	  /**
-	   *
+	   * @brief Calcula el peso total de la solución actual y se lo asigna a _peso
 	   */
 	  void calcularPeso();
 	  
+	  /**
+	   * @brief Consulta si se puede añadir un nuevo elemento a una solución
+	   * @param pos Índice del objeto que se piensa añadir
+	   * @param peso Peso del objeto que se piensa añadir
+	   * @param sol Posible solución a la que se le quiere añadir un elemento
+	   * @return @b false si no se puede, @b true en caso contrario
+	   */
 	  bool checkAdd(int pos, double peso, vector<int> sol);
 	  
-	  bool checkAdd(int pos, double peso, int sol[]);
-	  
+	  /**
+	   * @brief Consulta si se puede añadir un nuevo elemento a la solución actual
+	   * @param pos Índice del objeto que se piensa añadir
+	   * @return @b false si no se puede, @b true en caso contrario
+	  */
 	  bool checkAdd(int pos);
 	
 		/**
@@ -186,10 +182,7 @@ class QKP{
 		 * @param sol Solución que estamos considerando
 		 * @return El valor de añadir un objeto considerando su peso
 		 */
-
 		double valueIfAdded(int pos, vector<int> sol);
-		
-		double valueIfAdded(int pos, int sol[]);	
 		
 		
 		/**
@@ -205,36 +198,12 @@ class QKP{
 	   * @return @b false si ha habido algún tipo de error, @b true en otro caso
  	   */
 		bool leerFicheroDatos(const char* fDatos);
-		
-		
-		//Funciones para Algoritmo Genético
-		void generaSeleccionAleatoria(int sol[], double &val);		
-		vector<int> torneoBinario(int numTorneos, double val[], int tam);
-		void cruceUniforme(int p1[], int p2[], int h1[], int h2[]);
-		void operadorReparacion(int hijo[]);
-		double calcularPeso(int sol[]);
-		double calcularValor(int sol[]);
-		double calcularRelValor(int index, int sol[]);
-		void eliminarElemento(int hijo[], double &peso);
-		void anadirElemento(int hijo[], double &peso, int pos);
-		// Si ha podido añadir elemento -> true, si no -> false
-		bool anadirElementoGreedy(int hijo[], double &peso);
-		void cambioMutante(int bin[]);
-		bool checkSustituir(double peso, int pos1, int pos2);
-		void sustituirCrom(int bin[], double &peso, int pos1, int pos2);
-		int calcularMejorValor(double valor[], int tam);
-		int calcularPeorValor(double valor[], int tam);
-		vector<int> calcular2Peores(double valor[], int tam);
-		
-		vector<int> intToVector(int sol[]);
 	
 	
 		//-----------------ALGORITMOS-----------------
 		void RandomQKP(vector<int> &sol, double &valor);
 		void RandomQKP(double tEvaluacionMAX);
 		void Greedy(int max_op=0);
-		//int busquedaLocal(const int nEvaluacionesMAX);
-		//void AGQKP();
 		void AGEU(int numcro, double probm, const double tEvaluacionMAX);
 	
 	private:

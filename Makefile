@@ -8,13 +8,16 @@ DATA = $(HOME)/data
 
 all: $(BIN)/QKP
 
-$(BIN)/QKP: $(OBJ)/QKP.o $(OBJ)/main.o
+$(BIN)/QKP: $(OBJ)/QKP.o $(OBJ)/AG.o $(OBJ)/main.o
 	g++ $^ -o $@
 
 $(OBJ)/main.o: $(SRC)/main.cpp
 	g++ -c -O3 $^ -I$(INCLUDE) -o $@
 
 $(OBJ)/QKP.o: $(SRC)/QKP.cpp
+	g++ -c -O3 $^ -I$(INCLUDE) -o $@
+
+$(OBJ)/AG.o: $(SRC)/AG.cpp
 	g++ -c -O3 $^ -I$(INCLUDE) -o $@
 	
 clean:
