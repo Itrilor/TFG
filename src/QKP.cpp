@@ -270,19 +270,31 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
   int matrizHijos[numEsperadoCruces*2][getSize()];
   double valorPadre[numcro];
   double valorHijo[numEsperadoCruces*2];
+  int index;
+  vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
+  for(int i = 0; i < milestones.size(); ++i){
+    milestones[i] = tEvaluacionMAX*milestones[i]/100;
+  }
+  int contador=0;
 
   //Empezamos el cronómetro
-  auto start = std::chrono::high_resolution_clock::now();
+  //auto start = std::chrono::high_resolution_clock::now();
   //Creamos la población inicial
   vector<int> indices;
   for(int i = 0; i < numcro; ++i){
     ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);
   }
 
-  auto end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> duration = end-start;
+  //auto end = std::chrono::high_resolution_clock::now();
+  //std::chrono::duration<double> duration = end-start;
 
-  while(duration.count() < tEvaluacionMAX){
+  //while(duration.count() < tEvaluacionMAX){
+  while(contador < tEvaluacionMAX){
+    if(contador > milestones[0]){
+      index = ag.calcularMejorValor(valorPadre,numcro);
+      cout << valorPadre[index] << " , ";
+      milestones.erase(milestones.begin());
+    }
     //Estacionario
     /*
     Realizamos 2 torneos binarios aleatorios entre 4 elementos de la población
@@ -327,7 +339,6 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
     }
 
     // Tenemos que ver si podemos sustituir
-    // POR COMPLETAR?? => calcular2Peores
     vector<int> peoresPadres = ag.calcular2Peores(valorPadre, numcro);
     vector<int> peoresHijos = ag.calcular2Peores(valorHijo, numEsperadoCruces*2);
     // Hi supera a Pi
@@ -350,11 +361,12 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
       }
       valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[1]];
     }
-    end = std::chrono::high_resolution_clock::now();
-    duration = end -start;
+    //end = std::chrono::high_resolution_clock::now();
+    //duration = end -start;
+    contador++;
   }
   // Elegir
-  int index = ag.calcularMejorValor(valorPadre, numcro);
+  index = ag.calcularMejorValor(valorPadre, numcro);
   for(int i = 0; i < getSize(); ++i){
     if(matrizSoluciones[index][i]==1){
       addSolucion(i);

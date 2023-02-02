@@ -2,6 +2,7 @@
 #include <string>
 #include <chrono>
 #include <fstream>
+#include <vector>
 #include "QKP.h"
 #include "AG.h"
 #include "random.hpp"
@@ -9,6 +10,9 @@
 using namespace std;
 
 void mensajeError();
+void mensajeSolucion();
+
+const int NEVALUACIONESMAX = 90000;
 
 int main(int argc, char ** argv){
   if(argc!=2){
@@ -20,7 +24,7 @@ int main(int argc, char ** argv){
 
   //------------RANDOM------------
   //cout << "Leemos " << argv[1] << "\n";
-  estado = sequence.leerFicheroDatos(argv[1]);
+  /*estado = sequence.leerFicheroDatos(argv[1]);
   if(!estado){
     cerr << "No se ha podido leer correctamente\n";
     exit(-1);
@@ -33,18 +37,11 @@ int main(int argc, char ** argv){
   else{
     sequence.RandomQKP(30);
   }
-  //sequence.RandomQKP();
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> float_s = end-start;
   double tiempoRandom = float_s.count();
 
-  /*cout << "La secuencia obtenida por el algoritmo Random es:\n { ";
-  for(int i = 0; i < sequence.getSolucion().size(); ++i){
-    cout << sequence.getSolucion()[i] << ",";
-  }
-  cout << "}\nEl valor alcanzado sería: " << sequence.getValorSolucion() << "\n";
-  cout << "El peso alcanzado sería: " << sequence.getPesoSolucion() << "\n";
-  cout << "Tiempo de ejecución: " << tiempoRandom << "microsegundos\n";*/
+  //mensajeSolucion("Algoritmo Random", sequence, tiempoRandom, "segundos");
   cout << argv[1] << "," << sequence.getValorSolucion() << "," << tiempoRandom << ",";
 
   //------------GREEDY------------
@@ -61,43 +58,53 @@ int main(int argc, char ** argv){
   std::chrono::duration<double,std::micro> float_ms = end-start;
   double tiempoGreedy = float_ms.count();
 
-  /*cout << "La secuencia obtenida por el algoritmo Greedy es:\n { ";
-  for(int i = 0; i < sequence.getSolucion().size(); ++i){
-    cout << sequence.getSolucion()[i] << ",";
-  }
-  cout << "}\nEl valor alcanzado sería: " << sequence.getValorSolucion() << "\n";
-  cout << "El peso alcanzado sería: " << sequence.getPesoSolucion() << "\n";
-  cout << "Tiempo de ejecución: " << tiempoGreedy << "microsegundos\n";*/
-
-  cout << sequence.getValorSolucion() << "," << tiempoGreedy << ",";
+  //mensajeSolucion("Algoritmo Greedy", sequence, tiempoGreedy, "microsegundos");
+  cout << sequence.getValorSolucion() << "," << tiempoGreedy << ",";*/
 
   //------------ALGORITMO GENETICO ESTACIONARIO UNIFORME ----------------
   //cout << "Leemos " << argv[1] << "\n";
-  estado = sequence.leerFicheroDatos(argv[1]);
-  if(!estado){
-    cerr << "No se ha poddio leer correctamente\n";
-    exit(-1);
-  }
+  vector<double> values;
+//  for(int j = 0; j < 10; ++j){
+    estado = sequence.leerFicheroDatos(argv[1]);
+    if(!estado){
+      cerr << "No se ha poddio leer correctamente\n";
+      exit(-1);
+    }
+    auto start = std::chrono::high_resolution_clock::now();
+    /*if(sequence.getSize()<=100){
+      sequence.AGEU(10,0.1,5);
+      values.push_back(sequence.getValorSolucion());
+    }
+    else{
+      sequence.AGEU(10, 0.1, 30);
+      values.push_back(sequence.getValorSolucion());
+    }*/
+    sequence.AGEU(10,0.1,NEVALUACIONESMAX);
+  //}
 
-  start = std::chrono::high_resolution_clock::now();
-  if(sequence.getSize()<=100){
-    sequence.AGEU(10,0.1,5);
-  }
-  else{
-    sequence.AGEU(10, 0.1, 30);
-  }
-  end = std::chrono::high_resolution_clock::now();
-  float_s = end-start;//seconds
+  auto end = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double> float_s = end-start;//seconds
   double tiempoAGEU = float_s.count();
-
-  /*cout << "La secuencia obtenida por el Algoritmo Genético Estacionario Uniforme es:\n {";
-  for(int i = 0; i < sequence.getSolucion().size(); ++i){
-    cout << sequence.getSolucion()[i] << ",";
+  /*double meanValue = 0;
+  for(int i = 0; i < values.size(); ++i){
+    meanValue += values[i];
   }
-  cout << "}\nEl valor alcanzado sería: " << sequence.getValorSolucion() << "\n";
-  cout << "El peso alcanzado sería: " << sequence.getPesoSolucion() << "\n";
-  cout << "Tiempo de ejecución: " << tiempoAGEU << "segundos\n";*/
-  cout << sequence.getValorSolucion() << "," << tiempoAGEU << "\n";
+  meanValue = meanValue/values.size();*/
+
+  //mensajeSolucion("Algoritmo Genético Estacionario Uniforme", sequence, tiempoAGEU, "segundos");
+  cout << sequence.getValorSolucion() << "\n";
+  //cout << meanValue << "," << tiempoAGEU << "\n";
+  //cout << meanValue << "\n";
+}
+
+void mensajeSolucion(string name, QKP seq, double tiempo, string seg){
+  cout << "La secuencia obtenida por el " << name << " es:\n {";
+  for(int i = 0; i < seq.getSolucion().size(); ++i){
+    cout << seq.getSolucion()[i] << ",";
+  }
+  cout << "}\nEl valor alcanzado sería: " << seq.getValorSolucion() << "\n";
+  cout << "El peso alcanzado sería: " << seq.getPesoSolucion() << "\n";
+  cout << "Tiempo de ejecución: " << tiempo << " " << seg << "\n";
 }
 
 void mensajeError(){

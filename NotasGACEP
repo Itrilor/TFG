@@ -8,10 +8,11 @@ Ejecuciones media -> 90000 -> Queremos reducirlo a 450-500
 30s -> 150ms
 
 Cosas que hacer:
-  Formato TacoLab de los resultados (https://tacolab.org/comp)
-  Cambiamos el criterio de parada como ejecuciones
-  Comprobamos que dan resultados parecidos
-  Convergencia para ver cómo mejora por tiempo (Histórico)
+  Obtener resultados AGEU media de 10 ejecuciones -> Done
+  Formato TacoLab de los resultados (https://tacolab.org/comp) -> Done
+  Cambiamos el criterio de parada como ejecuciones -> Done
+  Comprobamos que dan resultados parecidos -> Done
+  Convergencia para ver cómo mejora por tiempo (Histórico) -> Done?
   Reducimos a 450 y comprobamos cómo empeora
     Mandar los resultados al profesor
   Opciones para modificar GACEP (tener en cuenta el histórico):
