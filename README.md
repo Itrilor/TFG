@@ -37,7 +37,8 @@
   - resultados.txt -> Archivo obtenido de la ejecución inicial de script.sh. Contiene los resultados (valor y tiempo) de las ejecuciones de todos los datos con los distintos algoritmos implementados. Utilizando como parámetro de parada el tiempo.
   - resultados.csv -> Hoja de cálculo que almacena el contenido del archivo anterior.
   - resultados10Ejecuciones.txt -> Contiene los resultados (valor) de ejecutar 10 veces el AGEU y hacerles la media.
-  - diferenciaAGEU.ods -> Hoja de cálculo que contiene las ejecuciones del AGEU cuando el parámetro de parada es el tiempo y cuando es el número de ejecuciones, para demostrar que son equivalentes.
+  - resultadosAGEU450.txt -> Contiene los resultados (valor) de Random y AGEU (10 veces) con 450 iteraciones como criterio de parada.
+  - diferenciaAGEU.ods -> Hoja de cálculo que contiene las ejecuciones del AGEU cuando el parámetro de parada es el tiempo y cuando es el número de ejecuciones, para demostrar que son equivalentes. Luego se ha añadido los resultados para cuando se le pasa un menor número de iteraciones y también se muestra la diferencia.
   - resultadosAGEUv.txt -> Contiene los resultados (valor) de las ejecuciones del AGEU, utilizando como criterio de parada el número de ejecuciones.
   - resultadosMilestones.txt -> Contiene los resultados (valor) de las distintas fases (porcentajes de completitud) en las que se encuentra el AGEU en el momento.
   - resultadosMilestones.xlsx -> Hoja de cálculo que contiene los valores almacenados en resultadosMilestones.txt, junto con algunas gráficas mostrando los cambios producidos, las diferencias proemdios y totales.
