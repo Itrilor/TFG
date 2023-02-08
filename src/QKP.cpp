@@ -198,12 +198,13 @@ void QKP::RandomQKP(double tEvaluacionMAX){
   double valor=0;
   vector<int> bestsol;
   double bestvalor=0;
+  int contador = 0;
 
-  auto start = std::chrono::high_resolution_clock::now();
+  /*auto start = std::chrono::high_resolution_clock::now();
   auto end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> duration = end-start;
+  std::chrono::duration<double> duration = end-start;*/
 
-  while(duration.count() < tEvaluacionMAX){
+  while(contador < tEvaluacionMAX){
     RandomQKP(sol, valor);
     if(valor > bestvalor){
       bestsol = sol;
@@ -211,8 +212,9 @@ void QKP::RandomQKP(double tEvaluacionMAX){
     }
     sol.clear();
     valor = 0;
-    end = std::chrono::high_resolution_clock::now();
-    duration = end -start;
+    /*end = std::chrono::high_resolution_clock::now();
+    duration = end -start;*/
+    contador++;
   }
   for(int i = 0; i < bestsol.size(); ++i){
     addSolucion(bestsol[i]);
@@ -271,10 +273,10 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
   double valorPadre[numcro];
   double valorHijo[numEsperadoCruces*2];
   int index;
-  vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
+  /*vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
   for(int i = 0; i < milestones.size(); ++i){
     milestones[i] = tEvaluacionMAX*milestones[i]/100;
-  }
+  }*/
   int contador=0;
 
   //Empezamos el cronómetro
@@ -290,11 +292,11 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
 
   //while(duration.count() < tEvaluacionMAX){
   while(contador < tEvaluacionMAX){
-    if(contador > milestones[0]){
+    /*if(contador > milestones[0]){
       index = ag.calcularMejorValor(valorPadre,numcro);
       cout << valorPadre[index] << " , ";
       milestones.erase(milestones.begin());
-    }
+    }*/
     //Estacionario
     /*
     Realizamos 2 torneos binarios aleatorios entre 4 elementos de la población

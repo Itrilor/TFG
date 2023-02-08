@@ -12,7 +12,7 @@ using namespace std;
 void mensajeError();
 void mensajeSolucion();
 
-const int NEVALUACIONESMAX = 90000;
+const int NEVALUACIONESMAX = 450;
 
 int main(int argc, char ** argv){
   if(argc!=2){
@@ -24,29 +24,25 @@ int main(int argc, char ** argv){
 
   //------------RANDOM------------
   //cout << "Leemos " << argv[1] << "\n";
-  /*estado = sequence.leerFicheroDatos(argv[1]);
+  estado = sequence.leerFicheroDatos(argv[1]);
   if(!estado){
     cerr << "No se ha podido leer correctamente\n";
     exit(-1);
   }
 
   auto start = std::chrono::high_resolution_clock::now();
-  if(sequence.getSize()<=100){
-    sequence.RandomQKP(5);
-  }
-  else{
-    sequence.RandomQKP(30);
-  }
+  sequence.RandomQKP(NEVALUACIONESMAX);
   auto end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> float_s = end-start;
   double tiempoRandom = float_s.count();
 
   //mensajeSolucion("Algoritmo Random", sequence, tiempoRandom, "segundos");
-  cout << argv[1] << "," << sequence.getValorSolucion() << "," << tiempoRandom << ",";
+  //cout << argv[1] << "," << sequence.getValorSolucion() << "," << tiempoRandom << ",";
+  cout << sequence.getValorSolucion() << ",";
 
   //------------GREEDY------------
   //cout << "Leemos " << argv[1] << "\n";
-  estado = sequence.leerFicheroDatos(argv[1]);
+  /*estado = sequence.leerFicheroDatos(argv[1]);
   if(!estado){
     cerr << "No se ha podido leer correctamente\n";
     exit(-1);
@@ -64,13 +60,13 @@ int main(int argc, char ** argv){
   //------------ALGORITMO GENETICO ESTACIONARIO UNIFORME ----------------
   //cout << "Leemos " << argv[1] << "\n";
   vector<double> values;
-//  for(int j = 0; j < 10; ++j){
+  for(int j = 0; j < 10; ++j){
     estado = sequence.leerFicheroDatos(argv[1]);
     if(!estado){
       cerr << "No se ha poddio leer correctamente\n";
       exit(-1);
     }
-    auto start = std::chrono::high_resolution_clock::now();
+    start = std::chrono::high_resolution_clock::now();
     /*if(sequence.getSize()<=100){
       sequence.AGEU(10,0.1,5);
       values.push_back(sequence.getValorSolucion());
@@ -80,21 +76,22 @@ int main(int argc, char ** argv){
       values.push_back(sequence.getValorSolucion());
     }*/
     sequence.AGEU(10,0.1,NEVALUACIONESMAX);
-  //}
+    values.push_back(sequence.getValorSolucion());
+  }
 
-  auto end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> float_s = end-start;//seconds
+  end = std::chrono::high_resolution_clock::now();
+  float_s = end-start;//seconds
   double tiempoAGEU = float_s.count();
-  /*double meanValue = 0;
+  double meanValue = 0;
   for(int i = 0; i < values.size(); ++i){
     meanValue += values[i];
   }
-  meanValue = meanValue/values.size();*/
+  meanValue = meanValue/values.size();
 
   //mensajeSolucion("Algoritmo Genético Estacionario Uniforme", sequence, tiempoAGEU, "segundos");
-  cout << sequence.getValorSolucion() << "\n";
+  //cout << sequence.getValorSolucion() << "\n";
   //cout << meanValue << "," << tiempoAGEU << "\n";
-  //cout << meanValue << "\n";
+  cout << meanValue << "\n";
 }
 
 void mensajeSolucion(string name, QKP seq, double tiempo, string seg){
