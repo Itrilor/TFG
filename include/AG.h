@@ -4,12 +4,23 @@
 
 class AG{
   public:
-
+    
+    AG();
+    
     /**
 		 * @brief Constructor para reservar memoria
 		 * @param prob Objeto OKP del problema
 		 */
     AG(QKP &prob);
+    
+    /**
+		 * @brief Sobrecarga del operador de asignación
+		 * @param orig Parámetro rhs de la asignación
+		 * @return this para concatenación de asignaciones de derecha a izquierda
+		 */
+    AG& operator=(const AG& orig);
+    
+    inline int getSize() const{return _qkp.getSize();};
     
     /****FUNCIONES AUXILIARES*******/
     

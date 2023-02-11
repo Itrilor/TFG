@@ -17,9 +17,21 @@ using Random = effolkronium::random_static;
 
 /*******CONSTRUCTORES Y DESTRUCTOR********/
 
+AG::AG(){
+  
+}
+
 AG::AG(QKP &prob){
   _qkp = prob;
 }
+
+AG & AG::operator=(const AG& orig){
+  if(&orig != this){
+    _qkp = orig._qkp;
+  }
+  return *this;
+}
+
 
 /******FUNCIONES AUXILIARES*******/
 

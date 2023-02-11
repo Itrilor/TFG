@@ -205,6 +205,7 @@ class QKP{
 		void RandomQKP(double tEvaluacionMAX);
 		void Greedy(int max_op=0);
 		void AGEU(int numcro, double probm, const double tEvaluacionMAX);
+		void GACEP(int numcro, double probm, const int EvaluacionMAX);
 	
 	private:
 		int _n;								//Nº elementos

@@ -11,6 +11,7 @@
 #include <chrono>
 #include "QKP.h"
 #include "AG.h"
+#include "AGCEP.h"
 #include "random.hpp"
 
 using namespace std;
@@ -263,7 +264,7 @@ void QKP::Greedy(int max_op){
 
 void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
   //Inicializamos la semilla
-  Random::seed(getSeed());
+  //Random::seed(getSeed());
 
   //Variables
   AG ag(*this);
@@ -365,6 +366,104 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
     }
     //end = std::chrono::high_resolution_clock::now();
     //duration = end -start;
+    contador++;
+  }
+  // Elegir
+  index = ag.calcularMejorValor(valorPadre, numcro);
+  for(int i = 0; i < getSize(); ++i){
+    if(matrizSoluciones[index][i]==1){
+      addSolucion(i);
+    }
+  }
+  //return solucion
+}
+
+void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX){
+  //Variables
+  AG ag(*this);
+  AGCEP agcep(ag);
+  int numEsperadoCruces=1;
+  int matrizSoluciones[numcro][getSize()];
+  int matrizHijos[numEsperadoCruces*2][getSize()];
+  double valorPadre[numcro];
+  double valorHijo[numEsperadoCruces*2];
+  int index;
+  int contador=0;
+
+  //Creamos la población inicial y la añadimos al vector para el histograma
+  vector<int> indices;
+  for(int i = 0; i < numcro; ++i){
+    ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);
+    agcep.addToHistograma(matrizSoluciones[i],valorPadre[i]);
+  }
+
+  while(contador < EvaluacionMAX){
+    //Estacionario
+    /*
+    Realizamos 2 torneos binarios aleatorios entre 4 elementos de la población
+    para obtener a los 2 padres que vamos a cruzar
+    */
+    indices = ag.torneoBinario(2, valorPadre, numcro);
+    while(indices[0] == indices[1]){
+      indices = ag.torneoBinario(2, valorPadre, numcro);
+    }
+    //Generamos aleatoriamente dónde se producen las mutaciones
+    vector<int> mutacion;
+    int element;
+    for(int i = 0; i < (int)numcro*0.1; ++i){
+      element = Random::get(0,numcro-1);
+      //Si el elemento se encuentra ya en el vector de mutación, se genera otro
+      if(std::find(mutacion.begin(), mutacion.end(), element) == mutacion.end()){
+          mutacion.push_back(element);
+      }
+    }
+    sort(mutacion.begin(),mutacion.end());
+    // Cruzamos a los peoresPadres
+    for(int i = 0; i < numEsperadoCruces*2; ++i){
+      ag.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
+                    matrizHijos[i], matrizHijos[i+1]);
+      /*if(i==mutacion[0]){
+        cambioMutante(matrizHijos[i]);
+        mutacion.erase(mutacion.begin());
+      }*/
+      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+      i++;
+      /*if(i==mutacion[0]){
+        cambioMutante(matrizHijos[i]);
+        mutacion.erase(mutacion.begin());
+      }*/
+      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+    }
+    // Comprobamos si mutamos a qué padres mutar
+    while(!mutacion.empty()){
+      ag.cambioMutante(matrizSoluciones[mutacion[0]]);
+      valorPadre[mutacion[0]] = ag.calcularValor(matrizSoluciones[mutacion[0]]);
+      mutacion.erase(mutacion.begin());
+    }
+
+    // Tenemos que ver si podemos sustituir
+    vector<int> peoresPadres = ag.calcular2Peores(valorPadre, numcro);
+    vector<int> peoresHijos = ag.calcular2Peores(valorHijo, numEsperadoCruces*2);
+    // Hi supera a Pi
+    if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[0]] &&
+       valorPadre[peoresPadres[1]] < valorHijo[peoresHijos[1]]){
+       //Sustituimos Pi por Hi
+       for(int i = 0; i < getSize(); ++i){
+         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[0]][i];
+         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+       }
+       valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[0]];
+       valorPadre[peoresPadres[1]] = valorHijo[peoresHijos[1]];
+    }
+    // H0 supera a P0 y H1 no supera a P1
+    // H0 no supera a P0, pero H1 supera a P0
+    else if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[1]]){
+      //Sustituimos P0 por H1
+      for(int i = 0; i < getSize(); ++i){
+        matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+      }
+      valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[1]];
+    }
     contador++;
   }
   // Elegir
