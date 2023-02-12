@@ -20,6 +20,8 @@ class AGCEP{
      */
     void addToHistograma(int sol[], double valor);
     
+    void clearHistograma();
+    
     /**
      * @brief Ordenar los vectores del histograma dependiendo del valor
      */

@@ -46,6 +46,11 @@ void AGCEP::addToHistograma(int sol[], double valor){
   }
 }
 
+void AGCEP::clearHistograma(){
+  _solucionesHistograma.clear();
+  _valoresHistograma.clear();
+}
+
 void AGCEP::sortHistograma(){
   //https://stackoverflow.com/questions/37368787/c-sort-one-vector-based-on-another-one
   vector<int> indices(_solucionesHistograma.size());
@@ -141,46 +146,8 @@ vector<int> AGCEP::getWorstElements(vector<int> best, vector<int> worst){
 void AGCEP::getBestPercentages(double perelem, vector<double> &perc, vector<int> &indices){
   int max = round(_solucionesHistograma.size()*perelem/100);
   for(int i = 0; i < max; ++i){
-    for(int j = 0; j < _solucionesHistograma[0].size(); ++j){
-      if(_solucionesHistograma[i][j]==1){
-        perc[j]++;
-      }
-    }
-  }
-  for(int i = 0; i < indices.size(); ++i){
-    perc[i] = perc[i]*100/max;
-  }
-
-  vector<int> newindices(indices.size());
-  iota(newindices.begin(), newindices.end(), 0);
-  sort(newindices.begin(), newindices.end(),
-    [&] (int A, int B) -> bool{
-      return perc[A] > perc[B];
-    }
-  );
-  //Tenemos ordenados los índices
-  //Creamos vectores auxiliares donde estén ordenados y luego igualamos
-  vector<int> index;
-  vector<double> percentages;
-  for(int i = 0; i < indices.size(); ++i){
-    index.push_back(newindices[i]);
-    percentages.push_back(perc[indices[i]]);
-  }
-  // Sustituimos el orden original por el que hemos obtenido
-  perc.clear();
-  indices.clear();
-  perc = percentages;
-  indices = index;
-}
-
-void AGCEP::getWorstPercentages(double perelem, vector<double> &perc, vector<int> &indices){
-  int max = round(_solucionesHistograma.size()*perelem/100);
-  int min = _solucionesHistograma.size()- max;
-  for(int i = min; i < _solucionesHistograma.size(); ++i){
-    for(int j = 0; j < _solucionesHistograma[0].size(); ++j){
-      if(_solucionesHistograma[i][j]==1){
-        perc[j]++;
-      }
+    for(int j = 0; j < _solucionesHistograma[i].size(); ++j){
+      perc[_solucionesHistograma[i][j]]++;
     }
   }
   for(int i = 0; i < perc.size(); ++i){
@@ -200,7 +167,41 @@ void AGCEP::getWorstPercentages(double perelem, vector<double> &perc, vector<int
   vector<double> percentages;
   for(int i = 0; i < indices.size(); ++i){
     index.push_back(newindices[i]);
-    percentages.push_back(perc[indices[i]]);
+    percentages.push_back(perc[newindices[i]]);
+  }
+  // Sustituimos el orden original por el que hemos obtenido
+  perc.clear();
+  indices.clear();
+  perc = percentages;
+  indices = index;
+}
+
+void AGCEP::getWorstPercentages(double perelem, vector<double> &perc, vector<int> &indices){
+  int max = round(_solucionesHistograma.size()*perelem/100);
+  int min = _solucionesHistograma.size()- max;
+  for(int i = min; i < _solucionesHistograma.size(); ++i){
+    for(int j = 0; j < _solucionesHistograma[i].size(); ++j){
+      perc[_solucionesHistograma[i][j]]++;
+    }
+  }
+  for(int i = 0; i < perc.size(); ++i){
+    perc[i] = perc[i]*100/max;
+  }
+
+  vector<int> newindices(indices.size());
+  iota(newindices.begin(), newindices.end(), 0);
+  sort(newindices.begin(), newindices.end(),
+    [&] (int A, int B) -> bool{
+      return perc[A] > perc[B];
+    }
+  );
+  //Tenemos ordenados los índices
+  //Creamos vectores auxiliares donde estén ordenados y luego igualamos
+  vector<int> index;
+  vector<double> percentages;
+  for(int i = 0; i < indices.size(); ++i){
+    index.push_back(newindices[i]);
+    percentages.push_back(perc[newindices[i]]);
   }
   // Sustituimos el orden original por el que hemos obtenido
   perc.clear();
@@ -274,8 +275,8 @@ bool AGCEP::writeElementsPercentages(double perelem, const char* fichero){
   ofstream ofs;
   ofs.open(fichero);
   if(ofs){
-    vector<int> indices(_solucionesHistograma[0].size());
-    vector<double> porcentaje(_solucionesHistograma[0].size());
+    vector<int> indices(getSize());
+    vector<double> porcentaje(getSize());
     iota(indices.begin(), indices.end(), 0);
     fill(porcentaje.begin(), porcentaje.end(), 0);
     getBestPercentages(perelem, porcentaje, indices);

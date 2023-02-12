@@ -8,16 +8,16 @@ class AG{
     AG();
     
     /**
-		 * @brief Constructor para reservar memoria
-		 * @param prob Objeto OKP del problema
-		 */
+     * @brief Constructor para reservar memoria
+     * @param prob Objeto OKP del problema
+     */
     AG(QKP &prob);
     
     /**
-		 * @brief Sobrecarga del operador de asignación
-		 * @param orig Parámetro rhs de la asignación
-		 * @return this para concatenación de asignaciones de derecha a izquierda
-		 */
+     * @brief Sobrecarga del operador de asignación
+     * @param orig Parámetro rhs de la asignación
+     * @return this para concatenación de asignaciones de derecha a izquierda
+     */
     AG& operator=(const AG& orig);
     
     inline int getSize() const{return _qkp.getSize();};
@@ -32,20 +32,20 @@ class AG{
     vector<int> intToVector(int sol[]);
     
     /**
-	   * @brief Consulta si se puede añadir un nuevo elemento a una solución
-	   * @param pos Índice del objeto que se piensa añadir
-	   * @param peso Peso del objeto que se piensa añadir
-	   * @param sol Posible solución a la que se le quiere añadir un elemento
-	   * @return @b false si no se puede, @b true en caso contrario
-	   */
+     * @brief Consulta si se puede añadir un nuevo elemento a una solución
+     * @param pos Índice del objeto que se piensa añadir
+     * @param peso Peso del objeto que se piensa añadir
+     * @param sol Posible solución a la que se le quiere añadir un elemento
+     * @return @b false si no se puede, @b true en caso contrario
+     */
     bool checkAdd(int pos, double peso, int sol[]);
     
     /**
-		 * @brief Devuelve el valor de añadir un objeto considerando su peso
-		 * @param pos Índice del elemento que estamos considerando añadir
-		 * @param sol Solución que estamos considerando
-		 * @return El valor de añadir un objeto considerando su peso
-		 */
+     * @brief Devuelve el valor de añadir un objeto considerando su peso
+     * @param pos Índice del elemento que estamos considerando añadir
+     * @param sol Solución que estamos considerando
+     * @return El valor de añadir un objeto considerando su peso
+     */
     double valueIfAdded(int pos, int sol[]);
     
     /**
@@ -119,63 +119,63 @@ class AG{
      * @param tam 
      * @return Índices de las soluciones que hayan ganado sus torneos
      */
-		vector<int> torneoBinario(int numTorneos, double val[], int tam);
+     vector<int> torneoBinario(int numTorneos, double val[], int tam);
 		
-		/**
-		 * @brief Crea dos nuevas soluciones a partir de otras dos soluciones dadas
-		 * @param p1 Solución dada 1
-		 * @param p2 Solución dada 2
-		 * @param h1 Solución generada 1
-		 * @param h2 Solución generada 2
- 	   */
-		void cruceUniforme(int p1[], int p2[], int h1[], int h2[]);
+    /**
+     * @brief Crea dos nuevas soluciones a partir de otras dos soluciones dadas
+     * @param p1 Solución dada 1
+     * @param p2 Solución dada 2
+     * @param h1 Solución generada 1
+     * @param h2 Solución generada 2
+     */
+    void cruceUniforme(int p1[], int p2[], int h1[], int h2[]);
 		
-		/**
-		 * @brief Elimina elementos de la solución si esta sobrepasa la capacidad o añade más elementos (si es posible) si no la sobrepasa
-		 * @param hijo Solución a considerar
-		 */
-		void operadorReparacion(int hijo[]);
+    /**
+     * @brief Elimina elementos de la solución si esta sobrepasa la capacidad o añade más elementos (si es posible) si no la sobrepasa
+     * @param hijo Solución a considerar
+     */
+    void operadorReparacion(int hijo[]);
 		
-		/**
-		 * @brief Intercambia aleatoriamente un elemento que pertenece a la solución por uno que no (de forma que siga siendo una solución) y añade, si es posible, más elementos
-		 * @param bin
-		 */
-		void cambioMutante(int bin[]);
+    /**
+     * @brief Intercambia aleatoriamente un elemento que pertenece a la solución por uno que no (de forma que siga siendo una solución) y añade, si es posible, más elementos
+     * @param bin
+     */
+    void cambioMutante(int bin[]);
 		
-		/**
-		 * @brief Sustituye un elemento perteneciente a una solución dada por otro que no esté contenido
-		 * @param bin Solución que estamos considerando
-		 * @param peso Peso de la solución que estamos considerando
-		 * @param pos1 Elemento perteneciente a la solución
-		 * @param pos2 Elemento no perteneciente a la solución
-		 */
-		void sustituirCrom(int bin[], double &peso, int pos1, int pos2);
+    /**
+     * @brief Sustituye un elemento perteneciente a una solución dada por otro que no esté contenido
+     * @param bin Solución que estamos considerando
+     * @param peso Peso de la solución que estamos considerando
+     * @param pos1 Elemento perteneciente a la solución
+     * @param pos2 Elemento no perteneciente a la solución
+     */
+    void sustituirCrom(int bin[], double &peso, int pos1, int pos2);
 		
-		/**
-		 * @brief Elimina el elemento con menor proporción valor_aportado/peso_aportado
-		 * @param hijo Solución que estamos considerando
-		 * @param peso Peso total de la solución que estamos considerando
-		 */
-		void eliminarElemento(int hijo[], double &peso);
+    /**
+     * @brief Elimina el elemento con menor proporción valor_aportado/peso_aportado
+     * @param hijo Solución que estamos considerando
+     * @param peso Peso total de la solución que estamos considerando
+     */
+    void eliminarElemento(int hijo[], double &peso);
 		
-		/**
-		 * @brief Añade un nuevo elemento a la solución que estemos considerando
-		 * @param hijo Solución que estamos considerando
-		 * @param peso Peso total de la solución que estamos considerando
-		 * @param pos Elemento a añadir
-  	 */
-		void anadirElemento(int hijo[], double &peso, int pos);
+    /**
+     * @brief Añade un nuevo elemento a la solución que estemos considerando
+     * @param hijo Solución que estamos considerando
+     * @param peso Peso total de la solución que estamos considerando
+     * @param pos Elemento a añadir
+     */
+    void anadirElemento(int hijo[], double &peso, int pos);
 		
-		/**
-		 * @brief Añade el elemento disponible con mayor proporción valor_aportado/peso_aportado
-		 * @param hijo Solución que estamos considerando
-		 * @param peso Peso total de la solución que estamos considerando
-		 * @return @b false si no se ha podido, @b true en caso contrario
-		 */
-		bool anadirElementoGreedy(int hijo[], double &peso);
+    /**
+     * @brief Añade el elemento disponible con mayor proporción valor_aportado/peso_aportado
+     * @param hijo Solución que estamos considerando
+     * @param peso Peso total de la solución que estamos considerando
+     * @return @b false si no se ha podido, @b true en caso contrario
+     */
+    bool anadirElementoGreedy(int hijo[], double &peso);
 		
-	private: 
-	  QKP _qkp;
+  private: 
+    QKP _qkp;
 };
 
 #endif

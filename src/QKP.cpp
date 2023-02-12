@@ -9,6 +9,7 @@
 #include <math.h>
 #include <vector>
 #include <chrono>
+#include <string>
 #include "QKP.h"
 #include "AG.h"
 #include "AGCEP.h"
@@ -389,15 +390,37 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX){
   double valorHijo[numEsperadoCruces*2];
   int index;
   int contador=0;
+  int contadorFichero=1;
+  bool keepSaving = true;
 
   //Creamos la población inicial y la añadimos al vector para el histograma
   vector<int> indices;
   for(int i = 0; i < numcro; ++i){
-    ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);
+    ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);    
     agcep.addToHistograma(matrizSoluciones[i],valorPadre[i]);
   }
 
   while(contador < EvaluacionMAX){
+    if(contador!=0 && (contador%50==0)){
+      if(contador%100==0){
+        keepSaving=true;
+        agcep.clearHistograma();
+        for(int i = 0; i < numcro; ++i){
+          agcep.addToHistograma(matrizSoluciones[i], valorPadre[i]);
+        }
+      }
+      else{
+        keepSaving=false;
+        string temp_str = "../Histogramas/Histograma"+to_string(contadorFichero);
+        char const* number_array = temp_str.c_str();
+        agcep.sortHistograma();
+        agcep.saveFichero(number_array);
+        temp_str = "../Histogramas/Porcentajes"+to_string(contadorFichero);
+        char const* porcentaje_array = temp_str.c_str();
+        agcep.writeElementsPercentages(20,porcentaje_array);
+        contadorFichero++;
+      }
+    }
     //Estacionario
     /*
     Realizamos 2 torneos binarios aleatorios entre 4 elementos de la población
@@ -418,7 +441,7 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX){
       }
     }
     sort(mutacion.begin(),mutacion.end());
-    // Cruzamos a los peoresPadres
+    // Cruzamos a los padres
     for(int i = 0; i < numEsperadoCruces*2; ++i){
       ag.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
                     matrizHijos[i], matrizHijos[i+1]);
@@ -427,17 +450,26 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX){
         mutacion.erase(mutacion.begin());
       }*/
       valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+      if(keepSaving==true){
+        agcep.addToHistograma(matrizHijos[i],valorHijo[i]);
+      }
       i++;
       /*if(i==mutacion[0]){
         cambioMutante(matrizHijos[i]);
         mutacion.erase(mutacion.begin());
       }*/
       valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+      if(keepSaving==true){
+        agcep.addToHistograma(matrizHijos[i],valorHijo[i]);
+      }
     }
     // Comprobamos si mutamos a qué padres mutar
     while(!mutacion.empty()){
       ag.cambioMutante(matrizSoluciones[mutacion[0]]);
       valorPadre[mutacion[0]] = ag.calcularValor(matrizSoluciones[mutacion[0]]);
+      if(keepSaving==true){
+        agcep.addToHistograma(matrizSoluciones[mutacion[0]],valorPadre[mutacion[0]]);
+      }
       mutacion.erase(mutacion.begin());
     }
 
