@@ -4,12 +4,18 @@
   - bin/ -> carpeta que contiene el ejecutable
 	
   - data/ -> carpeta donde se encuentran los ficheros de datos que utilizaremos
+  
+  - Histogramas/ -> carpeta donde se encuentran los ficheros relacionados con los histogramas
 	
   - include/ -> carpeta que contiene los archivos de cabecera (QKP.h y random.hpp)
+
+  - Notas/ -> carpeta que contiene archivos con notas sobre las fases de implementación
 	
   - src/ -> carpeta que contiene los archivos fuente (QKP.cpp y main.cpp)
 	
   - obj/ -> carpeta que contiene los archivos objetos
+  
+  - Subresultados/ -> carpeta que contiene distintos archivos sobre los resultados obtenidos en las distintas ejecuciones
 	
 *Contenido de los distintos archivos*
 
