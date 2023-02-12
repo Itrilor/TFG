@@ -1,8 +1,0 @@
-15 población inicial -> Selección aleatoria
-Operador selección: Partimos de selección por torneo
-Operador de mutación: Quitamos un elemento e intentamos añadir más hasta que llenemos la mochila
-Operador de cruce: https://www.geeksforgeeks.org/crossover-in-genetic-algorithm/
-	- Si nos pasamos de peso: Tenemos que rectificar eliminando los objetos que menos 'rente'
-	- Si es solucion: Por ahora no tocamos nada más, quizá mejorarlas para la mejor solución posible o el mejor hijo?
-	
-Utilizar algoritmo de colonia de hormigas en vez de Greedy?
