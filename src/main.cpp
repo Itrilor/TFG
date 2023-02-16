@@ -88,7 +88,7 @@ int main(int argc, char ** argv){
   for(int j = 0; j < 10; ++j){
     estado = sequence.leerFicheroDatos(argv[1]);
     if(!estado){
-      cerr << "No se ha poddio leer correctamente\n";
+      cerr << "No se ha podido leer correctamente\n";
       exit(-1);
     }
     sequence.GACEP(10,0.1,NEVALUACIONESMAX);

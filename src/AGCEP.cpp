@@ -24,6 +24,15 @@ AGCEP::AGCEP(AG &ag){
   _ag = ag;
 }
 
+/***********SETS****************/
+void AGCEP::setBestElements(double perelem){
+  _bestElements = getBestElements(getBestElements(perelem), getWorstElements(perelem));
+}
+
+void AGCEP::setWorstElements(double perelem){
+  _worstElements = getWorstElements(getBestElements(perelem), getWorstElements(perelem));
+}
+
 /*********FUNCIONES RELACIONADAS HISTOGRAMA********/
 
 void AGCEP::addToHistograma(int sol[], double valor){
@@ -49,6 +58,8 @@ void AGCEP::addToHistograma(int sol[], double valor){
 void AGCEP::clearHistograma(){
   _solucionesHistograma.clear();
   _valoresHistograma.clear();
+  _bestElements.clear();
+  _worstElements.clear();
 }
 
 void AGCEP::sortHistograma(){
@@ -76,7 +87,7 @@ void AGCEP::sortHistograma(){
 }
 
 vector<int> AGCEP::getBestElements(double perelem){
-  vector<int> indices(_solucionesHistograma[0].size());
+  vector<int> indices(getSize());
   vector<double> percentages(indices.size());
   iota(indices.begin(), indices.end(), 0);
   fill(percentages.begin(), percentages.end(), 0);
@@ -94,7 +105,7 @@ vector<int> AGCEP::getBestElements(double perelem){
 }
 
 vector<int> AGCEP::getWorstElements(double perelem){
-  vector<int> indices(_solucionesHistograma[0].size());
+  vector<int> indices(getSize());
   vector<double> percentages(indices.size());
   iota(indices.begin(), indices.end(), 0);
   fill(percentages.begin(), percentages.end(), 0);
@@ -210,6 +221,123 @@ void AGCEP::getWorstPercentages(double perelem, vector<double> &perc, vector<int
   indices = index;
 }
 
+/******MODIFICACIONES DEL AG************/
+void AGCEP::cambioMutante(int bin[], bool etapa){
+  if(etapa){
+    _ag.cambioMutante(bin);
+  }
+  else{
+    double peso = _ag.calcularPeso(bin);
+    vector<int> indexY, indexN, bestN, mediumN, worstN;
+    getYNfromList(bin, indexY, indexN, worstN, mediumN, bestN);
+    bool sust = false;
+    for(int i = 0; i < indexY.size() && !sust; ++i){
+      for(int j = 0; j < indexN.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, indexY[i], indexN[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, indexY[i],indexN[j]);
+          indexY.erase(indexY.begin()+i);
+          indexN.erase(indexN.begin()+j);
+        }
+      }
+    }
+    bool anadido = true;
+    if(!bestN.empty()){
+      while(anadido){
+        anadido = anadirFromListaGreedy(bin, bestN, peso);
+      }
+    }
+    anadido=true;
+    if(!mediumN.empty()){
+      while(anadido){
+        anadido = anadirFromListaGreedy(bin, mediumN, peso);
+      }
+    }
+    anadido=true;
+    if(!worstN.empty()){
+      while(anadido){
+        anadido = anadirFromListaGreedy(bin, worstN, peso);
+      }
+    }
+  }
+}
+
+void AGCEP::getYNfromList(int bin[], vector<int> &yes, vector<int> &no, vector<int> &wn, vector<int> &mn, vector<int> &bn){
+  vector<int> bestY, mediumY, worstY;
+  vector<int> bestN, mediumN, worstN;
+  vector<int>::iterator it;
+  for(int i = 0; i < getSize(); ++i){
+    if(bin[i]==1){ //Yes
+      it = find(_bestElements.begin(), _bestElements.end(), i);
+      if(it!=_bestElements.end()){
+        bestY.push_back(i);
+      }
+      else{
+        it = find(_worstElements.begin(), _worstElements.end(), i);
+        if(it!=_worstElements.end()){
+          worstY.push_back(i);
+        }
+        else{
+          mediumY.push_back(i);
+        }
+      }
+    }
+    else{ //No
+      it = find(_worstElements.begin(), _worstElements.end(), i);
+      if(it != _worstElements.end()){
+        worstN.push_back(i);
+      }
+      else{
+        it = find(_bestElements.begin(), _bestElements.end(), i);
+        if(it != _bestElements.end()){
+          bestN.push_back(i);
+        }
+        else{
+          mediumN.push_back(i);
+        }
+      }
+    }
+  }
+  Random::shuffle(bestY);
+  Random::shuffle(mediumY);
+  Random::shuffle(worstY);
+  Random::shuffle(bestN);
+  Random::shuffle(mediumN);
+  Random::shuffle(worstN);
+  yes = worstY;
+  yes.insert(yes.end(), mediumY.begin(), mediumY.end());
+  yes.insert(yes.end(), bestY.begin(), bestY.end());
+  no = bestN;
+  no.insert(no.end(),mediumN.begin(), mediumN.end());
+  no.insert(no.end(),worstN.begin(), worstN.end());
+  wn = worstN;
+  mn = mediumN;
+  bn = bestN;
+}
+
+bool AGCEP::anadirFromListaGreedy(int bin[], vector<int> &index, double &peso){
+  bool salida = false;
+  double max = 0;
+  double aux = 0;
+  int pos_max = 0;
+
+  for(int i = 0; i < index.size(); ++i){
+    if(_ag.checkAdd(index[i], peso, bin)){
+      salida = true;
+      aux = _ag.valueIfAdded(index[i],bin);
+      if(aux > max){
+        max = aux;
+        pos_max = i;
+      }
+    }
+  }
+
+  if(salida == true){
+    _ag.anadirElemento(bin, peso, index[pos_max]);
+    index.erase(index.begin()+pos_max);
+  }
+  return salida;
+}
 
 /***********FICHEROS DE DATOS***********/
 bool AGCEP::saveFichero(const char* fichero) const{
@@ -295,11 +423,66 @@ bool AGCEP::writeElementsPercentages(double perelem, const char* fichero){
       if(ofs){
         salida = true;
       }
-      else cerr << "Error. No se ha podido escribir en el archivo(Worst Solutions)\n\n";
+      else cerr << "Error. No se ha podido escribir en el archivo (Worst Solutions)\n\n";
     }
-    else cerr << "Error. No se ha podido escribir en el archivo(Best Solutions)\n\n";
+    else cerr << "Error. No se ha podido escribir en el archivo (Best Solutions)\n\n";
   }
   else cerr << "Error. El archivo no se ha podido abrir\n\n";
+
+  return salida;
+}
+
+bool AGCEP::writeBestWorstElements(double perelem, const char* fichero){
+  bool salida = false;
+  ofstream ofs;
+  ofs.open(fichero);
+  if(ofs){
+    setBestElements(perelem);
+    setWorstElements(perelem);
+
+    ofs << "Elementos de las mejores soluciones (" << perelem << "%): \n";
+    if(_bestElements.empty()){
+      ofs << "No hay";
+    }
+    else{
+      for(int i = 0; i < _bestElements.size(); ++i){
+        ofs << _bestElements[i] << ", ";
+      }
+    }
+    if(ofs){
+      ofs << "\n\nElementos de las peores soluciones(" << perelem << "%): \n";
+      if(_worstElements.empty()){
+        ofs << "No hay";
+      }
+      else{
+        for(int i = 0; i < _worstElements.size(); ++i){
+          ofs << _worstElements[i] << ", ";
+        }
+      }
+      if(ofs){
+        salida = true;
+      }
+      else cerr << "Error. No se ha podido escribir en el archivo (Worst Elements)\n\n";
+    }
+    else cerr << "Error. No se ha podido escribir en el archivo (Best Elements)\n\n";
+  }
+  else cerr << "Error. El archivo no se ha podido abrir\n\n";
+
+  return salida;
+}
+
+bool AGCEP::writeAllHistogramsFiles(const char* hist, const char* porc, const char* elem, double perelem){
+  bool salida = false;
+  if(saveFichero(hist)){
+    if(writeElementsPercentages(perelem,porc)){
+      if(writeBestWorstElements(perelem, elem)){
+        salida = true;
+      }
+      else cerr << "Error guardando los mejores y peores elementos\n\n";
+    }
+    else cerr << "Error guardando los porcentajes de uso de elementos\n\n";
+  }
+  else cerr << "Error guardando las soluciones\n\n";
 
   return salida;
 }

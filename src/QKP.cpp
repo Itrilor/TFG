@@ -396,7 +396,7 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX){
   //Creamos la población inicial y la añadimos al vector para el histograma
   vector<int> indices;
   for(int i = 0; i < numcro; ++i){
-    ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);    
+    ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);
     agcep.addToHistograma(matrizSoluciones[i],valorPadre[i]);
   }
 
@@ -418,6 +418,9 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX){
         temp_str = "../Histogramas/Porcentajes"+to_string(contadorFichero);
         char const* porcentaje_array = temp_str.c_str();
         agcep.writeElementsPercentages(20,porcentaje_array);
+        temp_str = "../Histogramas/Elementos"+to_string(contadorFichero);
+        char const* elementos_array = temp_str.c_str();
+        agcep.writeBestWorstElements(20, elementos_array);
         contadorFichero++;
       }
     }
@@ -465,7 +468,7 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX){
     }
     // Comprobamos si mutamos a qué padres mutar
     while(!mutacion.empty()){
-      ag.cambioMutante(matrizSoluciones[mutacion[0]]);
+      agcep.cambioMutante(matrizSoluciones[mutacion[0]],keepSaving);
       valorPadre[mutacion[0]] = ag.calcularValor(matrizSoluciones[mutacion[0]]);
       if(keepSaving==true){
         agcep.addToHistograma(matrizSoluciones[mutacion[0]],valorPadre[mutacion[0]]);

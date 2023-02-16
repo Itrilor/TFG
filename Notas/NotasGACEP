@@ -28,9 +28,12 @@ Cosas que hacer:
   Hecho relacionado con el histograma:
     - Guardar todas las soluciones de 50 iteraciones, no guardamos durante otras 50 y reseteamos.
     - Guardar los porcentajes de uso (ordenados) de los distintos elementos para las mejores y peores 20% soluciones.
+    - Obtener los elementos más usados para las mejores y peores soluciones
+    - Guardar los elementos más usados exclusivamente para las mejores y peores soluciones.
+    - Usar los mejores y peores elementos para la mutación
   
   Siguiente:
-    - Probar getBestElements y getWorstElements
+    - Usar los mejores y peores elementos para el operador de reparación
     
 Olvidamos el Greedy porque no nos interesa
 GRASP: Greedy aleatorio -> En vez de quedarte con el mejor valor/peso, eliges los x primeros y eliges uno.
