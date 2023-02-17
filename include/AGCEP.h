@@ -13,6 +13,10 @@ class AGCEP{
     
     inline int getSize() const{return _ag.getSize();};
     
+    inline int getCapacidad() const{return _ag.getCapacidad();};
+    
+    inline double getPeso(int i) const{return _ag.getPeso(i);};
+    
     /**
      * @brief Se añade, si no está ya incluida, una solución y su respectivo valor para el histograma
      * @param sol Solución a introducir en _solucionesHistograma
@@ -84,14 +88,27 @@ class AGCEP{
     void getBestPercentages(double perelem, vector<double> &perc, vector<int> &indices);
     void getWorstPercentages(double perelem, vector<double> &perc, vector<int> &indices);
     
+    vector<int> getMehElements();
+    
     //Modificaciones del AG
     void cambioMutante(int bin[], bool etapa);
     
-    void getYNfromList(int bin[], vector<int> &yes, vector<int> &no, vector<int> &wn, vector<int> &mn, vector<int> &bn);
+    void getYNfromList(int bin[], vector<int> &yes, vector<int> &no, vector<int> &wn, vector<int> &mn, vector<int> &bn, vector<int> &by, vector<int> &my, vector<int> &wy);
+    
+    void sustituirCrom(int bin[], double &peso, vector<int> &wn, vector<int> &mn, vector<int> &bn, vector<int> &by, vector<int> &my, vector<int> &wy);
     
     bool anadirFromListaGreedy(int bin[], vector<int> &index, double &peso);
     
+    void cruceUniforme(int p1[], int p2[], int h1[], int h2[]);
     
+    void operadorReparacion(int hijo[]);
+    void operadorReparacionEliminar(int hijo[], double &pesoHijo);
+    void operadorReparacionAnadir(int hijo[], double &pesoHijo);
+    
+    bool eliminarElemento(int bin[], double &peso);
+    bool eliminarElemento(int bin[], double &peso, vector<int> index);
+    
+    //Ficheros
     /**
      * @brief
      * @param fichero

@@ -22,6 +22,10 @@ class AG{
     
     inline int getSize() const{return _qkp.getSize();};
     
+    inline int getCapacidad() const{return _qkp.getCapacidad();};
+    
+    inline double getPeso(int i) const{return _qkp.getPeso(i);};
+    
     /****FUNCIONES AUXILIARES*******/
     
     /**

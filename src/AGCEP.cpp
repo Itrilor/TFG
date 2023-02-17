@@ -221,6 +221,29 @@ void AGCEP::getWorstPercentages(double perelem, vector<double> &perc, vector<int
   indices = index;
 }
 
+vector<int> AGCEP::getMehElements(){
+  vector<int> index;
+  vector<int>::iterator it;
+  bool mehEle;
+  for(int i = 0; i < getSize(); ++i){
+    mehEle = true;
+    it = find(_bestElements.begin(), _bestElements.end(), i);
+    if(it==_bestElements.end()){
+      mehEle = false;
+    }
+    if(mehEle){
+      it = find(_worstElements.begin(), _worstElements.end(), i);
+      if(it==_worstElements.end()){
+        mehEle = false;
+      }
+      if(mehEle){
+        index.push_back(i);
+      }
+    }
+  }
+  return index;
+}
+
 /******MODIFICACIONES DEL AG************/
 void AGCEP::cambioMutante(int bin[], bool etapa){
   if(etapa){
@@ -228,9 +251,10 @@ void AGCEP::cambioMutante(int bin[], bool etapa){
   }
   else{
     double peso = _ag.calcularPeso(bin);
-    vector<int> indexY, indexN, bestN, mediumN, worstN;
-    getYNfromList(bin, indexY, indexN, worstN, mediumN, bestN);
-    bool sust = false;
+    vector<int> indexY, indexN, bestN, mediumN, worstN, bestY, mediumY, worstY;
+    getYNfromList(bin, indexY, indexN, worstN, mediumN, bestN, bestY, mediumY, worstY);
+    //resultadosHistogramaMutacion
+    /*bool sust = false;
     for(int i = 0; i < indexY.size() && !sust; ++i){
       for(int j = 0; j < indexN.size() && !sust; ++j){
         sust = _ag.checkSustituir(peso, indexY[i], indexN[j]);
@@ -240,7 +264,9 @@ void AGCEP::cambioMutante(int bin[], bool etapa){
           indexN.erase(indexN.begin()+j);
         }
       }
-    }
+    }*/
+    //resultadosHistogramaMutacion2
+    sustituirCrom(bin,peso,worstN,mediumN,bestN,bestY,mediumY,worstY);
     bool anadido = true;
     if(!bestN.empty()){
       while(anadido){
@@ -262,57 +288,184 @@ void AGCEP::cambioMutante(int bin[], bool etapa){
   }
 }
 
-void AGCEP::getYNfromList(int bin[], vector<int> &yes, vector<int> &no, vector<int> &wn, vector<int> &mn, vector<int> &bn){
-  vector<int> bestY, mediumY, worstY;
-  vector<int> bestN, mediumN, worstN;
+void AGCEP::getYNfromList(int bin[], vector<int> &yes, vector<int> &no, vector<int> &wn, vector<int> &mn, vector<int> &bn,vector<int> &by, vector<int> &my, vector<int> &wy){
+  wn.clear(); mn.clear(); bn.clear();
+  by.clear(); my.clear(); wy.clear();
   vector<int>::iterator it;
   for(int i = 0; i < getSize(); ++i){
     if(bin[i]==1){ //Yes
       it = find(_bestElements.begin(), _bestElements.end(), i);
       if(it!=_bestElements.end()){
-        bestY.push_back(i);
+        by.push_back(i);
       }
       else{
         it = find(_worstElements.begin(), _worstElements.end(), i);
         if(it!=_worstElements.end()){
-          worstY.push_back(i);
+          wy.push_back(i);
         }
         else{
-          mediumY.push_back(i);
+          my.push_back(i);
         }
       }
     }
     else{ //No
       it = find(_worstElements.begin(), _worstElements.end(), i);
       if(it != _worstElements.end()){
-        worstN.push_back(i);
+        wn.push_back(i);
       }
       else{
         it = find(_bestElements.begin(), _bestElements.end(), i);
         if(it != _bestElements.end()){
-          bestN.push_back(i);
+          bn.push_back(i);
         }
         else{
-          mediumN.push_back(i);
+          mn.push_back(i);
         }
       }
     }
   }
-  Random::shuffle(bestY);
-  Random::shuffle(mediumY);
-  Random::shuffle(worstY);
-  Random::shuffle(bestN);
-  Random::shuffle(mediumN);
-  Random::shuffle(worstN);
-  yes = worstY;
-  yes.insert(yes.end(), mediumY.begin(), mediumY.end());
-  yes.insert(yes.end(), bestY.begin(), bestY.end());
-  no = bestN;
-  no.insert(no.end(),mediumN.begin(), mediumN.end());
-  no.insert(no.end(),worstN.begin(), worstN.end());
-  wn = worstN;
-  mn = mediumN;
-  bn = bestN;
+  Random::shuffle(by);
+  Random::shuffle(my);
+  Random::shuffle(wy);
+  Random::shuffle(bn);
+  Random::shuffle(mn);
+  Random::shuffle(wn);
+  yes = wy;
+  yes.insert(yes.end(), my.begin(), my.end());
+  yes.insert(yes.end(), by.begin(), by.end());
+  no = bn;
+  no.insert(no.end(),mn.begin(), mn.end());
+  no.insert(no.end(),wn.begin(), wn.end());
+}
+
+void AGCEP::sustituirCrom(int bin[], double &peso, vector<int> &wn, vector<int> &mn, vector<int> &bn, vector<int> &by, vector<int> &my, vector<int> &wy){
+  bool sust = false;
+  if(!bn.empty() && !wy.empty() && !sust){ //Sustituir peor yes por mejor no
+    for(int i = 0; i < wy.size() && !sust; ++i){
+      for(int j = 0; j < bn.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, wy[i], bn[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, wy[i],bn[j]);
+          wn.push_back(wy[i]);
+          by.push_back(bn[j]);
+          wy.erase(wy.begin()+i);
+          bn.erase(bn.begin()+j);
+        }
+      }
+    }
+  }
+  if(!bn.empty() && !my.empty() && !sust){ //Sustituir meh yes por mejor no
+    for(int i = 0; i < my.size() && !sust; ++i){
+      for(int j = 0; j < bn.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, my[i], bn[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, my[i],bn[j]);
+          mn.push_back(my[i]);
+          by.push_back(bn[j]);
+          my.erase(my.begin()+i);
+          bn.erase(bn.begin()+j);
+        }
+      }
+    }
+  }
+  if(!wy.empty() && !mn.empty() && !sust){ //Sustituir peor yes por meh no
+    for(int i = 0; i < wy.size() && !sust; ++i){
+      for(int j = 0; j < mn.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, wy[i], mn[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, wy[i],mn[j]);
+          wn.push_back(wy[i]);
+          my.push_back(mn[j]);
+          wy.erase(wy.begin()+i);
+          mn.erase(mn.begin()+j);
+        }
+      }
+    }
+  }
+  if(!mn.empty() && !my.empty() && !sust){ //Sustituir meh yes por meh no
+    for(int i = 0; i < my.size() && !sust; ++i){
+      for(int j = 0; j < mn.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, my[i], mn[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, my[i],mn[j]);
+          mn.push_back(my[i]);
+          my.push_back(mn[j]);
+          my.erase(my.begin()+i);
+          mn.erase(mn.begin()+j);
+        }
+      }
+    }
+  }
+  if(!bn.empty() && !by.empty() && !sust){ //Sustituir mejor yes por mejor no
+    for(int i = 0; i < by.size() && !sust; ++i){
+      for(int j = 0; j < bn.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, by[i], bn[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, by[i],bn[j]);
+          bn.push_back(by[i]);
+          by.push_back(bn[j]);
+          by.erase(by.begin()+i);
+          bn.erase(bn.begin()+j);
+        }
+      }
+    }
+  }
+  if(!wn.empty() && !wy.empty() && !sust){ //Sustituir peor yes por peor no
+    for(int i = 0; i < my.size() && !sust; ++i){
+      for(int j = 0; j < mn.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, my[i], mn[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, my[i],mn[j]);
+          mn.push_back(my[i]);
+          my.push_back(mn[j]);
+          my.erase(my.begin()+i);
+          mn.erase(mn.begin()+j);
+        }
+      }
+    }
+  }
+  if(!mn.empty() && !by.empty() && !sust){ //Sustituir mejor yes por meh no
+    for(int i = 0; i < by.size() && !sust; ++i){
+      for(int j = 0; j < mn.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, by[i], mn[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, by[i],mn[j]);
+          bn.push_back(by[i]);
+          my.push_back(mn[j]);
+          by.erase(by.begin()+i);
+          mn.erase(mn.begin()+j);
+        }
+      }
+    }
+  }
+  if(!wn.empty() && !my.empty() && !sust){ //Sustituir meh yes por peor no
+    for(int i = 0; i < my.size() && !sust; ++i){
+      for(int j = 0; j < wn.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, my[i], wn[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, my[i],wn[j]);
+          mn.push_back(my[i]);
+          wy.push_back(wn[j]);
+          my.erase(my.begin()+i);
+          wn.erase(wn.begin()+j);
+        }
+      }
+    }
+  }
+  if(!wn.empty() && !by.empty() && !sust){ //Sustituir mejor yes por peor no
+    for(int i = 0; i < by.size() && !sust; ++i){
+      for(int j = 0; j < wn.size() && !sust; ++j){
+        sust = _ag.checkSustituir(peso, by[i], wn[j]);
+        if(sust){
+          _ag.sustituirCrom(bin, peso, by[i],wn[j]);
+          bn.push_back(by[i]);
+          wy.push_back(wn[j]);
+          by.erase(by.begin()+i);
+          wn.erase(wn.begin()+j);
+        }
+      }
+    }
+  }
 }
 
 bool AGCEP::anadirFromListaGreedy(int bin[], vector<int> &index, double &peso){
@@ -335,6 +488,109 @@ bool AGCEP::anadirFromListaGreedy(int bin[], vector<int> &index, double &peso){
   if(salida == true){
     _ag.anadirElemento(bin, peso, index[pos_max]);
     index.erase(index.begin()+pos_max);
+  }
+  return salida;
+}
+
+void AGCEP::cruceUniforme(int p1[], int p2[], int h1[], int h2[]){
+  vector<int> indices;
+  for(int i = 0; i< getSize(); ++i){
+    indices.push_back(i);
+  }
+  Random::shuffle(indices);
+
+  for(int i = 0; i< getSize(); ++i){
+    if(i< getSize()/2){
+      h1[indices[i]] = p1[indices[i]];
+      h2[indices[i]] = p2[indices[i]];
+    }
+    else{
+      h1[indices[i]] = p2[indices[i]];
+      h2[indices[i]] = p1[indices[i]];
+    }
+  }
+
+  // Hacemos las soluciones factibles
+  operadorReparacion(h1);
+  operadorReparacion(h2);
+}
+
+void AGCEP::operadorReparacion(int hijo[]){
+  double pesoHijo = _ag.calcularPeso(hijo);
+  bool anadido = true;
+  //Tenemos que eliminar elementos
+  if(pesoHijo > getCapacidad()){
+    operadorReparacionEliminar(hijo, pesoHijo);
+  }
+  //Tenemos que añadir más elementos
+  else{
+    //while(anadido){anadido = _ag.anadirElementoGreedy(hijo, pesoHijo);}
+    operadorReparacionAnadir(hijo,pesoHijo);
+  }
+}
+
+void AGCEP::operadorReparacionEliminar(int hijo[], double &pesoHijo){
+  bool eliminado = true;
+  while(pesoHijo > getCapacidad() && eliminado){
+    eliminado = eliminarElemento(hijo,pesoHijo);
+  }
+  if(pesoHijo > getCapacidad()){
+    eliminado = true;
+    vector<int> index = getMehElements();
+    while(pesoHijo > getCapacidad() && eliminado){
+      eliminado = eliminarElemento(hijo, pesoHijo, index);
+    }
+    eliminado = true;
+    while(pesoHijo > getCapacidad() && eliminado){
+      eliminado = eliminarElemento(hijo, pesoHijo, _bestElements);
+    }
+  }
+}
+
+void AGCEP::operadorReparacionAnadir(int hijo[], double &pesoHijo){
+  bool anadido = true;
+  while(anadido){anadido = anadirFromListaGreedy(hijo,_bestElements,pesoHijo);}
+  anadido = true;
+  vector<int> index = getMehElements();
+  while(anadido){
+    anadido = anadirFromListaGreedy(hijo, index, pesoHijo);
+  }
+  anadido = true;
+  while(anadido){
+    anadido = anadirFromListaGreedy(hijo, _worstElements, pesoHijo);
+  }
+}
+
+bool AGCEP::eliminarElemento(int bin[], double &peso){
+  return eliminarElemento(bin,peso,_worstElements);
+}
+
+bool AGCEP::eliminarElemento(int bin[], double &peso, vector<int> index){
+  double minRelValor = 0;
+  int indexMinRelValor;
+  double relValor = 0;
+  double valor_aux=0;
+  bool salida = false;
+  for(int i = 0; i < index.size(); ++i){
+    if(bin[index[i]]==1){
+      if(relValor==0){
+        minRelValor = _ag.calcularRelValor(index[i],bin);
+        indexMinRelValor=index[i];
+        salida = true;
+      }
+      else{
+        relValor = _ag.calcularRelValor(index[i],bin);
+        if(minRelValor > relValor){
+          indexMinRelValor = index[i];
+          minRelValor = relValor;
+        }
+      }
+    }
+  }
+  //Eliminamos el peor elemento
+  if(salida){
+    bin[indexMinRelValor]=0;
+    peso = peso - getPeso(indexMinRelValor);
   }
   return salida;
 }

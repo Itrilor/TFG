@@ -14,6 +14,7 @@ void mensajeError();
 void mensajeSolucion();
 
 const int NEVALUACIONESMAX = 450;
+const vector<int> seed = {95, 27, 83, 61, 4, 27, 14, 49, 92, 55};
 
 int main(int argc, char ** argv){
   if(argc!=2){
@@ -61,17 +62,17 @@ int main(int argc, char ** argv){
 
   //------------ALGORITMO GENETICO ESTACIONARIO UNIFORME ----------------
   //cout << "Leemos " << argv[1] << "\n";
-  /*values.clear();
+  //values.clear();
   for(int j = 0; j < 10; ++j){
     estado = sequence.leerFicheroDatos(argv[1]);
     if(!estado){
       cerr << "No se ha poddio leer correctamente\n";
       exit(-1);
     }
-    sequence.AGEU(10,0.1,NEVALUACIONESMAX);
+    sequence.AGEU(10,0.1,NEVALUACIONESMAX, seed[j]);
     values.push_back(sequence.getValorSolucion());
   }
-  double tiempoAGEU = float_s.count();
+  //double tiempoAGEU = float_s.count();
   double meanValue = 0;
   for(int i = 0; i < values.size(); ++i){
     meanValue += values[i];
@@ -81,17 +82,17 @@ int main(int argc, char ** argv){
   //mensajeSolucion("Algoritmo Genético Estacionario Uniforme", sequence, tiempoAGEU, "segundos");
   //cout << sequence.getValorSolucion() << "\n";
   //cout << meanValue << "," << tiempoAGEU << "\n";
-  cout << meanValue << "\n";*/
+  cout << meanValue << "\n";
 
   //---------GENETIC ALGORITHM FOR COMBINATORY EXPENSIVE PROBLEM----------
   //values.clear();
-  for(int j = 0; j < 10; ++j){
+  /*for(int j = 0; j < 10; ++j){
     estado = sequence.leerFicheroDatos(argv[1]);
     if(!estado){
       cerr << "No se ha podido leer correctamente\n";
       exit(-1);
     }
-    sequence.GACEP(10,0.1,NEVALUACIONESMAX);
+    sequence.GACEP(10,0.1,NEVALUACIONESMAX, seed[j]);
     values.push_back(sequence.getValorSolucion());
   }
   double meanValue = 0;
@@ -103,7 +104,7 @@ int main(int argc, char ** argv){
   //mensajeSolucion("Algoritmo genético para problemas combinatorios expensive", sequence, tiempoAGEU, "segundos");
   //cout << sequence.getValorSolucion() << "\n";
   //cout << meanValue << "," << tiempoAGEU << "\n";
-  cout << meanValue << "\n";
+  cout << meanValue << "\n";*/
 }
 
 void mensajeSolucion(string name, QKP seq, double tiempo, string seg){

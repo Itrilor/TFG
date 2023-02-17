@@ -263,9 +263,9 @@ void QKP::Greedy(int max_op){
   }
 }
 
-void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
+void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX, int seed){
   //Inicializamos la semilla
-  //Random::seed(getSeed());
+  Random::seed(seed);
 
   //Variables
   AG ag(*this);
@@ -379,7 +379,9 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX){
   //return solucion
 }
 
-void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX){
+void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int seed){
+  //Inicializar la semilla
+  Random::seed(seed);
   //Variables
   AG ag(*this);
   AGCEP agcep(ag);
@@ -446,7 +448,7 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX){
     sort(mutacion.begin(),mutacion.end());
     // Cruzamos a los padres
     for(int i = 0; i < numEsperadoCruces*2; ++i){
-      ag.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
+      agcep.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
                     matrizHijos[i], matrizHijos[i+1]);
       /*if(i==mutacion[0]){
         cambioMutante(matrizHijos[i]);

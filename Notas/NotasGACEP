@@ -31,8 +31,6 @@ Cosas que hacer:
     - Obtener los elementos más usados para las mejores y peores soluciones
     - Guardar los elementos más usados exclusivamente para las mejores y peores soluciones.
     - Usar los mejores y peores elementos para la mutación
-  
-  Siguiente:
     - Usar los mejores y peores elementos para el operador de reparación
     
 Olvidamos el Greedy porque no nos interesa
