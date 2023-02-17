@@ -1,0 +1,22 @@
+CHC:
+  - Selección Elitista: Selecciona los N mejores cromosomas entre padres e hijos. Los N mejores elementos encontrados hasta el momento permanecerán en la población actual.
+  - Cruce Uniforme (HUX): Intercambia exactamente la mitad de los alelos que son distintos en los padres. Garantiza que los hijos tengan una distancia Hamming máxima a sus dos padres. -> Hecho
+  - Prevención de Incesto: Se forman N/2 parejas con los elementos de la población. Solo se cruzan las parejas cuyos miembros difieren en un número determinado de bits.
+ El umbral se inicializa a H=L/4 (L es la longitud del cromosoma). Si durante un ciclo no se crean descendientes mejores que los de la población anterior, al umbral de cruce se le resta 1.
+  - Reinicialización: Cuando el umbral de cruce es menor que cero, la población se reinicia:
+    a) Usando el mejor elemento como plantilla (35% de variación aleatoria) e incluyendo una copia suya
+    b) Manteniendo el mejor o parte de los mejores de la población y el resto se generan aleatoriamente
+
+Podríamos aumentar el número de parejas (en vez de 1, que sean 2) siguiendo la indicación de Prevención de Incesto, aunque esto podría suponer algunas pérdidas en ejecuciones. 
+Podríamos aplicar la Reinicialización b) cuando reiniciamos los elementos a tener en cuenta.
+
+
+Para aumentar la diversidad podríamos fomentar el uso de elementos que no se encuentren entre los más usado por los mejores ni peores de forma greedy. Pero entonces no nos podríamos olvidar de los mejores y los peores que tenemos entre etapas. Se podría considerar que solo intentaremos interactuar con dichos elementos de la forma normal (greedy). Se intentarían eliminar los peores y, en vez de introducir los mejores, introducimos los meh. 
+
+Se podría utilizar GRASP en vez de Greedy. Es decir, en vez de elegir el elemento con mayor valor/peso, se genera una lista con los x mejores elementos y se elige uno aleatorio de ahí.
+
+Se podría seguir la idea del algoritmo del enfriamiento del metal y en las últimas 50 iteraciones, en vez de seguir la forma de un genético, se podría realizar alguna especie de búsqueda local sobre la mejor solucion.
+
+Si en cierto número de iteraciones no se logra introducir ningún hijo en la población, podríamos reiniciar la población, manteniendo los mejores, con el fin de evitar estancamientos. El problema de reiniciarlo de esta forma, es que puede darse el caso en que se tenga que reiniciar muchas veces y perdamos el tiempo.
+
+Se podría considerar que en vez de utilizar soluciones aleatorias, se usase soluciones obtenidas por GRASP.
