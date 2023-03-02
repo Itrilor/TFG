@@ -492,27 +492,32 @@ bool AGCEP::anadirFromListaGreedy(int bin[], vector<int> &index, double &peso){
   return salida;
 }
 
-void AGCEP::cruceUniforme(int p1[], int p2[], int h1[], int h2[]){
-  vector<int> indices;
-  for(int i = 0; i< getSize(); ++i){
-    indices.push_back(i);
+void AGCEP::cruceUniforme(int p1[], int p2[], int h1[], int h2[], bool etapa){
+  if(etapa){
+    _ag.cruceUniforme(p1,p2,h1,h2);
   }
-  Random::shuffle(indices);
+  else{
+    vector<int> indices;
+    for(int i = 0; i< getSize(); ++i){
+      indices.push_back(i);
+    }
+    Random::shuffle(indices);
 
-  for(int i = 0; i< getSize(); ++i){
-    if(i< getSize()/2){
-      h1[indices[i]] = p1[indices[i]];
-      h2[indices[i]] = p2[indices[i]];
+    for(int i = 0; i< getSize(); ++i){
+      if(i< getSize()/2){
+        h1[indices[i]] = p1[indices[i]];
+        h2[indices[i]] = p2[indices[i]];
+      }
+      else{
+        h1[indices[i]] = p2[indices[i]];
+        h2[indices[i]] = p1[indices[i]];
+      }
     }
-    else{
-      h1[indices[i]] = p2[indices[i]];
-      h2[indices[i]] = p1[indices[i]];
-    }
+
+    // Hacemos las soluciones factibles
+    operadorReparacion(h1);
+    operadorReparacion(h2);
   }
-
-  // Hacemos las soluciones factibles
-  operadorReparacion(h1);
-  operadorReparacion(h2);
 }
 
 void AGCEP::operadorReparacion(int hijo[]){

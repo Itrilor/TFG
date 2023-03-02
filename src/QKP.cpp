@@ -263,7 +263,7 @@ void QKP::Greedy(int max_op){
   }
 }
 
-void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX, int seed){
+vector<double> QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX, int seed){
   //Inicializamos la semilla
   Random::seed(seed);
 
@@ -275,11 +275,14 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX, int seed){
   double valorPadre[numcro];
   double valorHijo[numEsperadoCruces*2];
   int index;
-  /*vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
+  int contador=0;
+
+  //Gráfico de convergencia
+  vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
   for(int i = 0; i < milestones.size(); ++i){
     milestones[i] = tEvaluacionMAX*milestones[i]/100;
-  }*/
-  int contador=0;
+  }
+  vector<double> resMilestones;
 
   //Empezamos el cronómetro
   //auto start = std::chrono::high_resolution_clock::now();
@@ -294,11 +297,11 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX, int seed){
 
   //while(duration.count() < tEvaluacionMAX){
   while(contador < tEvaluacionMAX){
-    /*if(contador > milestones[0]){
+    if(contador > milestones[0]){
       index = ag.calcularMejorValor(valorPadre,numcro);
-      cout << valorPadre[index] << " , ";
+      resMilestones.push_back(valorPadre[index]);
       milestones.erase(milestones.begin());
-    }*/
+    }
     //Estacionario
     /*
     Realizamos 2 torneos binarios aleatorios entre 4 elementos de la población
@@ -371,15 +374,16 @@ void QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX, int seed){
   }
   // Elegir
   index = ag.calcularMejorValor(valorPadre, numcro);
+  resMilestones.push_back(valorPadre[index]);
   for(int i = 0; i < getSize(); ++i){
     if(matrizSoluciones[index][i]==1){
       addSolucion(i);
     }
   }
-  //return solucion
+  return resMilestones;
 }
 
-void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int seed){
+vector<double> QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int seed){
   //Inicializar la semilla
   Random::seed(seed);
   //Variables
@@ -395,6 +399,13 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int seed){
   int contadorFichero=1;
   bool keepSaving = true;
 
+  //Gráfico de convergencia
+  vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
+  for(int i = 0; i < milestones.size(); ++i){
+    milestones[i] = EvaluacionMAX*milestones[i]/100;
+  }
+  vector<double> resMilestones;
+
   //Creamos la población inicial y la añadimos al vector para el histograma
   vector<int> indices;
   for(int i = 0; i < numcro; ++i){
@@ -403,6 +414,11 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int seed){
   }
 
   while(contador < EvaluacionMAX){
+    if(contador > milestones[0]){
+      index = ag.calcularMejorValor(valorPadre,numcro);
+      resMilestones.push_back(valorPadre[index]);
+      milestones.erase(milestones.begin());
+    }
     if(contador!=0 && (contador%50==0)){
       if(contador%100==0){
         keepSaving=true;
@@ -449,7 +465,8 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int seed){
     // Cruzamos a los padres
     for(int i = 0; i < numEsperadoCruces*2; ++i){
       agcep.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
-                    matrizHijos[i], matrizHijos[i+1]);
+                    matrizHijos[i], matrizHijos[i+1], keepSaving);
+
       /*if(i==mutacion[0]){
         cambioMutante(matrizHijos[i]);
         mutacion.erase(mutacion.begin());
@@ -505,12 +522,14 @@ void QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int seed){
   }
   // Elegir
   index = ag.calcularMejorValor(valorPadre, numcro);
+  resMilestones.push_back(valorPadre[index]);
   for(int i = 0; i < getSize(); ++i){
     if(matrizSoluciones[index][i]==1){
       addSolucion(i);
     }
   }
-  //return solucion
+  //return solucionç
+  return resMilestones;
 }
 
 /********LEER FICHERO DE DATOS*****************/

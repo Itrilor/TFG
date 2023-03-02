@@ -1,6 +1,7 @@
 #!/bin/sh
 
-echo "F01" > ../Subresultados/resultadosHistogramaMutacion3.txt; \
+echo "F01" > ../Subresultados/resultadosHistogramaMutacion2.txt; \
 for filename in ../data/*.txt; do
-  ./QKP $filename >> ../Subresultados/resultadosHistogramaMutacion3.txt
+  echo $filename
+  ./QKP $filename >> ../Subresultados/resultadosHistogramaMutacion2.txt
 done
