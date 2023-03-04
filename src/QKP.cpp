@@ -13,6 +13,7 @@
 #include "QKP.h"
 #include "AG.h"
 #include "AGCEP.h"
+#include "CHC.h"
 #include "random.hpp"
 
 using namespace std;
@@ -322,7 +323,7 @@ vector<double> QKP::AGEU(int numcro, double probm, const double tEvaluacionMAX, 
       }
     }
     sort(mutacion.begin(),mutacion.end());
-    // Cruzamos a los peoresPadres
+    // Cruzamos a los padres
     for(int i = 0; i < numEsperadoCruces*2; ++i){
       ag.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
                     matrizHijos[i], matrizHijos[i+1]);
@@ -529,6 +530,114 @@ vector<double> QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int
     }
   }
   //return solucionç
+  return resMilestones;
+}
+
+vector<double> QKP::CHCGA(int numcro, const int EvaluacionMAX, int seed){
+  //Inizializamos la semilla
+  Random::seed(seed);
+
+  //Variables
+  AG ag(*this);
+  CHC chc(ag);
+
+  int matrizSoluciones[numcro][getSize()];
+  double valorPadre[numcro];
+
+  int index;
+  int contador = 0;
+  int threshold = getSize()/4;
+
+  //Gráfico de convergencia
+  vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
+  for(int i = 0; i < milestones.size(); ++i){
+    milestones[i] = EvaluacionMAX*milestones[i]/100;
+  }
+  vector<double> resMilestones;
+  vector<int> indicesParejas;
+  vector<int> aux;
+
+  //Creamos la población inicial
+  vector<int> indices;
+  for(int i = 0; i < numcro; ++i){
+    ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);
+    indices.push_back(i);
+  }
+
+  //Empieza el algoritmo
+  while(contador < EvaluacionMAX){
+    //cout << contador << "\n";
+    //Guarda la mejor solucion del porcentaje de ejecución
+    if(contador > milestones[0]){
+      index = ag.calcularMejorValor(valorPadre,numcro);
+      resMilestones.push_back(valorPadre[index]);
+      milestones.erase(milestones.begin());
+    }
+    //Desordenamos la lista de padres
+    Random::shuffle(indices);
+    bool cruce = false;
+    for(int i = 1; i < numcro; ++i){
+      cruce = chc.seleccion(threshold, matrizSoluciones[indices[i-1]], matrizSoluciones[indices[i]]);
+      if(cruce){
+        indicesParejas.push_back(indices[i-1]);
+        indicesParejas.push_back(indices[i]);
+        ++i;
+      }
+    }
+
+    int matrizHijos[indicesParejas.size()][getSize()];
+    double valorHijo[indicesParejas.size()];
+
+    // Cruzamos a los padres
+    for(int i = 0; i < indicesParejas.size(); ++i){
+      chc.cruceHUX(matrizSoluciones[indicesParejas[i]], matrizSoluciones[indicesParejas[i+1]],
+                   matrizHijos[i], matrizHijos[i+1]);
+      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+      i++;
+      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+    }
+
+    // En CHC no se muta
+
+    // Enfrentamos a la población inicial con los hijos para quedarnos con los mejores
+    aux = chc.enfrentamiento(valorPadre,valorHijo,numcro,indicesParejas.size());
+
+    int auxSoluciones[numcro][getSize()];
+    double auxValor[numcro];
+    //Establecemos la nueva población
+    for(int i = 0; i < numcro; ++i){
+      if(aux[i]<numcro){
+        for(int j = 0; j < getSize(); ++j){
+          auxSoluciones[i][j] = matrizSoluciones[aux[i]][j];
+        }
+        auxValor[i]=valorPadre[aux[i]];
+      }
+      else{
+        for(int j = 0; j < getSize(); ++j){
+          auxSoluciones[i][j] = matrizHijos[aux[i]][j];
+        }
+        auxValor[i]=valorHijo[aux[i]-numcro];
+      }
+    }
+
+    //Sustituimos la población inicial por la nueva
+    for(int i = 0; i < numcro; ++i){
+      for(int j = 0; j < getSize(); ++j){
+        matrizSoluciones[i][j] = auxSoluciones[i][j];
+      }
+      valorPadre[i] = auxValor[i];
+    }
+
+    contador++;
+  }
+  // Elegir
+  index = ag.calcularMejorValor(valorPadre, numcro);
+  resMilestones.push_back(valorPadre[index]);
+  for(int i = 0; i < getSize(); ++i){
+    if(matrizSoluciones[index][i]==1){
+      addSolucion(i);
+    }
+  }
   return resMilestones;
 }
 

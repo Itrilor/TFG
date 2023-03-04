@@ -97,15 +97,15 @@ class AG{
      * @param tam Tamaño del array
      * @return Índice con el menor valor
      */
-		int calcularPeorValor(double valor[], int tam);
+    int calcularPeorValor(double valor[], int tam);
 		
-		/**
-		 * @brief De entre una lista de valores, se calcula cuáles son los 2 índices con los valores menos elevados
+    /**
+     * @brief De entre una lista de valores, se calcula cuáles son los 2 índices con los valores menos elevados
      * @param valor Array de valores
      * @param tam Tamaño del array
      * @return Vector con los 2 índice con los menores valores
-		 */
-		vector<int> calcular2Peores(double valor[], int tam);
+     */
+  vector<int> calcular2Peores(double valor[], int tam);
     
     /*****FUNCIONES PARA EL AG******/
     

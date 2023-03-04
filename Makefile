@@ -8,7 +8,7 @@ DATA = $(HOME)/data
 
 all: $(BIN)/QKP
 
-$(BIN)/QKP: $(OBJ)/QKP.o $(OBJ)/AG.o $(OBJ)/main.o
+$(BIN)/QKP: $(OBJ)/QKP.o $(OBJ)/AG.o $(OBJ)/AGCEP.o $(OBJ)/CHC.o $(OBJ)/main.o
 	g++ $^ -o $@
 
 $(OBJ)/main.o: $(SRC)/main.cpp
@@ -18,6 +18,12 @@ $(OBJ)/QKP.o: $(SRC)/QKP.cpp
 	g++ -c -O3 $^ -I$(INCLUDE) -o $@
 
 $(OBJ)/AG.o: $(SRC)/AG.cpp
+	g++ -c -O3 $^ -I$(INCLUDE) -o $@
+
+$(OBJ)/AGCEP.o: $(SRC)/AGCEP.cpp
+	g++ -c -O3 $^ -I$(INCLUDE) -o $@
+	
+$(OBJ)/CHC.o: $(SRC)/CHC.cpp
 	g++ -c -O3 $^ -I$(INCLUDE) -o $@
 	
 clean:

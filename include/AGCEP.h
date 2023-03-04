@@ -7,14 +7,27 @@ class AGCEP{
   
     /**
      * @brief Constructor para reservar memoria
-     * @param prob Objeto AG del problema
+     * @param ag Objeto AG del problema
      */
     AGCEP(AG &ag);
     
+    /**
+     * @brief Consulta el tamaño de elementos existentes
+     * @return El número de elementos con el que trabajamos
+     */
     inline int getSize() const{return _ag.getSize();};
     
+    /**
+     * @brief Consulta el valor de la capacidad total de la mochila
+     * @return Capacidad total de la mochila
+     */
     inline int getCapacidad() const{return _ag.getCapacidad();};
     
+    /**
+     * @brief Consulta el peso de un elemento
+     * @param i El id del elemento 
+     * @return El peso del elemento i
+     */
     inline double getPeso(int i) const{return _ag.getPeso(i);};
     
     /**
@@ -99,7 +112,7 @@ class AGCEP{
     
     bool anadirFromListaGreedy(int bin[], vector<int> &index, double &peso);
     
-    void cruceUniforme(int p1[], int p2[], int h1[], int h2[]);
+    void cruceUniforme(int p1[], int p2[], int h1[], int h2[], bool etapa);
     
     void operadorReparacion(int hijo[]);
     void operadorReparacionEliminar(int hijo[], double &pesoHijo);

@@ -191,7 +191,7 @@ class QKP{
 		 * @return El valor de añadir un objeto considerando su peso
 		 */
 		double valueIfAdded(int pos);
-	
+			
 	  /**
 	   * @brief Recupera la información del problema desde un fichero y lo reconstruye
 	   * @param fDatos Fichero que contiene los datos
@@ -204,8 +204,9 @@ class QKP{
 		void RandomQKP(vector<int> &sol, double &valor);
 		void RandomQKP(double tEvaluacionMAX);
 		void Greedy(int max_op=0);
-		void AGEU(int numcro, double probm, const double tEvaluacionMAX, int seed);
-		void GACEP(int numcro, double probm, const int EvaluacionMAX, int seed);
+		vector<double> AGEU(int numcro, double probm, const double tEvaluacionMAX, int seed);
+		vector<double> GACEP(int numcro, double probm, const int EvaluacionMAX, int seed);
+		vector<double> CHCGA(int numcro, const int EvaluacionMAX, int seed);
 	
 	private:
 		int _n;								//Nº elementos
