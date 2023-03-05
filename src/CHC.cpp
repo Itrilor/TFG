@@ -25,7 +25,7 @@ CHC::CHC(AG &ag){
 
 /***********FUNCIONES CHC*************/
 
-int CHC::distanciaHamming(int p1, int p2){
+int CHC::distanciaHamming(int p1[], int p2[]){
   int contador = 0;
   for(int i = 0; i < getSize(); ++i){
     if(p1[i]!=p2[i]){
@@ -53,15 +53,13 @@ void CHC::cruceHUX(int p1[], int p2[], int h1[], int h2[]){
   }
   //Rellenamos el resto
   Random::shuffle(indices);
-  for(int i = 0; i < indices.size(); ++i){
-    if(i%2==0){
-      h1[indices[i]] = p1[indices[i]];
-      h2[indices[i]] = p2[indices[i]];
-    }
-    else{
-      h1[indices[i]] = p2[indices[i]];
-      h2[indices[i]] = p1[indices[i]];
-    }
+  for(int i = 0; i < indices.size()/2; ++i){
+    h1[indices[i]] = p1[indices[i]];
+    h2[indices[i]] = p2[indices[i]];
+  }
+  for(int i = indices.size()/2; i < indices.size(); ++i){
+    h1[indices[i]] = p2[indices[i]];
+    h2[indices[i]] = p1[indices[i]];
   }
 
   // Hacemos las soluciones factibles

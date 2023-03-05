@@ -29,7 +29,7 @@ class CHC{
     
     //Funciones propias de CHC
     
-    int distanciaHamming(int p1, int p2);
+    int distanciaHamming(int p1[], int p2[]);
     
     /**
      * @brief Comprobación si es posible el cruce entre dos soluciones

@@ -1,1 +1,2 @@
 Hay que volver a repasarlo porque es ineficiente
+He descubierto que es ineficiente porque el número de parejas formadas es demasiado (se ha probado poner indicesPareja=2 y se ha vuelto a tardar el tiempo usual)
