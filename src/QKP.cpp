@@ -666,10 +666,11 @@ vector<double> QKP::CHCGA(int numcro, const int EvaluacionMAX, int seed){
 vector<double> QKP::GACEPCHC(int numcro, double probm, const int EvaluacionMAX, int seed){
   //Inicializar la semilla
   Random::seed(seed);
-  //Variables
+  //Algoritmos base
   AG ag(*this);
-  AGCEP agcep(ag);
-  CHC chc(ag,agcep);
+  CHC chc(ag);
+  AGCEP agcep(ag,chc);
+  //Variables
 
   int numEsperadoCruces=1;
   int matrizSoluciones[numcro][getSize()];
@@ -681,6 +682,8 @@ vector<double> QKP::GACEPCHC(int numcro, double probm, const int EvaluacionMAX, 
   int contadorFichero=1;
   bool keepSaving = true;
   int threshold = getSize()/4;
+
+  vector<int> indicesParejas;
 
   //Gráfico de convergencia
   vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
@@ -717,7 +720,6 @@ vector<double> QKP::GACEPCHC(int numcro, double probm, const int EvaluacionMAX, 
         agcep.sortHistograma();
         agcep.saveFichero(number_array);
         temp_str = "../Histogramas/Porcentajes"+to_string(contadorFichero);
-        cout << "a\n";
         char const* porcentaje_array = temp_str.c_str();
         agcep.writeElementsPercentages(20,porcentaje_array);
         temp_str = "../Histogramas/Elementos"+to_string(contadorFichero);
@@ -726,16 +728,23 @@ vector<double> QKP::GACEPCHC(int numcro, double probm, const int EvaluacionMAX, 
         contadorFichero++;
       }
     }
-    //Cruce CHC -> Prevención de incesto
+
+    //Buscamos padres a los que cruzar
+    for(int i = 0; i < numcro; ++i){
+      indices.push_back(Random::get(0, numcro));
+    }
     bool cruce = false;
-    while(!cruce){
-      indices.push_back(Random::get(0, numcro));
-      indices.push_back(Random::get(0, numcro));
-      cruce = chc.seleccion(threshold, matrizSoluciones[indices[0]], matrizSoluciones[indices[1]]);
-      if(!cruce){
-        indices.clear();
+    int contadorParejas = 0;
+    for(int i = 1; i < indices.size() && (contadorParejas<numEsperadoCruces); ++i){
+      cruce = chc.seleccion(threshold, matrizSoluciones[indices[i-1]], matrizSoluciones[indices[i]]);
+      if(cruce){
+        indicesParejas.push_back(indices[i-1]);
+        indicesParejas.push_back(indices[i]);
+        i++;
+        contadorParejas++;
       }
     }
+    indices.clear();
 
     //Generamos aleatoriamente dónde se producen las mutaciones
     vector<int> mutacion;
@@ -747,12 +756,13 @@ vector<double> QKP::GACEPCHC(int numcro, double probm, const int EvaluacionMAX, 
           mutacion.push_back(element);
       }
     }
-
     sort(mutacion.begin(),mutacion.end());
+
     // Cruzamos a los padres
-    for(int i = 0; i < numEsperadoCruces*2; ++i){
-      chc.cruceHUX(matrizSoluciones[indices[i]], matrizSoluciones[indices[i+1]],
-                   matrizHijos[i], matrizHijos[i+1], true);
+    for(int i = 0; i < contadorParejas*2; ++i){
+      agcep.cruceHUX(matrizSoluciones[indicesParejas[i]],matrizSoluciones[indicesParejas[i+1]],
+                    matrizHijos[i], matrizHijos[i+1], keepSaving);
+
       valorHijo[i] = ag.calcularValor(matrizHijos[i]);
       if(keepSaving==true){
         agcep.addToHistograma(matrizHijos[i],valorHijo[i]);
@@ -763,7 +773,7 @@ vector<double> QKP::GACEPCHC(int numcro, double probm, const int EvaluacionMAX, 
         agcep.addToHistograma(matrizHijos[i],valorHijo[i]);
       }
     }
-
+    indicesParejas.clear();
     // Comprobamos si mutamos a qué padres mutar
     while(!mutacion.empty()){
       agcep.cambioMutante(matrizSoluciones[mutacion[0]],keepSaving);
@@ -775,28 +785,31 @@ vector<double> QKP::GACEPCHC(int numcro, double probm, const int EvaluacionMAX, 
     }
 
     // Tenemos que ver si podemos sustituir
-    vector<int> peoresPadres = ag.calcular2Peores(valorPadre, numcro);
-    vector<int> peoresHijos = ag.calcular2Peores(valorHijo, numEsperadoCruces*2);
-    // Hi supera a Pi
-    if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[0]] &&
-       valorPadre[peoresPadres[1]] < valorHijo[peoresHijos[1]]){
-       //Sustituimos Pi por Hi
-       for(int i = 0; i < getSize(); ++i){
-         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[0]][i];
-         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
-       }
-       valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[0]];
-       valorPadre[peoresPadres[1]] = valorHijo[peoresHijos[1]];
-    }
-    // H0 supera a P0 y H1 no supera a P1
-    // H0 no supera a P0, pero H1 supera a P0
-    else if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[1]]){
-      //Sustituimos P0 por H1
-      for(int i = 0; i < getSize(); ++i){
-        matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+    if(contadorParejas!=0){
+      vector<int> peoresPadres = ag.calcular2Peores(valorPadre, numcro);
+      vector<int> peoresHijos = ag.calcular2Peores(valorHijo, numEsperadoCruces*2);
+      // Hi supera a Pi
+      if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[0]] &&
+         valorPadre[peoresPadres[1]] < valorHijo[peoresHijos[1]]){
+         //Sustituimos Pi por Hi
+         for(int i = 0; i < getSize(); ++i){
+           matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[0]][i];
+           matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+         }
+         valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[0]];
+         valorPadre[peoresPadres[1]] = valorHijo[peoresHijos[1]];
       }
-      valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[1]];
+      // H0 supera a P0 y H1 no supera a P1
+      // H0 no supera a P0, pero H1 supera a P0
+      else if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[1]]){
+        //Sustituimos P0 por H1
+        for(int i = 0; i < getSize(); ++i){
+          matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+        }
+        valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[1]];
+      }
     }
+
     contador++;
   }
   // Elegir

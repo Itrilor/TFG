@@ -173,7 +173,6 @@ int main(int argc, char ** argv){
       //cout << milestones[i][j] << " , ";
     }
   }
-  cout << "adfas\n";
   for(int i = 0; i < meanMilestones.size(); ++i){
     meanMilestones[i] = meanMilestones[i]/milestones.size();
     cout << meanMilestones[i] << " , ";

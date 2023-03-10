@@ -1,6 +1,7 @@
 #ifndef AGCEP_H
 #define AGCEP_H
 #include "AG.h"
+#include "CHC.h"
 
 class AGCEP{
   public:
@@ -14,11 +15,11 @@ class AGCEP{
     AGCEP(AG &ag);
     
     /**
-     * @brief Sobrecarga del operador de asignación
-     * @param orig Parámetro rhs de la asignación
-     * @return this para concatenación de asignaciones de derecha a izquierda
+     * @brief Constructor para reservar memoria
+     * @param ag Objeto AG del problema
+     * @param chc Objeto CHC del problema
      */
-    AGCEP& operator=(const AGCEP& orig);
+    AGCEP(AG &ag, CHC &chc);
     
     /**
      * @brief Consulta el tamaño de elementos existentes
@@ -123,12 +124,16 @@ class AGCEP{
     
     void cruceUniforme(int p1[], int p2[], int h1[], int h2[], bool etapa);
     
+    void cruceHUX(int p1[], int p2[], int h1[], int h2[], bool etapa);
+    
     void operadorReparacion(int hijo[]);
     void operadorReparacionEliminar(int hijo[], double &pesoHijo);
     void operadorReparacionAnadir(int hijo[], double &pesoHijo);
     
     bool eliminarElemento(int bin[], double &peso);
     bool eliminarElemento(int bin[], double &peso, vector<int> index);
+    
+
     
     //Ficheros
     /**
@@ -166,6 +171,7 @@ class AGCEP{
 
   private:
     AG _ag;
+    CHC _chc;
     vector<vector<int>> _solucionesHistograma;
     vector<double> _valoresHistograma; //valores asociados a las soluciones almacenadas
     vector<int> _bestElements;

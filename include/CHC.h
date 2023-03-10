@@ -1,7 +1,6 @@
 #ifndef CHC_H
 #define CHC_H
 #include "AG.h"
-#include "AGCEP.h"
 
 class CHC{
   public:
@@ -14,10 +13,11 @@ class CHC{
     CHC(AG &ag);
     
     /**
-     * @brief Constructor para reservar memoria
-     * @param ag Objeto AG del problema
+     * @brief Sobrecarga del operador de asignación
+     * @param orig Parámetro rhs de la asignación
+     * @return this para concatenación de asignaciones de derecha a izquierda
      */
-    CHC(AG &ag, AGCEP &agcep);
+    CHC& operator=(const CHC& orig);
     
     /**
      * @brief Consulta el tamaño de elementos existentes
@@ -54,13 +54,12 @@ class CHC{
      * @param h1 Solución generada 1
      * @param h2 Solución generada 2
      */
-    void cruceHUX(int p1[], int p2[], int h1[], int h2[], bool gacep=false);
+    void cruceHUX(int p1[], int p2[], int h1[], int h2[]);
     
     vector<int> enfrentamiento(double valorP[], double valorH[], int tam1, int tam2);
     
   private:
     AG _ag;
-    AGCEP _agcep;
 };
 
 #endif

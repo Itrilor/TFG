@@ -26,11 +26,9 @@ AGCEP::AGCEP(AG &ag){
   _ag = ag;
 }
 
-AGCEP & AGCEP::operator=(const AGCEP& orig){
-  if(&orig != this){
-    _ag = orig._ag;
-  }
-  return *this;
+AGCEP::AGCEP(AG &ag, CHC &chc){
+  _ag = ag;
+  _chc = chc;
 }
 
 /***********SETS****************/
@@ -521,6 +519,39 @@ void AGCEP::cruceUniforme(int p1[], int p2[], int h1[], int h2[], bool etapa){
         h1[indices[i]] = p2[indices[i]];
         h2[indices[i]] = p1[indices[i]];
       }
+    }
+
+    // Hacemos las soluciones factibles
+    operadorReparacion(h1);
+    operadorReparacion(h2);
+  }
+}
+
+void AGCEP::cruceHUX(int p1[], int p2[], int h1[], int h2[], bool etapa){
+  if(etapa){
+    _chc.cruceHUX(p1,p2,h1,h2);
+  }
+  else{
+    vector<int> indices;
+    //Rellenamos los elementos comunes de ambos padres
+    for(int i = 0; i < getSize(); ++i){
+      if(p1[i] == p2[i]){
+        h1[i] = p1[i];
+        h2[i] = p2[i];
+      }
+      else{
+        indices.push_back(i);
+      }
+    }
+    //Rellenamos el resto
+    Random::shuffle(indices);
+    for(int i = 0; i < indices.size()/2; ++i){
+      h1[indices[i]] = p1[indices[i]];
+      h2[indices[i]] = p2[indices[i]];
+    }
+    for(int i = indices.size()/2; i < indices.size(); ++i){
+      h1[indices[i]] = p2[indices[i]];
+      h2[indices[i]] = p1[indices[i]];
     }
 
     // Hacemos las soluciones factibles

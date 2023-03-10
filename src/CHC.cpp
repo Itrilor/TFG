@@ -18,14 +18,17 @@ using namespace std;
 using Random = effolkronium::random_static;
 
 /************CONSTRUCTORES************/
+CHC::CHC(){}
 
 CHC::CHC(AG &ag){
   _ag = ag;
 }
 
-CHC::CHC(AG &ag, AGCEP &agcep){
-  _ag = ag;
-  _agcep = agcep;
+CHC & CHC::operator=(const CHC& orig){
+  if(&orig != this){
+    _ag = orig._ag;
+  }
+  return *this;
 }
 
 /***********FUNCIONES CHC*************/
@@ -44,7 +47,7 @@ bool CHC::seleccion(int threshold, int p1[], int p2[]){
   return (distanciaHamming(p1,p2)>threshold);
 }
 
-void CHC::cruceHUX(int p1[], int p2[], int h1[], int h2[], bool gacep){
+void CHC::cruceHUX(int p1[], int p2[], int h1[], int h2[]){
   vector<int> indices;
   //Rellenamos los elementos comunes de ambos padres
   for(int i = 0; i < getSize(); ++i){
@@ -68,14 +71,8 @@ void CHC::cruceHUX(int p1[], int p2[], int h1[], int h2[], bool gacep){
   }
 
   // Hacemos las soluciones factibles
-  if(!gacep){
-    _ag.operadorReparacion(h1);
-    _ag.operadorReparacion(h2);
-  }
-  else{
-    _agcep.operadorReparacion(h1);
-    _agcep.operadorReparacion(h2);
-  }
+  _ag.operadorReparacion(h1);
+  _ag.operadorReparacion(h2);
 }
 
 vector<int> CHC::enfrentamiento(double valorP[], double valorH[], int tam1, int tam2){
