@@ -554,8 +554,12 @@ vector<double> QKP::CHCGA(int numcro, const int EvaluacionMAX, int seed){
     milestones[i] = EvaluacionMAX*milestones[i]/100;
   }
   vector<double> resMilestones;
+  vector<int> posiblesPadres;
   vector<int> indicesParejas;
   vector<int> aux;
+
+  //Empezamos el cronómetro
+  auto start = std::chrono::high_resolution_clock::now();
 
   //Creamos la población inicial
   vector<int> indices;
@@ -564,70 +568,235 @@ vector<double> QKP::CHCGA(int numcro, const int EvaluacionMAX, int seed){
     indices.push_back(i);
   }
 
+  auto end = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double, std::milli> duration = end-start;
+
   //Empieza el algoritmo
+  //while(duration.count() < EvaluacionMAX){
   while(contador < EvaluacionMAX){
     //cout << contador << "\n";
     //Guarda la mejor solucion del porcentaje de ejecución
+    //while(duration.count() > milestones[0]){
     if(contador > milestones[0]){
       index = ag.calcularMejorValor(valorPadre,numcro);
       resMilestones.push_back(valorPadre[index]);
       milestones.erase(milestones.begin());
     }
-    //Desordenamos la lista de padres
-    Random::shuffle(indices);
-    bool cruce = false;
-    for(int i = 1; i < numcro; ++i){
-      cruce = chc.seleccion(threshold, matrizSoluciones[indices[i-1]], matrizSoluciones[indices[i]]);
+    //Elegimos aleatoriamente los posibles padres
+    for(int i = 0; i < numcro; ++i){
+      posiblesPadres.push_back(Random::get(0, numcro));
+    }
+
+    bool cruce;
+    for(int i = 1; i < posiblesPadres.size(); ++i){
+      cruce = chc.seleccion(threshold, matrizSoluciones[posiblesPadres[i-1]], matrizSoluciones[posiblesPadres[i]]);
       if(cruce){
-        indicesParejas.push_back(indices[i-1]);
-        indicesParejas.push_back(indices[i]);
-        ++i;
+        indicesParejas.push_back(posiblesPadres[i-1]);
+        indicesParejas.push_back(posiblesPadres[i]);
+        i++;
+      }
+    }
+    posiblesPadres.clear();
+
+    if(!indicesParejas.empty()){
+      int matrizHijos[indicesParejas.size()][getSize()];
+      double valorHijo[indicesParejas.size()];
+
+      // Cruzamos a los padres
+      for(int i = 0; i < indicesParejas.size(); ++i){
+        chc.cruceHUX(matrizSoluciones[indicesParejas[i]], matrizSoluciones[indicesParejas[i+1]],
+                     matrizHijos[i], matrizHijos[i+1]);
+        valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+        i++;
+        valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+      }
+
+      // En CHC no se muta
+
+      // Enfrentamos a la población inicial con los hijos para quedarnos con los mejores
+      aux = chc.enfrentamiento(valorPadre,valorHijo,numcro,indicesParejas.size());
+      indicesParejas.clear();
+
+      int auxSoluciones[numcro][getSize()];
+      double auxValor[numcro];
+      //Establecemos la nueva población
+      for(int i = 0; i < numcro; ++i){
+        if(aux[i]<numcro){
+          for(int j = 0; j < getSize(); ++j){
+            auxSoluciones[i][j] = matrizSoluciones[aux[i]][j];
+          }
+          auxValor[i]=valorPadre[aux[i]];
+        }
+        else{
+          for(int j = 0; j < getSize(); ++j){
+            auxSoluciones[i][j] = matrizHijos[aux[i]-numcro][j];
+          }
+          auxValor[i]=valorHijo[aux[i]-numcro];
+        }
+      }
+
+      //Sustituimos la población inicial por la nueva
+      for(int i = 0; i < numcro; ++i){
+        for(int j = 0; j < getSize(); ++j){
+          matrizSoluciones[i][j] = auxSoluciones[i][j];
+        }
+        valorPadre[i] = auxValor[i];
       }
     }
 
-    int matrizHijos[indicesParejas.size()][getSize()];
-    double valorHijo[indicesParejas.size()];
+    end = std::chrono::high_resolution_clock::now();
+    duration = end -start;
+    contador++;
+  }
+  // Elegir
+  index = ag.calcularMejorValor(valorPadre, numcro);
+  while(!milestones.empty()){
+    resMilestones.push_back(valorPadre[index]);
+    milestones.erase(milestones.begin());
+  }
 
-    // Cruzamos a los padres
-    for(int i = 0; i < indicesParejas.size(); ++i){
-      chc.cruceHUX(matrizSoluciones[indicesParejas[i]], matrizSoluciones[indicesParejas[i+1]],
-                   matrizHijos[i], matrizHijos[i+1]);
-      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
-      i++;
-      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+  for(int i = 0; i < getSize(); ++i){
+    if(matrizSoluciones[index][i]==1){
+      addSolucion(i);
     }
+  }
+  return resMilestones;
+}
 
-    // En CHC no se muta
+vector<double> QKP::GACEPCHC(int numcro, double probm, const int EvaluacionMAX, int seed){
+  //Inicializar la semilla
+  Random::seed(seed);
+  //Variables
+  AG ag(*this);
+  AGCEP agcep(ag);
+  CHC chc(ag,agcep);
 
-    // Enfrentamos a la población inicial con los hijos para quedarnos con los mejores
-    aux = chc.enfrentamiento(valorPadre,valorHijo,numcro,indicesParejas.size());
+  int numEsperadoCruces=1;
+  int matrizSoluciones[numcro][getSize()];
+  int matrizHijos[numEsperadoCruces*2][getSize()];
+  double valorPadre[numcro];
+  double valorHijo[numEsperadoCruces*2];
+  int index;
+  int contador=0;
+  int contadorFichero=1;
+  bool keepSaving = true;
+  int threshold = getSize()/4;
 
-    int auxSoluciones[numcro][getSize()];
-    double auxValor[numcro];
-    //Establecemos la nueva población
-    for(int i = 0; i < numcro; ++i){
-      if(aux[i]<numcro){
-        for(int j = 0; j < getSize(); ++j){
-          auxSoluciones[i][j] = matrizSoluciones[aux[i]][j];
+  //Gráfico de convergencia
+  vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
+  for(int i = 0; i < milestones.size(); ++i){
+    milestones[i] = EvaluacionMAX*milestones[i]/100;
+  }
+  vector<double> resMilestones;
+
+  //Creamos la población inicial y la añadimos al vector para el histograma
+  vector<int> indices;
+  for(int i = 0; i < numcro; ++i){
+    ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);
+    agcep.addToHistograma(matrizSoluciones[i],valorPadre[i]);
+  }
+
+  while(contador < EvaluacionMAX){
+    if(contador > milestones[0]){
+      index = ag.calcularMejorValor(valorPadre,numcro);
+      resMilestones.push_back(valorPadre[index]);
+      milestones.erase(milestones.begin());
+    }
+    if(contador!=0 && (contador%50==0)){
+      if(contador%100==0){
+        keepSaving=true;
+        agcep.clearHistograma();
+        for(int i = 0; i < numcro; ++i){
+          agcep.addToHistograma(matrizSoluciones[i], valorPadre[i]);
         }
-        auxValor[i]=valorPadre[aux[i]];
       }
       else{
-        for(int j = 0; j < getSize(); ++j){
-          auxSoluciones[i][j] = matrizHijos[aux[i]][j];
-        }
-        auxValor[i]=valorHijo[aux[i]-numcro];
+        keepSaving=false;
+        string temp_str = "../Histogramas/Histograma"+to_string(contadorFichero);
+        char const* number_array = temp_str.c_str();
+        agcep.sortHistograma();
+        agcep.saveFichero(number_array);
+        temp_str = "../Histogramas/Porcentajes"+to_string(contadorFichero);
+        cout << "a\n";
+        char const* porcentaje_array = temp_str.c_str();
+        agcep.writeElementsPercentages(20,porcentaje_array);
+        temp_str = "../Histogramas/Elementos"+to_string(contadorFichero);
+        char const* elementos_array = temp_str.c_str();
+        agcep.writeBestWorstElements(20, elementos_array);
+        contadorFichero++;
+      }
+    }
+    //Cruce CHC -> Prevención de incesto
+    bool cruce = false;
+    while(!cruce){
+      indices.push_back(Random::get(0, numcro));
+      indices.push_back(Random::get(0, numcro));
+      cruce = chc.seleccion(threshold, matrizSoluciones[indices[0]], matrizSoluciones[indices[1]]);
+      if(!cruce){
+        indices.clear();
       }
     }
 
-    //Sustituimos la población inicial por la nueva
-    for(int i = 0; i < numcro; ++i){
-      for(int j = 0; j < getSize(); ++j){
-        matrizSoluciones[i][j] = auxSoluciones[i][j];
+    //Generamos aleatoriamente dónde se producen las mutaciones
+    vector<int> mutacion;
+    int element;
+    for(int i = 0; i < (int)numcro*0.1; ++i){
+      element = Random::get(0,numcro-1);
+      //Si el elemento se encuentra ya en el vector de mutación, se genera otro
+      if(std::find(mutacion.begin(), mutacion.end(), element) == mutacion.end()){
+          mutacion.push_back(element);
       }
-      valorPadre[i] = auxValor[i];
     }
 
+    sort(mutacion.begin(),mutacion.end());
+    // Cruzamos a los padres
+    for(int i = 0; i < numEsperadoCruces*2; ++i){
+      chc.cruceHUX(matrizSoluciones[indices[i]], matrizSoluciones[indices[i+1]],
+                   matrizHijos[i], matrizHijos[i+1], true);
+      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+      if(keepSaving==true){
+        agcep.addToHistograma(matrizHijos[i],valorHijo[i]);
+      }
+      i++;
+      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+      if(keepSaving==true){
+        agcep.addToHistograma(matrizHijos[i],valorHijo[i]);
+      }
+    }
+
+    // Comprobamos si mutamos a qué padres mutar
+    while(!mutacion.empty()){
+      agcep.cambioMutante(matrizSoluciones[mutacion[0]],keepSaving);
+      valorPadre[mutacion[0]] = ag.calcularValor(matrizSoluciones[mutacion[0]]);
+      if(keepSaving==true){
+        agcep.addToHistograma(matrizSoluciones[mutacion[0]],valorPadre[mutacion[0]]);
+      }
+      mutacion.erase(mutacion.begin());
+    }
+
+    // Tenemos que ver si podemos sustituir
+    vector<int> peoresPadres = ag.calcular2Peores(valorPadre, numcro);
+    vector<int> peoresHijos = ag.calcular2Peores(valorHijo, numEsperadoCruces*2);
+    // Hi supera a Pi
+    if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[0]] &&
+       valorPadre[peoresPadres[1]] < valorHijo[peoresHijos[1]]){
+       //Sustituimos Pi por Hi
+       for(int i = 0; i < getSize(); ++i){
+         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[0]][i];
+         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+       }
+       valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[0]];
+       valorPadre[peoresPadres[1]] = valorHijo[peoresHijos[1]];
+    }
+    // H0 supera a P0 y H1 no supera a P1
+    // H0 no supera a P0, pero H1 supera a P0
+    else if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[1]]){
+      //Sustituimos P0 por H1
+      for(int i = 0; i < getSize(); ++i){
+        matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+      }
+      valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[1]];
+    }
     contador++;
   }
   // Elegir
@@ -638,6 +807,7 @@ vector<double> QKP::CHCGA(int numcro, const int EvaluacionMAX, int seed){
       addSolucion(i);
     }
   }
+  //return solucionç
   return resMilestones;
 }
 

@@ -20,8 +20,17 @@ const int littlePercentage = 15;
 
 /************CONSTRUCTORES************/
 
+AGCEP::AGCEP(){}
+
 AGCEP::AGCEP(AG &ag){
   _ag = ag;
+}
+
+AGCEP & AGCEP::operator=(const AGCEP& orig){
+  if(&orig != this){
+    _ag = orig._ag;
+  }
+  return *this;
 }
 
 /***********SETS****************/

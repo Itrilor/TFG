@@ -4,12 +4,21 @@
 
 class AGCEP{
   public:
+    
+    AGCEP();
   
     /**
      * @brief Constructor para reservar memoria
      * @param ag Objeto AG del problema
      */
     AGCEP(AG &ag);
+    
+    /**
+     * @brief Sobrecarga del operador de asignación
+     * @param orig Parámetro rhs de la asignación
+     * @return this para concatenación de asignaciones de derecha a izquierda
+     */
+    AGCEP& operator=(const AGCEP& orig);
     
     /**
      * @brief Consulta el tamaño de elementos existentes

@@ -129,9 +129,9 @@ int main(int argc, char ** argv){
 
 
   //---------CHC----------
-  vector<vector<double>> milestones;
+  /*vector<vector<double>> milestones;
   for(int j = 0; j < 10; ++j){
-    cout << j << "\n";
+    //cout << j << "\n";
     estado = sequence.leerFicheroDatos(argv[1]);
     if(!estado){
       cerr << "No se ha podido leer correctamente\n";
@@ -144,6 +144,7 @@ int main(int argc, char ** argv){
   for(int i = 1; i < milestones.size(); ++i){
     for(int j = 0; j < milestones[i].size(); ++j){
       meanMilestones[j] += milestones[i][j];
+      //cout << milestones[i][j] << " , ";
     }
   }
 
@@ -151,7 +152,34 @@ int main(int argc, char ** argv){
     meanMilestones[i] = meanMilestones[i]/milestones.size();
     cout << meanMilestones[i] << " , ";
   }
+  cout << "\n";*/
+
+  //---------GACEP+CHC-------------------
+  vector<vector<double>> milestones;
+  for(int j = 0; j < 10; ++j){
+    //cout << j << "\n";
+    estado = sequence.leerFicheroDatos(argv[1]);
+    if(!estado){
+      cerr << "No se ha podido leer correctamente\n";
+      exit(-1);
+    }
+    milestones.push_back(sequence.GACEPCHC(10,0.1,NEVALUACIONESMAX, seed[j]));
+    //values.push_back(sequence.getValorSolucion());
+  }
+  vector<double> meanMilestones = milestones[0];
+  for(int i = 1; i < milestones.size(); ++i){
+    for(int j = 0; j < milestones[i].size(); ++j){
+      meanMilestones[j] += milestones[i][j];
+      //cout << milestones[i][j] << " , ";
+    }
+  }
+  cout << "adfas\n";
+  for(int i = 0; i < meanMilestones.size(); ++i){
+    meanMilestones[i] = meanMilestones[i]/milestones.size();
+    cout << meanMilestones[i] << " , ";
+  }
   cout << "\n";
+
 }
 
 void mensajeSolucion(string name, QKP seq, double tiempo, string seg){
