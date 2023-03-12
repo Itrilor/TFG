@@ -22,7 +22,7 @@ Si en cierto número de iteraciones no se logra introducir ningún hijo en la po
 Se podría considerar que en vez de utilizar soluciones aleatorias, se usase soluciones obtenidas por GRASP.
 
 
-12/03/23
+12/03/23 (Latest)
 En el operador de reparación cambiar la adición/eliminación Greedy por GRASP. Así eliminamos que siempre se elijan los mismos elementos, aumentando la exploración, pero manteniendo el ser competente.
 Esto está propuesto en (Genetic and Memetic Algorithm with Diversity Equilibrium based on Greedy Diversification, pg 6).
 A esto se le llama operador de diversificación
@@ -90,4 +90,35 @@ int GRASP(int sol[], double &peso, bool minimizar){
   //Elegimos aleatoriamente uno de los elementos considerados
   Random::shuffle(aux);
   return indices[aux[0]};
+}
+
+En [Genetic and Memetic Algorithm with Diversity Equilibrium based on Greedy Diversification, pg 8] se propone usar el GRASP en vez del operador de mutación -> Se podría decir que es elimine alguno de los peores elementos y se añada alguno de los mejores.
+
+Pedir archivo [Micro-genetic algorithms for stationary and non-stationary function optimization], In: Advances in Intelligent Robotics Systems Conference, International Society for Optics and Photonics (1990), pp. 289–296
+
+Se podría utilizar la diversidad de la población usando la fórmula de [The Shifting Balance Genetic Algorithm: Improving the GA in a Dynamic Environment] para comprobar cuándo la población ha convergido y reiniciarla o aumentar la mutación o algún otro cambio. Posible implementación:
+
+void vectorToInt(vector<int> sol, int[] solb){
+  for(int i = 0; i < getSize(); ++i){
+    solb[i] = 0;
+  }
+  for(int i = 0; i < sol.size(); ++i){
+    solb[sol[i]] = 1;
+  }
+}
+
+double diversity(vector<vector<int>> pob){
+  int auxSol1[getSize()];
+  int auxSol2[getSize()];
+  double d = 1/(getSize()*pob.size()*(pob.size()-1));
+  double aux=0;
+  for(int i = 0; i < getSize()-1; ++i){
+    vectorToInt(pob[i],auxSol1);
+    for(int j = i; j < getSize(); ++j){
+      vectorToInt(pob[i],auxSol2);
+      aux += chc.distanciaHamming(auxSol1,auxSol2);
+    }
+  }
+  aux = aux*2;
+  return d*aux;
 }
