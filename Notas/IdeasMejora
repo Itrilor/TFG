@@ -31,26 +31,63 @@ Se podría generar 1 o 2 soluciones aleatorias por iteración para hacerlas comp
 En tanto que nuestro tamaño de población es bastante pequeño, en vez de separar la población, podríamos generar una par de soluciones nuevas para simularlo.
 
 GRASP:
-int GRASP(int sol[], bool minimizar){
-  vector<int> aux;
+int GRASP(int sol[], double &peso, bool minimizar){
   vector<int> indices;
   vector<int> valores;
+  double sigma = 0.1;
   
   if(minimizar){ //Encontrar peores elementos
     for(int i = 0; i < getSize(); ++i){
       if(sol[i] == 1){
-        
+        indices.push_back(i);
+        valores.push_back(_ag.calcularRelValor(i,sol));
+      }
+    }
+    //Ordenamos los elementos de peor a mejor
+    vector<int> aux(indices.size());
+    iota(aux.begin(), aux.end(), 0);
+    sort(aux.begin(), aux.end(),
+      [&] (int A, int B) -> bool{
+        return valores[A] < valores[B];
+      }
+    );
+    //Nos quedamos con los elementos cuyo valor relativo <= (1+sigma)*valor_peor
+    bool found = false;
+    for(int i = 1; i < aux.size() && !found; ++i){
+      if(valores[aux[i]] > (1+sigma)*valores[aux[0]]){
+        found = true;
+        aux.erase(aux.begin()+i,aux.end());
       }
     }
   }
   else{ //Encontrar mejores elementos a añadir
     for(int i = 0; i < getSize(); ++i){
       if(sol[i] == 0){
-      
+        if(checkAdd(i, peso, sol)){
+          indices.push_back(i);
+          valores.push_back(_ag.valueIfAdded(i,sol);
+        }
+      }
+    }
+    //Ordenamos los elementos de mejor a peor
+    vector<int> aux(indices.size());
+    iota(aux.begin(), aux.end(), 0);
+    sort(aux.begin(), aux.end(),
+      [&] (int A, int B) -> bool{
+        return valores[A] > valores[B];
+      }
+    );
+    //Nos quedamos con los elementos cuyo valor añadido >= (1-sigma)*valor_mejor
+    bool found = false;
+    for(int i = 1; i < aux.size() && !found; ++i){
+      if(valores[aux[i]] < (1-sigma)*valores[aux[0]]){
+        found = true;
+        aux.erase(aux.begin()+i,aux.end());
       }
     }
   }
   
+  //Elegimos aleatoriamente uno de los elementos considerados
   Random::shuffle(aux);
-  return aux[0];
+  return indices[aux[0]};
 }
