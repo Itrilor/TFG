@@ -30,3 +30,27 @@ A esto se le llama operador de diversificación
 Se podría generar 1 o 2 soluciones aleatorias por iteración para hacerlas competir con el resto. En [The Shifting Balance Genetic Algorithm: Improving the GA in a Dynamic Environment] se divide la población en un core y unas colonias, y a medida que pasa el tiempo las colonias migran hacia el core y una subpoblación del core migra hacia las colonias para representar las distintas condiciones el entorno. 
 En tanto que nuestro tamaño de población es bastante pequeño, en vez de separar la población, podríamos generar una par de soluciones nuevas para simularlo.
 
+GRASP:
+int GRASP(int sol[], bool minimizar){
+  vector<int> aux;
+  vector<int> indices;
+  vector<int> valores;
+  
+  if(minimizar){ //Encontrar peores elementos
+    for(int i = 0; i < getSize(); ++i){
+      if(sol[i] == 1){
+        
+      }
+    }
+  }
+  else{ //Encontrar mejores elementos a añadir
+    for(int i = 0; i < getSize(); ++i){
+      if(sol[i] == 0){
+      
+      }
+    }
+  }
+  
+  Random::shuffle(aux);
+  return aux[0];
+}
