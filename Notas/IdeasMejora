@@ -20,3 +20,13 @@ Se podría seguir la idea del algoritmo del enfriamiento del metal y en las últ
 Si en cierto número de iteraciones no se logra introducir ningún hijo en la población, podríamos reiniciar la población, manteniendo los mejores, con el fin de evitar estancamientos. El problema de reiniciarlo de esta forma, es que puede darse el caso en que se tenga que reiniciar muchas veces y perdamos el tiempo.
 
 Se podría considerar que en vez de utilizar soluciones aleatorias, se usase soluciones obtenidas por GRASP.
+
+
+12/03/23
+En el operador de reparación cambiar la adición/eliminación Greedy por GRASP. Así eliminamos que siempre se elijan los mismos elementos, aumentando la exploración, pero manteniendo el ser competente.
+Esto está propuesto en (Genetic and Memetic Algorithm with Diversity Equilibrium based on Greedy Diversification, pg 6).
+A esto se le llama operador de diversificación
+
+Se podría generar 1 o 2 soluciones aleatorias por iteración para hacerlas competir con el resto. En [The Shifting Balance Genetic Algorithm: Improving the GA in a Dynamic Environment] se divide la población en un core y unas colonias, y a medida que pasa el tiempo las colonias migran hacia el core y una subpoblación del core migra hacia las colonias para representar las distintas condiciones el entorno. 
+En tanto que nuestro tamaño de población es bastante pequeño, en vez de separar la población, podríamos generar una par de soluciones nuevas para simularlo.
+
