@@ -96,6 +96,13 @@ En [Genetic and Memetic Algorithm with Diversity Equilibrium based on Greedy Div
 
 Pedir archivo [Micro-genetic algorithms for stationary and non-stationary function optimization], In: Advances in Intelligent Robotics Systems Conference, International Society for Optics and Photonics (1990), pp. 289–296
 
+http://sepwww.stanford.edu/public/docs/sep112/gabriel1/paper_html/node11.html
+Cuando tratamos con un problemas con alta dimensionalidad, puede ser difícil o costoso en términos de tiempo para todos los parámetros del modelo converger dentro de un margen de error dado. En particular, cuando el número de parámetros del modelo aumenta, también lo hace el tamaño de población requerida.
+Un tamaño de población grande implica grandes números de evaluación-coste.
+Una alternativa es el uso de micro algoritmos genéticos, que evolucionan poblaciones muy pequeñas queson muy eficientes localizando áreas prometedoras del espacio de búsqueda. Obviamente, las poblaciones pequeñas son incapaces de mantener la diversidad por muchas generaciones, pero la población puede ser reiniciada cada vez que la población se pierde, manteniendo solo la mejor solución obtenida.
+Reiniciar la población muchas veces durante la ejecución del algoritmo genético tiene el beneficio añadido de evitar la convergencia prematura debido a la presencia de un individuo con un buen valor, lo que posee el riesgo de prevenir más exploraciones del espacio de búsqueda y haga converger al programa a un mínimo local.
+Además, en tanto que no estamos tratando con poblaciones largos, la convergencia puede ser alcanzada más rápidamente y con menos requisitos de memoria para almacenar la población
+
 Se podría utilizar la diversidad de la población usando la fórmula de [The Shifting Balance Genetic Algorithm: Improving the GA in a Dynamic Environment] para comprobar cuándo la población ha convergido y reiniciarla o aumentar la mutación o algún otro cambio. Posible implementación:
 
 void vectorToInt(vector<int> sol, int[] solb){
