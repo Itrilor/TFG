@@ -129,3 +129,11 @@ double diversity(vector<vector<int>> pob){
   aux = aux*2;
   return d*aux;
 }
+
+15/03/23
+Modificar el operador de cruce de tal forma que se calcule cuál es la mejor solución entre los padres y de esta solución se tome el 60/70/80% de los cromosomas (a estudiar) y se les asigne a ambos hijos -> Tener dos vectores con los indices y desordenar ambos, asignando los x% primeros cromosomas de cada vector de índices del mejor padre.
+Otra opción, por ver, sería usar la diferencia entre el fitness de los padres
+
+Se ha dado el visto bueno para probar a sustituir el Greedy normal del operador de Reparación del AG por un GRASP con el fin de aumentar la diversidad.
+
+Si hay margen suficiente para que converjan las soluciones de la población, se podría intentar el reiniciar la población (excepto la mejor)
