@@ -146,3 +146,6 @@ Por lo tanto, se añadirán los resultados del cruce no exclusivo del 50% en arc
 Tras pasar el archivo general por TacoLab, se obtiene que el cruce no exclusivo es un segundo muy cercano al GACEPTotal, incluso lo mejora hasta el 30% de las ejecuciones.
 
 Lo siguiente que se probará será introducir GRASP al operador de cruce.
+Se han obtenido los resultados y se han almacenado en el archivo orGRASP.txt
+Se ha añadido también directamente a general.xlsx ya que no había otra cosa con el que compararlo
+Tras introducir el archivo de nuevo en TacoLab, se comprueba que ha superado a GACEPTotal, lo que lo convierte en el mejor intento hasta el momento; además, si se comprueba uno a uno su clasificación en cada archivo en completitud, podemos observar que siempre es uno de los 3 mejores

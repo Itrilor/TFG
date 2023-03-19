@@ -141,6 +141,8 @@ class AG{
      * @param hijo Solución a considerar
      */
     void operadorReparacion(int hijo[]);
+    
+    void operadorReparacionGRASP(int hijo[]);
 		
     /**
      * @brief Intercambia aleatoriamente un elemento que pertenece a la solución por uno que no (de forma que siga siendo una solución) y añade, si es posible, más elementos
@@ -156,6 +158,8 @@ class AG{
      * @param pos2 Elemento no perteneciente a la solución
      */
     void sustituirCrom(int bin[], double &peso, int pos1, int pos2);
+
+    void eliminarElemento(int hijo[], double &peso, int pos);
 		
     /**
      * @brief Elimina el elemento con menor proporción valor_aportado/peso_aportado
@@ -179,6 +183,8 @@ class AG{
      * @return @b false si no se ha podido, @b true en caso contrario
      */
     bool anadirElementoGreedy(int hijo[], double &peso);
+    
+    int GRASP(int sol[], double &peso, bool minimizar);
 		
   private: 
     QKP _qkp;

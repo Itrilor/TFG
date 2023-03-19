@@ -1,0 +1,37 @@
+Nota inicial:
+Todos los archivos con extensión .xlsx tienen el formato pedido para su análisis en https://tacolab.org/comp
+
+Guía:
+
+  - diferenciaAGEU.ods -> Almacena los resultados de haber ejecutado una vez por fichero el algoritmo AGEU original usando como criterio de parada, el tiempo original, 900000 iteraciones y 450 iteraciones.
+  - diferenciaAGEU.xlsx -> Almacena los resultados de haber ejecutado una vez por fichero el algoritmo AGEU original usando como criterio de parada, el tiempo original, 900000 iteraciones y 450 iteraciones.
+  - diversityGACEPc50.txt -> Contiene el valor de diversidad en los diferentes milestones de la ejecución del GACEP con porcentaje de cruce de cromosomas no excluyente 50.
+  - diversityGACEPc60.txt -> Contiene el valor de diversidad en los diferentes milestones de la ejecución del GACEP con porcentaje de cruce de cromosomas no excluyente 60.
+  - diversityGACEPc70.txt -> Contiene el valor de diversidad en los diferentes milestones de la ejecución del GACEP con porcentaje de cruce de cromosomas no excluyente 70.
+  - diversityGACEPc80.txt -> Contiene el valor de diversidad en los diferentes milestones de la ejecución del GACEP con porcentaje de cruce de cromosomas no excluyente 80.
+  - GACEPc50.txt -> Contiene el valor de la mejor solución de la población en los diferentes milestones de la ejecución del GACEP con porcentaje de cruce de cromosomas no excluyente 50%
+  - GACEPc60.txt -> Contiene el valor de la mejor solución de la población en los diferentes milestones de la ejecución del GACEP con porcentaje de cruce de cromosomas no excluyente 60%
+  - GACEPc70.txt -> Contiene el valor de la mejor solución de la población en los diferentes milestones de la ejecución del GACEP con porcentaje de cruce de cromosomas no excluyente 70%
+  - GACEPc80.txt -> Contiene el valor de la mejor solución de la población en los diferentes milestones de la ejecución del GACEP con porcentaje de cruce de cromosomas no excluyente 80%
+  - general.xlsx -> Archivo principal de los resultados, contiene los resultados de las mejores representaciones de los distintos algoritmos y versiones considerados
+  - milestonesGACEP.xlsx -> Archivo para comparar AGEU original con las dos modificaciones de GACEP: cambiando solo la mutación y cambiando la mutación y el operador de reparación.
+  - orGRASP.txt -> Contiene los resultados de aplicar GRASP al operador de reparación en vez de Greedy en el algoritmo GACEP.
+  - porcentajesCruceGACEP.xlsx -> Almacena los resultados en milestones de las diferentes ejecuciones de GACEP con cruce no excluyente de cromosomas del 50/60/70/80%.
+  - resultados10Ejecuciones.txt -> Contiene los resultados (valor) de ejecutar 10 veces el AGEU original y hacerles la media
+  - resultadosAGEU450.txt -> Contiene los resultados finales de ejecutar el algoritmo AGEU original con 450 iteraciones.
+  - resultadosAGEUEv.txt -> Contiene los resultados de las ejecuciones del AGEU, utilizando como criterio de parada el número de ejecuciones (90000).
+  - resultadosCHC.xlsx -> Recopilación de los resultados en los archivos resultadosCHCEpocas.txt y resultadosCHCTiempo.txt
+  - resultadosCHCEpocas.txt -> Contiene los resultados en milestones de ejecutar CHC cuando el criterio de parada son las épocas
+  - resultadosCHCTiempo.txt -> Contiene los resultados en milestones de ejecutar CHC cuando el criterio de parada es el tiempo
+  - resultadosGACEPCHC.txt -> Contiene los resultados en milestones de aplicar una mezcla de GACEP y CHC
+  - resultadosHistogramaAGEU450.txt -> Contiene los resultados en milestones de ejecutar el algoritmo AGEU original con 450 iteraciones
+  - resultadosHistogramaMutacion.txt -> Contiene los resultados finales de ejecutar GACEP con solo la modificación de la mutación
+  - resultadosHistogramaMutacion.xlsx -> Comparativa de resultados finales de AGEU450, GACEP con solo mutación y GACEP con mutación y operador de reparación
+  - resultadosHistogramaMutacion2.txt -> Contiene los resultados en milestones de ejecutar la versión de GACEP con solo modificación de la mutación
+  - resultadosHistogramaMutacion2.xlsx -> Contiene los resultados en milestones de ejecutar la versión de GACEP con solo modificación de la mutación
+  - resultadosHistogramaMutacion3.txt -> Contiene los resultados en milestones de ejecutar la versión de GACEP con modificación de la mutación y del operador de reparación
+  - resultadosHistogramaMutacion3.xlsx -> Contiene los resultados en milestones de ejecutar la versión de GACEP con modificación de la mutación y del operador de reparación
+  - resultadosMilestones.txt -> Contiene los resultados de las distintas fases (milestones) en las que se encuentra el AGEU original en el momento
+  - resultadosMilestones.xlsx -> Hoja de cálculo que contiene los valores almacenados en resultadosMilestones.txt, junto con algunas gráficas mostrando los cambios producidos, las diferencias proemdios y totales.
+  - resultadosMutacionReparacionMilestones.txt -> 
+  - resultadosSoloMilestones.xlsx -> 

@@ -579,8 +579,8 @@ vector<double> QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int
   /*pob.clear();
   for(int i = 0; i < numcro; ++i){
     pob.push_back(ag.intToVector(matrizSoluciones[i]));
-  }*/
-  resMilestones.push_back(diversity(pob));
+  }
+  resMilestones.push_back(diversity(pob));*/
   return resMilestones;
 }
 

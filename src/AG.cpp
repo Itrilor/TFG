@@ -190,8 +190,10 @@ void AG::cruceUniforme(int p1[], int p2[], int h1[], int h2[]){
   }
 
   // Hacemos las soluciones factibles
-  operadorReparacion(h1);
-  operadorReparacion(h2);
+  //operadorReparacion(h1);
+  //operadorReparacion(h2);
+  operadorReparacionGRASP(h1);
+  operadorReparacionGRASP(h2);
 }
 
 void AG::crucePorcentual(int p1[], double v1, int p2[], double v2, int h1[], int h2[], double p){
@@ -238,6 +240,31 @@ void AG::operadorReparacion(int hijo[]){
   }
 }
 
+void AG::operadorReparacionGRASP(int hijo[]){
+  double pesoHijo = calcularPeso(hijo);
+  bool anadido = true;
+  int aux;
+  //Tenemos que eliminar elementos
+  if(pesoHijo > _qkp.getCapacidad()){
+    while(pesoHijo > _qkp.getCapacidad()){
+      aux = GRASP(hijo,pesoHijo,true);
+      eliminarElemento(hijo,pesoHijo,aux);
+    }
+  }
+  //Tenemos que añadir más elementos
+  else{
+    while(anadido){
+      aux = GRASP(hijo,pesoHijo,false);
+      if(aux!=-1){
+        anadirElemento(hijo,pesoHijo,aux);
+      }
+      else{
+        anadido = false;
+      }
+    }
+  }
+}
+
 void AG::cambioMutante(int bin[]){
   double peso = calcularPeso(bin);
   vector<int> indexY;
@@ -272,6 +299,11 @@ void AG::sustituirCrom(int bin[], double &peso, int pos1, int pos2){
   peso = peso - _qkp.getPeso(pos1) + _qkp.getPeso(pos2);
 }
 
+void AG::eliminarElemento(int hijo[], double &peso, int pos){
+  hijo[pos] = 0;
+  peso -= _qkp.getPeso(pos);
+}
+
 void AG::eliminarElemento(int hijo[], double &peso){
   double minRelValor = 0;
   int indexMinRelValor;
@@ -293,8 +325,7 @@ void AG::eliminarElemento(int hijo[], double &peso){
     }
   }
   //Eliminamos el peor elemento
-  hijo[indexMinRelValor]=0;
-  peso = peso - _qkp.getPeso(indexMinRelValor);
+  eliminarElemento(hijo,peso,indexMinRelValor);
 }
 
 void AG::anadirElemento(int hijo[], double &peso, int pos){
@@ -329,4 +360,72 @@ bool AG::anadirElementoGreedy(int hijo[], double &peso){
     anadirElemento(hijo, peso, pos_max);
   }
   return salida;
+}
+
+int AG::GRASP(int sol[], double &peso, bool minimizar){
+  vector<int> indices;
+  vector<int> valores;
+  double sigma = 0.1;
+  if(minimizar){
+    for(int i = 0; i < getSize(); ++i){
+      if(sol[i] == 1){
+        indices.push_back(i);
+        valores.push_back(calcularRelValor(i,sol));
+      }
+    }
+  }
+  else{
+    for(int i = 0; i < getSize(); ++i){
+      if(sol[i] == 0){
+        if(checkAdd(i, peso, sol)){
+          indices.push_back(i);
+          valores.push_back(valueIfAdded(i,sol));
+        }
+      }
+    }
+  }
+  vector<int> aux(indices.size());
+  if(minimizar){ //Encontrar peores elementos
+    //Ordenamos los elementos de peor a mejor
+    iota(aux.begin(), aux.end(), 0);
+    sort(aux.begin(), aux.end(),
+      [&] (int A, int B) -> bool{
+        return valores[A] < valores[B];
+      }
+    );
+    //Nos quedamos con los elementos cuyo valor relativo <= (1+sigma)*valor_peor
+    bool found = false;
+    for(int i = 1; i < aux.size() && !found; ++i){
+      if(valores[aux[i]] > (1+sigma)*valores[aux[0]]){
+        found = true;
+        aux.erase(aux.begin()+i,aux.end());
+      }
+    }
+  }
+  else{ //Encontrar mejores elementos a añadir
+    //Ordenamos los elementos de mejor a peor
+    iota(aux.begin(), aux.end(), 0);
+    sort(aux.begin(), aux.end(),
+      [&] (int A, int B) -> bool{
+        return valores[A] > valores[B];
+      }
+    );
+    //Nos quedamos con los elementos cuyo valor añadido >= (1-sigma)*valor_mejor
+    bool found = false;
+    for(int i = 1; i < aux.size() && !found; ++i){
+      if(valores[aux[i]] < (1-sigma)*valores[aux[0]]){
+        found = true;
+        aux.erase(aux.begin()+i,aux.end());
+      }
+    }
+  }
+
+  //Elegimos aleatoriamente uno de los elementos considerados
+  if(!aux.empty()){
+    Random::shuffle(aux);
+    return indices[aux[0]];
+  }
+  else{
+    return -1;
+  }
 }
