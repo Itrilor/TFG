@@ -175,6 +175,37 @@ double QKP::valueIfAdded(int pos){
   return valueIfAdded(pos, _solucion);
 }
 
+void QKP::vectorToInt(vector<int> sol, int solbin[]){
+  for(int i = 0; i < getSize(); ++i){
+    solbin[i] = 0;
+  }
+  for(int i = 0; i < sol.size(); ++i){
+    solbin[sol[i]] = 1;
+  }
+}
+
+double QKP::diversity(vector<vector<int>> pob){
+  AG ag(*this);
+  CHC chc(ag);
+
+  int auxPob[pob.size()][getSize()];
+  for(int i = 0; i < pob.size(); ++i){
+    vectorToInt(pob[i],auxPob[i]);
+  }
+  //cout << "1/d = " << (getSize()*pob.size()*(pob.size()-1)) << "\n";
+  double d = (getSize()*pob.size()*(pob.size()-1));
+  double aux=0;
+  for(int i = 0; i < pob.size()-1; ++i){
+    for(int j = i+1; j < pob.size(); ++j){
+      aux += chc.distanciaHamming(auxPob[i],auxPob[j]);
+    }
+  }
+  aux = aux*2;
+//  cout << " d = " << d << "\n";
+  //cout << "diversity = " << aux/d << "\n";
+  return aux/d;
+}
+
 /***********ALGORITMOS***********************/
 void QKP::RandomQKP(vector<int> &sol, double &valor){
   vector<int> indicesDatos;
@@ -400,12 +431,17 @@ vector<double> QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int
   int contadorFichero=1;
   bool keepSaving = true;
 
+  //Diversidad
+  //vector<vector<int>> pob;
+
+
   //Gráfico de convergencia
   vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
   for(int i = 0; i < milestones.size(); ++i){
     milestones[i] = EvaluacionMAX*milestones[i]/100;
   }
   vector<double> resMilestones;
+
 
   //Creamos la población inicial y la añadimos al vector para el histograma
   vector<int> indices;
@@ -418,6 +454,12 @@ vector<double> QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int
     if(contador > milestones[0]){
       index = ag.calcularMejorValor(valorPadre,numcro);
       resMilestones.push_back(valorPadre[index]);
+      //Diversidad
+      /*pob.clear();
+      for(int i = 0; i < numcro; ++i){
+        pob.push_back(ag.intToVector(matrizSoluciones[i]));
+      }
+      resMilestones.push_back(diversity(pob));*/
       milestones.erase(milestones.begin());
     }
     if(contador!=0 && (contador%50==0)){
@@ -467,6 +509,9 @@ vector<double> QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int
     for(int i = 0; i < numEsperadoCruces*2; ++i){
       agcep.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
                     matrizHijos[i], matrizHijos[i+1], keepSaving);
+      /*agcep.crucePorcentual(matrizSoluciones[indices[i]], valorPadre[indices[i]],
+                    matrizSoluciones[indices[i+1]], valorPadre[indices[i+1]],
+                    matrizHijos[i], matrizHijos[i+1], keepSaving,80);*/
 
       /*if(i==mutacion[0]){
         cambioMutante(matrizHijos[i]);
@@ -530,6 +575,12 @@ vector<double> QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int
     }
   }
   //return solucionç
+  //Diversidad
+  /*pob.clear();
+  for(int i = 0; i < numcro; ++i){
+    pob.push_back(ag.intToVector(matrizSoluciones[i]));
+  }*/
+  resMilestones.push_back(diversity(pob));
   return resMilestones;
 }
 

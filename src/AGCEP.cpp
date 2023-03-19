@@ -527,6 +527,8 @@ void AGCEP::cruceUniforme(int p1[], int p2[], int h1[], int h2[], bool etapa){
   }
 }
 
+
+
 void AGCEP::cruceHUX(int p1[], int p2[], int h1[], int h2[], bool etapa){
   if(etapa){
     _chc.cruceHUX(p1,p2,h1,h2);
@@ -552,6 +554,41 @@ void AGCEP::cruceHUX(int p1[], int p2[], int h1[], int h2[], bool etapa){
     for(int i = indices.size()/2; i < indices.size(); ++i){
       h1[indices[i]] = p2[indices[i]];
       h2[indices[i]] = p1[indices[i]];
+    }
+
+    // Hacemos las soluciones factibles
+    operadorReparacion(h1);
+    operadorReparacion(h2);
+  }
+}
+
+void AGCEP::crucePorcentual(int p1[], double v1, int p2[], double v2, int h1[], int h2[], bool etapa, double p){
+  if(etapa){
+    _ag.crucePorcentual(p1,v1,p2,v2,h1,h2,p);
+  }
+  else{
+    vector<int> indices;
+    vector<int> indices2;
+    for(int i = 0; i<getSize(); ++i){
+      indices.push_back(i);
+      indices2.push_back(i);
+    }
+    Random::shuffle(indices);
+    Random::shuffle(indices2);
+    double porcentaje = getSize()*p/100;
+    if(v2>v1){
+      porcentaje = getSize()-porcentaje;
+    }
+
+    for(int i = 0; i < getSize(); ++i){
+      if(i<porcentaje){
+        h1[indices[i]] = p1[indices[i]];
+        h2[indices2[i]] = p1[indices2[i]];
+      }
+      else{
+        h1[indices[i]] = p2[indices[i]];
+        h2[indices2[i]] = p2[indices2[i]];
+      }
     }
 
     // Hacemos las soluciones factibles

@@ -191,6 +191,10 @@ class QKP{
      * @return El valor de añadir un objeto considerando su peso
      */
     double valueIfAdded(int pos);
+    
+    void vectorToInt(vector<int> sol, int solbin[]);
+    
+    double diversity(vector<vector<int>> pob);
 			
     /**
      * @brief Recupera la información del problema desde un fichero y lo reconstruye

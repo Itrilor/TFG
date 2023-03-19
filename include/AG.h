@@ -133,6 +133,8 @@ class AG{
      * @param h2 Solución generada 2
      */
     void cruceUniforme(int p1[], int p2[], int h1[], int h2[]);
+    
+    void crucePorcentual(int p1[], double v1, int p2[], double v2, int h1[], int h2[], double p);
 		
     /**
      * @brief Elimina elementos de la solución si esta sobrepasa la capacidad o añade más elementos (si es posible) si no la sobrepasa

@@ -126,6 +126,8 @@ class AGCEP{
     
     void cruceHUX(int p1[], int p2[], int h1[], int h2[], bool etapa);
     
+    void crucePorcentual(int p1[], double v1, int p2[], double v2, int h1[], int h2[], bool etapa, double p);
+    
     void operadorReparacion(int hijo[]);
     void operadorReparacionEliminar(int hijo[], double &pesoHijo);
     void operadorReparacionAnadir(int hijo[], double &pesoHijo);

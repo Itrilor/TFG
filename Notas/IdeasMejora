@@ -137,3 +137,12 @@ Otra opción, por ver, sería usar la diferencia entre el fitness de los padres
 Se ha dado el visto bueno para probar a sustituir el Greedy normal del operador de Reparación del AG por un GRASP con el fin de aumentar la diversidad.
 
 Si hay margen suficiente para que converjan las soluciones de la población, se podría intentar el reiniciar la población (excepto la mejor)
+
+19/03/23
+Se ha probado el cruce de cromosomas no exclusivo con porcentajes 50/60/70/80 -> Resulta que a mayor porcentaje peores son las soluciones finales, por lo que el 50% es mejor
+Se procede a añadir una función para calcular la diversidad que hay en la población, para comprobar si lo anterior se debe a que al obtener nuevas soluciones altamente parecidas a sus padres la población se queda estancada.
+Tras calcular la diversidad (diversityCruceGACEP) y pasarlo por TacoLab se ha obtenido que, efectivamente, a mayor porcentaje de cruce, más reduce la diversidad.
+Por lo tanto, se añadirán los resultados del cruce no exclusivo del 50% en archivo de general.
+Tras pasar el archivo general por TacoLab, se obtiene que el cruce no exclusivo es un segundo muy cercano al GACEPTotal, incluso lo mejora hasta el 30% de las ejecuciones.
+
+Lo siguiente que se probará será introducir GRASP al operador de cruce.

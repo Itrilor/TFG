@@ -18,7 +18,7 @@ using Random = effolkronium::random_static;
 /*******CONSTRUCTORES Y DESTRUCTOR********/
 
 AG::AG(){
-  
+
 }
 
 AG::AG(QKP &prob){
@@ -186,6 +186,36 @@ void AG::cruceUniforme(int p1[], int p2[], int h1[], int h2[]){
     else{
       h1[indices[i]] = p2[indices[i]];
       h2[indices[i]] = p1[indices[i]];
+    }
+  }
+
+  // Hacemos las soluciones factibles
+  operadorReparacion(h1);
+  operadorReparacion(h2);
+}
+
+void AG::crucePorcentual(int p1[], double v1, int p2[], double v2, int h1[], int h2[], double p){
+  vector<int> indices;
+  vector<int> indices2;
+  for(int i = 0; i<_qkp.getSize(); ++i){
+    indices.push_back(i);
+    indices2.push_back(i);
+  }
+  Random::shuffle(indices);
+  Random::shuffle(indices2);
+  double porcentaje = getSize()*p/100;
+  if(v2>v1){
+    porcentaje = getSize()-porcentaje;
+  }
+
+  for(int i = 0; i < getSize(); ++i){
+    if(i<porcentaje){
+      h1[indices[i]] = p1[indices[i]];
+      h2[indices2[i]] = p1[indices2[i]];
+    }
+    else{
+      h1[indices[i]] = p2[indices[i]];
+      h2[indices2[i]] = p2[indices2[i]];
     }
   }
 

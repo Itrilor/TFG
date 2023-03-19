@@ -99,7 +99,7 @@ int main(int argc, char ** argv){
 
   //---------GENETIC ALGORITHM FOR COMBINATORY EXPENSIVE PROBLEM----------
   //values.clear();
-  /*vector<vector<double>> milestones;
+  vector<vector<double>> milestones;
   for(int j = 0; j < 10; ++j){
     estado = sequence.leerFicheroDatos(argv[1]);
     if(!estado){
@@ -120,7 +120,7 @@ int main(int argc, char ** argv){
     meanMilestones[i] = meanMilestones[i]/milestones.size();
     cout << meanMilestones[i] << " , ";
   }
-  cout << "\n";*/
+  cout << "\n";
 
   //mensajeSolucion("Algoritmo genético para problemas combinatorios expensive", sequence, tiempoAGEU, "segundos");
   //cout << sequence.getValorSolucion() << "\n";
@@ -155,7 +155,7 @@ int main(int argc, char ** argv){
   cout << "\n";*/
 
   //---------GACEP+CHC-------------------
-  vector<vector<double>> milestones;
+  /*vector<vector<double>> milestones;
   for(int j = 0; j < 10; ++j){
     //cout << j << "\n";
     estado = sequence.leerFicheroDatos(argv[1]);
@@ -177,7 +177,7 @@ int main(int argc, char ** argv){
     meanMilestones[i] = meanMilestones[i]/milestones.size();
     cout << meanMilestones[i] << " , ";
   }
-  cout << "\n";
+  cout << "\n";*/
 
 }
 
