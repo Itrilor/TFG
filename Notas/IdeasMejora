@@ -149,3 +149,22 @@ Lo siguiente que se probará será introducir GRASP al operador de cruce.
 Se han obtenido los resultados y se han almacenado en el archivo orGRASP.txt
 Se ha añadido también directamente a general.xlsx ya que no había otra cosa con el que compararlo
 Tras introducir el archivo de nuevo en TacoLab, se comprueba que ha superado a GACEPTotal, lo que lo convierte en el mejor intento hasta el momento; además, si se comprueba uno a uno su clasificación en cada archivo en completitud, podemos observar que siempre es uno de los 3 mejores
+
+31/03/23 -> Buscando mayor diversidad
+Cambiar el operador de cruce
+  - Cogemos 1 aleatoria, y elegimos 3-5 aleatorias distintas y cruzamos la primera con aquella que tenga menos parecido (más diversidad). Operador diversidad NAM
+  - Lo mismo que antes, pero usando el operador de cruce que fomenta los cromosomas del mejor padre
+  
+Cambiar de operador de reemplazo
+  - En vez de reemplazar el peor, buscamos la solución más cercana a la nueva generada (hija) y nos quedamos con la mejor solución. Motivación: Suele pasar que las soluciones buenas son bastante parecidas, entonces nos estancamos en la diversidad. 
+  - Lo mismo que antes, pero también si sustituyes la nueva solución por una ya existente, hay que comprobar si alguna de las existentes también es cercana y sustituir la peor por una elegida aleatoriamente (que mantenga la diversidad). Si hay varias, te quedas con la mejor y quitas el resto.
+  
+  
+ Buscamos utilizar los propios elementos del problema para mejorar las soluciones -> Mutación y Reparación (GACEP)
+ Buscamos mayor explotación con el cruce -> c50-80
+ Buscamos mayor diversidad en el reparación -> GRASP
+  
+Clusters
+Establecer una distancia minima entre soluciones -> vs las mas cercanas, y si es muy cercana a una existencia, no la generas y generas otra.
+Utilizar como distancia mínima -> 3,5,7,10 (usar distancia de Hamming)
+Hay que asegurarse que la población inicial tenga
