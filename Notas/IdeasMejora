@@ -152,7 +152,7 @@ Tras introducir el archivo de nuevo en TacoLab, se comprueba que ha superado a G
 
 31/03/23 -> Buscando mayor diversidad
 Cambiar el operador de cruce
-  - Cogemos 1 aleatoria, y elegimos 3-5 aleatorias distintas y cruzamos la primera con aquella que tenga menos parecido (más diversidad). Operador diversidad NAM
+  - Cogemos 1 aleatoria, y elegimos 2-3 aleatorias distintas y cruzamos la primera con aquella que tenga menos parecido (más diversidad). Operador diversidad NAM
   - Lo mismo que antes, pero usando el operador de cruce que fomenta los cromosomas del mejor padre
   
 Cambiar de operador de reemplazo
