@@ -168,3 +168,11 @@ Clusters
 Establecer una distancia minima entre soluciones -> vs las mas cercanas, y si es muy cercana a una existencia, no la generas y generas otra.
 Utilizar como distancia mínima -> 3,5,7,10 (usar distancia de Hamming)
 Hay que asegurarse que la población inicial tenga
+
+
+03/04/23
+A simple vista, parece que los resultados obtenidos en el punto 4 (en vez de reemplazar el peor, reemplazar el más parecido) (5%) son mejores que los mejores obtenidos hasta el momento (orGRASP).
+Es necesario comprobarlo en tacolab.
+
+Utilizando 5% de los cromosomas totales como distancia mínima de Hamming permite determinar como 'cercanos' a una o ninguna solución a la hora de sustituirla por soluciones generadas aleatoriamente.
+Por lo que para obtener resultados concluyentes respecto a este cambio, habrá que aumentar el porcentaje a 10%.
