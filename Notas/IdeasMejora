@@ -176,3 +176,7 @@ Es necesario comprobarlo en tacolab.
 
 Utilizando 5% de los cromosomas totales como distancia mínima de Hamming permite determinar como 'cercanos' a una o ninguna solución a la hora de sustituirla por soluciones generadas aleatoriamente.
 Por lo que para obtener resultados concluyentes respecto a este cambio, habrá que aumentar el porcentaje a 10%.
+Con 10% parece que hay algunos conjuntos de datos para los que no es capaz de generar siquiera una población inicial (jeu_100_75_1). 
+Por lo que se reducirá un poco a 8%.
+Parece ser que 8% tampoco es capaz de aceptarlo, pero 7% sí. 
+Se ejecutará este porcentaje y se comprobará si se produce algún cambio.
