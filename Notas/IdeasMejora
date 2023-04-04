@@ -195,3 +195,5 @@ Con respecto a la diversidad, dicho cambio es el que produce además la mayor ca
 También se confirma que los cambios 4 y 5 producen los mismos resultados, por lo que se llega a la conclusión de que nunca se aplica el caso en el problema.
 
 Ahora tocaría introducir los mejores datos que hemos obtenido en la tabla 'general.xlsx' y comprobar su clasificación.
+Resulta que este último cambio proporciona mejores resultados finales (7.438) teniendo en cuenta que la segunda con mejores resultados era el GACEPorGRASP (6.515).
+Sin embargo, también se debe tener en cuenta que entre las milestones 10-50 proporciona (en la perspectiva de la tabla) resultados entre mediocres y medios.
