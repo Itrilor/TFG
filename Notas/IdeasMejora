@@ -181,3 +181,17 @@ Por lo que se reducirá un poco a 8%.
 A 8% es capaz de acabar, pero tarda demasiado tiempo en ejecutarse (mediante un poco de depuración, se ha llegado a la conclusión de que a algunos archivos siguen tardando mucho tiempo en poder generar una población inicial que cumpla las características) y tampoco se produciría ningún cambio con respecto a su versión sin eliminar todas las soluciones parecidas a la nueva introducida.
 
 Por lo tanto, se volverá al 5% y no se tendrá en cuenta el punto 5_EliminacionParecidos, ya que nunca llega a ejecutarse.
+
+
+04/04/23
+Con el cambio 3, los resultados del cruce porcentual 50% y 60% son bastante parecidos, hasta bastante avanzadas las ejecuciones, el 60% da mejores resultados que el 50%; pero al final, el 50% da algo mejores resultados.
+Sin embargo, en cuento a la diversidad de la población, resulta que siempre se obtiene mayor diversidad con el 50%.
+
+Para el cambio 6, se tiene que los resultados del cruce porcentual 50% son los mejores (aunque en las ejecuciones iniciales tiene de los peores resultados). 
+En cuento a la diversidad de la población, ofrece los mismos resultados, es decir, se obtiene mayor diversidad con el 50%.
+
+Tras comparar todos los resultados obtenidos por los nuevos cambios, se ha obtenido que lo que mejores resultados produce es el cambio de selección de la nueva población, en la que se elimina el resultado existente más cercano a la nueva solución solo si esta lo mejora, utilizando el cruce uniforme con operador de reparación GRASP.
+Con respecto a la diversidad, dicho cambio es el que produce además la mayor cantidad de diversidad dentro de la población.
+También se confirma que los cambios 4 y 5 producen los mismos resultados, por lo que se llega a la conclusión de que nunca se aplica el caso en el problema.
+
+Ahora tocaría introducir los mejores datos que hemos obtenido en la tabla 'general.xlsx' y comprobar su clasificación.
