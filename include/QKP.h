@@ -212,6 +212,7 @@ class QKP{
     vector<double> GACEP(int numcro, double probm, const int EvaluacionMAX, int seed);
     vector<double> CHCGA(int numcro, const int EvaluacionMAX, int seed);
     vector<double> GACEPCHC(int numcro, double probm, const int EvaluacionMAX, int seed);
+    vector<double> GACEP3103(int numcro, double probm, const int EvaluacionMAX, int seed);
 	
   private:
     int _n;               //Nº elementos

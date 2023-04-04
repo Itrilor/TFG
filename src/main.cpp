@@ -99,28 +99,28 @@ int main(int argc, char ** argv){
 
   //---------GENETIC ALGORITHM FOR COMBINATORY EXPENSIVE PROBLEM----------
   //values.clear();
-  vector<vector<double>> milestones;
-  for(int j = 0; j < 10; ++j){
-    estado = sequence.leerFicheroDatos(argv[1]);
-    if(!estado){
-      cerr << "No se ha podido leer correctamente\n";
-      exit(-1);
-    }
-    milestones.push_back(sequence.GACEP(10,0.1,NEVALUACIONESMAX, seed[j]));
-    //values.push_back(sequence.getValorSolucion());
-  }
-  vector<double> meanMilestones = milestones[0];
-  for(int i = 1; i < milestones.size(); ++i){
-    for(int j = 0; j < milestones[i].size(); ++j){
-      meanMilestones[j] += milestones[i][j];
-    }
-  }
-
-  for(int i = 0; i < meanMilestones.size(); ++i){
-    meanMilestones[i] = meanMilestones[i]/milestones.size();
-    cout << meanMilestones[i] << " , ";
-  }
-  cout << "\n";
+  // vector<vector<double>> milestones;
+  // for(int j = 0; j < 10; ++j){
+  //   estado = sequence.leerFicheroDatos(argv[1]);
+  //   if(!estado){
+  //     cerr << "No se ha podido leer correctamente\n";
+  //     exit(-1);
+  //   }
+  //   milestones.push_back(sequence.GACEP(10,0.1,NEVALUACIONESMAX, seed[j]));
+  //   //values.push_back(sequence.getValorSolucion());
+  // }
+  // vector<double> meanMilestones = milestones[0];
+  // for(int i = 1; i < milestones.size(); ++i){
+  //   for(int j = 0; j < milestones[i].size(); ++j){
+  //     meanMilestones[j] += milestones[i][j];
+  //   }
+  // }
+  //
+  // for(int i = 0; i < meanMilestones.size(); ++i){
+  //   meanMilestones[i] = meanMilestones[i]/milestones.size();
+  //   cout << meanMilestones[i] << " , ";
+  // }
+  // cout << "\n";
 
   //mensajeSolucion("Algoritmo genético para problemas combinatorios expensive", sequence, tiempoAGEU, "segundos");
   //cout << sequence.getValorSolucion() << "\n";
@@ -179,6 +179,36 @@ int main(int argc, char ** argv){
   }
   cout << "\n";*/
 
+  //---------GACEP3103----------
+  vector<vector<double>> milestones;
+  for(int j = 0; j < 10; ++j){
+    estado = sequence.leerFicheroDatos(argv[1]);
+    if(!estado){
+      cerr << "No se ha podido leer correctamente\n";
+      exit(-1);
+    }
+    milestones.push_back(sequence.GACEP3103(10,0.1,NEVALUACIONESMAX, seed[j]));
+    //values.push_back(sequence.getValorSolucion());
+  }
+  vector<double> meanMilestones = milestones[0];
+  for(int i = 1; i < milestones.size(); ++i){
+    for(int j = 0; j < milestones[i].size(); ++j){
+      meanMilestones[j] += milestones[i][j];
+    }
+  }
+
+  for(int i = 0; i < meanMilestones.size(); ++i){
+    meanMilestones[i] = meanMilestones[i]/milestones.size();
+    cout << meanMilestones[i] << " , ";
+  }
+  cout << "\n";
+
+
+
+  //mensajeSolucion("Algoritmo genético para problemas combinatorios expensive", sequence, tiempoAGEU, "segundos");
+  //cout << sequence.getValorSolucion() << "\n";
+  //cout << meanValue << "," << tiempoAGEU << "\n";
+  //cout << meanValue << "\n";
 }
 
 void mensajeSolucion(string name, QKP seq, double tiempo, string seg){

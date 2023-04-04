@@ -135,7 +135,6 @@ class AGCEP{
     bool eliminarElemento(int bin[], double &peso);
     bool eliminarElemento(int bin[], double &peso, vector<int> index);
     
-
     
     //Ficheros
     /**

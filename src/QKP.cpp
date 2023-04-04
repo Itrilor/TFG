@@ -875,6 +875,301 @@ vector<double> QKP::GACEPCHC(int numcro, double probm, const int EvaluacionMAX, 
   return resMilestones;
 }
 
+vector<double> QKP::GACEP3103(int numcro, double probm, const int EvaluacionMAX, int seed){
+  //Inicializar la semilla
+  Random::seed(seed);
+  //Variables
+  AG ag(*this);
+  AGCEP agcep(ag);
+  CHC chc(ag); //Para la distancia de Hamming
+  int numEsperadoCruces=1;
+  int matrizSoluciones[numcro][getSize()];
+  int matrizHijos[numEsperadoCruces*2][getSize()];
+  double valorPadre[numcro];
+  double valorHijo[numEsperadoCruces*2];
+  int index;
+  int contador=0;
+  int contadorFichero=1;
+  bool keepSaving = true;
+
+  int distMinHamming = 5*getSize()/100;
+  int peleaPadres = 3;
+
+  //Diversidad
+  vector<vector<int>> pob;
+
+
+  //Gráfico de convergencia
+  vector<double> milestones = {1,2,3,5,10,20,30,40,50,60,70,80,90,100};
+  for(int i = 0; i < milestones.size(); ++i){
+    milestones[i] = EvaluacionMAX*milestones[i]/100;
+  }
+  vector<double> resMilestones;
+
+
+  //Creamos la población inicial y la añadimos al vector para el histograma
+  vector<int> indices;
+  vector<int> indicesPoblacion;
+
+  // vector<int> indices;
+  // for(int i = 0; i < numcro; ++i){
+  //   ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);
+  //   agcep.addToHistograma(matrizSoluciones[i],valorPadre[i]);
+  // }
+  //1PoblacionInicialDiversa
+  for(int i = 0; i < numcro; ++i){
+    ag.generaSeleccionAleatoria(matrizSoluciones[i],valorPadre[i]);
+    //Nos aseguramos de que la nueva solución no sea muy cercana a las existentes
+    bool nuevo = true;
+    for(int j = 0; j < i && nuevo; ++j){
+      if(chc.distanciaHamming(matrizSoluciones[i],matrizSoluciones[j]) < distMinHamming){
+        nuevo = false;
+      }
+    }
+    //Si es una solución lo suficientemente diferente, la aceptamos
+    if(nuevo){
+      agcep.addToHistograma(matrizSoluciones[i],valorPadre[i]);
+      indicesPoblacion.push_back(i);
+    }
+    //Si es cercana a una existente, la ignoramos y generamos otra
+    else{
+      --i;
+    }
+  }
+
+  while(contador < EvaluacionMAX){
+    if(contador > milestones[0]){
+      // index = ag.calcularMejorValor(valorPadre,numcro);
+      // resMilestones.push_back(valorPadre[index]);
+      //Diversidad
+      pob.clear();
+      for(int i = 0; i < numcro; ++i){
+        pob.push_back(ag.intToVector(matrizSoluciones[i]));
+      }
+      resMilestones.push_back(diversity(pob));
+      milestones.erase(milestones.begin());
+    }
+    if(contador!=0 && (contador%50==0)){
+      if(contador%100==0){
+        keepSaving=true;
+        agcep.clearHistograma();
+        for(int i = 0; i < numcro; ++i){
+          agcep.addToHistograma(matrizSoluciones[i], valorPadre[i]);
+        }
+      }
+      else{
+        keepSaving=false;
+        string temp_str = "../Histogramas/Histograma"+to_string(contadorFichero);
+        char const* number_array = temp_str.c_str();
+        agcep.sortHistograma();
+        agcep.saveFichero(number_array);
+        temp_str = "../Histogramas/Porcentajes"+to_string(contadorFichero);
+        char const* porcentaje_array = temp_str.c_str();
+        agcep.writeElementsPercentages(20,porcentaje_array);
+        temp_str = "../Histogramas/Elementos"+to_string(contadorFichero);
+        char const* elementos_array = temp_str.c_str();
+        agcep.writeBestWorstElements(20, elementos_array);
+        contadorFichero++;
+      }
+    }
+
+    //Estacionario
+    /*
+    Realizamos 2 torneos binarios aleatorios entre 4 elementos de la población
+    para obtener a los 2 padres que vamos a cruzar
+    */
+    // indices = ag.torneoBinario(2, valorPadre, numcro);
+    // while(indices[0] == indices[1]){
+    //   indices = ag.torneoBinario(2, valorPadre, numcro);
+    // }
+
+    //2PadresDistanciados
+    //La elección de los padres se hará eligiendo un padre aleatoriamente
+    //(mantendremos el torneoBinario para este) y se eligirán aleatoriamente
+    //2-4 soluciones distintas.
+    indices = ag.torneoBinario(1, valorPadre, numcro);
+    Random::shuffle(indicesPoblacion);
+    int auxPelea = 0;
+    for(int i = 0; i < peleaPadres; ++i){
+      if(indices[0] != indicesPoblacion[auxPelea]){
+        indices.push_back(auxPelea);
+      }
+      else{
+        --i;
+      }
+      auxPelea++;
+    }
+    //Cruzaremos la primera solución con aquella del segundo grupo con la que
+    //menos tenga en común
+    int dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[1]]);
+    auxPelea = 1;
+    for(int i = 2; i < indices.size(); ++i){
+      if(dmin < chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]])){
+        auxPelea = i;
+        dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]]);
+      }
+    }
+    indices[1] = indices[auxPelea];
+    //Eliminamos el resto de índices, ya que no interesan
+    indices.erase(indices.begin()+2,indices.end());
+
+
+    //Generamos aleatoriamente dónde se producen las mutaciones
+    vector<int> mutacion;
+    int element;
+    for(int i = 0; i < (int)numcro*0.1; ++i){
+      element = Random::get(0,numcro-1);
+      //Si el elemento se encuentra ya en el vector de mutación, se genera otro
+      if(std::find(mutacion.begin(), mutacion.end(), element) == mutacion.end()){
+          mutacion.push_back(element);
+      }
+    }
+    sort(mutacion.begin(),mutacion.end());
+    // Cruzamos a los padres
+    for(int i = 0; i < numEsperadoCruces*2; ++i){
+      agcep.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
+                    matrizHijos[i], matrizHijos[i+1], keepSaving);
+      // agcep.crucePorcentual(matrizSoluciones[indices[i]], valorPadre[indices[i]],
+      //               matrizSoluciones[indices[i+1]], valorPadre[indices[i+1]],
+      //               matrizHijos[i], matrizHijos[i+1], keepSaving,50);
+
+      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+      if(keepSaving==true){
+        agcep.addToHistograma(matrizHijos[i],valorHijo[i]);
+      }
+      i++;
+      valorHijo[i] = ag.calcularValor(matrizHijos[i]);
+      if(keepSaving==true){
+        agcep.addToHistograma(matrizHijos[i],valorHijo[i]);
+      }
+    }
+    // Comprobamos si mutamos a qué padres mutar
+    while(!mutacion.empty()){
+      agcep.cambioMutante(matrizSoluciones[mutacion[0]],keepSaving);
+      valorPadre[mutacion[0]] = ag.calcularValor(matrizSoluciones[mutacion[0]]);
+      if(keepSaving==true){
+        agcep.addToHistograma(matrizSoluciones[mutacion[0]],valorPadre[mutacion[0]]);
+      }
+      mutacion.erase(mutacion.begin());
+    }
+
+    // Tenemos que ver si podemos sustituir
+    vector<int> peoresPadres = ag.calcular2Peores(valorPadre, numcro);
+    vector<int> peoresHijos = ag.calcular2Peores(valorHijo, numEsperadoCruces*2);
+    // Hi supera a Pi
+    if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[0]] &&
+       valorPadre[peoresPadres[1]] < valorHijo[peoresHijos[1]]){
+       //Sustituimos Pi por Hi
+       for(int i = 0; i < getSize(); ++i){
+         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[0]][i];
+         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+       }
+       valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[0]];
+       valorPadre[peoresPadres[1]] = valorHijo[peoresHijos[1]];
+    }
+    // H0 supera a P0 y H1 no supera a P1
+    // H0 no supera a P0, pero H1 supera a P0
+    else if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[1]]){
+      //Sustituimos P0 por H1
+      for(int i = 0; i < getSize(); ++i){
+        matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+      }
+      valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[1]];
+    }
+
+    //4_SeleccionCercania
+    //Encontramos los elementos más similares a cada hijo
+    vector<int> posCercanas;
+    for(int i = 0; i < numEsperadoCruces*2; ++i){
+      posCercanas.clear();
+      auxPelea = 0;
+      dmin = chc.distanciaHamming(matrizSoluciones[0],matrizHijos[i]);
+      for(int j = 1; j < numEsperadoCruces*2; ++j){
+        if(chc.distanciaHamming(matrizSoluciones[j],matrizHijos[i]) < dmin){
+          auxPelea=j;
+          dmin = chc.distanciaHamming(matrizSoluciones[j],matrizHijos[i]);
+        }
+        if(chc.distanciaHamming(matrizSoluciones[j],matrizHijos[i]) < distMinHamming){
+          posCercanas.push_back(j);
+        }
+      }
+      //Si el valor de la solución existente más parecida a uno de los hijos es
+      //menor que la de este último, la sustituimos
+      if(valorPadre[auxPelea] < valorHijo[i]){
+        for(int j = 0; j < getSize(); ++j){
+          matrizSoluciones[auxPelea][j] = matrizHijos[i][j];
+        }
+        valorPadre[auxPelea] = valorHijo[i];
+
+        //5_EliminacionParecidos
+        //Además, tendremos que comprobar si hay soluciones existentes muy parecidas
+        //a esta nueva, es decir, cuya distancia de Hamming sea muy pequeña
+        //cout << posCercanas.size() << "\n";
+        /*if(posCercanas.size()>1){
+          int auxMax = auxPelea;
+          double auxMaxValor = valorPadre[auxPelea];
+          for(int j = 0; j < posCercanas.size(); ++j){
+            if(valorPadre[posCercanas[j]] > auxMaxValor){
+              auxMax = posCercanas[j];
+              auxMaxValor = valorPadre[auxMax];
+            }
+          }
+          //Eliminamos todas las soluciones peores y las sustuimos por unas
+          //generadas aleatoriamente que cumplan que superen la distancia de
+          //Hamming mínima
+          for(int j = 0; j < posCercanas.size(); ++j){
+            if(posCercanas[j] != auxMax){
+              for(int k = 0; k < getSize(); ++k){
+                matrizSoluciones[posCercanas[j]][k] = -1;
+              }
+              valorPadre[posCercanas[j]] = -1;
+            }
+          }
+
+          for(int j = 0; j < posCercanas.size(); ++j){
+            if(posCercanas[j] != auxMax){
+              ag.generaSeleccionAleatoria(matrizSoluciones[posCercanas[j]],valorPadre[posCercanas[j]]);
+            }
+            //Nos aseguramos de que la nueva solución no sea muy cercana a las existentes
+            bool nuevo = true;
+            for(int k = 0; k < getSize() && nuevo; ++k){
+              if(chc.distanciaHamming(matrizSoluciones[posCercanas[j]],matrizSoluciones[k]) < distMinHamming){
+                nuevo = false;
+              }
+            }
+            //Si es una solución lo suficientemente diferente, la aceptamos
+            if(nuevo){
+              agcep.addToHistograma(matrizSoluciones[posCercanas[j]],valorPadre[posCercanas[j]]);
+            }
+            //Si es cercana a una existente, la ignoramos y generamos otra
+            else{
+              --j;
+            }
+          }
+
+        }*/
+      }
+    }
+    contador++;
+  }
+  // Elegir
+  // index = ag.calcularMejorValor(valorPadre, numcro);
+  // resMilestones.push_back(valorPadre[index]);
+  // for(int i = 0; i < getSize(); ++i){
+  //   if(matrizSoluciones[index][i]==1){
+  //     addSolucion(i);
+  //   }
+  // }
+  //return solucionç
+  //Diversidad
+  pob.clear();
+  for(int i = 0; i < numcro; ++i){
+    pob.push_back(ag.intToVector(matrizSoluciones[i]));
+  }
+  resMilestones.push_back(diversity(pob));
+  return resMilestones;
+}
+
 /********LEER FICHERO DE DATOS*****************/
 bool QKP::leerFicheroDatos(const char* fDatos){
   ifstream fin;
