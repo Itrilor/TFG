@@ -894,9 +894,11 @@ vector<double> QKP::GACEP3103(int numcro, double probm, const int EvaluacionMAX,
 
   int distMinHamming = 5*getSize()/100;
   int peleaPadres = 3;
+  int auxPelea;
+  int dmin;
 
   //Diversidad
-  vector<vector<int>> pob;
+  // vector<vector<int>> pob;
 
 
   //Gráfico de convergencia
@@ -939,14 +941,14 @@ vector<double> QKP::GACEP3103(int numcro, double probm, const int EvaluacionMAX,
 
   while(contador < EvaluacionMAX){
     if(contador > milestones[0]){
-      // index = ag.calcularMejorValor(valorPadre,numcro);
-      // resMilestones.push_back(valorPadre[index]);
+      index = ag.calcularMejorValor(valorPadre,numcro);
+      resMilestones.push_back(valorPadre[index]);
       //Diversidad
-      pob.clear();
-      for(int i = 0; i < numcro; ++i){
-        pob.push_back(ag.intToVector(matrizSoluciones[i]));
-      }
-      resMilestones.push_back(diversity(pob));
+      // pob.clear();
+      // for(int i = 0; i < numcro; ++i){
+      //   pob.push_back(ag.intToVector(matrizSoluciones[i]));
+      // }
+      // resMilestones.push_back(diversity(pob));
       milestones.erase(milestones.begin());
     }
     if(contador!=0 && (contador%50==0)){
@@ -978,40 +980,40 @@ vector<double> QKP::GACEP3103(int numcro, double probm, const int EvaluacionMAX,
     Realizamos 2 torneos binarios aleatorios entre 4 elementos de la población
     para obtener a los 2 padres que vamos a cruzar
     */
-    // indices = ag.torneoBinario(2, valorPadre, numcro);
-    // while(indices[0] == indices[1]){
-    //   indices = ag.torneoBinario(2, valorPadre, numcro);
-    // }
+    indices = ag.torneoBinario(2, valorPadre, numcro);
+    while(indices[0] == indices[1]){
+      indices = ag.torneoBinario(2, valorPadre, numcro);
+    }
 
     //2PadresDistanciados
     //La elección de los padres se hará eligiendo un padre aleatoriamente
     //(mantendremos el torneoBinario para este) y se eligirán aleatoriamente
     //2-4 soluciones distintas.
-    indices = ag.torneoBinario(1, valorPadre, numcro);
-    Random::shuffle(indicesPoblacion);
-    int auxPelea = 0;
-    for(int i = 0; i < peleaPadres; ++i){
-      if(indices[0] != indicesPoblacion[auxPelea]){
-        indices.push_back(auxPelea);
-      }
-      else{
-        --i;
-      }
-      auxPelea++;
-    }
-    //Cruzaremos la primera solución con aquella del segundo grupo con la que
-    //menos tenga en común
-    int dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[1]]);
-    auxPelea = 1;
-    for(int i = 2; i < indices.size(); ++i){
-      if(dmin < chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]])){
-        auxPelea = i;
-        dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]]);
-      }
-    }
-    indices[1] = indices[auxPelea];
-    //Eliminamos el resto de índices, ya que no interesan
-    indices.erase(indices.begin()+2,indices.end());
+    // indices = ag.torneoBinario(1, valorPadre, numcro);
+    // Random::shuffle(indicesPoblacion);
+    // auxPelea = 0;
+    // for(int i = 0; i < peleaPadres; ++i){
+    //   if(indices[0] != indicesPoblacion[auxPelea]){
+    //     indices.push_back(auxPelea);
+    //   }
+    //   else{
+    //     --i;
+    //   }
+    //   auxPelea++;
+    // }
+    // //Cruzaremos la primera solución con aquella del segundo grupo con la que
+    // //menos tenga en común
+    // int dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[1]]);
+    // auxPelea = 1;
+    // for(int i = 2; i < indices.size(); ++i){
+    //   if(dmin < chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]])){
+    //     auxPelea = i;
+    //     dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]]);
+    //   }
+    // }
+    // indices[1] = indices[auxPelea];
+    // //Eliminamos el resto de índices, ya que no interesan
+    // indices.erase(indices.begin()+2,indices.end());
 
 
     //Generamos aleatoriamente dónde se producen las mutaciones
@@ -1054,28 +1056,28 @@ vector<double> QKP::GACEP3103(int numcro, double probm, const int EvaluacionMAX,
     }
 
     // Tenemos que ver si podemos sustituir
-    vector<int> peoresPadres = ag.calcular2Peores(valorPadre, numcro);
-    vector<int> peoresHijos = ag.calcular2Peores(valorHijo, numEsperadoCruces*2);
-    // Hi supera a Pi
-    if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[0]] &&
-       valorPadre[peoresPadres[1]] < valorHijo[peoresHijos[1]]){
-       //Sustituimos Pi por Hi
-       for(int i = 0; i < getSize(); ++i){
-         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[0]][i];
-         matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
-       }
-       valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[0]];
-       valorPadre[peoresPadres[1]] = valorHijo[peoresHijos[1]];
-    }
-    // H0 supera a P0 y H1 no supera a P1
-    // H0 no supera a P0, pero H1 supera a P0
-    else if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[1]]){
-      //Sustituimos P0 por H1
-      for(int i = 0; i < getSize(); ++i){
-        matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
-      }
-      valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[1]];
-    }
+    // vector<int> peoresPadres = ag.calcular2Peores(valorPadre, numcro);
+    // vector<int> peoresHijos = ag.calcular2Peores(valorHijo, numEsperadoCruces*2);
+    // // Hi supera a Pi
+    // if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[0]] &&
+    //    valorPadre[peoresPadres[1]] < valorHijo[peoresHijos[1]]){
+    //    //Sustituimos Pi por Hi
+    //    for(int i = 0; i < getSize(); ++i){
+    //      matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[0]][i];
+    //      matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+    //    }
+    //    valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[0]];
+    //    valorPadre[peoresPadres[1]] = valorHijo[peoresHijos[1]];
+    // }
+    // // H0 supera a P0 y H1 no supera a P1
+    // // H0 no supera a P0, pero H1 supera a P0
+    // else if(valorPadre[peoresPadres[0]] < valorHijo[peoresHijos[1]]){
+    //   //Sustituimos P0 por H1
+    //   for(int i = 0; i < getSize(); ++i){
+    //     matrizSoluciones[peoresPadres[0]][i] = matrizHijos[peoresHijos[1]][i];
+    //   }
+    //   valorPadre[peoresPadres[0]] = valorHijo[peoresHijos[1]];
+    // }
 
     //4_SeleccionCercania
     //Encontramos los elementos más similares a cada hijo
@@ -1153,20 +1155,19 @@ vector<double> QKP::GACEP3103(int numcro, double probm, const int EvaluacionMAX,
     contador++;
   }
   // Elegir
-  // index = ag.calcularMejorValor(valorPadre, numcro);
-  // resMilestones.push_back(valorPadre[index]);
-  // for(int i = 0; i < getSize(); ++i){
-  //   if(matrizSoluciones[index][i]==1){
-  //     addSolucion(i);
-  //   }
-  // }
-  //return solucionç
-  //Diversidad
-  pob.clear();
-  for(int i = 0; i < numcro; ++i){
-    pob.push_back(ag.intToVector(matrizSoluciones[i]));
+  index = ag.calcularMejorValor(valorPadre, numcro);
+  resMilestones.push_back(valorPadre[index]);
+  for(int i = 0; i < getSize(); ++i){
+    if(matrizSoluciones[index][i]==1){
+      addSolucion(i);
+    }
   }
-  resMilestones.push_back(diversity(pob));
+  //Diversidad
+  // pob.clear();
+  // for(int i = 0; i < numcro; ++i){
+  //   pob.push_back(ag.intToVector(matrizSoluciones[i]));
+  // }
+  // resMilestones.push_back(diversity(pob));
   return resMilestones;
 }
 
