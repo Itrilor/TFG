@@ -35,3 +35,55 @@ Guía:
   - resultadosMilestones.xlsx -> Hoja de cálculo que contiene los valores almacenados en resultadosMilestones.txt, junto con algunas gráficas mostrando los cambios producidos, las diferencias proemdios y totales.
   - resultadosMutacionReparacionMilestones.txt -> 
   - resultadosSoloMilestones.xlsx -> 
+
+  - 3103/ -> Carpeta con los resultados de las modificaciones del 31/03 (mírese Notas/IdeasMejora fecha 31/03)
+    - x% -> Carpetas con los resultados de las modificaciones, donde 'x' indica el porcentaje de elementos a tener en cuenta para la distancia Hamming (a la hora de asegurarnos de que la población es 'diversa'). 5% es la única carpeta con los datos de todas las posibles combinaciones.
+      - 1_DivPoblacionInicialDiversa.txt -> Diversidad de la población si imponemos que la población inicial tiene que ser 'diversa', es decir, que cada solución de la población se diferencia, como mínimo, en x% de elementos.
+      - 1_PoblacionInicialDiversa.txt -> Resultados si imponemos que la población inicial tiene que ser 'diversa', es decir, que cada solución de la población se diferencia, como mínimo, en x% de elementos.
+      - 2_DivPadresDistanciados.txt -> Diversidad de la población si, además de imponer diversidad en la población inicial, se cambia la elección de padres a cruzar. Esto es, elegimos un padre aleatorio, y elegimos otros 3 aleatoriamente, cruzaremos al primer padre con aquella solución del grupo menos parecida a la primera.
+      - 2_PadresDistanciados.txt -> Resultados si, además de imponer diversidad en la población inicial, se cambia la elección de padres a cruzar. Esto es, elegimos un padre aleatorio, y elegimos otros 3 aleatoriamente, cruzaremos al primer padre con aquella solución del grupo menos parecida a la primera.
+      - 3_CrucePorcentual.xlsx -> Tabla que almacena los resultados de aplicar los cruces porcentuales (50-80) si se han aplicado las modificaciones anteriores.
+      - 3_CrucePorcentual50.txt -> Resultados de aplicar cruce porcentual 50 si se han aplicado las modificaciones anteriores.
+      - 3_CrucePorcentual60.txt -> Resultados de aplicar cruce porcentual 60 si se han aplicado las modificaciones anteriores.
+      - 3_CrucePorcentual70.txt -> Resultados de aplicar cruce porcentual 70 si se han aplicado las modificaciones anteriores.
+      - 3_CrucePorcentual80.txt -> Resultados de aplicar cruce porcentual 80 si se han aplicado las modificaciones anteriores.
+      - 3_DivCrucePorcentual.xlsx -> Tabla que almacena la diversidad de la población al aplicar los cruces porcentuales (50-80) si se han aplicado las modificaciones anteriores.
+      - 3_DivCrucePorcentual50.txt -> Diversidad de la población al aplicar cruce porcentual 50 si se han aplicado las modificaciones anteriores.
+      - 3_DivCrucePorcentual60.txt -> Diversidad de la población al aplicar cruce porcentual 50 si se han aplicado las modificaciones anteriores.
+      - 3_DivCrucePorcentual70.txt -> Diversidad de la población al aplicar cruce porcentual 50 si se han aplicado las modificaciones anteriores.
+      - 3_DivCrucePorcentual80.txt -> Diversidad de la población al aplicar cruce porcentual 50 si se han aplicado las modificaciones anteriores.
+      - 4_DivSeleccionCercania-2.txt -> Diversidad de la población al modificar la forma en la que se selecciona la siguiente generación. Es decir, una vez obtenidos los hijos, comprobaremos si mejoran aquella solución más parecida; en caso positivo, la sustituimos, en caso negativo, la descartamos.
+      - 4_DivSeleccionCercania.txt -> Diversidad de la población al modificar la forma en la que se selecciona la siguiente generación. Es decir, una vez obtenidos los hijos, comprobaremos si mejoran aquella solución más parecida; en caso positivo, la sustituimos, en caso negativo, la descartamos. Además, mantenemos la modificación 2 (padres distanciados).
+      - 4_DivSeleccionCercania.xlsx -> Tabla que almacena la diversidad de la población al modificar la que se selecciona la siguiente generación (manteniendo o no el cambio 2).
+      - 4_Seleccioncercania-2.txt -> Resultados al modificar la forma en la que se selecciona la siguiente generación. Es decir, una vez obtenidos los hijos, comprobaremos si mejoran aquella solución más parecida; en caso positivo, la sustituimos, en caso negativo, la descartamos.
+      - 4_SeleccionCercania.txt -> Resultados al modificar la forma en la que se selecciona la siguiente generación. Es decir, una vez obtenidos los hijos, comprobaremos si mejoran aquella solución más parecida; en caso positivo, la sustituimos, en caso negativo, la descartamos. Además, mantenemos la modificación 2 (padres distanciados).
+      - 4_SeleccionCercania.xlsx -> Tabla que almacena los resultados al aplicar la forma ne la que se selecciona la siguiente genración (manteniendo o no el cambio 2).
+      - 5_DivEliminacionParecidos-2.txt -> Diversidad de la población al modificar aún más como se selecciona la siguiente generación (mantiene los cambios explicados en 4_DivSeleccionCercania-2.txt). Es decir, si la solución 'hija' mejora a la más cercana, se comprobará si hay alguna otra solución cercana y nos volveremos a quedar con la mejor de ellas, generándose aleatoriamente (manteniendo la diversidad) las soluciones restantes hasta volver a tener una población completa.
+      - 5_DivEliminacionParecidos.txt -> Diversidad de la población al modificar aún más como se selecciona la siguiente generación (mantiene los cambios explicados en 4_DivSeleccionCercania.txt). Es decir, si la solución 'hija' mejora a la más cercana, se comprobará si hay alguna otra solución cercana y nos volveremos a quedar con la mejor de ellas, generándose aleatoriamente (manteniendo la diversidad) las soluciones restantes hasta volver a tener una población completa.
+      - 5_DivEliminacionParecidos.xlsx -> Tabla que almacena la diversidad de la población al modificar aún más cómo se selecciona la siguiente generación (contiene 5_DivEliminacionParecidos-2.txt y 5_DivEliminacionParecidos.txt)
+      - 5_EliminacionParecidos-2.txt -> Resultados al modificar aún más como se selecciona la siguiente generación (mantiene los cambios explicados en 4_DivSeleccionCercania-2.txt). Es decir, si la solución 'hija' mejora a la más cercana, se comprobará si hay alguna otra solución cercana y nos volveremos a quedar con la mejor de ellas, generándose aleatoriamente (manteniendo la diversidad) las soluciones restantes hasta volver a tener una población completa.
+      - 5_EliminacionParecidos.txt -> Resultados al modificar aún más como se selecciona la siguiente generación (mantiene los cambios explicados en 4_DivSeleccionCercania.txt). Es decir, si la solución 'hija' mejora a la más cercana, se comprobará si hay alguna otra solución cercana y nos volveremos a quedar con la mejor de ellas, generándose aleatoriamente (manteniendo la diversidad) las soluciones restantes hasta volver a tener una población completa.
+      - 5_EliminacionParecidos.xlsx -> Tabla que almacena los resultados al modificar aún más cómo se selecciona la siguiente generación (contiene 5_EliminacionParecidos-2.txt y 5_EliminacionParecidos.txt)
+      - 6_34_DivSeleccionc-2.xlsx -> 
+      - 6_34_DivSeleccionc.xlsx -> 
+      - 6_34_DivSeleccionc50-2.txt -> 
+      - 6_34_DivSeleccion50.txt -> 
+      - 6_34_DivSeleccionc60-2.txt -> 
+      - 6_34_DivSeleccion60.txt -> 
+      - 6_34_DivSeleccionc70-2.txt -> 
+      - 6_34_DivSeleccion70.txt -> 
+      - 6_34_DivSeleccionc80-2.txt -> 
+      - 6_34_DivSeleccion80.txt -> 
+      - 6_34_Seleccionc-2.xlsx -> 
+      - 6_34_Seleccionc.xlsx -> 
+      - 6_34_Seleccionc50-2.txt -> 
+      - 6_34_Seleccion50.txt -> 
+      - 6_34_Seleccionc60-2.txt -> 
+      - 6_34_Seleccion60.txt -> 
+      - 6_34_Seleccionc70-2.txt -> 
+      - 6_34_Seleccion70.txt -> 
+      - 6_34_Seleccionc80-2.txt -> 
+      - 6_34_Seleccion80.txt -> 
+      - Div31035.xlsx -> 
+      - Res31035.xlsx -> 
+    - Res31035vsGACEPGRASP.xlsx -> Recopilación de los resultados de 5% y GACEPGRASP para su fácil comprobación
