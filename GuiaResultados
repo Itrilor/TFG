@@ -64,26 +64,26 @@ Guía:
       - 5_EliminacionParecidos-2.txt -> Resultados al modificar aún más como se selecciona la siguiente generación (mantiene los cambios explicados en 4_DivSeleccionCercania-2.txt). Es decir, si la solución 'hija' mejora a la más cercana, se comprobará si hay alguna otra solución cercana y nos volveremos a quedar con la mejor de ellas, generándose aleatoriamente (manteniendo la diversidad) las soluciones restantes hasta volver a tener una población completa.
       - 5_EliminacionParecidos.txt -> Resultados al modificar aún más como se selecciona la siguiente generación (mantiene los cambios explicados en 4_DivSeleccionCercania.txt). Es decir, si la solución 'hija' mejora a la más cercana, se comprobará si hay alguna otra solución cercana y nos volveremos a quedar con la mejor de ellas, generándose aleatoriamente (manteniendo la diversidad) las soluciones restantes hasta volver a tener una población completa.
       - 5_EliminacionParecidos.xlsx -> Tabla que almacena los resultados al modificar aún más cómo se selecciona la siguiente generación (contiene 5_EliminacionParecidos-2.txt y 5_EliminacionParecidos.txt)
-      - 6_34_DivSeleccionc-2.xlsx -> 
-      - 6_34_DivSeleccionc.xlsx -> 
-      - 6_34_DivSeleccionc50-2.txt -> 
-      - 6_34_DivSeleccion50.txt -> 
-      - 6_34_DivSeleccionc60-2.txt -> 
-      - 6_34_DivSeleccion60.txt -> 
-      - 6_34_DivSeleccionc70-2.txt -> 
-      - 6_34_DivSeleccion70.txt -> 
-      - 6_34_DivSeleccionc80-2.txt -> 
-      - 6_34_DivSeleccion80.txt -> 
-      - 6_34_Seleccionc-2.xlsx -> 
-      - 6_34_Seleccionc.xlsx -> 
-      - 6_34_Seleccionc50-2.txt -> 
-      - 6_34_Seleccion50.txt -> 
-      - 6_34_Seleccionc60-2.txt -> 
-      - 6_34_Seleccion60.txt -> 
-      - 6_34_Seleccionc70-2.txt -> 
-      - 6_34_Seleccion70.txt -> 
-      - 6_34_Seleccionc80-2.txt -> 
-      - 6_34_Seleccion80.txt -> 
-      - Div31035.xlsx -> 
-      - Res31035.xlsx -> 
+      - 6_34_DivSeleccionc-2.xlsx -> Tabla que almacena la diversidad de la población al aplicar las modificaciones 3 (cruce porcentual 50-80) y 4 (seleccion cercania).
+      - 6_34_DivSeleccionc.xlsx -> Tabla que almacena la diversidad de la población al aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 50-80) y 4 (seleccion cercanía).
+      - 6_34_DivSeleccionc50-2.txt -> Diversidad de la población al aplicar las modificaciones 3 (cruce porcentual 50) y 4 (seleccion cercania).
+      - 6_34_DivSeleccion50.txt -> Diversidad de la población al aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 50) y 4 (seleccion cercania).
+      - 6_34_DivSeleccionc60-2.txt -> Diversidad de la población al aplicar las modificaciones 3 (cruce porcentual 60) y 4 (seleccion cercania).
+      - 6_34_DivSeleccion60.txt -> Diversidad de la población al aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 60) y 4 (seleccion cercania).
+      - 6_34_DivSeleccionc70-2.txt -> Diversidad de la población al aplicar las modificaciones 3 (cruce porcentual 70) y 4 (seleccion cercania).
+      - 6_34_DivSeleccion70.txt -> Diversidad de la población al aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 70) y 4 (seleccion cercania).
+      - 6_34_DivSeleccionc80-2.txt -> Diversidad de la población al aplicar las modificaciones 3 (cruce porcentual 80) y 4 (seleccion cercania).
+      - 6_34_DivSeleccion80.txt -> Diversidad de la población al aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 80) y 4 (seleccion cercania).
+      - 6_34_Seleccionc-2.xlsx -> Tabla que almacena los resultados de aplicar las modificaciones 3 (cruce porcentual 50-80) y 4 (seleccion cercania).
+      - 6_34_Seleccionc.xlsx -> Tabla que almacena los resultados de aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 50-80) y 4 (seleccion cercania).
+      - 6_34_Seleccionc50-2.txt -> Resultados de aplicar las modificaciones 3 (cruce porcentual 50) y 4 (seleccion cercania).
+      - 6_34_Seleccion50.txt -> Resultados de aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 50) y 4 (seleccion cercania).
+      - 6_34_Seleccionc60-2.txt -> Resultados de aplicar las modificaciones 3 (cruce porcentual 60) y 4 (seleccion cercania).
+      - 6_34_Seleccion60.txt -> Resultados de aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 60) y 4 (seleccion cercania).
+      - 6_34_Seleccionc70-2.txt -> Resultados de aplicar las modificaciones 3 (cruce porcentual 70) y 4 (seleccion cercania).
+      - 6_34_Seleccion70.txt -> Resultados de aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 70) y 4 (seleccion cercania).
+      - 6_34_Seleccionc80-2.txt -> Resultados de aplicar las modificaciones 3 (cruce porcentual 80) y 4 (seleccion cercania).
+      - 6_34_Seleccion80.txt -> Resultados de aplicar las modificaciones 2 (padres distanciados), 3 (cruce porcentual 80) y 4 (seleccion cercania).
+      - Div31035.xlsx -> Tabla que almacena la diversidad de la población de todas las iteraciones planteadas anteriormente (para los cruces porcentuales hemos calculado cuál aporta los mejores resultados y es el único que se ha introducido).
+      - Res31035.xlsx -> Tabla que almacena los resultados de todas las iteraciones planteadas anteriormente (para los cruces porcentuales hemos calculado cuál aporta los mejores resultados y es el único que se ha introducido).
     - Res31035vsGACEPGRASP.xlsx -> Recopilación de los resultados de 5% y GACEPGRASP para su fácil comprobación
