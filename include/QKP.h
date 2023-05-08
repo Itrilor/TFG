@@ -206,7 +206,7 @@ class QKP{
 	
     //-----------------ALGORITMOS-----------------
     void RandomQKP(vector<int> &sol, double &valor);
-    void RandomQKP(double tEvaluacionMAX);
+    vector<double> RandomQKP(double tEvaluacionMAX, int seed);
     void Greedy(int max_op=0);
     vector<double> AGEU(int numcro, double probm, const double tEvaluacionMAX, int seed);
     vector<double> GACEP(int numcro, double probm, const int EvaluacionMAX, int seed);

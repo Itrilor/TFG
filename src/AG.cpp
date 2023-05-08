@@ -190,8 +190,8 @@ void AG::cruceUniforme(int p1[], int p2[], int h1[], int h2[]){
   }
 
   // Hacemos las soluciones factibles
-  //operadorReparacion(h1);
-  //operadorReparacion(h2);
+  // operadorReparacion(h1);
+  // operadorReparacion(h2);
   operadorReparacionGRASP(h1);
   operadorReparacionGRASP(h2);
 }
