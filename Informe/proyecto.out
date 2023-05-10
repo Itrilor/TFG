@@ -1,0 +1,26 @@
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Estimaci\363n y Presupuesto}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Planificaci\363n}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Planificaci\363n Base}{section.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.1.2}{Planificaci\363n Final}{section.2.1}% 5
+\BOOKMARK [1][-]{section.2.2}{Presupuesto}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{Repaso bibliogr\341fico}{}% 7
+\BOOKMARK [0][-]{chapter.4}{Contexto matem\341tico}{}% 8
+\BOOKMARK [1][-]{section.4.1}{Definici\363n del problema}{chapter.4}% 9
+\BOOKMARK [1][-]{section.4.2}{Condici\363n de Optimalidad}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.3}{Rendimiento de los algoritmos}{chapter.4}% 11
+\BOOKMARK [2][-]{subsection.4.3.1}{Convergencia y Orden de Convergencia}{section.4.3}% 12
+\BOOKMARK [2][-]{subsection.4.3.2}{Comportamiento num\351rico}{section.4.3}% 13
+\BOOKMARK [1][-]{section.4.4}{Programaci\363n no lineal sin restricciones}{chapter.4}% 14
+\BOOKMARK [2][-]{subsection.4.4.1}{Algoritmos de Optimizaci\363n sin restricciones}{section.4.4}% 15
+\BOOKMARK [2][-]{subsection.4.4.2}{Algoritmos de B\372squeda Lineal}{section.4.4}% 16
+\BOOKMARK [2][-]{subsection.4.4.3}{M\351todos de Gradiente}{section.4.4}% 17
+\BOOKMARK [2][-]{subsection.4.4.4}{M\351todos de Gradiente Conjugado}{section.4.4}% 18
+\BOOKMARK [2][-]{subsection.4.4.5}{M\351todos de Newton}{section.4.4}% 19
+\BOOKMARK [1][-]{section.4.5}{Algoritmos de Referencia experimentaci\363n}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.6}{Resultados versi\363n expensive}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.7}{Incorporaci\363n del hist\363rico}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.8}{Uso de GRASP}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.9}{Operador de Cruce Intensivo}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.10}{Estudio de la diversidad}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.11}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.4}% 26
