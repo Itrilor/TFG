@@ -197,3 +197,10 @@ También se confirma que los cambios 4 y 5 producen los mismos resultados, por l
 Ahora tocaría introducir los mejores datos que hemos obtenido en la tabla 'general.xlsx' y comprobar su clasificación.
 Resulta que este último cambio proporciona mejores resultados finales (7.438) teniendo en cuenta que la segunda con mejores resultados era el GACEPorGRASP (6.515).
 Sin embargo, también se debe tener en cuenta que entre las milestones 10-50 proporciona (en la perspectiva de la tabla) resultados entre mediocres y medios.
+
+
+12/05/23
+Añadir al conjunto de datos los siguientes archivos y ejecutarlos:
+  - jeu_100_100_4
+  - jeu_200_25_3
+  - jeu_300_25_3
