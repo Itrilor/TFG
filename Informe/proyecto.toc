@@ -25,10 +25,19 @@
 \contentsline {subsubsection}{Métodos de Newton Truncados}{24}{algorithm.7}%
 \contentsline {subsubsection}{Métodos Quasi-Newton}{25}{algorithm.8}%
 \contentsline {subsubsection}{Métodos sin derivadas}{27}{proposicion.4.8}%
-\contentsline {section}{\numberline {4.5}Algoritmos de Referencia experimentación}{35}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Resultados versión expensive}{35}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Incorporación del histórico}{35}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Uso de GRASP}{35}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Operador de Cruce Intensivo}{35}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Estudio de la diversidad}{35}{section.4.10}%
-\contentsline {section}{\numberline {4.11}Incrementando la diversidad (con nuevo reemplazo)}{35}{section.4.11}%
+\contentsline {chapter}{\numberline {5}Problema y Diseño Experimental}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Descripción del problema}{29}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Quadratic Knapsack Problem}{29}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Datos del problema}{30}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Diseño Experimental}{31}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Algoritmos de Referencia}{33}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Componentes de la propuesta}{35}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Parte Experimental}{37}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{37}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Resultados versión expensive}{37}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Incorporación del histórico}{37}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Uso de GRASP}{37}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{37}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{37}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{37}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{39}{chapter.9}%

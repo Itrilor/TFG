@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  3 MAY 2023 21:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  12 MAY 2023 01:10
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -739,7 +739,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 (portada/portada.tex
 \centeroffset=\skip81
-<imagenes/logo_ugr.jpg, id=107, 777.90625pt x 231.86626pt>
+<imagenes/logo_ugr.jpg, id=143, 777.90625pt x 231.86626pt>
 File: imagenes/logo_ugr.jpg Graphic file (type jpg)
 <use imagenes/logo_ugr.jpg>
 Package pdftex.def Info: imagenes/logo_ugr.jpg  used on input line 12.
@@ -789,12 +789,12 @@ Overfull \hbox (0.32011pt too wide) in paragraph at lines 9--24
 | $[]$ 
  []
 
-<imagenes/etsiit_logo.png, id=108, 110.814pt x 40.4712pt>
+<imagenes/etsiit_logo.png, id=144, 110.814pt x 40.4712pt>
 File: imagenes/etsiit_logo.png Graphic file (type png)
 <use imagenes/etsiit_logo.png>
 Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 35.
 (pdftex.def)             Requested size: 110.8137pt x 40.4711pt.
-<imagenes/ciencias_logo.png, id=110, 349.7868pt x 297.2706pt>
+<imagenes/ciencias_logo.png, id=146, 349.7868pt x 297.2706pt>
 File: imagenes/ciencias_logo.png Graphic file (type png)
 <use imagenes/ciencias_logo.png>
 Package pdftex.def Info: imagenes/ciencias_logo.png  used on input line 35.
@@ -814,7 +814,7 @@ _ugr.jpg> <./imagenes/etsiit_logo.png> <./imagenes/ciencias_logo.png>])
 ] (portada/portada_2.tex [3] [4
 
 ]
-<imagenes/logo.png, id=135, 123.46124pt x 45.92157pt>
+<imagenes/logo.png, id=171, 123.46124pt x 45.92157pt>
 File: imagenes/logo.png Graphic file (type png)
 <use imagenes/logo.png>
 Package pdftex.def Info: imagenes/logo.png  used on input line 21.
@@ -856,35 +856,35 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 \cleardoublepage
+l.36 \cleardoublepage
                       [3]pdfTeX warning (ext4): destination with the same ident
 ifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 \cleardoublepage
+l.36 \cleardoublepage
                       [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 [5] [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 [7] [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
@@ -895,13 +895,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 ] (proyecto.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-)
-\tf@toc=\write4
-\openout4 = `proyecto.toc'.
+
+Underfull \vbox (badness 1132) has occurred while \output is active []
 
  [1
 
-]
+])
+\tf@toc=\write4
+\openout4 = `proyecto.toc'.
+
+
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
 (Font)              using `T1/lmr/bx/n' instead on input line 220.
@@ -933,22 +936,31 @@ LaTeX Info: Redefining \% on input line 1.
 
 ] (capitulos/01_Introduccion.tex
 Cap\'{\i }tulo 1.
-) (capitulos/02_Estimacion_y_Presupuesto.texpdfTeX warning (ext4): destination 
-with the same identifier (name{page.1}) has been already used, duplicate ignore
-d
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 
+      [1
+
+]) (capitulos/02_Estimacion_y_Presupuesto.tex
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Estimación y Presupuesto} [1
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Estimación y Presupuesto} [2
-
-]
+            {Estimación y Presupuesto} [2]
 Cap\'{\i }tulo 2.
 
 Underfull \vbox (badness 2932) has occurred while \output is active []
@@ -958,7 +970,9 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.52 
-      [3]
+      [3
+
+]
 LaTeX Info: Redefining \. on input line 118.
 LaTeX Info: Redefining \% on input line 118.
 
@@ -1292,27 +1306,58 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[28]) (capitulos/06_Algoritmos_Referencia.tex [29
+[28]
+Cap\'{\i }tulo 5.
+[29
 
-] [30
+]
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
 
-])
-(capitulos/07_Componentes_Propuesta.tex [31] [32
 
-])
-(capitulos/08_Parte_Experimental.tex [33] [34
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-]) (capitulos/09_Conclusiones.tex
-[35] [36
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-]) [37] [38
+[30]) (capitulos/06_Algoritmos_Referencia.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
-] [39] (proyecto.aux
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[31] [32
+
+]
+Cap\'{\i }tulo 6.
+) (capitulos/07_Componentes_Propuesta.tex [33] [34
+
+]
+Cap\'{\i }tulo 7.
+) (capitulos/08_Parte_Experimental.tex [35] [36
+
+]
+Cap\'{\i }tulo 8.
+) (capitulos/09_Conclusiones.tex [37] [38
+
+]
+Cap\'{\i }tulo 9.
+) [39] [40
+
+] [41] (proyecto.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `proyecto.out' has not changed.
-(rerunfilecheck)             Checksum: 55604735AB7E5D5A4648FC4C18F5208E;1954.
+(rerunfilecheck)             Checksum: 0FB0EEAD6A34B37845253115D815C133;2541.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1325,13 +1370,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14678 strings out of 479696
- 222752 string characters out of 2876991
- 564660 words of memory out of 3000000
- 31252 multiletter control sequences out of 15000+200000
+ 14697 strings out of 479696
+ 222699 string characters out of 2876991
+ 564722 words of memory out of 3000000
+ 31262 multiletter control sequences out of 15000+200000
  481358 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,28n,85p,495b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 78i,28n,85p,495b,698s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTe
 X/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-m
 athex.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program
@@ -1350,9 +1395,9 @@ TeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
 c/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Pr
 ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (59 pages, 608140 bytes).
+Output written on proyecto.pdf (61 pages, 631008 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 703 PDF objects out of 1000 (max. 8388607)
+ 179 named destinations out of 1000 (max. 500000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 

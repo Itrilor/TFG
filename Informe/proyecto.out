@@ -17,10 +17,19 @@
 \BOOKMARK [2][-]{subsection.4.4.3}{M\351todos de Gradiente}{section.4.4}% 17
 \BOOKMARK [2][-]{subsection.4.4.4}{M\351todos de Gradiente Conjugado}{section.4.4}% 18
 \BOOKMARK [2][-]{subsection.4.4.5}{M\351todos de Newton}{section.4.4}% 19
-\BOOKMARK [1][-]{section.4.5}{Algoritmos de Referencia experimentaci\363n}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.6}{Resultados versi\363n expensive}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.7}{Incorporaci\363n del hist\363rico}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.8}{Uso de GRASP}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.9}{Operador de Cruce Intensivo}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.10}{Estudio de la diversidad}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.11}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Problema y Dise\361o Experimental}{}% 20
+\BOOKMARK [1][-]{section.5.1}{Descripci\363n del problema}{chapter.5}% 21
+\BOOKMARK [2][-]{subsection.5.1.1}{Quadratic Knapsack Problem}{section.5.1}% 22
+\BOOKMARK [2][-]{subsection.5.1.2}{Datos del problema}{section.5.1}% 23
+\BOOKMARK [1][-]{section.5.2}{Dise\361o Experimental}{chapter.5}% 24
+\BOOKMARK [0][-]{chapter.6}{Algoritmos de Referencia}{}% 25
+\BOOKMARK [0][-]{chapter.7}{Componentes de la propuesta}{}% 26
+\BOOKMARK [0][-]{chapter.8}{Parte Experimental}{}% 27
+\BOOKMARK [1][-]{section.8.1}{Algoritmos de Referencia experimentaci\363n}{chapter.8}% 28
+\BOOKMARK [1][-]{section.8.2}{Resultados versi\363n expensive}{chapter.8}% 29
+\BOOKMARK [1][-]{section.8.3}{Incorporaci\363n del hist\363rico}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.4}{Uso de GRASP}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.5}{Operador de Cruce Intensivo}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.6}{Estudio de la diversidad}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.7}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.8}% 34
+\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 35
