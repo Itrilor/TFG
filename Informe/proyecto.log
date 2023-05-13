@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  12 MAY 2023 01:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  13 MAY 2023 02:15
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -623,7 +623,9 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip80
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) ("C:\Program Files\MiKTeX\tex/latex/pdfpages\pdfpages.sty"
+)
+\@float@every@table=\toks38
+ ("C:\Program Files\MiKTeX\tex/latex/pdfpages\pdfpages.sty"
 Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
 
 ("C:\Program Files\MiKTeX\tex/latex/eso-pic\eso-pic.sty"
@@ -640,10 +642,10 @@ File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 )
 \pdfpages@includegraphics@status=\count315
 \AM@pagebox=\box66
-\AM@global@opts=\toks38
+\AM@global@opts=\toks39
 \AM@pagecnt=\count316
-\AM@toc@title=\toks39
-\AM@lof@heading=\toks40
+\AM@toc@title=\toks40
+\AM@lof@heading=\toks41
 \c@AM@survey=\count317
 \AM@templatesizebox=\box67
 )
@@ -662,25 +664,25 @@ LaTeX Warning: Label `eq:4.4' multiply defined.
 )
 \openout1 = `proyecto.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 215.
-LaTeX Font Info:    ... okay on input line 215.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 215.
-LaTeX Font Info:    ... okay on input line 215.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 215.
-LaTeX Font Info:    ... okay on input line 215.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 215.
-LaTeX Font Info:    ... okay on input line 215.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 215.
-LaTeX Font Info:    ... okay on input line 215.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 215.
-LaTeX Font Info:    ... okay on input line 215.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 215.
-LaTeX Font Info:    ... okay on input line 215.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 215.
-LaTeX Font Info:    ... okay on input line 215.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 218.
+LaTeX Font Info:    ... okay on input line 218.
 \c@lstlisting=\count319
-LaTeX Info: Redefining \. on input line 215.
-LaTeX Info: Redefining \% on input line 215.
+LaTeX Info: Redefining \. on input line 218.
+LaTeX Info: Redefining \% on input line 218.
  ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count320
@@ -688,18 +690,18 @@ LaTeX Info: Redefining \% on input line 215.
 \scratchbox=\box69
 \nofMPsegments=\count321
 \nofMParguments=\count322
-\everyMPshowfont=\toks41
+\everyMPshowfont=\toks42
 \MPscratchCnt=\count323
 \MPscratchDim=\dimen258
 \MPnumerator=\count324
 \makeMPintoPDFobject=\count325
-\everyMPtoPDFconversion=\toks42
+\everyMPtoPDFconversion=\toks43
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring OFF on input line 215.
+Package hyperref Info: Link coloring OFF on input line 218.
 
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -712,9 +714,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count326
 )
-LaTeX Info: Redefining \ref on input line 215.
-LaTeX Info: Redefining \pageref on input line 215.
-LaTeX Info: Redefining \nameref on input line 215.
+LaTeX Info: Redefining \ref on input line 218.
+LaTeX Info: Redefining \pageref on input line 218.
+LaTeX Info: Redefining \nameref on input line 218.
 
 (proyecto.out) (proyecto.out)
 \@outlinefile=\write3
@@ -739,7 +741,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 (portada/portada.tex
 \centeroffset=\skip81
-<imagenes/logo_ugr.jpg, id=143, 777.90625pt x 231.86626pt>
+<imagenes/logo_ugr.jpg, id=151, 777.90625pt x 231.86626pt>
 File: imagenes/logo_ugr.jpg Graphic file (type jpg)
 <use imagenes/logo_ugr.jpg>
 Package pdftex.def Info: imagenes/logo_ugr.jpg  used on input line 12.
@@ -789,12 +791,12 @@ Overfull \hbox (0.32011pt too wide) in paragraph at lines 9--24
 | $[]$ 
  []
 
-<imagenes/etsiit_logo.png, id=144, 110.814pt x 40.4712pt>
+<imagenes/etsiit_logo.png, id=152, 110.814pt x 40.4712pt>
 File: imagenes/etsiit_logo.png Graphic file (type png)
 <use imagenes/etsiit_logo.png>
 Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 35.
 (pdftex.def)             Requested size: 110.8137pt x 40.4711pt.
-<imagenes/ciencias_logo.png, id=146, 349.7868pt x 297.2706pt>
+<imagenes/ciencias_logo.png, id=154, 349.7868pt x 297.2706pt>
 File: imagenes/ciencias_logo.png Graphic file (type png)
 <use imagenes/ciencias_logo.png>
 Package pdftex.def Info: imagenes/ciencias_logo.png  used on input line 35.
@@ -814,7 +816,7 @@ _ugr.jpg> <./imagenes/etsiit_logo.png> <./imagenes/ciencias_logo.png>])
 ] (portada/portada_2.tex [3] [4
 
 ]
-<imagenes/logo.png, id=171, 123.46124pt x 45.92157pt>
+<imagenes/logo.png, id=179, 123.46124pt x 45.92157pt>
 File: imagenes/logo.png Graphic file (type png)
 <use imagenes/logo.png>
 Package pdftex.def Info: imagenes/logo.png  used on input line 21.
@@ -895,9 +897,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 ] (proyecto.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-
-Underfull \vbox (badness 1132) has occurred while \output is active []
-
  [1
 
 ])
@@ -907,14 +906,14 @@ Underfull \vbox (badness 1132) has occurred while \output is active []
 
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 220.
+(Font)              using `T1/lmr/bx/n' instead on input line 223.
 
 
 Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
-(spanish)                faked small caps on input line 220.
+(spanish)                faked small caps on input line 223.
 
-LaTeX Info: Redefining \. on input line 220.
-LaTeX Info: Redefining \% on input line 220.
+LaTeX Info: Redefining \. on input line 223.
+LaTeX Info: Redefining \% on input line 223.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 14.1595pt, for example:
@@ -1311,8 +1310,8 @@ Cap\'{\i }tulo 5.
 [29
 
 ]
-LaTeX Info: Redefining \. on input line 93.
-LaTeX Info: Redefining \% on input line 93.
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1322,7 +1321,50 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[30]) (capitulos/06_Algoritmos_Referencia.tex
+[30]
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[31]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+34.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \. on input line 166.
+LaTeX Info: Redefining \% on input line 166.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[32]
+
+Package caption Warning: \label without proper reference on input line 197.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:Parametros' on page 33 undefined on input line 
+177.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+206.
+("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmtt.fd"
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(capitulos/06_Algoritmos_Referencia.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -1334,30 +1376,30 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[31] [32
+[33] [34
 
 ]
 Cap\'{\i }tulo 6.
-) (capitulos/07_Componentes_Propuesta.tex [33] [34
+) (capitulos/07_Componentes_Propuesta.tex [35] [36
 
 ]
 Cap\'{\i }tulo 7.
-) (capitulos/08_Parte_Experimental.tex [35] [36
+) (capitulos/08_Parte_Experimental.tex [37] [38
 
 ]
 Cap\'{\i }tulo 8.
-) (capitulos/09_Conclusiones.tex [37] [38
+) (capitulos/09_Conclusiones.tex [39] [40
 
 ]
 Cap\'{\i }tulo 9.
-) [39] [40
+) [41] [42
 
-] [41] (proyecto.aux
+] [43] (proyecto.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `proyecto.out' has not changed.
-(rerunfilecheck)             Checksum: 0FB0EEAD6A34B37845253115D815C133;2541.
+(rerunfilecheck)             Checksum: 628346B28BB1C36F84A24EB291A388BB;2680.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1370,34 +1412,44 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14697 strings out of 479696
- 222699 string characters out of 2876991
- 564722 words of memory out of 3000000
- 31262 multiletter control sequences out of 15000+200000
- 481358 words of font info for 66 fonts, out of 3000000 for 9000
+ 14792 strings out of 479696
+ 224178 string characters out of 2876991
+ 564849 words of memory out of 3000000
+ 31341 multiletter control sequences out of 15000+200000
+ 481982 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,28n,85p,495b,698s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTe
-X/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-m
-athex.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program
- Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/e
-nc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/M
-iKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
-ic/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-lm/lmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/
-type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiK
-TeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
-c/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (61 pages, 631008 bytes).
+ 78i,28n,85p,495b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{table.caption.10} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.8} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.7} has been referenced but does not e
+xist, replaced by a fixed one
+
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX
+/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm
+.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program File
+s/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dv
+ips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/lm/lmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
+/lmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb>
+Output written on proyecto.pdf (63 pages, 669077 bytes).
 PDF statistics:
- 703 PDF objects out of 1000 (max. 8388607)
- 179 named destinations out of 1000 (max. 500000)
- 301 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 735 PDF objects out of 1000 (max. 8388607)
+ 187 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

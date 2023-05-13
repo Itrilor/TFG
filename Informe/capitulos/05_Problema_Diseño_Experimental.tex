@@ -81,9 +81,12 @@ Utilizaremos 100 archivos de datos generados aleatoriamente de %pedir referencia
 \cellcolor[HTML]{DAE8FC}                                          & 25\%                                                  & 10                                                              \\ \cline{2-3} 
 \multirow{-2}{*}{\cellcolor[HTML]{DAE8FC}n = 300}                 & 50\%                                                  & 10                                                              \\ \hline
 \end{tabular}
+\label{table:DatosProblema}
+\caption{Datos del Problema}
 \end{table}
 
 Se entiende como ``densidad'' al porcentaje de beneficios combinados positivos, es decir, $p_{ij} > 0$. 
+Particularmente QP tendría densidad 0\%.
 
 Ahora bien, todos los archivos tienen el mismo formato, lo cual resulta útil para definir funciones capaces de obtener los datos más relevantes para nuestros algoritmos. 
 El formato que siguen los archivos es el siguiente:
@@ -102,3 +105,110 @@ El formato que siguen los archivos es el siguiente:
 %Introducir algún ejemplo?
 
 \section{Diseño Experimental}
+
+\subsection{Criterio de Parado}
+
+Se han elegido las instancias mencionadas anteriormente ya que también se proporcionaban algunos resultados de otros algoritmos, por lo que resultaba conveniente a la hora de comprobar si los resultados obtenidos por nuestros algoritmos bases eran competitivos. 
+Ya que, en el caso de que no lo fuesen, tendríamos que buscar otros algoritmos base sobre los que trabajar.
+Sin embargo, nos encontramos con un problema, esto es, el criterio de parada presentado en estos casos es el tiempo.
+Adicionalmente, el tiempo de parada también depende del número de elementos $n$ de forma que se tiene:
+\begin{itemize}
+\item Para $n = 100$, se tienen \textbf{5 segundos} de ejecución.
+\item Para $n > 100$, en nuestro caso, $n = 200$ y $n = 300$, se tienen \textbf{30 segundos} de ejecución.
+\end{itemize}
+
+Como se ha indicado antes, esto resulta un problema. 
+Esto se debe a que no es un criterio de parada fiable, ya que depende de la capacidad de computación de cada ordenador. 
+No es comparable la velocidad de los ordenadores actuales con la velocidad de los ordenadores de dentro de 10 años, de la misma no podemos comparar el rendimiento de un ordenador de hace 10 años con respecto a uno actual. 
+E incluso dentro de los ordenadores de la misma generación, dependerá de las características propias de cada computador. 
+Por lo que se llega a la conclusión de que si se quiere que los resultados obtenidos en este trabajo puedan ser usados en un futuro como referencia, o incluso si se quiere recrear el trabajo, se debe cambiar el criterio de parada a algo que se mantenga constante independientemente de cuándo se produzca el experimento: iteraciones. 
+
+Denotaremos como iteraciones al número de veces que se evalúa un determinado algoritmo, por ejemplo:
+\begin{itemize}
+	\item Para el algoritmo \textit{Random}, el número iteraciones será el número de veces que generemos una solución de forma aleatoria.
+	\item Para los algoritmos genéticos, el número de iteraciones será el número de generaciones con las que trabajaremos.
+\end{itemize}
+
+Dicho esto, para elegir el número de iteraciones máximo que se iba a utilizar se tomó como referencia el tiempo establecido anteriormente. 
+En tanto se tenía elegir un número de iteraciones como criterio de parada, se decidió estudiar a qué equivalía actualmente el criterio de parada por tiempo establecido. 
+Para ello, mediante una variable \texttt{contador}, se ejecutaron todos los archivos con el tiempo como criterio de parada y se mostraba por pantalla el número de iteraciones que se había alcanzado. 
+Tras realizar una media de todos estos datos y redondearlo, obtenemos que el nuevo criterio de parada es \textbf{90000 iteraciones} para todos los archivos. 
+El que el número de iteraciones máximo no dependa del número de elementos como lo hacía el tiempo de ejecución máximo se puede justificar en tanto que se necesita más tiempo para realizar todos los cálculos si aumenta el número de datos. 
+
+Además, para asegurarnos que realmente ambos criterios de parada eran equivalentes, se ejecutaron todos los archivos usando el algoritmo base con criterio de parada por iteraciones y por tiempo. 
+Nótese que no solo se almacenan las soluciones finales, si no que también se almacenan las soluciones intermedias llegado a ciertos porcentajes de la ejecución. 
+Tras esto, se compararon ambos resultados y se pudo comprobar que, efectivamente, eran equivalentes. 
+
+Por lo tanto, se puede decir con seguridad que los cambios que apliquemos a un criterio de parada en específico se puede traducir a un cambio en el otro criterio de parada. 
+Esto cabe la pena destacarlo ya que, recordemos, el objetivo de este trabajo es crear un algoritmo útil y competitivo para tratar con problemas \textit{expensive}, por lo que queremos obtener buenos resultados en un tiempo muy reducido. 
+
+Para simular de forma eficiente esta reducción del tiempo, se propuso el siguiente cambio con respecto al tiempo como criterio de parada:
+\begin{itemize}
+	\item En vez de ejecutar los archivos con $n=100$ durante 5 segundos, lo reduciremos a 25ms.
+	\item En vez de ejecutar los archivos con $n>100$ durante 30 segundos, lo reduciremos a 150ms.
+\end{itemize}
+Haciendo cálculos, obtenemos que solo utilizaremos el 0.5\% inicial de cada ejecución, lo que podemos traducir en que nuestro nuevo criterio de parada serán \textbf{450 iteraciones}. 
+
+Con el fin de comprobar que esta reducción había sido suficiente y necesaria, se ejecutan de nuevo todos los archivos con el algoritmo base ahora con 450 iteraciones y comparamos los resultados con los obtenidos anteriormente con 90000 iteraciones. 
+Podemos ver que, efectivamente, se han obtenido resultados mucho peores. 
+
+Finalmente, ya hemos establecido nuestro criterio de parada escalable y tenemos unos resultados base que utilizar. 
+A partir de esto, nuestro objetivo será mejorar estos resultados lo máximo posible.
+
+\subsection{Parámetros}
+
+La ejecución del programa no requiere de ningún tipo de parámetro que se tenga que introducir manualmente. 
+Todos los parámetros que se nombren a continuación vienen definido dentro del código del programa \texttt{main} como constantes globales o que dependen del propio problema. 
+
+En primer lugar, hablemos sobre las constantes globales:
+\begin{itemize}
+	\item \texttt{NEVALUACIONESMAX}: Es el número de evaluaciones máximas, mantendremos su valor a 450 por lo explicado en el apartado anterior. 
+	\item \texttt{NTRIES}: Para que nuestros resultados no sean muy dependientes de la aleatoriedad, es necesario ejecutar cada archivo cierta cantidad de veces y obtener la media. 
+Esta media será verdaderamente el resultado que guardaremos y compararemos con el resto. 
+De forma más o menos arbitraria, se ha establecido su valor a 50.
+	\item \texttt{INITSEED}: En relación con la constante anterior, es necesario no utilizar siempre la misma semilla de aleatoriedad, ya que eso resultaría en obtener siempre los mismos resultados, por lo que ejecutarlos varias veces sería una pérdida de tiempo. 
+Así pues, tendremos que utilizar distintas semillas para cada ejecución. 
+Además, por conveniencia, es recomendable que las semillas utilizadas sean comunes a todas las sucesivas ejecuciones de los distintos algoritmos (una vez más, para asegurarnos que la aleatoriedad afecta a todos los algoritmos de forma similar) y que siempre se obtengan los mismos resultados aún si ejecutamos el mismo archivo varias veces. 
+Por ello, una solución es establecer un valor de semilla inicial arbitrario y utilizar este para generar el resto de semillas.
+\end{itemize}
+
+Adicionalmente, como se ha comentado antes, cada algoritmo requiere de sus propios parámetros. 
+Aunque explicaremos en más profundidad cada algoritmo en los siguientes capítulos, es necesario que establezcamos ahora cuáles son dichos parámetros y qué valores se han utilizado. 
+Para ello, primero vamos a resumir en la siguiente tabla (\ref{table:Parametros}) qué parámetros usa cada algoritmo y después explicaremos qué es cada uno y qué valor tienen asignado.
+
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\rowcolor[HTML]{F7EAC7} 
+Algoritmo          & EvaluacionMAX & Semilla     & Nº Elementos & Probabilidad mutación \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\textbf{Random}    & \textbf{Sí}   & \textbf{Sí} & No           & No                    \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\textbf{AGEU}      & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\textbf{GACEP}     & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\textbf{CHC}       & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & No                    \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\textbf{GACEPCHC}  & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\textbf{GACEP3103} & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
+\end{tabular}
+\label{table:Parametros}
+\caption{Parámetros utilizados por cada algoritmo}
+\end{table}
+
+\begin{itemize}
+	\item \texttt{EvaluacionMAX}: Es el número de evaluaciones máximas para dicho algoritmo. 
+Su valor será el de \texttt{NEVALUACIONESMAX}.
+	\item \texttt{Semilla}: Como se ha indicado anteriormente, es necesario establecer una semilla de aleatoriedad en cada ejecución del algoritmo. 
+Por lo tanto, el valor de este parámetro será el de la semilla generada por \texttt{INITSEED}. 
+	\item \texttt{Nº Elementos}: Número de soluciones que va a constituir una población. 
+Es necesario tener una población pequeña con el fin de utilizar el menor número de evaluaciones posible, pero suficiente como para poder trabajar con cierto margen. 
+Por lo tanto, estableceremos el tamaño de población a 10. 
+	\item \texttt{Probabilidad mutación}: En algunos algoritmos intentaremos modificar un poco alguna solución en cada iteración. 
+Este valor establece el porcentaje de soluciones que la población que mutará. 
+Genéricamente este valor suele ser del 0.1, por lo que también lo utilizaremos en nuestro problema. 
+Correspondería que solo mutaría una solución de la población por cada generación. 
+\end{itemize}
+

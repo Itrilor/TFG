@@ -22,14 +22,16 @@
 \BOOKMARK [2][-]{subsection.5.1.1}{Quadratic Knapsack Problem}{section.5.1}% 22
 \BOOKMARK [2][-]{subsection.5.1.2}{Datos del problema}{section.5.1}% 23
 \BOOKMARK [1][-]{section.5.2}{Dise\361o Experimental}{chapter.5}% 24
-\BOOKMARK [0][-]{chapter.6}{Algoritmos de Referencia}{}% 25
-\BOOKMARK [0][-]{chapter.7}{Componentes de la propuesta}{}% 26
-\BOOKMARK [0][-]{chapter.8}{Parte Experimental}{}% 27
-\BOOKMARK [1][-]{section.8.1}{Algoritmos de Referencia experimentaci\363n}{chapter.8}% 28
-\BOOKMARK [1][-]{section.8.2}{Resultados versi\363n expensive}{chapter.8}% 29
-\BOOKMARK [1][-]{section.8.3}{Incorporaci\363n del hist\363rico}{chapter.8}% 30
-\BOOKMARK [1][-]{section.8.4}{Uso de GRASP}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.5}{Operador de Cruce Intensivo}{chapter.8}% 32
-\BOOKMARK [1][-]{section.8.6}{Estudio de la diversidad}{chapter.8}% 33
-\BOOKMARK [1][-]{section.8.7}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.8}% 34
-\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 35
+\BOOKMARK [2][-]{subsection.5.2.1}{Criterio de Parado}{section.5.2}% 25
+\BOOKMARK [2][-]{subsection.5.2.2}{Par\341metros}{section.5.2}% 26
+\BOOKMARK [0][-]{chapter.6}{Algoritmos de Referencia}{}% 27
+\BOOKMARK [0][-]{chapter.7}{Componentes de la propuesta}{}% 28
+\BOOKMARK [0][-]{chapter.8}{Parte Experimental}{}% 29
+\BOOKMARK [1][-]{section.8.1}{Algoritmos de Referencia experimentaci\363n}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.2}{Resultados versi\363n expensive}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.3}{Incorporaci\363n del hist\363rico}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.4}{Uso de GRASP}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.5}{Operador de Cruce Intensivo}{chapter.8}% 34
+\BOOKMARK [1][-]{section.8.6}{Estudio de la diversidad}{chapter.8}% 35
+\BOOKMARK [1][-]{section.8.7}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.8}% 36
+\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 37
