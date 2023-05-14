@@ -1,6 +1,6 @@
 \chapter{Problema y Diseño Experimental}
 
-En este capítulo se presenta el problema que se aborda con el algoritmo creado, así como las necesidades que surgen por el interés de identificar el aporte de este frente al panorama actual del campo en términos de rendimiento, las soluciones existen para satisfacer dicha necesidad y cuál de ellas es la más adecuada
+En este capítulo se presenta el problema que se aborda con el algoritmo creado, así como las necesidades que surgen por el interés de identificar el aporte de este frente al panorama actual del campo en términos de rendimiento, las soluciones que existen para satisfacer dicha necesidad y cuál de ellas es la más adecuada.
 
 \section{Descripción del problema}
 
@@ -106,7 +106,7 @@ El formato que siguen los archivos es el siguiente:
 
 \section{Diseño Experimental}
 
-\subsection{Criterio de Parado}
+\subsection{Criterio de Parada}
 
 Se han elegido las instancias mencionadas anteriormente ya que también se proporcionaban algunos resultados de otros algoritmos, por lo que resultaba conveniente a la hora de comprobar si los resultados obtenidos por nuestros algoritmos bases eran competitivos. 
 Ya que, en el caso de que no lo fuesen, tendríamos que buscar otros algoritmos base sobre los que trabajar.
@@ -212,3 +212,28 @@ Genéricamente este valor suele ser del 0.1, por lo que también lo utilizaremos
 Correspondería que solo mutaría una solución de la población por cada generación. 
 \end{itemize}
 
+En definitiva, podemos resumir los parámetros, para lo que se usan y sus valores en la siguiente tabla:
+
+\begin{table}[H]
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{F7EAC7} 
+Parámetros                                 & Resumen                                                                                                                                   & Valor                                                                                 \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\texttt{NEVALUACIONESMAX} & \begin{tabular}[c]{@{}l@{}}Criterio de parada: Número de\\ Evaluaciones Máximas para \\ cada algoritmo\end{tabular}                       & 450                                                                                   \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\texttt{NTRIES}           & \begin{tabular}[c]{@{}l@{}}Número de veces que se va a \\ ejecutar el algoritmo por cada\\ archivo\end{tabular}                           & 50                                                                                    \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\texttt{INITSEED}         & \begin{tabular}[c]{@{}l@{}}Semilla inicial para poder \\ generar el resto de semillas que\\ utilizaremos para los algoritmos\end{tabular} & 5                                                                                     \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\texttt{EvaluacionMAX}    & \begin{tabular}[c]{@{}l@{}}Criterio de parada: Número de\\ Evaluaciones Máximas dicho\\ algoritmo\end{tabular}                            & \texttt{NEEVALUACIONESMAX}                                           \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\texttt{Semilla}          & \begin{tabular}[c]{@{}l@{}}Semilla de aleatoriedad para\\ determinada ejecución del \\ algoritmo\end{tabular}                             & \begin{tabular}[c]{@{}l@{}}Valor generado aleatoriamente \\ por \texttt{INITSEED}\end{tabular} \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\texttt{numcro}             & \begin{tabular}[c]{@{}l@{}}Número de elementos de la\\ población de soluciones\end{tabular}                                               & 10                                                                                    \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\texttt{pmut}             & \begin{tabular}[c]{@{}l@{}}Probabilidad de mutación\\ de las soluciones de la población\\ ({[}0,1{]})\end{tabular}                        & 0.1                                                                                   \\ \hline
+\end{tabular}
+\label{Resumen}
+\caption{Resumen de parámetros utilizados}
+\end{table}

@@ -1,1 +1,159 @@
 \chapter{Algoritmos de Referencia}
+
+En este capítulo se presentan los dos algoritmos que se utilizaran como base para desarrollar un algoritmo competitivo para problemas \textit{expensive}, se describirán con sus referencias y se indicarán algunas características; aunque se explicarán de forma más detallada los componentes propios de cada uno en el siguiente capítulo.
+
+\section{Algoritmo Genético Estacionario Uniforme}
+
+En primer lugar, debemos explicar brevemente la importancia de los Algoritmos Genéticos (AG) y, posteriormente, justificar la elección de su versión Algoritmo Genético Estacionario Uniforme (AGEU). 
+
+Los seres vivos son solucionadores de problemas de forma natural. 
+Exhiben una versatilidad que ponen en evidencia hasta a los mejores programas. 
+Esta observación es especialmente humillante para los informáticos, que necesitan utilizar meses e incluso años de esfuerzos intelectuales en un algoritmo, mientras que estos organismos obtienen sus habilidades a través de los aparentemente indirectos mecanismos de evolución y selección natural. 
+
+Los investigadores más pragmáticos observan el notable poder de la evolución como algo que simular. 
+La selección natural elimina uno de los mayores inconvenientes en el diseño de software: especificar de antemano todas las características de un problema y las acciones que dicho programa tendría que tomar para tratar con ellas. 
+Aprovechando los mecanismos de evaluación, los investigadores pueden ser capaces de ``reproducir'' programas que resuelvan problemas incluso cuando nadie pueda comprender enteramente su estructura. 
+Efectivamente, estos llamados \textbf{algoritmos genéticos} han demostrado la habilidad de hacer avances en el diseño de sistemas complejos. 
+
+Los AGs hacen posible explorar un rango mucho más amplio de posibles soluciones a un problema que programas convencionales. 
+Además, en los estudios  realizados sobre la selección natural de programas bajo condiciones controladas bien entendidas, los resultados prácticos alcanzados pueden aportar cierto conocimiento sobre los detalles de cómo la vida y la inteligencia evolucionan en el mundo natural. 
+
+El funcionamiento de un AG viene dado por el siguiente pseudocódigo (\ref{alg:AG})
+
+\begin{algorithm}[H]
+\caption{Algoritmo Genético}\label{alg:AG}
+\begin{algorithmic}[1]
+\Procedure \texttt{AG}($EMax > 0, nelem > 0, pcruce \in [0,1], pmut \in [0,1]$)
+\State Generar una población inicial aleatoria
+\State Calcular la función \textit{fitness} de cada individuo
+\State \texttt{generacion} = 0
+\While{\texttt{generacion} < EMax}
+	\State Calcular el número de parejas a formar para el cruce $\xrightarrow{}{} ncruce = pcruce*nelem$
+	\State Seleccionar aleatoriamente con repetición $4*ncruce$ soluciones de la población
+	\State Aplicar torneo de 2 en 2 soluciones del conjunto anterior y almacenar solo la mejor $\xrightarrow{}{}$ \texttt{padres}
+	\For{$i\in[0,ncruce]; i+=2$}
+		\State Generar 2 hijos cruzando \texttt{padres}$[i]$ y \texttt{padres}$[i+1]$
+		\State Aplicar el Operador de Reparación sobre ambos hijos
+		\State Calcular la función \textit{fitness} de cada hijo
+		\State Almacenar dichos hijos $\xrightarrow{}{}$ \texttt{hijos}
+	\EndFor	
+	\State Calcular el número de soluciones a mutar $\xrightarrow{}{} nmut = pmut*nelem$
+	\State Mutar $nmut$ soluciones distintas
+	\State Calcular la función \textit{fitness} de las nuevas soluciones
+	\State Aplicar el Operador de Selección sobre la población actual e \texttt{hijos}
+	\State \texttt{generacion} = \texttt{generacion}+1
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+En el caso de la versión AGEU, su pseudocódigo viene representado en \ref{alg:AGEU}. 
+Claramente sigue la misma estructura, pero presenta dos especificaciones:
+\begin{itemize}
+	\item Estacionario (E): En relación con el operador de selección. 
+Se enfrentan las soluciones hijas con las de la población de la generación anterior y mantenemos las mejores. 
+	\item Uniforme (U): En relación con el cruce de las soluciones. 
+Las soluciones hijas van a tener de partida los elementos comunes a ambas soluciones padres. 
+El resto de los elementos de los hijos se obtienen de forma que para algunos elementos \texttt{hijo$_i$} los obtiene de \texttt{padre$_i$} y el resto los obtiene del otro padre. 
+El objetivo de esto es preservar selecciones prometedoras.	
+\end{itemize}
+También se estuvieron barajando sus contrapartidas estudiadas en la asignatura Metaheurísticas:
+\begin{itemize}
+	\item Generacional (G): En relación con el operador de selección. 
+Sustituimos la antigua generación por la nueva. 
+	\item Posición (P): En relación con el cruce de las soluciones. 
+Las soluciones hijas van a tener de partida los elementos comunes a ambas soluciones padres. 
+Sin embargo, en este caso las asignaciones restantes se toman de un padre (no importa cual) y se asignan en un orden aleatorio distinto para completar cada hijo. 
+\end{itemize}
+
+La versión generacional puede ocasionar que se pierda la mejor solución hasta el momento, lo que impediría que se pudiese seguir una búsqueda profundizando en dicha solución. 
+Como tenemos pocas iteraciones, no nos podemos permitir buenas soluciones sin ningún tipo de garantía, así que no sería un buen enfoque inicial. 
+
+Por otra parte, la versión de posición no tendría mucho sentido en nuestro problema, ya que una de sus características más importantes se pierde, esto es, no podemos garantizar que a partir de dos soluciones factibles obtengamos otra factible; por lo que seguimos necesitando el operador de reparación. 
+Además, en comparación con la versión uniforme, es muy disruptiva, comparte menos información de los padres y puede ser más complicado que converja. 
+
+A efectos prácticos, se ha usado los resultados y el análisis que realicé en el trabajo ``Problemas con técnicas basadas en poblaciones'' de la asignatura Metaheurísticas (curso 2021-2022), donde se debía comparar experimental y teóricamente los distintos algoritmos genéticos y meméticos. 
+En dicho trabajo se llega a la conclusión de que la mejor opción es utilizar AGEU.
+
+\subsection{Pseudocódigo}
+
+A efectos prácticos, este pseudocódigo (\ref{alg:AGEU}) se diferenciará del anterior (\ref{alg:AG}) en el cruce, ya que solo cruzaremos dos padres no necesitaremos el parámetro $pcruce$, y que en el operador de selección especificaremos que es estacionario. 
+
+Como se ha dicho al principio de este capítulo, una explicación más detallada junto con el pseudocódigo de cada una de las componentes será dada en el siguiente capítulo.
+
+\begin{algorithm}[H]
+\caption{Algoritmo Genético Estacionario Uniforme}\label{alg:AGEU}
+\begin{algorithmic}[1]
+\Procedure \texttt{AG}($EMax > 0, nelem > 0, pmut \in [0,1]$)
+\State Generar una población inicial aleatoria
+\State Calcular la función \textit{fitness} de cada individuo
+\State \texttt{generacion} = 0
+\While{\texttt{generacion} < EMax}
+	\State Seleccionar aleatoriamente 4 soluciones de la población sin repetición 2 a 2
+	\State Aplicar torneo de 2 en 2 soluciones del conjunto anterior y almacenar solo la mejor $\xrightarrow{}{}$ \texttt{padres}
+	\State Generar 2 hijos cruzando \texttt{padres$_1$} y \texttt{padres$_2$}
+	\State Aplicar el Operador de Reparación sobre ambos hijos
+	\State Calcular la función \textit{fitness} de cada hijo
+	\State Almacenar dichos hijos $\xrightarrow{}{}$ \texttt{hijos}
+	\State Calcular el número de soluciones a mutar $\xrightarrow{}{} nmut = pmut*nelem$
+	\State Mutar $nmut$ soluciones distintas
+	\State Calcular la función \textit{fitness} de las nuevas soluciones
+	\State Aplicar el Operador de Selección Estacionario sobre la población actual e \texttt{hijos}
+	\State \texttt{generacion} = \texttt{generacion}+1
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{CHC}
+
+El algoritmo CHC utiliza un método de selección elitista que, combinada con un mecanismo de prevención de incesto y un método para obligar que la población diverja cada vez que converge, permite el mantenimiento de la diversidad de la población. 
+Este algoritmo se ha utilizado de forma exitosa en el pasado para problemas de optimización estáticos. 
+
+El algoritmo CHC (\textit{Cross-generational elitist selecition, Heterogeneous recombination and Cataclysmic mutation}) propuesto por Eshelman utiliza un método de selección elitista  combinado con un cruce altamente disruptivo para promover la diversidad de la población. 
+La principal característica de este algoritmo es su capacidad de prevenir la convergencia de la población, algo que, como luego comprobaremos, será útil en nuestro problema. 
+
+%En este algoritmo no se necesita de la mutación como era necesario en el AG, esto se debe precisamente a su característica principal, es capaz de forzar la diversidad de la población, por lo que la mutación deja de ser necesaria.
+
+Originalmente, cuando la población converge se pueden tomar dos acciones:
+\begin{itemize}
+	\item Reiniciar la población entera de forma aleatoria con excepción de la mejor solución
+	\item Reiniciar la población utilizando la mejor solución como base y generando el resto realizando modificaciones sobre esta.
+\end{itemize}
+Sin embargo, esto es solo útil cuando se tienen bastantes evaluaciones. 
+En nuestro problema realizar esto resultaría en una pérdida de tiempo e iteraciones importantes, por lo tanto, no se tendrá en cuenta. 
+
+\subsection{Pseudocódigo}
+
+\begin{algorithm}[H]
+\caption{Algoritmo CHC}\label{alg:CHC}
+\begin{algorithmic}[1]
+\Procedure \texttt{AG}($EMax > 0, nelem > 0$)
+\State Generar una población inicial aleatoria
+\State Calcular la función \textit{fitness} de cada individuo
+\State \texttt{generacion} = 0
+\State \texttt{threshold} = $n$/4
+\While{\texttt{generacion} < EMax}
+	\State Calcular el número de parejas a formar para el cruce $\xrightarrow{}{} ncruce = pcruce*nelem$
+	\State Desordenar los elementos de la población actual y comprobar si cumplen la condición de prevención de incesto (distancia de Hamming > \texttt{threshold}) de dos en dos
+	\If{\texttt{hamming} > \texttt{threshold}}
+		\State Almacenar las soluciones $\xrightarrow{}{}$ \texttt{parejas}
+	\EndIf
+	\If{\texttt{parejas} = $\emptyset$}
+		\If{\texttt{threshold} $\neq$ 0}
+			\State \texttt{threshold} = \texttt{threshold}-1
+		\EndIf
+	\Else
+		\For{i$\in [0,\texttt{parejas.size()}]$; i=i+2}
+			\State Generar 2 hijos cruzando \texttt{parejas}$[i]$ y \texttt{parejas}$[i+1]$
+			\State Aplicar el Operador de Reparación sobre ambos hijos
+			\State Calcular la función \textit{fitness} de cada hijo
+			\State Almacenar dichos hijos $\xrightarrow{}{}$ \texttt{hijos}
+		\EndFor
+		\State Aplicar el Operador de Selección sobre la población actual e \texttt{hijos}
+	\EndIf
+	\State \texttt{generacion} = \texttt{generacion}+1
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
