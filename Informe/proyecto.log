@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  14 MAY 2023 02:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  16 MAY 2023 01:15
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -741,7 +741,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 (portada/portada.tex
 \centeroffset=\skip81
-<imagenes/logo_ugr.jpg, id=167, 777.90625pt x 231.86626pt>
+<imagenes/logo_ugr.jpg, id=203, 777.90625pt x 231.86626pt>
 File: imagenes/logo_ugr.jpg Graphic file (type jpg)
 <use imagenes/logo_ugr.jpg>
 Package pdftex.def Info: imagenes/logo_ugr.jpg  used on input line 12.
@@ -791,12 +791,12 @@ Overfull \hbox (0.32011pt too wide) in paragraph at lines 9--24
 | $[]$ 
  []
 
-<imagenes/etsiit_logo.png, id=168, 110.814pt x 40.4712pt>
+<imagenes/etsiit_logo.png, id=204, 110.814pt x 40.4712pt>
 File: imagenes/etsiit_logo.png Graphic file (type png)
 <use imagenes/etsiit_logo.png>
 Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 35.
 (pdftex.def)             Requested size: 110.8137pt x 40.4711pt.
-<imagenes/ciencias_logo.png, id=170, 349.7868pt x 297.2706pt>
+<imagenes/ciencias_logo.png, id=206, 349.7868pt x 297.2706pt>
 File: imagenes/ciencias_logo.png Graphic file (type png)
 <use imagenes/ciencias_logo.png>
 Package pdftex.def Info: imagenes/ciencias_logo.png  used on input line 35.
@@ -816,7 +816,7 @@ _ugr.jpg> <./imagenes/etsiit_logo.png> <./imagenes/ciencias_logo.png>])
 ] (portada/portada_2.tex [3] [4
 
 ]
-<imagenes/logo.png, id=195, 123.46124pt x 45.92157pt>
+<imagenes/logo.png, id=231, 123.46124pt x 45.92157pt>
 File: imagenes/logo.png Graphic file (type png)
 <use imagenes/logo.png>
 Package pdftex.def Info: imagenes/logo.png  used on input line 21.
@@ -1432,19 +1432,43 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [38]
 Cap\'{\i }tulo 7.
-) (capitulos/08_Parte_Experimental.tex [39
+[39
 
-] [40
+]
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[40]) (capitulos/08_Parte_Experimental.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[41] [42
 
 ]
 Cap\'{\i }tulo 8.
-) (capitulos/09_Conclusiones.tex [41] [42
+) (capitulos/09_Conclusiones.tex [43] [44
 
 ]
 Cap\'{\i }tulo 9.
-) [43] [44
+) [45] [46
 
-] [45] (proyecto.aux
+] [47] (proyecto.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
@@ -1454,8 +1478,8 @@ Package rerunfilecheck Warning: File `proyecto.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `proyecto.out':
-(rerunfilecheck)             Before: 3DFBC6D6A2044AD03CDBCB97A36391A7;2958
-(rerunfilecheck)             After:  376167E2E6ECCF8F667B49160A3784A7;3587.
+(rerunfilecheck)             Before: 376167E2E6ECCF8F667B49160A3784A7;3587
+(rerunfilecheck)             After:  05C0DD19762476FBD52B8E70C3958269;3584.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1467,10 +1491,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14838 strings out of 479696
- 224774 string characters out of 2876991
- 565077 words of memory out of 3000000
- 31369 multiletter control sequences out of 15000+200000
+ 14858 strings out of 479696
+ 225045 string characters out of 2876991
+ 565184 words of memory out of 3000000
+ 31385 multiletter control sequences out of 15000+200000
  482946 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,28n,85p,495b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1493,9 +1517,9 @@ c/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Pr
 ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (65 pages, 690430 bytes).
+Output written on proyecto.pdf (67 pages, 702974 bytes).
 PDF statistics:
- 779 PDF objects out of 1000 (max. 8388607)
- 203 named destinations out of 1000 (max. 500000)
- 349 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 829 PDF objects out of 1000 (max. 8388607)
+ 207 named destinations out of 1000 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 

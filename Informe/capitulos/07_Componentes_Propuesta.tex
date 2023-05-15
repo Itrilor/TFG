@@ -7,13 +7,117 @@ Se describirán detalladamente además de usar pseudocódigo para representarlos
 
 \subsection{Operador de Reparación}
 
+Cuando se realiza el cruce de dos soluciones pueden ocurrir dos casos:
+\begin{itemize}
+	\item El resultado del cruce pueda seguir considerándose una solución.
+	\item El resultado del cruce no constituya el espacio de soluciones.
+\end{itemize}
+
+Más adelante en este capítulo se explicarán cómo son los cruces y se entenderá por qué es posible que el resultado de un cruce no sea una solución. 
+En este caso, no es lógico desechar al ``hijo'', por lo que debemos ``arreglarlo'' para que se vuelva una solución. 
+Ese es el objetivo del Operador de Reparación. 
+
+En nuestro caso lo vamos a aplicar en ambos casos (que el ``hijo'' sea solución o no). 
+Si el ``hijo'' no es solución es obvio el por qué necesitamos aplicarlo. 
+Si el ``hijo'' es solución lo aplicaremos para asegurarnos que no hay huecos libres, es decir, que no hay elementos adicionales que podrían introducirse adicionalmente. 
+Esto último se hace ya que queremos maximizar el valor de la solución, por lo que si queremos que sea mínimamente competente para cuando intentemos introducirlas en la población. 
+
+Entonces seguimos el siguiente proceso, ilustrado en el pseudocódigo \ref{alg:OR}:
+\begin{itemize}
+	\item Si no es solución (su peso supera al peso máximo): Se deberán eliminar elementos del ``hijo'' hasta que constituya una solución. 
+La forma de eliminar elementos será usando Greedy, es decir, se eliminarán los elementos con menor proporción $valor\_acumulado/peso$. 
+Esta lógica viene dada por un intento de eliminar el máximo peso posible sin reducir mucho el valor final cuando se vuelva una solución. 
+	
+	\item Si es solución (su peso no supera al peso máximo): Se buscará, utilizando Greedy, un elemento para introducir. 
+En este caso, nos interesa encontrar el elemento con mayor proporción $valor\_acumulado/peso$, ya que eso nos permitiría potencialmente aumentar significativamente el valor total (evaluación de la función \textit{fitness}) de la solución. 
+Esto es, al tener en cuenta el peso puede llegar a resultar en que seamos capaces de introducir más elementos, pudiendo superar finalmente el valor que se tendría si se introdujese el elemento con el mayor valor acumulado pero no permitiese introducir más elementos. 
+Este proceso se repetirá hasta que no sea capaz de introducir ningún otro elemento en la solución. 
+%Además, este caso también se aplica cuando se acaba el caso contrario, para asegurarnos que no se puede aumentar más el valor sin volver a superar el peso máximo. 
+\end{itemize}
+
+
+\begin{algorithm}[H]
+\caption{Operador de Reparación}\label{alg:OR}
+\begin{algorithmic}[1]
+\Procedure \texttt{Operador Reparación}($hijo$)
+\State Calcular el peso total de $hijo \xrightarrow{}{}$ \texttt{pesoHijo}
+\If{\texttt{pesoHijo} > \texttt{c}}
+	\While{\texttt{pesoHijo} > \texttt{c}}
+		\State Eliminar elemento usando Greedy
+	\EndWhile
+\Else
+	\State \texttt{anadido = true} 
+	\While{\texttt{anadido}}
+		\State \texttt{anadido} = Añadir elemento usando Greedy
+	\EndWhile
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Téngase en cuenta que al eliminar y añadir elementos del ``hijo'', se debe recalcular su peso total.
+
+
 \section{Componentes de AG}
 
 \subsection{Cruce Uniforme}
 
+El cruce es un operador genético usado para variar los cromosomas de una generación a otra. 
+Dos soluciones obtenidas de la población con anterior se cruzarán con el objetivo de producir una descendencia superior. 
+
+Nos encontramos con distintos tipos de cruces básicos:
+\begin{itemize}
+	\item \textbf{Cruce en un punto}:  Dados dos padres, se le asignan los elementos de \texttt{padre$_1$} a \texttt{hijo$_1$} y de \texttt{padre$_2$} a \texttt{hijo$_2$} hasta cierto cromosoma elegido con anterioridad. 
+A partir de dicho cromosoma, cambiaremos la asignación de forma que \texttt{hijo$_1$} hereda de \texttt{padre$_2$} e \texttt{hijo$_2$} hereda de \texttt{padre$_1$}. 
+Un ejemplo de este tipo de cruce podría ser:
+%Insertar ejemplo
+	\item \textbf{Cruce en dos puntos}: Sigue la misma lógica que el anterior, solo que elegimos dos puntos a partir de los cuales se cambian los elementos de qué padre se asignan a cada hijo. 
+Un ejemplo de este tipo de cruce podría ser:
+%Insertar ejemplo
+	\item \textbf{Cruce uniforme}: En este caso, en cada cromosoma se elige de forma aleatoria de qué padre lo hereda, cumpliéndose que si un hijo hereda cierto cromosoma de un padre, el otro hijo deberá heredar el mismo cromosoma del otro padre. 
+Un ejemplo de este tipo de cruce podría ser: 
+%Insertar ejemplo
+\end{itemize}
+
+El cruce de dos soluciones buenas no tiene por qué siempre dar lugar a una solución mejor o igual de buena. 
+Sin embargo, si los padres son buenas soluciones, la probabilidad de tener un hijo bueno es elevada; en el caso de que el hijo no sea una buena solución, será eliminado durante el periodo de reemplazo. 
+
+En nuestro problema es posible que el cruce de dos soluciones no de lugar a una solución. 
+Esto se debe a la elección aleatoria de qué cromosomas elegir, no estamos teniendo en cuenta el peso que se está alcanzando al asignar cada elemento; por lo que es totalmente posible que  al asignar los elementos a cada hijo se sobrepase la capacidad máxima, dejando por ello de ser una solución válida. 
+
+Más adelante en este capítulo explicaremos otro tipo de cruce, que es el cruce HUX. 
+
+En nuestro caso, realmente utilizamos una mezcla de cruce en un punto y cruce uniforme. 
+Esto es, vamos a asignarle a cada hijo la mitad de cada uno de los padres, pero esta asignación será aleatoria: desordenamos el orden de los índices y lo partimos por la mitad. 
+Esto viene representado en el pseudocódigo (\ref{alg:CU}) siguiente
+
+\begin{algorithm}[H]
+\caption{Cruce Uniforme}\label{alg:CU}
+\begin{algorithmic}[1]
+\Procedure \texttt{Cruce Uniforme}($padre_1, padre_2$)
+\State Desordenar los índices que indican la posición de cada elemento
+\For{i in 0..$n$}
+	\If{i < $n/2$}
+		\State \texttt{hijo$_1$[indice[i]]} = \texttt{padre$_1$[indice[i]]}
+		\State \texttt{hijo$_2$[indice[i]]} = \texttt{padre$_2$[indice[i]]}
+	\Else
+		\State \texttt{hijo$_1$[indice[i]]} = \texttt{padre$_2$[indice[i]]}
+		\State \texttt{hijo$_2$[indice[i]]} = \texttt{padre$_1$[indice[i]]}
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
 \subsection{Mutación}
 
-\subsection{Operador de Selección Estacionario}
+Modifica al azar una muy pequeña parte del cromosoma de los individuos, y permite alcanzar zonas del espacio de búsqueda que no estaban cubiertas por los individuos de la población actual. 
+La mutación sola de por sí generalmente no permite avanzar en la búsqueda de una solución, pero nos garantiza que la población no va a evolucionar hacia una población uniforme que no sea capaz de seguir evolucionando. 
+
+
+
+
+\subsection{Operador de Reemplazo Estacionario}
 
 \section{Componentes de CHC}
 

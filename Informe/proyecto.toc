@@ -40,19 +40,19 @@
 \contentsline {chapter}{\numberline {7}Componentes de la propuesta}{39}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Componentes comunes}{39}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Operador de Reparación}{39}{subsection.7.1.1}%
-\contentsline {section}{\numberline {7.2}Componentes de AG}{39}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Cruce Uniforme}{39}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Mutación}{39}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Operador de Selección Estacionario}{39}{subsection.7.2.3}%
-\contentsline {section}{\numberline {7.3}Componentes de CHC}{39}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Cruce HUX}{39}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Enfrentamiento}{39}{subsection.7.3.2}%
-\contentsline {chapter}{\numberline {8}Parte Experimental}{41}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{41}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Resultados versión expensive}{41}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Incorporación del histórico}{41}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Uso de GRASP}{41}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{41}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{41}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{41}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Conclusiones}{43}{chapter.9}%
+\contentsline {section}{\numberline {7.2}Componentes de AG}{40}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Cruce Uniforme}{40}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Mutación}{41}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Operador de Reemplazo Estacionario}{41}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Componentes de CHC}{41}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Cruce HUX}{41}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Enfrentamiento}{41}{subsection.7.3.2}%
+\contentsline {chapter}{\numberline {8}Parte Experimental}{43}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{43}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Resultados versión expensive}{43}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Incorporación del histórico}{43}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Uso de GRASP}{43}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{43}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{43}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{43}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{45}{chapter.9}%
