@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  16 MAY 2023 01:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  17 MAY 2023 20:16
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -1435,8 +1435,30 @@ Cap\'{\i }tulo 7.
 [39
 
 ]
-LaTeX Info: Redefining \. on input line 87.
-LaTeX Info: Redefining \% on input line 87.
+<imagenes/Crossover1point.png, id=685, 390.258pt x 153.57375pt>
+File: imagenes/Crossover1point.png Graphic file (type png)
+<use imagenes/Crossover1point.png>
+Package pdftex.def Info: imagenes/Crossover1point.png  used on input line 90.
+(pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
+<imagenes/Crossover1pointNumber.png, id=686, 390.258pt x 153.57375pt>
+File: imagenes/Crossover1pointNumber.png Graphic file (type png)
+<use imagenes/Crossover1pointNumber.png>
+Package pdftex.def Info: imagenes/Crossover1pointNumber.png  used on input line
+ 91.
+(pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
+<imagenes/Crossover2point.png, id=687, 390.258pt x 153.57375pt>
+File: imagenes/Crossover2point.png Graphic file (type png)
+<use imagenes/Crossover2point.png>
+Package pdftex.def Info: imagenes/Crossover2point.png  used on input line 100.
+(pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
+<imagenes/Crossover2pointNumber.png, id=688, 390.258pt x 153.57375pt>
+File: imagenes/Crossover2pointNumber.png Graphic file (type png)
+<use imagenes/Crossover2pointNumber.png>
+Package pdftex.def Info: imagenes/Crossover2pointNumber.png  used on input line
+ 101.
+(pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1446,7 +1468,58 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[40]) (capitulos/08_Parte_Experimental.tex
+[40 <./imagenes/Crossover1point.png> <./imagenes/Crossover1pointNumber.png>]
+<imagenes/CrossoverUniformNumber.png, id=693, 390.258pt x 153.57375pt>
+File: imagenes/CrossoverUniformNumber.png Graphic file (type png)
+<use imagenes/CrossoverUniformNumber.png>
+Package pdftex.def Info: imagenes/CrossoverUniformNumber.png  used on input lin
+e 109.
+(pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[41 <./imagenes/Crossover2point.png> <./imagenes/Crossover2pointNumber.png> <./
+imagenes/CrossoverUniformNumber.png>]
+LaTeX Info: Redefining \. on input line 188.
+LaTeX Info: Redefining \% on input line 188.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[42]
+<imagenes/CrossoverHUX.png, id=709, 539.01375pt x 153.57375pt>
+File: imagenes/CrossoverHUX.png Graphic file (type png)
+<use imagenes/CrossoverHUX.png>
+Package pdftex.def Info: imagenes/CrossoverHUX.png  used on input line 219.
+(pdftex.def)             Requested size: 269.50621pt x 76.78668pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 242.
+LaTeX Info: Redefining \% on input line 242.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[43 <./imagenes/CrossoverHUX.png>]) (capitulos/08_Parte_Experimental.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -1458,28 +1531,23 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[41] [42
-
-]
+[44]
 Cap\'{\i }tulo 8.
-) (capitulos/09_Conclusiones.tex [43] [44
+) (capitulos/09_Conclusiones.tex [45
+
+] [46
 
 ]
 Cap\'{\i }tulo 9.
-) [45] [46
+) [47] [48
 
-] [47] (proyecto.aux
+] [49] (proyecto.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
+Package rerunfilecheck Info: File `proyecto.out' has not changed.
+(rerunfilecheck)             Checksum: 05C0DD19762476FBD52B8E70C3958269;3584.
 
-Package rerunfilecheck Warning: File `proyecto.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `proyecto.out':
-(rerunfilecheck)             Before: 376167E2E6ECCF8F667B49160A3784A7;3587
-(rerunfilecheck)             After:  05C0DD19762476FBD52B8E70C3958269;3584.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1491,10 +1559,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14858 strings out of 479696
- 225045 string characters out of 2876991
- 565184 words of memory out of 3000000
- 31385 multiletter control sequences out of 15000+200000
+ 14917 strings out of 479696
+ 226533 string characters out of 2876991
+ 565519 words of memory out of 3000000
+ 31429 multiletter control sequences out of 15000+200000
  482946 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,28n,85p,495b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1517,9 +1585,9 @@ c/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Pr
 ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (67 pages, 702974 bytes).
+Output written on proyecto.pdf (69 pages, 743930 bytes).
 PDF statistics:
- 829 PDF objects out of 1000 (max. 8388607)
- 207 named destinations out of 1000 (max. 500000)
- 421 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 858 PDF objects out of 1000 (max. 8388607)
+ 216 named destinations out of 1000 (max. 500000)
+ 451 words of extra memory for PDF output out of 10000 (max. 10000000)
 
