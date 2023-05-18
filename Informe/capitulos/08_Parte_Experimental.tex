@@ -1,5 +1,43 @@
-\chapter{Parte Experimental}
+\chapter{Parte Experimental (In progress)}
+Adicionalmente, como se ha comentado antes, cada algoritmo requiere de sus propios parámetros. 
+Aunque explicaremos en más profundidad cada algoritmo en los siguientes capítulos, es necesario que establezcamos ahora cuáles son dichos parámetros y qué valores se han utilizado. 
+Para ello, primero vamos a resumir en la siguiente tabla (\ref{table:Parametros}) qué parámetros usa cada algoritmo y después explicaremos qué es cada uno y qué valor tienen asignado.
 
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\rowcolor[HTML]{F7EAC7} 
+Algoritmo          & EvaluacionMAX & Semilla     & Nº Elementos & Probabilidad mutación \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\textbf{Random}    & \textbf{Sí}   & \textbf{Sí} & No           & No                    \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\textbf{AGEU}      & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\textbf{GACEP}     & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\textbf{CHC}       & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & No                    \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\textbf{GACEPCHC}  & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\textbf{GACEP3103} & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
+\end{tabular}
+\label{table:Parametros}
+\caption{Parámetros utilizados por cada algoritmo}
+\end{table}
+
+\begin{itemize}
+	\item \texttt{EvaluacionMAX}: Es el número de evaluaciones máximas para dicho algoritmo. 
+Su valor será el de \texttt{NEVALUACIONESMAX}.
+	\item \texttt{Semilla}: Como se ha indicado anteriormente, es necesario establecer una semilla de aleatoriedad en cada ejecución del algoritmo. 
+Por lo tanto, el valor de este parámetro será el de la semilla generada por \texttt{INITSEED}. 
+	\item \texttt{Nº Elementos}: Número de soluciones que va a constituir una población. 
+Es necesario tener una población pequeña con el fin de utilizar el menor número de evaluaciones posible, pero suficiente como para poder trabajar con cierto margen. 
+Por lo tanto, estableceremos el tamaño de población a 10. 
+	\item \texttt{Probabilidad mutación}: En algunos algoritmos intentaremos modificar un poco alguna solución en cada iteración. 
+Este valor establece el porcentaje de soluciones que la población que mutará. 
+Genéricamente este valor suele ser del 0.1, por lo que también lo utilizaremos en nuestro problema. 
+Correspondería que solo mutaría una solución de la población por cada generación. 
+\end{itemize}
 \section{Algoritmos de Referencia experimentación}
 
 \section{Resultados versión expensive}

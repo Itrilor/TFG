@@ -20,7 +20,7 @@ La planificación inicial que se estableció antes de iniciar el proyecto se pue
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor[HTML]{F7EAC7} 
-\textbf{Resumen}                                                                                             & \textbf{Pasos}                                                                                                                             & \textbf{Duración}                                                        \\ \hline
+\textbf{Resumen}                                                                                             & \textbf{Tareas}                                                                                                                             & \textbf{Duración}                                                        \\ \hline
 \rowcolor[HTML]{ECF4FF} 
 \cellcolor[HTML]{ECF4FF}                                                                                     & Obtener instancias del problema                                                                                                            & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}}                            \\ \cline{2-2}
 \rowcolor[HTML]{ECF4FF} 
@@ -34,7 +34,7 @@ La planificación inicial que se estableció antes de iniciar el proyecto se pue
 \rowcolor[HTML]{ECF4FF} 
 Experimentación                                                                                              & \begin{tabular}[c]{@{}l@{}}Formas de inicialización no\\ aleatorias $\xrightarrow{}{}$ Diseño experimental\end{tabular} & 2 semanas                                                                \\ \hline
 \rowcolor[HTML]{DDFDFF} 
-Histórico                                                                                                    & Usar el histórico                                                                                                                          & Marzo                                                                    \\ \hline
+Modificaciones                                                                                                    & \begin{tabular}[c]{@{}l@{}}Propuesta de modificaciones\\Obtención de resultados\end{tabular} & Marzo-Abril                                                                    \\ \hline
 \rowcolor[HTML]{ECF4FF} 
 Memoria                                                                                                      & Escribir el informe                                                                                                                        & Mayo                                                                     \\ \hline
 \end{tabular}
@@ -119,11 +119,23 @@ Revisión de la memoria                   & 10                                  
 \section{Presupuesto}
 
 Si quisiéramos valorar económicamente el proyecto, tenemos que tener en cuenta dos aspectos fundamentales: el precio de la mano de obra y el de cómputo como si tuviésemos que pagarlo. 
-Sin embargo
+Además, también se incluirá el precio del ordenador en el que se ha realizado todo el trabajo.
 
 El precio de la mano de obra son 25\texteuro\xspace la hora. 
+
 El ordenador portátil usado para la realización de las ejecuciones ha sido un Asus Tuf Gaming A15 FA506IU-HN278 con un procesador AMD\textregistered\xspace Ryzen\texttrademark\xspace 7 4800H APU
 %https://www.pccomponentes.com/asus-tuf-gaming-a15-fa506iu-hn278-amd-ryzen-7-4800h-apu-16gb-1tb-ssd-gtx-1660ti-156
-y 16GB (8GB$\times$2) de RAM.
+y 16GB (8GB$\times$2) de RAM. 
+Tras una breve búsqueda se puede comprobar que el precio actual de dicho portátil sería de 1300\texteuro\xspace. 
 
-Por lo tanto, el \textbf{presupuesto del proyecto queda fijado en 12500\texteuro\xspace}, a razón de 25\texteuro\xspace por cada hora de trabajo dedicada al proyecto.
+Para calcular el coste de tiempo de cómputo es ha utilizado la calculadora de precios de Amazon Web Services (\href{https://calculator.aws}{AWS Pricing Calculator}). 
+Elegiremos el servicio EC2, y dentro de eso elegimos las características más similares al ordenador utilizado; lo que nos lleva a la instancia c5d.2xlarge. 
+Comprobamos el coste por hora del uso de dicho servicio y tenemos que este sería 0.48\$/hora, es decir, aproximadamente 0.443\texteuro /hora.
+%https://calculator.aws/#/addService/ec2-enhancement
+
+Teniendo todos estos datos, podemos proceder a calcular cuál sería el presupuesto final de del proyecto:
+\begin{equation*}
+500h\cdot 25\dfrac{\text{\texteuro}}{h} + 1300\text{\texteuro} + 50h\cdot 0.443\dfrac{\text{\texteuro}}{h} = 13822.15\text{\texteuro}
+\end{equation*}
+
+En resumen, el \textbf{presupuesto de este proyecto queda fijado en 13822.15\texteuro}.

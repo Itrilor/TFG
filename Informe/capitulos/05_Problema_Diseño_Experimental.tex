@@ -10,13 +10,22 @@ El problema que se va a abordar en este proyecto es el de la optimización de pr
 Un \textbf{problema de optimización combinatoria} se define como aquel en el que el conjunto de soluciones posibles es discreto. 
 Es decir, se trata de un problema de optimización que involucra una cantidad finita o numerable de soluciones posibles.
 \end{definicion}
-Este tipo de problemas se diferencia de los problemas de optimización contiunos, en los cuales el conjunto de soluciones posibles es infinito e incontable. 
+Este tipo de problemas se diferencia de los problemas de optimización continuos, en los cuales el conjunto de soluciones posibles es infinito e incontable. 
 
 Dentro del campo de la optimización combinatoria es común que la mayoría de los procesos de resolución de problemas no puedan garantizar la solución óptima, incluso dentro del contexto del modelo que se esté utilizando. 
 Sin embargo, la aproximación al óptimo suele ser suficiente para resolver los problemas en la práctica. 
 
 Con el fin de poder estudiar más a fondo el comportamiento de los distintos algoritmos que se han estado desarrollando era necesario elegir un problema determinado con el que trabajar. 
-En nuestro caso, se ha elegido la generalización del problema comúnmente llamado ``problema de la mochila'' (\textit{Knapsack Problem} (KP)):  \textbf{\textit{Quadratic Knapsack Problem} (QKP)}.
+En nuestro caso, se ha elegido la generalización del problema comúnmente llamado ``problema de la mochila'' (\textit{Knapsack Problem} (KP)):  \textbf{\textit{Quadratic Knapsack Problem} (QKP)}. 
+
+%Justificación de por qué hemos usado QKP
+Antes de definir el problema, justificaremos por qué se ha elegido este problema. 
+La primera razón, y posiblemente la más importante, es la ausencia de \textit{benchmarks} para problemas combinatorios \textit{expensive}, por lo que nos hemos visto obligados a crear el nuestro propio para un futuro. 
+Ante este panorama también debemos encontrar un problema específico adecuado sobre el que trabajar desde cero y que resulte de interés. 
+Como el objetivo inicial estaba relacionado con redes neuronales, buscamos un problema que puede tener representación binaria (\texttt{1} para la elección de elementos, \texttt{0} para el caso contrario). 
+En este sentido, el QKP cumple con este requisito, además tiene interés añadido debido a que es un problema con restricciones y constituye una alternativa moderna de un problema clásico; además de que podemos generar instancias de este problema con distintos tamaños. 
+Por lo tanto, teniendo en cuenta la falta de \textit{benchmarks} y referencias, el QKP resulta ser una buena opción, ya que es un problema difícil, costoso y moderno. 
+
 
 \subsection{Quadratic Knapsack Problem}
 %The quadritc Knapsack problem-a survey
@@ -57,10 +66,31 @@ presentó un problema que surge en telecomunicación cuando un número de locali
 
 \subsection{Datos del problema}
 
-Utilizaremos 100 archivos de datos generados aleatoriamente de %pedir referencia a página
-, los cuales se pueden distribuir de la siguiente forma:
+Utilizaremos 97 archivos de datos generados aleatoriamente de %pedir referencia a página
+, los cuales se pueden distribuir de forma que se indica en la Tabla \ref{DatosProblema}
+
+
+
+Se entiende como ``densidad'' al porcentaje de beneficios combinados positivos, es decir, $p_{ij} > 0$. 
+Particularmente QP tendría densidad 0\%.
+
+Ahora bien, todos los archivos tienen el mismo formato, lo cual resulta útil para definir funciones capaces de obtener los datos más relevantes para nuestros algoritmos. 
+El formato que siguen los archivos es el siguiente:
+\begin{itemize}
+	\item La referencia de la instancia: Su nombre.
+	\item El número de variables ($n$)
+	\item Los coeficientes lineales de la función objetivo $p_{jj}$
+	\item Los coeficientes cuadráticos $p_{ij}$: representados en líneas
+	\item Una línea en blanco
+	\item 0 si la restricción es de tipo $\leq$, lo cual siempre va a ocurrir ya que estamos considerando instancias QKP.
+	\item La capacidad $c$ de la mochila.
+	\item Los coeficientes de capacidad/peso, $w_j$.
+	\item Algunos comentarios.
+\end{itemize}
 
 \begin{table}[H]
+\caption{Datos del Problema}
+\label{DatosProblema}
 \begin{tabular}{|c|c|c|}
 \hline
 \rowcolor[HTML]{F7EAC7} 
@@ -81,26 +111,7 @@ Utilizaremos 100 archivos de datos generados aleatoriamente de %pedir referencia
 \cellcolor[HTML]{DAE8FC}                                          & 25\%                                                  & 10                                                              \\ \cline{2-3} 
 \multirow{-2}{*}{\cellcolor[HTML]{DAE8FC}n = 300}                 & 50\%                                                  & 10                                                              \\ \hline
 \end{tabular}
-\label{table:DatosProblema}
-\caption{Datos del Problema}
 \end{table}
-
-Se entiende como ``densidad'' al porcentaje de beneficios combinados positivos, es decir, $p_{ij} > 0$. 
-Particularmente QP tendría densidad 0\%.
-
-Ahora bien, todos los archivos tienen el mismo formato, lo cual resulta útil para definir funciones capaces de obtener los datos más relevantes para nuestros algoritmos. 
-El formato que siguen los archivos es el siguiente:
-\begin{itemize}
-	\item La referencia de la instancia: Su nombre.
-	\item El número de variables ($n$)
-	\item Los coeficientes lineales de la función objetivo $p_{jj}$
-	\item Los coeficientes cuadráticos $p_{ij}$: representados en líneas
-	\item Una línea en blanco
-	\item 0 si la restricción es de tipo $\leq$, lo cual siempre va a ocurrir ya que estamos considerando instancias QKP.
-	\item La capacidad $c$ de la mochila.
-	\item Los coeficientes de capacidad/peso, $w_j$.
-	\item Algunos comentarios.
-\end{itemize}
 
 %Introducir algún ejemplo?
 
@@ -111,19 +122,22 @@ El formato que siguen los archivos es el siguiente:
 Se han elegido las instancias mencionadas anteriormente ya que también se proporcionaban algunos resultados de otros algoritmos, por lo que resultaba conveniente a la hora de comprobar si los resultados obtenidos por nuestros algoritmos bases eran competitivos. 
 Ya que, en el caso de que no lo fuesen, tendríamos que buscar otros algoritmos base sobre los que trabajar.
 Sin embargo, nos encontramos con un problema, esto es, el criterio de parada presentado en estos casos es el tiempo.
-Adicionalmente, el tiempo de parada también depende del número de elementos $n$ de forma que se tiene:
+Adicionalmente, el tiempo de parada también depende del número de elementos, $n$, de forma que se tiene:
 \begin{itemize}
 \item Para $n = 100$, se tienen \textbf{5 segundos} de ejecución.
 \item Para $n > 100$, en nuestro caso, $n = 200$ y $n = 300$, se tienen \textbf{30 segundos} de ejecución.
 \end{itemize}
 
-Como se ha indicado antes, esto resulta un problema. 
+Como se ha indicado antes, utilizar el tiempo de ejecución como criterio de parada resulta un problema. 
 Esto se debe a que no es un criterio de parada fiable, ya que depende de la capacidad de computación de cada ordenador. 
 No es comparable la velocidad de los ordenadores actuales con la velocidad de los ordenadores de dentro de 10 años, de la misma no podemos comparar el rendimiento de un ordenador de hace 10 años con respecto a uno actual. 
 E incluso dentro de los ordenadores de la misma generación, dependerá de las características propias de cada computador. 
-Por lo que se llega a la conclusión de que si se quiere que los resultados obtenidos en este trabajo puedan ser usados en un futuro como referencia, o incluso si se quiere recrear el trabajo, se debe cambiar el criterio de parada a algo que se mantenga constante independientemente de cuándo se produzca el experimento: iteraciones. 
+Por lo que se llega a la conclusión de que si se quiere que los resultados obtenidos en este trabajo puedan ser usados como referencia, o incluso si se quiere recrear el trabajo, en un futuro se debe cambiar el criterio de parada a algo portable, a algo que sea independiente de cuándo se produzca el experimento. 
+Por ello, se ha decidido cambiar el criterio de parada a un número de iteraciones máximo. 
+Este criterio sí es portable, ya que independientemente de qué tipo de computador se utilice para obtener los resultados siempre se van a obtener los mismos resultados utilizando los mismos parámetros.
 
-Denotaremos como iteraciones al número de veces que se evalúa un determinado algoritmo, por ejemplo:
+Primero debemos indicar lo que entenderemos por iteraciones o evaluaciones. 
+Denotaremos como iteraciones al número de veces que se evalúa un determinado algoritmo, en nuestro caso se va a traducir en lo siguiente: 
 \begin{itemize}
 	\item Para el algoritmo \textit{Random}, el número iteraciones será el número de veces que generemos una solución de forma aleatoria.
 	\item Para los algoritmos genéticos, el número de iteraciones será el número de generaciones con las que trabajaremos.
@@ -172,49 +186,11 @@ Además, por conveniencia, es recomendable que las semillas utilizadas sean comu
 Por ello, una solución es establecer un valor de semilla inicial arbitrario y utilizar este para generar el resto de semillas.
 \end{itemize}
 
-Adicionalmente, como se ha comentado antes, cada algoritmo requiere de sus propios parámetros. 
-Aunque explicaremos en más profundidad cada algoritmo en los siguientes capítulos, es necesario que establezcamos ahora cuáles son dichos parámetros y qué valores se han utilizado. 
-Para ello, primero vamos a resumir en la siguiente tabla (\ref{table:Parametros}) qué parámetros usa cada algoritmo y después explicaremos qué es cada uno y qué valor tienen asignado.
+En definitiva, podemos resumir los parámetros, para lo que se usan y sus valores en la Tabla \ref{Resumen}.
 
-\begin{table}[H]
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-\rowcolor[HTML]{F7EAC7} 
-Algoritmo          & EvaluacionMAX & Semilla     & Nº Elementos & Probabilidad mutación \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-\textbf{Random}    & \textbf{Sí}   & \textbf{Sí} & No           & No                    \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-\textbf{AGEU}      & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-\textbf{GACEP}     & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-\textbf{CHC}       & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & No                    \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-\textbf{GACEPCHC}  & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-\textbf{GACEP3103} & \textbf{Sí}   & \textbf{Sí} & \textbf{Sí}  & \textbf{Sí}           \\ \hline
-\end{tabular}
-\label{table:Parametros}
-\caption{Parámetros utilizados por cada algoritmo}
-\end{table}
-
-\begin{itemize}
-	\item \texttt{EvaluacionMAX}: Es el número de evaluaciones máximas para dicho algoritmo. 
-Su valor será el de \texttt{NEVALUACIONESMAX}.
-	\item \texttt{Semilla}: Como se ha indicado anteriormente, es necesario establecer una semilla de aleatoriedad en cada ejecución del algoritmo. 
-Por lo tanto, el valor de este parámetro será el de la semilla generada por \texttt{INITSEED}. 
-	\item \texttt{Nº Elementos}: Número de soluciones que va a constituir una población. 
-Es necesario tener una población pequeña con el fin de utilizar el menor número de evaluaciones posible, pero suficiente como para poder trabajar con cierto margen. 
-Por lo tanto, estableceremos el tamaño de población a 10. 
-	\item \texttt{Probabilidad mutación}: En algunos algoritmos intentaremos modificar un poco alguna solución en cada iteración. 
-Este valor establece el porcentaje de soluciones que la población que mutará. 
-Genéricamente este valor suele ser del 0.1, por lo que también lo utilizaremos en nuestro problema. 
-Correspondería que solo mutaría una solución de la población por cada generación. 
-\end{itemize}
-
-En definitiva, podemos resumir los parámetros, para lo que se usan y sus valores en la siguiente tabla:
-
-\begin{table}[H]
+\begin{table}
+\caption{Resumen de parámetros utilizados}
+\label{Resumen}
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor[HTML]{F7EAC7} 
@@ -226,14 +202,12 @@ Parámetros                                 & Resumen                           
 \rowcolor[HTML]{DAE8FC} 
 \texttt{INITSEED}         & \begin{tabular}[c]{@{}l@{}}Semilla inicial para poder \\ generar el resto de semillas que\\ utilizaremos para los algoritmos\end{tabular} & 5                                                                                     \\ \hline
 \rowcolor[HTML]{DDFDFF} 
-\texttt{EvaluacionMAX}    & \begin{tabular}[c]{@{}l@{}}Criterio de parada: Número de\\ Evaluaciones Máximas dicho\\ algoritmo\end{tabular}                            & \texttt{NEEVALUACIONESMAX}                                           \\ \hline
+\texttt{EvaluacionMAX}    & \begin{tabular}[c]{@{}l@{}}Criterio de parada: Número de\\ Evaluaciones Máximas dicho\\ algoritmo\end{tabular}                            & \texttt{NEVALUACIONESMAX}                                           \\ \hline
 \rowcolor[HTML]{DAE8FC} 
 \texttt{Semilla}          & \begin{tabular}[c]{@{}l@{}}Semilla de aleatoriedad para\\ determinada ejecución del \\ algoritmo\end{tabular}                             & \begin{tabular}[c]{@{}l@{}}Valor generado aleatoriamente \\ por \texttt{INITSEED}\end{tabular} \\ \hline
 \rowcolor[HTML]{DDFDFF} 
-\texttt{numcro}             & \begin{tabular}[c]{@{}l@{}}Número de elementos de la\\ población de soluciones\end{tabular}                                               & 10                                                                                    \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-\texttt{pmut}             & \begin{tabular}[c]{@{}l@{}}Probabilidad de mutación\\ de las soluciones de la población\\ ({[}0,1{]})\end{tabular}                        & 0.1                                                                                   \\ \hline
+%\texttt{numcro}             & \begin{tabular}[c]{@{}l@{}}Número de elementos de la\\ población de soluciones\end{tabular}                                               & 10                                                                                    \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%\texttt{pmut}             & \begin{tabular}[c]{@{}l@{}}Probabilidad de mutación\\ de las soluciones de la población\\ ({[}0,1{]})\end{tabular}                        & 0.1                                                                                   \\ \hline
 \end{tabular}
-\label{Resumen}
-\caption{Resumen de parámetros utilizados}
 \end{table}

@@ -21,38 +21,38 @@
 \contentsline {subsection}{\numberline {4.4.4}Métodos de Gradiente Conjugado}{18}{subsection.4.4.4}%
 \contentsline {subsection}{\numberline {4.4.5}Métodos de Newton}{19}{subsection.4.4.5}%
 \contentsline {subsubsection}{Modificaciones de Búsqueda Lineal en el Método de Newton}{20}{equation.4.4.23}%
-\contentsline {subsubsection}{Modificaciones de Regiones de Confianza en el Método de Newton}{22}{equation.4.4.25}%
-\contentsline {subsubsection}{Métodos de Newton Truncados}{24}{algorithm.7}%
-\contentsline {subsubsection}{Métodos Quasi-Newton}{25}{algorithm.8}%
-\contentsline {subsubsection}{Métodos sin derivadas}{27}{proposicion.4.8}%
+\contentsline {subsubsection}{Modificaciones de Regiones de Confianza en el Método de Newton}{21}{equation.4.4.25}%
+\contentsline {subsubsection}{Métodos de Newton Truncados}{23}{ALG@line.15}%
+\contentsline {subsubsection}{Métodos Quasi-Newton}{24}{ALG@line.6}%
+\contentsline {subsubsection}{Métodos sin derivadas}{26}{proposicion.4.8}%
 \contentsline {chapter}{\numberline {5}Problema y Diseño Experimental}{29}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Descripción del problema}{29}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Quadratic Knapsack Problem}{29}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.1}Quadratic Knapsack Problem}{30}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Datos del problema}{30}{subsection.5.1.2}%
 \contentsline {section}{\numberline {5.2}Diseño Experimental}{31}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Criterio de Parada}{31}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Parámetros}{32}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.2}Parámetros}{33}{subsection.5.2.2}%
 \contentsline {chapter}{\numberline {6}Algoritmos de Referencia}{35}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Algoritmo Genético Estacionario Uniforme}{35}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Pseudocódigo}{37}{subsection.6.1.1}%
-\contentsline {section}{\numberline {6.2}CHC}{37}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Pseudocódigo}{38}{subsection.6.2.1}%
-\contentsline {chapter}{\numberline {7}Componentes de la propuesta}{39}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Componentes comunes}{39}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Operador de Reparación}{39}{subsection.7.1.1}%
-\contentsline {section}{\numberline {7.2}Componentes de AG}{40}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Cruce Uniforme}{40}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Mutación}{42}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Operador de Reemplazo Estacionario}{42}{subsection.7.2.3}%
-\contentsline {section}{\numberline {7.3}Componentes de CHC}{43}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Cruce HUX}{43}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Enfrentamiento}{44}{subsection.7.3.2}%
-\contentsline {chapter}{\numberline {8}Parte Experimental}{45}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{45}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Resultados versión expensive}{45}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Incorporación del histórico}{45}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Uso de GRASP}{45}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{45}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{45}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{45}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Conclusiones}{47}{chapter.9}%
+\contentsline {subsection}{\numberline {6.1.1}Pseudocódigo}{36}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Componentes}{37}{subsection.6.1.2}%
+\contentsline {subsubsection}{Operador de Reparación}{37}{subsection.6.1.2}%
+\contentsline {subsubsection}{Cruce Uniforme}{38}{ALG@line.13}%
+\contentsline {subsubsection}{Mutación}{39}{ALG@line.12}%
+\contentsline {subsubsection}{Operador de Reemplazo Estacionario}{40}{ALG@line.17}%
+\contentsline {section}{\numberline {6.2}CHC}{41}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Pseudocódigo}{42}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Componentes}{42}{subsection.6.2.2}%
+\contentsline {subsubsection}{Operador de reparación}{42}{subsection.6.2.2}%
+\contentsline {subsubsection}{Cruce HUX}{42}{subsection.6.2.2}%
+\contentsline {subsubsection}{Enfrentamiento}{43}{ALG@line.13}%
+\contentsline {chapter}{\numberline {7}Componentes de la propuesta}{45}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Parte Experimental (In progress)}{47}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{48}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Resultados versión expensive}{48}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Incorporación del histórico}{48}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Uso de GRASP}{48}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{48}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{48}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{48}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{49}{chapter.9}%

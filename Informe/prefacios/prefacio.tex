@@ -19,17 +19,21 @@ Irene Trigueros Lorca\\
 \end{center}
 
 %\vspace{0.7cm}
-\noindent{\textbf{Palabras clave}: metaheurística, optimización, algoritmo genético, exploración, explotación, diversidad}\\
+\noindent{\textbf{Palabras clave}: metaheurística, combinatorio, costoso, optimización, algoritmo genético, exploración, explotación, diversidad}\\
 
 \vspace{0.7cm}
 \noindent{\textbf{Resumen}}\\
 
-En este proyecto se propone un algoritmo metaheurístico nuevo para resolver problemas costosos (\textit{expensive}), siguiendo un formato semejante al de un diario de desarrollo. 
+Existen problemas de mucho interés cuyo coste de evaluación es excesivamente elevado (a este tipo de problemas los llamaremos problemas costosos o problemas \textit{expensive}), como podrían ser los problemas de optimización de redes neuronales, por lo que resulta interesante desarrollar algoritmos capaces de obtener soluciones competitivas en muy pocas evaluaciones. 
+Además, en la literatura ya encontramos algoritmos específicos para el caso continuo de este tipo de problemas; pero no ocurre lo mismo con el caso de problemas combinatorios, para los que no se han hallado ningún algoritmo capaz de resolverlos.
+
+Por lo tanto, en este proyecto se propone un algoritmo metaheurístico nuevo para resolver problemas combinatorios costosos (\textit{expensive}), siguiendo un formato semejante al de un diario de desarrollo. 
 Se tomará como algoritmo base un algoritmo genético y, una vez analizado su rendimiento, se implementarán una serie de modificaciones que, progresivamente, compondrán la versión final del algoritmo. 
-Estas modificaciones se justificarán observando y analizando los resultados obtenidos en los intentos anteriores con el objetivo de encontrar formas de aprovechar al máximo las pocas iteraciones que nos podemos permitir en este tipo de problemas. 
+Estas modificaciones se justificarán observando y analizando los resultados obtenidos en los intentos anteriores con el objetivo de encontrar formas de aprovechar al máximo las pocas evaluaciones que nos podemos permitir en este tipo de problemas. 
 Se describen detalladamente las tareas adicionales llevadas a cabo propias del desarrollo de un algoritmo de esta clase. 
-Además, se realizan análisis experimentales donde se compara el algoritmo base y las sucesivas versiones del algoritmo a crear. 
-Las conclusiones que se alcanzan indica que el algoritmo presentado en este proyecto es altamente competitivo. 
+%Además, se realizan análisis experimentales donde se compara el algoritmo base y las sucesivas versiones del algoritmo a crear. 
+Además, se realizarán análisis experimentales que irán demostrando que las sucesivas versiones del algoritmo van mejorando las anteriores.
+Las conclusiones que se alcanzan indican que el algoritmo presentado en este proyecto es altamente competitivo. 
 
 
 
@@ -47,12 +51,15 @@ Irene Trigueros Lorca\\
 \end{center}
 
 %\vspace{0.7cm}
-\noindent{\textbf{Keywords}: metaheuristic, optimization, genetic algorithm, exploration, explotation, diversity}\\
+\noindent{\textbf{Keywords}: metaheuristic, combinatory, expensive, optimization, genetic algorithm, exploration, explotation, diversity}\\
 
 \vspace{0.7cm}
 \noindent{\textbf{Abstract}}\\
 
-Throughout this project, an original metaheuristic algorithm is going to be proposed with the purpose of solving expensive problems, following a format similar to that of a developer diary. 
+There are very interesting problems which their computational cost is excessively high (these kind of problems will be refered as expensive problems), such as the neural network optimization problems, therefore it is compelling to develope algorithms that are able to obtain competitive solutions in few evaluations. 
+Furthermore, specific algorithms for the continuous case of these problems can be found in the literature; but that is not the case for the combinatory expensive problems, for those which no algorithms able to solve them have been found.
+
+Hence, throughout this project, an original metaheuristic algorithm is going to be proposed with the purpose of solving expensive problems, following a format similar to that of a developer diary. 
 A genetic algorithm is going to be chosen as the base algorithm and, once its performance is analyzed, a series of modifications are going  to be implemented, which, at the end, will compose the final version of the algorithm. 
 These modifications are going to be justified by observing and analyzing the results obtained through the previous attempts with the objective of finding ways of making the most of the few iterations available in these kind of problems. 
 Additional tasks regarding the development of this type of algorithms are described in depth. 

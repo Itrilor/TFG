@@ -73,7 +73,7 @@ La convexidad nos permite añadir estructura a estos problemas y poder explotarl
 Sin embargo, nos centraremos en problemas no lineales generales, sin asumir convexidad.
 
 \begin{definicion}
-Un punto un $x^*\in\mathcal{F}$ es un \textbf{solución global} de \ref{eq:4.1} si $f(x^*)\leq f(x)$, $\forall x\in\mathcal{F}$. El punto es una \textbf{solución global estricta} si $f(x^*) < f(x)$, $\forall x\in\mathcal{F}$, $x\neq x^*$.
+Un punto un $x^*\in\mathcal{F}$ es un \textbf{solución global} del problema \ref{eq:4.1} si $f(x^*)\leq f(x)$, $\forall x\in\mathcal{F}$. El punto es una \textbf{solución global estricta} si $f(x^*) < f(x)$, $\forall x\in\mathcal{F}$, $x\neq x^*$.
 \end{definicion}
 
 La existencia de soluciones globales se debe a la compacidad de $\mathcal{F}$, en relación con el teorema de Weierstrass:
@@ -162,7 +162,7 @@ donde $\lambda\in\mathbb{R}^p$, $\mu\in\mathbb{R}^m$ son multiplicadores de Lagr
 El siguiente resultado nos dan información sobre la existencia de estos multiplicadores. 
 
 \begin{proposicion}
-Sea $x^*$ una solución local de \ref{eq:4.4} y supongamos que la independencia lineal se satisface en $x^*$. 
+Sea $x^*$ una solución local del problema \ref{eq:4.4} y supongamos que la independencia lineal se satisface en $x^*$. 
 Entonces, los multiplicadores de Lagrange $\lambda^*\geq 0$, $\mu^*$ existe de tal forma que:
 \begin{equation}
 \nabla_xL(x^*,\lambda^*,\mu^*) = 0
@@ -208,7 +208,7 @@ donde
 \begin{equation*}
 \mathcal{P}(x^*) = \{y\in\mathbb{R}^n : \nabla g'_{\mathcal{F}_a} y\leq 0, \nabla h(x^*)'y = 0; \nabla g_i(x^*)'y = 0, i \in\mathcal{F}_a(x^*), \lambda_i^* \} 
 \end{equation*}
-Entonces, $x^*$ es una solución local estricta de \ref{eq:4.4}.
+Entonces, $x^*$ es una solución local estricta del problema \ref{eq:4.4}.
 \end{proposicion}
 
 Nótese también que $\mathcal{N}(x^*) \subseteq\mathcal{P}(x^*)$  y la igualdad se da si $\lambda_i^* >0, \forall i\in\mathcal{F}_a(x^*)$.
@@ -246,7 +246,7 @@ Un algoritmo se detiene cuando un punto $x^*\in\Omega$ es calculado.
 Por lo tanto, a este conjunto se le llamará \textbf{conjunto objetivo}.
 \end{definicion}
 
-Un ejemplo de este conjunto para el problema sin restricciones podría ser $\Omega = \{x \in\mathbb{R}^n: \nabla f(x) = 0\}$; mientras que para el problema restringido este conjunto será el conjunto de puntos que satisfacen \ref{eq:4.9}.
+Un ejemplo de este conjunto para el problema sin restricciones podría ser $\Omega = \{x \in\mathbb{R}^n: \nabla f(x) = 0\}$; mientras que para el problema restringido este conjunto será el conjunto de puntos que satisfacen la condición \ref{eq:4.9}.
 
 \begin{definicion}
 Sea $x^k, k=0,1,...$ la secuencia de puntos generados por un algoritmo. 
@@ -320,7 +320,7 @@ donde $x\in\mathbb{R}^n$ es el vector de variables de decisión y $f:\mathbb{R}^
 Es lógico pensar que si somos capaces de resolver este problema, el procedimiento para ello puede ser ajustado a problemas con restricciones porque solo necesitaremos un conjunto abierto factible de soluciones $\mathcal{F}$, y un punto inicial $x^0\in\mathcal{F}$.
 
 Asumimos por simplicidad que nuestra función $f$ es continuamente 2-diferenciable en $\mathbb{R}^n$. 
-Además, asumiremos lo siguiente para asegurarnos de la existencia de una solución de la ecuación \ref{eq:4.11}: $\mathcal{L}^0 = \{x\in\mathbb{R}:f(x)\leq f(x^0)\}$ es compacto para algún $x^0\in\mathbb{R}^n$.
+Además, asumiremos lo siguiente para asegurarnos de la existencia de una solución del problema \ref{eq:4.11}: $\mathcal{L}^0 = \{x\in\mathbb{R}:f(x)\leq f(x^0)\}$ es compacto para algún $x^0\in\mathbb{R}^n$.
 
 \subsection{Algoritmos de Optimización sin restricciones}
 
@@ -385,7 +385,7 @@ En estos casos podemos asumir que
 \label{eq:4.15}
 \end{equation}
 
-Los algoritmos de búsqueda lineal más simples están proporcionados por Armijo.
+Los algoritmos de búsqueda lineal más simples están proporcionados por Armijo, cuyo pseudocódigo se puede encontrar en Algoritmo ~\ref{alg:LocalSearch}.
 
 \begin{algorithm}
 \caption{Algoritmo de Búsqueda Lineal de Armijo}\label{alg:LocalSearch}
@@ -472,12 +472,12 @@ donde $Q$ es una matriz simétrica definida positiva, puede ser dividida en $n$ 
 Esto se puede hacer utilizando $n$ direcciones, $d^0,...,d^{n-1}$ conjugadas con respecto de la matriz Hessiana $Q$. 
 Junto con cada dirección, se realiza una búsqueda lineal.
 
-El siguiente algoritmo (\ref{alg:ConjugateDirection}) muestra todo lo mencionado anteriormente.
+El siguiente algoritmo (Algoritmo \ref{alg:ConjugateDirection}) muestra todo lo mencionado anteriormente.
 
 Se debe notar que el valor de $\alpha^k$ que se utilizará en el tercer paso es el que minimiza la función $f(x^k + \alpha d^k)$. 
 Además, el cociente está bien definido porque para dos direcciones distintas tenemos $(d^j)Qd^i=0$, con $i,j$ tales que $i\neq j$.
 
-\begin{algorithm}[H]
+\begin{algorithm}
 \caption{Algoritmo de direcciones conjugadas para funciones cuadráticas}\label{alg:ConjugateDirection}
 \begin{algorithmic}[1]
 \Procedure \textsc{Direcciones\_Conjugadas} (direcciones Q-conjugadas $d^0,...,d^{n-1}$)
@@ -517,9 +517,9 @@ Sin embargo, la fórmula de Polak-Ribiére también puede usarse:
 
 Ambas fórmulas son iguales en el caso cuadrático y diferentes cuando se trate de cualquier otro caso.
 
-El esquema del gradiente conjugado se presenta como sigue:
+El esquema del gradiente conjugado se presenta en Algoritmo ~\ref{alg:ConjugateGradiente}.
 
-\begin{algorithm}[H]
+\begin{algorithm}
 \caption{Algoritmo del gradiente conjugado}\label{alg:ConjugateGradiente}
 \begin{algorithmic}[1]
 \Procedure \textsc{Gradiente\_Conjugado}
@@ -611,11 +611,19 @@ x^{k+1} = x^k - \alpha^k[\nabla^2 f(x^k)]^{-1}\nabla f(x^k)
 \label{eq:4.24}
 \end{equation}
 donde $\alpha^k$ se elige con una buena búsqueda local. 
-Un ejemplo puede ser inicializar $\Delta^k = 1$ en \ref{alg:LocalSearch}. 
+Un ejemplo puede ser inicializar $\Delta^k = 1$ en Algoritmo \ref{alg:LocalSearch}. 
 Adicionalmente a este cambio, la dirección $d_N$ puede ser perturbada para asegurar la convergencia global del algoritmo. 
 La forma más fácil de realizar este cambio es usar la dirección del descenso más rápido siempre cuando $d^k_N$ no satisface alguna de las condiciones de convergencia. 
 
-Un posible esquema de dicho algoritmo se presenta a continuación:
+Un posible esquema de dicho algoritmo se presenta en Algoritmo ~\ref{alg:LSNewton}.
+
+En el tercer paso, se toma la dirección del descenso más rápido si $\nabla f(x^k)'d^k_N\geq 0$. 
+Otra posible modificación del método de Newton podría ser aquella que toma la dirección de la curvatura negativa, es decir, $d^k = -d_N^k$. 
+Esta modificación se puede hacer si las siguientes dos condiciones se cumplen:
+\begin{enumerate}
+	\item $|\nabla f(x^k)'d^k| \geq c_1||\nabla f(x^k)||^q$
+	\item $||d^k||^p \leq c_2 ||\nabla f(x^k)||$
+\end{enumerate}
 
 \begin{algorithm}[H]
 \caption{Método de Newton con Búsqueda Lineal}\label{alg:LSNewton}
@@ -637,14 +645,6 @@ Un posible esquema de dicho algoritmo se presenta a continuación:
 \end{algorithmic}
 \end{algorithm}
 
-En el tercer paso, se toma la dirección del descenso más rápido si $\nabla f(x^k)'d^k_N\geq 0$. 
-Otra posible modificación del método de Newton podría ser aquella que toma la dirección de la curvatura negativa, es decir, $d^k = -d_N^k$. 
-Esta modificación se puede hacer si las siguientes dos condiciones se cumplen:
-\begin{enumerate}
-	\item $|\nabla f(x^k)'d^k| \geq c_1||\nabla f(x^k)||^q$
-	\item $||d^k||^p \leq c_2 ||\nabla f(x^k)||$
-\end{enumerate}
-
 Una segunda modificación es perturbar la matriz Hessiana con una matriz definida positiva $Y^k$ y ahora la solución provendría de resolver el sistema $(\nabla^2 f(x^k) + Y^k)d = -\nabla f(x^k)$.
 
 Las modificaciones comunes de los métodos de Newton se basan en el decremento monótono de los valores de la función objetivo. 
@@ -652,9 +652,9 @@ Con estos cambios la región de convergencia del método puede aumentar más de 
 
 La siguiente modificación está basada en las condiciones de búsqueda lineal y mantiene la propiedad de convergencia global. 
 En esta modificación, usaremos una regla no monótona. 
-Por lo tanto, el método obtenido es el siguiente:
+Por lo tanto, el método obtenido se presenta en Algoritmo \ref{alg:NonMonotoneNewton}.
 
-\begin{algorithm}[H]
+\begin{algorithm}
 \caption{Método de Newton no monótono}\label{alg:NonMonotoneNewton}
 \begin{algorithmic}[1]
 \Procedure \textsc{NewtonNM} ($c_1>0,c_2>0,p\geq 2, q\geq 3$ y $M$ entero)
@@ -708,7 +708,15 @@ Por simplicidad, asumiremos que la matriz $D^k=I$, es decir, la matriz identidad
 Estos algoritmos se caracterizan por la siguiente idea: cuando la matriz $\nabla^2 f(x^k)$ es definida positiva, entonces el radio $a^k$ tiene que ser lo suficientemente grande que el minimizador de \ref{eq:4.26} no tenga restricciones y el paso dado por Newton sea un entero. 
 Además, $a^k$ se actualiza en cada iteración y su instrucción de actualización depende de la proporción $\rho^k$ entre la reducción de los valores de la función objetivo $f(x^k)-f(x^{k+1})$ y la reducción esperada $f(x^k)-q^k(s^k).$
 
-El siguiente algoritmo presenta las ideas anteriores y también garantiza la satisfacción de las condiciones de optimalidad necesarias para \ref{eq:4.11} en su tercer paso. 
+El siguiente algoritmo (Algoritmo \ref{alg:TrustRegionNewton}) presenta las ideas anteriores y también garantiza la satisfacción de las condiciones de optimalidad necesarias para \ref{eq:4.11} en su tercer paso. 
+
+Si $f$ es además continuamente 2-diferenciable, entonces la secuencia del algoritmo anterior, $\{x^k\}$, tiene un punto límite que satisface las condiciones de optimalidad necesarias de primer y segundo orden para la ecuación \ref{eq:4.11}. 
+Además, si $\{x^k\}$ converge a un punto en el que la matriz Hessiana $\nabla^2f$ es definida positiva, entonces el orden de convergencia es superlineal. 
+
+El esfuerzo computacional de este algoritmo es el subproblema de las regiones de confianza. 
+Debido a este hecho, se han ido desarrollando cada vez más algoritmos para resolverlo. 
+Sin embargo, no necesitamos una solución exacta para esta ecuación. 
+Para probar que la convergencia global del algoritmo es suficiente verificar que el valor $q^k(s^k)$ es menor que el valor en un punto de Cauchy, que es el punto que minimiza el modelo cuadrático en la región de confianza.
 
 \begin{algorithm}[H]
 \caption{Método de Newton basado en Regiones de Confianza}\label{alg:TrustRegionNewton}
@@ -742,14 +750,6 @@ El siguiente algoritmo presenta las ideas anteriores y también garantiza la sat
 \end{algorithmic}
 \end{algorithm}
 
-Si $f$ es además continuamente 2-diferenciable, entonces la secuencia del algoritmo anterior, $\{x^k\}$, tiene un punto límite que satisface las condiciones de optimalidad necesarias de primer y segundo orden para \ref{eq:4.11}. 
-Además, si $\{x^k\}$ converge a un punto en el que la matriz Hessiana $\nabla^2f$ es definida positiva, entonces el orden de convergencia es superlineal. 
-
-El esfuerzo computacional de este algoritmo es el subproblema de las regiones de confianza. 
-Debido a este hecho, se han ido desarrollando cada vez más algoritmos para resolverlo. 
-Sin embargo, no necesitamos una solución exacta para esta ecuación. 
-Para probar que la convergencia global del algoritmo es suficiente verificar que el valor $q^k(s^k)$ es menor que el valor en un punto de Cauchy, que es el punto que minimiza el modelo cuadrático en la región de confianza.
-
 \subsubsection{Métodos de Newton Truncados}
 
 Los métodos de Newton necesitan calcular la solución de un sistema lineal de ecuaciones en cada iteración. 
@@ -782,9 +782,10 @@ Generaremos los vectores $d_N^i$, que se van a ir aproximando a la dirección $d
 
 Este algoritmo tiene el mismo resultado para convergencia que el método de Newton. 
 Por simplicidad, eliminaremos las dependencias en la iteración $k$ y estableceremos $H = \nabla^2 f(x^k)$ y $g=\nabla f(x^k)$. 
-Este método genera las direcciones conjugadas $s^i$ y los vectores $p^i$ que aproximan la solución del sistema de Newton $\widetilde{d^k_N}$
+Este método genera las direcciones conjugadas $s^i$ y los vectores $p^i$ que aproximan la solución del sistema de Newton $\widetilde{d^k_N}$. 
+Esto se puede encontrar representado en el Algoritmo \ref{alg:NewtonTruncado}.
 
-\begin{algorithm}[H]
+\begin{algorithm}
 \caption{Algoritmo de Newton Truncado}\label{alg:NewtonTruncado}
 \begin{algorithmic}[1]
 \Procedure \textsc{NewtonRegionConfianza} ($k,H,g$ y $\eta>0$ escalar)
@@ -852,9 +853,9 @@ v^k = \dfrac{\delta^k}{(\delta^k)'\gamma^k} - \dfrac{H^k\gamma^k}{(\gamma^k)'H^k
 y $c>0$ es un escalar. 
 El algoritmo que vamos a mostrar ahora fue creado por Broyden, Flecher, Goldfarb y Shanno. 
 Es un método de búsqueda lineal en el que el tamaño de paso es $\alpha^k$ se obtiene mediante un algoritmo de búsqueda lineal. 
-El esquema del algoritmo se presenta debajo:
+El esquema del algoritmo se presenta en Algoritmo \ref{alg:BFGSQuasiNewton}.
 
-\begin{algorithm}[H]
+\begin{algorithm}
 \caption{Algoritmo BFGS Inverso Quasi-Newton}\label{alg:BFGSQuasiNewton}
 \begin{algorithmic}[1]
 \Procedure \textsc{InversaBFGSQuasiNewton}
@@ -868,7 +869,7 @@ El esquema del algoritmo se presenta debajo:
   H^{k+1} & = & H^k + \Delta H^k
  \end{matrix}
 	\end{equation}
-	con $\Delta H^k$ dada por \ref{eq:4.31} con $c=1$.
+	con $\Delta H^k$ dada por la regla \ref{eq:4.31} con $c=1$.
 	\State Establecer $k = k+1$
 \EndWhile
 \EndProcedure
@@ -885,7 +886,7 @@ entonces la secuencia de puntos generada por el algoritmo satisface
 \begin{equation*}
 \lim_{k\xrightarrow{}{}\infty} inf||\nabla f(x^k)|| = 0
 \end{equation*}
-que es la condición débil de \ref{eq:3.5}. 
+que es la condición débil de \ref{eq:4.5}. 
 Para el caso convexo, la desigualdad anterior se mantiene. 
 El siguiente resultado nos dará información sobre el orden de convergencia de este algoritmo. 
 
@@ -927,7 +928,7 @@ En este conjunto se conoce el patrón y se elige el tamaño de paso para preserv
 Para DLFSA haremos la siguiente suposición: las direcciones $d^j\in\mathcal{D}^k$  son la j-ésima columna de una matriz $B^k$ de tamaño $n\times r$ con rango $n$. 
 En este caso, no hay suposiciones adicionales y solo tiene que verificar la reducción de la función objetivo. 
 
-Los dos siguientes algoritmos muestran una versión del PSA y del DFLSA.
+Los dos siguientes algoritmos muestran una versión del PSA (Algoritmo \ref{alg:PSA}) y del DFLSA (Algoritmo \ref{alg:DFLSA}).
 
 \begin{algorithm}[H]
 \caption{Algoritmo de Búsqueda de Patrones}\label{alg:PSA}

@@ -27,24 +27,17 @@
 \BOOKMARK [0][-]{chapter.6}{Algoritmos de Referencia}{}% 27
 \BOOKMARK [1][-]{section.6.1}{Algoritmo Gen\351tico Estacionario Uniforme}{chapter.6}% 28
 \BOOKMARK [2][-]{subsection.6.1.1}{Pseudoc\363digo}{section.6.1}% 29
-\BOOKMARK [1][-]{section.6.2}{CHC}{chapter.6}% 30
-\BOOKMARK [2][-]{subsection.6.2.1}{Pseudoc\363digo}{section.6.2}% 31
-\BOOKMARK [0][-]{chapter.7}{Componentes de la propuesta}{}% 32
-\BOOKMARK [1][-]{section.7.1}{Componentes comunes}{chapter.7}% 33
-\BOOKMARK [2][-]{subsection.7.1.1}{Operador de Reparaci\363n}{section.7.1}% 34
-\BOOKMARK [1][-]{section.7.2}{Componentes de AG}{chapter.7}% 35
-\BOOKMARK [2][-]{subsection.7.2.1}{Cruce Uniforme}{section.7.2}% 36
-\BOOKMARK [2][-]{subsection.7.2.2}{Mutaci\363n}{section.7.2}% 37
-\BOOKMARK [2][-]{subsection.7.2.3}{Operador de Reemplazo Estacionario}{section.7.2}% 38
-\BOOKMARK [1][-]{section.7.3}{Componentes de CHC}{chapter.7}% 39
-\BOOKMARK [2][-]{subsection.7.3.1}{Cruce HUX}{section.7.3}% 40
-\BOOKMARK [2][-]{subsection.7.3.2}{Enfrentamiento}{section.7.3}% 41
-\BOOKMARK [0][-]{chapter.8}{Parte Experimental}{}% 42
-\BOOKMARK [1][-]{section.8.1}{Algoritmos de Referencia experimentaci\363n}{chapter.8}% 43
-\BOOKMARK [1][-]{section.8.2}{Resultados versi\363n expensive}{chapter.8}% 44
-\BOOKMARK [1][-]{section.8.3}{Incorporaci\363n del hist\363rico}{chapter.8}% 45
-\BOOKMARK [1][-]{section.8.4}{Uso de GRASP}{chapter.8}% 46
-\BOOKMARK [1][-]{section.8.5}{Operador de Cruce Intensivo}{chapter.8}% 47
-\BOOKMARK [1][-]{section.8.6}{Estudio de la diversidad}{chapter.8}% 48
-\BOOKMARK [1][-]{section.8.7}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.8}% 49
-\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 50
+\BOOKMARK [2][-]{subsection.6.1.2}{Componentes}{section.6.1}% 30
+\BOOKMARK [1][-]{section.6.2}{CHC}{chapter.6}% 31
+\BOOKMARK [2][-]{subsection.6.2.1}{Pseudoc\363digo}{section.6.2}% 32
+\BOOKMARK [2][-]{subsection.6.2.2}{Componentes}{section.6.2}% 33
+\BOOKMARK [0][-]{chapter.7}{Componentes de la propuesta}{}% 34
+\BOOKMARK [0][-]{chapter.8}{Parte Experimental \(In progress\)}{}% 35
+\BOOKMARK [1][-]{section.8.1}{Algoritmos de Referencia experimentaci\363n}{chapter.8}% 36
+\BOOKMARK [1][-]{section.8.2}{Resultados versi\363n expensive}{chapter.8}% 37
+\BOOKMARK [1][-]{section.8.3}{Incorporaci\363n del hist\363rico}{chapter.8}% 38
+\BOOKMARK [1][-]{section.8.4}{Uso de GRASP}{chapter.8}% 39
+\BOOKMARK [1][-]{section.8.5}{Operador de Cruce Intensivo}{chapter.8}% 40
+\BOOKMARK [1][-]{section.8.6}{Estudio de la diversidad}{chapter.8}% 41
+\BOOKMARK [1][-]{section.8.7}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.8}% 42
+\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 43
