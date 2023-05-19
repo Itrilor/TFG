@@ -1,7 +1,104 @@
 \chapter{Componentes de la propuesta}
 
-En este capítulo se presentan los componentes, es decir, las funcionalidades propias de los algoritmos que se utilizaran como base (presentados en el capítulo anterior). 
+En este capítulo se presentan los distintos componentes que se han ido desarrollando como modificaciones de los distintos componentes de los algoritmos de referencia. 
+Es importante mencionar que en este capítulo no solo se harán mención de aquellas modificaciones que han resultado fructuosas, si no también aquellas que no han mejorado los resultados de versiones anteriores. 
+Estas últimas se conformarán su propia sección aparte al final del capítulo. 
 Se describirán detalladamente además de usar pseudocódigo para representarlos.
 
+Téngase en cuenta que solo se explicará brevemente el por qué de estas modificaciones, ya que entraremos en este tema en más profundidad en el siguiente capítulo. 
 
+\section{Histórico}
 
+Al tener tan pocas evaluaciones y con un tamaño tan pequeño de la población no podemos permitirnos una exploración del vecindario de las distintas soluciones en direcciones que en el momento se podrían considerar erróneas, es decir, que ocasionarían que empeorasen las soluciones. 
+Por ello, se plantea un sistema capaz de ``recordar'' buenos elementos y malos elementos de la solución; considerándose ``buenos elementos'' aquellos que aparecen en gran medida en las mejores soluciones y no se encuentran en las peores, y ``malos elementos'' aquellos que aparecen en gran medida en las peores soluciones y no se encuentran en las mejores. 
+A esto lo llamaremos \textbf{histórico}. 
+
+De esta forma, podemos guiar la exploración de vecindario hacia aquellos elementos que han demostrado ser ``buenos'' y alejarlos de aquellos que han demostrado ser ``malos''. 
+Esta lógica la podemos aplicar en el Operador de Reparación y/o en la Mutación. 
+Esto se haría sustituyendo la lógica Greedy de tener en cuenta el ratio $valor\_acumulado/peso$ a la hora de añadir o eliminar elementos por un fomento del uso de los datos del histórico: se intentarán añadir de forma aleatoria entre los mejores elementos y se intentarán eliminar de forma aleatoria entre los peores elementos. 
+
+Sin embargo, no podemos permitir que esto guíe toda la ejecución, tenemos que decidir un par de cosas:
+\begin{itemize}
+	\item ¿Cuándo se para de recopilar datos para generar el histórico? 
+	Si recopilamos información de pocas iteraciones puede ocasionar que los datos obtenidos no sean representativos, ya que es posible que no se hayan alcanzado en el momento suficientes soluciones buenas. 
+	Si recopilamos información de demasiadas iteraciones puede suponer que los datos obtenidos no sean representativos, ya que la población hubiese podido converger por lo que no hay ningún elemento que se pudiese considerar ``bueno'' o ``malo''; además de que si se dejan pocas ejecuciones para el uso del histórico no se va a poder alcanzar mucha mejora. 
+	\item ¿Durante cuántas ejecuciones deberíamos utilizar el histórico? 
+	En otras palabras, ¿una vez obtenido los datos del histórico deberíamos utilizarlos hasta el final del algoritmo? 
+	La respuesta a esto es: no se debería. 
+	Esto es porque no podemos esperar que los datos obtenidos mediante el histórico sean del todo fiables, es decir, podrían estar guiando la solución hasta un máximo local, por lo que las soluciones de la población convergerían rápidamente. 
+\end{itemize}
+
+Por lo tanto, llegamos a la conclusión de que no podemos utilizar únicamente el histórico. 
+Por ello, lo que haremos será intercalar varias etapas de recopilación de datos y uso del histórico generado. 
+Durante la recopilación de datos se procederá de la misma forma que lo haría si esta modificación no estuviese añadida, con la excepción de que se irá guardando en un archivo las distintas soluciones que estamos alcanzando para luego hacer el estudio de sus elementos. 
+De las 450 iteraciones totales iremos alternando fases cada 50 iteraciones, de esta forma combinamos en una proporción 4-5 uso del histórico y comportamiento usual. 
+Este esquema se ve representado de forma genérica, por simplicidad, en Algoritmo \ref{alg:Historico_Estructura}.
+
+\begin{algorithm}
+\caption{Estructura General del Histórico}\label{alg:Historico_Estructura}
+\begin{algorithmic}[1]
+\Procedure \texttt{Histórico}
+\State \texttt{RecDatos} = \texttt{True}
+\For{\texttt{i = 0; i < NEVALUACIONES; ++i}}
+	\If{\texttt{i}\%50==0 \&\& \texttt{i}$\neq$ 0} /* Puntos de cambio */
+		\If{i\%100} /* Empezamos a recopilar datos */
+			\State \texttt{RecDatos = True}
+			\State Eliminar todos los datos actuales del histograma
+			\State Recopilar las soluciones de la población actual
+		\Else
+			\State \texttt{RecDatos = False}
+		\EndIf
+	\EndIf
+	\If{\texttt{RecDatos}}
+		\State Ejecutar los componentes de la manera original
+		\State Recopilar las nuevas soluciones
+	\Else 
+		\State Ejecutar los componentes usando los datos del histórico
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Las modificaciones realizadas al Operador de Reparación y a la Mutación se verán representadas respectivamente en Algoritmo \ref{alg:Historico_OR} y Algoritmo \ref{alg:Historico_Mutacion}.
+
+\begin{algorithm}
+\caption{Histórico en Operador de Reparación}\label{alg:Historico_OR}
+\begin{algorithmic}[1]
+\Procedure \texttt{Historico\_OR}($hijo$)
+\State Calcular el peso total de \texttt{hijo} $\xrightarrow{}{}$ \texttt{pesoHijo}
+\If{\texttt{pesoHijo > c}}
+	\State Eliminar de forma aleatoria los peores elementos según el histórico hasta que \texttt{pesoHijo} deje de sobrepasar \texttt{c}
+	\State Si no es posible lo anterior y sigue dándose la condición, eliminar de forma aleatoria los elementos que no aparecen en el histórico hasta que \texttt{pesoHijo} deje de sobrepasar \texttt{c}
+	\State Si no es posible lo anterior y sigue dándose la condición, eliminar de forma aleatoria los mejores elementos según el histórico hasta que \texttt{pesoHijo} deje de sobrepasar \texttt{c}
+\Else
+	\State Añadir de forma aleatoria los mejores elementos según el histórico sin que \texttt{pesoHijo} sobrepase \texttt{c}
+	\State Añadir de forma aleatoria los elementos que no aparecen en el histórico sin que \texttt{pesoHijo} sobrepase \texttt{c}
+	\State Añadir de forma aleatoria los peores	elementos según el histórico sin que \texttt{pesoHijo} sobrepase \texttt{c}
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{Histórico en Mutación}\label{alg:Historico_Mutacion}
+\begin{algorithmic}[1]
+\Procedure \texttt{Historico\_Mutacion}($solucion$)
+\State \texttt{sustituido = False}
+\If{\texttt{!sustituido}}  /*Establecer una lista de prioridades sobre qué mutar y con qué tipo de elementos (una vez que se haya sustituido, se establece \texttt{sustituido = True} y no entra en el resto de elementos de la lista)*/
+	\State Sustituir peor 1 por mejor 0
+	\State Sustituir 1 sin información por mejor 0
+	\State Sustituir peor 1 por 0 sin información
+	\State Sustituir 1 sin información por 0 sin información
+	\State Sustituir mejor 1 por mejor 0
+	\State Sustituir peor 1 por peor 0
+	\State Sustituir mejor 1 por 0 sin información 
+	\State Sustituir 1 sin información por peor 0
+	\State Sustituir mejor 1 por peor 0
+\EndIf
+\State Aplicar Operador de Reparación con Histórico para rellenar más las soluciones
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{GRASP}

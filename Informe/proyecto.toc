@@ -47,12 +47,14 @@
 \contentsline {subsubsection}{Cruce HUX}{42}{subsection.6.2.2}%
 \contentsline {subsubsection}{Enfrentamiento}{43}{ALG@line.13}%
 \contentsline {chapter}{\numberline {7}Componentes de la propuesta}{45}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Parte Experimental (In progress)}{47}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{48}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Resultados versión expensive}{48}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Incorporación del histórico}{48}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Uso de GRASP}{48}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{48}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{48}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{48}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Conclusiones}{49}{chapter.9}%
+\contentsline {section}{\numberline {7.1}Histórico}{45}{section.7.1}%
+\contentsline {section}{\numberline {7.2}•}{46}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Parte Experimental (In progress)}{49}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{50}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Resultados versión expensive}{50}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Incorporación del histórico}{50}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Uso de GRASP}{50}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{50}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{50}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{50}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{51}{chapter.9}%
