@@ -24,6 +24,7 @@ La primera razón, y posiblemente la más importante, es la ausencia de \textit{
 Ante este panorama también debemos encontrar un problema específico adecuado sobre el que trabajar desde cero y que resulte de interés. 
 Como el objetivo inicial estaba relacionado con redes neuronales, buscamos un problema que puede tener representación binaria (\texttt{1} para la elección de elementos, \texttt{0} para el caso contrario). 
 En este sentido, el QKP cumple con este requisito, además tiene interés añadido debido a que es un problema con restricciones y constituye una alternativa moderna de un problema clásico; además de que podemos generar instancias de este problema con distintos tamaños. 
+Además, es un problema que tiene muchas aplicaciones en el mundo real en situaciones donde los recursos con distintos niveles de interacción tienen que distribuirse entre distintas tareas, por ejemplo, asignar compañeros de equipo a distintos proyectos donde las contribuciones de cada miembro se consideran de forma individual y por parejas. 
 Por lo tanto, teniendo en cuenta la falta de \textit{benchmarks} y referencias, el QKP resulta ser una buena opción, ya que es un problema difícil, costoso y moderno. 
 
 
@@ -100,15 +101,15 @@ El formato que siguen los archivos es el siguiente:
 \cellcolor[HTML]{DAE8FC}                                          & 50\%                                                  & 10                                                              \\ \cline{2-3} 
 \rowcolor[HTML]{DDFDFF} 
 \cellcolor[HTML]{DAE8FC}                                          & 75\%                                                  & 10                                                              \\ \cline{2-3} 
-\multirow{-4}{*}{\cellcolor[HTML]{DAE8FC}n = 100}                 & 100\%                                                 & 10                                                              \\ \hline
+\multirow{-4}{*}{\cellcolor[HTML]{DAE8FC}n = 100}                 & 100\%                                                 & 9                                                              \\ \hline
 \rowcolor[HTML]{DAE8FC} 
-\cellcolor[HTML]{DDFDFF}                                          & 25\%                                                  & 10                                                              \\ \cline{2-3} 
+\cellcolor[HTML]{DDFDFF}                                          & 25\%                                                  & 9                                                              \\ \cline{2-3} 
 \cellcolor[HTML]{DDFDFF}                                          & 50\%                                                  & 10                                                              \\ \cline{2-3} 
 \rowcolor[HTML]{DAE8FC} 
 \cellcolor[HTML]{DDFDFF}                                          & 75\%                                                  & 10                                                              \\ \cline{2-3} 
 \multirow{-4}{*}{\cellcolor[HTML]{DDFDFF}n = 200}                 & 100\%                                                 & 10                                                              \\ \hline
 \rowcolor[HTML]{DDFDFF} 
-\cellcolor[HTML]{DAE8FC}                                          & 25\%                                                  & 10                                                              \\ \cline{2-3} 
+\cellcolor[HTML]{DAE8FC}                                          & 25\%                                                  & 9                                                              \\ \cline{2-3} 
 \multirow{-2}{*}{\cellcolor[HTML]{DAE8FC}n = 300}                 & 50\%                                                  & 10                                                              \\ \hline
 \end{tabular}
 \end{table}

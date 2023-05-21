@@ -994,4 +994,386 @@ Como resultado de esta teoría, tenemos algoritmos que nos permitan generar secu
 Estos métodos son el principio de la gran cantidad de algoritmos presentados en la literatura. 
 Estos algoritmos proponen formas de alcanzar un óptimo global  de funciones basadas en una idea inspirada en la naturaleza. 
 
-Incluso si la gran cantidad de algoritmos que presentaremos en las próximas secciones, el diseño de cada uno es similar a cómo esta teoría propone el movimiento, es decir, metaheurísticas basando su movimiento en una dirección dada por un vector y el criterio de parada basado en condiciones que normalmente presentan la optimalidad del mejor individuo de la población .
+Incluso si la gran cantidad de algoritmos que presentaremos en las próximas secciones, el diseño de cada uno es similar a cómo esta teoría propone el movimiento, es decir, metaheurísticas basando su movimiento en una dirección dada por un vector y el criterio de parada basado en condiciones que normalmente presentan la optimalidad del mejor individuo de la población.
+
+\section{Comparaciones por parejas}
+
+Las comparaciones por parejas son el tipo de tests estadísticos más simples que un investigador puede aplicar en el contexto de un estudio experimental. 
+Estos tests son útiles para comparar el rendimiento de dos algoritmos cuando se aplican a un conjunto de problemas común. 
+En el análisis de múltiples problemas, se requiere un valor por cada par de algoritmo-problema (frecuentemente un valor medio de varias ejecuciones). 
+
+En esta sección, nos centraremos en primer lugar en un procedimiento fácil y potente, que puede proporcionar una primera impresión sobre la comparación: el Test de Signos. 
+Entonces, introduciremos el uso del test de posiciones con signos de Wilconxon, como un ejemplo de un test no paramétrico para comparaciones estadísticas por parejas. 
+
+\subsection{Test de signos}
+
+Una forma popular de comparar el rendimiento general de los algoritmos es contar el número de casos en los que un algoritmo es el ganador (tiene el mejor rendimiento) de entre todos. 
+Algunos autores también utilizan este conteo en estadística inferencial, con un test conocido como Test de signos. 
+Si amso algoritmos comparados son, como se asume en la hipótesis nula, equivalentes, cada uno debería ganar en aproximadamente $n/2$ de $n$ problemas. 
+
+El número de victorias se distribuye de acuerdo a una distribución binomial: para un mayor número de casos, el número de victorias está bajo la hipótesis nula de acuerdo a $n(n/2, \sqrt{n}/2)$, lo que permite el uso del Z-test: si el número de victorias es, al menos, $n/2 + 1.96\cdot \sqrt{n}/2$, entonces el algoritmo es significativamente mejor con $p < 0.05$. 
+
+\subsection{Test de posiciones con signos de Wilcoxon}
+
+Este test se utiliza para responder a la siguiente pregunta: ¿Dos muestras representan 2 poblaciones diferentes? 
+Es un procedimiento no paramétrico utilizado en situaciones de testeo de hipótesis, involucrando un deiseño con dos muestras. 
+Esto es análogo al t-test por parejas en procedimientos estadísticos no paramétricos; por lo tanto, es un test por parejas cuyo objetivo es detectar diferencias significativas entre dos  muestras,es decir, el comportamiento de dos algoritmos. 
+
+\begin{definicion}{Test de Wilcoxon}
+Sea $d_i$ la diferencia entre la puntuación del rendimiento de los algoritmos en el problema $i$-ésimo de entre $n$ problemas (si esta puntuación se pueden representar en distintas posiciones, pueden ser normalizados en el intervalo [0,1], con el objetivo de no darle prioridad a ningún problema). 
+Las diferencias se ordenan según sus valores absolutos; en caso de empates, se puede aplicar alguno de los métodos disponibles en la literatura (ignorar empates, asignar la posición más elevada, calcular todas las posibilidades y hacer la media de los resultados obtenidos para cada aplicación del test...), aunque recomendamos el uso de hacer la media de las posiciones (por ejemplo, si dos diferencias están empatadas en la asignación de posiciones 1 y 2, entonces se le asignará la posición 1.5 a ambas).
+\end{definicion} 
+
+Sea $\mathbb{R}^+$ la suma de las posiciones para los problemas tales que el primer algoritmo mejoró al segundo, y $\mathbb{R}^-$ la suma de las posiciones del caso contrario. 
+Las posiciones de $d_i = 0$ se dividen a partes iguales entre ambas sumas; si hay un número impar de estas, una de ellas se ignora:
+
+\begin{equation}
+\begin{aligned}
+R^+ & = \sum_{d_i>0} \text{rank}(d_i) + \dfrac{1}{2} \sum_{d_i=0}\text{rank}(d_i) \\
+R^- & = \sum_{d_i<0} \text{rank}(d_i) + \dfrac{1}{2} \sum_{d_i=0}\text{rank}(d_i) 
+\end{aligned}
+\label{eq:4.34}
+\end{equation}
+
+Sea $T = \min(R^+,R^-)$. 
+si $T$ es menor o igual que el valor de la distribución de Wilcoxon para $n$ grados de libertad, se rechaza la hipótesis nula de igualdad; esto significa que dicho algoritmo supera al otro, con el $p$-valor asociado. 
+
+El test de Wilcoxon es más sensible que el $t$-test. 
+Asume conmensurabilidad de diferencias, pero solo de forma cualitativa: mayores diferencias contarán más, lo que es probablemente lo que se desea, pero las magnitudes absolutas se ignoran. 
+Desde un punto de vista estadístico, este test es más seguro ya que no asume una distribución normal. 
+Además, los valores atípicos (\textit{outliers}) tienen menos efecto en el test de Wilcoxon que en el $t$-test. 
+El test de Wilcoxon asume diferencias continuas $d_i$; por lo tanto, no deberían ser redondeadas a uno o dos decimales, ya que esto reduciría la potencia del test en caso de un número elevado de empates. 
+
+\section{Múltiples comparaciones con un método de control}
+
+Una de las situaciones más frecuentes donde el uso de proceedimientos estadísticos es necesario es el análisis conjunto de resultados obtenidos por distintos algoritmos. 
+Los grupos de diferencias entre estos métodos (también llamados bloques) se suelen asociar con los problemas con los que se trabaja en el estudio experimental. 
+Cuando nos referimos a test de comparaciones múltiples, un bloque se compone de tres o más sujetos o resultados, cada uno de ellos correspondiendo a la evaluación de rendimiento del algoritmo sobre el problema. 
+
+En el análisis por parejas, si se intenta extraer una conclusión que involucre más de una comparación por parejas, obtendremos un error acumulado procedente de su combinación. 
+En términos estadísticos, estamos perdiendo el control en el error producido por familia (\textit{Family-Wise Error Rate}, FWER), definido como la probabilidad realizar descubrimientos falsos de entre todas las hipótesis cuando se usan los test múltiples por parejas. 
+La verdadera significación estadística de combinar comparaciones por parejas viene dada por: 
+
+\begin{equation*}
+\begin{aligned}
+p & = P(\text{Rechazar }H_0 | H_0 \text{ cierto}) = 1 - P(\text{Aceptar }H_0 | H_0 \text{ cierto})\\
+ & = 1 - P(\text{Aceptar }A_k=A_i, i=1,...,k -1 | H_0 \text{ cierto}) \\
+ & = 1 - \prod_{i=1}^{k-1}P(\text{Acceptar} A_k=A_i | H_0 \text{ cierto}) \\ 
+ & = 1- \prod_{i=1}^{k-1}[1 - P(\text{Rechazar } A_k=A_i | H_0 \text{ cierto} )] \\ 
+ & = 1 - \prod_{i=1}^{k-1} (1-p_{H_i})
+\end{aligned}
+\end{equation*}
+
+Por lo tanto, un test de comparación por parejas, tal como el test de Wilcoxon, no debería usarse para realizar varias comparaciones involucrando un conjunto de algoritmos, porque el FWER no está controlado. 
+
+Esta sección está dedicada a describir el uso de diversos procedimientos para comparaciones múltiples considerando un método de control. 
+En este sentido, un método de control puede ser definido como el algoritmo más interesante para el investigador del estudio experimental (normalmente este suele ser la nueva propuesta). 
+Por lo tanto, su rendimiento será contrastado con el resto de algoritmos del estudio. 
+
+\subsection{Test múltiple de signos}
+
+Dado un algoritmo de control etiquetado, el test de signos para múltiples comparaciones nos permite destacar aquellos cuyos rendimientos son estatísticamente distintos cuando comparados con el algoritmo de control. 
+Este procedimiento es el siguiente:
+\begin{enumerate}
+	\item Representaremos por $x_{i,1}$ y $x_{i,j}$ los rendimientos del algoritmo de control y el algoritmo $j$-ésimo en el $i$-ésimo problema.
+	\item Calculamos las diferencias de signos $d_{i,j} = x_{i,j} - x_{i,1}$. 
+Esto es, emparejar cada rendimiento con el control y, en cada problema, restar el rendimiento del algoritmo de control al rendimiento del $j$-ésimo algoritmo. 
+	\item Sea $r_j$ el número de diferencias, $d_{i,j}$ que tienen el signo con la menor frecuencia de aparición con un emparejamiento de un algoritmo con el de control. 
+	\item Sea $M_1$ la respuesta media de una muestra de resultados del algoritmo de control y $M_j$ la respuesta media de una muestra de los resultados del algoritmo $j$-ésimos. 
+Aplicaremos una de las siguientes reglas de decisión:
+	\begin{itemize}
+		\item Para contrastar $H_0 : M_j \geq M_1$ frente $H_1:M_j < M_1$, rechazaremos $H_0$ si el número de símbolos negativos es menor o igual al valor crítico de $R_j$ para $k-1$ (número de algoritmos excluyendo el de control), $n$ (número de problemas), y la tasa de error del experimento elegida. 
+		\item Para contrastar $H_0 : M_j \leq M_1$ frente $H_1:M_j > M_1$, rechazaremos $H_0$ si el número de símbolos positivos es menor o igual al valor crítico de $R_j$ para $k-1$, $n$, y la tasa de error del experimento elegida.  
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Los test de Friedman, Posiciones Alineadas de Friedman y Quade}
+
+El test de Friedman es un análogo no paramétrico del análisis paramétrico ANOVA. 
+Puede usarse para responder a la siguiente pregunta: 
+en un conjunto de $k\geq 2$ muestras, ¿al menos dos muestras representan poblaciones con diferentes valores medios? 
+El test de Friedman es análogo a repetidas medidas ANOVA en procedimientos estadísticos no paramétricos; por lo tanto, es un test de múltiples comparaciones cuyo objetivo es detectar diferencias significativas entre el comportamiento de dos o más algoritmos. 
+
+La hipótesis nula del test de Friedman establece la igualdad de medias entre las poblaciones. 
+La hipótesis alternativa se define como la negación de la hipótesis nula, por lo que es no direccional. 
+
+El primer paso para calcular el test estadístico es convertir los resultados originales en posiciones. 
+Esto se calcula utilizando el siguiente procedimiento:
+\begin{enumerate}
+	\item Reunir los resultados observados para cada par algoritmo-problema.
+	\item Por cada problema $i$, ordena los valores de $1$ (mejor resultado) a $k$ (peor resultado). 
+Denotaremos estas posiciones como $r_i^j$ ($1 \leq k$).
+	\item Para cada algoritmo $j$, hacemos la media de las posiciones obtenidas en todos los problemas para calcular la posición final $R_j = \dfrac{1}{n} \sum_{i}r_i^j$.
+\end{enumerate}
+
+Por ello, ordena los algoritmos de cada problema por separado; el algoritmo con mejor rendimiento debería obtener la posición $1$, el segundo la posición $2$, etc. 
+En caso de empate, se recomienda calcular la media de las posiciones. 
+Bajo la hipótesis nula, que establece que todos los algoritmos se comportan de forma similar (por lo tanto sus posiciones $R_j$ deberían ser iguales) la estadística de Friedman $F_j$ se puede calcular como
+\begin{equation}
+F_j = \dfrac{12n}{k(k+1)} \left[ \sum_jR_j^2 - \dfrac{k(k+1)^2}{4} \right]
+\label{eq:4.35}
+\end{equation}
+que se distribuye según una distribución $\chi^2$ con $k-1$ grados de libertad, donde $n$ y $k$ son lo suficientemente grandes (normalmente, $n>10$ y $k>5$). 
+Para menor número de algoritmos y problemas, los valores críticos ya han sido calculados. 
+
+Iman y Davenport propusieron una derivación del estadístico de Friedman en tnato que esta última métrica suele producir un efecto conservativo no deseado. 
+El estadístico propuesto es
+\begin{equation}
+F_{ID} = \dfrac{(n-1)\chi_F^2}{n(k-1) - \chi_F^2}
+\label{eq:4.36}
+\end{equation}
+que se distribuye de acuerdo a una F-distribución con $k-1$ y $(k-1)(N-1)$ grados de libertad. 
+
+Un inconveniente del esquema de posiciones empleado por el test de Friedman es que solo permite comparaciones dentro del mismo conjunto. 
+Cuando el número de algoritmos a comparar es pequeño, esto no puede ser una desventaja, en tanto que las comparaciones en el mismo conjunto pueden no ser significantes. 
+
+En el método de posiciones alineadas para el test de Friedman, el valor de una localización se calcula como la media de los rendimientos alcanzados por todos los algoritmos y problemas. 
+
+Las diferencias resultantes, que mantienen sus identidades con respecto al problema y la combinación de algoritmos a los que pertenecen, son entonces ordenados de 1 a $k\cdot n$ relativos entre sí. 
+Este esquema de posiciones es el mismo que se emplea en procedimientos de comparación múltiple que emplean muestras idependientes, como sería el test de Kruskal-Wallis. 
+Las posiciones asignadas a las observaciones alineadas se llaman posiciones alineadas. 
+
+El test estadístico de Friedman de Posiciones Alineadas se puede definir como:
+\begin{equation}
+F_{AR} = \dfrac{(k-1)\left[ \sum_{j=1}^k \hat{R}^2_j - \dfrac{kn^2}{4}(kn+1)^2 \right]}{\dfrac{kn(kn+1)(2kn+1)}{6} - \dfrac{1}{k}\sum_{i=1}^n \hat{R}_i^2} 
+\label{eq:4.37}
+\end{equation}
+donde $\hat{R}_i$ es igual a la posición total del problema $i$-ésimo y $\hat{R}_t$ es la posición total del $j$-ésimo algoritmo. 
+
+Finalmente, introduciremos un último test para realizar comparaciones múltiples: el test de Quade. 
+Este test, en contraste al test de Friedman, toma en cuenta el hecho de que algunos problemas son más difíciles o que las diferencias registradas en la ejecución de varios algoritmos sobre ellos son mayores (el test de Friedman considera todos los problemas iguales en términos de importancia). 
+Por lo tanto, las posiciones se calculan calculados en cada problema pueden ser escalados dependiendo de las diferencias observadas en el rendimiento de los algoritmos, obteniendo, como resultado, un análisis de \textit{ranking} con pesos de las muestras de resultados. 
+
+El procedimiento empieza encontrando las posiciones $r_i^j$ de la misma forma que el test de Friedman. 
+El siguiente paso requiere los valores originales del rendimiento de los algoritmos $x_i^j$. 
+Las posiciones se asignan a los propios problemas de acuerdo con el tamaño del rango de la muestra en cada problema. 
+El rango de la muestra dentro de los prolemas $i$ es la diferencia entre las mayores y menores observaciones en dicho problema:
+\begin{equation}
+\text{Rango en un problema}: i = \max_j x_i^j - \min_j x^j_i
+\label{eq:4.38}
+\end{equation}
+
+Obviamente, hay $n$ rangos de muestra, uno por cada problema. 
+Asignando la posición 1 al problema con el menor rango, la posición 2 al problema con el segundo menor rango... 
+Se usan las posiciones medias en caso de empate. 
+Sean $Q_1, Q_2, ..., Q_n$ las posiciones asignadas a los problemas $1,2,...,N$, respectivamente. 
+
+Finalmente, la posición de problema $Q_i$ se multiplica por la diferencia entre la posición dentro del problema $i$, $r_i^j$, y la posición media dentro de los problemas, $(k+1)/2$, para obtener el producto $S_i^j$, donde
+\begin{equation}
+S_i^j = Q_i \left[ r_i^j - \dfrac{k+1}{2} \right]
+\label{eq:4.39}
+\end{equation}
+es un estadístico que representa el tamaño relativo de cada observación dentro de un problema, ajustado para reflejar la significancia relativa del problema en el que aparece. 
+Además, definimos $S_j$ como la suma de cada algoritmo, $S_j = \sum_{i=1}^n S_i^j$, para $j=1,2,...k$.
+
+Por conveniencia, y para establecer una relación con el test de Friedman, también usaremos \textit{rankings} sin ajustes de medias,
+\begin{equation}
+W_i^j = Q_i \left[ r_i^j \right]
+\label{eq:4.40}
+\end{equation}
+y la posición media para el $j$-ésimo algoritmo, $T_j$, dado por
+\begin{equation}
+T_j = \dfrac{W_j}{n(n+1)/2}
+\label{eq:4.41}
+\end{equation}
+donde $W_j = \sum_{i=1}^n W_i^j$, para $j=1,2,...,k$.
+
+Se deben establecer algunas definiciones para calcular el test estadístico, $F_Q$. 
+Sean los términos $A$ y $B$
+\begin{equation}
+\begin{aligned}
+A & = \dfrac{n(n+1)(2n+1)k(k+1)(k-1)}{72} \\
+B & = \dfrac{1}{n} \sum_{j=1}kS_j^2
+\end{aligned}
+\label{eq:4.42}
+\end{equation}
+
+El test estadístico, $F_Q$, es
+\begin{equation}
+F_Q = \dfrac{(n-1)B}{A-B}
+\label{eq:4.43}
+\end{equation}
+que se distribuye de acuerdo a la $F$-distribución con $k-1$ y $(k-1)(n-1)$ grados de libertad. 
+Cuando se calcula el estadístico, nótese que, si $A=B$, debemos considerar que el punto se encuentra en la región crítica de la distribución estadística. 
+
+Para cada uno de estos test, una vez se hayan calculado los propios estadísticos, es posible calcular un $p$-valor mediante aproximaciones normales. 
+Si hallamos la existencia de diferencias significantes, podemos proceder con el procesamiento \textit{post-hoc} para caracterizar estas diferencias. 
+
+\subsection{Procedimientos \textit{post-hoc}}
+
+El principal inconveniente para los test de Friedman, Iman-Davenport, Friedman \textit{Aligned} y Quade es que solo pueden detectar diferencias significativas sobre la comparación múltiple en su totalidad, siendo incapaz de establecer comparaciones propias entre algunos de los algoritmos considerados. 
+Cuando el objetivo de la aplicación de tests múltiples es el realizar una comparación considerando un método de control y un conjunto de algoritmos, se puede definir una familia de hipótesis, relacionados con el método de control. 
+Entonces, el uso de un test \textit{post-hoc} puede conducir a la obtención de un $p$-valoro que determine el grado de rechazo de cada hipótesis. 
+
+Una familia de hipótesis es un conjunto de hipótesis de comparación lógicamente interrelacionadas tales que, en $1\times N$ comparaciones, compara los $k-1$ alogoritmos del estudio (excluyendo el de control) con el método de control, mientras que en $N\times N$ comparaciones, considera las $k(k-1)/2$ posibles comparaciones entre algoritmos. 
+Por lo tanto, la familia estará compuesta de $k-1$ o $k(k-1)/2$ hipótesis, respectivamente, tales que pueden ser ordenadas por su $p$-valor, desde el menor hasta el mayor. 
+
+El $p$-valor de cada hipótesis en la familia se puede obtener mediante una conversión de posiciones calculados por cada test mediante el uso de una aproximacicón normal. 
+El test estadístico para comparar el $i$-ésimo y el $j$-ésimo algoritmo, $z$ depende del procedimiento no paramétrico principal utilizado:
+\begin{itemize}
+	\item \textbf{Test de Friedman}
+	\begin{equation}
+		z = (R_i-R_j)/\sqrt{\dfrac{k(k+1)}{6n}}
+	\label{eq:4.44}
+	\end{equation}
+	donde $R_i$ y $R_j$ son la posiciones medias por el test de Friedman de los algoritmos comparados.
+	\item \textbf{Test de Friedman \textit{Aligned}}
+	\begin{equation}
+		z = (\hat{R}_i - \hat{R}_j) / \sqrt{\dfrac{k(n+1)}{6}}
+	\label{eq:4.45}
+	\end{equation}
+	donde $\hat{R}_i$ y $\hat{R}_j$ son las posiciones medias por el test de Posiciones Alineadas de Friedman	para los algoritmos comparados.
+	\item \textbf{Test de Quade}
+	\begin{equation}
+		z = (T_i-T_j) / \dfrac{k(k+1)(2n+1)(k-1)}{18n(n+1)}
+	\label{eq:4.46}
+	\end{equation}
+	donde $T_i = \dfrac{W_i}{n(n+1)/2}$, $T_j = \dfrac{W_j}{n(n+1)/2}$ y $W_i$ y $W_j$ son las posiciones sin el ajuste de medias por el test de Quade de los algoritmos comparados. 
+\end{itemize}
+
+Sin embargo, estos $p$-valores no son adecuados para comparaciones múltiples. 
+Cuando un $p$-valor es considerado en un test múltiple, refleja la posibilidad de error de una cierta comparación, pero no toma en consideración el resto de comparaciones pertenecientes a la familia. 
+Si $k$ algoritmos se comparan y en cada comparación el nivel de significancia es $\alpha$, entonces en una comparación individual la probabilidad de no hacer un error de Tipo 1 (rechazar una hipótesis nula cierta) es (1-$\alpha$), y la posibilidad de no hacer un error de Tipo 1 en $k-1$ comparaciones es $(1-\alpha)^{k-1}$. 
+Por lo tanto, la posibilidad de hacer uno o más errores de tipo 1 es $1-(1-\alpha)^{k-1}$. 
+
+El $z$-valor en todos los casos se usa para encontrar la probabilidad correspondiente $p$-value de la tabla de la distribución normal $N(0,1)$, el cual es entonces comparado con un nivel de significancia, $\alpha$, apropiado. 
+Los tests \textit{post-hoc} se diferencian en la forma en la que ajustan el valor de $\alpha$ para compensar las comparaciones múltiples.
+
+A continuación, definiremos un conjunto de procedimientos \textit{post-hoc} y explicaremos cómo calcular los APVs (\textit{Analysis of Partial Variance}) dependiendo del procedimiento \textit{post-hoc} usado en el análisis. 
+La notación usada para describir el cálculo de las APVs es la siguiente:
+\begin{itemize}
+	\item Índices $i$ y $j$ corresponden a una comparación en concreto o una hipótesis en una familia de hipótesis, de acuerdo con un orden incremental de sus $p$-valores. 
+El índice $i$ siempre se refiere a la hipótesis cuyo APV se está calculando y el índice $j$ se refiere a otra hipótesis de en la familia. 
+	\item $p_j$ es el $p$-valor obtenido por la $j$-ésimo hipótesis. 
+\end{itemize}
+
+Los procedimientos del ajuste de $p$-valores pueden ser clasificados en distintos casos:
+\begin{itemize}
+	\item \textbf{Un paso}: 
+	\begin{itemize}
+		\item El procedimiento de Bonferroni-Dunn: 
+		Ajusta los valores de $\alpha$ en un único paso mediante su división entre el número de comparaciones realizadas ($k-1$). 
+		Este procedimiento es el más simple, pero el menos potente. 
+		
+		Bonferroni $APV_i$: $\min\{v,1\}$, donde $v = (k-1)p_i$.
+	\end{itemize}
+	\item \textbf{\textit{Step-down}}:
+	\begin{itemize}
+		\item El procedimiento de Holm: 
+		Ajusta el valor de $\alpha$ en una forma \textit{step-down}. 
+		Sean $p_1,p_2,...,p_{k-1}$ $p$-valores ordenados (de menor a mayor), tal que $p_1 \leq p_2 \leq \cdots \leq p_{k-1}$, y sean $H_1,H_2,...,H_{k-1}$ las hipótesis correspondientes. 
+		El procedimiento de Holm rechaza $H_1$ a $H_{i-1}$ si $i$ es el menor entero tal que $p_i > \alpha (k-1)$. 
+		Este procedimiento empieza con el $p$-valor con mayor significancia. 
+		Si $p_1$ es menor que $\alpha /(k-1)$, se rechaza la hipótesis correspondiente y procedemos a comparar $p_2$ con $\alpha /(k-2)$. 
+		Si la segunda hipótesis es rechazada, el test procede con la tercera, y así sucesivamente. 
+		En cuanto alguna hipótesis nula no pueda ser rechazada, el resto de hipótesis se mantienen también. 
+		
+		Holm $APV_i$: $\min\{v,1\}$, donde $v = \max\{(k-j)p_j : l\leq j \leq i\}$
+		\item El procedimiento de Holland: Ajusta el valor de $\alpha$ en una forma \textit{step-down}, como el método de Holm. 
+		Rechaza $H_1$ a $H_{i-1}$ si $i$ es el menor entero tal que $p_i > 1 - (1-\alpha)^{k-i}$
+		
+		Holland $APV_i$: $\min\{v,1\}$, donde $v = \max\{1 - (1-p_j)^{k-j} : l\leq j \leq i\}$
+		\item El procedimiento de Finner: Ajusta el valor de $\alpha$ en una forma \textit{step-down}, como el método de Holm y el método de Holland. 
+		Rechaza $H_1$ a $H_{i-1}$ si $i$ es el menor entero tal que $p_i > 1 - (1-\alpha)^{(k-1)/i}$
+		
+		Finner $APV_i$: $\min\{v,1\}$, donde $v = \max\{1 - (1-p_j)^{(k-1)/j} : l\leq j \leq i\}$
+	\end{itemize}
+	
+	\item \textbf{\textit{Step-up}}
+	\begin{itemize}
+		\item El procedimiento de Hochberg: 
+		Ajusta el valor de $\alpha$ de una forma \textit{step-up}. 
+		Funciona comparando el mayor $p$-valor con $\alpha$, el siguiente mayor $p$-valor con $\alpha/2$, y así sucesivamente, hasta que se encuentre una hipótesis que se pueda rechazar. 
+		Todas las hipótesis con menor $p$-valor son rechazadas también. 
+		
+		Hochberg $APV_i$: $\max\{(k-j)p_j : (k-1) \geq j \geq i\}$
+		
+		\item El procedimiento de Hommel:
+		Este es un procedimiento más complicado que el resto, funciona encontrando el mayor $j$ para el que $p_{n-j+k} > k\alpha/j$ para todo $k = 1,...,j$. 
+		Si no existe tal $j$, se rechazan todas las hipótesis; en otro caso, se rechazan todas que cumplan $p_i \leq \alpha/j$.
+		
+		Hommel $APV_i$: Compruebése el algoritmo para el APV de Hommel en el Algoritmo \ref{alg:HommelAPV}
+		
+		\begin{algorithm}
+		\caption{Método para calcular el APV del test de Hommel}\label{alg:HommelAPV}
+\begin{algorithmic}[1]
+\Procedure \textsc{HommelAPV}
+\State Establecer $APV_i = p_i$ $\forall i$
+\ForEach{$j = k-1, k-2,...,2$ (\textit{en dicho orden})}
+	\State Establecer $B = \emptyset$
+	\ForEach{$i, i > (k-1-j)$}
+		\State Calcular el valor $c_i = (j \cdot p_i)/(j+i-k+1)$
+		\State Establecer $B = B \bigcup c_i$
+	\EndFor
+	\State Encontrar el menor valor $c_i$ en $B \xrightarrow{}{} c_{min}$
+	\If{$APV_i < c_{min}$}
+		\State Establecer $APV_i = c_{min}$
+	\EndIf
+	\ForEach{$i,i\leq (k-1-j)$}
+		\State Establecer $c_i = \min(c_{min}, j \cdot p_i)$
+		\If{$APV_i < c_i$}
+			\State Establecer $APV_i = c_i$
+		\EndIf
+	\EndFor
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+		
+		\item El procedimiento de Rom:  
+		Es una modificación del procedimiento de Hochberg para aumentar su potencia. 
+		Se comporta de la misma forma que el procedimiento de Hochberg, excepto que los $\alpha$-valores se calculan a través de la expresión:
+		\begin{equation}
+		\alpha_{k-i} = \left[ \sum_{j=1}^{i-1}\alpha^j - \sum_{j=1}^{i-2} \begin{pmatrix}
+		i \\ k
+\end{pmatrix}	\alpha_{k-1-j}^{i-j}	 \right] / i
+		\label{eq:4.47}	
+		\end{equation}
+		donde $\alpha_{k-1} = \alpha$ y $\alpha_{k-2} = \alpha /2$
+		
+		Rom $APV_i$ : $\max\{(r_{k-j})p_j : (k-1) \geq j \geq i\}$, donde $r_{k-j}$ pueden obtenidos a partir de la ecuación \ref{eq:4.47}
+	\end{itemize}
+	
+	\item \textbf{Dos pasos}
+	\begin{itemize}
+		\item El procedimiento de Li: 
+		Se propuse un procedimiento de rechazo en dos pasos:
+		\begin{enumerate}
+			\item Rechazar todas las $H_i$ si $p_{k-1} \leq \alpha$. 
+			En otro caso, aceptar las hipótesis asociadas a $p_{k-1}$ e ir al siguiente paso. 
+			\item Rechazar las $H_i$ restantes con $p_i \leq (1-p_{k-1})/(1-\alpha)\alpha$.
+			
+			Li $APV_i$: $p_i/(p_i+1-p_{k-1})$
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}
+
+\subsection{Estimación de contraste}
+
+La estimación de contrate (\textit{Contrast Estimation}) basada en medias puede ser usada para estimar la diferencia entre rendimiento de dos algoritmos. 
+Asume que las diferencias esperadas entre rendimiento de los algoritmos son iguales a través de los problemas. 
+Por lo tanto, el rendimiento de los algoritmos está reflejado por las magnitudes de las diferencias entre ellos en cada dominio. 
+
+El interés de este test se basa en la estimación de contrate entre las medias de las muestras de resultados considerando todas las comparaciones por parejas. 
+El test obtiene una diferencia cuantitativa calculada usando las medias entre los dos algoritmos en múltiples problemas, procediendo como sigue:
+\begin{enumerate}
+	\item Para cada par de $k$ algoritmos en el experimento, calculamos la diferencia entre el rendimiento de los dos algoritmos en cada uno de los $n$ problemas. 
+	Esto es, calculamos las diferencias
+	\begin{equation}
+	D_{i(u,v)} = x_{iu} - x_{iv}
+	\label{eq:4.48}
+	\end{equation}
+	donde $i=1,...,n$; $u=1,...,k$; $v = 1,...,k$.
+	\item Encontrar la media para cada conjunto de diferencias ($Z_{uv}$, que puede ser considerado como un \textit{estimador no ajustado} de las medias del algoritmo $u$ y $v$, $M_u - M_v$). 
+	En tanto que $Z_{uv} = Z_{vu}$, solo se necesita calcular $Z_{uv}$ en los casos donde $u < v$. 
+	También, nótese que $Z_{uu} = 0$.
+	\item Calcular la media de cada conjunto de medias no ajustadas teniendo el mismo primer subíndice, $m_u$:
+	\begin{equation}
+	m_u = \dfrac{\sum_{j=1}^{k}Z_{uj}}{k}, \hspace{0.5cm} u = 1,...,k
+	\label{eq:4.49}
+	\end{equation}
+	\item El estimador de $M_u-M_v$ es $m_u - m_v$, donde $u,v \in$[$1,k$].
+\end{enumerate}
+
+Estos estimadores se pueden entender como una medida de rendimiento global avanzada. 
+Aunque este test no puede aportar una probabilidad de error asociada con el rechazo de la hipótesis nula de igualdad, es especialmente útil para estimar en cuánta cantidad un algoritmo tiene un mejor rendimiento que otro. 

@@ -25,36 +25,49 @@
 \contentsline {subsubsection}{Métodos de Newton Truncados}{23}{ALG@line.15}%
 \contentsline {subsubsection}{Métodos Quasi-Newton}{24}{ALG@line.6}%
 \contentsline {subsubsection}{Métodos sin derivadas}{26}{proposicion.4.8}%
-\contentsline {chapter}{\numberline {5}Problema y Diseño Experimental}{29}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Descripción del problema}{29}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Quadratic Knapsack Problem}{30}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Datos del problema}{30}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Diseño Experimental}{31}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Criterio de Parada}{31}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Parámetros}{33}{subsection.5.2.2}%
-\contentsline {chapter}{\numberline {6}Algoritmos de Referencia}{35}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Algoritmo Genético Estacionario Uniforme}{35}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Pseudocódigo}{36}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Componentes}{37}{subsection.6.1.2}%
-\contentsline {subsubsection}{Operador de Reparación}{37}{subsection.6.1.2}%
-\contentsline {subsubsection}{Cruce Uniforme}{38}{ALG@line.13}%
-\contentsline {subsubsection}{Mutación}{39}{ALG@line.12}%
-\contentsline {subsubsection}{Operador de Reemplazo Estacionario}{40}{ALG@line.17}%
-\contentsline {section}{\numberline {6.2}CHC}{41}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Pseudocódigo}{42}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Componentes}{42}{subsection.6.2.2}%
-\contentsline {subsubsection}{Operador de reparación}{42}{subsection.6.2.2}%
-\contentsline {subsubsection}{Cruce HUX}{42}{subsection.6.2.2}%
-\contentsline {subsubsection}{Enfrentamiento}{43}{ALG@line.13}%
-\contentsline {chapter}{\numberline {7}Componentes de la propuesta}{45}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Histórico}{45}{section.7.1}%
-\contentsline {section}{\numberline {7.2}•}{46}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Parte Experimental (In progress)}{49}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{50}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Resultados versión expensive}{50}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Incorporación del histórico}{50}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Uso de GRASP}{50}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{50}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{50}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{50}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Conclusiones}{51}{chapter.9}%
+\contentsline {section}{\numberline {4.5}Comparaciones por parejas}{28}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Test de signos}{28}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Test de posiciones con signos de Wilcoxon}{28}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Múltiples comparaciones con un método de control}{29}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Test múltiple de signos}{30}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Los test de Friedman, Posiciones Alineadas de Friedman y Quade}{31}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Procedimientos \textit {post-hoc}}{33}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Estimación de contraste}{36}{subsection.4.6.4}%
+\contentsline {chapter}{\numberline {5}Problema y Diseño Experimental}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Descripción del problema}{37}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Quadratic Knapsack Problem}{38}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Datos del problema}{38}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Diseño Experimental}{39}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Criterio de Parada}{39}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Parámetros}{41}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {6}Algoritmos de Referencia}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Algoritmo Genético Estacionario Uniforme}{43}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Pseudocódigo}{44}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Componentes}{45}{subsection.6.1.2}%
+\contentsline {subsubsection}{Operador de Reparación}{45}{subsection.6.1.2}%
+\contentsline {subsubsection}{Cruce Uniforme}{46}{ALG@line.13}%
+\contentsline {subsubsection}{Mutación}{47}{ALG@line.12}%
+\contentsline {subsubsection}{Operador de Reemplazo Estacionario}{48}{ALG@line.17}%
+\contentsline {section}{\numberline {6.2}CHC}{49}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Pseudocódigo}{50}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Componentes}{50}{subsection.6.2.2}%
+\contentsline {subsubsection}{Operador de reparación}{50}{subsection.6.2.2}%
+\contentsline {subsubsection}{Cruce HUX}{50}{subsection.6.2.2}%
+\contentsline {subsubsection}{Enfrentamiento}{51}{ALG@line.13}%
+\contentsline {chapter}{\numberline {7}Componentes de la propuesta}{53}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Histórico}{53}{section.7.1}%
+\contentsline {section}{\numberline {7.2}GRASP}{54}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Cruce Intensivo}{57}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Operador NAM}{57}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Cambio Operador Reemplazo (por cercanía)}{57}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Cambio Operador Reemplazo (por cercanía) intensivo}{57}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Parte Experimental (In progress)}{59}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{60}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Resultados versión expensive}{60}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Incorporación del histórico}{60}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Uso de GRASP}{60}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{60}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{60}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{60}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Tablas de prueba}{60}{section.8.8}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{67}{chapter.9}%

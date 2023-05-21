@@ -203,6 +203,10 @@ pdfproducer = {pdflatex}
 \usepackage{float}
 \floatstyle{plaintop}
 \restylefloat{table}
+\usepackage[paper=portrait,pagesize]{typearea}
+
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
 
 \setlength{\parskip}{0.5em}
 

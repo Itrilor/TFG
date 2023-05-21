@@ -102,3 +102,65 @@ Las modificaciones realizadas al Operador de Reparación y a la Mutación se ver
 \end{algorithm}
 
 \section{GRASP}
+
+En el capítulo 6 se ha explicado por qué seguimos un enfoque \textit{Greedy} en el Operador de Reparación. 
+Sin embargo esto tiene un problema, y esto es que es bastante probable que siempre se estén eligiendo los mismos pocos elementos cada vez que se usa este componente. 
+Si realmente ocurre eso, ocasionaría que la población converja y la evolución se estanque; por ello, debemos encargarnos de encontrar otra alternativa con la que podamos aumentar la diversidad de la población. 
+
+Sin embargo, la diversidad en la población es un arma de doble filo. 
+La diversidad es necesaria para explorar el espacio de soluciones, pero puede causar que no finalice el proceso de exploración. 
+Si este es el caso, entonces no se le dedicará suficiente tiempo a la fase de explotación, que es esencial para obtener soluciones de mejor calidad. 
+Por lo tanto, utilizaremos un operador capaz de introducir cierta diversidad a la población a la vez que asegura cierta calidad. 
+Esto es, utilizaremos el operador GRASP (\textit{Greedy Randomized Adaptive Search Procedure}). 
+
+El GRASP vendrá presentado en Algoritmo \ref{alg:GRASP}. 
+De forma simplificada, GRASP utiliza de base el algoritmo Greedy para obtener cierta cantidad de mejores elementos, eligirá aleatoriamente uno de ellos y lo devolverá. 
+Lo que se entiende como ``mejor elemento'' para GRASP es lo mismo que para lo que se propuso durante la justificación del operador Greedy. 
+Además, la cantidad de elementos a considerar dependerá del valor aportado por el mejor elemento; en concreto, solo se considerarán los elementos cuyo valor relativo ($valor\_acumulado/peso$) varíe en un 10\% del valor acumulado del mejor elemento, es decir:
+\begin{itemize}
+	\item Si se necesitan añadir elementos, nos quedaremos con los elementos que tengan un valor relativo mayor que $0.9*valor\_relativo\_mayor$.
+	\item Si se necesitan eliminar elementos, nos quedaremos con los elementos que tengan un valor relativo menor que $1.1*valor\_relativo\_menor$.
+\end{itemize}
+
+\begin{algorithm}
+\caption{Operador GRASP}\label{alg:GRASP}
+\begin{algorithmic}[1]
+\Procedure \texttt{GTRASP}($solucion, min$)
+\If{\texttt{min}}
+	\State Almacenar en \texttt{indices} los elementos activados en \texttt{solucion}
+\Else
+	\State Almacenar en \texttt{indices} los elementos desactivados en \texttt{solucion}
+\EndIf
+\State Calcular el valor relativo de \texttt{indices} $\xrightarrow{}{}$ \texttt{valores}
+\State \texttt{encontrado = false}
+\If{\texttt{min}}
+	\State Ordenar \texttt{indices} según \texttt{valores} en orden ascendente
+	\For{$i\in 1..size(\texttt{indices}) \&\& !\texttt{encontrado}$}
+		\If{\texttt{valores}$_i$ > 1.1*\texttt{valores}$_0$}
+			\State \texttt{encontrado = true}
+			\State Eliminar los elementos de \texttt{indices} desde $i$ hasta $size(\texttt{indices})$
+		\EndIf
+	\EndFor
+\Else
+	\State Ordenar \texttt{indices} según \texttt{valores} en orden descendente
+	\For{$i\in 1..size(\texttt{indices}) \&\& !\texttt{encontrado}$}
+		\If{\texttt{valores}$_i$ < 0.9*\texttt{valores}$_0$}
+			\State \texttt{encontrado = true}
+			\State Eliminar los elementos de \texttt{indices} desde $i$ hasta $size(\texttt{indices})$
+		\EndIf
+	\EndFor
+\EndIf
+\State Elegir aleatoriamente algún elemento de \texttt{indices}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Cruce Intensivo}
+
+
+
+\section{Operador NAM}
+
+\section{Cambio Operador Reemplazo (por cercanía)}
+
+\section{Cambio Operador Reemplazo (por cercanía) intensivo}
