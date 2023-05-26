@@ -136,7 +136,7 @@ Además, la cantidad de elementos a considerar dependerá del valor aportado por
 \If{\texttt{min}}
 	\State Ordenar \texttt{indices} según \texttt{valores} en orden ascendente
 	\For{$i\in 1..size(\texttt{indices}) \&\& !\texttt{encontrado}$}
-		\If{\texttt{valores}$_i$ > 1.1*\texttt{valores}$_0$}
+		\If{\texttt{valores}$_i$ > 1.1$\cdot$\texttt{valores}$_0$}
 			\State \texttt{encontrado = true}
 			\State Eliminar los elementos de \texttt{indices} desde $i$ hasta $size(\texttt{indices})$
 		\EndIf
@@ -144,7 +144,7 @@ Además, la cantidad de elementos a considerar dependerá del valor aportado por
 \Else
 	\State Ordenar \texttt{indices} según \texttt{valores} en orden descendente
 	\For{$i\in 1..size(\texttt{indices}) \&\& !\texttt{encontrado}$}
-		\If{\texttt{valores}$_i$ < 0.9*\texttt{valores}$_0$}
+		\If{\texttt{valores}$_i$ < 0.9$\cdot$\texttt{valores}$_0$}
 			\State \texttt{encontrado = true}
 			\State Eliminar los elementos de \texttt{indices} desde $i$ hasta $size(\texttt{indices})$
 		\EndIf
@@ -157,10 +157,82 @@ Además, la cantidad de elementos a considerar dependerá del valor aportado por
 
 \section{Cruce Intensivo}
 
+Para aumentar la explotación de buenas soluciones se propone hacer una modificación en el cruce que realizamos. 
+En vez de utilizar el cruce uniforme, que hemos establecido que a cada hijo se le asigna la mitad de los genes de cada uno de los padres (aunque sea de forma aleatoria), en este caso se le asignará un mayor porcentaje de genes del mejor de los padres. 
 
+Para ello, lógicamente tendremos que calcular cuál de los padres es la mejor solución (tiene mayor valor). 
+En este caso, no nos sirve aleatorizar una sola lista de índices, ya que la separación no va a ser igualitaria. 
+Por lo que tendremos que hacer las separaciones de genes para ambos hijos. 
+Una vez hecho esto, se procede de igual forma que en los anteriores cruces, es decir, se le asigna a cada hijo los genes de los padres correspondientes y, posteriormente, se le aplica el operado de reparación a ambos hijos. 
+Estoy viene representado en Algoritmo \ref{alg:CI}. 
+
+Por conveniencia, vamos a volver a utilizar la notación que implica que \texttt{padre$_1$} tiene un valor más elevado que \texttt{padre$_2$}.
+
+\begin{algorithm}
+\caption{Cruce Intensivo}\label{alg:CI}
+\begin{algorithmic}[1]
+\Procedure \texttt{Cruce Intensivo}($padre_1, padre_2, porcentaje$)
+\State Desordenar los índices (\texttt{indices$_1$}, \texttt{indices$_2$}) que indican la posición de cada elemento
+\State \texttt{nelem = $n$*porcentaje}
+\For{i in 0..$n$}
+	\If{\texttt{i < nelem}}
+		\State \texttt{hijo$_1$[indice$_1$[i]]} = \texttt{padre$_1$[indice$_1$[i]]}
+		\State \texttt{hijo$_2$[indice$_2$[i]]} = \texttt{padre$_1$[indice$_2$[i]]}
+	\Else
+		\State \texttt{hijo$_1$[indice$_1$[i]]} = \texttt{padre$_2$[indice$_1$[i]]}
+		\State \texttt{hijo$_2$[indice$_2$[i]]} = \texttt{padre$_2$[indice$_2$[i]]}
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
 
 \section{Operador NAM}
 
+Esta es una alternativa a cómo se eligen los elementos de la población que se van a cruzar. 
+La lógica de este operador es parecida a la prevención de incesto que se propone en el algoritmo CHC, pero sin ser tan restrictiva. 
+Se necesita que los padres sean distintos para conseguir que los hijos aporten diversidad a la población si llegan a ser introducidos. 
+Una optativa a esto es el operador NAM. 
+
+La implementación de este operador viene representado en el Algoritmo \ref{alg:NAM}. 
+Lo que se hace en este operador es elegir a una solución utilizando el Torneo Binario propio de los algoritmos genéticos. 
+Para la segunda solución, primero, debemos obtener algunas soluciones de la población distintas a la primera obtenida para el cruce. 
+Una vez hecho esto, elegimos como el segundo padre a la solución del segundo grupo más diferente al primer padre; esto es, se calculará la distancia de Hamming entre el primer padre y las soluciones del segundo grupo, y se elegirá como segundo padre aquella solución con mayor distancia de Hamming.
+
+\begin{algorithm}
+\caption{Operador NAM}\label{alg:NAM}
+\begin{algorithmic}[1]
+\Procedure \texttt{Operador NAM}
+\State Aplicar \texttt{Torneo Binario} para obtener al primer padre $\xrightarrow{}{}$ \texttt{padre$_1$}
+\State Elegir aleatoriamente sin repetición un subconjunto de la población distinta a \texttt{padre$_1$} $\xrightarrow{}{}$ \texttt{indices}.
+\State Calcular la distancia de Hamming entre \texttt{padre$_1$} y cada elemento de \texttt{indices}
+\State Establecer como \texttt{padre$_2$} la solución de \texttt{indices} con la mayor distancia de Hamming a \texttt{padre$_1$}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
 \section{Cambio Operador Reemplazo (por cercanía)}
+
+Otra forma de intentar mantener cierta diversidad en la población es mediante la modificación del Operador de Reemplazo. 
+En vez de siempre eliminar las peores soluciones para introducir otras mejores, estableceremos que las peores soluciones se pueden mantener en la población si están aportando diversidad. 
+
+Este operador viene representado en el Algoritmo \ref{alg:ORC}. 
+En definitiva, el objetivo de este operador será comprobar si las nuevas soluciones (hijas) son mejores que las soluciones de la población actual más cercanas a ellas. 
+Si las soluciones hijas constituyen una mejora, entonces sustituirán a las soluciones más cercanas en la población. 
+
+\begin{algorithm}
+\caption{Operador de Reemplazo por Cercanía}\label{alg:ORC}
+\begin{algorithmic}[1]
+\Procedure \texttt{Reemplazo Cercanía}($padre_1, padre_2$)
+\For{i in 0..\texttt{numHijos}}
+	\State Calcular distancia de Hamming de \texttt{hijo$_i$} a todos los elementos de la población
+	\State Elegir la solución con la menor distancia de Hamming a \texttt{hijo$_i$} $\xrightarrow{}{}$ \texttt{solucion}
+	\If{\texttt{valor$_{solucion}$ < valor$_{hijo_i}$}}
+		\State Sustituir \texttt{solucion} por \texttt{hijo$_i$}
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
 
 \section{Cambio Operador Reemplazo (por cercanía) intensivo}

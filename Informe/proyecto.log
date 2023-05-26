@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  22 MAY 2023 00:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  26 MAY 2023 13:22
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -3454,9 +3454,9 @@ n already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.139 		\If
-           {\texttt{valores}$_i$ > 1.1*\texttt{valores}$_0$}pdfTeX warning (ext
-4): destination with the same identifier (name{ALG@line.13}) has been already u
-sed, duplicate ignored
+           {\texttt{valores}$_i$ > 1.1$\cdot$\texttt{valores}$_0$}pdfTeX warnin
+g (ext4): destination with the same identifier (name{ALG@line.13}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
 l.140 			\State
@@ -3499,9 +3499,9 @@ n already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.147 		\If
-           {\texttt{valores}$_i$ < 0.9*\texttt{valores}$_0$}pdfTeX warning (ext
-4): destination with the same identifier (name{ALG@line.21}) has been already u
-sed, duplicate ignored
+           {\texttt{valores}$_i$ < 0.9$\cdot$\texttt{valores}$_0$}pdfTeX warnin
+g (ext4): destination with the same identifier (name{ALG@line.21}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
 l.148 			\State
@@ -3538,6 +3538,188 @@ rning (ext4): destination with the same identifier (name{ALG@line.27}) has been
 <to be read again> 
                    \relax 
 l.154 \EndProcedure
+                   
+LaTeX Info: Redefining \. on input line 162.
+LaTeX Info: Redefining \% on input line 162.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[56]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.174 \Procedure
+                 \texttt{Cruce Intensivo}($padre_1, padre_2, porcentaje$)pdfTeX
+ warning (ext4): destination with the same identifier (name{ALG@line.2}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.175 \State
+             Desordenar los índices (\texttt{indices$_1$}, \texttt{indices$...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.176 \State
+             \texttt{nelem = $n$*porcentaje}pdfTeX warning (ext4): destination 
+with the same identifier (name{ALG@line.4}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.177 \For
+          {i in 0..$n$}pdfTeX warning (ext4): destination with the same identif
+ier (name{ALG@line.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.178 	\If
+          {\texttt{i < nelem}}pdfTeX warning (ext4): destination with the same 
+identifier (name{ALG@line.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.179 		\State
+               \texttt{hijo$_1$[indice$_1$[i]]} = \texttt{padre$_1$[indice$_...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.180 		\State
+               \texttt{hijo$_2$[indice$_2$[i]]} = \texttt{padre$_1$[indice$_...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.181 	\Else
+            pdfTeX warning (ext4): destination with the same identifier (name{A
+LG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.182 		\State
+               \texttt{hijo$_1$[indice$_1$[i]]} = \texttt{padre$_2$[indice$_...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.183 		\State
+               \texttt{hijo$_2$[indice$_2$[i]]} = \texttt{padre$_2$[indice$_...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.184 	\EndIf
+             pdfTeX warning (ext4): destination with the same identifier (name{
+ALG@line.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.185 \EndFor
+             pdfTeX warning (ext4): destination with the same identifier (name{
+ALG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.186 \EndProcedure
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{ALG@line.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.205 \Procedure
+                 \texttt{Operador NAM}pdfTeX warning (ext4): destination with t
+he same identifier (name{ALG@line.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.206 \State
+             Aplicar \texttt{Torneo Binario} para obtener al primer padre $\...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.207 \State
+             Elegir aleatoriamente sin repetición un subconjunto de la pobl...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.208 \State
+             Calcular la distancia de Hamming entre \texttt{padre$_1$} y cad...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.209 \State
+             Establecer como \texttt{padre$_2$} la solución de \texttt{indi...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.210 \EndProcedure
+                   
+Underfull \vbox (badness 1286) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 218.
+LaTeX Info: Redefining \% on input line 218.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[57]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.226 \Procedure
+                 \texttt{Reemplazo Cercanía}($padre_1, padre_2$)pdfTeX warning
+ (ext4): destination with the same identifier (name{ALG@line.2}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.227 \For
+          {i in 0..\texttt{numHijos}}pdfTeX warning (ext4): destination with th
+e same identifier (name{ALG@line.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.228 	\State
+              Calcular distancia de Hamming de \texttt{hijo$_i$} a todos los...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.229 	\State
+              Elegir la solución con la menor distancia de Hamming a \textt...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.230 	\If
+          {\texttt{valor$_{solucion}$ < valor$_{hijo_i}$}}pdfTeX warning (ext4)
+: destination with the same identifier (name{ALG@line.6}) has been already used
+, duplicate ignored
+<to be read again> 
+                   \relax 
+l.231 		\State
+               Sustituir \texttt{solucion} por \texttt{hijo$_i$}pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.7}) has been alread
+y used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.232 	\EndIf
+             pdfTeX warning (ext4): destination with the same identifier (name{
+ALG@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.233 \EndFor
+             pdfTeX warning (ext4): destination with the same identifier (name{
+ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.234 \EndProcedure
                    ) (capitulos/08_Parte_Experimental.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -3550,21 +3732,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[56]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[57] [58
-
-]
+[58]
 Cap\'{\i }tulo 8.
 
 Overfull \hbox (0.45361pt too wide) in paragraph at lines 1--1
@@ -3591,7 +3759,9 @@ LaTeX Warning: No positions in optional float specifier.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
+ [59
+
+]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 87.
@@ -3720,10 +3890,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17489 strings out of 479696
- 280692 string characters out of 2876991
- 774190 words of memory out of 3000000
- 33878 multiletter control sequences out of 15000+200000
+ 17500 strings out of 479696
+ 280825 string characters out of 2876991
+ 774447 words of memory out of 3000000
+ 33886 multiletter control sequences out of 15000+200000
  487958 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,28n,111p,582b,825s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3746,9 +3916,9 @@ c/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Pr
 ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (91 pages, 848195 bytes).
+Output written on proyecto.pdf (91 pages, 854345 bytes).
 PDF statistics:
- 1107 PDF objects out of 1200 (max. 8388607)
- 316 named destinations out of 1000 (max. 500000)
+ 1114 PDF objects out of 1200 (max. 8388607)
+ 319 named destinations out of 1000 (max. 500000)
  510 words of extra memory for PDF output out of 10000 (max. 10000000)
 

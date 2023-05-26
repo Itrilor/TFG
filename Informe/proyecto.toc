@@ -59,8 +59,8 @@
 \contentsline {section}{\numberline {7.2}GRASP}{54}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Cruce Intensivo}{57}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Operador NAM}{57}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Cambio Operador Reemplazo (por cercanía)}{57}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Cambio Operador Reemplazo (por cercanía) intensivo}{57}{section.7.6}%
+\contentsline {section}{\numberline {7.5}Cambio Operador Reemplazo (por cercanía)}{58}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Cambio Operador Reemplazo (por cercanía) intensivo}{58}{section.7.6}%
 \contentsline {chapter}{\numberline {8}Parte Experimental (In progress)}{59}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{60}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Resultados versión expensive}{60}{section.8.2}%
