@@ -29,7 +29,7 @@ Por lo tanto, teniendo en cuenta la falta de \textit{benchmarks} y referencias, 
 
 
 \subsection{Quadratic Knapsack Problem}
-%The quadritc Knapsack problem-a survey
+%The quadratic knapsack problem—a survey
 Se procede a definir en profundidad dicho problema. 
 En primer lugar, se tienen $n$ elementos donde cada elemento $j$ tiene un peso entero positivo $w_j$. 
 Adicionalmente, se nos da una matriz de enteros no negativos de tamaño $n\times n$, $P = \{p_{ij}\}$, donde $p_{jj}$ es el beneficio asociado a elegir el elemento $j$ y $p_{ij}+p_{ji}$ es el beneficio que se alcanza si ambos elementos $i,j$, con $i<j$ son seleccionados. 
@@ -40,7 +40,7 @@ Por conveniencia en la notación, establecemos que $N=\{1,\dots,n\}$ denotará e
 Representando la lista de elementos de forma binaria, $x_j$, para indicar si el elemento $j$ ha sido seleccionado (su valor será 0 si no ha sido seleccionado, 1 en caso contrario), el problema podrá ser formulado de la siguiente forma:
 \begin{equation}
 \begin{aligned}
-  \text{maximizar} & \sum_{i\in N}\sum_{j\in N}p_{ij}x_{ij} \\
+  \text{maximizar} & \sum_{i\in N}\sum_{j\in N}p_{ij}x_ix_j \\
   \text{sujeto a } & \sum_{j\in N}w_jx_j \leq c\\
   & x_j\in \{0,1\}, j \in N 
 \end{aligned}
@@ -49,7 +49,7 @@ Representando la lista de elementos de forma binaria, $x_j$, para indicar si el 
 
 Sin pérdida de generalidad, podemos suponer que:
 \begin{itemize}
-	\item max$_{j\in N} w_j \leq c < \sum_{j\in N}w_j$
+	\item $\max_{j\in N} w_j \leq c < \sum_{j\in N}w_j$
 	\item La matriz de beneficios es simétrica, es decir, $p_{ij} = p_{ji}$, $\forall j > i$.
 \end{itemize}
 
@@ -58,8 +58,7 @@ KP se puede obtener a partir de QKP si $p_{ij} = 0$, para todo $i\neq j$.
 También se considera una versión restringida del \textit{Quadratic 0-1 Programming Problem} (QP), el cual se define como \ref{eq:QKP} sin la restricción de capacidad.
 
 Como uno cabría esperar, debido a su generalidad, el QKP tiene un amplio espectro de aplicaciones. 
-Witzgall %tengo que poner la referencia
-presentó un problema que surge en telecomunicación cuando un número de localizaciones para satélites tienen que ser seleccionados, tales que el tráfico global entre estas estaciones se maximice y la limitación de presupuesto se cumpla; este problema resulta ser un QKP. 
+Witzgall \parencite{witzgallMathematicalMethodsSite1975} presentó un problema que surge en telecomunicación cuando un número de localizaciones para satélites tienen que ser seleccionados, tales que el tráfico global entre estas estaciones se maximice y la limitación de presupuesto se cumpla; este problema resulta ser un QKP. 
 
 %En tanto que QKP es un problema $\mathcal{NP}-hard$, no podemos esperar encontrar una aproximación totalmente polinómica a no ser que $\mathcal{NP}=\mathcal{P}$. 
 %Sin embargo, Rader y Woeginger %referencias
@@ -137,11 +136,12 @@ Por lo que se llega a la conclusión de que si se quiere que los resultados obte
 Por ello, se ha decidido cambiar el criterio de parada a un número de iteraciones máximo. 
 Este criterio sí es portable, ya que independientemente de qué tipo de computador se utilice para obtener los resultados siempre se van a obtener los mismos resultados utilizando los mismos parámetros.
 
-Primero debemos indicar lo que entenderemos por iteraciones o evaluaciones. 
-Denotaremos como iteraciones al número de veces que se evalúa un determinado algoritmo, en nuestro caso se va a traducir en lo siguiente: 
+Primero debemos indicar lo que entenderemos por iteraciones. 
+Denotaremos como iteraciones al número de veces que se repite el procedimiento completo un determinado algoritmo, en nuestro caso se va a traducir en lo siguiente: 
 \begin{itemize}
 	\item Para el algoritmo \textit{Random}, el número iteraciones será el número de veces que generemos una solución de forma aleatoria.
-	\item Para los algoritmos genéticos, el número de iteraciones será el número de generaciones con las que trabajaremos.
+	\item Para los algoritmos genéticos, una iteración puede suponer un número distinto de evaluaciones. 
+	En los algoritmos genéticos al número de iteraciones se llama también generaciones.
 \end{itemize}
 
 Dicho esto, para elegir el número de iteraciones máximo que se iba a utilizar se tomó como referencia el tiempo establecido anteriormente. 
@@ -177,7 +177,7 @@ Todos los parámetros que se nombren a continuación vienen definido dentro del 
 
 En primer lugar, hablemos sobre las constantes globales:
 \begin{itemize}
-	\item \texttt{NEVALUACIONESMAX}: Es el número de evaluaciones máximas, mantendremos su valor a 450 por lo explicado en el apartado anterior. 
+	\item \texttt{NEVALUACIONESMAX}: Es el número de iteraciones máximas, mantendremos su valor a 450 por lo explicado en el apartado anterior. 
 	\item \texttt{NTRIES}: Para que nuestros resultados no sean muy dependientes de la aleatoriedad, es necesario ejecutar cada archivo cierta cantidad de veces y obtener la media. 
 Esta media será verdaderamente el resultado que guardaremos y compararemos con el resto. 
 De forma más o menos arbitraria, se ha establecido su valor a 50.
@@ -197,13 +197,13 @@ En definitiva, podemos resumir los parámetros, para lo que se usan y sus valore
 \rowcolor[HTML]{F7EAC7} 
 Parámetros                                 & Resumen                                                                                                                                   & Valor                                                                                 \\ \hline
 \rowcolor[HTML]{DAE8FC} 
-\texttt{NEVALUACIONESMAX} & \begin{tabular}[c]{@{}l@{}}Criterio de parada: Número de\\ Evaluaciones Máximas para \\ cada algoritmo\end{tabular}                       & 450                                                                                   \\ \hline
+\texttt{NEVALUACIONESMAX} & \begin{tabular}[c]{@{}l@{}}Criterio de parada: Número de\\ Iteraciones Máximas para \\ cada algoritmo\end{tabular}                       & 450                                                                                   \\ \hline
 \rowcolor[HTML]{DDFDFF} 
 \texttt{NTRIES}           & \begin{tabular}[c]{@{}l@{}}Número de veces que se va a \\ ejecutar el algoritmo por cada\\ archivo\end{tabular}                           & 50                                                                                    \\ \hline
 \rowcolor[HTML]{DAE8FC} 
 \texttt{INITSEED}         & \begin{tabular}[c]{@{}l@{}}Semilla inicial para poder \\ generar el resto de semillas que\\ utilizaremos para los algoritmos\end{tabular} & 5                                                                                     \\ \hline
 \rowcolor[HTML]{DDFDFF} 
-\texttt{EvaluacionMAX}    & \begin{tabular}[c]{@{}l@{}}Criterio de parada: Número de\\ Evaluaciones Máximas dicho\\ algoritmo\end{tabular}                            & \texttt{NEVALUACIONESMAX}                                           \\ \hline
+\texttt{EvaluacionMAX}    & \begin{tabular}[c]{@{}l@{}}Criterio de parada: Número de\\ Iteraciones Máximas dicho\\ algoritmo\end{tabular}                            & \texttt{NEVALUACIONESMAX}                                           \\ \hline
 \rowcolor[HTML]{DAE8FC} 
 \texttt{Semilla}          & \begin{tabular}[c]{@{}l@{}}Semilla de aleatoriedad para\\ determinada ejecución del \\ algoritmo\end{tabular}                             & \begin{tabular}[c]{@{}l@{}}Valor generado aleatoriamente \\ por \texttt{INITSEED}\end{tabular} \\ \hline
 \rowcolor[HTML]{DDFDFF} 

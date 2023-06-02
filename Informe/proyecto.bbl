@@ -1,0 +1,380 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{backEvolutionaryComputationOverview1996}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=5dd8a5220c18ca8d45d8699f78e83dfa}{%
+           family={Back},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5fba16ee50271ea2eaa8f0b27099d46c}{%
+           family={Schwefel},
+           familyi={S\bibinitperiod},
+           given={H.-P.},
+           giveni={H\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{fullhash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{bibnamehash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{authorbibnamehash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{authornamehash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{authorfullhash}{e9673c438d6a587264810fd6b68faaa2}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present an overview of the most important representatives of algorithms gleaned from natural evolution, so-called evolutionary algorithms. Evolution strategies, evolutionary programming, and genetic algorithms are summarized, with special emphasis on the principle of strategy parameter self-adaptation utilized by the first two algorithms to learn their own strategy parameters such as mutation variances and covariances. Some experimental results are presented which demonstrate the working principle and robustness of the self-adaptation methods used in evolution strategies and evolutionary programming. General principles of evolutionary algorithms are discussed, and we identify certain properties of natural evolution which might help to improve the problem solving capabilities of evolutionary algorithms even further.}
+      \field{booktitle}{Proceedings of {{IEEE International Conference}} on {{Evolutionary Computation}}}
+      \field{month}{5}
+      \field{note}{105 citations (Crossref) [2023-05-31]}
+      \field{shorttitle}{Evolutionary Computation}
+      \field{title}{Evolutionary Computation: {{An}} Overview}
+      \field{year}{1996}
+      \field{pages}{20\bibrangedash 29}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/ICEC.1996.542329
+      \endverb
+      \keyw{Algorithm design and analysis,Europe,Evolution (biology),Evolutionary computation,Genetic algorithms,Genetic mutations,Genetic programming,Optimization methods,Problem-solving,Robustness}
+    \endentry
+    \entry{buiMetaheuristicAlgorithmsOptimizing2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fd3dbc039c32eae9c1c6a4c3e6a7abcc}{%
+           family={Bui},
+           familyi={B\bibinitperiod},
+           given={Quang-Thanh},
+           giveni={Q\bibinithyphendelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd3dbc039c32eae9c1c6a4c3e6a7abcc}
+      \strng{fullhash}{fd3dbc039c32eae9c1c6a4c3e6a7abcc}
+      \strng{bibnamehash}{fd3dbc039c32eae9c1c6a4c3e6a7abcc}
+      \strng{authorbibnamehash}{fd3dbc039c32eae9c1c6a4c3e6a7abcc}
+      \strng{authornamehash}{fd3dbc039c32eae9c1c6a4c3e6a7abcc}
+      \strng{authorfullhash}{fd3dbc039c32eae9c1c6a4c3e6a7abcc}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Meta-heuristic algorithms become common approaches in finding sufficiently good solutions for optimization problems. This study proposed and compared three novel hybrid methods, namely Biogeography-based Optimization (BBO), Gravitational Search Algorithm (GSA) and Grey Wolf Optimization (GWO) in combination with the popular Neural Network classifier for forest fire modeling. Dak Nong province was selected as a case study as it had undergone a critical drought season. One thousand three hundred and thirty-eight historic fired locations during the first several months of 2017 were chosen as dependent variables. On the other hand, topological, climatic and socio-economic data were used as independent predictor variables. For accuracy assessment, root mean square error derivable from the neural network was used as an objective function to be optimized by three proposed algorithms. The results showed that the area under Receiver Operating Characteristic curves (AUC) were in BBO (0.9515), GWO (0.9509), (0.9398) outperformed the Regular neural with backpropagation algorithm (AUC = 0.9271). Even though the differences between prediction results were small, but they were significant by using a paired t-test. It could be concluded that three hybrid models are suitable to map forest fire susceptibility in the selected study area and could be considered as alternative methods for studying forest fire in other locations.}
+      \field{issn}{1947-5705, 1947-5713}
+      \field{journaltitle}{Geomatics, Natural Hazards and Risk}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shorttitle}{Metaheuristic Algorithms in Optimizing Neural Network}
+      \field{title}{Metaheuristic Algorithms in Optimizing Neural Network: A Comparative Study for Forest Fire Susceptibility Mapping in {{Dak Nong}}, {{Vietnam}}}
+      \field{urlday}{18}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{10}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{136\bibrangedash 150}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/19475705.2018.1509902
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\KQCIZW7W\\Bui - 2019 - Metaheuristic algorithms in optimizing neural netw.pdf
+      \endverb
+    \endentry
+    \entry{demoraesDiversityPreservationMethod2022}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f5daa28ce09420c13abe35bca2e5d264}{%
+           family={{de Moraes}},
+           familyi={d\bibinitperiod},
+           given={Matheus\bibnamedelima Bernardelli},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=e181c0e239ebf63424dd4579c09c0754}{%
+           family={Coelho},
+           familyi={C\bibinitperiod},
+           given={Guilherme\bibnamedelima Palermo},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ee945c863c716a1958452321255f4be}
+      \strng{fullhash}{6ee945c863c716a1958452321255f4be}
+      \strng{bibnamehash}{6ee945c863c716a1958452321255f4be}
+      \strng{authorbibnamehash}{6ee945c863c716a1958452321255f4be}
+      \strng{authornamehash}{6ee945c863c716a1958452321255f4be}
+      \strng{authorfullhash}{6ee945c863c716a1958452321255f4be}
+      \field{sortinit}{d}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Expensive multi-objective combinatorial optimization problems have constraints in the number of objective function evaluations due to time, financial, or resource restrictions. As most combinatorial problems, they are subject to a high number of duplicated solutions. Given the fact that expensive environments limit the number of objective function evaluations, the existence of duplicated solutions heavily impacts the optimization process due to poor diversity and low convergence speed. This paper proposes the Novel-First Tabu Search, a greedy-strategy mechanism that uses Knowledge-Assisted Local Search methods to preserve the population diversity and increase the exploration and exploitation ability of MOEA/D. Experiments are conducted on constrained, unconstrained, multimodal, deceptive, linear, convex, and non-convex Pareto Front multi-objective combinatorial optimization benchmark problems. This paper also conducts an experiment on the real-world, expensive problem of Well Placement Optimization using a benchmark case based on the Namorado oil field, located in the Campos Basin, Brazil. The experimental results and performance comparison with state-of-the-art algorithms demonstrate that the proposed design significantly preserves diversity and increases convergence without violating the constraint in the number of objective function evaluations.}
+      \field{issn}{0957-4174}
+      \field{journaltitle}{Expert Systems with Applications}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{title}{A Diversity Preservation Method for Expensive Multi-Objective Combinatorial Optimization Problems Using {{Novel-First Tabu Search}} and {{MOEA}}/{{D}}}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{202}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{117251}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.eswa.2022.117251
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\I6LKVEW9\\de Moraes y Coelho - 2022 - A diversity preservation method for expensive mult.pdf;C\:\\Users\\irene\\Zotero\\storage\\VXNU4ZQG\\S0957417422006261.html
+      \endverb
+      \keyw{Black-box optimization,Decomposition-based methods,Diversity preservation,Expensive multi-objective combinatorial optimization,Novel-First Tabu Search}
+    \endentry
+    \entry{islamMATHEMATICALPROGRAMMING2020}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b8fbdcebc28145a973312fe0f1466582}{%
+           family={Islam},
+           familyi={I\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8fbdcebc28145a973312fe0f1466582}
+      \strng{fullhash}{b8fbdcebc28145a973312fe0f1466582}
+      \strng{bibnamehash}{b8fbdcebc28145a973312fe0f1466582}
+      \strng{authorbibnamehash}{b8fbdcebc28145a973312fe0f1466582}
+      \strng{authornamehash}{b8fbdcebc28145a973312fe0f1466582}
+      \strng{authorfullhash}{b8fbdcebc28145a973312fe0f1466582}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book consists of the preliminaries of mathematical programming, convex sets, topics of linear programming, integer linear programming, transportation problem, assignment problem and the basic of optimization using calculus method. Every topic has been presented in a simple way. The book becomes easier to understand for the readers, because, we follow the method definition-example-theory-example-application in writing each section. Students get here some done examples, mostly collected from the question papers of different universities. Exercises are included for home work. By studying the book, readers will learn the applications as well as the basic understanding of mathematical programming.}
+      \field{isbn}{978-620-0-46432-3}
+      \field{month}{1}
+      \field{title}{{{MATHEMATICAL PROGRAMMING}}}
+      \field{volume}{1}
+      \field{year}{2020}
+      \field{pages}{700}
+      \range{pages}{1}
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\LF4BD6K2\\Islam - 2020 - MATHEMATICAL PROGRAMMING.pdf
+      \endverb
+    \endentry
+    \entry{reevesGeneticAlgorithms2010}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=097242ca0331ff8c3f4e829efbc67f89}{%
+           family={Reeves},
+           familyi={R\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{097242ca0331ff8c3f4e829efbc67f89}
+      \strng{fullhash}{097242ca0331ff8c3f4e829efbc67f89}
+      \strng{bibnamehash}{097242ca0331ff8c3f4e829efbc67f89}
+      \strng{authorbibnamehash}{097242ca0331ff8c3f4e829efbc67f89}
+      \strng{authornamehash}{097242ca0331ff8c3f4e829efbc67f89}
+      \strng{authorfullhash}{097242ca0331ff8c3f4e829efbc67f89}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genetic algorithms (GAs) have become popular as a means of solving hard combinatorial optimization problems. The first part of this chapter briefly traces their history, explains the basic concepts and discusses some of their theoretical aspects. It also references a number of sources for further research into their applications. The second part concentrates on the detailed implementation of a GA. It discusses the fundamentals of encoding a `genotype' in different circumstances and describes the mechanics of population selection and management and the choice of genetic `operators' for generating new populations. In closing, some specific guidelines for using GAs in practice are provided.}
+      \field{booktitle}{Handbook of {{Metaheuristics}}}
+      \field{month}{9}
+      \field{title}{Genetic {{Algorithms}}}
+      \field{volume}{146}
+      \field{year}{2010}
+      \field{pages}{109\bibrangedash 139}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1007/978-1-4419-1665-5_5
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\NJII4H5F\\Reeves - 2010 - Genetic Algorithms.pdf
+      \endverb
+    \endentry
+    \entry{reevesFeatureArticleGenetic1997}{article}{}
+      \name{author}{1}{}{%
+        {{hash=09ed34a260e2c224e25fdbc8a435f311}{%
+           family={Reeves},
+           familyi={R\bibinitperiod},
+           given={Colin\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{09ed34a260e2c224e25fdbc8a435f311}
+      \strng{fullhash}{09ed34a260e2c224e25fdbc8a435f311}
+      \strng{bibnamehash}{09ed34a260e2c224e25fdbc8a435f311}
+      \strng{authorbibnamehash}{09ed34a260e2c224e25fdbc8a435f311}
+      \strng{authornamehash}{09ed34a260e2c224e25fdbc8a435f311}
+      \strng{authorfullhash}{09ed34a260e2c224e25fdbc8a435f311}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genetic algorithms have become increasingly popular as a means of solving hard combinatorial optimization problems of the type familiar in operations research. This feature article will consider what genetic algorithms have achieved in this area, discuss some of the factors that influence their success or failure, and offer a guide for operations researchers who want to get the best out of them.}
+      \field{issn}{1091-9856}
+      \field{journaltitle}{INFORMS Journal on Computing}
+      \field{month}{8}
+      \field{number}{3}
+      \field{title}{Feature {{Article}}—{{Genetic Algorithms}} for the {{Operations Researcher}}}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{9}
+      \field{year}{1997}
+      \field{urldateera}{ce}
+      \field{pages}{231\bibrangedash 250}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1287/ijoc.9.3.231
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\3Y3MFBZH\\Reeves - 1997 - Feature Article—Genetic Algorithms for the Operati.pdf
+      \endverb
+      \keyw{genetic algorithms,heuristics,optimization}
+    \endentry
+    \entry{smithOperatorParameterAdaptation1997}{article}{}
+      \name{author}{2}{}{%
+        {{hash=24b7be5b577041e83bf3c4fe658111a5}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=476c2d5f90bcc30b8588699a3ba019ff}{%
+           family={Fogarty},
+           familyi={F\bibinitperiod},
+           given={T.\bibnamedelimi C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer (part of Springer Nature)}%
+      }
+      \strng{namehash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{fullhash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{bibnamehash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{authorbibnamehash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{authornamehash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{authorfullhash}{bb76ab7a3ed9a8378e34656de7233801}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genetic Algorithms are a class of powerful, robust search techniques based on genetic inheritance and the Darwinian metaphor of ``Natural Selection''. These algorithms maintain a finite memory of individual points on the search landscape known as the ``population''. Members of the population are usually represented as strings written over some fixed alphabet, each of which has a scalar value attached to it reflecting its quality or ``fitness''. The search may be seen as the iterative application of a number of operators, such as selection, recombination and mutation, to the population with the aim of producing progressively fitter individuals. These operators are usually static, that is to say that their mechanisms, parameters, and probability of application are fixed at the beginning and constant throughout the run of the algorithm. However there is an increasing body of evidence that not only is there no single choice of operators which is optimal for all problems, but that in fact the optimal choice of operators for a given problem will be time-variant i.e. it will depend on such factors as the degree of convergence of the population. Based on theoretical and practical approaches, a number of authors have proposed methods of adaptively controlling one or more of the operators, usually invoking some kind of ``meta-learning'' algorithm, in order to try and improve the performance of the Genetic Algorithm as a function optimiser. In this paper we describe the background to these approaches, and suggest a framework for their classification based on the learning strategy used to control them, and what facets of the algorithm are susceptible to adaptation. We then review a number of significant pieces of work within this context, and draw some conclusions about the relative merits of various approaches and promising directions for future work.}
+      \field{issn}{1432-7643}
+      \field{journaltitle}{Soft Computing}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{2}
+      \field{title}{Operator and Parameter Adaptation in Genetic Algorithms}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{1}
+      \field{year}{1997}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/s005000050009
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\N3KCIVP9\\Smith y Fogarty - 1997 - Operator and parameter adaptation in genetic algor.pdf
+      \endverb
+    \endentry
+    \entry{tuRobustStochasticGenetic2004}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9876b411874ee30ff528ecf49da69adc}{%
+           family={Tu},
+           familyi={T\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=a1d6a8772a89bf1aded588e464a1eba5}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{fullhash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{bibnamehash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{authorbibnamehash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{authornamehash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{authorfullhash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many real-life problems can be formulated as numerical optimization of certain objective functions. However, often an objective function possesses numerous local optima, which could trap an algorithm from moving toward the desired global solution. Evolutionary algorithms (EAs) have emerged to enable global optimization; however, at the present stage, EAs are basically limited to solving small-scale problems due to the constraint of computational efficiency. To improve the search efficiency, this paper presents a stochastic genetic algorithm (StGA). A novel stochastic coding strategy is employed so that the search space is dynamically divided into regions using a stochastic method and explored region-by-region. In each region, a number of children are produced through random sampling, and the best child is chosen to represent the region. The variance values are decreased if at least one of five generated children results in improved fitness, otherwise, the variance values are increased. Experiments on 20 test functions of diverse complexities show that the StGA is able to find the near-optimal solution in all cases. Compared with several other algorithms, StGA achieves not only an improved accuracy, but also a considerable reduction of the computational effort. On average, the computational cost required by StGA is about one order less than the other algorithms. The StGA is also shown to be able to solve large-scale problems.}
+      \field{issn}{1089-778X}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{5}
+      \field{title}{A {{Robust Stochastic Genetic Algorithm}} ({{StGA}}) for {{Global Numerical Optimization}}}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{8}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \field{pages}{456\bibrangedash 470}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/TEVC.2004.831258
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\ZN4WS3BR\\Tu y Lu - 2004 - A Robust Stochastic Genetic Algorithm (StGA) for G.pdf
+      \endverb
+    \endentry
+    \entry{witzgallMathematicalMethodsSite1975}{article}{}
+      \name{author}{1}{}{%
+        {{hash=93cd15db827e20700dc5ecaac7f97391}{%
+           family={Witzgall},
+           familyi={W\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{93cd15db827e20700dc5ecaac7f97391}
+      \strng{fullhash}{93cd15db827e20700dc5ecaac7f97391}
+      \strng{bibnamehash}{93cd15db827e20700dc5ecaac7f97391}
+      \strng{authorbibnamehash}{93cd15db827e20700dc5ecaac7f97391}
+      \strng{authornamehash}{93cd15db827e20700dc5ecaac7f97391}
+      \strng{authorfullhash}{93cd15db827e20700dc5ecaac7f97391}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The concept of electronic message (mail) transmission was the subject of several feasibility studies during the past decade. It requires the installation of electronic message handling facilities at selected locations. If transmission is to be via communications satellite, then any such facility can transmit to and receive from any other one. In the report, the mathematical aspects of choosing the number and locations of these facilities are examined. An inventory of solution methods is presented, along with recommendations as to which among them should be employed or developed further.}
+      \field{annotation}{ADS Bibcode: 1975STIN...7618321W}
+      \field{journaltitle}{NASA STI/Recon Technical Report N}
+      \field{month}{6}
+      \field{title}{Mathematical Methods of Site Selection for {{Electronic Message Systems}} ({{EMS}})}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{76}
+      \field{year}{1975}
+      \field{urldateera}{ce}
+      \field{pages}{18321}
+      \range{pages}{1}
+      \keyw{Communications and Radar,Cost Analysis,Linear Programming,Messages,Network Synthesis,Radio Relay Systems,Systems Engineering,Telecommunication}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

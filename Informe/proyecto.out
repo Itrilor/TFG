@@ -4,55 +4,56 @@
 \BOOKMARK [2][-]{subsection.2.1.1}{Planificaci\363n Base}{section.2.1}% 4
 \BOOKMARK [2][-]{subsection.2.1.2}{Planificaci\363n Final}{section.2.1}% 5
 \BOOKMARK [1][-]{section.2.2}{Presupuesto}{chapter.2}% 6
-\BOOKMARK [0][-]{chapter.3}{Repaso bibliogr\341fico}{}% 7
-\BOOKMARK [0][-]{chapter.4}{Contexto matem\341tico}{}% 8
-\BOOKMARK [1][-]{section.4.1}{Definici\363n del problema}{chapter.4}% 9
-\BOOKMARK [1][-]{section.4.2}{Condici\363n de Optimalidad}{chapter.4}% 10
-\BOOKMARK [1][-]{section.4.3}{Rendimiento de los algoritmos}{chapter.4}% 11
-\BOOKMARK [2][-]{subsection.4.3.1}{Convergencia y Orden de Convergencia}{section.4.3}% 12
-\BOOKMARK [2][-]{subsection.4.3.2}{Comportamiento num\351rico}{section.4.3}% 13
-\BOOKMARK [1][-]{section.4.4}{Programaci\363n no lineal sin restricciones}{chapter.4}% 14
-\BOOKMARK [2][-]{subsection.4.4.1}{Algoritmos de Optimizaci\363n sin restricciones}{section.4.4}% 15
-\BOOKMARK [2][-]{subsection.4.4.2}{Algoritmos de B\372squeda Lineal}{section.4.4}% 16
-\BOOKMARK [2][-]{subsection.4.4.3}{M\351todos de Gradiente}{section.4.4}% 17
-\BOOKMARK [2][-]{subsection.4.4.4}{M\351todos de Gradiente Conjugado}{section.4.4}% 18
-\BOOKMARK [2][-]{subsection.4.4.5}{M\351todos de Newton}{section.4.4}% 19
-\BOOKMARK [1][-]{section.4.5}{Comparaciones por parejas}{chapter.4}% 20
-\BOOKMARK [2][-]{subsection.4.5.1}{Test de signos}{section.4.5}% 21
-\BOOKMARK [2][-]{subsection.4.5.2}{Test de posiciones con signos de Wilcoxon}{section.4.5}% 22
-\BOOKMARK [1][-]{section.4.6}{M\372ltiples comparaciones con un m\351todo de control}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.6.1}{Test m\372ltiple de signos}{section.4.6}% 24
-\BOOKMARK [2][-]{subsection.4.6.2}{Los test de Friedman, Posiciones Alineadas de Friedman y Quade}{section.4.6}% 25
-\BOOKMARK [2][-]{subsection.4.6.3}{Procedimientos post-hoc}{section.4.6}% 26
-\BOOKMARK [2][-]{subsection.4.6.4}{Estimaci\363n de contraste}{section.4.6}% 27
-\BOOKMARK [0][-]{chapter.5}{Problema y Dise\361o Experimental}{}% 28
-\BOOKMARK [1][-]{section.5.1}{Descripci\363n del problema}{chapter.5}% 29
-\BOOKMARK [2][-]{subsection.5.1.1}{Quadratic Knapsack Problem}{section.5.1}% 30
-\BOOKMARK [2][-]{subsection.5.1.2}{Datos del problema}{section.5.1}% 31
-\BOOKMARK [1][-]{section.5.2}{Dise\361o Experimental}{chapter.5}% 32
-\BOOKMARK [2][-]{subsection.5.2.1}{Criterio de Parada}{section.5.2}% 33
-\BOOKMARK [2][-]{subsection.5.2.2}{Par\341metros}{section.5.2}% 34
-\BOOKMARK [0][-]{chapter.6}{Algoritmos de Referencia}{}% 35
-\BOOKMARK [1][-]{section.6.1}{Algoritmo Gen\351tico Estacionario Uniforme}{chapter.6}% 36
-\BOOKMARK [2][-]{subsection.6.1.1}{Pseudoc\363digo}{section.6.1}% 37
-\BOOKMARK [2][-]{subsection.6.1.2}{Componentes}{section.6.1}% 38
-\BOOKMARK [1][-]{section.6.2}{CHC}{chapter.6}% 39
-\BOOKMARK [2][-]{subsection.6.2.1}{Pseudoc\363digo}{section.6.2}% 40
-\BOOKMARK [2][-]{subsection.6.2.2}{Componentes}{section.6.2}% 41
-\BOOKMARK [0][-]{chapter.7}{Componentes de la propuesta}{}% 42
-\BOOKMARK [1][-]{section.7.1}{Hist\363rico}{chapter.7}% 43
-\BOOKMARK [1][-]{section.7.2}{GRASP}{chapter.7}% 44
-\BOOKMARK [1][-]{section.7.3}{Cruce Intensivo}{chapter.7}% 45
-\BOOKMARK [1][-]{section.7.4}{Operador NAM}{chapter.7}% 46
-\BOOKMARK [1][-]{section.7.5}{Cambio Operador Reemplazo \(por cercan\355a\)}{chapter.7}% 47
-\BOOKMARK [1][-]{section.7.6}{Cambio Operador Reemplazo \(por cercan\355a\) intensivo}{chapter.7}% 48
-\BOOKMARK [0][-]{chapter.8}{Parte Experimental \(In progress\)}{}% 49
-\BOOKMARK [1][-]{section.8.1}{Algoritmos de Referencia experimentaci\363n}{chapter.8}% 50
-\BOOKMARK [1][-]{section.8.2}{Resultados versi\363n expensive}{chapter.8}% 51
-\BOOKMARK [1][-]{section.8.3}{Incorporaci\363n del hist\363rico}{chapter.8}% 52
-\BOOKMARK [1][-]{section.8.4}{Uso de GRASP}{chapter.8}% 53
-\BOOKMARK [1][-]{section.8.5}{Operador de Cruce Intensivo}{chapter.8}% 54
-\BOOKMARK [1][-]{section.8.6}{Estudio de la diversidad}{chapter.8}% 55
-\BOOKMARK [1][-]{section.8.7}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.8}% 56
-\BOOKMARK [1][-]{section.8.8}{Tablas de prueba}{chapter.8}% 57
-\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 58
+\BOOKMARK [0][-]{chapter.3}{Repaso Bibliogr\341fico}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Contexto Bibliogr\341fico}{chapter.3}% 8
+\BOOKMARK [0][-]{chapter.4}{Contexto matem\341tico}{}% 9
+\BOOKMARK [1][-]{section.4.1}{Definici\363n del problema}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.2}{Condici\363n de Optimalidad}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.3}{Rendimiento de los algoritmos}{chapter.4}% 12
+\BOOKMARK [2][-]{subsection.4.3.1}{Convergencia y Orden de Convergencia}{section.4.3}% 13
+\BOOKMARK [2][-]{subsection.4.3.2}{Comportamiento num\351rico}{section.4.3}% 14
+\BOOKMARK [1][-]{section.4.4}{Programaci\363n no lineal sin restricciones}{chapter.4}% 15
+\BOOKMARK [2][-]{subsection.4.4.1}{Algoritmos de Optimizaci\363n sin restricciones}{section.4.4}% 16
+\BOOKMARK [2][-]{subsection.4.4.2}{Algoritmos de B\372squeda Lineal}{section.4.4}% 17
+\BOOKMARK [2][-]{subsection.4.4.3}{M\351todos de Gradiente}{section.4.4}% 18
+\BOOKMARK [2][-]{subsection.4.4.4}{M\351todos de Gradiente Conjugado}{section.4.4}% 19
+\BOOKMARK [2][-]{subsection.4.4.5}{M\351todos de Newton}{section.4.4}% 20
+\BOOKMARK [1][-]{section.4.5}{Comparaciones por parejas}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.5.1}{Test de signos}{section.4.5}% 22
+\BOOKMARK [2][-]{subsection.4.5.2}{Test de posiciones con signos de Wilcoxon}{section.4.5}% 23
+\BOOKMARK [1][-]{section.4.6}{M\372ltiples comparaciones con un m\351todo de control}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.6.1}{Test m\372ltiple de signos}{section.4.6}% 25
+\BOOKMARK [2][-]{subsection.4.6.2}{Los test de Friedman, Posiciones Alineadas de Friedman y Quade}{section.4.6}% 26
+\BOOKMARK [2][-]{subsection.4.6.3}{Procedimientos post-hoc}{section.4.6}% 27
+\BOOKMARK [2][-]{subsection.4.6.4}{Estimaci\363n de contraste}{section.4.6}% 28
+\BOOKMARK [0][-]{chapter.5}{Problema y Dise\361o Experimental}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Descripci\363n del problema}{chapter.5}% 30
+\BOOKMARK [2][-]{subsection.5.1.1}{Quadratic Knapsack Problem}{section.5.1}% 31
+\BOOKMARK [2][-]{subsection.5.1.2}{Datos del problema}{section.5.1}% 32
+\BOOKMARK [1][-]{section.5.2}{Dise\361o Experimental}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.2.1}{Criterio de Parada}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.2}{Par\341metros}{section.5.2}% 35
+\BOOKMARK [0][-]{chapter.6}{Algoritmos de Referencia}{}% 36
+\BOOKMARK [1][-]{section.6.1}{Algoritmo Gen\351tico Estacionario Uniforme}{chapter.6}% 37
+\BOOKMARK [2][-]{subsection.6.1.1}{Pseudoc\363digo}{section.6.1}% 38
+\BOOKMARK [2][-]{subsection.6.1.2}{Componentes}{section.6.1}% 39
+\BOOKMARK [1][-]{section.6.2}{CHC}{chapter.6}% 40
+\BOOKMARK [2][-]{subsection.6.2.1}{Pseudoc\363digo}{section.6.2}% 41
+\BOOKMARK [2][-]{subsection.6.2.2}{Componentes}{section.6.2}% 42
+\BOOKMARK [0][-]{chapter.7}{Componentes de la propuesta}{}% 43
+\BOOKMARK [1][-]{section.7.1}{Hist\363rico}{chapter.7}% 44
+\BOOKMARK [1][-]{section.7.2}{GRASP}{chapter.7}% 45
+\BOOKMARK [1][-]{section.7.3}{Cruce Intensivo}{chapter.7}% 46
+\BOOKMARK [1][-]{section.7.4}{Operador NAM}{chapter.7}% 47
+\BOOKMARK [1][-]{section.7.5}{Cambio Operador Reemplazo \(por cercan\355a\)}{chapter.7}% 48
+\BOOKMARK [1][-]{section.7.6}{Cambio Operador Reemplazo \(por cercan\355a\) intensivo}{chapter.7}% 49
+\BOOKMARK [0][-]{chapter.8}{Parte Experimental \(In progress\)}{}% 50
+\BOOKMARK [1][-]{section.8.1}{Algoritmos de Referencia experimentaci\363n}{chapter.8}% 51
+\BOOKMARK [1][-]{section.8.2}{Resultados versi\363n expensive}{chapter.8}% 52
+\BOOKMARK [1][-]{section.8.3}{Incorporaci\363n del hist\363rico}{chapter.8}% 53
+\BOOKMARK [1][-]{section.8.4}{Uso de GRASP}{chapter.8}% 54
+\BOOKMARK [1][-]{section.8.5}{Operador de Cruce Intensivo}{chapter.8}% 55
+\BOOKMARK [1][-]{section.8.6}{Estudio de la diversidad}{chapter.8}% 56
+\BOOKMARK [1][-]{section.8.7}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.8}% 57
+\BOOKMARK [1][-]{section.8.8}{Tablas de prueba}{chapter.8}% 58
+\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 59

@@ -199,6 +199,8 @@ pdfproducer = {pdflatex}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{cleveref}
+\usepackage{biblatex}
+\addbibresource{TFG.bib}
 
 \usepackage{float}
 \floatstyle{plaintop}
@@ -252,8 +254,7 @@ pdfproducer = {pdflatex}
 %
 %
 %%\nocite{*}
-%\bibliography{bibliografia/bibliografia}\addcontentsline{toc}{chapter}{Bibliografía}
-%\bibliographystyle{miunsrturl}
+\printbibliography
 %
 %\appendix
 %\input{apendices/manual_usuario/manual_usuario}

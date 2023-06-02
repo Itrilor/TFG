@@ -18,19 +18,16 @@ Es decir, tenemos métodos que nos llevan a la solución, pero no existen formas
 %Llegados a este punto, si bien tenemos que dejar de plantearnos la pregunta ``¿cuál es el camino más corto?'', podemos empezar a formular una pregunta similar: ``¿qué camino es lo suficientemente corto?''; o sea, a veces tenemos que abandonar la idea de obtener la solución óptima y conformarnos con una solución aproximada de una calidad similar a la óptima.
 
 Por ello, tenemos que encontrar alternativas más viables para la resolución de los problemas, es decir, tenemos que usar algoritmos aproximados, que proporcionan buenas soluciones (no necesariamente la óptima) en un tiempo razonable. 
-Los algoritmos aproximados se pueden dividir en heurísticas y metaheurísticas, estas últimas son en las que vamos a estar más interesados. 
-Las metaheurísticas suelen ser procedimientos iterativos que guían una heurística subordinada de búsqueda, combinando de forma inteligente distintos conceptos para explorar y explotar adecuadamente el espacio de búsqueda.
-Así, las metaheurísticas son una familia de algoritmos aproximados más generales que las heurísticas (que son dependientes del problema a tratar) y aplicables a una gran variedad de problemas de optimización, tanto continuos como combinatorios. 
+Esto es, haremos uso de estrategias de diseño generales para procedimientos heurísticos de resolución de problemas: las metaheurísticas.
+%Los algoritmos aproximados se pueden dividir en heurísticas y metaheurísticas, estas últimas son en las que vamos a estar más interesados. 
+%Las metaheurísticas suelen ser procedimientos iterativos que guían una heurística subordinada de búsqueda, combinando de forma inteligente distintos conceptos para explorar y explotar adecuadamente el espacio de búsqueda.
+%Así, las metaheurísticas son una familia de algoritmos aproximados más generales que las heurísticas (que son dependientes del problema a tratar) y aplicables a una gran variedad de problemas de optimización, tanto continuos como combinatorios. 
 
 %<Existen problemas expensives, lo que es y algún ejemplo, y en continuo ya existe algoritmos específicos>
 Los problemas de optimización costosa (EOP) o \textbf{problemas \textit{expensives}} se refieren a los problemas que requieren costes elevados, o incluso inasequibles, con el fin de evaluar los candidatos a soluciones. 
 Este tipo de problemas existen en una gran cantidad, y cada vez con más frecuencia, de aplicaciones significativas del mundo real. 
-%Se pudo resolver transformandolo en imágenes
-%Por ejemplo, el programa basado en \textit{deep learning} \textbf{AlphaFold2} para predecir estructuras proteicas se considera a nivel mundial como un potencial enfoque a un gran reto en la biología; sin embargo, su entrenamiento requiere 128 TPUv3 \textit{cores} (teniendo estos mayores capacidades computativas que muchos supercomputadores) junto con varias semanas. 
-%Por esto último, AlphaFold2 se considera computacionalmente muy costoso y no es asequible para muchos investigadores.
-%Buscar problemas de optimización redes neuronales profundas con metaheurística
 Un tipo de problemas \textit{expensive} podrían ser los problemas de optimización de redes neuronales profundas utilizando metaheurísticas. 
-Un ejemplo esto se podría encontrar en el artículo [Metaheuristic algorithms in optimizing neural network: a comparative study for forest fire susceptibility mapping in Dak Nong, Vietnam]; en ese estudio se proponen y se comparan tres métodos híbridos en combinación con el popular clasificador con redes neuronales para el modelado de incendios forestales.
+Un ejemplo esto se podría encontrar en el artículo \parencite{buiMetaheuristicAlgorithmsOptimizing2019}; en ese estudio se proponen y se comparan tres métodos híbridos en combinación con el popular clasificador con redes neuronales para el modelado de incendios forestales.
 
 También, cabe destacar que ``coste elevado'' es más un concepto relativo que uno absoluto en la mayoría de problemas del mundo real. 
 Por ejemplo, en situaciones de emergencia como epidemias o desastres naturales, transporte y envío de materiales para operaciones diarias importantes para salvar vidas, etc., el coste de optimización en situaciones normales se convierte en un coste demasiado elevado. 
@@ -38,10 +35,13 @@ Para el caso de los problemas de parámetros reales nos encontramos con que se e
 
 %<El problema también se da en combinatorio, por nuevos problemas.>
 Ahora bien, cada vez es más común usar problemas combinatorios en problemas complejos, lo que implica un mayor coste de evaluación. 
-Un ejemplo de esto, como ya hemos comentado anteriormente, podría ser el uso de este tipo de algoritmos para optimizar redes neuronales. 
+Un ejemplo de esto lo podemos encontrar en el artículo \parencite{demoraesDiversityPreservationMethod2022}, donde en su introducción se detalla el por qué el \textit{Well Placement Optimization Problem} (WPOP) en el desarrollo y gestión de campos petroleros se considera un problema \textit{expensive} (se debe al cálculo tan complejo de ecuaciones diferenciales para predecir la influencia de la estrategia de producción  en las propiedades geológicas y petrofísicas de la reserva). 
+%Un ejemplo de esto, como ya hemos comentado anteriormente, podría ser el uso de este tipo de algoritmos para optimizar redes neuronales. 
 Si bien hemos comentado que en el caso de parámetros reales (caso continuo) se han propuesto algoritmos específicos, esto no ha sido el caso para el ámbito de los problemas combinatorios \textit{expensive}, para los que no se han encontrado ninguna referencia. 
 Por lo que es de gran interés crear un algoritmo que resulte útil para este tipo de situaciones, con el fin de reducir los costes todo lo posible. 
 
 %<En este trabajo vamos a ...>
 En este Trabajo de Fin de Grado vamos a diseñar, implementar y proponer un algoritmo especialmente diseñado para problemas combinatorios \textit{expensive}. 
-El objetivo principal de este algoritmo será encontrar buenas soluciones en una cantidad de tiempo bastante reducida, lo que vamos a traducir en un menor número de evaluaciones; para ello, compararemos los resultados obtenidos del algoritmo propuesto con los resultados pertenecientes a otros tipos de algoritmos conocidos pero no especializados en este tipo de problemas.
+El objetivo principal de este algoritmo será encontrar buenas soluciones en una cantidad de tiempo bastante reducida, lo que vamos a traducir en un menor número de iteraciones. 
+Para ello, procederemos a tomar un problema sobre el que trabajar y extraer conclusiones y un algoritmo de referencia sobre el que realizaremos un proceso recursivo: introduciremos alguna modificación y compararemos los resultados obtenidos con los del algoritmo de referencia, en caso de mejorarlos, este algoritmo con modificación se convertirá en el nuevo algoritmo de referencia. 
+De esta forma se puede garantizar que los resultados que finalmente alcanzaremos son competitivos. 

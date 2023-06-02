@@ -20,7 +20,7 @@ La planificación inicial que se estableció antes de iniciar el proyecto se pue
 \begin{tabular}{|l|l|l|}
 \hline
 \rowcolor[HTML]{F7EAC7} 
-\textbf{Resumen}                                                                                             & \textbf{Tareas}                                                                                                                             & \textbf{Duración}                                                        \\ \hline
+\textbf{Resumen}                                                                                             & \textbf{Tareas}                                                                                                                             & \textbf{Planificación}                                                        \\ \hline
 \rowcolor[HTML]{ECF4FF} 
 \cellcolor[HTML]{ECF4FF}                                                                                     & Obtener instancias del problema                                                                                                            & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}}                            \\ \cline{2-2}
 \rowcolor[HTML]{ECF4FF} 
@@ -119,7 +119,8 @@ Revisión de la memoria                   & 10                                  
 \section{Presupuesto}
 
 Si quisiéramos valorar económicamente el proyecto, tenemos que tener en cuenta dos aspectos fundamentales: el precio de la mano de obra y el de cómputo como si tuviésemos que pagarlo. 
-Además, también se incluirá el precio del ordenador en el que se ha realizado todo el trabajo.
+Además, también se incluirá el precio del ordenador en el que se ha realizado todo el trabajo. 
+En la tabla \ref{Presupuesto} se puede ver un resumen de los cálculos realizados junto con el presupuesto final necesario.
 
 El precio de la mano de obra son 25\texteuro\xspace la hora. 
 
@@ -137,5 +138,22 @@ Teniendo todos estos datos, podemos proceder a calcular cuál sería el presupue
 \begin{equation*}
 500h\cdot 25\dfrac{\text{\texteuro}}{h} + 1300\text{\texteuro} + 50h\cdot 0.443\dfrac{\text{\texteuro}}{h} = 13822.15\text{\texteuro}
 \end{equation*}
+
+
+\begin{table}[h]
+\begin{tabular}{|l|cc|c|}
+\hline
+\rowcolor[HTML]{FFFFC7} 
+\textbf{Concepto}                      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFC7}\textbf{Precio base (\texteuro)}} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFC7}\textbf{Tiempo (h)}} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFC7}\textbf{Precio total (\texteuro)}} \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Mano de obra                           & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}25}                   & 500                                                              & 12500                                                              \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+Ordenador                              & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}1300}                 & -----                                                             & 1300                                                               \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Tiempo de cómputo                      & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}0.443}                & 50                                                               & 22.15                                                              \\ \hline
+\cellcolor[HTML]{FFFFC7}\textbf{Total} & \multicolumn{1}{l}{}                                              & \multicolumn{1}{l|}{}                                            & \cellcolor[HTML]{FCE6AB}\textbf{13882.15}                          \\ \cline{1-1} \cline{4-4} 
+\end{tabular}
+\caption{\label{Presupuesto}Cálculo del presupuesto}
+\end{table}
 
 En resumen, el \textbf{presupuesto de este proyecto queda fijado en 13822.15\texteuro}.

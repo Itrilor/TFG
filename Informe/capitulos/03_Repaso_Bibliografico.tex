@@ -1,1 +1,52 @@
-\chapter{Repaso bibliográfico}
+\chapter{Repaso Bibliográfico}
+
+En esta sección se lleva a cabo una revisión bibliográfica sobre el tema en el que hemos centrado el proyecto. 
+Buscamos con ello, llevar a cabo un pequeño recordatorio para poder entender los distintos ámbitos que más se han tratado y centrado los estudios en cuanto al diseño de metaheurísticas, las cuales se usan para resolver problemas cada vez más complejos.  
+Posteriormente utilizaremos estos conocimientos para nuestro propio diseño de una metaheurística útil para problemas combinatorios \textit{expensive}.
+
+% Cada frase se desarrolla en un párrafo, con una o varias referencias
+
+\section{Contexto Bibliográfico}
+
+% Párrafo sobre las metaheurísticas, con referencias [evocomp, EABook]
+
+La computación evolutiva (\textit{evolutionary computation}, EC) es un área de la ciencia de la computación que usa ideas de la evolución biológica para resolver problemas computacionales. 
+La evolución es, en efecto, un método de búsqueda entre un número enorme de posibilidades de ``soluciones'' que permitan a los organismos sobrevivir y reproducirse en sus ambientes. 
+También se puede ver la evolución como un método de adaptación a un entorno cambiante. 
+En \parencite{backEvolutionaryComputationOverview1996} nos podemos encontrar con un resumen del desarrollo de la computación evolutiva en el tiempo junto con aplicaciones reales de algoritmos evolutivos (tanto comerciales como científicas), como podría ser el uso de programación genética para mejorar estrategias óptimas de recolección. 
+Si consideramos la computación evolutiva como un medio para encontrar buenas soluciones (aunque no sean las óptimas) dado un problema de optimización, es natural considerar que su hibridación con métodos de optimización existentes resultará en mejorar su rendimiento al explotar sus ventajas. 
+Tales métodos de optimización se refieren desde algoritmos exactos estudiados en programación matemática \parencite{islamMATHEMATICALPROGRAMMING2020} hasta algoritmos heurísticos hechos a medida para unos problemas dados. 
+Los llamados algoritmos metaheurísticos también tienen un objetivo similar, y pueden ser combinados con EC, incluso si ambos enfoques suelen competir entre si. 
+En el libro \parencite{michalewiczHandbookEvolutionaryComputation1997} se presentan varias posibilidades de combinar ECs con métodos de optimización, poniendo énfasis en la optimización de problemas combinatorios, tales como métodos \textit{greedy}, construcciones heurísticas de soluciones factibles, programación dinámica, etc. 
+
+
+% Introducir los AGs con su referencia. Dentro del AG indicar los operadores comunes con su referencia (Nam)
+
+Una de las versiones de algoritmos evolutivos más utilizadas son los algoritmos genéticos (AG), que será en el que nos centremos ya que supondrá ser un algoritmo base para el desarrollo de este proyecto. 
+Los algoritmos genéticos son algoritmos basados en poblaciones que se pueden describir como la combinación de dos procesos: la generación de elementos del espacio de búsqueda (recombinación o mutación de la población) y la actualización (selección y redimensionamiento) para producir nuevas soluciones basadas en el conjunto de puntos que se crean junto con los de la anterior población \parencite{smithOperatorParameterAdaptation1997} \parencite{tuRobustStochasticGenetic2004}. 
+En \parencite{backEvolutionaryComputationOverview1996} se presenta una lista de componentes para la versión más simple de un AG, que se puede resumir en:
+\begin{itemize}
+	\item Una población de soluciones candidatas a un problema dado, cada una codificada de acuerdo a un esquema de representación elegido. 
+	\item Una función \textit{fitness} que asigna un valor numérico a cada cromosoma (solución) de una población para medir su calidad como candidato a solución del problema.
+	\item Un conjunto de operadores que se aplicarán a los cromosomas para crear una nueva población. 
+Estos suelen incluir:
+	\begin{itemize}
+		\item Operador de Cruce: Dos cromosomas padres recombinan sus genes para producir una o más soluciones hijas. 
+		\item Mutación: Uno o varios genes de una solución se modifican de forma aleatoria. 
+	\end{itemize}
+\end{itemize}
+Una explicación más completa y detallada de lo relativo a AGs se puede encontrar en \parencite{reevesGeneticAlgorithms2010}. 
+En dicho capítulo también presentan algunos artículos y libros donde encontrar aplicaciones de AGs exitosas para la optimización de problemas combinatorios, entre ellas se destaca \parencite{reevesFeatureArticleGenetic1997}, la cual lista algunas de las referencias más útiles y accesibles que podrían ser de interés para gente experimentando con metaheurísticas, como podrían ser el problema del viajante de comercio, problemas relacionados con grafos, problema de la mochila en forma binaria, etc. 
+
+% Introducir el CHC con su referencia, y algún artículo de aplicación.
+
+% Párrafo sobre problemas expensives, incluyendo referencia de repaso bibliográfico que te envié
+
+% Indicar que hay problemas combinatorios que no están cubiertos, citar trabajo de neuroevolución, y concreto mío, que hace muy pocas evaluaciones y aún así tarda demasiado tiempo
+
+% Referencias sobre el problema, ya tenías alguna, busca más y sobre su interés.
+
+%Describir posibles opciones a considerar
+%  - Uso de parámetros adaptativos y auto-adaptativos [referencia], guiándose no solo por mejor actual, si no por histórico.
+%  - Modificación del operador de cruce [referencia]
+%  - Describir que usarás la guía de buenas prácticas [referencia]
