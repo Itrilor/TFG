@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  2 JUN 2023 05:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  4 JUN 2023 16:38
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -1379,9 +1379,9 @@ been already used, duplicate ignored
                    \relax 
 l.30 	\item U
              na función \textit{fitness} que asigna un valor numérico a ca...
-[7]) (capitulos/04_Contexto_Matematico.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+[7]
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1395,19 +1395,28 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Contexto matemático} [8]
-Cap\'{\i }tulo 4.
+l.70 E
+      l problema de la mochila cuadrático (QKP, \textit{quadratic knapsack ...
+[8]
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 \begin{equation}
-                      [9
-
-]
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
+l.108 
+       [9]) (capitulos/04_Contexto_Matematico.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1421,9 +1430,35 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.1 \chapter
+            {Contexto matemático} [10]
+Cap\'{\i }tulo 4.
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.44 \begin{equation}
+                      [11
+
+]
+LaTeX Info: Redefining \. on input line 101.
+LaTeX Info: Redefining \% on input line 101.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.101 	\item D
               ada una función $h:\mathbb{R}^n\xrightarrow{}{}\mathbb{R}$, d...
-[10]
+[12]
 Overfull \hbox (9.10548pt too wide) in paragraph at lines 101--102
 []\T1/lmr/m/n/10.95 Dada una fun-ci�n $\OML/lmm/m/it/10.95 h \OT1/lmr/m/n/10.95
  : \U/msb/m/n/10.95 R[] [] []R$\T1/lmr/m/n/10.95 , de-no-ta-mos el vec-tor \T1/
@@ -1442,12 +1477,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.155 
-       [11]
+[13]
 LaTeX Info: Redefining \. on input line 222.
 LaTeX Info: Redefining \% on input line 222.
 
@@ -1459,13 +1489,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.222 	\item
-             Encontrar todos los puntos que satisfacen las condiciones neces...
-[12]
+[14]
 LaTeX Info: Redefining \. on input line 257.
 LaTeX Info: Redefining \% on input line 257.
 
@@ -1477,7 +1501,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[13]
+[15]
 LaTeX Info: Redefining \. on input line 311.
 LaTeX Info: Redefining \% on input line 311.
 
@@ -1489,7 +1513,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[14]
+[16]
 LaTeX Info: Redefining \. on input line 353.
 LaTeX Info: Redefining \% on input line 353.
 
@@ -1501,7 +1525,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[15]
+[17]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 391.
 LaTeX Info: Redefining \. on input line 428.
@@ -1515,7 +1539,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[16]
+[18]
 LaTeX Info: Redefining \. on input line 467.
 LaTeX Info: Redefining \% on input line 467.
 
@@ -1527,7 +1551,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[17pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
+[19pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1658,7 +1682,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[18]
+[20]
 LaTeX Info: Redefining \. on input line 586.
 LaTeX Info: Redefining \% on input line 586.
 
@@ -1670,7 +1694,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[19]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[21]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1737,7 +1761,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[20]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[22]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1804,7 +1828,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[21]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[23]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1882,7 +1906,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[22pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
+[24pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
 1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1904,7 +1928,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[23pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
+[25pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
 3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1953,7 +1977,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[24]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[26]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2015,7 +2039,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[25]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[27]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2079,7 +2103,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[26]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[28]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2141,7 +2165,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[27]
+[29]
 LaTeX Info: Redefining \. on input line 1025.
 LaTeX Info: Redefining \% on input line 1025.
 
@@ -2153,7 +2177,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[28]
+[30]
 LaTeX Info: Redefining \. on input line 1065.
 LaTeX Info: Redefining \% on input line 1065.
 
@@ -2165,7 +2189,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[29]
+[31]
 LaTeX Info: Redefining \. on input line 1096.
 LaTeX Info: Redefining \% on input line 1096.
 
@@ -2177,7 +2201,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[30]
+[32]
 LaTeX Info: Redefining \. on input line 1136.
 LaTeX Info: Redefining \% on input line 1136.
 
@@ -2189,7 +2213,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[31]
+[33]
 LaTeX Info: Redefining \. on input line 1189.
 LaTeX Info: Redefining \% on input line 1189.
 
@@ -2201,7 +2225,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[32]
+[34]
 LaTeX Info: Redefining \. on input line 1226.
 LaTeX Info: Redefining \% on input line 1226.
 
@@ -2213,7 +2237,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[33]
+[35]
 Overfull \hbox (9.90993pt too wide) in paragraph at lines 1262--1270
 []\T1/lmr/m/n/10.95 El pro-ce-di-mien-to de Holm: Ajus-ta el va-lor de $\OML/lm
 m/m/it/10.95 $ \T1/lmr/m/n/10.95 en una for-ma \T1/lmr/m/it/10.95 step-down\T1
@@ -2238,7 +2262,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[34]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[36]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2333,7 +2357,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[35]) (capitulos/05_Problema_Diseño_Experimental.tex
+[37]) (capitulos/05_Problema_Diseño_Experimental.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -2345,13 +2369,13 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[36]
+[38]
 Cap\'{\i }tulo 5.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 5.
 ("C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [37
+) [39
 
 ]
 LaTeX Info: Redefining \. on input line 80.
@@ -2365,7 +2389,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[38]
+[40]
 LaTeX Info: Redefining \. on input line 138.
 LaTeX Info: Redefining \% on input line 138.
 
@@ -2377,7 +2401,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[39]
+[41]
 LaTeX Info: Redefining \. on input line 164.
 LaTeX Info: Redefining \% on input line 164.
 
@@ -2389,7 +2413,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[40]) (capitulos/06_Algoritmos_Referencia.tex
+[42]) (capitulos/06_Algoritmos_Referencia.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -2401,7 +2425,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[41] [42]
+[43] [44]
 Cap\'{\i }tulo 6.
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
@@ -2519,7 +2543,7 @@ destination with the same identifier (name{ALG@line.20}) has been already used,
 <to be read again> 
                    \relax 
 l.45 \EndWhile
-               [43
+               [45
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1})
  has been already used, duplicate ignored
@@ -2638,7 +2662,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[44]
+[46]
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
 
@@ -2650,7 +2674,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[45]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[47]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2722,23 +2746,23 @@ LG@line.13}) has been already used, duplicate ignored
                    \relax 
 l.157 \EndProcedure
                    
-<imagenes/Crossover1point.png, id=848, 390.258pt x 153.57375pt>
+<imagenes/Crossover1point.png, id=898, 390.258pt x 153.57375pt>
 File: imagenes/Crossover1point.png Graphic file (type png)
 <use imagenes/Crossover1point.png>
 Package pdftex.def Info: imagenes/Crossover1point.png  used on input line 190.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover1pointNumber.png, id=849, 390.258pt x 153.57375pt>
+<imagenes/Crossover1pointNumber.png, id=899, 390.258pt x 153.57375pt>
 File: imagenes/Crossover1pointNumber.png Graphic file (type png)
 <use imagenes/Crossover1pointNumber.png>
 Package pdftex.def Info: imagenes/Crossover1pointNumber.png  used on input line
  191.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover2point.png, id=850, 390.258pt x 153.57375pt>
+<imagenes/Crossover2point.png, id=900, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2point.png Graphic file (type png)
 <use imagenes/Crossover2point.png>
 Package pdftex.def Info: imagenes/Crossover2point.png  used on input line 200.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover2pointNumber.png, id=851, 390.258pt x 153.57375pt>
+<imagenes/Crossover2pointNumber.png, id=901, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2pointNumber.png Graphic file (type png)
 <use imagenes/Crossover2pointNumber.png>
 Package pdftex.def Info: imagenes/Crossover2pointNumber.png  used on input line
@@ -2755,8 +2779,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[46 <./imagenes/Crossover1point.png> <./imagenes/Crossover1pointNumber.png>]
-<imagenes/CrossoverUniformNumber.png, id=856, 390.258pt x 153.57375pt>
+[48 <./imagenes/Crossover1point.png> <./imagenes/Crossover1pointNumber.png>]
+<imagenes/CrossoverUniformNumber.png, id=906, 390.258pt x 153.57375pt>
 File: imagenes/CrossoverUniformNumber.png Graphic file (type png)
 <use imagenes/CrossoverUniformNumber.png>
 Package pdftex.def Info: imagenes/CrossoverUniformNumber.png  used on input lin
@@ -2840,7 +2864,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[47 <./imagenes/Crossover2point.png> <./imagenes/Crossover2pointNumber.png> <./
+[49 <./imagenes/Crossover2point.png> <./imagenes/Crossover2pointNumber.png> <./
 imagenes/CrossoverUniformNumber.png>]pdfTeX warning (ext4): destination with th
 e same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -2946,7 +2970,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[48]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[50]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3015,7 +3039,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[49]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[51]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3148,8 +3172,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[50]
-<imagenes/CrossoverHUX.png, id=889, 539.01375pt x 153.57375pt>
+[52]
+<imagenes/CrossoverHUX.png, id=940, 539.01375pt x 153.57375pt>
 File: imagenes/CrossoverHUX.png Graphic file (type png)
 <use imagenes/CrossoverHUX.png>
 Package pdftex.def Info: imagenes/CrossoverHUX.png  used on input line 377.
@@ -3281,7 +3305,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[51 <./imagenes/CrossoverHUX.png>]
+[53 <./imagenes/CrossoverHUX.png>]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -3293,9 +3317,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[52]
+[54]
 Cap\'{\i }tulo 7.
-[53
+[55
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1})
  has been already used, duplicate ignored
@@ -3576,7 +3600,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[54]
+[56]
 LaTeX Info: Redefining \. on input line 115.
 LaTeX Info: Redefining \% on input line 115.
 
@@ -3588,7 +3612,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[55]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[57]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3751,7 +3775,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[56]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[58]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3871,7 +3895,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[57]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[59]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3933,7 +3957,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[58]
+[60]
 Cap\'{\i }tulo 8.
 
 Overfull \hbox (0.45361pt too wide) in paragraph at lines 1--1
@@ -3945,7 +3969,7 @@ Package caption Warning: \label without proper reference on input line 24.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:Parametros' on page 59 undefined on input line 
+LaTeX Warning: Reference `table:Parametros' on page 61 undefined on input line 
 4.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
@@ -3960,7 +3984,7 @@ LaTeX Warning: No positions in optional float specifier.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59
+ [61
 
 ]
 
@@ -3994,30 +4018,6 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[60]
-LaTeX Info: Redefining \. on input line 414.
-LaTeX Info: Redefining \% on input line 414.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[61]
-LaTeX Info: Redefining \. on input line 414.
-LaTeX Info: Redefining \% on input line 414.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
 [62]
 LaTeX Info: Redefining \. on input line 414.
 LaTeX Info: Redefining \% on input line 414.
@@ -4031,6 +4031,30 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [63]
+LaTeX Info: Redefining \. on input line 414.
+LaTeX Info: Redefining \% on input line 414.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[64]
+LaTeX Info: Redefining \. on input line 414.
+LaTeX Info: Redefining \% on input line 414.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[65]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 419.
@@ -4055,7 +4079,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[64]) (capitulos/09_Conclusiones.tex
+[66]) (capitulos/09_Conclusiones.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -4067,27 +4091,56 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[65] [66
+[67] [68
 
 ]
 Cap\'{\i }tulo 9.
-) [67] [68
+) [69] [70
 
 ]
-Overfull \hbox (3.77248pt too wide) in paragraph at lines 265--265
-[]\T1/lmr/m/n/10.95 Matheus Ber-nar-de-lli de Mo-raes y Guilher-me Pa-ler-mo Co
-elho. ``A Di-ver-sity Pre-ser-va-tion Method
+Overfull \hbox (5.76938pt too wide) in paragraph at lines 265--265
+\T1/lmr/m/n/10.95 rithms''. En: \T1/lmr/m/it/10.95 IEEE Transac-tions on Evo-lu
+-tio-nary Compu-tation \T1/lmr/m/n/10.95 3.2 (jul. de 1999), p�gs. 124[]141.
+ []
+
+[71]
+LaTeX Info: Redefining \. on input line 257.
+LaTeX Info: Redefining \% on input line 257.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 14.1595pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.1595pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
+
+[72]
+Overfull \hbox (1.75105pt too wide) in paragraph at lines 265--265
+[]\T1/lmr/m/n/10.95 C. Witz-gall. ``Mathe-ma-ti-cal Methods of Si-te Se-lec-tio
+n for Elec-tro-nic Mes-sa-ge Sys-tems (EMS)''.
  []
 
 
-Overfull \hbox (0.81221pt too wide) in paragraph at lines 265--265
-\T1/lmr/m/n/10.95 za-tion''. En: \T1/lmr/m/it/10.95 IEEE Transac-tions on Evo-l
-u-tio-nary Compu-tation \T1/lmr/m/n/10.95 8.5 (oct. de 2004), p�gs. 456[]470.
+Overfull \hbox (3.17897pt too wide) in paragraph at lines 265--265
+\T1/lmr/m/n/10.95 En: \T1/lmr/m/it/10.95 NA-SA STI/-Re-con Tech-ni-cal Re-port 
+N \T1/lmr/m/n/10.95 76 (jun. de 1975), p�g. 18321. (Vi-si-ta-do 02[]06[]2023). 
+
  []
 
-[69] [70
+LaTeX Info: Redefining \. on input line 265.
+LaTeX Info: Redefining \% on input line 265.
 
-] [71] (proyecto.aux
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 14.1595pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.1595pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
+
+[73] [74
+
+] [75] (proyecto.aux
 LaTeX Info: Redefining \sptext on input line 29.
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
@@ -4114,13 +4167,13 @@ Package logreq Info: Writing requests to 'proyecto.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24694 strings out of 479696
- 423399 string characters out of 2876991
- 1304201 words of memory out of 3000000
- 41010 multiletter control sequences out of 15000+200000
+ 24829 strings out of 479696
+ 428675 string characters out of 2876991
+ 1307126 words of memory out of 3000000
+ 41122 multiletter control sequences out of 15000+200000
  487958 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,28n,111p,2004b,2413s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 106i,28n,111p,2204b,2413s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKT
 eX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-
 rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Fi
@@ -4140,9 +4193,9 @@ c/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Pr
 ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (93 pages, 872514 bytes).
+Output written on proyecto.pdf (97 pages, 900584 bytes).
 PDF statistics:
- 1160 PDF objects out of 1200 (max. 8388607)
- 333 named destinations out of 1000 (max. 500000)
+ 1246 PDF objects out of 1440 (max. 8388607)
+ 356 named destinations out of 1000 (max. 500000)
  518 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2360,7 +2360,30 @@
     <bcf:citekey order="8">backEvolutionaryComputationOverview1996</bcf:citekey>
     <bcf:citekey order="9">reevesGeneticAlgorithms2010</bcf:citekey>
     <bcf:citekey order="10">reevesFeatureArticleGenetic1997</bcf:citekey>
-    <bcf:citekey order="11">witzgallMathematicalMethodsSite1975</bcf:citekey>
+    <bcf:citekey order="11">eshelmanCHCAdaptiveSearch1991a</bcf:citekey>
+    <bcf:citekey order="12">eshelmanCHCAdaptiveSearch1991a</bcf:citekey>
+    <bcf:citekey order="13">simoesCHCBasedAlgorithmsDynamic2011</bcf:citekey>
+    <bcf:citekey order="14">liEvolutionaryComputationExpensive2022</bcf:citekey>
+    <bcf:citekey order="15">jinComprehensiveSurveyFitness2005</bcf:citekey>
+    <bcf:citekey order="16">shanSurveyModelingOptimization2010</bcf:citekey>
+    <bcf:citekey order="17">tenneComputationalIntelligenceExpensive2010</bcf:citekey>
+    <bcf:citekey order="18">liEvolutionaryComputationExpensive2022</bcf:citekey>
+    <bcf:citekey order="19">galloQuadraticKnapsackProblems1980</bcf:citekey>
+    <bcf:citekey order="20">witzgallMathematicalMethodsSite1975</bcf:citekey>
+    <bcf:citekey order="21">rhysSelectionProblemShared1970</bcf:citekey>
+    <bcf:citekey order="22">ferreiraFormulationsValidInequalities1996</bcf:citekey>
+    <bcf:citekey order="23">pisingerQuadraticKnapsackProblem2007</bcf:citekey>
+    <bcf:citekey order="24">pellerinSelfadaptiveParametersGenetic2004</bcf:citekey>
+    <bcf:citekey order="25">eibenParameterControlEvolutionary1999</bcf:citekey>
+    <bcf:citekey order="26">loboOverviewParameterlessGenetic2008</bcf:citekey>
+    <bcf:citekey order="27">eibenParameterControlEvolutionary1999</bcf:citekey>
+    <bcf:citekey order="28">lisParallelGeneticAlgorithm1996</bcf:citekey>
+    <bcf:citekey order="29">grefenstetteOptimizationControlParameters1986</bcf:citekey>
+    <bcf:citekey order="30">phamCompetitiveEvolutionNatural1994</bcf:citekey>
+    <bcf:citekey order="31">chaturvediModifiedGeneticAlgorithm2019</bcf:citekey>
+    <bcf:citekey order="32">chengCrossoverIntensiveSearch1994</bcf:citekey>
+    <bcf:citekey order="33">qiongbingNewCrossoverMechanism2016</bcf:citekey>
+    <bcf:citekey order="34">witzgallMathematicalMethodsSite1975</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

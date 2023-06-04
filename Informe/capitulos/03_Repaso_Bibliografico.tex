@@ -40,13 +40,70 @@ En dicho capítulo también presentan algunos artículos y libros donde encontra
 
 % Introducir el CHC con su referencia, y algún artículo de aplicación.
 
+Cualquier algoritmo que siga un ciclo reproducción-recombinación en una población de estructuras se puede denominar un AG en el sentido más amplio del término. 
+Sin embargo, desde el trabajo de Holland (1975) 
+%\ref{johnhhollandAdaptationNaturalArtificial1975}
+para clasificar cualquier algoritmo como un AG en un sentido más estricto, se debía demostrar que su comportamiento de búsqueda reflejaba lo que Holland llamaba un ``paralelismo implícito''. 
+Eshelman \parencite{eshelmanCHCAdaptiveSearch1991a} comprueba que CHC, un algoritmo genético no tradicional, ciertamente muestra paralelismo implícito. 
+Incluso justifica que algunas de las características que parecerían descalificarlo como un verdadero GA no solo no lo descalifican, sino que lo hacen más potente que un AG tradicional.  \parencite{eshelmanCHCAdaptiveSearch1991a} Eshelman describe en detalle los componentes (prevención de incesto, cruce HUX, reinicios de población...) y las características de CHC, lo contrasta con un AG tradicional, aporta una justificación teórica de sus diferencias y provee algunas comparaciones empíricas. 
+Un ejemplo donde se aplique el algoritmo CHC para resolver un problema lo podemos encontrar en el artículo \parencite{simoesCHCBasedAlgorithmsDynamic2011}, donde se estudia el uso de tres estrategias de memoria explícita combinadas con el algoritmo CHC para resolver distintas instancias del problema del viajante de comercio dinámico. 
+
 % Párrafo sobre problemas expensives, incluyendo referencia de repaso bibliográfico que te envié
+
+Llamaremos \textbf{problemas de optimización costosos o \textit{expensive}} (EOP) a aquellos problemas que requieran costes elevados o incluso inalcanzables para evaluar candidatos a soluciones. 
+Existen una gran cantidad de EOPs relativos a aplicaciones en el mundo real; además, con el progreso de la sociedad y problemas emergentes como las \textit{smart cities}, la era del \textit{big data}, etc., la resolución más eficiente de EOPs se ha vuelto cada vez más esencial para prosperar en distintos campos. 
+Sin embargo, debido al coste tan elevado de cálculo, es complicado para los algoritmos de optimización encontrar una solución satisfactoria a dichos EOPs. 
+Por ello, la EC se ha adoptado en gran medida para resolver EOPs, llevando a un campo de investigación de rápido crecimiento. 
+Hasta la fecha, se han conducido varias investigaciones sobre el uso de EC para EOP y han alcanzado un éxito considerable \parencite{liEvolutionaryComputationExpensive2022} \parencite{jinComprehensiveSurveyFitness2005} \parencite{shanSurveyModelingOptimization2010} \parencite{tenneComputationalIntelligenceExpensive2010}.
+
+El concepto de EOP se suele mencionar junto con algunos conceptos del problema similares, como podría ser un problema de optimización a gran escala. 
+En \parencite{liEvolutionaryComputationExpensive2022} se hacen referencia y se explican varios de estos conceptos. 
 
 % Indicar que hay problemas combinatorios que no están cubiertos, citar trabajo de neuroevolución, y concreto mío, que hace muy pocas evaluaciones y aún así tarda demasiado tiempo
 
+Sin embargo, si bien somos capaces de encontrar una gran cantidad de investigaciones para EOPs, debemos notar que la vasta mayoría se refieren a problemas con parámetros reales, es decir, que pertenecen a los casos continuos. 
+Esto implica que para el ámbito de los problemas combinatorios \textit{expensive} nos encontramos con una sequía de estudios al respecto y, por tanto, algoritmos desarrollados para optimizar su resolución. 
+%No sé cómo meter el resto
+
 % Referencias sobre el problema, ya tenías alguna, busca más y sobre su interés.
+
+El problema de la mochila cuadrático (QKP, \textit{quadratic knapsack problem}) binario fue introducido por Gallo et al. \parencite{galloQuadraticKnapsackProblems1980} y resulta una generalización del clásico problema de la mochila (KP, \textit{knapsack problem}), donde el beneficio que aporta cada elemento deja de ser solo individual, pudiendo aportar más valor si se combina con otro elemento. 
+Aunque el QKP no se ha estudiado de forma tan intensiva como el problema de la asignación cuadrática, nos podemos encontrar con numerosos artículos a lo largo de estos últimos años relativos a este problema. 
+Como cabría esperar debido a su generalidad, el QKP tiene un rango de aplicaciones muy amplio. 
+Witzgall \parencite{witzgallMathematicalMethodsSite1975} presentó un problema que surge en telecomunicaciones cuando se debe seleccionar un número de localizaciones para las estaciones de satélites de forma que el tráfico global entre estas estaciones se maximice y la restricción de presupuesto se respete. 
+Este problema resulta ser un QKP. 
+Nos encontramos con modelos similares al considerar la localización de aeropuertos, estaciones de tren o terminales de manejo de carga \parencite{rhysSelectionProblemShared1970}. 
+Ferreira et al. \parencite{ferreiraFormulationsValidInequalities1996} consideran un problema de diseño VLSI (\textit{Very Large Scale Integration}) donde los grafos de gran tamaño necesitan ser descompuestos en grafos de más pequeños de tamaño manejable. 
+El problema de optimización asociado para un único subgrafo puede ser reconocido como un QKP de minimización. 
+Pisinger \parencite{pisingerQuadraticKnapsackProblem2007} realizó un estudio sobre los límites superiores presentados en la literatura y muestra la estanqueidad relativa de los diversos límites, proporcionando resultados y un estudio experimental donde se comparan estos resutalds con respecto a la potencia y el esfuerzo computacional. 
 
 %Describir posibles opciones a considerar
 %  - Uso de parámetros adaptativos y auto-adaptativos [referencia], guiándose no solo por mejor actual, si no por histórico.
+Los AG son algoritmos de búsqueda potentes que pueden ser aplicados a un amplio rango de problemas. 
+Generalmente, el establecimiento de los parámetros se realiza antes de ejecutar un AG y esta configuración se mantiene constante durante toda la ejecución. 
+Sin embargo, es interesante considerar el uso parámetros auto-adaptativos. 
+Es decir, tomar un enfoque en el que el control de los parámetros de un AG pueda ser codificado dentro de los cromosomas de cada individuo. 
+Así, los valores son totalmente dependientes del mecanismo de evolución y del contexto del problema. 
+Pellerin et al. \parencite{pellerinSelfadaptiveParametersGenetic2004} realizan  un estudio sobre este tipo de comportamiento y obtienen resultados que indican un enfoque prometedor de desarrollo de AGs con parámetros auto-adaptativos que no requieran que el usuario los pre-ajuste. 
+Podemos también encontrar una breve clasificación de los distintos métodos de auto-adaptabilidad propuestos en la literatura: empírico y adaptativo \parencite{eibenParameterControlEvolutionary1999} \parencite{loboOverviewParameterlessGenetic2008}: 
+\begin{itemize}
+	\item Enfoque empírico: Se basan solo en la experimentación y en la observación . 
+	Miden el rendimiento de las AG por ensayo y error, a la vez que se modifican los parámetros del algoritmo \parencite{eibenParameterControlEvolutionary1999}. 
+	Por lo tanto, es necesario encontrar buenos valores para dichos parámetros antes de ejecutar el algoritmo, y estos valores se mantendrán constantes durante la ejecución. 
+	\item Enfoque adaptativo. 
+	Nos encontramos con dos categorías:
+	\begin{itemize}
+		\item Parámetros adaptativos limitados: Analiza los efectos aislados de uno o dos parámetros teniendo en cuenta el resto \parencite{lisParallelGeneticAlgorithm1996}. 
+		\item Parámetros auto-adaptativos: Refiriéndose a las técnicas que permite la evolución o adaptación de diversos parámetros de AG durante su ejecución \parencite{grefenstetteOptimizationControlParameters1986} \parencite{phamCompetitiveEvolutionNatural1994}.
+	\end{itemize}
+\end{itemize}
+
 %  - Modificación del operador de cruce [referencia]
+Como ya se ha indicado, los AGs tienen gran capacidad de adaptarse a la estructura del espacio de soluciones y controlar el equilibrio entre búsquedas locales y globales, incluso sin ajustar sus parámetros, como serían la probabilidad de cruce o mutación. 
+Obviamente, ningún algoritmo es perfectamente adecuado para todos los problemas de acuerdo al teorema \textit{Not free lunch}, pero un determinado tipo de cruce puede llegar a resolver un gran número de problemas. 
+Por ello, se han propuesto una gran cantidad de variantes de AGs en las que se modifican el tipo de cruce a lo largo de estos últimos años. 
+Chaturvedi y Sharma en el capítulo \textit{A Modified Genetic Algorithm Based on Improved Crossover Array Approach} \parencite{chaturvediModifiedGeneticAlgorithm2019} estudiaron la introducción de un AG con un operador de cruce mejorado de tal forma que se eligiese dinámicamente el tipo de operador de cruce que se iba a utilizar en el problema. 
+Cheng y Gen \parencite{chengCrossoverIntensiveSearch1994} propusieron un nuevo operador de cruce para el problema del viajante de comercio con el objetivo de mejorar el AG tanto en tiempo como en precisión mediante el uso de relaciones de precedencia local entre los genes para obtener candidatos de posibles \textit{edges} y relaciones de precedencia global entre los genes para obtener al mejor entre los candidatos. 
+Quiobing y Lixin \parencite{qiongbingNewCrossoverMechanism2016} propusieron un nuevo mecanismo de cruce para AG con cromosomas de longitud variable para problemas de optimización de caminos.
+
 %  - Describir que usarás la guía de buenas prácticas [referencia]

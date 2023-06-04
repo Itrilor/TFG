@@ -1,18 +1,21 @@
 [0] Config.pm:312> INFO - This is Biber 2.15 (beta)
 [0] Config.pm:315> INFO - Logfile is 'proyecto.blg'
-[88] biber-MSWIN64:330> INFO - === 
-[106] Biber.pm:415> INFO - Reading 'proyecto.bcf'
-[207] Biber.pm:952> INFO - Found 10 citekeys in bib section 0
-[224] Biber.pm:4334> INFO - Processing section 0
-[239] Biber.pm:4523> INFO - Looking for bibtex format file 'TFG.bib' for section 0
-[258] bibtex.pm:1682> INFO - LaTeX decoding ...
-[345] bibtex.pm:1494> INFO - Found BibTeX data source 'TFG.bib'
-[397] Utils.pm:411> ERROR - Name "Michalewicz, D. B. Fogel, Thomas Baeck, Z." has too many commas, skipping entry 'michalewiczHandbookEvolutionaryComputation1997'
-[397] Utils.pm:395> WARN - Entry with key 'michalewiczHandbookEvolutionaryComputation1997' in section '0' is cited and found but not created (likely due to sourcemap)
-[436] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[436] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[436] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'es-ES'
-[445] bbl.pm:651> INFO - Writing 'proyecto.bbl' with encoding 'UTF-8'
-[451] bbl.pm:754> INFO - Output to proyecto.bbl
-[451] Biber.pm:128> INFO - WARNINGS: 1
-[451] Biber.pm:132> INFO - ERRORS: 1
+[114] biber-MSWIN64:330> INFO - === 
+[142] Biber.pm:415> INFO - Reading 'proyecto.bcf'
+[265] Biber.pm:952> INFO - Found 29 citekeys in bib section 0
+[287] Biber.pm:4334> INFO - Processing section 0
+[302] Biber.pm:4523> INFO - Looking for bibtex format file 'TFG.bib' for section 0
+[321] bibtex.pm:1682> INFO - LaTeX decoding ...
+[465] bibtex.pm:1494> INFO - Found BibTeX data source 'TFG.bib'
+[520] Utils.pm:411> ERROR - Name "Michalewicz, D. B. Fogel, Thomas Baeck, Z." has too many commas, skipping entry 'michalewiczHandbookEvolutionaryComputation1997'
+[520] Utils.pm:395> WARN - Entry with key 'michalewiczHandbookEvolutionaryComputation1997' in section '0' is cited and found but not created (likely due to sourcemap)
+[556] Utils.pm:395> WARN - ISBN '978-3-642-20524-8 978-3-642-20525-5' in entry 'simoesCHCBasedAlgorithmsDynamic2011' is invalid - run biber with '--validate_datamodel' for details.
+[577] Utils.pm:395> WARN - ISBN '978-3-642-10700-9 978-3-642-10701-6' in entry 'tenneComputationalIntelligenceExpensive2010' is invalid - run biber with '--validate_datamodel' for details.
+[639] Utils.pm:395> WARN - ISBN '9789811302770' in entry 'chaturvediModifiedGeneticAlgorithm2019' is invalid - run biber with '--validate_datamodel' for details.
+[696] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[696] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[696] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'es-ES'
+[728] bbl.pm:651> INFO - Writing 'proyecto.bbl' with encoding 'UTF-8'
+[748] bbl.pm:754> INFO - Output to proyecto.bbl
+[748] Biber.pm:128> INFO - WARNINGS: 4
+[748] Biber.pm:132> INFO - ERRORS: 1
