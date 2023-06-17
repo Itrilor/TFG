@@ -45,7 +45,8 @@ Sin embargo, desde el trabajo de Holland (1975)
 %\ref{johnhhollandAdaptationNaturalArtificial1975}
 para clasificar cualquier algoritmo como un AG en un sentido más estricto, se debía demostrar que su comportamiento de búsqueda reflejaba lo que Holland llamaba un ``paralelismo implícito''. 
 Eshelman \parencite{eshelmanCHCAdaptiveSearch1991a} comprueba que CHC, un algoritmo genético no tradicional, ciertamente muestra paralelismo implícito. 
-Incluso justifica que algunas de las características que parecerían descalificarlo como un verdadero GA no solo no lo descalifican, sino que lo hacen más potente que un AG tradicional.  \parencite{eshelmanCHCAdaptiveSearch1991a} Eshelman describe en detalle los componentes (prevención de incesto, cruce HUX, reinicios de población...) y las características de CHC, lo contrasta con un AG tradicional, aporta una justificación teórica de sus diferencias y provee algunas comparaciones empíricas. 
+Incluso justifica que algunas de las características que parecerían descalificarlo como un verdadero GA no solo no lo descalifican, sino que lo hacen más potente que un AG tradicional.  
+Eshelman describe en detalle los componentes (prevención de incesto, cruce HUX, reinicios de población...) y las características de CHC, lo contrasta con un AG tradicional, aporta una justificación teórica de sus diferencias y provee algunas comparaciones empíricas. 
 Un ejemplo donde se aplique el algoritmo CHC para resolver un problema lo podemos encontrar en el artículo \parencite{simoesCHCBasedAlgorithmsDynamic2011}, donde se estudia el uso de tres estrategias de memoria explícita combinadas con el algoritmo CHC para resolver distintas instancias del problema del viajante de comercio dinámico. 
 
 % Párrafo sobre problemas expensives, incluyendo referencia de repaso bibliográfico que te envié
@@ -55,7 +56,6 @@ Existen una gran cantidad de EOPs relativos a aplicaciones en el mundo real; ade
 Sin embargo, debido al coste tan elevado de cálculo, es complicado para los algoritmos de optimización encontrar una solución satisfactoria a dichos EOPs. 
 Por ello, la EC se ha adoptado en gran medida para resolver EOPs, llevando a un campo de investigación de rápido crecimiento. 
 Hasta la fecha, se han conducido varias investigaciones sobre el uso de EC para EOP y han alcanzado un éxito considerable \parencite{liEvolutionaryComputationExpensive2022} \parencite{jinComprehensiveSurveyFitness2005} \parencite{shanSurveyModelingOptimization2010} \parencite{tenneComputationalIntelligenceExpensive2010}.
-
 El concepto de EOP se suele mencionar junto con algunos conceptos del problema similares, como podría ser un problema de optimización a gran escala. 
 En \parencite{liEvolutionaryComputationExpensive2022} se hacen referencia y se explican varios de estos conceptos. 
 
@@ -63,19 +63,8 @@ En \parencite{liEvolutionaryComputationExpensive2022} se hacen referencia y se e
 
 Sin embargo, si bien somos capaces de encontrar una gran cantidad de investigaciones para EOPs, debemos notar que la vasta mayoría se refieren a problemas con parámetros reales, es decir, que pertenecen a los casos continuos. 
 Esto implica que para el ámbito de los problemas combinatorios \textit{expensive} nos encontramos con una sequía de estudios al respecto y, por tanto, algoritmos desarrollados para optimizar su resolución. 
-%No sé cómo meter el resto
-
-% Referencias sobre el problema, ya tenías alguna, busca más y sobre su interés.
-
-El problema de la mochila cuadrático (QKP, \textit{quadratic knapsack problem}) binario fue introducido por Gallo et al. \parencite{galloQuadraticKnapsackProblems1980} y resulta una generalización del clásico problema de la mochila (KP, \textit{knapsack problem}), donde el beneficio que aporta cada elemento deja de ser solo individual, pudiendo aportar más valor si se combina con otro elemento. 
-Aunque el QKP no se ha estudiado de forma tan intensiva como el problema de la asignación cuadrática, nos podemos encontrar con numerosos artículos a lo largo de estos últimos años relativos a este problema. 
-Como cabría esperar debido a su generalidad, el QKP tiene un rango de aplicaciones muy amplio. 
-Witzgall \parencite{witzgallMathematicalMethodsSite1975} presentó un problema que surge en telecomunicaciones cuando se debe seleccionar un número de localizaciones para las estaciones de satélites de forma que el tráfico global entre estas estaciones se maximice y la restricción de presupuesto se respete. 
-Este problema resulta ser un QKP. 
-Nos encontramos con modelos similares al considerar la localización de aeropuertos, estaciones de tren o terminales de manejo de carga \parencite{rhysSelectionProblemShared1970}. 
-Ferreira et al. \parencite{ferreiraFormulationsValidInequalities1996} consideran un problema de diseño VLSI (\textit{Very Large Scale Integration}) donde los grafos de gran tamaño necesitan ser descompuestos en grafos de más pequeños de tamaño manejable. 
-El problema de optimización asociado para un único subgrafo puede ser reconocido como un QKP de minimización. 
-Pisinger \parencite{pisingerQuadraticKnapsackProblem2007} realizó un estudio sobre los límites superiores presentados en la literatura y muestra la estanqueidad relativa de los diversos límites, proporcionando resultados y un estudio experimental donde se comparan estos resutalds con respecto a la potencia y el esfuerzo computacional. 
+Un ejemplo de este tipo de problemas lo podemos encontrar en el artículo \parencite{martinezLightsShadowsEvolutionary2021b}, donde se emplea una fusión de algoritmos de optimización basados en la biología y modelos de \textit{Deep Learning}. 
+Para recalcar la necesidad de algoritmos pensados para problemas combinatorios \textit{expensive} podemos mencionar el artículo \parencite{poyatosEvoPruneDeepTLEvolutionaryPruning2023a}, donde los propios autores reconocen que estuvieron obligados a reducir en gran medida el número de evaluaciones de los algoritmos utilizados, lo que impedía el uso de tests estadísticos para estudiar el nivel de significación de las diferencias encontradas, debido a los elevados tiempos de ejecución para cada simulación. 
 
 %Describir posibles opciones a considerar
 %  - Uso de parámetros adaptativos y auto-adaptativos [referencia], guiándose no solo por mejor actual, si no por histórico.
@@ -104,6 +93,50 @@ Obviamente, ningún algoritmo es perfectamente adecuado para todos los problemas
 Por ello, se han propuesto una gran cantidad de variantes de AGs en las que se modifican el tipo de cruce a lo largo de estos últimos años. 
 Chaturvedi y Sharma en el capítulo \textit{A Modified Genetic Algorithm Based on Improved Crossover Array Approach} \parencite{chaturvediModifiedGeneticAlgorithm2019} estudiaron la introducción de un AG con un operador de cruce mejorado de tal forma que se eligiese dinámicamente el tipo de operador de cruce que se iba a utilizar en el problema. 
 Cheng y Gen \parencite{chengCrossoverIntensiveSearch1994} propusieron un nuevo operador de cruce para el problema del viajante de comercio con el objetivo de mejorar el AG tanto en tiempo como en precisión mediante el uso de relaciones de precedencia local entre los genes para obtener candidatos de posibles \textit{edges} y relaciones de precedencia global entre los genes para obtener al mejor entre los candidatos. 
-Quiobing y Lixin \parencite{qiongbingNewCrossoverMechanism2016} propusieron un nuevo mecanismo de cruce para AG con cromosomas de longitud variable para problemas de optimización de caminos.
+Quiobing y Lixin \parencite{qiongbingNewCrossoverMechanism2016} propusieron un nuevo mecanismo de cruce para AG con cromosomas de longitud variable para problemas de optimización de caminos. 
+
+
+% - Elección de padres
+Los métodos de selección de padres son básicos dentro de los AGs, ya que determinan las posibilidades de los individuos de influir en las generaciones siguientes. 
+Dado que en los AGs el operador que produce diversidad es el cruce, es necesaria una adecuada selección de los individuos para poder conseguir un adecuado equilibrio entre exploración y explotación. 
+En este trabajo se utilizarán dos métodos:
+\begin{itemize}
+	\item Una Selección por Torneo clásica, donde se eligen de forma aleatoria cierta cantidad de individuos de la población y solo elegimos el mejor. 
+	\item Emparejamiento Variado inverso (\textit{Negative Assortative Mating}, NAM) \parencite{fernandesStudyNonrandomMating2001}. 
+	Está orientado a generar diversidad, eligiéndose un elemento de forma aleatoria y otro grupo de individuos; de este grupo elegiremos como segundo padre a aquel elemento más diferente del primero. 
+\end{itemize}
+
+%   - Otros?
+En los AG estacionarios se debe determinar los individuos que serán reemplazados por los nuevos individuos generados. 
+Esta elección puede determinar el nivel de presión selectiva que se exige a los individuos para ser introducidos o permanecer en la población, y la pérdida de diversidad que se introduce conforme el proceso de búsqueda avanza. 
+Se han propuesto numerosas estrategias de reemplazo, algunas como introducir alta presión selectiva, como sería el reemplazar el peor elemento de la población \parencite{goldbergComparativeAnalysisSelection1991}, otras para mantener una alta diversidad, como serían los métodos de multitud o \textit{crowding} \parencite{mahfoudCrowdingPreselectionRevisited1992} que buscan que las nuevas soluciones reemplacen las soluciones parecidas a ellas, o un equilibrio entre ambas. 
+
+% Referencias sobre el problema, ya tenías alguna, busca más y sobre su interés.
+
+El problema de la mochila cuadrático (QKP, \textit{quadratic knapsack problem}) binario fue introducido por Gallo et al. \parencite{galloQuadraticKnapsackProblems1980} y resulta una generalización del clásico problema de la mochila (KP, \textit{knapsack problem}), donde el beneficio que aporta cada elemento deja de ser solo individual, pudiendo aportar más valor si se combina con otro elemento. 
+Aunque el QKP no se ha estudiado de forma tan intensiva como el problema de la asignación cuadrática, nos podemos encontrar con numerosos artículos a lo largo de estos últimos años relativos a este problema. 
+Como cabría esperar debido a su generalidad, el QKP tiene un rango de aplicaciones muy amplio. 
+Witzgall \parencite{witzgallMathematicalMethodsSite1975} presentó un problema que surge en telecomunicaciones cuando se debe seleccionar un número de localizaciones para las estaciones de satélites de forma que el tráfico global entre estas estaciones se maximice y la restricción de presupuesto se respete. 
+Este problema resulta ser un QKP. 
+Nos encontramos con modelos similares al considerar la localización de aeropuertos, estaciones de tren o terminales de manejo de carga \parencite{rhysSelectionProblemShared1970}. 
+Ferreira et al. \parencite{ferreiraFormulationsValidInequalities1996} consideran un problema de diseño VLSI (\textit{Very Large Scale Integration}) donde los grafos de gran tamaño necesitan ser descompuestos en grafos de más pequeños de tamaño manejable. 
+El problema de optimización asociado para un único subgrafo puede ser reconocido como un QKP de minimización. 
+Pisinger \parencite{pisingerQuadraticKnapsackProblem2007} realizó un estudio sobre los límites superiores presentados en la literatura y muestra la estanqueidad relativa de los diversos límites, proporcionando resultados y un estudio experimental donde se comparan estos resutalos con respecto a la potencia y el esfuerzo computacional. 
+
 
 %  - Describir que usarás la guía de buenas prácticas [referencia]
+
+Por último, se debe mencionar que se ha intentado seguir una guía de buenas prácticas (artículo \parencite{latorrePrescriptionMethodologicalGuidelines2021}), aunque hay algunos puntos que no se pueden cumplir por motivos explicados más adelante. 
+Podemos resumir lo utilizado de dicha guía en: 
+\begin{itemize}
+	\item \textbf{Validación de los resultados}: 
+	En tanto que no existen benchmarks que podamos utilizar para este trabajo, no podemos comparar nuestros resultados con otros algoritmos. 
+	Sin embargo, se realizarán tests estadísticos no paramétricos (\parencite{derracPracticalTutorialUse2011}) entre las diferentes versiones del algoritmo que vamos a desarrollar para poder asegurar que realmente se están produciendo mejoras. 
+	
+	\item \textbf{Análisis de los componentes y ajuste de parámetros de la propuesta}: 
+	Este análisis y justificación se realizará a lo largo de este trabajo.
+	
+	\item \textbf{Utilidad del algoritmo propuesto}: 
+	Como ya se ha indicado anteriormente y se volverá a indicar más tarde, no hay algoritmos que estén orientados a resolver problemas de optimización combinatorios \textit{expensive}, por lo que este proyecto no es solo útil, sino que también supone una novedad.
+	
+\end{itemize}

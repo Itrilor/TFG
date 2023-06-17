@@ -1,0 +1,12 @@
+* proyecto
+
+- Notes for page 40
+
+Las comparativas que comentas en esta ṕagina y en la siguiente tienen que
+aparecer como tablas para mostrarlo.
+%%%% Tablas 
+
+- Notes for page 42
+
+Faltan parámetros, como tamaño de población. También del resto de componentes.
+%%%% Dijimos que los demás se tenían que poner luego ya que eran propios de los algoritmos AG

@@ -1,0 +1,25 @@
+- Notes for page 43
+
+En el seudocódigo no pongas las flechas a la derecha, mejor hacia la izquierda
+(es decir, cambiar el sentido).
+%%% No quiero
+
+Y en el AGEU no se calculan las soluciones a mutar, se mutan siempre los
+descendientes con una p_mut.
+%% Tengo que comprobar cosas
+
+- Notes for page 59
+
+Más que la tabla sobre parámetros, hay que hacer mención a los nombres de los parámetros cuyos valores debería de estar en otra tabla.
+
+Sobre las tablas, el formato bien.
+
+
+%%%%%%%%%%%%%%
+Sobre el ranking como en el 8.2, tiene poco sentido el ranking con solo dos
+algoritmos, se usa con más. Y ya que estamos se podría visualizar para
+mostrarlo.
+
+Las tablas con n=100, n=200 y n=300 separadas.
+
+Cuidado con Wilcoxon, no es bueno ponerlo por el alto error acumulado que da. Lo indicas, pero un 26% es claramente tan alto que la tabla no debería de ponerse.

@@ -1,0 +1,10 @@
+Lo que tengo en el 7 -> 6
+7 tengo que poner los operadores que se han modificado y pseudocódigo
+Aclarar que se han añadido algunas versiones que no han mejorado y ponerlas aparte
+
+Al principio hay que meter las cosas que se han quitado del 5
+En el 8 ya es literatura y tablas de cómo se ha llegado a cada modificación de 7
+En el 8 también se meterían las tablas intermedias
+Se puede introducir una comparativa final para comparar el base con el final
+
+https://sci2s.ugr.es/publications?pubType=intJournal&auth=D.%20Molina#year2011

@@ -189,7 +189,9 @@ Por conveniencia, vamos a volver a utilizar la notación que implica que \texttt
 
 \section{Operador NAM}
 
-Esta es una alternativa a cómo se eligen los elementos de la población que se van a cruzar. 
+El operador de Emparejamiento Variado Inverso (\textit{Negative Assortative Mating}) o NAM
+\parencite{fernandesStudyNonrandomMating2001} está orientado a generar diversidad. 
+Esta es una alternativa a cómo se eligen los individuos de la población que se van a cruzar. 
 La lógica de este operador es parecida a la prevención de incesto que se propone en el algoritmo CHC, pero sin ser tan restrictiva. 
 Se necesita que los padres sean distintos para conseguir que los hijos aporten diversidad a la población si llegan a ser introducidos. 
 Una optativa a esto es el operador NAM. 
@@ -211,19 +213,21 @@ Una vez hecho esto, elegimos como el segundo padre a la solución del segundo gr
 \end{algorithmic}
 \end{algorithm}
 
-\section{Cambio Operador Reemplazo (por cercanía)}
+\section{Operador Reemplazo: \textit{Crowding} Determinístico}
+
 
 Otra forma de intentar mantener cierta diversidad en la población es mediante la modificación del Operador de Reemplazo. 
-En vez de siempre eliminar las peores soluciones para introducir otras mejores, estableceremos que las peores soluciones se pueden mantener en la población si están aportando diversidad. 
+En vez de siempre eliminar las peores soluciones para introducir otras mejores, se sustituirán individuos de la población similares a las nuevas soluciones si estas últimas son mejores. 
+Esto da lugar que se permitirá mantener las peores soluciones en la población siempre que estén aportando diversidad a la población.
 
-Este operador viene representado en el Algoritmo \ref{alg:ORC}. 
+Este operador \parencite{mahfoudCrowdingPreselectionRevisited1992} viene representado en el Algoritmo \ref{alg:ORC}. 
 En definitiva, el objetivo de este operador será comprobar si las nuevas soluciones (hijas) son mejores que las soluciones de la población actual más cercanas a ellas. 
 Si las soluciones hijas constituyen una mejora, entonces sustituirán a las soluciones más cercanas en la población. 
 
 \begin{algorithm}
 \caption{Operador de Reemplazo por Cercanía}\label{alg:ORC}
 \begin{algorithmic}[1]
-\Procedure \texttt{Reemplazo Cercanía}($padre_1, padre_2$)
+\Procedure \texttt{Reemplazo Cercanía}
 \For{i in 0..\texttt{numHijos}}
 	\State Calcular distancia de Hamming de \texttt{hijo$_i$} a todos los elementos de la población
 	\State Elegir la solución con la menor distancia de Hamming a \texttt{hijo$_i$} $\xrightarrow{}{}$ \texttt{solucion}
@@ -235,4 +239,29 @@ Si las soluciones hijas constituyen una mejora, entonces sustituirán a las solu
 \end{algorithmic}
 \end{algorithm}
 
-\section{Cambio Operador Reemplazo (por cercanía) intensivo}
+\subsection{Versión intensiva}
+
+En esta versión, adicionalmente a modificar el operador de reemplazo de forma que las nuevas soluciones sustituirán a las más parecidas siempre que las mejoren, se compararán el resto de soluciones similares (tienen una distancia de Hamming menor que determinado umbral). 
+La idea de esta versión es aumentar aún más la diversidad mediante la eliminación de soluciones peores parecidas a aquellas que ya tenemos. 
+
+Si se logra introducir la nueva solución en la población se comprobará si hay más soluciones cercanas. 
+En caso negativo no se hará nada más al respecto. 
+Sin embargo, en caso positivo, nos quedaremos únicamente con la mejor solución entre todas las consideradas (la nueva y las parecidas en la población), eliminando el resto de la población. 
+Como el tamaño de la población debe ser constante, estas vacantes serán cubiertas por soluciones totalmente aleatorias que no sean parecidas a la solución que se ha conseguido mantener en la población. 
+Este funcionamiento viene representado en \ref{alg:ORCv}.
+
+\begin{algorithm}[H]
+\caption{Operador de Reemplazo por Cercanía intensivo}\label{alg:ORCv}
+\begin{algorithmic}[1]
+\Procedure \texttt{Reemplazo Cercanía}($\delta_H$)
+\For{i in 0..\texttt{numHijos}}
+	\State Almacenar los individuos de la población tal que su distancia de Hamming a \texttt{hijo$_i$} sea menor que $\delta_H \xrightarrow{}{} $ \texttt{indCercanos}
+	\State Calculamos el elemento de \texttt{indCercanos} con mayor valor
+	\State El resto de elementos de \texttt{indCercanos} se sustituye por soluciones generadas aleatoriamente
+	\While{La solución generada aleatoriamente sea cercana a una existente}
+		\State Sustituirla por otra solución generada aleatoriamente
+	\EndWhile
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}

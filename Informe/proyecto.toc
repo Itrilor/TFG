@@ -95,9 +95,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Operador de Reparación}{47}{subsection.6.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Cruce Uniforme}{48}{ALG@line.13}%
+\contentsline {subsubsection}{Operador de Cruce}{48}{ALG@line.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Mutación}{49}{ALG@line.12}%
+\contentsline {subsubsection}{Mutación}{50}{ALG@line.12}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Operador de Reemplazo Estacionario}{50}{ALG@line.17}%
 \defcounter {refsection}{0}\relax 
@@ -105,13 +105,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2.1}Pseudocódigo}{52}{subsection.6.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}Componentes}{52}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.2}Componentes}{53}{subsection.6.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operador de reparación}{52}{subsection.6.2.2}%
+\contentsline {subsubsection}{Operador de reparación}{53}{subsection.6.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Cruce HUX}{52}{subsection.6.2.2}%
+\contentsline {subsubsection}{Cruce HUX}{53}{subsection.6.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Enfrentamiento}{53}{ALG@line.13}%
+\contentsline {subsubsection}{Reemplazo Elitista}{53}{ALG@line.13}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Componentes de la propuesta}{55}{chapter.7}%
 \defcounter {refsection}{0}\relax 
@@ -123,26 +123,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.4}Operador NAM}{59}{section.7.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Cambio Operador Reemplazo (por cercanía)}{60}{section.7.5}%
+\contentsline {section}{\numberline {7.5}Operador Reemplazo: \textit {Crowding} Determinístico}{60}{section.7.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Cambio Operador Reemplazo (por cercanía) intensivo}{60}{section.7.6}%
+\contentsline {subsection}{\numberline {7.5.1}Versión intensiva}{60}{subsection.7.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Parte Experimental (In progress)}{61}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Parte Experimental (In progress)}{63}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{62}{section.8.1}%
+\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{65}{section.8.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Resultados versión expensive}{62}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Resultados versión expensive}{65}{section.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Incorporación del histórico}{62}{section.8.3}%
+\contentsline {section}{\numberline {8.3}Incorporación del histórico}{65}{section.8.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Uso de GRASP}{62}{section.8.4}%
+\contentsline {section}{\numberline {8.4}Uso de GRASP}{65}{section.8.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{62}{section.8.5}%
+\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{65}{section.8.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{62}{section.8.6}%
+\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{65}{section.8.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{62}{section.8.7}%
+\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{65}{section.8.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.8}Tablas de prueba}{62}{section.8.8}%
+\contentsline {section}{\numberline {8.8}Tablas de prueba}{65}{section.8.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Conclusiones}{69}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{71}{chapter.9}%

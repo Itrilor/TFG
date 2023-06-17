@@ -260,6 +260,62 @@
       \endverb
       \keyw{Black-box optimization,Decomposition-based methods,Diversity preservation,Expensive multi-objective combinatorial optimization,Novel-First Tabu Search}
     \endentry
+    \entry{derracPracticalTutorialUse2011}{article}{}
+      \name{author}{4}{}{%
+        {{hash=326598f55585de95b3e267ddc1235fc6}{%
+           family={Derrac},
+           familyi={D\bibinitperiod},
+           given={Joaquín},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1691f3ff4356c12149ac4f858ead7e04}{%
+           family={García},
+           familyi={G\bibinitperiod},
+           given={Salvador},
+           giveni={S\bibinitperiod}}}%
+        {{hash=381bf37312a71cebeee50fc633f67c46}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{611c350b7021377e7872fbeb9aa7bbbc}
+      \strng{fullhash}{4a8fa88c49eab072b90519a259a711e7}
+      \strng{bibnamehash}{611c350b7021377e7872fbeb9aa7bbbc}
+      \strng{authorbibnamehash}{611c350b7021377e7872fbeb9aa7bbbc}
+      \strng{authornamehash}{611c350b7021377e7872fbeb9aa7bbbc}
+      \strng{authorfullhash}{4a8fa88c49eab072b90519a259a711e7}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The interest in nonparametric statistical analysis has grown recently in the field of computational intelligence. In many experimental studies, the lack of the required properties for a proper application of parametric procedures –{} independence, normality, and homoscedasticity –{} yields to nonparametric ones the task of performing a rigorous comparison among algorithms.}
+      \field{issn}{22106502}
+      \field{journaltitle}{Swarm and Evolutionary Computation}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{note}{Test Estadisticos No paramétricos \par Mirar la sección 3 y 4 para rellenar el capítulo de Contexto Matemático respecto a los test estadísticos no paramétricos}
+      \field{number}{1}
+      \field{title}{A Practical Tutorial on the Use of Nonparametric Statistical Tests as a Methodology for Comparing Evolutionary and Swarm Intelligence Algorithms}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{1}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{3\bibrangedash 18}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/j.swevo.2011.02.002
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\R3QTVWLN\\Derrac et al. - 2011 - A practical tutorial on the use of nonparametric s.pdf
+      \endverb
+    \endentry
     \entry{eibenParameterControlEvolutionary1999}{article}{}
       \name{author}{3}{}{%
         {{hash=37f918f86142087e36a5d91ce7026b2c}{%
@@ -346,6 +402,47 @@
       \endverb
       \verb{file}
       \verb C\:\\Users\\irene\\Zotero\\storage\\4VKMBFQM\\Eshelman - 1991 - The CHC Adaptive Search Algorithm How to Have Saf.pdf
+      \endverb
+    \endentry
+    \entry{fernandesStudyNonrandomMating2001}{article}{}
+      \name{author}{4}{}{%
+        {{hash=c6f5ff914bfc53a020b9f34dc8d5e376}{%
+           family={Fernandes},
+           familyi={F\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=27567c824150098384a6d1e6216aff48}{%
+           family={Rosa},
+           familyi={R\bibinitperiod},
+           given={Agostinho},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7d7f4256bdbd86a6b28c54fe506250e0}{%
+           family={Pais},
+           familyi={P\bibinitperiod},
+           given={Av},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9bfa0e95e55b7754b3f40a076da536ff}{%
+           family={Norte},
+           familyi={N\bibinitperiod},
+           given={Torre},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{58c2d448118d6e0e4a16bbcf50530292}
+      \strng{fullhash}{f5f96db421abeffe2113aed6d0825fc4}
+      \strng{bibnamehash}{58c2d448118d6e0e4a16bbcf50530292}
+      \strng{authorbibnamehash}{58c2d448118d6e0e4a16bbcf50530292}
+      \strng{authornamehash}{58c2d448118d6e0e4a16bbcf50530292}
+      \strng{authorfullhash}{f5f96db421abeffe2113aed6d0825fc4}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we present a study on the effects of non-random mating and varying population size in Genetic Algorithms (GAs) performance. We tested two algorithms: the non-incest Genetic Algorithm with varying population size (niGAVaPS) and the negative Assortative Mating Genetic Algorithm with varying population size (nAMGAVaPS), on a Royal Road function. These algorithms mimic natural species behavior by selecting parents according to parenthood (niGAVaPS) or phenotype similarity (nAMGAVaPS). We show that both algorithms outperform simple GA in the example shown. The results suggest that this may be due to the fact that genetic diversity is kept at a higher level by niGAVaPS and nAMGAVaPS, preventing the premature convergence of the algorithms to local optima. 1 Introduction The parent selection techniques used in the Simple Genetic Algorithm (simple GA) [Holland75] [Goldberg89] only take into account the individual fitness, that is, its adaptation to the problem (environment). In ...}
+      \field{month}{4}
+      \field{title}{A {{Study}} on {{Non-random Mating}} and {{Varying Population Size}} in {{Genetic Algorithms Using}} a {{Royal Road Function}}}
+      \field{year}{2001}
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\H78UVKKP\\Fernandes et al. - 2001 - A Study on Non-random Mating and Varying Populatio.pdf
       \endverb
     \endentry
     \entry{ferreiraFormulationsValidInequalities1996}{article}{}
@@ -474,6 +571,52 @@
       \endverb
       \keyw{Branch-and-Bound,Computation,Knapsack Problem,Quadratic Programming,Upper Planes}
     \endentry
+    \entry{goldbergComparativeAnalysisSelection1991}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f4dae5bf19584b96b5db33b402a449d8}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=b11d1da0cc2920eef235d484e6b858ef}{%
+           family={Deb},
+           familyi={D\bibinitperiod},
+           given={Kalyanmoy},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{fullhash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{bibnamehash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{authorbibnamehash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{authornamehash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{authorfullhash}{49568d7e32fbc88366075e7c08bcc33f}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Semantic Scholar extracted view of "A Comparative Analysis of Selection Schemes Used in Genetic Algorithms" by D. Goldberg et al.}
+      \field{booktitle}{Foundations of {{Genetic Algorithms}}}
+      \field{isbn}{978-0-08-050684-5}
+      \field{langid}{english}
+      \field{title}{A {{Comparative Analysis}} of {{Selection Schemes Used}} in {{Genetic Algorithms}}}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{1}
+      \field{year}{1991}
+      \field{urldateera}{ce}
+      \field{pages}{69\bibrangedash 93}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1016/B978-0-08-050684-5.50008-2
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\NDPJLVME\\Goldberg y Deb - 1991 - A Comparative Analysis of Selection Schemes Used i.pdf
+      \endverb
+    \endentry
     \entry{grefenstetteOptimizationControlParameters1986}{article}{}
       \name{author}{1}{}{%
         {{hash=410c88dfb836a5e8d20bf0dcc26b9555}{%
@@ -580,6 +723,72 @@
       \verb C\:\\Users\\irene\\Zotero\\storage\\36P6HH5W\\Jin - 2005 - A comprehensive survey of fitness approximation in.pdf
       \endverb
       \keyw{Evolutionary computation,Fitness approximation,Meta-model,Optimization}
+    \endentry
+    \entry{latorrePrescriptionMethodologicalGuidelines2021}{article}{}
+      \name{author}{6}{}{%
+        {{hash=5ab6f1257d8b9b91ddc22c3a53873747}{%
+           family={LaTorre},
+           familyi={L\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=381bf37312a71cebeee50fc633f67c46}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2285f34b29e97653507b9802e0ac1a5d}{%
+           family={Osaba},
+           familyi={O\bibinitperiod},
+           given={Eneko},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5dc61300e8b99fbf45049395b1eafb69}{%
+           family={Poyatos},
+           familyi={P\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cad385a9bc804164f8a02ca66c24913e}{%
+           family={Del\bibnamedelima Ser},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{e764e144fa8c4907da3d0f3d4a6470f0}
+      \strng{fullhash}{f44e612b695b981a48ab756ffd996575}
+      \strng{bibnamehash}{e764e144fa8c4907da3d0f3d4a6470f0}
+      \strng{authorbibnamehash}{e764e144fa8c4907da3d0f3d4a6470f0}
+      \strng{authornamehash}{e764e144fa8c4907da3d0f3d4a6470f0}
+      \strng{authorfullhash}{f44e612b695b981a48ab756ffd996575}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bio-inspired optimization (including Evolutionary Computation and Swarm Intelligence) is a growing research topic with many competitive bio-inspired algorithms being proposed every year. In such an active area, preparing a successful proposal of a new bio-inspired algorithm is not an easy task. Given the maturity of this research field, proposing a new optimization technique with innovative elements is no longer enough. Apart from the novelty, results reported by the authors should be proven to achieve a significant advance over previous outcomes from the state of the art. Unfortunately, not all new proposals deal with this requirement properly. Some of them fail to select appropriate benchmarks or reference algorithms to compare with. In other cases, the validation process carried out is not defined in a principled way (or is even not done at all). Consequently, the significance of the results presented in such studies cannot be guaranteed. In this work we review several recommendations in the literature and propose methodological guidelines to prepare a successful proposal, taking all these issues into account. We expect these guidelines to be useful not only for authors, but also for reviewers and editors along their assessment of new contributions to the field.}
+      \field{issn}{2210-6502}
+      \field{journaltitle}{Swarm and Evolutionary Computation}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{note}{43 citations (Crossref) [2023-05-31]}
+      \field{title}{A Prescription of Methodological Guidelines for Comparing Bio-Inspired Optimization Algorithms}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{67}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{100973}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.swevo.2021.100973
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\NCWKZRNF\\LaTorre et al. - 2021 - A prescription of methodological guidelines for co.pdf
+      \endverb
+      \keyw{Benchmarking,Bio-inspired optimization,Comparison methodologies,Guidelines,Parameter tuning,Recommendations review,Statistical analysis}
     \endentry
     \entry{liEvolutionaryComputationExpensive2022}{article}{}
       \name{author}{3}{}{%
@@ -695,6 +904,157 @@
       \field{year}{2008}
       \verb{file}
       \verb C\:\\Users\\irene\\Zotero\\storage\\GWDF5GB9\\Lobo y Goldberg - 2008 - An overview of the parameter-less genetic algorith.pdf
+      \endverb
+    \endentry
+    \entry{mahfoudCrowdingPreselectionRevisited1992}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ee1b32f1e82f50f2d319913df0f8050c}{%
+           family={Mahfoud},
+           familyi={M\bibinitperiod},
+           given={Samir\bibnamedelima W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{fullhash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{bibnamehash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{authorbibnamehash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{authornamehash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{authorfullhash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper considers the related algorithms, crowding and preselection, as potential multimodal function optimizers. It examines the ability of the two algorithms to preserve diversity, especially multimodal diversity. Crowding is analyzed in terms of the number of replacement errors it makes. Diierent strategies for reducing or eliminating error are proposed and examined. Finally, a variation of preselection is presented which approximates crowding, virtually eliminates replacement error, and restores selection pressure.}
+      \field{booktitle}{Parallel {{Problem Solving}} from {{Nature}}}
+      \field{note}{[TLDR] This paper considers the related algorithms, crowding and preselection, as potential multimodal function optimizers and examines the ability of the two algorithms to preserve diversity, especially multi-modal diversity.}
+      \field{title}{Crowding and {{Preselection Revisited}}}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{year}{1992}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{martinezLightsShadowsEvolutionary2021b}{article}{}
+      \name{author}{8}{}{%
+        {{hash=8894728f1d9d2fbdc9a9aeec6e955c25}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={Aritz\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=cad385a9bc804164f8a02ca66c24913e}{%
+           family={Del\bibnamedelima Ser},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d85a9552ff8d1af3e057e2c4e51cb2b8}{%
+           family={{Villar-Rodriguez}},
+           familyi={V\bibinitperiod},
+           given={Esther},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2285f34b29e97653507b9802e0ac1a5d}{%
+           family={Osaba},
+           familyi={O\bibinitperiod},
+           given={Eneko},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5dc61300e8b99fbf45049395b1eafb69}{%
+           family={Poyatos},
+           familyi={P\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5d79f34727bcbbd23065a0c111485c1b}{%
+           family={Tabik},
+           familyi={T\bibinitperiod},
+           given={Siham},
+           giveni={S\bibinitperiod}}}%
+        {{hash=381bf37312a71cebeee50fc633f67c46}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8bd2a5cd759a0c9c36cbee2b3916456}
+      \strng{fullhash}{dc90df0c4052dfbdc8c2474a5255fd91}
+      \strng{bibnamehash}{c8bd2a5cd759a0c9c36cbee2b3916456}
+      \strng{authorbibnamehash}{c8bd2a5cd759a0c9c36cbee2b3916456}
+      \strng{authornamehash}{c8bd2a5cd759a0c9c36cbee2b3916456}
+      \strng{authorfullhash}{dc90df0c4052dfbdc8c2474a5255fd91}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Much has been said about the fusion of bio-inspired optimization algorithms and Deep Learning models for several purposes: from the discovery of network topologies and hyperparametric configurations with improved performance for a given task, to the optimization of the model's parameters as a replacement for gradient-based solvers. Indeed, the literature is rich in proposals showcasing the application of assorted nature-inspired approaches for these tasks. In this work we comprehensively review and critically examine contributions made so far based on three axes, each addressing a fundamental question in this research avenue: (a) optimization and taxonomy (Why?), including a historical perspective, definitions of optimization problems in Deep Learning, and a taxonomy associated with an in-depth analysis of the literature, (b) critical methodological analysis (How?), which together with two case studies, allows us to address learned lessons and recommendations for good practices following the analysis of the literature, and (c) challenges and new directions of research (What can be done, and what for?). In summary, three axes –{} optimization and taxonomy, critical analysis, and challenges –{} which outline a complete vision of a merger of two technologies drawing up an exciting future for this area of fusion research.}
+      \field{issn}{1566-2535}
+      \field{journaltitle}{Information Fusion}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{note}{12 citations (Crossref) [2023-05-31] \par Neuroevolución}
+      \field{shorttitle}{Lights and Shadows in {{Evolutionary Deep Learning}}}
+      \field{title}{Lights and Shadows in {{Evolutionary Deep Learning}}: {{Taxonomy}}, Critical Methodological Analysis, Cases of Study, Learned Lessons, Recommendations and Challenges}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{67}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{161\bibrangedash 194}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1016/j.inffus.2020.10.014
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\JZ9Q3AJJ\\Martinez et al. - 2021 - Lights and shadows in Evolutionary Deep Learning .pdf
+      \endverb
+      \keyw{Deep Learning,Evolutionary Computation,Neuroevolution,Swarm Intelligence}
+    \endentry
+    \entry{michalewiczHandbookEvolutionaryComputation1997}{book}{}
+      \name{author}{3}{}{%
+        {{hash=f8ddcaba3477f0adbf4f08d891669b3a}{%
+           family={Michalewicz},
+           familyi={M\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=ab44fff87c3b4f741ab67740825318e9}{%
+           family={Baeck},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9d28f35f8d9e6b051026bc78beb77a61}{%
+           family={Fogel},
+           familyi={F\bibinitperiod},
+           given={D.B.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boca Raton}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{59467a8975c4d97daca0924a11366b7e}
+      \strng{fullhash}{59467a8975c4d97daca0924a11366b7e}
+      \strng{bibnamehash}{59467a8975c4d97daca0924a11366b7e}
+      \strng{authorbibnamehash}{59467a8975c4d97daca0924a11366b7e}
+      \strng{authornamehash}{59467a8975c4d97daca0924a11366b7e}
+      \strng{authorfullhash}{59467a8975c4d97daca0924a11366b7e}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many scientists and engineers now use the paradigms of evolutionary computation (genetic algorithms, evolution strategies, evolutionary programming, genetic programming, classifier systems, and combinations or hybrids) to tackle problems that are either intractable or unrealistically time consuming to solve through traditional computational strategies. The Handbook of Evolutionary Computation addresses the need for a comprehensive source of reference in the maturing field of evolutionary computation. The handbook is available in a looseleaf print format and an online format.}
+      \field{isbn}{978-0-367-80248-6}
+      \field{month}{1}
+      \field{title}{Handbook of {{Evolutionary Computation}}}
+      \field{year}{1997}
+      \verb{doi}
+      \verb 10.1201/9780367802486
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\BUQU67PT\\Michalewicz, D. B. Fogel - 1997 - Handbook of Evolutionary Computation.pdf
       \endverb
     \endentry
     \entry{pellerinSelfadaptiveParametersGenetic2004}{inproceedings}{}
@@ -830,6 +1190,68 @@
       \verb{file}
       \verb C\:\\Users\\irene\\Zotero\\storage\\RJ82WUKI\\Pisinger - 2007 - The quadratic knapsack problem—a survey.pdf
       \endverb
+    \endentry
+    \entry{poyatosEvoPruneDeepTLEvolutionaryPruning2023a}{article}{}
+      \name{author}{5}{}{%
+        {{hash=5dc61300e8b99fbf45049395b1eafb69}{%
+           family={Poyatos},
+           familyi={P\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=381bf37312a71cebeee50fc633f67c46}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8894728f1d9d2fbdc9a9aeec6e955c25}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={Aritz\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=cad385a9bc804164f8a02ca66c24913e}{%
+           family={Del\bibnamedelima Ser},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{75dad400a6a02d18a4e0ed6fbf88dede}
+      \strng{fullhash}{ccca09bed6137595c6fcee9370871938}
+      \strng{bibnamehash}{75dad400a6a02d18a4e0ed6fbf88dede}
+      \strng{authorbibnamehash}{75dad400a6a02d18a4e0ed6fbf88dede}
+      \strng{authornamehash}{75dad400a6a02d18a4e0ed6fbf88dede}
+      \strng{authorfullhash}{ccca09bed6137595c6fcee9370871938}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In recent years, Deep Learning models have shown a great performance in complex optimization problems. They generally require large training datasets, which is a limitation in most practical cases. Transfer learning allows importing the first layers of a pre-trained architecture and connecting them to fully-connected layers to adapt them to a new problem. Consequently, the configuration of the these layers becomes crucial for the performance of the model. Unfortunately, the optimization of these models is usually a computationally demanding task. One strategy to optimize Deep Learning models is the pruning scheme. Pruning methods are focused on reducing the complexity of the network, assuming an expected performance penalty of the model once pruned. However, the pruning could potentially be used to improve the performance, using an optimization algorithm to identify and eventually remove unnecessary connections among neurons. This work proposes EvoPruneDeepTL, an evolutionary pruning model for Transfer Learning based Deep Neural Networks which replaces the last fully-connected layers with sparse layers optimized by a genetic algorithm. Depending on its solution encoding strategy, our proposed model can either perform optimized pruning or feature selection over the densely connected part of the neural network. We carry out different experiments with several datasets to assess the benefits of our proposal. Results show the contribution of EvoPruneDeepTL and feature selection to the overall computational efficiency of the network as a result of the optimization process. In particular, the accuracy is improved, reducing at the same time the number of active neurons in the final layers.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{note}{1 citations (Crossref) [2023-05-31] \par Ejemplo concreto de redes neuronales en las que se vieron obligaron a bajar el número}
+      \field{shorttitle}{{{EvoPruneDeepTL}}}
+      \field{title}{{{EvoPruneDeepTL}}: {{An}} Evolutionary Pruning Model for Transfer Learning Based Deep Neural Networks}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{158}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{59\bibrangedash 82}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1016/j.neunet.2022.10.011
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\WDC5ABGW\\Poyatos et al. - 2023 - EvoPruneDeepTL An evolutionary pruning model for .pdf
+      \endverb
+      \keyw{Deep learning,Evolutionary algorithms,Feature selection,Pruning,Transfer learning}
     \endentry
     \entry{qiongbingNewCrossoverMechanism2016}{article}{}
       \name{author}{2}{}{%

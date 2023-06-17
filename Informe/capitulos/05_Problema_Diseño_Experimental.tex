@@ -66,10 +66,7 @@ Witzgall \parencite{witzgallMathematicalMethodsSite1975} presentó un problema q
 
 \subsection{Datos del problema}
 
-Utilizaremos 97 archivos de datos generados aleatoriamente de %pedir referencia a página
-, los cuales se pueden distribuir de forma que se indica en la Tabla \ref{DatosProblema}
-
-
+Utilizaremos 97 archivos de datos generados aleatoriamente de \href{http://cedric.cnam.fr/~soutif/QKP/QKP.html}{(QKP) \textit{instances}}, los cuales se pueden distribuir de forma que se indica en la Tabla \ref{DatosProblema}
 
 Se entiende como ``densidad'' al porcentaje de beneficios combinados positivos, es decir, $p_{ij} > 0$. 
 Particularmente QP tendría densidad 0\%.
@@ -157,12 +154,18 @@ Tras esto, se compararon ambos resultados y se pudo comprobar que, efectivamente
 Por lo tanto, se puede decir con seguridad que los cambios que apliquemos a un criterio de parada en específico se puede traducir a un cambio en el otro criterio de parada. 
 Esto cabe la pena destacarlo ya que, recordemos, el objetivo de este trabajo es crear un algoritmo útil y competitivo para tratar con problemas \textit{expensive}, por lo que queremos obtener buenos resultados en un tiempo muy reducido. 
 
-Para simular de forma eficiente esta reducción del tiempo, se propuso el siguiente cambio con respecto al tiempo como criterio de parada:
+Para simular de forma eficiente y suficiente esta reducción de tiempo, se propuso el siguiente cambio con respecto al tiempo como criterio de parada:
 \begin{itemize}
 	\item En vez de ejecutar los archivos con $n=100$ durante 5 segundos, lo reduciremos a 25ms.
 	\item En vez de ejecutar los archivos con $n>100$ durante 30 segundos, lo reduciremos a 150ms.
 \end{itemize}
-Haciendo cálculos, obtenemos que solo utilizaremos el 0.5\% inicial de cada ejecución, lo que podemos traducir en que nuestro nuevo criterio de parada serán \textbf{450 iteraciones}. 
+Realizamos un cálculo básico para comprobar qué proporción de la ejecución estaremos realizando con estos nuevos tiempos:
+\begin{equation*}
+\dfrac{25\cdot 100ms}{5\cdot 1000ms} = 0.5
+\hspace{1cm}
+\dfrac{150\cdot 100ms}{30\cdot 1000ms} = 0.5
+\end{equation*}
+Por lo tanto, obtenemos que solo utilizaremos el 0.5\% inicial de cada ejecución, lo que podemos traducir en que nuestro nuevo criterio de parada serán \textbf{450 iteraciones}. 
 
 Con el fin de comprobar que esta reducción había sido suficiente y necesaria, se ejecutan de nuevo todos los archivos con el algoritmo base ahora con 450 iteraciones y comparamos los resultados con los obtenidos anteriormente con 90000 iteraciones. 
 Podemos ver que, efectivamente, se han obtenido resultados mucho peores. 
@@ -185,11 +188,14 @@ Para que puedan ser comparados estadísticamente los resultados, pero a la vez m
 Así pues, tendremos que utilizar distintas semillas para cada ejecución. 
 Además, por conveniencia, es recomendable que las semillas utilizadas sean comunes a todas las sucesivas ejecuciones de los distintos algoritmos (una vez más, para asegurarnos que la aleatoriedad afecta a todos los algoritmos de forma similar) y que siempre se obtengan los mismos resultados aún si ejecutamos el mismo archivo varias veces. 
 Por ello, una solución es establecer un valor de semilla inicial arbitrario y utilizar este para generar el resto de semillas.
+	\item \texttt{numcro}: Es el tamaño de la población para los AGs. 
+	En tanto que el objetivo es obtener buenos resultados en pocas iteraciones, no nos podemos permitir tener un tamaño de población excesivamente grande; ya que a mayor población, más evaluaciones deberán realizarse por generación y dará lugar a que se realicen muy pocos cambios de generación (lo que significa pocas iteraciones del algoritmo). 
+	Por ello, estableceremos un tamaño de la población lo suficientemente pequeño para que esto no resulte un inconveniente, pero que no se considere una micropoblación: nos decantaremos por un tamaño de 10 individuos. 
 \end{itemize}
 
-En definitiva, podemos resumir los parámetros, para lo que se usan y sus valores en la Tabla \ref{Resumen}.
+En definitiva,  a modo de resumen, podemos rápidamente visualizar en la Tabla \ref{Resumen} los distintos parámetros con los que trabajaremos, cuáles son sus usos y sus valores.
 
-\begin{table}
+\begin{table}[H]
 \caption{Resumen de parámetros utilizados}
 \label{Resumen}
 \begin{tabular}{|l|l|l|}
@@ -207,7 +213,7 @@ Parámetros                                 & Resumen                           
 \rowcolor[HTML]{DAE8FC} 
 \texttt{Semilla}          & \begin{tabular}[c]{@{}l@{}}Semilla de aleatoriedad para\\ determinada ejecución del \\ algoritmo\end{tabular}                             & \begin{tabular}[c]{@{}l@{}}Valor generado aleatoriamente \\ por \texttt{INITSEED}\end{tabular} \\ \hline
 \rowcolor[HTML]{DDFDFF} 
-%\texttt{numcro}             & \begin{tabular}[c]{@{}l@{}}Número de elementos de la\\ población de soluciones\end{tabular}                                               & 10                                                                                    \\ \hline
+\texttt{numcro}             & \begin{tabular}[c]{@{}l@{}}Número de elementos de la\\ población de soluciones\end{tabular}                                               & 10                                                                                    \\ \hline
 %\rowcolor[HTML]{DAE8FC} 
 %\texttt{pmut}             & \begin{tabular}[c]{@{}l@{}}Probabilidad de mutación\\ de las soluciones de la población\\ ({[}0,1{]})\end{tabular}                        & 0.1                                                                                   \\ \hline
 \end{tabular}

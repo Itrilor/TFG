@@ -2,7 +2,7 @@
 %\documentclass[a4paper,twoside,11pt,titlepage]{book}
 \usepackage{listings}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish,es-tabla]{babel}
 
 \usepackage{textcomp}
 \usepackage{multirow}
@@ -29,7 +29,8 @@
 
 \usepackage{longtable}
 
-\usepackage[pdfborder={000}]{hyperref} %referencia
+%\usepackage[pdfborder={000}]{hyperref} %referencia
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=red]{hyperref}
 
 % ********************************************************************
 % Re-usable information
@@ -210,6 +211,7 @@ pdfproducer = {pdflatex}
 \algnewcommand\algorithmicforeach{\textbf{for each}}
 \algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
 
+
 \setlength{\parskip}{0.5em}
 
 \setpapersize{A4}
@@ -226,7 +228,7 @@ pdfproducer = {pdflatex}
 \input{portada/portada}
 \input{prefacios/prefacio}
 \frontmatter
-\tableofcontents
+{ \hypersetup{hidelinks} \tableofcontents }
 \listoffigures
 %\listoftables
 %

@@ -4,7 +4,7 @@ En este capítulo se presentan los dos algoritmos que se utilizaran como base pa
 
 \section{Algoritmo Genético Estacionario Uniforme}
 
-En primer lugar, debemos explicar brevemente la importancia de los Algoritmos Genéticos (AG) y, posteriormente, justificar la elección de su versión Algoritmo Genético Estacionario Uniforme (AGEU). 
+En primer lugar, debemos explicar brevemente la importancia de los Algoritmos Genéticos (AG) y, posteriormente, justificar la elección de su versión Algoritmo Genético Estacionario Uniforme (AGEU) (\textit{Steady-State Genetic Algorithm}, SSGA). 
 
 Los seres vivos son solucionadores de problemas de forma natural. 
 Exhiben una versatilidad que ponen en evidencia hasta a los mejores programas. 
@@ -74,11 +74,12 @@ Como tenemos pocas iteraciones, no nos podemos permitir buenas soluciones sin ni
 
 %Se han utilizado los conocimientos de Metaheuristicos donde se estudiaron estos conceptos para ....
 A efectos prácticos, se ha usado los resultados y el análisis que realicé en el trabajo ``Problemas con técnicas basadas en poblaciones'' de la asignatura Metaheurísticas (curso 2021-2022), donde se debía comparar experimental y teóricamente los distintos algoritmos genéticos y meméticos. 
-En dicho trabajo se llega a la conclusión de que la mejor opción es utilizar AGEU.
+En dicho trabajo se llega a la conclusión de que la mejor opción es utilizar AGEU. 
+En tanto que no es el mismo problema, no podemos garantizar que este sea el caso para este problema con solo esa información, pero sabemos que es un buen punto de partida.
 
 \subsection{Pseudocódigo}
 
-A efectos prácticos, este pseudocódigo (Algoritmo \ref{alg:AGEU}) se diferenciará del anterior (\ref{alg:AG}) en el cruce, ya que solo cruzaremos dos padres no necesitaremos el parámetro $pcruce$, y que en el operador de selección especificaremos que es estacionario. 
+A efectos prácticos, este pseudocódigo (Algoritmo \ref{alg:AGEU}) se diferenciará del anterior (Algoritmo \ref{alg:AG}) en el cruce, ya que solo cruzaremos dos padres no necesitaremos el parámetro $pcruce$, y que en el operador de selección especificaremos que es estacionario. 
 
 Como se ha dicho al principio de este capítulo, una explicación más detallada junto con el pseudocódigo de cada una de las componentes será dada en el siguiente capítulo.
 
@@ -112,26 +113,26 @@ Como se ha dicho al principio de este capítulo, una explicación más detallada
 
 Cuando se realiza el cruce de dos soluciones pueden ocurrir dos casos:
 \begin{itemize}
-	\item El resultado del cruce pueda seguir considerándose una solución.
-	\item El resultado del cruce no constituya el espacio de soluciones.
+	\item El resultado del cruce sea una solución factible.
+	\item El resultado del cruce no sea una solución factible.
 \end{itemize}
 
-Más adelante en este capítulo se explicarán cómo son los cruces y se entenderá por qué es posible que el resultado de un cruce no sea una solución. 
+Más adelante en este capítulo se explicarán cómo son los cruces y se entenderá por qué es posible que el resultado de un cruce sea una solución no factible. 
 En este caso, no es lógico desechar al ``hijo'', por lo que debemos ``arreglarlo'' para que se vuelva una solución. 
 Ese es el objetivo del Operador de Reparación. 
 
 En nuestro caso lo vamos a aplicar en ambos casos (que el ``hijo'' sea solución o no). 
-Si el ``hijo'' no es solución es obvio el por qué necesitamos aplicarlo. 
-Si el ``hijo'' es solución lo aplicaremos para asegurarnos que no hay huecos libres, es decir, que no hay elementos adicionales que podrían introducirse adicionalmente. 
+Si el ``hijo'' no es solución factible es obvio el por qué necesitamos aplicarlo. 
+Si el ``hijo'' es solución factible lo aplicaremos para asegurarnos que no hay huecos libres, es decir, que no hay elementos adicionales que podrían introducirse adicionalmente. 
 Esto último se hace ya que queremos maximizar el valor de la solución, por lo que si queremos que sea mínimamente competente para cuando intentemos introducirlas en la población. 
 
 Entonces seguimos el siguiente proceso, ilustrado en el pseudocódigo \ref{alg:OR}:
 \begin{itemize}
-	\item Si no es solución (su peso supera al peso máximo): Se deberán eliminar elementos del ``hijo'' hasta que constituya una solución. 
+	\item Si no es solución factible (su peso supera al peso máximo): Se deberán eliminar elementos del ``hijo'' hasta que constituya una solución factible. 
 La forma de eliminar elementos será usando Greedy, es decir, se eliminarán los elementos con menor proporción $valor\_acumulado/peso$. 
 Esta lógica viene dada por un intento de eliminar el máximo peso posible sin reducir mucho el valor final cuando se vuelva una solución. 
 	
-	\item Si es solución (su peso no supera al peso máximo): Se buscará, utilizando Greedy, un elemento para introducir. 
+	\item Si es solución factible (su peso no supera al peso máximo): Se buscará, utilizando Greedy, un elemento para introducir. 
 En este caso, nos interesa encontrar el elemento con mayor proporción $valor\_acumulado/peso$, ya que eso nos permitiría potencialmente aumentar significativamente el valor total (evaluación de la función \textit{fitness}) de la solución. 
 Esto es, al tener en cuenta el peso puede llegar a resultar en que seamos capaces de introducir más elementos, pudiendo superar finalmente el valor que se tendría si se introdujese el elemento con el mayor valor acumulado pero no permitiese introducir más elementos. 
 Este proceso se repetirá hasta que no sea capaz de introducir ningún otro elemento en la solución. 
@@ -160,7 +161,7 @@ Este proceso se repetirá hasta que no sea capaz de introducir ningún otro elem
 
 Téngase en cuenta que al eliminar y añadir elementos del ``hijo'', se debe recalcular su peso total.
 
-\subsubsection{Cruce Uniforme}
+\subsubsection{Operador de Cruce}
 
 El cruce es un operador genético usado para variar los cromosomas de una generación a otra. 
 Dos soluciones obtenidas de la población con anterior se cruzarán con el objetivo de producir una descendencia superior. 
@@ -215,8 +216,8 @@ Un ejemplo de este tipo de cruce sería:
 El cruce de dos soluciones buenas no tiene por qué siempre dar lugar a una solución mejor o igual de buena. 
 Sin embargo, si los padres son buenas soluciones, la probabilidad de tener un hijo bueno es elevada; en el caso de que el hijo no sea una buena solución, será eliminado durante el periodo de reemplazo. 
 
-En nuestro problema es posible que el cruce de dos soluciones no de lugar a una solución. 
-Esto se debe a la elección aleatoria de qué cromosomas elegir, no estamos teniendo en cuenta el peso que se está alcanzando al asignar cada elemento; por lo que es totalmente posible que  al asignar los elementos a cada hijo se sobrepase la capacidad máxima, dejando por ello de ser una solución válida. 
+En nuestro problema es posible que el cruce de dos soluciones no de lugar a una solución factible. 
+Esto se debe a la elección aleatoria de qué cromosomas elegir, no estamos teniendo en cuenta el peso que se está alcanzando al asignar cada elemento; por lo que es totalmente posible que  al asignar los elementos a cada hijo se sobrepase la capacidad máxima, dejando por ello de ser una solución factible. 
 
 %Más adelante en este capítulo explicaremos otro tipo de cruce, que es el cruce HUX. 
 
@@ -398,7 +399,7 @@ Aunque primero se mostrará un ejemplo de este tipo de cruce en Figura \ref{fig:
 \end{algorithmic}
 \end{algorithm}
 
-\subsubsection{Enfrentamiento}
+\subsubsection{Reemplazo Elitista}
 
 Es una generalización del Operador de Reemplazo Estacionario del AG (Algoritmo \ref{alg:ORE}). 
 En este caso tenemos que enfrentar toda la población de hijos (con tamaño menor igual al tamaño de la población) contra toda la generación anterior. 
