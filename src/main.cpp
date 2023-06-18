@@ -16,8 +16,8 @@ using Random = effolkronium::random_static;
 void mensajeError();
 void mensajeSolucion();
 
-const int NEVALUACIONESMAX = 90000;
-const int NTRIES = 1;
+const int NEVALUACIONESMAX = 450;
+const int NTRIES = 50;
 // const vector<int> seed = {95, 27, 83, 61, 4, 27, 14, 49, 92, 55};
 const int INITSEED = 5;
 
@@ -79,7 +79,7 @@ int main(int argc, char ** argv){
 
   //------------ALGORITMO GENETICO ESTACIONARIO UNIFORME ----------------
   //cout << "Leemos " << argv[1] << "\n";
-  //values.clear();
+  // values.clear();
   // vector<vector<double>> milestones;
   // for(int j = 0; j < NTRIES; ++j){
   //   estado = sequence.leerFicheroDatos(argv[1]);
@@ -115,7 +115,7 @@ int main(int argc, char ** argv){
   //cout << meanValue << "\n";
 
   //---------GENETIC ALGORITHM FOR COMBINATORY EXPENSIVE PROBLEM----------
-  //values.clear();
+  // values.clear();
   // vector<vector<double>> milestones;
   // for(int j = 0; j < NTRIES; ++j){
   //   estado = sequence.leerFicheroDatos(argv[1]);
@@ -146,30 +146,30 @@ int main(int argc, char ** argv){
 
 
   //---------CHC----------
-  vector<vector<double>> milestones;
-  for(int j = 0; j < NTRIES; ++j){
-    //cout << j << "\n";
-    estado = sequence.leerFicheroDatos(argv[1]);
-    if(!estado){
-      cerr << "No se ha podido leer correctamente\n";
-      exit(-1);
-    }
-    milestones.push_back(sequence.CHCGA(10,NEVALUACIONESMAX, seed[j]));
-    //values.push_back(sequence.getValorSolucion());
-  }
-  vector<double> meanMilestones = milestones[0];
-  for(int i = 1; i < milestones.size(); ++i){
-    for(int j = 0; j < milestones[i].size(); ++j){
-      meanMilestones[j] += milestones[i][j];
-      //cout << milestones[i][j] << " , ";
-    }
-  }
-
-  for(int i = 0; i < meanMilestones.size(); ++i){
-    meanMilestones[i] = meanMilestones[i]/milestones.size();
-    cout << meanMilestones[i] << " , ";
-  }
-  cout << "\n";
+  // vector<vector<double>> milestones;
+  // for(int j = 0; j < NTRIES; ++j){
+  //   //cout << j << "\n";
+  //   estado = sequence.leerFicheroDatos(argv[1]);
+  //   if(!estado){
+  //     cerr << "No se ha podido leer correctamente\n";
+  //     exit(-1);
+  //   }
+  //   milestones.push_back(sequence.CHCGA(10,NEVALUACIONESMAX, seed[j]));
+  //   //values.push_back(sequence.getValorSolucion());
+  // }
+  // vector<double> meanMilestones = milestones[0];
+  // for(int i = 1; i < milestones.size(); ++i){
+  //   for(int j = 0; j < milestones[i].size(); ++j){
+  //     meanMilestones[j] += milestones[i][j];
+  //     //cout << milestones[i][j] << " , ";
+  //   }
+  // }
+  //
+  // for(int i = 0; i < meanMilestones.size(); ++i){
+  //   meanMilestones[i] = meanMilestones[i]/milestones.size();
+  //   cout << meanMilestones[i] << " , ";
+  // }
+  // cout << "\n";
 
   //---------GACEP+CHC-------------------
   // vector<vector<double>> milestones;
@@ -197,28 +197,28 @@ int main(int argc, char ** argv){
   // cout << "\n";
 
   //---------GACEP3103----------
-  // vector<vector<double>> milestones;
-  // for(int j = 0; j < NTRIES; ++j){
-  //   estado = sequence.leerFicheroDatos(argv[1]);
-  //   if(!estado){
-  //     cerr << "No se ha podido leer correctamente\n";
-  //     exit(-1);
-  //   }
-  //   milestones.push_back(sequence.GACEP3103(10,0.1,NEVALUACIONESMAX, seed[j]));
-  //   //values.push_back(sequence.getValorSolucion());
-  // }
-  // vector<double> meanMilestones = milestones[0];
-  // for(int i = 1; i < milestones.size(); ++i){
-  //   for(int j = 0; j < milestones[i].size(); ++j){
-  //     meanMilestones[j] += milestones[i][j];
-  //   }
-  // }
-  //
-  // for(int i = 0; i < meanMilestones.size(); ++i){
-  //   meanMilestones[i] = meanMilestones[i]/milestones.size();
-  //   cout << meanMilestones[i] << " , ";
-  // }
-  // cout << "\n";
+  vector<vector<double>> milestones;
+  for(int j = 0; j < NTRIES; ++j){
+    estado = sequence.leerFicheroDatos(argv[1]);
+    if(!estado){
+      cerr << "No se ha podido leer correctamente\n";
+      exit(-1);
+    }
+    milestones.push_back(sequence.GACEP3103(10,0.1,NEVALUACIONESMAX, seed[j]));
+    //values.push_back(sequence.getValorSolucion());
+  }
+  vector<double> meanMilestones = milestones[0];
+  for(int i = 1; i < milestones.size(); ++i){
+    for(int j = 0; j < milestones[i].size(); ++j){
+      meanMilestones[j] += milestones[i][j];
+    }
+  }
+
+  for(int i = 0; i < meanMilestones.size(); ++i){
+    meanMilestones[i] = meanMilestones[i]/milestones.size();
+    cout << meanMilestones[i] << " , ";
+  }
+  cout << "\n";
 
 
 

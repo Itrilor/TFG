@@ -222,8 +222,10 @@ void AG::crucePorcentual(int p1[], double v1, int p2[], double v2, int h1[], int
   }
 
   // Hacemos las soluciones factibles
-  operadorReparacion(h1);
-  operadorReparacion(h2);
+  // operadorReparacion(h1);
+  // operadorReparacion(h2);
+  operadorReparacionGRASP(h1);
+  operadorReparacionGRASP(h2);
 }
 
 void AG::operadorReparacion(int hijo[]){
