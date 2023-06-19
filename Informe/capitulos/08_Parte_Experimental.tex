@@ -1,6 +1,248 @@
 \chapter{Parte Experimental (In progress)}
 
+En esta sección se realizará un análisis completo paso por paso del proceso de desarrollo del algoritmo. 
+Se mostrarán distintas tablas y gráficas comparativas y sus interpretaciones con el fin de justificar la motivación de las distintas modificaciones introducidas explicadas en la sección anterior.
 
+En primer lugar, recordemos brevemente los parámetros que utilizaremos y sus valores. 
+Estos parámetros no necesitan ser introducidos manualmente al ejecutar el programa, si no que están definidos como constantes en el código:
+
+\begin{itemize}
+	\item \texttt{NTRIES}: Para eliminar la aleatoriedad que proviene de la ejecución con una determinada semilla u otra, cada algoritmo se ejecutará \texttt{NTRIES} número de veces, haremos la media de sus ejecuciones y este valor será el resultado que se guardará y se comparará posteriormente. 
+	Para que los resultados puedan ser comparados estadísticamente, estableceremos su valor a 50.
+	\item \texttt{INITSEED}: Con motivo de usar semillas distintas en cada ejecución del algoritmo, pero que los resultados sean replicables, se establece una semilla inicial \textit{hardcodeada} de forma arbitraria la cual va a generar el resto de semillas. 
+	En nuestro caso, se ha elegido el valor 5. 
+	\item \texttt{numcro}: Es el tamaño de la población de individuos que vamos a considerar en los algoritmos. 
+	Se tiene que elegir un tamaño adecuado de forma que no sea demasiado grande, causando que se sobrepasen el límite de evaluaciones de forma prematura, ni demasiado pequeño, resultando en un incoveniente si se tiene que trabajar con muy pocos individuos. 
+	Por lo tanto, estableceremos su valor a 10.
+	\item \texttt{probc}: Es la probabilidad de cruce en los AGs. 
+	No lo usamos como parámetro propiamente en el código, ya que para los algoritmos de referencia (AGE y CHC) tienen un número de cruces que se tienen que producir establecidos; en el caso de AGE solo se producirá un cruce por generación y para el CHC se intentarán cruzar todos los individuos posibles. 
+	\item \texttt{probm}: Es la probabilidad de mutación en los AGs. Recuérdese que para el CHC no se requiere de esta mutación ya que obtiene la diversidad de otros operadores propios. 
+	En la literatura se coincide que el valor de este parámetro debe ser uno bastante pequeño, generalmente entre un 1\% y un 10\% de la población. 
+	Para asegurarnos que se produzca una mutación por cambio de generación, establecemos su valor a 0.1.
+	\item \texttt{EvaluacionMAX}: Es el número de iteraciones/generaciones máximas. 
+	Establecemos su valor a 450 por lo ya explicado en el apartado ``Diseño Experimental''.
+	\item \texttt{seed}: Como se ha indicado anteriormente, cada ejecución individual de un algoritmo tendrá asociada una semilla para determinar la aleatoriedad de los acontecimientos y que sea replicable. 
+	Este valor se tomará de aquellos que hayan sido generados por \texttt{INITSEED}.
+\end{itemize}
+
+Es importante mencionar que para todas las ejecuciones se han almacenado no solo los resultados finales, sino las mejores soluciones que se han encontrado en diversos momentos de la ejecución (\textit{milestones}). 
+Es decir, se han almacenado las mejores soluciones encontradas en los porcentajes de ejecución $\{1,2,3,5,10,20,30,40,50,60,70,80,90,100\}$. 
+Esto se podrá ver claramente cuando se muestren gráficas que representen de forma visual el \textit{ranking} de los distintos algoritmos comparados; sin embargo, por falta de espacio en las páginas y comodidad tanto para la autora como para el lector, en las tablas solo se mostrarán los resultados finales de las ejecuciones, aunque se harán menciones al comportamiento general (para determinar si puede estar convergiendo a una solución de forma prematura). 
+
+Todos los códigos y resultados pueden ser encontrados en el \href{https://github.com/Itrilor/TFG/tree/main}{respositorio de Github de este trabajo}. 
+
+\section{Algoritmos de Referencia experimentación}
+
+Para empezar, debemos mostrar los resultados obtenidos de aplicar los algoritmos de referencia al problema con sus condiciones iniciales, esto es, con 90000 iteraciones en vez de 450. 
+
+
+Preguntar si ha habido algún progreso con esto
+
+\section{Resultados versión expensive}
+
+Tal y como hemos mencionado en capítulos anteriores, el objetivo de este trabajo es el desarrollo de un algoritmo que ante todo sea capaz de obtener resultados competentes en poco tiempo, lo que se puede traducir en un número pequeño de iteraciones. 
+Por lo que el siguiente paso será obtener los resultados para los mismos algoritmos que en la sección anterior, pero para su versión \textit{expensive}, es decir, utilizaremos un número de iteraciones máximas de 450, tal y como hemos establecido en los parámetros. 
+
+Obtener resultados para esta versión es fundamental, ya que nos aporta las bases sobre las que trabajaremos y necesitaremos mejorar todo los posible durante este desarrollo. 
+También es interesante observar lo mucho que empeoran los resultados frente a su versión normal, lo cual era de esperar, ya que recordemos que solo estamos utilizando el primer 0.5\% de las iteraciones de su versión original. 
+
+Por ello, en la tabla \ref{AGEU450}, se muestran los resultados de la ejecución del AGE, mientras que en la tabla \_\_\_\_\_\_, se muestran los resultados de la ejecución del CHC. (Aún tengo que ejecutarlo)
+
+
+\begin{table}[]
+\begin{tabular}{|cccccclll}
+\hline
+\rowcolor[HTML]{FFFFC7} 
+\multicolumn{9}{|c|}{\cellcolor[HTML]{FFFFC7}AGEU   450}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\ \hline
+\rowcolor[HTML]{FCE6AB} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FCE6AB}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}densidad}              & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}Resultado} & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}densidad}               & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}Resultado} & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}densidad}              & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}Resultado} \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}192975}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}375031}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}376494}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}81641.3}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}936531}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}28788.7}   \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}189162}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}302452}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}275573}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}224189}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}29203.7}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}439862}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}229585}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}100514}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}14777.8}   \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}73991.5}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}779113}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}263938}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}10154.9}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}40194.9}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}481905}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}62289.6}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}693305}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}9176.36}   \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}232572}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\multirow{-9}{*}{\cellcolor[HTML]{DAE8FC}25}}   & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}779359}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\multirow{-9}{*}{\cellcolor[HTML]{DAE8FC}25}}  & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}245377}    \\ \cline{3-3} \cline{5-6} \cline{8-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\multirow{-10}{*}{\cellcolor[HTML]{DAE8FC}25}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}24729.5}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}622413}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}990137}    \\ \cline{2-3} \cline{6-6} \cline{9-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}18382.8}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}47981}     & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}501953}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}56493.1}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}203099}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}104754}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}3703.2}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}239245}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}866729}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}50077.8}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}220724}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}301858}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}61451.4}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}185943}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}716621}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}35971.6}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}79424.5}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}722726}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}14528.2}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}58364.2}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}43401.7}   \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}20289.4}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}147914}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}756135}    \\ \cline{3-3} \cline{6-6} \cline{9-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}35073.3}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\multirow{-10}{*}{\cellcolor[HTML]{DDFDFF}50}}  & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}48982.8}   & \multicolumn{1}{c|}{\multirow{-19}{*}{\cellcolor[HTML]{FFFFC7}\textbf{300}}} & \multicolumn{1}{c|}{\multirow{-10}{*}{\cellcolor[HTML]{DDFDFF}50}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}751915}    \\ \cline{3-3} \cline{5-9} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\multirow{-10}{*}{\cellcolor[HTML]{DDFDFF}50}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}88195.5}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}281677}    &                                                                              &                                                                    &                                                        \\ \cline{2-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}83363}     & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}369024}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}104674}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}209377}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}33684.2}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}225289}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}105760}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}225869}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}56123.2}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}479039}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}16040.6}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}425768}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}52535.1}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}218123}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}53964}     & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}315253}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}68468.1}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\multirow{-10}{*}{\cellcolor[HTML]{DAE8FC}75}}  & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}104110}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{5-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\multirow{-10}{*}{\cellcolor[HTML]{DAE8FC}75}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}143555}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}142039}    &                                                                              &                                                                    &                                                        \\ \cline{2-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}188657}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}439482}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}94679.5}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}283241}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}61561.5}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}61605.9}   &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}71896.1}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}127029}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}27565.6}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}137458}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}144945}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}228081}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}110542}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}267388}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}19419}     & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}596574}    &                                                                              &                                                                    &                                                        \\ \cline{3-3} \cline{6-6}
+\multicolumn{1}{|c|}{\multirow{-39}{*}{\cellcolor[HTML]{FFFFC7}\textbf{100}}} & \multicolumn{1}{c|}{\multirow{-9}{*}{\cellcolor[HTML]{DDFDFF}100}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}103743}    & \multicolumn{1}{c|}{\multirow{-39}{*}{\cellcolor[HTML]{FFFFC7}\textbf{200}}} & \multicolumn{1}{c|}{\multirow{-10}{*}{\cellcolor[HTML]{DDFDFF}100}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}512266}    &                                                                              &                                                                    &                                                        \\ \cline{1-6}
+\end{tabular}
+\caption{\label{AGEU450}Resultados de la ejecución de AGEU con 450 iteraciones}
+\end{table}
+
+También podemos apreciar en la tabla \ref{diferenciasAGEU} la media de las distancias entre las soluciones obtenidas en cada \textit{milestone} en la ejecución de AGEU con la final:
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+\begin{tabular}{|cclcclccl|}
+\hline
+\rowcolor[HTML]{FFFFC7} 
+\multicolumn{9}{|c|}{\cellcolor[HTML]{FFFFC7}AGEU   450}                                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\ \hline
+\rowcolor[HTML]{FCE6AB} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FCE6AB}n}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}milestone} & \multicolumn{1}{l|}{\cellcolor[HTML]{FCE6AB}Diferencia} & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}n}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}milestone} & \multicolumn{1}{l|}{\cellcolor[HTML]{FCE6AB}Diferencia} & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}n}                      & \multicolumn{1}{c|}{\cellcolor[HTML]{FCE6AB}milestone} & Diferencia \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}1}         & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}11066.03}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}1}         & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}54979.9692} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}1}         & 77065.6989 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}2}         & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}8843.503}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}2}         & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}45735.6846} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}2}         & 65917.1705 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}3}         & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}7640.7}     & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}3}         & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}41236.5128} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}3}         & 60357.7768 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}5}         & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}5932.67}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}5}         & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}33487.7872} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}5}         & 50938.9158 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}10}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}3436.968}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}10}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}22116.0077} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}10}        & 36641.6095 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}20}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}1524.318}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}20}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}11864.6333} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}20}        & 23155.9916 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}30}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}785.4641}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}30}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}7146.58462} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}30}        & 16188.8274 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}40}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}450.1636}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}40}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}4390.63846} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}40}        & 11630.5558 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}50}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}260.5513}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}50}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}2667.21538} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}50}        & 8142.90526 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}60}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}156.6538}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}60}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}1570.27692} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}60}        & 5593.12105 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}70}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}90.98718}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}70}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}952.261538} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}70}        & 3610.04316 \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}80}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}54.53077}   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}80}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DDFDFF}525.023077} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                       & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}80}        & 2010.8     \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\multirow{-13}{*}{\cellcolor[HTML]{FFFFC7}100}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}90}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}26.47692}   & \multicolumn{1}{c|}{\multirow{-13}{*}{\cellcolor[HTML]{FFFFC7}200}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}90}        & \multicolumn{1}{l|}{\cellcolor[HTML]{DAE8FC}201.676923} & \multicolumn{1}{c|}{\multirow{-13}{*}{\cellcolor[HTML]{FFFFC7}300}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}90}        & 855.950526 \\ \hline
+\end{tabular}
+\caption{\label{diferenciasAGEU}Diferencias de los resultados de las distintas milestones con respecto a la final para el AG}
+\end{table}
+
+Por lo que se puede ver en \ref{diferenciasAGEU} no se puede decir que converja prematuramente, de hecho en todo momento realiza mejoras significativas. 
+Esto se puede observar en el hecho de que las diferencias a la última solución van disminuyendo en gran medida en cada una de las \textit{milestones}. 
+
+\section{Incorporación del histórico}
+
+La primera modificación que se propone es la introducción de un histórico, explicado en la primera sección del capítulo anterior. 
+La principal motivación de esta modificación es incidir en la explotación de las buenas soluciones, ya que se almacenarán los elementos más predominantes en las mejores soluciones y en las peores, con el fin de reincidir con mayor frecuencia en los primeros y rehuir de los segundos. 
+
+Obviamente, este histórico deberá tener un proceso de aprendizaje (en el que almacena todas las soluciones distintas para luego discernir cuáles son las mejores y cuáles las peores y sus respectivos elementos) y un proceso de reacción, en la que pondrá en práctica la información aprendida en la fase anterior. 
+Con el fin de que no sea un único procedimiento y pueda ir aprendiendo a lo largo de la ejecución (para intentar evitar quedarse en máximos locales), estas dos fases se irán turnando cada 50 generaciones. 
+
+Para poner a prueba su utilidad, se estudian los resultados obtenidos de aplicar el histórico solo al operador de reparación (si tiene que añadir elementos, elegirá los mejores; si tiene que eliminar elementos, elegirá los peores), solo a la mutación (tiene prioridad insertar mejores elementos y eliminar peores) y a ambos a la vez. 
+Los resultados de este estudio se muestran en la tabla (apéndice?) y, más visualmente, en la gráfica \ref{fig:Historico}.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{imagenes/Experimental/Historico.png}
+        \caption{Resultados de aplicar el histórico}
+        \label{fig:Historico}
+\end{figure}
+
+En esta gráfica \ref{fig:Historico} podemos apreciar que las mejores opciones son aplicarlo solo al cruce o a ambos; de hecho, por muy pocas milésimas se tiene que solo aplicarlo al cruce es mejor, pero es una diferencia tan insignificante que se ha decidido continuar con la aplicación del histórico a ambos, para mantener la consistencia, y porque es posible que en algún momento del desarrollo se puedan realizar más modificaciones a la mutación de las que el histórico se podría aprovechar. 
+
+Además, que cuando solo se aplique el histórico a la mutación de los peores resultados con diferencia es una primera indicación de que la introducción del histórico ha supuesto una mejora al modelo original.
+Esto se debe a que realmente la mutación se produce un número muy bajo de veces y no suele producir grandes cambios, por lo que si es lo único que se modifica, es muy probable que no se distancie mucho de los resultados originales. 
+Para confirmar esta idea y poder asegurarnos de que se ha dado un paso en una dirección correcta, comparamos en la gráfica \ref{fig:AGEUvsGACEP} los resultados originales y los de aplicar el histórico a ambos operadores. 
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{imagenes/Experimental/AGEUvsGACEP.png}
+        \caption{Comparación de los resultados del AGEU y la aplicación del histórico}
+        \label{fig:AGEUvsGACEP}
+\end{figure}
+
+Con esta gráfica \ref{fig:AGEUvsGACEP} quedan confirmadas nuestras suposiciones. 
+
+Es más, con esta modificación podemos crear las bases de lo que será nuestro nuevo algoritmo, al cual llamaremos \textbf{GACEP} (\textbf{\textit{Genetic Algorithm for Combinatory Expensive Problem}}).
+
+\section{Uso de GRASP}
+
+
+
+\section{Operador de Cruce Intensivo}
+
+
+
+\section{Estudio de la diversidad}
+
+
+
+\section{Incrementando la diversidad (con nuevo reemplazo)}
+
+
+
+\section{Tablas de prueba}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\newpage
+\newpage
 \newpage
 Adicionalmente, como se ha comentado antes, cada algoritmo requiere de sus propios parámetros. 
 Aunque explicaremos en más profundidad cada algoritmo en los siguientes capítulos, es necesario que establezcamos ahora cuáles son dichos parámetros y qué valores se han utilizado. 
@@ -41,21 +283,7 @@ Este valor establece el porcentaje de soluciones que la población que mutará.
 Genéricamente este valor suele ser del 0.1, por lo que también lo utilizaremos en nuestro problema. 
 Correspondería que solo mutaría una solución de la población por cada generación. 
 \end{itemize}
-\section{Algoritmos de Referencia experimentación}
 
-\section{Resultados versión expensive}
-
-\section{Incorporación del histórico}
-
-\section{Uso de GRASP}
-
-\section{Operador de Cruce Intensivo}
-
-\section{Estudio de la diversidad}
-
-\section{Incrementando la diversidad (con nuevo reemplazo)}
-
-\section{Tablas de prueba}
 
 
 % Please add the following required packages to your document preamble:
@@ -479,4 +707,29 @@ Correspondería que solo mutaría una solución de la población por cada genera
 \textbf{GACEPorGRASP}                                                 & 2.78282E-16                                                    & {\color[HTML]{0000FF} \textbf{2.78E-16}} & {\color[HTML]{0000FF} \textbf{2.78E-16}} & {\color[HTML]{0000FF} \textbf{2.78E-16}}  \\ \hline
 \end{tabular}
 \caption{Comparaciones múltiples}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l|}{} & \textbf{1}               & \textbf{2}               & \textbf{3}               & \textbf{5}               & \textbf{10}              & \textbf{20}                    & \textbf{30}                    & \textbf{40}                    & \textbf{50}                    & \textbf{60}                    & \textbf{70}                    & \textbf{80}                    & \textbf{90}                    & \textbf{100}                   \\ \hline
+\textbf{Total}         & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & 2.08763                        & 1.97938                        & 1.69588                        & 1.68557                        & 1.61856                        & 1.6134                         & 1.6134                         & 1.60309                        & 1.60309                        \\ \hline
+\textbf{sCruce}        & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & 1.98454                        & {\color[HTML]{4169E1} 1.86598} & {\color[HTML]{4169E1} 1.52062} & {\color[HTML]{4169E1} 1.47938} & {\color[HTML]{4169E1} 1.53608} & {\color[HTML]{4169E1} 1.55155} & {\color[HTML]{4169E1} 1.56186} & {\color[HTML]{4169E1} 1.59278} & {\color[HTML]{4169E1} 1.59278} \\ \hline
+\textbf{sMutacion}     & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 2} & {\color[HTML]{4169E1} 1.92784} & 2.15464                        & 2.78351                        & 2.83505                        & 2.84536                        & 2.83505                        & 2.82474                        & 2.80412                        & 2.80412                        \\ \hline
+\end{tabular}
+\caption{\label{table:HISTORICO}}
 \end{table}
