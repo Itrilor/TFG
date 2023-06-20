@@ -53,7 +53,9 @@
 \BOOKMARK [1][-]{section.8.3}{Incorporaci\363n del hist\363rico}{chapter.8}% 53
 \BOOKMARK [1][-]{section.8.4}{Uso de GRASP}{chapter.8}% 54
 \BOOKMARK [1][-]{section.8.5}{Operador de Cruce Intensivo}{chapter.8}% 55
-\BOOKMARK [1][-]{section.8.6}{Estudio de la diversidad}{chapter.8}% 56
-\BOOKMARK [1][-]{section.8.7}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.8}% 57
-\BOOKMARK [1][-]{section.8.8}{Tablas de prueba}{chapter.8}% 58
-\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 59
+\BOOKMARK [2][-]{subsection.8.5.1}{Utilizando GRASP}{section.8.5}% 56
+\BOOKMARK [2][-]{subsection.8.5.2}{Sin utilizar GRASP}{section.8.5}% 57
+\BOOKMARK [1][-]{section.8.6}{Estudio de la diversidad}{chapter.8}% 58
+\BOOKMARK [1][-]{section.8.7}{Incrementando la diversidad \(con nuevo reemplazo\)}{chapter.8}% 59
+\BOOKMARK [1][-]{section.8.8}{Tablas de prueba}{chapter.8}% 60
+\BOOKMARK [0][-]{chapter.9}{Conclusiones}{}% 61

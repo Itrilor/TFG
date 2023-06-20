@@ -2390,8 +2390,9 @@
     <bcf:citekey order="38">latorrePrescriptionMethodologicalGuidelines2021</bcf:citekey>
     <bcf:citekey order="39">derracPracticalTutorialUse2011</bcf:citekey>
     <bcf:citekey order="40">witzgallMathematicalMethodsSite1975</bcf:citekey>
-    <bcf:citekey order="41">fernandesStudyNonrandomMating2001</bcf:citekey>
-    <bcf:citekey order="42">mahfoudCrowdingPreselectionRevisited1992</bcf:citekey>
+    <bcf:citekey order="41">herrera-poyatosGeneticMemeticAlgorithm2017</bcf:citekey>
+    <bcf:citekey order="42">fernandesStudyNonrandomMating2001</bcf:citekey>
+    <bcf:citekey order="43">mahfoudCrowdingPreselectionRevisited1992</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

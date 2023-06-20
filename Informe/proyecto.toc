@@ -133,16 +133,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.2}Resultados versión expensive}{64}{section.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Incorporación del histórico}{64}{section.8.3}%
+\contentsline {section}{\numberline {8.3}Incorporación del histórico}{69}{section.8.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Uso de GRASP}{67}{section.8.4}%
+\contentsline {section}{\numberline {8.4}Uso de GRASP}{70}{section.8.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{67}{section.8.5}%
+\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{75}{section.8.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{67}{section.8.6}%
+\contentsline {subsection}{\numberline {8.5.1}Utilizando GRASP}{75}{subsection.8.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{67}{section.8.7}%
+\contentsline {subsection}{\numberline {8.5.2}Sin utilizar GRASP}{76}{subsection.8.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.8}Tablas de prueba}{67}{section.8.8}%
+\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{77}{section.8.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Conclusiones}{75}{chapter.9}%
+\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{77}{section.8.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.8}Tablas de prueba}{77}{section.8.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}Conclusiones}{85}{chapter.9}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  19 JUN 2023 04:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  20 JUN 2023 06:20
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -974,6 +974,12 @@ LaTeX Warning: Label `eq:4.4' multiply defined.
 
 LaTeX Warning: Label `eq:4.4@cref' multiply defined.
 
+
+LaTeX Warning: Label `fig:DiferenciasGACEP' multiply defined.
+
+
+LaTeX Warning: Label `fig:DiferenciasGACEP@cref' multiply defined.
+
 )
 \openout1 = `proyecto.aux'.
 
@@ -1070,7 +1076,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 (portada/portada.tex
 \centeroffset=\skip108
-<imagenes/logo_ugr_nuevo.png, id=239, 647.2983pt x 180.1932pt>
+<imagenes/logo_ugr_nuevo.png, id=247, 647.2983pt x 180.1932pt>
 File: imagenes/logo_ugr_nuevo.png Graphic file (type png)
 <use imagenes/logo_ugr_nuevo.png>
 Package pdftex.def Info: imagenes/logo_ugr_nuevo.png  used on input line 12.
@@ -1120,12 +1126,12 @@ Overfull \hbox (0.32011pt too wide) in paragraph at lines 9--24
 | $[]$ 
  []
 
-<imagenes/etsiit_logo.png, id=241, 110.814pt x 40.4712pt>
+<imagenes/etsiit_logo.png, id=249, 110.814pt x 40.4712pt>
 File: imagenes/etsiit_logo.png Graphic file (type png)
 <use imagenes/etsiit_logo.png>
 Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 35.
 (pdftex.def)             Requested size: 110.8137pt x 40.4711pt.
-<imagenes/ciencias_logo.png, id=242, 349.7868pt x 297.2706pt>
+<imagenes/ciencias_logo.png, id=250, 349.7868pt x 297.2706pt>
 File: imagenes/ciencias_logo.png Graphic file (type png)
 <use imagenes/ciencias_logo.png>
 Package pdftex.def Info: imagenes/ciencias_logo.png  used on input line 35.
@@ -1230,15 +1236,15 @@ LaTeX Info: Redefining \% on input line 2.
 ]
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 148.
+(Font)              using `T1/lmr/bx/n' instead on input line 150.
 
 
 Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
-(spanish)                faked small caps on input line 148.
+(spanish)                faked small caps on input line 150.
 
-LaTeX Info: Redefining \sptext on input line 148.
-LaTeX Info: Redefining \. on input line 148.
-LaTeX Info: Redefining \% on input line 148.
+LaTeX Info: Redefining \sptext on input line 150.
+LaTeX Info: Redefining \. on input line 150.
+LaTeX Info: Redefining \% on input line 150.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 14.1595pt, for example:
@@ -2750,12 +2756,12 @@ LG@line.13}) has been already used, duplicate ignored
                    \relax 
 l.158 \EndProcedure
                    
-<imagenes/Crossover1point.png, id=918, 390.258pt x 153.57375pt>
+<imagenes/Crossover1point.png, id=954, 390.258pt x 153.57375pt>
 File: imagenes/Crossover1point.png Graphic file (type png)
 <use imagenes/Crossover1point.png>
 Package pdftex.def Info: imagenes/Crossover1point.png  used on input line 191.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover1pointNumber.png, id=919, 390.258pt x 153.57375pt>
+<imagenes/Crossover1pointNumber.png, id=955, 390.258pt x 153.57375pt>
 File: imagenes/Crossover1pointNumber.png Graphic file (type png)
 <use imagenes/Crossover1pointNumber.png>
 Package pdftex.def Info: imagenes/Crossover1pointNumber.png  used on input line
@@ -2776,18 +2782,18 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [48]
-<imagenes/Crossover2point.png, id=924, 390.258pt x 153.57375pt>
+<imagenes/Crossover2point.png, id=960, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2point.png Graphic file (type png)
 <use imagenes/Crossover2point.png>
 Package pdftex.def Info: imagenes/Crossover2point.png  used on input line 201.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover2pointNumber.png, id=925, 390.258pt x 153.57375pt>
+<imagenes/Crossover2pointNumber.png, id=961, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2pointNumber.png Graphic file (type png)
 <use imagenes/Crossover2pointNumber.png>
 Package pdftex.def Info: imagenes/Crossover2pointNumber.png  used on input line
  202.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/CrossoverUniformNumber.png, id=926, 390.258pt x 153.57375pt>
+<imagenes/CrossoverUniformNumber.png, id=962, 390.258pt x 153.57375pt>
 File: imagenes/CrossoverUniformNumber.png Graphic file (type png)
 <use imagenes/CrossoverUniformNumber.png>
 Package pdftex.def Info: imagenes/CrossoverUniformNumber.png  used on input lin
@@ -3183,7 +3189,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [52]
-<imagenes/CrossoverHUX.png, id=960, 539.01375pt x 153.57375pt>
+<imagenes/CrossoverHUX.png, id=996, 539.01375pt x 153.57375pt>
 File: imagenes/CrossoverHUX.png Graphic file (type png)
 <use imagenes/CrossoverHUX.png>
 Package pdftex.def Info: imagenes/CrossoverHUX.png  used on input line 378.
@@ -3597,9 +3603,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
                    \relax 
 l.100 \EndProcedure
                    
+
+LaTeX Warning: Citation 'herrera-poyatosGeneticMemeticAlgorithm2017' on page 56
+ undefined on input line 114.
+
 LaTeX Info: Redefining \. on input line 115.
 LaTeX Info: Redefining \% on input line 115.
-
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4043,14 +4052,43 @@ Overfull \hbox (0.45361pt too wide) in paragraph at lines 1--1
 [63]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 52.
+               Default added (so using `tbp') on input line 57.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 118.
+               Default added (so using `tbp') on input line 121.
 
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
+<imagenes/Experimental/AGEUvsCHC.png, id=1070, 289.08pt x 197.538pt>
+File: imagenes/Experimental/AGEUvsCHC.png Graphic file (type png)
+<use imagenes/Experimental/AGEUvsCHC.png>
+Package pdftex.def Info: imagenes/Experimental/AGEUvsCHC.png  used on input lin
+e 183.
+(pdftex.def)             Requested size: 231.2643pt x 158.0306pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 191.
+
+<imagenes/Experimental/DiferenciasAGEU.png, id=1073, 289.68225pt x 174.05025pt>
+
+File: imagenes/Experimental/DiferenciasAGEU.png Graphic file (type png)
+<use imagenes/Experimental/DiferenciasAGEU.png>
+Package pdftex.def Info: imagenes/Experimental/DiferenciasAGEU.png  used on inp
+ut line 230.
+(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imagenes/Experimental/DiferenciasCHC.png, id=1078, 289.68225pt x 174.05025pt>
+File: imagenes/Experimental/DiferenciasCHC.png Graphic file (type png)
+<use imagenes/Experimental/DiferenciasCHC.png>
+Package pdftex.def Info: imagenes/Experimental/DiferenciasCHC.png  used on inpu
+t line 276.
+(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 283.
+LaTeX Info: Redefining \% on input line 283.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4060,8 +4098,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [64]
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
+LaTeX Info: Redefining \. on input line 283.
+LaTeX Info: Redefining \% on input line 283.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4072,82 +4110,63 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [65]
-<imagenes/Experimental/Historico.png, id=1046, 288.47775pt x 197.538pt>
+LaTeX Info: Redefining \. on input line 283.
+LaTeX Info: Redefining \% on input line 283.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[66]
+LaTeX Info: Redefining \. on input line 283.
+LaTeX Info: Redefining \% on input line 283.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[67 <./imagenes/Experimental/AGEUvsCHC.png> <./imagenes/Experimental/Diferencia
+sAGEU.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 294.
+LaTeX Info: Redefining \% on input line 294.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[68 <./imagenes/Experimental/DiferenciasCHC.png>]
+<imagenes/Experimental/Historico.png, id=1108, 288.47775pt x 197.538pt>
 File: imagenes/Experimental/Historico.png Graphic file (type png)
 <use imagenes/Experimental/Historico.png>
 Package pdftex.def Info: imagenes/Experimental/Historico.png  used on input lin
-e 171.
-(pdftex.def)             Requested size: 230.7825pt x 158.0306pt.
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[66 <./imagenes/Experimental/Historico.png>]
-<imagenes/Experimental/AGEUvsGACEP.png, id=1053, 287.8755pt x 197.538pt>
+e 303.
+(pdftex.def)             Requested size: 288.47704pt x 197.5375pt.
+<imagenes/Experimental/AGEUvsGACEP.png, id=1111, 287.8755pt x 197.538pt>
 File: imagenes/Experimental/AGEUvsGACEP.png Graphic file (type png)
 <use imagenes/Experimental/AGEUvsGACEP.png>
 Package pdftex.def Info: imagenes/Experimental/AGEUvsGACEP.png  used on input l
-ine 184.
-(pdftex.def)             Requested size: 230.3007pt x 158.0306pt.
-LaTeX Info: Redefining \. on input line 243.
-LaTeX Info: Redefining \% on input line 243.
+ine 316.
+(pdftex.def)             Requested size: 287.87479pt x 197.5375pt.
 
 
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[67 <./imagenes/Experimental/AGEUvsGACEP.png>]
-
-Package caption Warning: \label without proper reference on input line 252.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `table:Parametros' on page 68 undefined on input line 
-249.
-
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-278.
-("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmtt.fd"
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 292.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 318.
-
-
-LaTeX Warning: Float too large for page by 743.235pt on input line 422.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 427.
-
-
-LaTeX Warning: Float too large for page by 756.83499pt on input line 532.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 538.
-
-
-LaTeX Warning: Float too large for page by 718.83557pt on input line 643.
-
-LaTeX Info: Redefining \. on input line 645.
-LaTeX Info: Redefining \% on input line 645.
+LaTeX Info: Redefining \. on input line 326.
+LaTeX Info: Redefining \% on input line 326.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4156,35 +4175,25 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[68]
+[69 <./imagenes/Experimental/Historico.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 650.
+               Default added (so using `tbp') on input line 335.
 
 
-Overfull \hbox (210.74884pt too wide) in paragraph at lines 651--669
-[][] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
+<imagenes/Experimental/DiferenciasGACEP.png, id=1121, 289.08pt x 174.05025pt>
+File: imagenes/Experimental/DiferenciasGACEP.png Graphic file (type png)
+<use imagenes/Experimental/DiferenciasGACEP.png>
+Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEP.png  used on in
+put line 438.
+(pdftex.def)             Requested size: 289.07928pt x 174.0498pt.
 
-Overfull \hbox (281.70682pt too wide) in paragraph at lines 677--689
-[][] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 692.
-LaTeX Info: Redefining \% on input line 692.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[69]
-LaTeX Info: Redefining \. on input line 692.
-LaTeX Info: Redefining \% on input line 692.
-
+LaTeX Info: Redefining \. on input line 457.
+LaTeX Info: Redefining \% on input line 457.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4193,9 +4202,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[70]
-LaTeX Info: Redefining \. on input line 692.
-LaTeX Info: Redefining \% on input line 692.
+[70 <./imagenes/Experimental/AGEUvsGACEP.png>]
+LaTeX Info: Redefining \. on input line 457.
+LaTeX Info: Redefining \% on input line 457.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4206,8 +4215,23 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [71]
-LaTeX Info: Redefining \. on input line 692.
-LaTeX Info: Redefining \% on input line 692.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 464.
+
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[72 <./imagenes/Experimental/DiferenciasGACEP.png>]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4217,13 +4241,209 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[72]
+[73]
+<imagenes/Experimental/GRASPvswoGRASP.png, id=1145, 289.08pt x 197.538pt>
+File: imagenes/Experimental/GRASPvswoGRASP.png Graphic file (type png)
+<use imagenes/Experimental/GRASPvswoGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/GRASPvswoGRASP.png  used on inpu
+t line 530.
+(pdftex.def)             Requested size: 289.07928pt x 197.5375pt.
+<imagenes/Experimental/DiferenciasGACEP_GRASP.png, id=1148, 289.68225pt x 174.0
+5025pt>
+File: imagenes/Experimental/DiferenciasGACEP_GRASP.png Graphic file (type png)
+<use imagenes/Experimental/DiferenciasGACEP_GRASP.png>
+Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEP_GRASP.png  used
+ on input line 581.
+(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 590.
+LaTeX Info: Redefining \% on input line 590.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[74 <./imagenes/Experimental/GRASPvswoGRASP.png>]
+<imagenes/Experimental/GACEPcGRASP.png, id=1156, 287.8755pt x 197.538pt>
+File: imagenes/Experimental/GACEPcGRASP.png Graphic file (type png)
+<use imagenes/Experimental/GACEPcGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPcGRASP.png  used on input l
+ine 608.
+(pdftex.def)             Requested size: 287.87479pt x 197.5375pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imagenes/Experimental/GACEPcwoGRASP.png, id=1158, 288.47775pt x 196.93575pt>
+File: imagenes/Experimental/GACEPcwoGRASP.png Graphic file (type png)
+<use imagenes/Experimental/GACEPcwoGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPcwoGRASP.png  used on input
+ line 619.
+(pdftex.def)             Requested size: 288.47704pt x 196.93524pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 622.
+LaTeX Info: Redefining \% on input line 622.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[75 <./imagenes/Experimental/DiferenciasGACEP_GRASP.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 666.
+LaTeX Info: Redefining \% on input line 666.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[76 <./imagenes/Experimental/GACEPcGRASP.png> <./imagenes/Experimental/GACEPcwo
+GRASP.png>]
+LaTeX Info: Redefining \. on input line 666.
+LaTeX Info: Redefining \% on input line 666.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[77]
+
+Package caption Warning: \label without proper reference on input line 673.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:Parametros' on page 78 undefined on input line 
+672.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+701.
+("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmtt.fd"
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 726.
+               Default added (so using `tbp') on input line 715.
 
 
-Overfull \hbox (135.09525pt too wide) in paragraph at lines 727--734
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 741.
+
+
+LaTeX Warning: Float too large for page by 743.235pt on input line 845.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 850.
+
+
+LaTeX Warning: Float too large for page by 756.83499pt on input line 955.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 961.
+
+
+LaTeX Warning: Float too large for page by 718.83557pt on input line 1066.
+
+LaTeX Info: Redefining \. on input line 1068.
+LaTeX Info: Redefining \% on input line 1068.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[78]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1073.
+
+
+Overfull \hbox (210.74884pt too wide) in paragraph at lines 1074--1092
+[][] 
+ []
+
+
+Overfull \hbox (281.70682pt too wide) in paragraph at lines 1100--1112
+[][] 
+ []
+
+LaTeX Info: Redefining \. on input line 1115.
+LaTeX Info: Redefining \% on input line 1115.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[79]
+LaTeX Info: Redefining \. on input line 1115.
+LaTeX Info: Redefining \% on input line 1115.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[80]
+LaTeX Info: Redefining \. on input line 1115.
+LaTeX Info: Redefining \% on input line 1115.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[81]
+LaTeX Info: Redefining \. on input line 1115.
+LaTeX Info: Redefining \% on input line 1115.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[82]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1149.
+
+
+Overfull \hbox (135.09525pt too wide) in paragraph at lines 1150--1157
 [][] 
  []
 
@@ -4239,11 +4459,11 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[73] [74
+[83] [84
 
 ]
 Cap\'{\i }tulo 9.
-) [75] [76
+) [85] [86
 
 ]
 Overfull \hbox (5.76938pt too wide) in paragraph at lines 267--267
@@ -4251,7 +4471,7 @@ Overfull \hbox (5.76938pt too wide) in paragraph at lines 267--267
 -tio-nary Compu-tation \T1/lmr/m/n/10.95 3.2 (jul. de 1999), págs. 124[]141.
  []
 
-[77]
+[87]
 LaTeX Info: Redefining \. on input line 259.
 LaTeX Info: Redefining \% on input line 259.
 
@@ -4263,7 +4483,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
-[78]
+[88]
 Overfull \hbox (1.75105pt too wide) in paragraph at lines 267--267
 []\T1/lmr/m/n/10.95 C. Witz-gall. ``Mathe-ma-ti-cal Methods of Si-te Se-lec-tio
 n for Elec-tro-nic Mes-sa-ge Sys-tems (EMS)''.
@@ -4286,15 +4506,15 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
-[79] [80
+[89] [90
 
-] [81] (proyecto.aux
+] [91] (proyecto.aux
 LaTeX Info: Redefining \sptext on input line 29.
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
 )
 Package rerunfilecheck Info: File `proyecto.out' has not changed.
-(rerunfilecheck)             Checksum: 77378B2D0441065B31B9D8E17AB4451D;4327.
+(rerunfilecheck)             Checksum: AAF3A56C46FC9419097BC51F65B464DD;4469.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4305,18 +4525,23 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                proyecto
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'proyecto.run.xml'.
 \openout1 = `proyecto.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24906 strings out of 479696
- 431417 string characters out of 2876991
- 1321600 words of memory out of 3000000
- 41176 multiletter control sequences out of 15000+200000
+ 25008 strings out of 479696
+ 434184 string characters out of 2876991
+ 1371461 words of memory out of 3000000
+ 41244 multiletter control sequences out of 15000+200000
  492229 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,28n,111p,2204b,2463s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 106i,28n,111p,2204b,2440s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKT
 eX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-
 rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Fi
@@ -4336,9 +4561,9 @@ c/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Pr
 ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (103 pages, 953934 bytes).
+Output written on proyecto.pdf (113 pages, 1065674 bytes).
 PDF statistics:
- 1321 PDF objects out of 1440 (max. 8388607)
- 376 named destinations out of 1000 (max. 500000)
- 528 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1439 PDF objects out of 1440 (max. 8388607)
+ 402 named destinations out of 1000 (max. 500000)
+ 584 words of extra memory for PDF output out of 10000 (max. 10000000)
 
