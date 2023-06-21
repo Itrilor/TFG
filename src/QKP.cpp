@@ -521,11 +521,11 @@ vector<double> QKP::GACEP(int numcro, double probm, const int EvaluacionMAX, int
     for(int i = 0; i < numEsperadoCruces*2; ++i){
       // ag.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
       //               matrizHijos[i], matrizHijos[i+1]);
-      agcep.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
-                    matrizHijos[i], matrizHijos[i+1], keepSaving);
-      // agcep.crucePorcentual(matrizSoluciones[indices[i]], valorPadre[indices[i]],
-      //               matrizSoluciones[indices[i+1]], valorPadre[indices[i+1]],
-      //               matrizHijos[i], matrizHijos[i+1], keepSaving,80);
+      // agcep.cruceUniforme(matrizSoluciones[indices[i]],matrizSoluciones[indices[i+1]],
+      //               matrizHijos[i], matrizHijos[i+1], keepSaving);
+      agcep.crucePorcentual(matrizSoluciones[indices[i]], valorPadre[indices[i]],
+                    matrizSoluciones[indices[i+1]], valorPadre[indices[i+1]],
+                    matrizHijos[i], matrizHijos[i+1], keepSaving,80);
 
       /*if(i==mutacion[0]){
         cambioMutante(matrizHijos[i]);
@@ -1044,40 +1044,40 @@ vector<double> QKP::GACEP3103(int numcro, double probm, const int EvaluacionMAX,
     Realizamos 2 torneos binarios aleatorios entre 4 elementos de la población
     para obtener a los 2 padres que vamos a cruzar
     */
-    indices = ag.torneoBinario(2, valorPadre, numcro);
-    while(indices[0] == indices[1]){
-      indices = ag.torneoBinario(2, valorPadre, numcro);
-    }
+    // indices = ag.torneoBinario(2, valorPadre, numcro);
+    // while(indices[0] == indices[1]){
+    //   indices = ag.torneoBinario(2, valorPadre, numcro);
+    // }
 
     //2PadresDistanciados
     //La elección de los padres se hará eligiendo un padre aleatoriamente
     //(mantendremos el torneoBinario para este) y se eligirán aleatoriamente
     //2-4 soluciones distintas.
-    // indices = ag.torneoBinario(1, valorPadre, numcro);
-    // Random::shuffle(indicesPoblacion);
-    // auxPelea = 0;
-    // for(int i = 0; i < peleaPadres; ++i){
-    //   if(indices[0] != indicesPoblacion[auxPelea]){
-    //     indices.push_back(auxPelea);
-    //   }
-    //   else{
-    //     --i;
-    //   }
-    //   auxPelea++;
-    // }
-    // //Cruzaremos la primera solución con aquella del segundo grupo con la que
-    // //menos tenga en común
-    // int dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[1]]);
-    // auxPelea = 1;
-    // for(int i = 2; i < indices.size(); ++i){
-    //   if(dmin < chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]])){
-    //     auxPelea = i;
-    //     dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]]);
-    //   }
-    // }
-    // indices[1] = indices[auxPelea];
-    // //Eliminamos el resto de índices, ya que no interesan
-    // indices.erase(indices.begin()+2,indices.end());
+    indices = ag.torneoBinario(1, valorPadre, numcro);
+    Random::shuffle(indicesPoblacion);
+    auxPelea = 0;
+    for(int i = 0; i < peleaPadres; ++i){
+      if(indices[0] != indicesPoblacion[auxPelea]){
+        indices.push_back(auxPelea);
+      }
+      else{
+        --i;
+      }
+      auxPelea++;
+    }
+    //Cruzaremos la primera solución con aquella del segundo grupo con la que
+    //menos tenga en común
+    int dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[1]]);
+    auxPelea = 1;
+    for(int i = 2; i < indices.size(); ++i){
+      if(dmin < chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]])){
+        auxPelea = i;
+        dmin = chc.distanciaHamming(matrizSoluciones[indices[0]],matrizSoluciones[indices[i]]);
+      }
+    }
+    indices[1] = indices[auxPelea];
+    //Eliminamos el resto de índices, ya que no interesan
+    indices.erase(indices.begin()+2,indices.end());
 
 
     //Generamos aleatoriamente dónde se producen las mutaciones
@@ -1097,7 +1097,7 @@ vector<double> QKP::GACEP3103(int numcro, double probm, const int EvaluacionMAX,
                     matrizHijos[i], matrizHijos[i+1], keepSaving);
       // agcep.crucePorcentual(matrizSoluciones[indices[i]], valorPadre[indices[i]],
       //               matrizSoluciones[indices[i+1]], valorPadre[indices[i+1]],
-      //               matrizHijos[i], matrizHijos[i+1], keepSaving,80);
+      //               matrizHijos[i], matrizHijos[i+1], keepSaving,60);
 
       valorHijo[i] = ag.calcularValor(matrizHijos[i]);
       if(keepSaving==true){

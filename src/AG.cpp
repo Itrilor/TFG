@@ -84,7 +84,7 @@ double AG::calcularValor(int sol[]){
 
 double AG::calcularRelValor(int index, int sol[]){
   double relValor=0;
-  if(sol[index==1]){
+  if(sol[index]==1){
     for(int i = 0; i < _qkp.getSize(); ++i){
       if(sol[i]==1){
         relValor+=_qkp.getValor(i,index);
@@ -222,10 +222,10 @@ void AG::crucePorcentual(int p1[], double v1, int p2[], double v2, int h1[], int
   }
 
   // Hacemos las soluciones factibles
-  // operadorReparacion(h1);
-  // operadorReparacion(h2);
-  operadorReparacionGRASP(h1);
-  operadorReparacionGRASP(h2);
+  operadorReparacion(h1);
+  operadorReparacion(h2);
+  // operadorReparacionGRASP(h1);
+  // operadorReparacionGRASP(h2);
 }
 
 void AG::operadorReparacion(int hijo[]){
