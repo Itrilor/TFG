@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  20 JUN 2023 06:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  22 JUN 2023 21:39
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -711,6 +711,8 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 ("C:\Program Files\MiKTeX\tex/latex/biblatex\blx-dm.def"
 File: blx-dm.def 2020/08/23 v3.15a biblatex localization (PK/MW)
 )
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count362
@@ -842,6 +844,16 @@ File: biblatex.def 2020/08/23 v3.15a biblatex compatibility (PK/MW)
 \biburllcskip=\muskip21
 \c@smartand=\count439
 )
+Package biblatex Info: Trying to load bibliography style 'ieee'...
+Package biblatex Info: ... file 'ieee.bbx' found.
+
+("C:\Program Files\MiKTeX\tex/latex/biblatex-ieee\ieee.bbx"
+File: ieee.bbx 2021/12/06 v1.3f biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+("C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\numeric-comp.bbx"
+File: numeric-comp.bbx 2020/08/23 v3.15a biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
@@ -854,12 +866,21 @@ Package biblatex Info: ... file 'standard.bbx' found.
 File: standard.bbx 2020/08/23 v3.15a biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count440
 \c@bbx:relatedtotal=\count441
-))
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
+))))
+Package biblatex Info: Trying to load citation style 'ieee'...
+Package biblatex Info: ... file 'ieee.cbx' found.
 
-("C:\Program Files\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx"
-File: numeric.cbx 2020/08/23 v3.15a biblatex citation style (PK/MW)
+("C:\Program Files\MiKTeX\tex/latex/biblatex-ieee\ieee.cbx"
+File: ieee.cbx 2021/12/06 v1.3f biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+("C:\Program Files\MiKTeX\tex/latex/biblatex/cbx\numeric-comp.cbx"
+File: numeric-comp.cbx 2020/08/23 v3.15a biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count442
+\c@cbx@tempcntb=\count443
+\c@cbx@tempcntc=\count444
+\c@cbx@tempcntd=\count445
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -871,6 +892,10 @@ Package biblatex Info: Redefining '\textcites'.
 Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\cites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
@@ -905,7 +930,7 @@ Skipping: [2021/05/01] Usage of raw or classic option list on input line 252.
 Applying: [0000/00/00] Usage of raw or classic option list on input line 368.
 ))
 \ta@bcor=\skip103
-\ta@div=\count442
+\ta@div=\count446
 Package typearea Info: You've used standard option `a4paper'.
 (typearea)             This is correct!
 (typearea)             Internally I'm using `paper=a4'.
@@ -949,21 +974,21 @@ Package: eso-pic 2023/03/23 v3.0b eso-pic (RN)
 ("C:\Program Files\MiKTeX\tex/latex/pdfpages\pppdftex.def"
 File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count443
+\pdfpages@includegraphics@status=\count447
 \AM@pagebox=\box67
 \AM@global@opts=\toks39
-\AM@pagecnt=\count444
+\AM@pagecnt=\count448
 \AM@toc@title=\toks40
 \AM@lof@heading=\toks41
-\c@AM@survey=\count445
+\c@AM@survey=\count449
 \AM@templatesizebox=\box68
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count446
-\@quotereset=\count447
+\@quotelevel=\count450
+\@quotereset=\count451
 (proyecto.aux
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
@@ -975,52 +1000,76 @@ LaTeX Warning: Label `eq:4.4' multiply defined.
 LaTeX Warning: Label `eq:4.4@cref' multiply defined.
 
 
-LaTeX Warning: Label `fig:DiferenciasGACEP' multiply defined.
+LaTeX Warning: Label `fig:AGEUvsGACEPv1_lineas' multiply defined.
 
 
-LaTeX Warning: Label `fig:DiferenciasGACEP@cref' multiply defined.
+LaTeX Warning: Label `fig:AGEUvsGACEPv1_lineas@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:AGEUvsGACEPv1_lineas' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:AGEUvsGACEPv1_lineas@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:AGEUvsGACEPv1_barras' multiply defined.
+
+
+LaTeX Warning: Label `fig:AGEUvsGACEPv1_barras@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:AGEUvsGACEPv1_barras' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:AGEUvsGACEPv1_barras@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:AGEUvsGACEPv1' multiply defined.
+
+
+LaTeX Warning: Label `fig:AGEUvsGACEPv1@cref' multiply defined.
 
 )
 \openout1 = `proyecto.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 227.
-LaTeX Font Info:    ... okay on input line 227.
-\c@lstlisting=\count448
-LaTeX Info: Redefining \. on input line 227.
-LaTeX Info: Redefining \% on input line 227.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+\c@lstlisting=\count452
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
  ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count449
+\scratchcounter=\count453
 \scratchdimen=\dimen257
 \scratchbox=\box69
-\nofMPsegments=\count450
-\nofMParguments=\count451
+\nofMPsegments=\count454
+\nofMParguments=\count455
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count452
+\MPscratchCnt=\count456
 \MPscratchDim=\dimen258
-\MPnumerator=\count453
-\makeMPintoPDFobject=\count454
+\MPnumerator=\count457
+\makeMPintoPDFobject=\count458
 \everyMPtoPDFconversion=\toks43
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring ON on input line 227.
+Package hyperref Info: Link coloring ON on input line 231.
 
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1031,11 +1080,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count455
+\c@section@level=\count459
 )
-LaTeX Info: Redefining \ref on input line 227.
-LaTeX Info: Redefining \pageref on input line 227.
-LaTeX Info: Redefining \nameref on input line 227.
+LaTeX Info: Redefining \ref on input line 231.
+LaTeX Info: Redefining \pageref on input line 231.
+LaTeX Info: Redefining \nameref on input line 231.
 
 (proyecto.out) (proyecto.out)
 \@outlinefile=\write4
@@ -1059,8 +1108,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'proyecto.bbl' found.
  (proyecto.bbl)
-Package biblatex Info: Reference section=0 on input line 227.
-Package biblatex Info: Reference segment=0 on input line 227.
+Package biblatex Info: Reference section=0 on input line 231.
+Package biblatex Info: Reference segment=0 on input line 231.
 
 ("C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape.sty"
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1076,7 +1125,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 (portada/portada.tex
 \centeroffset=\skip108
-<imagenes/logo_ugr_nuevo.png, id=247, 647.2983pt x 180.1932pt>
+<imagenes/logo_ugr_nuevo.png, id=299, 647.2983pt x 180.1932pt>
 File: imagenes/logo_ugr_nuevo.png Graphic file (type png)
 <use imagenes/logo_ugr_nuevo.png>
 Package pdftex.def Info: imagenes/logo_ugr_nuevo.png  used on input line 12.
@@ -1126,12 +1175,12 @@ Overfull \hbox (0.32011pt too wide) in paragraph at lines 9--24
 | $[]$ 
  []
 
-<imagenes/etsiit_logo.png, id=249, 110.814pt x 40.4712pt>
+<imagenes/etsiit_logo.png, id=301, 110.814pt x 40.4712pt>
 File: imagenes/etsiit_logo.png Graphic file (type png)
 <use imagenes/etsiit_logo.png>
 Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 35.
 (pdftex.def)             Requested size: 110.8137pt x 40.4711pt.
-<imagenes/ciencias_logo.png, id=250, 349.7868pt x 297.2706pt>
+<imagenes/ciencias_logo.png, id=302, 349.7868pt x 297.2706pt>
 File: imagenes/ciencias_logo.png Graphic file (type png)
 <use imagenes/ciencias_logo.png>
 Package pdftex.def Info: imagenes/ciencias_logo.png  used on input line 35.
@@ -1236,15 +1285,15 @@ LaTeX Info: Redefining \% on input line 2.
 ]
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 150.
+(Font)              using `T1/lmr/bx/n' instead on input line 132.
 
 
 Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
-(spanish)                faked small caps on input line 150.
+(spanish)                faked small caps on input line 132.
 
-LaTeX Info: Redefining \sptext on input line 150.
-LaTeX Info: Redefining \. on input line 150.
-LaTeX Info: Redefining \% on input line 150.
+LaTeX Info: Redefining \sptext on input line 132.
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 14.1595pt, for example:
@@ -1257,12 +1306,12 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 \tf@toc=\write5
 \openout5 = `proyecto.toc'.
 
-LaTeX Info: Redefining \. on input line 232.
-LaTeX Info: Redefining \% on input line 232.
+LaTeX Info: Redefining \. on input line 236.
+LaTeX Info: Redefining \% on input line 236.
 
 
 Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
-(spanish)                faked small caps on input line 232.
+(spanish)                faked small caps on input line 236.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1278,6 +1327,25 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 LaTeX Info: Redefining \sptext on input line 2.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+8.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (2.79823pt too wide) detected at line 50
+\T1/lmr/m/n/10.95 10.10. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 52
+\T1/lmr/m/n/10.95 10.11. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 54
+\T1/lmr/m/n/10.95 10.12. 
+ []
+
 )
 \tf@lof=\write6
 \openout6 = `proyecto.lof'.
@@ -1296,7 +1364,10 @@ been already used, duplicate ignored
 l.35 
       [1
 
-]) (capitulos/02_Estimacion_y_Presupuesto.tex
+]
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
+
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1309,20 +1380,43 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Estimación y Presupuesto} [2]
-Cap\'{\i }tulo 2.
+l.76 
+      [2]) (capitulos/02_Estimacion_y_Presupuesto.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
-Underfull \vbox (badness 1057) has occurred while \output is active []
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 
-      [3
+l.1 \chapter
+            {Estimación y Presupuesto} [3]pdfTeX warning (ext4): destination w
+ith the same identifier (name{page.4}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Estimación y Presupuesto} [4
 
 ]
+Cap\'{\i }tulo 2.
+
+Underfull \vbox (badness 1057) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 
+      [5]
 LaTeX Info: Redefining \. on input line 118.
 LaTeX Info: Redefining \% on input line 118.
 
@@ -1334,12 +1428,12 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.118 
-       [4]
+       [6]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 25.
  ("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd"
@@ -1357,64 +1451,29 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Repaso Bibliográfico} [5]pdfTeX warning (ext4): destination with 
-the same identifier (name{page.6}) has been already used, duplicate ignored
+            {Repaso Bibliográfico} [7]pdfTeX warning (ext4): destination with 
+the same identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Repaso Bibliográfico} [6
+            {Repaso Bibliográfico} [8
 
 ]
 Cap\'{\i }tulo 3.
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.30 	\item U
              na función \textit{fitness} que asigna un valor numérico a ca...
-[7]
+[9]
 LaTeX Info: Redefining \. on input line 68.
 LaTeX Info: Redefining \% on input line 68.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.68 
-      [8]
-LaTeX Info: Redefining \. on input line 105.
-LaTeX Info: Redefining \% on input line 105.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.105 	\item E
-              mparejamiento Variado inverso (\textit{Negative Assortative Ma...
-[9]) (capitulos/04_Contexto_Matematico.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1428,19 +1487,28 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {Contexto matemático} [10]
-Cap\'{\i }tulo 4.
+l.68 
+      [10]
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 \begin{equation}
-                      [11
-
-]
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
+l.105 	\item E
+              mparejamiento Variado inverso (\textit{Negative Assortative Ma...
+[11])
+LaTeX Info: Redefining \. on input line 248.
+LaTeX Info: Redefining \% on input line 248.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1454,9 +1522,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.101 	\item D
-              ada una función $h:\mathbb{R}^n\xrightarrow{}{}\mathbb{R}$, d...
-[12]
+l.248 \part
+           {Parte matemática} [12] [13
+
+] [14]
+(capitulos/04_Contexto_Matematico.tex
+Cap\'{\i }tulo 4.
+[15
+
+]
+LaTeX Info: Redefining \. on input line 101.
+LaTeX Info: Redefining \% on input line 101.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[16]
 Overfull \hbox (9.10548pt too wide) in paragraph at lines 101--102
 []\T1/lmr/m/n/10.95 Dada una fun-ci�n $\OML/lmm/m/it/10.95 h \OT1/lmr/m/n/10.95
  : \U/msb/m/n/10.95 R[] [] []R$\T1/lmr/m/n/10.95 , de-no-ta-mos el vec-tor \T1/
@@ -1475,7 +1561,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[13]
+[17]
 LaTeX Info: Redefining \. on input line 222.
 LaTeX Info: Redefining \% on input line 222.
 
@@ -1487,7 +1573,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[14]
+[18]
 LaTeX Info: Redefining \. on input line 257.
 LaTeX Info: Redefining \% on input line 257.
 
@@ -1499,7 +1585,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[15]
+[19]
 LaTeX Info: Redefining \. on input line 311.
 LaTeX Info: Redefining \% on input line 311.
 
@@ -1511,178 +1597,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[16]
-LaTeX Info: Redefining \. on input line 353.
-LaTeX Info: Redefining \% on input line 353.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[17]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 391.
-LaTeX Info: Redefining \. on input line 428.
-LaTeX Info: Redefining \% on input line 428.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[18]
-LaTeX Info: Redefining \. on input line 467.
-LaTeX Info: Redefining \% on input line 467.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[19pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.467 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{ALG@line.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.467 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{ALG@line.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.467 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{ALG@line.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.467 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{ALG@line.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.467 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{ALG@line.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.467 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{ALG@line.7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.467 \begin{equation}
-                      ]pdfTeX warning (ext4): destination with the same identif
-ier (name{ALG@line.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.483 \Procedure
-                 \textsc{Direcciones\_Conjugadas} (direcciones Q-conjugadas ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.484 \State
-             Establecer $x^0\in\mathbb{R}^n$ y $k=0$pdfTeX warning (ext4): dest
-ination with the same identifier (name{ALG@line.3}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.485 \While
-            {$\nabla f(x^k)!=0$}pdfTeX warning (ext4): destination with the sam
-e identifier (name{ALG@line.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.486 	\State
-              Establecer $\alpha^k = \dfrac{\nabla f(x^k)'d^k}{(d^k)'Qd^k}$pdfT
-eX warning (ext4): destination with the same identifier (name{ALG@line.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.487 	\State
-              Establecer $x^{k+1} = x^k - \alpha^k\nabla f(x^k)$ y $k=k+1$.pdfT
-eX warning (ext4): destination with the same identifier (name{ALG@line.6}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.488 \EndWhile
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{ALG@line.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.489 \EndProcedure
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{ALG@line.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.525 \Procedure
-                 \textsc{Gradiente\_Conjugado}pdfTeX warning (ext4): destinatio
-n with the same identifier (name{ALG@line.2}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.526 \State
-             Establecer $x^0\in\mathbb{R}^n$ y $k=0$pdfTeX warning (ext4): dest
-ination with the same identifier (name{ALG@line.3}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.527 \While
-            {$\nabla f(x^k)!=0$}pdfTeX warning (ext4): destination with the sam
-e identifier (name{ALG@line.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.528 	\State
-              Calcular $\beta^{k-1}$ usando \ref{eq:4.18} o \ref{eq:4.19} y ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.535 	\State
-              Encontrar $\alpha^k$ usando un algoritmo de búsqueda lineal q...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.536 	\State
-              Establecer $x^{k+1} = x^k + \alpha^kd^k$ y $k=k+1$.pdfTeX warning
- (ext4): destination with the same identifier (name{ALG@line.7}) has been alrea
-dy used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.537 \EndWhile
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{ALG@line.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.538 \EndProcedure
-                   
-LaTeX Info: Redefining \. on input line 546.
-LaTeX Info: Redefining \% on input line 546.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
 [20]
-LaTeX Info: Redefining \. on input line 586.
-LaTeX Info: Redefining \% on input line 586.
+LaTeX Info: Redefining \. on input line 313.
+LaTeX Info: Redefining \% on input line 313.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1692,64 +1609,15 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[21]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
-1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.631 \Procedure
-                 \textsc{ABLNewton} ($c_1>0,c_2>0,p\geq 2, q\geq 3$)pdfTeX warn
-ing (ext4): destination with the same identifier (name{ALG@line.2}) has been al
-ready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.632 \State
-             Establecer $x^0\in\mathbb{R}^n$ y $k=0$pdfTeX warning (ext4): dest
-ination with the same identifier (name{ALG@line.3}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.633 \While
-            {$\nabla f(x^k)!=0$}pdfTeX warning (ext4): destination with the sam
-e identifier (name{ALG@line.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.634 	\If
-          {$\exists d_N^k$ solución de $\nabla^2 f(x^k)d^k_N = -\nabla f(x^...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.637 		\State
-               Establecer la dirección $d^k = d_N^k$pdfTeX warning (ext4): des
-tination with the same identifier (name{ALG@line.6}) has been already used, dup
-licate ignored
-<to be read again> 
-                   \relax 
-l.638 	\Else
-            pdfTeX warning (ext4): destination with the same identifier (name{A
-LG@line.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.639 		\State
-               $d^k = -\nabla f(x^k)$pdfTeX warning (ext4): destination with th
-e same identifier (name{ALG@line.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.640 	\EndIf
-             pdfTeX warning (ext4): destination with the same identifier (name{
-ALG@line.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.641 	\State
-              Encontrar $\alpha^k$ usando \ref{alg:LocalSearch}pdfTeX warning (
-ext4): destination with the same identifier (name{ALG@line.10}) has been alread
-y used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.642 	\State
-              Establecer $x^{k+1} = x^k+\alpha^kd^k$ y, después, $k=k+1$
-LaTeX Info: Redefining \. on input line 647.
-LaTeX Info: Redefining \% on input line 647.
+[21] [22
+
+]
+Cap\'{\i }tulo 5.
+[23]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 392.
+LaTeX Info: Redefining \. on input line 418.
+LaTeX Info: Redefining \% on input line 418.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1759,164 +1627,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[22]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
-1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.660 \Procedure
-                 \textsc{NewtonNM} ($c_1>0,c_2>0,p\geq 2, q\geq 3$ y $M$ ent...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.661 \State
-             Establecer $x^0\in\mathbb{R}^n$ y $k=0$pdfTeX warning (ext4): dest
-ination with the same identifier (name{ALG@line.3}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.662 \While
-            {$\nabla f(x^k)!=0$}pdfTeX warning (ext4): destination with the sam
-e identifier (name{ALG@line.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.663 	\If
-          {$\exists d_N^k$ solución de $\nabla^2 f(x^k)d^k_N = -\nabla f(x^...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.666 		\State
-               Establecer la dirección $d^k = d_N^k$pdfTeX warning (ext4): des
-tination with the same identifier (name{ALG@line.6}) has been already used, dup
-licate ignored
-<to be read again> 
-                   \relax 
-l.667 	\Else
-            pdfTeX warning (ext4): destination with the same identifier (name{A
-LG@line.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.668 		\State
-               $d^k = -\nabla f(x^k)$pdfTeX warning (ext4): destination with th
-e same identifier (name{ALG@line.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.669 	\EndIf
-             pdfTeX warning (ext4): destination with the same identifier (name{
-ALG@line.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.670 	\State
-              Encontrar $\alpha^k$ usando \ref{alg:LocalSearch}, tal que \be...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
- has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.674 	\State
-              Establecer $x^{k+1} = x^k+\alpha^kd^k$ y, después, $k=k+1$
-LaTeX Info: Redefining \. on input line 703.
-LaTeX Info: Redefining \% on input line 703.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[23]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
-1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.724 \Procedure
-                 \textsc{NewtonRegionConfianza} ($0<\gamma_1\leq\gamma_2<1, ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.725 \State
-             Establecer $x^0\in\mathbb{R}^n$, $k=0$ y $a^0=0$.pdfTeX warning (e
-xt4): destination with the same identifier (name{ALG@line.3}) has been already 
-used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.726 \State
-             Encontrar $s^k = arg \min_\{||s||\leq a^k\}q^k(s)$pdfTeX warning (
-ext4): destination with the same identifier (name{ALG@line.4}) has been already
- used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.727 \If
-         {$f(x^k)==q^k(s^k)$}pdfTeX warning (ext4): destination with the same i
-dentifier (name{ALG@line.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.728 	\State
-              PararpdfTeX warning (ext4): destination with the same identifier 
-(name{ALG@line.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.729 \Else
-           pdfTeX warning (ext4): destination with the same identifier (name{AL
-G@line.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.730 	\State
-              Calcular la proporción \begin{equation*}pdfTeX warning (ext4): d
-estination with the same identifier (name{ALG@line.8}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.733 	\If
-          {$\rho^k\geq\gamma_1$}pdfTeX warning (ext4): destination with the sam
-e identifier (name{ALG@line.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.734 		\State
-               Actualizar $x^{k+1}=x^k + s^k$pdfTeX warning (ext4): destination
- with the same identifier (name{ALG@line.10}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.735 	\Else
-            pdfTeX warning (ext4): destination with the same identifier (name{A
-LG@line.11}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.736 		\State
-               Actualizar $x^{k+1} = x^k$pdfTeX warning (ext4): destination wit
-h the same identifier (name{ALG@line.12}) has been already used, duplicate igno
-red
-<to be read again> 
-                   \relax 
-l.737 	\EndIf
-             
-LaTeX Info: Redefining \. on input line 751.
-LaTeX Info: Redefining \% on input line 751.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[24pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
-1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.751 \end{algorithm}
-                     pdfTeX warning (ext4): destination with the same identifie
-r (name{ALG@line.12}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.751 \end{algorithm}
-                     ]
-LaTeX Info: Redefining \. on input line 776.
-LaTeX Info: Redefining \% on input line 776.
+[24]
+LaTeX Info: Redefining \. on input line 453.
+LaTeX Info: Redefining \% on input line 453.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1927,45 +1640,82 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [25pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
-3}) has been already used, duplicate ignored
+}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.776 
-      ]pdfTeX warning (ext4): destination with the same identifier (name{ALG@li
-ne.1}) has been already used, duplicate ignored
+l.453 \end{equation*}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{ALG@line.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.453 \end{equation*}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{ALG@line.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.453 \end{equation*}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{ALG@line.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.453 \end{equation*}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{ALG@line.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.453 \end{equation*}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{ALG@line.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.453 \end{equation*}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{ALG@line.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.453 \end{equation*}
+                     ]pdfTeX warning (ext4): destination with the same identifi
+er (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.791 \Procedure
-                 \textsc{NewtonRegionConfianza} ($k,H,g$ y $\eta>0$ escalar)pdf
-TeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has
- been already used, duplicate ignored
+l.484 \Procedure
+                 \textsc{Direcciones\_Conjugadas} (direcciones Q-conjugadas ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.792 \State
-             Establecer $i=0, p^0=0,r^0=-g,s^0=r^0$ y \begin{equation*}pdfTeX w
-arning (ext4): destination with the same identifier (name{ALG@line.3}) has been
- already used, duplicate ignored
+l.485 \State
+             Establecer $x^0\in\mathbb{R}^n$ y $k=0$pdfTeX warning (ext4): dest
+ination with the same identifier (name{ALG@line.3}) has been already used, dupl
+icate ignored
 <to be read again> 
                    \relax 
-l.795 \While
-            {}pdfTeX warning (ext4): destination with the same identifier (name
-{ALG@line.4}) has been already used, duplicate ignored
+l.486 \While
+            {$\nabla f(x^k)!=0$}pdfTeX warning (ext4): destination with the sam
+e identifier (name{ALG@line.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.797 \EndWhile
+l.487 	\State
+              Establecer $\alpha^k = \dfrac{\nabla f(x^k)'d^k}{(d^k)'Qd^k}$pdfT
+eX warning (ext4): destination with the same identifier (name{ALG@line.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.488 	\State
+              Establecer $x^{k+1} = x^k - \alpha^k\nabla f(x^k)$ y $k=k+1$.pdfT
+eX warning (ext4): destination with the same identifier (name{ALG@line.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.489 \EndWhile
                pdfTeX warning (ext4): destination with the same identifier (nam
-e{ALG@line.5}) has been already used, duplicate ignored
+e{ALG@line.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.798 \State
-             \begin{equation*}pdfTeX warning (ext4): destination with the same 
-identifier (name{ALG@line.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.806 \EndProcedure
+l.490 \EndProcedure
                    
-LaTeX Info: Redefining \. on input line 831.
-LaTeX Info: Redefining \% on input line 831.
+LaTeX Info: Redefining \. on input line 510.
+LaTeX Info: Redefining \% on input line 510.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1979,55 +1729,50 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.861 \Procedure
-                 \textsc{InversaBFGSQuasiNewton}pdfTeX warning (ext4): destinat
-ion with the same identifier (name{ALG@line.2}) has been already used, duplicat
-e ignored
+l.526 \Procedure
+                 \textsc{Gradiente\_Conjugado}pdfTeX warning (ext4): destinatio
+n with the same identifier (name{ALG@line.2}) has been already used, duplicate 
+ignored
 <to be read again> 
                    \relax 
-l.862 \State
-             Establecer $x_0\in\mathbb{R}^n, H^0=I$ y $k=0$pdfTeX warning (ext4
-): destination with the same identifier (name{ALG@line.3}) has been already use
-d, duplicate ignored
+l.527 \State
+             Establecer $x^0\in\mathbb{R}^n$ y $k=0$pdfTeX warning (ext4): dest
+ination with the same identifier (name{ALG@line.3}) has been already used, dupl
+icate ignored
 <to be read again> 
                    \relax 
-l.863 \While
+l.528 \While
             {$\nabla f(x^k)!=0$}pdfTeX warning (ext4): destination with the sam
 e identifier (name{ALG@line.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.864 	\State
-              Establecer la dirección $d^k = -H^k\nabla f(x^k)$pdfTeX warning 
-(ext4): destination with the same identifier (name{ALG@line.5}) has been alread
-y used, duplicate ignored
+l.529 	\State
+              Calcular $\beta^{k-1}$ usando \ref{eq:4.18} o \ref{eq:4.19} y ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.865 	\State
-              Encontrar $\alpha^k$ mediante una búsqueda lineal que satisfa...
+l.536 	\State
+              Encontrar $\alpha^k$ usando un algoritmo de búsqueda lineal q...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.866 	\State
-              Actualizar \begin{equation}pdfTeX warning (ext4): destination wit
-h the same identifier (name{ALG@line.7}) has been already used, duplicate ignor
-ed
+l.537 	\State
+              Establecer $x^{k+1} = x^k + \alpha^kd^k$ y $k=k+1$.pdfTeX warning
+ (ext4): destination with the same identifier (name{ALG@line.7}) has been alrea
+dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.873 	\State
-              Establecer $k = k+1$pdfTeX warning (ext4): destination with the s
-ame identifier (name{ALG@line.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.874 \EndWhile
+l.538 \EndWhile
                pdfTeX warning (ext4): destination with the same identifier (nam
-e{ALG@line.9}) has been already used, duplicate ignored
+e{ALG@line.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.875 \EndProcedure
+l.539 \EndProcedure
                    
-LaTeX Info: Redefining \. on input line 897.
-LaTeX Info: Redefining \% on input line 897.
+LaTeX Info: Redefining \. on input line 569.
+LaTeX Info: Redefining \% on input line 569.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2037,61 +1782,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[27]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
-1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.936 \Procedure
-                 \textsc{PSA} ($\mathcal{D^k}$ satisfaciendo la suposición ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.937 \State
-             Establecer $x_0\in\mathbb{R}^n, \Delta^0>0$ y $k=0$pdfTeX warning 
-(ext4): destination with the same identifier (name{ALG@line.3}) has been alread
-y used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.938 \State
-             Comprobar la convergenciapdfTeX warning (ext4): destination with t
-he same identifier (name{ALG@line.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.939 \If
-         {$\exists j\in\{1,\dots,r\} :$\begin{equation*}pdfTeX warning (ext4): 
-destination with the same identifier (name{ALG@line.5}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.943 	\State
-              Establecer $x^{k+1} = x^k$, $\Delta k+1 = \tau\Delta^k$, $k=k+...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.944 \Else
-           pdfTeX warning (ext4): destination with the same identifier (name{AL
-G@line.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.945 	\State
-              Establecer $x^{k+1} = x^k$, $\Delta k+1=\theta\Delta^k$, $k = ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.946 \EndIf
-            pdfTeX warning (ext4): destination with the same identifier (name{A
-LG@line.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.947 \EndProcedure
-                   
-Underfull \vbox (badness 2689) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 950.
-LaTeX Info: Redefining \% on input line 950.
+[27]
+LaTeX Info: Redefining \. on input line 618.
+LaTeX Info: Redefining \% on input line 618.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2105,55 +1798,116 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.954 \Procedure
-                 \textsc{DFLSA} ($\mathcal{D^k}$ satisfaciendo la suposició...
+l.632 \Procedure
+                 \textsc{ABLNewton} ($c_1>0,c_2>0,p\geq 2, q\geq 3$)pdfTeX warn
+ing (ext4): destination with the same identifier (name{ALG@line.2}) has been al
+ready used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.633 \State
+             Establecer $x^0\in\mathbb{R}^n$ y $k=0$pdfTeX warning (ext4): dest
+ination with the same identifier (name{ALG@line.3}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.634 \While
+            {$\nabla f(x^k)!=0$}pdfTeX warning (ext4): destination with the sam
+e identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.635 	\If
+          {$\exists d_N^k$ solución de $\nabla^2 f(x^k)d^k_N = -\nabla f(x^...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.638 		\State
+               Establecer la dirección $d^k = d_N^k$pdfTeX warning (ext4): des
+tination with the same identifier (name{ALG@line.6}) has been already used, dup
+licate ignored
+<to be read again> 
+                   \relax 
+l.639 	\Else
+            pdfTeX warning (ext4): destination with the same identifier (name{A
+LG@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.640 		\State
+               $d^k = -\nabla f(x^k)$pdfTeX warning (ext4): destination with th
+e same identifier (name{ALG@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.641 	\EndIf
+             pdfTeX warning (ext4): destination with the same identifier (name{
+ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.642 	\State
+              Encontrar $\alpha^k$ usando \ref{alg:LocalSearch}pdfTeX warning (
+ext4): destination with the same identifier (name{ALG@line.10}) has been alread
+y used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.643 	\State
+              Establecer $x^{k+1} = x^k+\alpha^kd^k$ y, después, $k=k+1$pdfTeX
+ warning (ext4): destination with the same identifier (name{ALG@line.1}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.661 \Procedure
+                 \textsc{NewtonNM} ($c_1>0,c_2>0,p\geq 2, q\geq 3$ y $M$ ent...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.955 \State
-             Establecer $x_0\in\mathbb{R}^n, \Delta^0>0$ y $k=0$pdfTeX warning 
-(ext4): destination with the same identifier (name{ALG@line.3}) has been alread
-y used, duplicate ignored
+l.662 \State
+             Establecer $x^0\in\mathbb{R}^n$ y $k=0$pdfTeX warning (ext4): dest
+ination with the same identifier (name{ALG@line.3}) has been already used, dupl
+icate ignored
 <to be read again> 
                    \relax 
-l.956 \State
-             Comprobar la convergenciapdfTeX warning (ext4): destination with t
-he same identifier (name{ALG@line.4}) has been already used, duplicate ignored
+l.663 \While
+            {$\nabla f(x^k)!=0$}pdfTeX warning (ext4): destination with the sam
+e identifier (name{ALG@line.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.957 \If
-         {$\exists j\in\{1,\dots,r\} :$\begin{equation*}pdfTeX warning (ext4): 
-destination with the same identifier (name{ALG@line.5}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.961 	\State
-              Establecer $x^{k+1} = x^k$, $\Delta k+1 = \alpha^k$, $k=k+1$ e...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+l.664 	\If
+          {$\exists d_N^k$ solución de $\nabla^2 f(x^k)d^k_N = -\nabla f(x^...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.962 \Else
-           pdfTeX warning (ext4): destination with the same identifier (name{AL
-G@line.7}) has been already used, duplicate ignored
+l.667 		\State
+               Establecer la dirección $d^k = d_N^k$pdfTeX warning (ext4): des
+tination with the same identifier (name{ALG@line.6}) has been already used, dup
+licate ignored
 <to be read again> 
                    \relax 
-l.963 	\State
-              Establecer $x^{k+1} = x^k$, $\Delta k+1=\theta\Delta^k$, $k = ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.964 \EndIf
+l.668 	\Else
             pdfTeX warning (ext4): destination with the same identifier (name{A
-LG@line.9}) has been already used, duplicate ignored
+LG@line.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.965 \EndProcedure
-                   
-LaTeX Info: Redefining \. on input line 992.
-LaTeX Info: Redefining \% on input line 992.
+l.669 		\State
+               $d^k = -\nabla f(x^k)$pdfTeX warning (ext4): destination with th
+e same identifier (name{ALG@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.670 	\EndIf
+             pdfTeX warning (ext4): destination with the same identifier (name{
+ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.671 	\State
+              Encontrar $\alpha^k$ usando \ref{alg:LocalSearch}, tal que \be...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.675 	\State
+              Establecer $x^{k+1} = x^k+\alpha^kd^k$ y, después, $k=k+1$
+LaTeX Info: Redefining \. on input line 691.
+LaTeX Info: Redefining \% on input line 691.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2164,8 +1918,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [29]
-LaTeX Info: Redefining \. on input line 1025.
-LaTeX Info: Redefining \% on input line 1025.
+LaTeX Info: Redefining \. on input line 714.
+LaTeX Info: Redefining \% on input line 714.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2175,9 +1929,92 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[30]
-LaTeX Info: Redefining \. on input line 1065.
-LaTeX Info: Redefining \% on input line 1065.
+[30pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
+1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.714 S
+       i $f$ es además continuamente 2-diferenciable, entonces la secuencia...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.714 S
+       i $f$ es además continuamente 2-diferenciable, entonces la secuencia...
+]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.725 \Procedure
+                 \textsc{NewtonRegionConfianza} ($0<\gamma_1\leq\gamma_2<1, ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.726 \State
+             Establecer $x^0\in\mathbb{R}^n$, $k=0$ y $a^0=0$.pdfTeX warning (e
+xt4): destination with the same identifier (name{ALG@line.3}) has been already 
+used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.727 \State
+             Encontrar $s^k = arg \min_\{||s||\leq a^k\}q^k(s)$pdfTeX warning (
+ext4): destination with the same identifier (name{ALG@line.4}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.728 \If
+         {$f(x^k)==q^k(s^k)$}pdfTeX warning (ext4): destination with the same i
+dentifier (name{ALG@line.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.729 	\State
+              PararpdfTeX warning (ext4): destination with the same identifier 
+(name{ALG@line.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.730 \Else
+           pdfTeX warning (ext4): destination with the same identifier (name{AL
+G@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.731 	\State
+              Calcular la proporción \begin{equation*}pdfTeX warning (ext4): d
+estination with the same identifier (name{ALG@line.8}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.734 	\If
+          {$\rho^k\geq\gamma_1$}pdfTeX warning (ext4): destination with the sam
+e identifier (name{ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.735 		\State
+               Actualizar $x^{k+1}=x^k + s^k$pdfTeX warning (ext4): destination
+ with the same identifier (name{ALG@line.10}) has been already used, duplicate 
+ignored
+<to be read again> 
+                   \relax 
+l.736 	\Else
+            pdfTeX warning (ext4): destination with the same identifier (name{A
+LG@line.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.737 		\State
+               Actualizar $x^{k+1} = x^k$pdfTeX warning (ext4): destination wit
+h the same identifier (name{ALG@line.12}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.738 	\EndIf
+             pdfTeX warning (ext4): destination with the same identifier (name{
+ALG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.739 	\State
+              Actualizar el radio $a^k$
+LaTeX Info: Redefining \. on input line 762.
+LaTeX Info: Redefining \% on input line 762.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2187,9 +2024,41 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[31]
-LaTeX Info: Redefining \. on input line 1096.
-LaTeX Info: Redefining \% on input line 1096.
+[31]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.792 \Procedure
+                 \textsc{NewtonRegionConfianza} ($k,H,g$ y $\eta>0$ escalar)pdf
+TeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.793 \State
+             Establecer $i=0, p^0=0,r^0=-g,s^0=r^0$ y \begin{equation*}pdfTeX w
+arning (ext4): destination with the same identifier (name{ALG@line.3}) has been
+ already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.796 \While
+            {}pdfTeX warning (ext4): destination with the same identifier (name
+{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.798 \EndWhile
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{ALG@line.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.799 \State
+             \begin{equation*}pdfTeX warning (ext4): destination with the same 
+identifier (name{ALG@line.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.807 \EndProcedure
+                   
+LaTeX Info: Redefining \. on input line 817.
+LaTeX Info: Redefining \% on input line 817.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2199,9 +2068,59 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[32]
-LaTeX Info: Redefining \. on input line 1136.
-LaTeX Info: Redefining \% on input line 1136.
+[32]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.862 \Procedure
+                 \textsc{InversaBFGSQuasiNewton}pdfTeX warning (ext4): destinat
+ion with the same identifier (name{ALG@line.2}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.863 \State
+             Establecer $x_0\in\mathbb{R}^n, H^0=I$ y $k=0$pdfTeX warning (ext4
+): destination with the same identifier (name{ALG@line.3}) has been already use
+d, duplicate ignored
+<to be read again> 
+                   \relax 
+l.864 \While
+            {$\nabla f(x^k)!=0$}pdfTeX warning (ext4): destination with the sam
+e identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.865 	\State
+              Establecer la dirección $d^k = -H^k\nabla f(x^k)$pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.5}) has been alread
+y used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.866 	\State
+              Encontrar $\alpha^k$ mediante una búsqueda lineal que satisfa...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.867 	\State
+              Actualizar \begin{equation}pdfTeX warning (ext4): destination wit
+h the same identifier (name{ALG@line.7}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.874 	\State
+              Establecer $k = k+1$pdfTeX warning (ext4): destination with the s
+ame identifier (name{ALG@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.875 \EndWhile
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.876 \EndProcedure
+                   
+LaTeX Info: Redefining \. on input line 903.
+LaTeX Info: Redefining \% on input line 903.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2212,8 +2131,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [33]
-LaTeX Info: Redefining \. on input line 1189.
-LaTeX Info: Redefining \% on input line 1189.
+LaTeX Info: Redefining \. on input line 925.
+LaTeX Info: Redefining \% on input line 925.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2223,9 +2142,109 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[34]
-LaTeX Info: Redefining \. on input line 1226.
-LaTeX Info: Redefining \% on input line 1226.
+[34]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.937 \Procedure
+                 \textsc{PSA} ($\mathcal{D^k}$ satisfaciendo la suposición ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.938 \State
+             Establecer $x_0\in\mathbb{R}^n, \Delta^0>0$ y $k=0$pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.3}) has been alread
+y used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.939 \State
+             Comprobar la convergenciapdfTeX warning (ext4): destination with t
+he same identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.940 \If
+         {$\exists j\in\{1,\dots,r\} :$\begin{equation*}pdfTeX warning (ext4): 
+destination with the same identifier (name{ALG@line.5}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.944 	\State
+              Establecer $x^{k+1} = x^k$, $\Delta k+1 = \tau\Delta^k$, $k=k+...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.945 \Else
+           pdfTeX warning (ext4): destination with the same identifier (name{AL
+G@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.946 	\State
+              Establecer $x^{k+1} = x^k$, $\Delta k+1=\theta\Delta^k$, $k = ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.947 \EndIf
+            pdfTeX warning (ext4): destination with the same identifier (name{A
+LG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.948 \EndProcedure
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{ALG@line.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.955 \Procedure
+                 \textsc{DFLSA} ($\mathcal{D^k}$ satisfaciendo la suposició...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.956 \State
+             Establecer $x_0\in\mathbb{R}^n, \Delta^0>0$ y $k=0$pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.3}) has been alread
+y used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.957 \State
+             Comprobar la convergenciapdfTeX warning (ext4): destination with t
+he same identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.958 \If
+         {$\exists j\in\{1,\dots,r\} :$\begin{equation*}pdfTeX warning (ext4): 
+destination with the same identifier (name{ALG@line.5}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.962 	\State
+              Establecer $x^{k+1} = x^k$, $\Delta k+1 = \alpha^k$, $k=k+1$ e...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.963 \Else
+           pdfTeX warning (ext4): destination with the same identifier (name{AL
+G@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.964 	\State
+              Establecer $x^{k+1} = x^k$, $\Delta k+1=\theta\Delta^k$, $k = ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.965 \EndIf
+            pdfTeX warning (ext4): destination with the same identifier (name{A
+LG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.966 \EndProcedure
+                   
+LaTeX Info: Redefining \. on input line 982.
+LaTeX Info: Redefining \% on input line 982.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2236,116 +2255,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [35]
-Overfull \hbox (9.90993pt too wide) in paragraph at lines 1262--1270
-[]\T1/lmr/m/n/10.95 El pro-ce-di-mien-to de Holm: Ajus-ta el va-lor de $\OML/lm
-m/m/it/10.95 $ \T1/lmr/m/n/10.95 en una for-ma \T1/lmr/m/it/10.95 step-down\T1
-/lmr/m/n/10.95 . Sean $\OML/lmm/m/it/10.95 p[]; p[]; :::; p[]$
- []
-
-
-Overfull \hbox (20.26982pt too wide) in paragraph at lines 1262--1270
-\OML/lmm/m/it/10.95 p$\T1/lmr/m/n/10.95 -valores or-de-na-dos (de me-nor a ma-y
-or), tal que $\OML/lmm/m/it/10.95 p[] \OMS/lmsy/m/n/10.95  \OML/lmm/m/it/10.95
- p[] \OMS/lmsy/m/n/10.95  []  \OML/lmm/m/it/10.95 p[]$\T1/lmr/m/n/10.95 , y s
-ean $\OML/lmm/m/it/10.95 H[]; H[]; :::; H[]$
- []
-
-LaTeX Info: Redefining \. on input line 1274.
-LaTeX Info: Redefining \% on input line 1274.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[36]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
-1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1300 \Procedure
-                  \textsc{HommelAPV}pdfTeX warning (ext4): destination with the
- same identifier (name{ALG@line.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1301 \State
-              Establecer $APV_i = p_i$ $\forall i$pdfTeX warning (ext4): destin
-ation with the same identifier (name{ALG@line.3}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.1302 \ForEach
-               {$j = k-1, k-2,...,2$ (\textit{en dicho orden})}pdfTeX warning (
-ext4): destination with the same identifier (name{ALG@line.4}) has been already
- used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1303 	\State
-               Establecer $B = \emptyset$pdfTeX warning (ext4): destination wit
-h the same identifier (name{ALG@line.5}) has been already used, duplicate ignor
-ed
-<to be read again> 
-                   \relax 
-l.1304 	\ForEach
-                {$i, i > (k-1-j)$}pdfTeX warning (ext4): destination with the s
-ame identifier (name{ALG@line.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1305 		\State
-                Calcular el valor $c_i = (j \cdot p_i)/(j+i-k+1)$pdfTeX warning
- (ext4): destination with the same identifier (name{ALG@line.7}) has been alrea
-dy used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1306 		\State
-                Establecer $B = B \bigcup c_i$pdfTeX warning (ext4): destinatio
-n with the same identifier (name{ALG@line.8}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.1307 	\EndFor
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{ALG@line.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1308 	\State
-               Encontrar el menor valor $c_i$ en $B \xrightarrow{}{} c_{min}$pd
-fTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1309 	\If
-           {$APV_i < c_{min}$}pdfTeX warning (ext4): destination with the same 
-identifier (name{ALG@line.11}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1310 		\State
-                Establecer $APV_i = c_{min}$pdfTeX warning (ext4): destination 
-with the same identifier (name{ALG@line.12}) has been already used, duplicate i
-gnored
-<to be read again> 
-                   \relax 
-l.1311 	\EndIf
-              pdfTeX warning (ext4): destination with the same identifier (name
-{ALG@line.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1312 	\ForEach
-                {$i,i\leq (k-1-j)$}pdfTeX warning (ext4): destination with the 
-same identifier (name{ALG@line.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1313 		\State
-                Establecer $c_i = \min(c_{min}, j \cdot p_i)$pdfTeX warning (ex
-t4): destination with the same identifier (name{ALG@line.15}) has been already 
-used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1314 		\If
-            {$APV_i < c_i$}
-LaTeX Info: Redefining \. on input line 1331.
-LaTeX Info: Redefining \% on input line 1331.
+LaTeX Info: Redefining \. on input line 1000.
+LaTeX Info: Redefining \% on input line 1000.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2355,9 +2266,15 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[37]) (capitulos/05_Problema_Diseño_Experimental.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+[36]
+Cap\'{\i }tulo 6.
+[37
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1067.
+LaTeX Info: Redefining \% on input line 1067.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2368,16 +2285,20 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [38]
-Cap\'{\i }tulo 5.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-5.
-("C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [39
+LaTeX Info: Redefining \. on input line 1098.
+LaTeX Info: Redefining \% on input line 1098.
 
-]
-LaTeX Info: Redefining \. on input line 77.
-LaTeX Info: Redefining \% on input line 77.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[39]
+LaTeX Info: Redefining \. on input line 1138.
+LaTeX Info: Redefining \% on input line 1138.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2388,8 +2309,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [40]
-LaTeX Info: Redefining \. on input line 135.
-LaTeX Info: Redefining \% on input line 135.
+LaTeX Info: Redefining \. on input line 1191.
+LaTeX Info: Redefining \% on input line 1191.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2400,8 +2321,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [41]
-LaTeX Info: Redefining \. on input line 161.
-LaTeX Info: Redefining \% on input line 161.
+LaTeX Info: Redefining \. on input line 1228.
+LaTeX Info: Redefining \% on input line 1228.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2412,8 +2333,116 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [42]
-LaTeX Info: Redefining \. on input line 197.
-LaTeX Info: Redefining \% on input line 197.
+Overfull \hbox (9.90993pt too wide) in paragraph at lines 1264--1272
+[]\T1/lmr/m/n/10.95 El pro-ce-di-mien-to de Holm: Ajus-ta el va-lor de $\OML/lm
+m/m/it/10.95 $ \T1/lmr/m/n/10.95 en una for-ma \T1/lmr/m/it/10.95 step-down\T1
+/lmr/m/n/10.95 . Sean $\OML/lmm/m/it/10.95 p[]; p[]; :::; p[]$
+ []
+
+
+Overfull \hbox (20.26982pt too wide) in paragraph at lines 1264--1272
+\OML/lmm/m/it/10.95 p$\T1/lmr/m/n/10.95 -valores or-de-na-dos (de me-nor a ma-y
+or), tal que $\OML/lmm/m/it/10.95 p[] \OMS/lmsy/m/n/10.95  \OML/lmm/m/it/10.95
+ p[] \OMS/lmsy/m/n/10.95  []  \OML/lmm/m/it/10.95 p[]$\T1/lmr/m/n/10.95 , y s
+ean $\OML/lmm/m/it/10.95 H[]; H[]; :::; H[]$
+ []
+
+LaTeX Info: Redefining \. on input line 1276.
+LaTeX Info: Redefining \% on input line 1276.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[43]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1302 \Procedure
+                  \textsc{HommelAPV}pdfTeX warning (ext4): destination with the
+ same identifier (name{ALG@line.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1303 \State
+              Establecer $APV_i = p_i$ $\forall i$pdfTeX warning (ext4): destin
+ation with the same identifier (name{ALG@line.3}) has been already used, duplic
+ate ignored
+<to be read again> 
+                   \relax 
+l.1304 \ForEach
+               {$j = k-1, k-2,...,2$ (\textit{en dicho orden})}pdfTeX warning (
+ext4): destination with the same identifier (name{ALG@line.4}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1305 	\State
+               Establecer $B = \emptyset$pdfTeX warning (ext4): destination wit
+h the same identifier (name{ALG@line.5}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.1306 	\ForEach
+                {$i, i > (k-1-j)$}pdfTeX warning (ext4): destination with the s
+ame identifier (name{ALG@line.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1307 		\State
+                Calcular el valor $c_i = (j \cdot p_i)/(j+i-k+1)$pdfTeX warning
+ (ext4): destination with the same identifier (name{ALG@line.7}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1308 		\State
+                Establecer $B = B \bigcup c_i$pdfTeX warning (ext4): destinatio
+n with the same identifier (name{ALG@line.8}) has been already used, duplicate 
+ignored
+<to be read again> 
+                   \relax 
+l.1309 	\EndFor
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1310 	\State
+               Encontrar el menor valor $c_i$ en $B \xrightarrow{}{} c_{min}$pd
+fTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1311 	\If
+           {$APV_i < c_{min}$}pdfTeX warning (ext4): destination with the same 
+identifier (name{ALG@line.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1312 		\State
+                Establecer $APV_i = c_{min}$pdfTeX warning (ext4): destination 
+with the same identifier (name{ALG@line.12}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.1313 	\EndIf
+              pdfTeX warning (ext4): destination with the same identifier (name
+{ALG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1314 	\ForEach
+                {$i,i\leq (k-1-j)$}pdfTeX warning (ext4): destination with the 
+same identifier (name{ALG@line.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1315 		\State
+                Establecer $c_i = \min(c_{min}, j \cdot p_i)$pdfTeX warning (ex
+t4): destination with the same identifier (name{ALG@line.15}) has been already 
+used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1316 		\If
+            {$APV_i < c_i$}
+LaTeX Info: Redefining \. on input line 1333.
+LaTeX Info: Redefining \% on input line 1333.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2423,9 +2452,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[43]) (capitulos/06_Algoritmos_Referencia.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+[44]) (capitulos/05_Problema_Diseño_Experimental.tex
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2435,8 +2464,38 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[44]
-Cap\'{\i }tulo 6.
+[45] [46
+
+]
+Cap\'{\i }tulo 7.
+[47]
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[48])
+LaTeX Info: Redefining \. on input line 253.
+LaTeX Info: Redefining \% on input line 253.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[49] [50
+
+] [51] [52] (capitulos/06_Algoritmos_Referencia.tex
+Cap\'{\i }tulo 8.
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -2553,7 +2612,7 @@ destination with the same identifier (name{ALG@line.20}) has been already used,
 <to be read again> 
                    \relax 
 l.45 \EndWhile
-               [45
+               [53
 
 ]
 LaTeX Info: Redefining \. on input line 85.
@@ -2567,7 +2626,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[46]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[54]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2684,7 +2743,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[47]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[55]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2756,12 +2815,12 @@ LG@line.13}) has been already used, duplicate ignored
                    \relax 
 l.158 \EndProcedure
                    
-<imagenes/Crossover1point.png, id=954, 390.258pt x 153.57375pt>
+<imagenes/Crossover1point.png, id=1054, 390.258pt x 153.57375pt>
 File: imagenes/Crossover1point.png Graphic file (type png)
 <use imagenes/Crossover1point.png>
 Package pdftex.def Info: imagenes/Crossover1point.png  used on input line 191.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover1pointNumber.png, id=955, 390.258pt x 153.57375pt>
+<imagenes/Crossover1pointNumber.png, id=1055, 390.258pt x 153.57375pt>
 File: imagenes/Crossover1pointNumber.png Graphic file (type png)
 <use imagenes/Crossover1pointNumber.png>
 Package pdftex.def Info: imagenes/Crossover1pointNumber.png  used on input line
@@ -2781,19 +2840,19 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[48]
-<imagenes/Crossover2point.png, id=960, 390.258pt x 153.57375pt>
+[56]
+<imagenes/Crossover2point.png, id=1060, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2point.png Graphic file (type png)
 <use imagenes/Crossover2point.png>
 Package pdftex.def Info: imagenes/Crossover2point.png  used on input line 201.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover2pointNumber.png, id=961, 390.258pt x 153.57375pt>
+<imagenes/Crossover2pointNumber.png, id=1061, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2pointNumber.png Graphic file (type png)
 <use imagenes/Crossover2pointNumber.png>
 Package pdftex.def Info: imagenes/Crossover2pointNumber.png  used on input line
  202.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/CrossoverUniformNumber.png, id=962, 390.258pt x 153.57375pt>
+<imagenes/CrossoverUniformNumber.png, id=1062, 390.258pt x 153.57375pt>
 File: imagenes/CrossoverUniformNumber.png Graphic file (type png)
 <use imagenes/CrossoverUniformNumber.png>
 Package pdftex.def Info: imagenes/CrossoverUniformNumber.png  used on input lin
@@ -2877,7 +2936,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[49 <./imagenes/Crossover1point.png> <./imagenes/Crossover1pointNumber.png> <./
+[57 <./imagenes/Crossover1point.png> <./imagenes/Crossover1pointNumber.png> <./
 imagenes/Crossover2point.png> <./imagenes/Crossover2pointNumber.png> <./imagene
 s/CrossoverUniformNumber.png>]pdfTeX warning (ext4): destination with the same 
 identifier (name{ALG@line.1}) has been already used, duplicate ignored
@@ -2984,7 +3043,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[50]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[58]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3053,7 +3112,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[51]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[59]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3188,8 +3247,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[52]
-<imagenes/CrossoverHUX.png, id=996, 539.01375pt x 153.57375pt>
+[60]
+<imagenes/CrossoverHUX.png, id=1096, 539.01375pt x 153.57375pt>
 File: imagenes/CrossoverHUX.png Graphic file (type png)
 <use imagenes/CrossoverHUX.png>
 Package pdftex.def Info: imagenes/CrossoverHUX.png  used on input line 378.
@@ -3278,7 +3337,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[53 <./imagenes/CrossoverHUX.png>]pdfTeX warning (ext4): destination with the s
+[61 <./imagenes/CrossoverHUX.png>]pdfTeX warning (ext4): destination with the s
 ame identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3331,284 +3390,365 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[54]
-Cap\'{\i }tulo 7.
-[55
+[62]
+Cap\'{\i }tulo 9.
+[63
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 \Procedure
+l.41 \Procedure
                 \texttt{Histórico}pdfTeX warning (ext4): destination with the 
 same identifier (name{ALG@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 \State
+l.42 \State
             \texttt{RecDatos} = \texttt{True}pdfTeX warning (ext4): destination
  with the same identifier (name{ALG@line.3}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.42 \For
+l.43 \For
          {\texttt{i = 0; i < NEVALUACIONES; ++i}}pdfTeX warning (ext4): destina
 tion with the same identifier (name{ALG@line.4}) has been already used, duplica
 te ignored
 <to be read again> 
                    \relax 
-l.43 	\If
+l.44 	\If
          {\texttt{i}\%50==0 \&\& \texttt{i}$\neq$ 0} /* Puntos de cambio */pdfT
 eX warning (ext4): destination with the same identifier (name{ALG@line.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 		\If
+l.45 		\If
           {i\%100} /* Empezamos a recopilar datos */pdfTeX warning (ext4): dest
 ination with the same identifier (name{ALG@line.6}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.45 			\State
+l.46 			\State
                \texttt{RecDatos = True}pdfTeX warning (ext4): destination with 
 the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
 
 <to be read again> 
                    \relax 
-l.46 			\State
+l.47 			\State
                Eliminar todos los datos actuales del histogramapdfTeX warning (
 ext4): destination with the same identifier (name{ALG@line.8}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.47 			\State
+l.48 			\State
                Recopilar las soluciones de la población actualpdfTeX warning (
 ext4): destination with the same identifier (name{ALG@line.9}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.48 		\Else
+l.49 		\Else
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49 			\State
+l.50 			\State
                \texttt{RecDatos = False}pdfTeX warning (ext4): destination with
  the same identifier (name{ALG@line.11}) has been already used, duplicate ignor
 ed
 <to be read again> 
                    \relax 
-l.50 		\EndIf
+l.51 		\EndIf
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.51 	\EndIf
+l.52 	\EndIf
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 	\If
+l.53 	\If
          {\texttt{RecDatos}}pdfTeX warning (ext4): destination with the same id
 entifier (name{ALG@line.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53 		\State
+l.54 		\State
               Ejecutar los componentes de la manera originalpdfTeX warning (ext
 4): destination with the same identifier (name{ALG@line.15}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.54 		\State
+l.55 		\State
               Recopilar las nuevas solucionespdfTeX warning (ext4): destination
  with the same identifier (name{ALG@line.16}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.55 	\Else
+l.56 	\Else
            pdfTeX warning (ext4): destination with the same identifier (name{AL
 G@line.17}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.56 		\State
+l.57 		\State
               Ejecutar los componentes usando los datos del históricopdfTeX wa
 rning (ext4): destination with the same identifier (name{ALG@line.18}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 	\EndIf
+l.58 	\EndIf
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.19}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.58 \EndFor
+l.59 \EndFor
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.59 \EndProcedure
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{ALG@line.1}) has been already used, duplicate ignored
+l.60 \EndProcedure
+                  
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[64]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 \Procedure
+l.75 \Procedure
                 \texttt{Historico\_OR}($hijo$)pdfTeX warning (ext4): destinatio
 n with the same identifier (name{ALG@line.2}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.69 \State
+l.76 \State
             Calcular el peso total de \texttt{hijo} $\xrightarrow{}{}$ \text...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 \If
+l.77 \If
         {\texttt{pesoHijo > c}}pdfTeX warning (ext4): destination with the same
  identifier (name{ALG@line.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.71 	\State
+l.78 	\State
              Eliminar de forma aleatoria los peores elementos según el hist...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.72 	\State
+l.79 	\State
              Si no es posible lo anterior y sigue dándose la condición, el...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.73 	\State
+l.80 	\State
              Si no es posible lo anterior y sigue dándose la condición, el...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \Else
+l.81 \Else
           pdfTeX warning (ext4): destination with the same identifier (name{ALG
 @line.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75 	\State
+l.82 	\State
              Añadir de forma aleatoria los mejores elementos según el hist...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 	\State
+l.83 	\State
              Añadir de forma aleatoria los elementos que no aparecen en el ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77 	\State
+l.84 	\State
              Añadir de forma aleatoria los peores	elementos según el hist�...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.78 \EndIf
+l.85 \EndIf
            pdfTeX warning (ext4): destination with the same identifier (name{AL
 G@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.79 \EndProcedure
+l.86 \EndProcedure
                   pdfTeX warning (ext4): destination with the same identifier (
 name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.86 \Procedure
+l.93 \Procedure
                 \texttt{Historico\_Mutacion}($solucion$)pdfTeX warning (ext4): 
 destination with the same identifier (name{ALG@line.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.87 \State
+l.94 \State
             \texttt{sustituido = False}pdfTeX warning (ext4): destination with 
 the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
 
 <to be read again> 
                    \relax 
-l.88 \If
-        {\texttt{!sustituido}}  /*Establecer una lista de prioridades sobre ...
+l.100 \If
+         {\texttt{!sustituido} \&\& Se puede sustituir un \texttt{peor} elem...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.89 	\State
-             Sustituir peor 1 por mejor 0pdfTeX warning (ext4): destination wit
-h the same identifier (name{ALG@line.5}) has been already used, duplicate ignor
-ed
+l.101 	\State
+              Sustituir \texttt{peor} por \texttt{mejor}pdfTeX warning (ext4): 
+destination with the same identifier (name{ALG@line.5}) has been already used, 
+duplicate ignored
 <to be read again> 
                    \relax 
-l.90 	\State
-             Sustituir 1 sin información por mejor 0pdfTeX warning (ext4): des
-tination with the same identifier (name{ALG@line.6}) has been already used, dup
-licate ignored
-<to be read again> 
-                   \relax 
-l.91 	\State
-             Sustituir peor 1 por 0 sin informaciónpdfTeX warning (ext4): dest
-ination with the same identifier (name{ALG@line.7}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.92 	\State
-             Sustituir 1 sin información por 0 sin informaciónpdfTeX warning 
-(ext4): destination with the same identifier (name{ALG@line.8}) has been alread
+l.102 	\State
+              \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.6}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.93 	\State
-             Sustituir mejor 1 por mejor 0pdfTeX warning (ext4): destination wi
-th the same identifier (name{ALG@line.9}) has been already used, duplicate igno
-red
+l.103 \ElsIf
+            {\texttt{!sustituido} \&\& Se puede sustituir un \texttt{sin inf...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.94 	\State
-             Sustituir peor 1 por peor 0pdfTeX warning (ext4): destination with
- the same identifier (name{ALG@line.10}) has been already used, duplicate ignor
-ed
+l.104 	\State
+              Sustituir \texttt{sin información} por \texttt{mejores}pdfTeX wa
+rning (ext4): destination with the same identifier (name{ALG@line.8}) has been 
+already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 	\State
-             Sustituir mejor 1 por 0 sin informaciónpdfTeX warning (ext4): des
-tination with the same identifier (name{ALG@line.11}) has been already used, du
-plicate ignored
+l.105 	\State
+              \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}	pdfTeX warning
+ (ext4): destination with the same identifier (name{ALG@line.9}) has been alrea
+dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.96 	\State
-             Sustituir 1 sin información por peor 0pdfTeX warning (ext4): dest
-ination with the same identifier (name{ALG@line.12}) has been already used, dup
-licate ignored
-<to be read again> 
-                   \relax 
-l.97 	\State
-             Sustituir mejor 1 por peor 0pdfTeX warning (ext4): destination wit
-h the same identifier (name{ALG@line.13}) has been already used, duplicate igno
-red
-<to be read again> 
-                   \relax 
-l.98 \EndIf
-           pdfTeX warning (ext4): destination with the same identifier (name{AL
-G@line.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.99 \State
-            Aplicar Operador de Reparación con Histórico para rellenar má...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+l.107 \ElsIf
+            {\texttt{!sustituido} \&\& Se puede sustituir un \texttt{peor} e...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.100 \EndProcedure
-                   
-
-LaTeX Warning: Citation 'herrera-poyatosGeneticMemeticAlgorithm2017' on page 56
- undefined on input line 114.
-
-LaTeX Info: Redefining \. on input line 115.
-LaTeX Info: Redefining \% on input line 115.
+l.108 	\State
+              Sustituir \texttt{peores} por \texttt{sin información}pdfTeX war
+ning (ext4): destination with the same identifier (name{ALG@line.11}) has been 
+already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.109 	\State
+              \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.12}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.111 \ElsIf
+            {\texttt{!sustituido} \&\& Se puede sustituir un \texttt{sin inf...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.112 	\State
+              Sustituir \texttt{sin información} por \texttt{sin información}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.113 	\State
+              \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.15}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.115 \ElsIf
+            {\texttt{!sustituido} \&\& Se puede sustituir un \texttt{mejores...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.116 	\State
+              Sustituir \texttt{mejores} por \texttt{mejores}pdfTeX warning (ex
+t4): destination with the same identifier (name{ALG@line.17}) has been already 
+used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.117 	\State
+              \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.18}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.119 \ElsIf
+            {\texttt{!sustituido} \&\& Se puede sustituir un \texttt{peores}...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.120 	\State
+              Sustituir \texttt{peores} por \texttt{peores}pdfTeX warning (ext4
+): destination with the same identifier (name{ALG@line.20}) has been already us
+ed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.121 	\State
+              \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.21}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.123 \ElsIf
+            {\texttt{!sustituido} \&\& Se puede sustituir un \texttt{mejores...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.124 	\State
+              Sustituir \texttt{mejores} por \texttt{sin información}pdfTeX wa
+rning (ext4): destination with the same identifier (name{ALG@line.23}) has been
+ already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.125 	\State
+              \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.24}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.127 \ElsIf
+            {\texttt{!sustituido} \&\& Se puede sustituir un \texttt{sin inf...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.128 	\State
+              Sustituir \texttt{sin información} por \texttt{peores}pdfTeX war
+ning (ext4): destination with the same identifier (name{ALG@line.26}) has been 
+already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.129 	\State
+              \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}pdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.27}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.131 \ElsIf
+            {\texttt{!sustituido} \&\& Se puede sustituir un \texttt{mejores...
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3617,9 +3757,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[56]
-LaTeX Info: Redefining \. on input line 115.
-LaTeX Info: Redefining \% on input line 115.
+[65]
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -3629,278 +3769,391 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[57]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[66]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.128 \Procedure
-                 \texttt{GTRASP}($solucion, min$)pdfTeX warning (ext4): destina
-tion with the same identifier (name{ALG@line.2}) has been already used, duplica
-te ignored
+l.165 \Procedure
+                 \texttt{GRASP}($solucion, min$)pdfTeX warning (ext4): destinat
+ion with the same identifier (name{ALG@line.2}) has been already used, duplicat
+e ignored
 <to be read again> 
                    \relax 
-l.129 \If
+l.166 \If
          {\texttt{min}}pdfTeX warning (ext4): destination with the same identif
 ier (name{ALG@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.130 	\State
+l.167 	\State
               Almacenar en \texttt{indices} los elementos activados en \text...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.131 \Else
+l.168 \Else
            pdfTeX warning (ext4): destination with the same identifier (name{AL
 G@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.132 	\State
+l.169 	\State
               Almacenar en \texttt{indices} los elementos desactivados en \t...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.133 \EndIf
+l.170 \EndIf
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.134 \State
+l.171 \State
              Calcular el valor relativo de \texttt{indices} $\xrightarrow{}{...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.135 \State
+l.172 \State
              \texttt{encontrado = false}pdfTeX warning (ext4): destination with
  the same identifier (name{ALG@line.9}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.136 \If
+l.173 \If
          {\texttt{min}}pdfTeX warning (ext4): destination with the same identif
 ier (name{ALG@line.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.137 	\State
+l.174 	\State
               Ordenar \texttt{indices} según \texttt{valores} en orden asce...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.138 	\For
+l.175 	\For
            {$i\in 1..size(\texttt{indices}) \&\& !\texttt{encontrado}$}pdfTeX w
 arning (ext4): destination with the same identifier (name{ALG@line.12}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.139 		\If
+l.176 		\If
            {\texttt{valores}$_i$ > 1.1$\cdot$\texttt{valores}$_0$}pdfTeX warnin
 g (ext4): destination with the same identifier (name{ALG@line.13}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 			\State
+l.177 			\State
                 \texttt{encontrado = true}pdfTeX warning (ext4): destination wi
 th the same identifier (name{ALG@line.14}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.141 			\State
+l.178 			\State
                 Eliminar los elementos de \texttt{indices} desde $i$ hasta $...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 		\EndIf
+l.179 		\EndIf
               pdfTeX warning (ext4): destination with the same identifier (name
 {ALG@line.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.143 	\EndFor
+l.180 	\EndFor
               pdfTeX warning (ext4): destination with the same identifier (name
 {ALG@line.17}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.144 \Else
+l.181 \Else
            pdfTeX warning (ext4): destination with the same identifier (name{AL
 G@line.18}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.145 	\State
+l.182 	\State
               Ordenar \texttt{indices} según \texttt{valores} en orden desc...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.146 	\For
+l.183 	\For
            {$i\in 1..size(\texttt{indices}) \&\& !\texttt{encontrado}$}pdfTeX w
 arning (ext4): destination with the same identifier (name{ALG@line.20}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.147 		\If
+l.184 		\If
            {\texttt{valores}$_i$ < 0.9$\cdot$\texttt{valores}$_0$}pdfTeX warnin
 g (ext4): destination with the same identifier (name{ALG@line.21}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.148 			\State
+l.185 			\State
                 \texttt{encontrado = true}pdfTeX warning (ext4): destination wi
 th the same identifier (name{ALG@line.22}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.149 			\State
+l.186 			\State
                 Eliminar los elementos de \texttt{indices} desde $i$ hasta $...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.150 		\EndIf
+l.187 		\EndIf
               pdfTeX warning (ext4): destination with the same identifier (name
 {ALG@line.24}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.151 	\EndFor
+l.188 	\EndFor
               pdfTeX warning (ext4): destination with the same identifier (name
 {ALG@line.25}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.152 \EndIf
+l.189 \EndIf
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.26}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.153 \State
+l.190 \State
              Elegir aleatoriamente algún elemento de \texttt{indices}pdfTeX wa
 rning (ext4): destination with the same identifier (name{ALG@line.27}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.154 \EndProcedure
-                   
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[58]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
-1}) has been already used, duplicate ignored
+l.191 \EndProcedure
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.174 \Procedure
+l.211 \Procedure
                  \texttt{Cruce Intensivo}($padre_1, padre_2, porcentaje$)pdfTeX
  warning (ext4): destination with the same identifier (name{ALG@line.2}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 \State
+l.212 \State
              Desordenar los índices (\texttt{indices$_1$}, \texttt{indices$...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.176 \State
+l.213 \State
              \texttt{nelem = $n$*porcentaje}pdfTeX warning (ext4): destination 
 with the same identifier (name{ALG@line.4}) has been already used, duplicate ig
 nored
 <to be read again> 
                    \relax 
-l.177 \For
+l.214 \For
           {i in 0..$n$}pdfTeX warning (ext4): destination with the same identif
 ier (name{ALG@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.178 	\If
+l.215 	\If
           {\texttt{i < nelem}}pdfTeX warning (ext4): destination with the same 
 identifier (name{ALG@line.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 		\State
+l.216 		\State
                \texttt{hijo$_1$[indice$_1$[i]]} = \texttt{padre$_1$[indice$_...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.180 		\State
+l.217 		\State
                \texttt{hijo$_2$[indice$_2$[i]]} = \texttt{padre$_1$[indice$_...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.181 	\Else
+l.218 	\Else
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.182 		\State
+l.219 		\State
                \texttt{hijo$_1$[indice$_1$[i]]} = \texttt{padre$_2$[indice$_...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.183 		\State
+l.220 		\State
                \texttt{hijo$_2$[indice$_2$[i]]} = \texttt{padre$_2$[indice$_...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.184 	\EndIf
+l.221 	\EndIf
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \EndFor
+l.222 \EndFor
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.186 \EndProcedure
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{ALG@line.1}) has been already used, duplicate ignored
+l.223 \EndProcedure
+                   
+LaTeX Info: Redefining \. on input line 232.
+LaTeX Info: Redefining \% on input line 232.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[67]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.207 \Procedure
+l.242 \Procedure
+                 \texttt{Población Diversa}($p_\delta$)pdfTeX warning (ext4): 
+destination with the same identifier (name{ALG@line.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.243 \State
+             \texttt{distMin} $\xleftarrow{}{} n\cdot p_\delta$pdfTeX warning (
+ext4): destination with the same identifier (name{ALG@line.3}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \State
+             \texttt{npob} $\xleftarrow{}{}$ \texttt{0}pdfTeX warning (ext4): d
+estination with the same identifier (name{ALG@line.4}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.245 \State
+             \texttt{poblacion} $\xleftarrow{}{} \emptyset$pdfTeX warning (ext4
+): destination with the same identifier (name{ALG@line.5}) has been already use
+d, duplicate ignored
+<to be read again> 
+                   \relax 
+l.246 \While
+            {\texttt{npob}$<$\texttt{numcro}}pdfTeX warning (ext4): destination
+ with the same identifier (name{ALG@line.6}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.247 	\State
+              Generamos una solución aleatoria $\xrightarrow{}{}$ \texttt{s...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.248 	\State
+              \texttt{nuevo} $\xleftarrow{}{}$ \texttt{true}pdfTeX warning (ext
+4): destination with the same identifier (name{ALG@line.8}) has been already us
+ed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.249 	\ForEach
+               {\texttt{sol}$\in$\texttt{poblacion}}pdfTeX warning (ext4): dest
+ination with the same identifier (name{ALG@line.9}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.250 		\If
+           {$distHamming($\texttt{solucion}$_{\texttt{npob}},$\texttt{sol}$)...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.251 			\State
+                \texttt{nuevo} $\xleftarrow{}{}$ \texttt{false}pdfTeX warning (
+ext4): destination with the same identifier (name{ALG@line.11}) has been alread
+y used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.252 		\EndIf
+              pdfTeX warning (ext4): destination with the same identifier (name
+{ALG@line.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.253 	\EndFor
+              pdfTeX warning (ext4): destination with the same identifier (name
+{ALG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.254 	\If
+          {\texttt{nuevo}}pdfTeX warning (ext4): destination with the same iden
+tifier (name{ALG@line.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.255 		\State
+               Añadir \texttt{solucion}$_{\texttt{npob}}$ a \texttt{poblacion}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.256 		\State
+               \texttt{npob++}pdfTeX warning (ext4): destination with the same 
+identifier (name{ALG@line.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.257 	\EndIf
+             pdfTeX warning (ext4): destination with the same identifier (name{
+ALG@line.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.258 \EndWhile
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{ALG@line.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.259 \EndProcedure
+                   
+LaTeX Info: Redefining \. on input line 280.
+LaTeX Info: Redefining \% on input line 280.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[68]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.284 \Procedure
                  \texttt{Operador NAM}pdfTeX warning (ext4): destination with t
 he same identifier (name{ALG@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.208 \State
+l.285 \State
              Aplicar \texttt{Torneo Binario} para obtener al primer padre $\...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 \State
+l.286 \State
              Elegir aleatoriamente sin repetición un subconjunto de la pobl...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.210 \State
+l.287 \State
              Calcular la distancia de Hamming entre \texttt{padre$_1$} y cad...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.211 \State
+l.288 \State
              Establecer como \texttt{padre$_2$} la solución de \texttt{indi...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.212 \EndProcedure
+l.289 \EndProcedure
                    
-LaTeX Info: Redefining \. on input line 222.
-LaTeX Info: Redefining \% on input line 222.
+LaTeX Info: Redefining \. on input line 303.
+LaTeX Info: Redefining \% on input line 303.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -3910,125 +4163,113 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[59]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[69]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.230 \Procedure
+l.307 \Procedure
                  \texttt{Reemplazo Cercanía}pdfTeX warning (ext4): destination
  with the same identifier (name{ALG@line.2}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.231 \For
+l.308 \For
           {i in 0..\texttt{numHijos}}pdfTeX warning (ext4): destination with th
 e same identifier (name{ALG@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.232 	\State
+l.309 	\State
               Calcular distancia de Hamming de \texttt{hijo$_i$} a todos los...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.233 	\State
+l.310 	\State
               Elegir la solución con la menor distancia de Hamming a \textt...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.234 	\If
+l.311 	\If
           {\texttt{valor$_{solucion}$ < valor$_{hijo_i}$}}pdfTeX warning (ext4)
 : destination with the same identifier (name{ALG@line.6}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.235 		\State
+l.312 		\State
                Sustituir \texttt{solucion} por \texttt{hijo$_i$}pdfTeX warning 
 (ext4): destination with the same identifier (name{ALG@line.7}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 	\EndIf
+l.313 	\EndIf
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.237 \EndFor
+l.314 \EndFor
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.238 \EndProcedure
+l.315 \EndProcedure
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.256 \Procedure
+l.333 \Procedure
                  \texttt{Reemplazo Cercanía}($\delta_H$)pdfTeX warning (ext4):
  destination with the same identifier (name{ALG@line.2}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.257 \For
+l.334 \For
           {i in 0..\texttt{numHijos}}pdfTeX warning (ext4): destination with th
 e same identifier (name{ALG@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.258 	\State
+l.335 	\State
               Almacenar los individuos de la población tal que su distancia...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.259 	\State
+l.336 	\State
               Calculamos el elemento de \texttt{indCercanos} con mayor valorpdf
 TeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.260 	\State
+l.337 	\State
               El resto de elementos de \texttt{indCercanos} se sustituye por...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.261 	\While
+l.338 	\While
              {La solución generada aleatoriamente sea cercana a una existente}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.262 		\State
+l.339 		\State
                Sustituirla por otra solución generada aleatoriamentepdfTeX war
 ning (ext4): destination with the same identifier (name{ALG@line.8}) has been a
 lready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.263 	\EndWhile
+l.340 	\EndWhile
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{ALG@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.264 \EndFor
+l.341 \EndFor
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.265 \EndProcedure
-                   
-LaTeX Info: Redefining \. on input line 267.
-LaTeX Info: Redefining \% on input line 267.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[60]) (capitulos/08_Parte_Experimental.tex
+l.342 \EndProcedure
+                   ) (capitulos/08_Parte_Experimental.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -4040,66 +4281,21 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[61] [62
+[70]
+Cap\'{\i }tulo 10.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 1.
+
+[71
 
 ]
-Cap\'{\i }tulo 8.
-
-Overfull \hbox (0.45361pt too wide) in paragraph at lines 1--1
-|[]\T1/lmr/bx/n/20.74 Parte Ex-pe-ri-men-tal (In pro-gress)| 
- []
-
-[63]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 57.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 121.
-
-<imagenes/Experimental/AGEUvsCHC.png, id=1070, 289.08pt x 197.538pt>
-File: imagenes/Experimental/AGEUvsCHC.png Graphic file (type png)
-<use imagenes/Experimental/AGEUvsCHC.png>
-Package pdftex.def Info: imagenes/Experimental/AGEUvsCHC.png  used on input lin
-e 183.
-(pdftex.def)             Requested size: 231.2643pt x 158.0306pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 191.
-
-<imagenes/Experimental/DiferenciasAGEU.png, id=1073, 289.68225pt x 174.05025pt>
-
-File: imagenes/Experimental/DiferenciasAGEU.png Graphic file (type png)
-<use imagenes/Experimental/DiferenciasAGEU.png>
-Package pdftex.def Info: imagenes/Experimental/DiferenciasAGEU.png  used on inp
-ut line 230.
-(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<imagenes/Experimental/DiferenciasCHC.png, id=1078, 289.68225pt x 174.05025pt>
-File: imagenes/Experimental/DiferenciasCHC.png Graphic file (type png)
-<use imagenes/Experimental/DiferenciasCHC.png>
-Package pdftex.def Info: imagenes/Experimental/DiferenciasCHC.png  used on inpu
-t line 276.
-(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 283.
-LaTeX Info: Redefining \% on input line 283.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[64]
-LaTeX Info: Redefining \. on input line 283.
-LaTeX Info: Redefining \% on input line 283.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4109,129 +4305,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[65]
-LaTeX Info: Redefining \. on input line 283.
-LaTeX Info: Redefining \% on input line 283.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[66]
-LaTeX Info: Redefining \. on input line 283.
-LaTeX Info: Redefining \% on input line 283.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[67 <./imagenes/Experimental/AGEUvsCHC.png> <./imagenes/Experimental/Diferencia
-sAGEU.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 294.
-LaTeX Info: Redefining \% on input line 294.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[68 <./imagenes/Experimental/DiferenciasCHC.png>]
-<imagenes/Experimental/Historico.png, id=1108, 288.47775pt x 197.538pt>
-File: imagenes/Experimental/Historico.png Graphic file (type png)
-<use imagenes/Experimental/Historico.png>
-Package pdftex.def Info: imagenes/Experimental/Historico.png  used on input lin
-e 303.
-(pdftex.def)             Requested size: 288.47704pt x 197.5375pt.
-<imagenes/Experimental/AGEUvsGACEP.png, id=1111, 287.8755pt x 197.538pt>
-File: imagenes/Experimental/AGEUvsGACEP.png Graphic file (type png)
-<use imagenes/Experimental/AGEUvsGACEP.png>
-Package pdftex.def Info: imagenes/Experimental/AGEUvsGACEP.png  used on input l
-ine 316.
-(pdftex.def)             Requested size: 287.87479pt x 197.5375pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 326.
-LaTeX Info: Redefining \% on input line 326.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[69 <./imagenes/Experimental/Historico.png>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 335.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<imagenes/Experimental/DiferenciasGACEP.png, id=1121, 289.08pt x 174.05025pt>
-File: imagenes/Experimental/DiferenciasGACEP.png Graphic file (type png)
-<use imagenes/Experimental/DiferenciasGACEP.png>
-Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEP.png  used on in
-put line 438.
-(pdftex.def)             Requested size: 289.07928pt x 174.0498pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 457.
-LaTeX Info: Redefining \% on input line 457.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[70 <./imagenes/Experimental/AGEUvsGACEP.png>]
-LaTeX Info: Redefining \. on input line 457.
-LaTeX Info: Redefining \% on input line 457.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[71]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 464.
-
-LaTeX Info: Redefining \. on input line 527.
-LaTeX Info: Redefining \% on input line 527.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[72 <./imagenes/Experimental/DiferenciasGACEP.png>]
-LaTeX Info: Redefining \. on input line 527.
-LaTeX Info: Redefining \% on input line 527.
+[72]
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4242,25 +4318,207 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [73]
-<imagenes/Experimental/GRASPvswoGRASP.png, id=1145, 289.08pt x 197.538pt>
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[74]
+<imagenes/Experimental/AGEUvsCHC.png, id=1196, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/AGEUvsCHC.png Graphic file (type png)
+<use imagenes/Experimental/AGEUvsCHC.png>
+Package pdftex.def Info: imagenes/Experimental/AGEUvsCHC.png  used on input lin
+e 165.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/AGEUvsCHC.png, id=1197, 230.0595pt x 173.448pt>
+File: imagenes/Experimental/barras/AGEUvsCHC.png Graphic file (type png)
+<use imagenes/Experimental/barras/AGEUvsCHC.png>
+Package pdftex.def Info: imagenes/Experimental/barras/AGEUvsCHC.png  used on in
+put line 172.
+(pdftex.def)             Requested size: 211.26027pt x 159.28296pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 184.
+
+<imagenes/Experimental/DiferenciasAGEU.png, id=1200, 289.68225pt x 174.05025pt>
+
+File: imagenes/Experimental/DiferenciasAGEU.png Graphic file (type png)
+<use imagenes/Experimental/DiferenciasAGEU.png>
+Package pdftex.def Info: imagenes/Experimental/DiferenciasAGEU.png  used on inp
+ut line 223.
+(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 231.
+
+<imagenes/Experimental/DiferenciasCHC.png, id=1205, 289.68225pt x 174.05025pt>
+File: imagenes/Experimental/DiferenciasCHC.png Graphic file (type png)
+<use imagenes/Experimental/DiferenciasCHC.png>
+Package pdftex.def Info: imagenes/Experimental/DiferenciasCHC.png  used on inpu
+t line 270.
+(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 283.
+LaTeX Info: Redefining \% on input line 283.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[75]
+LaTeX Info: Redefining \. on input line 283.
+LaTeX Info: Redefining \% on input line 283.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[76 <./imagenes/Experimental/AGEUvsCHC.png> <./imagenes/Experimental/barras/AGE
+UvsCHC.png> <./imagenes/Experimental/DiferenciasAGEU.png>]
+LaTeX Info: Redefining \. on input line 291.
+LaTeX Info: Redefining \% on input line 291.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[77 <./imagenes/Experimental/DiferenciasCHC.png>]
+<imagenes/Experimental/Historico.png, id=1232, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/Historico.png Graphic file (type png)
+<use imagenes/Experimental/Historico.png>
+Package pdftex.def Info: imagenes/Experimental/Historico.png  used on input lin
+e 299.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/Historico.png, id=1233, 210.7875pt x 174.05025pt>
+
+File: imagenes/Experimental/barras/Historico.png Graphic file (type png)
+<use imagenes/Experimental/barras/Historico.png>
+Package pdftex.def Info: imagenes/Experimental/barras/Historico.png  used on in
+put line 306.
+(pdftex.def)             Requested size: 211.26027pt x 174.44286pt.
+<imagenes/Experimental/AGEUvsGACEPv1.png, id=1236, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/AGEUvsGACEPv1.png Graphic file (type png)
+<use imagenes/Experimental/AGEUvsGACEPv1.png>
+Package pdftex.def Info: imagenes/Experimental/AGEUvsGACEPv1.png  used on input
+ line 325.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/AGEUvsGACEPv1.png, id=1237, 237.88875pt x 170.436
+75pt>
+File: imagenes/Experimental/barras/AGEUvsGACEPv1.png Graphic file (type png)
+<use imagenes/Experimental/barras/AGEUvsGACEPv1.png>
+Package pdftex.def Info: imagenes/Experimental/barras/AGEUvsGACEPv1.png  used o
+n input line 332.
+(pdftex.def)             Requested size: 211.26027pt x 151.36572pt.
+
+Underfull \vbox (badness 1484) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 345.
+LaTeX Info: Redefining \% on input line 345.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[78 <./imagenes/Experimental/Historico.png> <./imagenes/Experimental/barras/His
+torico.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 356.
+
+<imagenes/Experimental/DiferenciasGACEPv1.png, id=1249, 289.68225pt x 174.05025
+pt>
+File: imagenes/Experimental/DiferenciasGACEPv1.png Graphic file (type png)
+<use imagenes/Experimental/DiferenciasGACEPv1.png>
+Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEPv1.png  used on 
+input line 395.
+(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 402.
+LaTeX Info: Redefining \% on input line 402.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[79 <./imagenes/Experimental/AGEUvsGACEPv1.png> <./imagenes/Experimental/barras
+/AGEUvsGACEPv1.png>]
+<imagenes/Experimental/GRASPvswoGRASP.png, id=1260, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/GRASPvswoGRASP.png Graphic file (type png)
 <use imagenes/Experimental/GRASPvswoGRASP.png>
 Package pdftex.def Info: imagenes/Experimental/GRASPvswoGRASP.png  used on inpu
-t line 530.
-(pdftex.def)             Requested size: 289.07928pt x 197.5375pt.
-<imagenes/Experimental/DiferenciasGACEP_GRASP.png, id=1148, 289.68225pt x 174.0
+t line 430.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GRASPvswoGRASP.png, id=1261, 246.9225pt x 174.050
+25pt>
+File: imagenes/Experimental/barras/GRASPvswoGRASP.png Graphic file (type png)
+<use imagenes/Experimental/barras/GRASPvswoGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GRASPvswoGRASP.png  used 
+on input line 437.
+(pdftex.def)             Requested size: 211.26027pt x 148.9101pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 448.
+LaTeX Info: Redefining \% on input line 448.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[80 <./imagenes/Experimental/DiferenciasGACEPv1.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 452.
+
+<imagenes/Experimental/DiferenciasGACEP_GRASP.png, id=1269, 289.68225pt x 174.0
 5025pt>
 File: imagenes/Experimental/DiferenciasGACEP_GRASP.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasGACEP_GRASP.png>
 Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEP_GRASP.png  used
- on input line 581.
+ on input line 491.
 (pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 590.
-LaTeX Info: Redefining \% on input line 590.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 502.
+LaTeX Info: Redefining \% on input line 502.
+
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4269,55 +4527,63 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[74 <./imagenes/Experimental/GRASPvswoGRASP.png>]
-<imagenes/Experimental/GACEPcGRASP.png, id=1156, 287.8755pt x 197.538pt>
+[81 <./imagenes/Experimental/GRASPvswoGRASP.png> <./imagenes/Experimental/barra
+s/GRASPvswoGRASP.png>]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 517.
+<imagenes/Experimental/GACEPcGRASP.png, id=1280, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/GACEPcGRASP.png Graphic file (type png)
 <use imagenes/Experimental/GACEPcGRASP.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPcGRASP.png  used on input l
-ine 608.
-(pdftex.def)             Requested size: 287.87479pt x 197.5375pt.
+ine 525.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GACEPcGRASP.png, id=1281, 258.36525pt x 174.05025
+pt>
+File: imagenes/Experimental/barras/GACEPcGRASP.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPcGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPcGRASP.png  used on 
+input line 532.
+(pdftex.def)             Requested size: 211.26027pt x 142.31842pt.
+LaTeX Info: Redefining \. on input line 538.
+LaTeX Info: Redefining \% on input line 538.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-<imagenes/Experimental/GACEPcwoGRASP.png, id=1158, 288.47775pt x 196.93575pt>
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[82 <./imagenes/Experimental/DiferenciasGACEP_GRASP.png>]
+<imagenes/Experimental/GACEPcwoGRASP.png, id=1289, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/GACEPcwoGRASP.png Graphic file (type png)
 <use imagenes/Experimental/GACEPcwoGRASP.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPcwoGRASP.png  used on input
- line 619.
-(pdftex.def)             Requested size: 288.47704pt x 196.93524pt.
+ line 552.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GACEPcwoGRASP.png, id=1290, 236.68425pt x 174.050
+25pt>
+File: imagenes/Experimental/barras/GACEPcwoGRASP.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPcwoGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPcwoGRASP.png  used o
+n input line 559.
+(pdftex.def)             Requested size: 211.26027pt x 155.36101pt.
+<imagenes/Experimental/GACEPv3c.png, id=1292, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/GACEPv3c.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv3c.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv3c.png  used on input line
+ 576.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GACEPv3c.png, id=1293, 247.52475pt x 174.05025pt>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 622.
-LaTeX Info: Redefining \% on input line 622.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[75 <./imagenes/Experimental/DiferenciasGACEP_GRASP.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 666.
-LaTeX Info: Redefining \% on input line 666.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[76 <./imagenes/Experimental/GACEPcGRASP.png> <./imagenes/Experimental/GACEPcwo
-GRASP.png>]
-LaTeX Info: Redefining \. on input line 666.
-LaTeX Info: Redefining \% on input line 666.
+File: imagenes/Experimental/barras/GACEPv3c.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPv3c.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv3c.png  used on inp
+ut line 583.
+(pdftex.def)             Requested size: 211.26027pt x 148.55421pt.
+LaTeX Info: Redefining \. on input line 589.
+LaTeX Info: Redefining \% on input line 589.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4327,127 +4593,26 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[77]
+[83 <./imagenes/Experimental/GACEPcGRASP.png> <./imagenes/Experimental/barras/G
+ACEPcGRASP.png> <./imagenes/Experimental/GACEPcwoGRASP.png> <./imagenes/Experim
+ental/barras/GACEPcwoGRASP.png>]
+<imagenes/Experimental/GACEPv2vsGACEPv3.png, id=1302, 296.307pt x 166.82326pt>
+File: imagenes/Experimental/GACEPv2vsGACEPv3.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv2vsGACEPv3.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv3.png  used on in
+put line 601.
+(pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
+<imagenes/Experimental/barras/GACEPv2vsGACEPv3.png, id=1303, 263.7855pt x 174.0
+5025pt>
+File: imagenes/Experimental/barras/GACEPv2vsGACEPv3.png Graphic file (type png)
 
-Package caption Warning: \label without proper reference on input line 673.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `table:Parametros' on page 78 undefined on input line 
-672.
-
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-701.
-("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmtt.fd"
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 715.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 741.
-
-
-LaTeX Warning: Float too large for page by 743.235pt on input line 845.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 850.
-
-
-LaTeX Warning: Float too large for page by 756.83499pt on input line 955.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 961.
-
-
-LaTeX Warning: Float too large for page by 718.83557pt on input line 1066.
-
-LaTeX Info: Redefining \. on input line 1068.
-LaTeX Info: Redefining \% on input line 1068.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[78]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1073.
-
-
-Overfull \hbox (210.74884pt too wide) in paragraph at lines 1074--1092
-[][] 
- []
-
-
-Overfull \hbox (281.70682pt too wide) in paragraph at lines 1100--1112
-[][] 
- []
-
-LaTeX Info: Redefining \. on input line 1115.
-LaTeX Info: Redefining \% on input line 1115.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[79]
-LaTeX Info: Redefining \. on input line 1115.
-LaTeX Info: Redefining \% on input line 1115.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[80]
-LaTeX Info: Redefining \. on input line 1115.
-LaTeX Info: Redefining \% on input line 1115.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[81]
-LaTeX Info: Redefining \. on input line 1115.
-LaTeX Info: Redefining \% on input line 1115.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[82]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1149.
-
-
-Overfull \hbox (135.09525pt too wide) in paragraph at lines 1150--1157
-[][] 
- []
-
+<use imagenes/Experimental/barras/GACEPv2vsGACEPv3.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv3.png  use
+d on input line 608.
+(pdftex.def)             Requested size: 211.26027pt x 139.39441pt.
 ) (capitulos/09_Conclusiones.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -4459,21 +4624,35 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[83] [84
+[84 <./imagenes/Experimental/GACEPv3c.png> <./imagenes/Experimental/barras/GACE
+Pv3c.png> <./imagenes/Experimental/GACEPv2vsGACEPv3.png> <./imagenes/Experiment
+al/barras/GACEPv2vsGACEPv3.png>]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[85] [86
 
 ]
-Cap\'{\i }tulo 9.
-) [85] [86
+Cap\'{\i }tulo 11.
+) [87] [88
 
 ]
-Overfull \hbox (5.76938pt too wide) in paragraph at lines 267--267
-\T1/lmr/m/n/10.95 rithms''. En: \T1/lmr/m/it/10.95 IEEE Transac-tions on Evo-lu
--tio-nary Compu-tation \T1/lmr/m/n/10.95 3.2 (jul. de 1999), p�gs. 124[]141.
+Overfull \hbox (0.31184pt too wide) in paragraph at lines 266--266
+\T1/lmr/m/n/10.95 objective com-bi-na-to-rial op-ti-mi-za-tion pro-blems using 
+Novel-First Ta-bu Search and MOEA/D,''
  []
 
-[87]
-LaTeX Info: Redefining \. on input line 259.
-LaTeX Info: Redefining \% on input line 259.
+[89]
+LaTeX Info: Redefining \. on input line 265.
+LaTeX Info: Redefining \% on input line 265.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4483,21 +4662,16 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
-[88]
-Overfull \hbox (1.75105pt too wide) in paragraph at lines 267--267
-[]\T1/lmr/m/n/10.95 C. Witz-gall. ``Mathe-ma-ti-cal Methods of Si-te Se-lec-tio
-n for Elec-tro-nic Mes-sa-ge Sys-tems (EMS)''.
+[90]
+Overfull \hbox (1.74744pt too wide) in paragraph at lines 266--266
+[]\T1/lmr/m/n/10.95 C. Witz-gall, ``Mathe-ma-ti-cal Methods of Si-te Se-lec-tio
+n for Elec-tro-nic Mes-sa-ge Sys-tems (EMS),''
  []
 
+(apendices/resultados.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
-Overfull \hbox (3.17897pt too wide) in paragraph at lines 267--267
-\T1/lmr/m/n/10.95 En: \T1/lmr/m/it/10.95 NA-SA STI/-Re-con Tech-ni-cal Re-port 
-N \T1/lmr/m/n/10.95 76 (jun. de 1975), p�g. 18321. (Vi-si-ta-do 02[]06[]2023). 
-
- []
-
-LaTeX Info: Redefining \. on input line 267.
-LaTeX Info: Redefining \% on input line 267.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 14.1595pt, for example:
@@ -4506,16 +4680,125 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
-[89] [90
+[91] [92
 
-] [91] (proyecto.aux
+]
+Ap\'{e}ndice A.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 4.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 65.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 126.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 187.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 248.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 309.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 370.
+
+) [93]
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[94]
+LaTeX Info: Redefining \. on input line 275.
+LaTeX Info: Redefining \% on input line 275.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[95]
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[96]
+LaTeX Info: Redefining \. on input line 275.
+LaTeX Info: Redefining \% on input line 275.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[97]
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[98]
+LaTeX Info: Redefining \. on input line 275.
+LaTeX Info: Redefining \% on input line 275.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[99]
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[100] [101
+
+] (proyecto.aux
 LaTeX Info: Redefining \sptext on input line 29.
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
 )
-Package rerunfilecheck Info: File `proyecto.out' has not changed.
-(rerunfilecheck)             Checksum: AAF3A56C46FC9419097BC51F65B464DD;4469.
 
+Package rerunfilecheck Warning: File `proyecto.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `proyecto.out':
+(rerunfilecheck)             Before: 824951F06EB7643C4099AFE45D697894;5457
+(rerunfilecheck)             After:  0780A0BE5B559D738C173FEBE034881E;5523.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -4535,18 +4818,18 @@ Package logreq Info: Writing requests to 'proyecto.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25008 strings out of 479696
- 434184 string characters out of 2876991
- 1371461 words of memory out of 3000000
- 41244 multiletter control sequences out of 15000+200000
- 492229 words of font info for 75 fonts, out of 3000000 for 9000
+ 25267 strings out of 479696
+ 441597 string characters out of 2876991
+ 1591321 words of memory out of 3000000
+ 41459 multiletter control sequences out of 15000+200000
+ 499495 words of font info for 77 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,28n,111p,2204b,2440s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKT
-eX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-
-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Fi
-les/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/
-dvips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+ 106i,28n,111p,4325b,2448s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTe
+X/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-m
+athex.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program
+ Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/e
+nc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/M
 iKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
 ic/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C
@@ -4559,11 +4842,12 @@ b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiK
 TeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
 c/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Pr
 ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
-nts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (113 pages, 1065674 bytes).
+ts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lm
+tt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Program F
+iles/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on proyecto.pdf (123 pages, 1131762 bytes).
 PDF statistics:
- 1439 PDF objects out of 1440 (max. 8388607)
- 402 named destinations out of 1000 (max. 500000)
- 584 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1594 PDF objects out of 1728 (max. 8388607)
+ 430 named destinations out of 1000 (max. 500000)
+ 738 words of extra memory for PDF output out of 10000 (max. 10000000)
 

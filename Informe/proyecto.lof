@@ -13,36 +13,46 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Cruce en un punto\relax }}{49}{figure.caption.7}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Cruce en dos puntos\relax }}{49}{figure.caption.8}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Cruce Uniforme\relax }}{49}{figure.caption.9}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Cruce en un punto\relax }}{57}{figure.caption.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Cruce HUX\relax }}{53}{figure.caption.10}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Cruce en dos puntos\relax }}{57}{figure.caption.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Cruce Uniforme\relax }}{57}{figure.caption.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Cruce HUX\relax }}{61}{figure.caption.10}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Comparación de AGEU y CHC\relax }}{67}{figure.caption.11}%
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Comparación de AGEU y CHC\relax }}{76}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Gráfica asociada a la tabla \ref {diferenciasAGEU}\relax }}{67}{figure.caption.12}%
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Gráfica asociada a la tabla \ref {diferenciasAGEU}\relax }}{76}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasCHC}\relax }}{68}{figure.caption.13}%
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasCHC}\relax }}{77}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Resultados de aplicar el histórico\relax }}{69}{figure.caption.14}%
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Comparación de las distintas versiones del histórico\relax }}{78}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Comparación de los resultados del AGEU y la aplicación del histórico\relax }}{70}{figure.caption.15}%
+\contentsline {figure}{\numberline {10.5}{\ignorespaces Comparación de los resultados del AGEU y GACEPv1\relax }}{79}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEP}\relax }}{72}{figure.caption.16}%
+\contentsline {figure}{\numberline {10.6}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEPv1}\relax }}{80}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.7}{\ignorespaces Comparación de los resultados del GACEP y la aplicación de GRASP\relax }}{74}{figure.caption.17}%
+\contentsline {figure}{\numberline {10.7}{\ignorespaces Comparación de los resultados del GACEPv1 y GACEPv2\relax }}{81}{figure.caption.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.8}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEP_GRASP}\relax }}{75}{figure.caption.18}%
+\contentsline {figure}{\numberline {10.8}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEP_GRASP}\relax }}{82}{figure.caption.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.9}{\ignorespaces Comparación de los resultados de los distintos porcentajes de cruce intensivo en GACEP+GRASP\relax }}{76}{figure.caption.19}%
+\contentsline {figure}{\numberline {10.9}{\ignorespaces Comparación de los resultados de los GACEPv3c\texttt {x}\relax }}{83}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.10}{\ignorespaces Comparación de los resultados de los distintos porcentajes de cruce intensivo en GACEP\relax }}{76}{figure.caption.20}%
+\contentsline {figure}{\numberline {10.10}{\ignorespaces Comparación de los resultados de los GACEPv3c\texttt {x}wo\relax }}{83}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10.11}{\ignorespaces Comparación de los resultados de los GACEPv3c50 y GACEPv3c50wo\relax }}{84}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10.12}{\ignorespaces Comparación de los resultados de los GACEPv2 y GACEPv3c50\relax }}{84}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

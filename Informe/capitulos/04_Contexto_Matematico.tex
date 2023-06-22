@@ -1,4 +1,4 @@
-\chapter{Contexto matemático}
+\chapter{Introducción}
 
 Los algoritmos usan operadores matemáticos con el objetivo de alcanzar una solución a los problemas a los que son aplicados y también es necesario obtener el óptimo. 
 La prueba de este hecho puede ser realizada gracias a la teoría de optimización del Análisis Numérico. 
@@ -309,9 +309,10 @@ El término ``gran escala'' depende de la máquina que se encargue de los datos,
 Sin embargo, un problema con restricciones se considerará ser un problema de gran escala cuando el número de variables es $n\geq 100$ y cuando la suma de las condiciones es 100 o mayor. 
 Uno de los problemas más importantes es el trasladar algoritmos eficientes en problemas a pequeña escala a problemas de gran escala.
 
-\section{Programación no lineal sin restricciones}
 
-En esta sección consideraremos algoritmos que traten de resolver el siguiente problema sin restricciones
+\chapter{Programación no lineal sin restricciones}
+
+En este capítulo consideraremos algoritmos que traten de resolver el siguiente problema sin restricciones
 \begin{equation}
 \min_{x\in\mathbb{R}^n}f(x) 
 \label{eq:4.11}
@@ -322,7 +323,7 @@ Es lógico pensar que si somos capaces de resolver este problema, el procedimien
 Asumimos por simplicidad que nuestra función $f$ es continuamente 2-diferenciable en $\mathbb{R}^n$. 
 Además, asumiremos lo siguiente para asegurarnos de la existencia de una solución del problema \ref{eq:4.11}: $\mathcal{L}^0 = \{x\in\mathbb{R}:f(x)\leq f(x^0)\}$ es compacto para algún $x^0\in\mathbb{R}^n$.
 
-\subsection{Algoritmos de Optimización sin restricciones}
+\section{Algoritmos de Optimización sin restricciones}
 
 Ahora presentaremos algunos modelos de algoritmos que serán usados para resolver los problemas previos. 
 Estos tipos de algoritmos están caracterizados por generar una secuencia de puntos, $\{x^k\}$, empezando por un punto inicial $x^0$, usando la siguiente iteración
@@ -364,7 +365,7 @@ Este resultado nos da información sobre cómo es la convergencia en términos d
 
 Procedemos a describir dos métodos conocidos como algoritmos de Búsqueda Lineal y métodos basados en el gradiente.
 
-\subsection{Algoritmos de Búsqueda Lineal}
+\section{Algoritmos de Búsqueda Lineal}
 
 Estos algoritmos están caracterizados por determinar el tamaño de paso $\alpha^k$ junto con la dirección de búsqueda $d^k$. 
 El objetivo es elegir un tamaño de paso que asegure la convergencia de \ref{eq:4.12}. 
@@ -420,7 +421,7 @@ f(x^k +\alpha d^k) \leq f(x^k)-\gamma\alpha^2||d^k||^2
 \label{eq:4.16}
 \end{equation}
 
-\subsection{Métodos de Gradiente}
+\section{Métodos de Gradiente}
 
 El método de gradiente o método del descenso más rápido (\textit{steepest-descent}) se considera un método básico de entre todos los algoritmos de optimización no restringidos. 
 Tiene la regla básica de establecer $d^k = -\nabla f(x^k)$ en \ref{eq:4.12}. 
@@ -459,7 +460,7 @@ Como conclusión, con este resultados podemos comprobar que el gradiente es buen
 Sin embargo, solo podemos probar la convergencia lineal. 
 Desde un punto de vista práctico, el orden de convergencia es muy pobre y depende del número de condiciones de la matriz Hessiana.
 
-\subsection{Métodos de Gradiente Conjugado}
+\section{Métodos de Gradiente Conjugado}
 
 Este algoritmo es muy popular debido a su simplicidad y sus bajos requerimientos computacionales. 
 En efecto, solo necesita saber sobre las derivadas de primer orden. 
@@ -561,7 +562,7 @@ El mecanismo de reinicio se realiza cada $n$ iteraciones o si se da la siguiente
 con $0 < \delta < 1$.
 
 
-\subsection{Métodos de Newton}
+\section{Métodos de Newton}
 
 Este método se considera uno de los algoritmos más potentes para resolver problemas de optimización sin restricciones. 
 La aproximación cuadrática de la función objetivo en un vecindario de la solución actual, $x^k$, considerada es la siguiente
@@ -603,7 +604,7 @@ Un método de Newton convergente debería generar una secuencia de puntos $\{x^k
 
 Hay dos enfoques para diseñar un método de Newton convergente globalmente: un enfoque con búsqueda lineal y un enfoque con regiones de confianza.
 
-\subsubsection{Modificaciones de Búsqueda Lineal en el Método de Newton}
+\subsection{Modificaciones de Búsqueda Lineal en el Método de Newton}
 
 la adaptación del método a este enfoque es el control del tamaño de paso junto con $d_N$ tal que \ref{eq:4.23} se convierte en
 \begin{equation}
@@ -688,7 +689,7 @@ x^{k+1} = x^k + \alpha^kd^k+(\alpha^k)^{\frac{1}{2}}s^k
 donde $d^k$ es una dirección del método de Newton y $s^k$ es una dirección que incluye información de curvatura negativa con respecto a $\nabla^2 f(x^k)$. 
 Con esta idea y algunas modificaciones a la Búsqueda Lineal de Armijo, se pueden crear algoritmos globalmente convergente que además puedan satisfacer las condiciones de optimalidad de segundo orden necesarias para la ecuación \ref{eq:4.11}.
 
-\subsubsection{Modificaciones de Regiones de Confianza en el Método de Newton}
+\subsection{Modificaciones de Regiones de Confianza en el Método de Newton}
 
 Este tipo de algoritmos tienen su iteración principal como muestra la siguiente ecuación
 \begin{equation*}
@@ -750,7 +751,7 @@ Para probar que la convergencia global del algoritmo es suficiente verificar que
 \end{algorithmic}
 \end{algorithm}
 
-\subsubsection{Métodos de Newton Truncados}
+\subsection{Métodos de Newton Truncados}
 
 Los métodos de Newton necesitan calcular la solución de un sistema lineal de ecuaciones en cada iteración. 
 Si echamos un vistazo a problemas a gran escala, resolver este sistema en cada iteración puede resultar demasiada carga computacionalmente hablando. 
@@ -809,7 +810,7 @@ Esto se puede encontrar representado en el Algoritmo \ref{alg:NewtonTruncado}.
 
 Si aplicamos este algoritmo para encontrar una solución aproximada al sistema en el cuarto paso de \ref{alg:LSNewton} o \ref{alg:NonMonotoneNewton}, entonces obtendremos la versión monótona truncada del método de Newton.
 
-\subsubsection{Métodos Quasi-Newton}
+\subsection{Métodos Quasi-Newton}
 
 Estos métodos han sido introducidos con el objetivo de diseñar algoritmos eficientes que no necesiten la evaluación de derivadas de segundo orden. 
 Por tanto, han establecido $d^k$ como la solución de 
@@ -905,7 +906,7 @@ Entonces, la secuencia $\{x^k\}$ converge de forma superlineal a $x^* \Leftright
 Este algoritmo está pensado para problemas de pequeña escala, ya que para los de gran escala, el almacenar una matriz como serían $B^k$ o $H^k$ ocasionaría problemas de almacenamiento. 
 Por lo tanto, para esos problemas la información se obtiene de las últimas iteraciones. 
 
-\subsubsection{Métodos sin derivadas}
+\subsection{Métodos sin derivadas}
 
 Estos métodos no calculan explícitamente las derivadas de $f$. 
 Son adecuados para cuando, o bien, el gradiente de la función objetivo no puede ser calculado, o bien, cuando es computacionalmente costoso. 
@@ -996,6 +997,7 @@ Estos algoritmos proponen formas de alcanzar un óptimo global  de funciones bas
 
 Incluso si la gran cantidad de algoritmos que presentaremos en las próximas secciones, el diseño de cada uno es similar a cómo esta teoría propone el movimiento, es decir, metaheurísticas basando su movimiento en una dirección dada por un vector y el criterio de parada basado en condiciones que normalmente presentan la optimalidad del mejor individuo de la población.
 
+\chapter{Tests estadísticos}
 \section{Comparaciones por parejas}
 
 Las comparaciones por parejas son el tipo de tests estadísticos más simples que un investigador puede aplicar en el contexto de un estudio experimental. 

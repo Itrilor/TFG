@@ -18,44 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{backEvolutionaryComputationOverview1996}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=5dd8a5220c18ca8d45d8699f78e83dfa}{%
-           family={Back},
-           familyi={B\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=5fba16ee50271ea2eaa8f0b27099d46c}{%
-           family={Schwefel},
-           familyi={S\bibinitperiod},
-           given={H.-P.},
-           giveni={H\bibinithyphendelim P\bibinitperiod}}}%
-      }
-      \strng{namehash}{e9673c438d6a587264810fd6b68faaa2}
-      \strng{fullhash}{e9673c438d6a587264810fd6b68faaa2}
-      \strng{bibnamehash}{e9673c438d6a587264810fd6b68faaa2}
-      \strng{authorbibnamehash}{e9673c438d6a587264810fd6b68faaa2}
-      \strng{authornamehash}{e9673c438d6a587264810fd6b68faaa2}
-      \strng{authorfullhash}{e9673c438d6a587264810fd6b68faaa2}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{We present an overview of the most important representatives of algorithms gleaned from natural evolution, so-called evolutionary algorithms. Evolution strategies, evolutionary programming, and genetic algorithms are summarized, with special emphasis on the principle of strategy parameter self-adaptation utilized by the first two algorithms to learn their own strategy parameters such as mutation variances and covariances. Some experimental results are presented which demonstrate the working principle and robustness of the self-adaptation methods used in evolution strategies and evolutionary programming. General principles of evolutionary algorithms are discussed, and we identify certain properties of natural evolution which might help to improve the problem solving capabilities of evolutionary algorithms even further.}
-      \field{booktitle}{Proceedings of {{IEEE International Conference}} on {{Evolutionary Computation}}}
-      \field{month}{5}
-      \field{note}{105 citations (Crossref) [2023-05-31]}
-      \field{shorttitle}{Evolutionary Computation}
-      \field{title}{Evolutionary Computation: {{An}} Overview}
-      \field{year}{1996}
-      \field{pages}{20\bibrangedash 29}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1109/ICEC.1996.542329
-      \endverb
-      \keyw{Algorithm design and analysis,Europe,Evolution (biology),Evolutionary computation,Genetic algorithms,Genetic mutations,Genetic programming,Optimization methods,Problem-solving,Robustness}
-    \endentry
+  \datalist[entry]{none/global//global/global}
     \entry{buiMetaheuristicAlgorithmsOptimizing2019}{article}{}
       \name{author}{1}{}{%
         {{hash=fd3dbc039c32eae9c1c6a4c3e6a7abcc}{%
@@ -70,8 +33,8 @@
       \strng{authorbibnamehash}{fd3dbc039c32eae9c1c6a4c3e6a7abcc}
       \strng{authornamehash}{fd3dbc039c32eae9c1c6a4c3e6a7abcc}
       \strng{authorfullhash}{fd3dbc039c32eae9c1c6a4c3e6a7abcc}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Meta-heuristic algorithms become common approaches in finding sufficiently good solutions for optimization problems. This study proposed and compared three novel hybrid methods, namely Biogeography-based Optimization (BBO), Gravitational Search Algorithm (GSA) and Grey Wolf Optimization (GWO) in combination with the popular Neural Network classifier for forest fire modeling. Dak Nong province was selected as a case study as it had undergone a critical drought season. One thousand three hundred and thirty-eight historic fired locations during the first several months of 2017 were chosen as dependent variables. On the other hand, topological, climatic and socio-economic data were used as independent predictor variables. For accuracy assessment, root mean square error derivable from the neural network was used as an objective function to be optimized by three proposed algorithms. The results showed that the area under Receiver Operating Characteristic curves (AUC) were in BBO (0.9515), GWO (0.9509), (0.9398) outperformed the Regular neural with backpropagation algorithm (AUC = 0.9271). Even though the differences between prediction results were small, but they were significant by using a paired t-test. It could be concluded that three hybrid models are suitable to map forest fire susceptibility in the selected study area and could be considered as alternative methods for studying forest fire in other locations.}
@@ -97,124 +60,6 @@
       \verb C\:\\Users\\irene\\Zotero\\storage\\KQCIZW7W\\Bui - 2019 - Metaheuristic algorithms in optimizing neural netw.pdf
       \endverb
     \endentry
-    \entry{chaturvediModifiedGeneticAlgorithm2019}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=3193831c4904896afb14b9367dac356b}{%
-           family={Chaturvedi},
-           familyi={C\bibinitperiod},
-           given={Stuti},
-           giveni={S\bibinitperiod}}}%
-        {{hash=8fda527335ef1d4e7118133a1466db2f}{%
-           family={Sharma},
-           familyi={S\bibinitperiod},
-           given={Vishnu\bibnamedelima P.},
-           giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \name{editor}{4}{}{%
-        {{hash=ba4342b6c00f21577ca4f15d308f5fd5}{%
-           family={Kolhe},
-           familyi={K\bibinitperiod},
-           given={Mohan\bibnamedelima L.},
-           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=9f7360c37f6aa62211df726c7a616461}{%
-           family={Trivedi},
-           familyi={T\bibinitperiod},
-           given={Munesh\bibnamedelima C.},
-           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=5202ce79f13cb95535e6534e37425db4}{%
-           family={Tiwari},
-           familyi={T\bibinitperiod},
-           given={Shailesh},
-           giveni={S\bibinitperiod}}}%
-        {{hash=e3eeecd558d81022680abd640a5ef986}{%
-           family={Singh},
-           familyi={S\bibinitperiod},
-           given={Vikash\bibnamedelima Kumar},
-           giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Singapore}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{d44357c29c2cfc51fadb294536c8a9aa}
-      \strng{fullhash}{d44357c29c2cfc51fadb294536c8a9aa}
-      \strng{bibnamehash}{d44357c29c2cfc51fadb294536c8a9aa}
-      \strng{authorbibnamehash}{d44357c29c2cfc51fadb294536c8a9aa}
-      \strng{authornamehash}{d44357c29c2cfc51fadb294536c8a9aa}
-      \strng{authorfullhash}{d44357c29c2cfc51fadb294536c8a9aa}
-      \strng{editorbibnamehash}{d551ef60b83cbf435427502a2f359c21}
-      \strng{editornamehash}{d551ef60b83cbf435427502a2f359c21}
-      \strng{editorfullhash}{a192bb9ac20d87a3a2c18dafe36a741d}
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{From several years, genetic algorithms are being used for solving many types of constrained and unconstrained optimization problems. Type of crossover operator, rate of crossover, replacement scheme and mutation rate are some of the essential factors that contribute to the efficiency of GA. Evidently, not one algorithm is suited for every problem according to the free lunch theorem but one form of crossover can solve a large number of problems. So many variants of GA are proposed in the past years with different types of crossover operators. So in this paper, we are introducing a new modified GA with improved crossover by dynamically choosing the type of crossover operator which is going to be used for the problem. Randomized mutation is used and a new virtual population is created which contains the best population so far. The modified GA is tested on 40 benchmark functions and the results are compared with the basic GA and one other GA variant.}
-      \field{booktitle}{Advances in {{Data}} and {{Information Sciences}}}
-      \field{isbn}{9789811302770}
-      \field{langid}{english}
-      \field{series}{Lecture {{Notes}} in {{Networks}} and {{Systems}}}
-      \field{title}{A {{Modified Genetic Algorithm Based}} on {{Improved Crossover Array Approach}}}
-      \field{year}{2019}
-      \field{pages}{117\bibrangedash 127}
-      \range{pages}{11}
-      \verb{doi}
-      \verb 10.1007/978-981-13-0277-0_10
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\624EYK8G\\Chaturvedi y Sharma - 2019 - A Modified Genetic Algorithm Based on Improved Cro.pdf
-      \endverb
-      \keyw{Crossover array,Evolutionary algorithms,GA}
-    \endentry
-    \entry{chengCrossoverIntensiveSearch1994}{article}{}
-      \name{author}{2}{}{%
-        {{hash=bc796c41c1be05a11def32ff52085c86}{%
-           family={Cheng},
-           familyi={C\bibinitperiod},
-           given={Runwei},
-           giveni={R\bibinitperiod}}}%
-        {{hash=cda827ec7da921538663a82033c89621}{%
-           family={Gen},
-           familyi={G\bibinitperiod},
-           given={Mitsuo},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{2abbb290d28bb3ccf502eb32ea859bcf}
-      \strng{fullhash}{2abbb290d28bb3ccf502eb32ea859bcf}
-      \strng{bibnamehash}{2abbb290d28bb3ccf502eb32ea859bcf}
-      \strng{authorbibnamehash}{2abbb290d28bb3ccf502eb32ea859bcf}
-      \strng{authornamehash}{2abbb290d28bb3ccf502eb32ea859bcf}
-      \strng{authorfullhash}{2abbb290d28bb3ccf502eb32ea859bcf}
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This paper describes a new crossover operator for the traveling salesman problem, the greedy selection crossover operator (GSX for short), which is designed for path representation and performed at gene level. It can utilize both of local precedence and global precedence relationship among genes to perform intensive search among solution space to reproduce an improved offspring. It has been compared with other well known crossover operators and the results show that GSX operator is clearly superior to traditional operators. The proposed algorithm can be readily applied to other combinatorial optimization problems if a measure is properly defined based on the global information for a given problem.}
-      \field{issn}{0360-8352}
-      \field{journaltitle}{Computers \& Industrial Engineering}
-      \field{langid}{english}
-      \field{month}{9}
-      \field{number}{1}
-      \field{series}{16th {{Annual Conference}} on {{Computers}} and {{Industrial Engineering}}}
-      \field{title}{Crossover on Intensive Search and Traveling Salesman Problem}
-      \field{urlday}{4}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
-      \field{volume}{27}
-      \field{year}{1994}
-      \field{urldateera}{ce}
-      \field{pages}{485\bibrangedash 488}
-      \range{pages}{4}
-      \verb{doi}
-      \verb 10.1016/0360-8352(94)90340-9
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\F2AFVEXZ\\0360835294903409.html
-      \endverb
-      \keyw{crossover,Genetic algorithm,traveling salesman problem}
-    \endentry
     \entry{demoraesDiversityPreservationMethod2022}{article}{}
       \name{author}{2}{}{%
         {{hash=f5daa28ce09420c13abe35bca2e5d264}{%
@@ -234,8 +79,8 @@
       \strng{authorbibnamehash}{6ee945c863c716a1958452321255f4be}
       \strng{authornamehash}{6ee945c863c716a1958452321255f4be}
       \strng{authorfullhash}{6ee945c863c716a1958452321255f4be}
-      \field{sortinit}{d}
-      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Expensive multi-objective combinatorial optimization problems have constraints in the number of objective function evaluations due to time, financial, or resource restrictions. As most combinatorial problems, they are subject to a high number of duplicated solutions. Given the fact that expensive environments limit the number of objective function evaluations, the existence of duplicated solutions heavily impacts the optimization process due to poor diversity and low convergence speed. This paper proposes the Novel-First Tabu Search, a greedy-strategy mechanism that uses Knowledge-Assisted Local Search methods to preserve the population diversity and increase the exploration and exploitation ability of MOEA/D. Experiments are conducted on constrained, unconstrained, multimodal, deceptive, linear, convex, and non-convex Pareto Front multi-objective combinatorial optimization benchmark problems. This paper also conducts an experiment on the real-world, expensive problem of Well Placement Optimization using a benchmark case based on the Namorado oil field, located in the Campos Basin, Brazil. The experimental results and performance comparison with state-of-the-art algorithms demonstrate that the proposed design significantly preserves diversity and increases convergence without violating the constraint in the number of objective function evaluations.}
@@ -260,398 +105,42 @@
       \endverb
       \keyw{Black-box optimization,Decomposition-based methods,Diversity preservation,Expensive multi-objective combinatorial optimization,Novel-First Tabu Search}
     \endentry
-    \entry{derracPracticalTutorialUse2011}{article}{}
-      \name{author}{4}{}{%
-        {{hash=326598f55585de95b3e267ddc1235fc6}{%
-           family={Derrac},
-           familyi={D\bibinitperiod},
-           given={Joaquín},
-           giveni={J\bibinitperiod}}}%
-        {{hash=1691f3ff4356c12149ac4f858ead7e04}{%
-           family={García},
-           familyi={G\bibinitperiod},
-           given={Salvador},
-           giveni={S\bibinitperiod}}}%
-        {{hash=381bf37312a71cebeee50fc633f67c46}{%
-           family={Molina},
-           familyi={M\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
-           family={Herrera},
-           familyi={H\bibinitperiod},
-           given={Francisco},
-           giveni={F\bibinitperiod}}}%
+    \entry{backEvolutionaryComputationOverview1996}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=5dd8a5220c18ca8d45d8699f78e83dfa}{%
+           family={Back},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5fba16ee50271ea2eaa8f0b27099d46c}{%
+           family={Schwefel},
+           familyi={S\bibinitperiod},
+           given={H.-P.},
+           giveni={H\bibinithyphendelim P\bibinitperiod}}}%
       }
-      \strng{namehash}{611c350b7021377e7872fbeb9aa7bbbc}
-      \strng{fullhash}{4a8fa88c49eab072b90519a259a711e7}
-      \strng{bibnamehash}{611c350b7021377e7872fbeb9aa7bbbc}
-      \strng{authorbibnamehash}{611c350b7021377e7872fbeb9aa7bbbc}
-      \strng{authornamehash}{611c350b7021377e7872fbeb9aa7bbbc}
-      \strng{authorfullhash}{4a8fa88c49eab072b90519a259a711e7}
-      \field{sortinit}{D}
-      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The interest in nonparametric statistical analysis has grown recently in the field of computational intelligence. In many experimental studies, the lack of the required properties for a proper application of parametric procedures –{} independence, normality, and homoscedasticity –{} yields to nonparametric ones the task of performing a rigorous comparison among algorithms.}
-      \field{issn}{22106502}
-      \field{journaltitle}{Swarm and Evolutionary Computation}
-      \field{langid}{english}
-      \field{month}{3}
-      \field{note}{Test Estadisticos No paramétricos \par Mirar la sección 3 y 4 para rellenar el capítulo de Contexto Matemático respecto a los test estadísticos no paramétricos}
-      \field{number}{1}
-      \field{title}{A Practical Tutorial on the Use of Nonparametric Statistical Tests as a Methodology for Comparing Evolutionary and Swarm Intelligence Algorithms}
-      \field{urlday}{20}
-      \field{urlmonth}{5}
-      \field{urlyear}{2023}
-      \field{volume}{1}
-      \field{year}{2011}
-      \field{urldateera}{ce}
-      \field{pages}{3\bibrangedash 18}
-      \range{pages}{16}
-      \verb{doi}
-      \verb 10.1016/j.swevo.2011.02.002
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\R3QTVWLN\\Derrac et al. - 2011 - A practical tutorial on the use of nonparametric s.pdf
-      \endverb
-    \endentry
-    \entry{eibenParameterControlEvolutionary1999}{article}{}
-      \name{author}{3}{}{%
-        {{hash=37f918f86142087e36a5d91ce7026b2c}{%
-           family={Eiben},
-           familyi={E\bibinitperiod},
-           given={A.E.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=f22ce11ece1e793676c268f508284d07}{%
-           family={Hinterding},
-           familyi={H\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
-        {{hash=f8ddcaba3477f0adbf4f08d891669b3a}{%
-           family={Michalewicz},
-           familyi={M\bibinitperiod},
-           given={Z.},
-           giveni={Z\bibinitperiod}}}%
-      }
-      \strng{namehash}{ff27bc905f2d782dc07c724854ea7095}
-      \strng{fullhash}{ff27bc905f2d782dc07c724854ea7095}
-      \strng{bibnamehash}{ff27bc905f2d782dc07c724854ea7095}
-      \strng{authorbibnamehash}{ff27bc905f2d782dc07c724854ea7095}
-      \strng{authornamehash}{ff27bc905f2d782dc07c724854ea7095}
-      \strng{authorfullhash}{ff27bc905f2d782dc07c724854ea7095}
-      \field{sortinit}{E}
-      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The issue of controlling values of various parameters of an evolutionary algorithm is one of the most important and promising areas of research in evolutionary computation: it has a potential of adjusting the algorithm to the problem while solving the problem. In the paper we: 1) revise the terminology, which is unclear and confusing, thereby providing a classification of such control mechanisms, and 2) survey various forms of control which have been studied by the evolutionary computation community in recent years. Our classification covers the major forms of parameter control in evolutionary computation and suggests some directions for further research.}
-      \field{issn}{1941-0026}
-      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
-      \field{month}{7}
-      \field{number}{2}
-      \field{title}{Parameter Control in Evolutionary Algorithms}
-      \field{volume}{3}
-      \field{year}{1999}
-      \field{pages}{124\bibrangedash 141}
-      \range{pages}{18}
-      \verb{doi}
-      \verb 10.1109/4235.771166
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\5EACUB69\\Eiben et al. - 1999 - Parameter control in evolutionary algorithms.pdf;C\:\\Users\\irene\\Zotero\\storage\\2FUU3THK\\771166.html
-      \endverb
-      \keyw{Bridges,Computer science,Evolutionary computation,Genetic mutations,Information technology,Power control,Problem-solving,Real time systems,Terminology}
-    \endentry
-    \entry{eshelmanCHCAdaptiveSearch1991a}{incollection}{}
-      \name{author}{1}{}{%
-        {{hash=974a2d2c0f79c9bdf70c300bcf333045}{%
-           family={Eshelman},
-           familyi={E\bibinitperiod},
-           given={Larry\bibnamedelima J.},
-           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{974a2d2c0f79c9bdf70c300bcf333045}
-      \strng{fullhash}{974a2d2c0f79c9bdf70c300bcf333045}
-      \strng{bibnamehash}{974a2d2c0f79c9bdf70c300bcf333045}
-      \strng{authorbibnamehash}{974a2d2c0f79c9bdf70c300bcf333045}
-      \strng{authornamehash}{974a2d2c0f79c9bdf70c300bcf333045}
-      \strng{authorfullhash}{974a2d2c0f79c9bdf70c300bcf333045}
-      \field{sortinit}{E}
-      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \strng{namehash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{fullhash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{bibnamehash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{authorbibnamehash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{authornamehash}{e9673c438d6a587264810fd6b68faaa2}
+      \strng{authorfullhash}{e9673c438d6a587264810fd6b68faaa2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{This paper describes and analyzes CHC, a nontraditional genetic algorithm which combines a conservative selection strategy that always preserves the best individuals found so far with a radical (highly disruptive) recombination operator that produces offspring that are maximally different from both parents. The traditional reasons for preferring a recombination operator with a low probability of disrupting schemata may not hold when such a conservative selection strategy is used. On the contrary, certain highly disruptive crossover operators provide more effective search. Empirical evidence is provided to support these claims.}
-      \field{booktitle}{Foundations of {{Genetic Algorithms}}}
-      \field{isbn}{978-0-08-050684-5}
-      \field{langid}{english}
-      \field{shorttitle}{The {{CHC Adaptive Search Algorithm}}}
-      \field{title}{The {{CHC Adaptive Search Algorithm}}: {{How}} to {{Have Safe Search When Engaging}} in {{Nontraditional Genetic Recombination}}}
-      \field{urlday}{3}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
-      \field{volume}{1}
-      \field{year}{1991}
-      \field{urldateera}{ce}
-      \field{pages}{265\bibrangedash 283}
-      \range{pages}{19}
-      \verb{doi}
-      \verb 10.1016/B978-0-08-050684-5.50020-3
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\4VKMBFQM\\Eshelman - 1991 - The CHC Adaptive Search Algorithm How to Have Saf.pdf
-      \endverb
-    \endentry
-    \entry{fernandesStudyNonrandomMating2001}{article}{}
-      \name{author}{4}{}{%
-        {{hash=c6f5ff914bfc53a020b9f34dc8d5e376}{%
-           family={Fernandes},
-           familyi={F\bibinitperiod},
-           given={Carlos},
-           giveni={C\bibinitperiod}}}%
-        {{hash=27567c824150098384a6d1e6216aff48}{%
-           family={Rosa},
-           familyi={R\bibinitperiod},
-           given={Agostinho},
-           giveni={A\bibinitperiod}}}%
-        {{hash=7d7f4256bdbd86a6b28c54fe506250e0}{%
-           family={Pais},
-           familyi={P\bibinitperiod},
-           given={Av},
-           giveni={A\bibinitperiod}}}%
-        {{hash=9bfa0e95e55b7754b3f40a076da536ff}{%
-           family={Norte},
-           familyi={N\bibinitperiod},
-           given={Torre},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{58c2d448118d6e0e4a16bbcf50530292}
-      \strng{fullhash}{f5f96db421abeffe2113aed6d0825fc4}
-      \strng{bibnamehash}{58c2d448118d6e0e4a16bbcf50530292}
-      \strng{authorbibnamehash}{58c2d448118d6e0e4a16bbcf50530292}
-      \strng{authornamehash}{58c2d448118d6e0e4a16bbcf50530292}
-      \strng{authorfullhash}{f5f96db421abeffe2113aed6d0825fc4}
-      \field{sortinit}{F}
-      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{In this paper we present a study on the effects of non-random mating and varying population size in Genetic Algorithms (GAs) performance. We tested two algorithms: the non-incest Genetic Algorithm with varying population size (niGAVaPS) and the negative Assortative Mating Genetic Algorithm with varying population size (nAMGAVaPS), on a Royal Road function. These algorithms mimic natural species behavior by selecting parents according to parenthood (niGAVaPS) or phenotype similarity (nAMGAVaPS). We show that both algorithms outperform simple GA in the example shown. The results suggest that this may be due to the fact that genetic diversity is kept at a higher level by niGAVaPS and nAMGAVaPS, preventing the premature convergence of the algorithms to local optima. 1 Introduction The parent selection techniques used in the Simple Genetic Algorithm (simple GA) [Holland75] [Goldberg89] only take into account the individual fitness, that is, its adaptation to the problem (environment). In ...}
-      \field{month}{4}
-      \field{title}{A {{Study}} on {{Non-random Mating}} and {{Varying Population Size}} in {{Genetic Algorithms Using}} a {{Royal Road Function}}}
-      \field{year}{2001}
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\H78UVKKP\\Fernandes et al. - 2001 - A Study on Non-random Mating and Varying Populatio.pdf
-      \endverb
-    \endentry
-    \entry{ferreiraFormulationsValidInequalities1996}{article}{}
-      \name{author}{5}{}{%
-        {{hash=78cbfa603ade27f2f74ac88228031406}{%
-           family={Ferreira},
-           familyi={F\bibinitperiod},
-           given={C.\bibnamedelimi E.},
-           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=eaea332f7b08db00433a4d09ca9ff7c7}{%
-           family={Martin},
-           familyi={M\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=3692cb8f89fe8b5ba3b31aeae0dfbe4a}{%
-           family={{de Souza}},
-           familyi={d\bibinitperiod},
-           given={C.\bibnamedelimi C.},
-           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=d92e348504352810ff5793a38661b580}{%
-           family={Weismantel},
-           familyi={W\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod}}}%
-        {{hash=e4a90d33c20880c276bd58892255cb63}{%
-           family={Wolsey},
-           familyi={W\bibinitperiod},
-           given={L.\bibnamedelimi A.},
-           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \strng{namehash}{9e57ca7c4e391ccf5d5a16e417ca73a7}
-      \strng{fullhash}{7ffb05e34e6e589dd5c01fc68797b7e6}
-      \strng{bibnamehash}{9e57ca7c4e391ccf5d5a16e417ca73a7}
-      \strng{authorbibnamehash}{9e57ca7c4e391ccf5d5a16e417ca73a7}
-      \strng{authornamehash}{9e57ca7c4e391ccf5d5a16e417ca73a7}
-      \strng{authorfullhash}{7ffb05e34e6e589dd5c01fc68797b7e6}
-      \field{sortinit}{F}
-      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{We investigate the problem of partitioning the nodes of a graph under capacity restriction on the sum of the node weights in each subset of the partition. The objective is to minimize the sum of the costs of the edges between the subsets of the partition. This problem has a variety of applications, for instance in the design of electronic circuits and devices. We present alternative integer programming formulations for this problem and discuss the links between these formulations. Having chosen to work in the space of edges of the multicut, we investigate the convex hull of incidence vectors of feasible multicuts. In particular, several classes of inequalities are introduced, and their strength and robustness are analyzed as various problem parameters change.}
-      \field{issn}{1436-4646}
-      \field{journaltitle}{Mathematical Programming}
-      \field{langid}{english}
-      \field{month}{9}
-      \field{number}{3}
-      \field{title}{Formulations and Valid Inequalities for the Node Capacitated Graph Partitioning Problem}
-      \field{urlday}{4}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
-      \field{volume}{74}
+      \field{abstract}{We present an overview of the most important representatives of algorithms gleaned from natural evolution, so-called evolutionary algorithms. Evolution strategies, evolutionary programming, and genetic algorithms are summarized, with special emphasis on the principle of strategy parameter self-adaptation utilized by the first two algorithms to learn their own strategy parameters such as mutation variances and covariances. Some experimental results are presented which demonstrate the working principle and robustness of the self-adaptation methods used in evolution strategies and evolutionary programming. General principles of evolutionary algorithms are discussed, and we identify certain properties of natural evolution which might help to improve the problem solving capabilities of evolutionary algorithms even further.}
+      \field{booktitle}{Proceedings of {{IEEE International Conference}} on {{Evolutionary Computation}}}
+      \field{month}{5}
+      \field{note}{105 citations (Crossref) [2023-05-31]}
+      \field{shorttitle}{Evolutionary Computation}
+      \field{title}{Evolutionary Computation: {{An}} Overview}
       \field{year}{1996}
-      \field{urldateera}{ce}
-      \field{pages}{247\bibrangedash 266}
-      \range{pages}{20}
+      \field{pages}{20\bibrangedash 29}
+      \range{pages}{10}
       \verb{doi}
-      \verb 10.1007/BF02592198
+      \verb 10.1109/ICEC.1996.542329
       \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\MSRXJVDP\\Ferreira et al. - 1996 - Formulations and valid inequalities for the node c.pdf
-      \endverb
-      \keyw{Clustering,Ear decomposition,Equipartition,Graph partitioning,Integer programming,Knapsack}
-    \endentry
-    \entry{galloQuadraticKnapsackProblems1980}{incollection}{}
-      \name{author}{3}{}{%
-        {{hash=f79da7455575ac36076bf62ceea1d147}{%
-           family={Gallo},
-           familyi={G\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=dee838f104cdfee4f27a34524b9cebac}{%
-           family={Hammer},
-           familyi={H\bibinitperiod},
-           given={P.\bibnamedelimi L.},
-           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=7cc0b82716efb72f6054c8711d3ecea9}{%
-           family={Simeone},
-           familyi={S\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod}}}%
-      }
-      \name{editor}{1}{}{%
-        {{hash=818e988deb2e1592c25068a5ff6c945c}{%
-           family={Padberg},
-           familyi={P\bibinitperiod},
-           given={M.\bibnamedelimi W.},
-           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Berlin, Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{63899472c2d01ca3bdb5b2b045098565}
-      \strng{fullhash}{63899472c2d01ca3bdb5b2b045098565}
-      \strng{bibnamehash}{63899472c2d01ca3bdb5b2b045098565}
-      \strng{authorbibnamehash}{63899472c2d01ca3bdb5b2b045098565}
-      \strng{authornamehash}{63899472c2d01ca3bdb5b2b045098565}
-      \strng{authorfullhash}{63899472c2d01ca3bdb5b2b045098565}
-      \strng{editorbibnamehash}{818e988deb2e1592c25068a5ff6c945c}
-      \strng{editornamehash}{818e988deb2e1592c25068a5ff6c945c}
-      \strng{editorfullhash}{818e988deb2e1592c25068a5ff6c945c}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The quadratic knapsack (QK) model naturally arises in a variety of problems in operations research, statistics and combinatorics. Some ``upper planes'' for the QK problem are derived, and their different uses in a branch-and-bound scheme for solving such a problem are discussed. Some theoretical results concerning the class of all upper planes, as well as extensive computational experience, are reported.}
-      \field{booktitle}{Combinatorial {{Optimization}}}
-      \field{isbn}{978-3-642-00802-3}
-      \field{langid}{english}
-      \field{series}{Mathematical {{Programming Studies}}}
-      \field{title}{Quadratic Knapsack Problems}
-      \field{urlday}{4}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
-      \field{year}{1980}
-      \field{urldateera}{ce}
-      \field{pages}{132\bibrangedash 149}
-      \range{pages}{18}
-      \verb{doi}
-      \verb 10.1007/BFb0120892
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\EKQS79JC\\Gallo et al. - 1980 - Quadratic knapsack problems.pdf
-      \endverb
-      \keyw{Branch-and-Bound,Computation,Knapsack Problem,Quadratic Programming,Upper Planes}
-    \endentry
-    \entry{goldbergComparativeAnalysisSelection1991}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=f4dae5bf19584b96b5db33b402a449d8}{%
-           family={Goldberg},
-           familyi={G\bibinitperiod},
-           given={David\bibnamedelima E.},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=b11d1da0cc2920eef235d484e6b858ef}{%
-           family={Deb},
-           familyi={D\bibinitperiod},
-           given={Kalyanmoy},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{49568d7e32fbc88366075e7c08bcc33f}
-      \strng{fullhash}{49568d7e32fbc88366075e7c08bcc33f}
-      \strng{bibnamehash}{49568d7e32fbc88366075e7c08bcc33f}
-      \strng{authorbibnamehash}{49568d7e32fbc88366075e7c08bcc33f}
-      \strng{authornamehash}{49568d7e32fbc88366075e7c08bcc33f}
-      \strng{authorfullhash}{49568d7e32fbc88366075e7c08bcc33f}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Semantic Scholar extracted view of "A Comparative Analysis of Selection Schemes Used in Genetic Algorithms" by D. Goldberg et al.}
-      \field{booktitle}{Foundations of {{Genetic Algorithms}}}
-      \field{isbn}{978-0-08-050684-5}
-      \field{langid}{english}
-      \field{title}{A {{Comparative Analysis}} of {{Selection Schemes Used}} in {{Genetic Algorithms}}}
-      \field{urlday}{17}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
-      \field{volume}{1}
-      \field{year}{1991}
-      \field{urldateera}{ce}
-      \field{pages}{69\bibrangedash 93}
-      \range{pages}{25}
-      \verb{doi}
-      \verb 10.1016/B978-0-08-050684-5.50008-2
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\NDPJLVME\\Goldberg y Deb - 1991 - A Comparative Analysis of Selection Schemes Used i.pdf
-      \endverb
-    \endentry
-    \entry{grefenstetteOptimizationControlParameters1986}{article}{}
-      \name{author}{1}{}{%
-        {{hash=410c88dfb836a5e8d20bf0dcc26b9555}{%
-           family={Grefenstette},
-           familyi={G\bibinitperiod},
-           given={John\bibnamedelima J.},
-           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \strng{namehash}{410c88dfb836a5e8d20bf0dcc26b9555}
-      \strng{fullhash}{410c88dfb836a5e8d20bf0dcc26b9555}
-      \strng{bibnamehash}{410c88dfb836a5e8d20bf0dcc26b9555}
-      \strng{authorbibnamehash}{410c88dfb836a5e8d20bf0dcc26b9555}
-      \strng{authornamehash}{410c88dfb836a5e8d20bf0dcc26b9555}
-      \strng{authorfullhash}{410c88dfb836a5e8d20bf0dcc26b9555}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The task of optimizing a complex system presents at least two levels of problems for the system designer. First, a class of optimization algorithms must be chosen that is suitable for application to the system. Second, various parameters of the optimization algorithm need to be tuned for efficiency. A class of adaptive search procedures called genetic algorithms (GA) has been used to optimize a wide variety of complex systems. GA's are applied to the second level task of identifying efficient GA's for a set of numerical optimization problems. The results are validated on an image registration problem. GA's are shown to be effective for both levels of the systems optimization problem.}
-      \field{issn}{2168-2909}
-      \field{journaltitle}{IEEE Transactions on Systems, Man, and Cybernetics}
-      \field{month}{1}
-      \field{number}{1}
-      \field{title}{Optimization of {{Control Parameters}} for {{Genetic Algorithms}}}
-      \field{volume}{16}
-      \field{year}{1986}
-      \field{pages}{122\bibrangedash 128}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.1109/TSMC.1986.289288
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\BMKPJM7I\\4075583.html
-      \endverb
-      \keyw{Adaptive control,Adaptive systems,Algorithm design and analysis,Control theory,Design optimization,Genetic algorithms,Image registration,Process control,Programmable control,Response surface methodology}
+      \keyw{Algorithm design and analysis,Europe,Evolution (biology),Evolutionary computation,Genetic algorithms,Genetic mutations,Genetic programming,Optimization methods,Problem-solving,Robustness}
     \endentry
     \entry{islamMATHEMATICALPROGRAMMING2020}{book}{}
       \name{author}{1}{}{%
@@ -667,8 +156,8 @@
       \strng{authorbibnamehash}{b8fbdcebc28145a973312fe0f1466582}
       \strng{authornamehash}{b8fbdcebc28145a973312fe0f1466582}
       \strng{authorfullhash}{b8fbdcebc28145a973312fe0f1466582}
-      \field{sortinit}{I}
-      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This book consists of the preliminaries of mathematical programming, convex sets, topics of linear programming, integer linear programming, transportation problem, assignment problem and the basic of optimization using calculus method. Every topic has been presented in a simple way. The book becomes easier to understand for the readers, because, we follow the method definition-example-theory-example-application in writing each section. Students get here some done examples, mostly collected from the question papers of different universities. Exercises are included for home work. By studying the book, readers will learn the applications as well as the basic understanding of mathematical programming.}
@@ -682,334 +171,6 @@
       \verb{file}
       \verb C\:\\Users\\irene\\Zotero\\storage\\LF4BD6K2\\Islam - 2020 - MATHEMATICAL PROGRAMMING.pdf
       \endverb
-    \endentry
-    \entry{jinComprehensiveSurveyFitness2005}{article}{}
-      \name{author}{1}{}{%
-        {{hash=984d7b09d09bdcd32d9fd65096c220c9}{%
-           family={Jin},
-           familyi={J\bibinitperiod},
-           given={Y.},
-           giveni={Y\bibinitperiod}}}%
-      }
-      \strng{namehash}{984d7b09d09bdcd32d9fd65096c220c9}
-      \strng{fullhash}{984d7b09d09bdcd32d9fd65096c220c9}
-      \strng{bibnamehash}{984d7b09d09bdcd32d9fd65096c220c9}
-      \strng{authorbibnamehash}{984d7b09d09bdcd32d9fd65096c220c9}
-      \strng{authornamehash}{984d7b09d09bdcd32d9fd65096c220c9}
-      \strng{authorfullhash}{984d7b09d09bdcd32d9fd65096c220c9}
-      \field{sortinit}{J}
-      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Evolutionary algorithms (EAs) have received increasing interests both in the academy and industry. One main difficulty in applying EAs to real-world applications is that EAs usually need a large number of fitness evaluations before a satisfying result can be obtained. However, fitness evaluations are not always straightforward in many real-world applications. Either an explicit fitness function does not exist, or the evaluation of the fitness is computationally very expensive. In both cases, it is necessary to estimate the fitness function by constructing an approximate model. In this paper, a comprehensive survey of the research on fitness approximation in evolutionary computation is presented. Main issues like approximation levels, approximate model management schemes, model construction techniques are reviewed. To conclude, open questions and interesting issues in the field are discussed.}
-      \field{issn}{1433-7479}
-      \field{journaltitle}{Soft Computing}
-      \field{langid}{english}
-      \field{month}{1}
-      \field{number}{1}
-      \field{title}{A Comprehensive Survey of Fitness Approximation in Evolutionary Computation}
-      \field{urlday}{4}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
-      \field{volume}{9}
-      \field{year}{2005}
-      \field{urldateera}{ce}
-      \field{pages}{3\bibrangedash 12}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1007/s00500-003-0328-5
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\36P6HH5W\\Jin - 2005 - A comprehensive survey of fitness approximation in.pdf
-      \endverb
-      \keyw{Evolutionary computation,Fitness approximation,Meta-model,Optimization}
-    \endentry
-    \entry{latorrePrescriptionMethodologicalGuidelines2021}{article}{}
-      \name{author}{6}{}{%
-        {{hash=5ab6f1257d8b9b91ddc22c3a53873747}{%
-           family={LaTorre},
-           familyi={L\bibinitperiod},
-           given={Antonio},
-           giveni={A\bibinitperiod}}}%
-        {{hash=381bf37312a71cebeee50fc633f67c46}{%
-           family={Molina},
-           familyi={M\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=2285f34b29e97653507b9802e0ac1a5d}{%
-           family={Osaba},
-           familyi={O\bibinitperiod},
-           given={Eneko},
-           giveni={E\bibinitperiod}}}%
-        {{hash=5dc61300e8b99fbf45049395b1eafb69}{%
-           family={Poyatos},
-           familyi={P\bibinitperiod},
-           given={Javier},
-           giveni={J\bibinitperiod}}}%
-        {{hash=cad385a9bc804164f8a02ca66c24913e}{%
-           family={Del\bibnamedelima Ser},
-           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
-           given={Javier},
-           giveni={J\bibinitperiod}}}%
-        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
-           family={Herrera},
-           familyi={H\bibinitperiod},
-           given={Francisco},
-           giveni={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{e764e144fa8c4907da3d0f3d4a6470f0}
-      \strng{fullhash}{f44e612b695b981a48ab756ffd996575}
-      \strng{bibnamehash}{e764e144fa8c4907da3d0f3d4a6470f0}
-      \strng{authorbibnamehash}{e764e144fa8c4907da3d0f3d4a6470f0}
-      \strng{authornamehash}{e764e144fa8c4907da3d0f3d4a6470f0}
-      \strng{authorfullhash}{f44e612b695b981a48ab756ffd996575}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Bio-inspired optimization (including Evolutionary Computation and Swarm Intelligence) is a growing research topic with many competitive bio-inspired algorithms being proposed every year. In such an active area, preparing a successful proposal of a new bio-inspired algorithm is not an easy task. Given the maturity of this research field, proposing a new optimization technique with innovative elements is no longer enough. Apart from the novelty, results reported by the authors should be proven to achieve a significant advance over previous outcomes from the state of the art. Unfortunately, not all new proposals deal with this requirement properly. Some of them fail to select appropriate benchmarks or reference algorithms to compare with. In other cases, the validation process carried out is not defined in a principled way (or is even not done at all). Consequently, the significance of the results presented in such studies cannot be guaranteed. In this work we review several recommendations in the literature and propose methodological guidelines to prepare a successful proposal, taking all these issues into account. We expect these guidelines to be useful not only for authors, but also for reviewers and editors along their assessment of new contributions to the field.}
-      \field{issn}{2210-6502}
-      \field{journaltitle}{Swarm and Evolutionary Computation}
-      \field{langid}{english}
-      \field{month}{12}
-      \field{note}{43 citations (Crossref) [2023-05-31]}
-      \field{title}{A Prescription of Methodological Guidelines for Comparing Bio-Inspired Optimization Algorithms}
-      \field{urlday}{31}
-      \field{urlmonth}{5}
-      \field{urlyear}{2023}
-      \field{volume}{67}
-      \field{year}{2021}
-      \field{urldateera}{ce}
-      \field{pages}{100973}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.swevo.2021.100973
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\NCWKZRNF\\LaTorre et al. - 2021 - A prescription of methodological guidelines for co.pdf
-      \endverb
-      \keyw{Benchmarking,Bio-inspired optimization,Comparison methodologies,Guidelines,Parameter tuning,Recommendations review,Statistical analysis}
-    \endentry
-    \entry{liEvolutionaryComputationExpensive2022}{article}{}
-      \name{author}{3}{}{%
-        {{hash=80062c0a1acd84c7d5dd645d6265bbd6}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Jian-Yu},
-           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
-        {{hash=ddcbbde7f8d5969d3a8658eeb81b16e5}{%
-           family={Zhan},
-           familyi={Z\bibinitperiod},
-           given={Zhi-Hui},
-           giveni={Z\bibinithyphendelim H\bibinitperiod}}}%
-        {{hash=c085572f860d99d03a37c331ee13ff68}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Jun},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{86c7a297bb0308913441b74427cb9f7a}
-      \strng{fullhash}{86c7a297bb0308913441b74427cb9f7a}
-      \strng{bibnamehash}{86c7a297bb0308913441b74427cb9f7a}
-      \strng{authorbibnamehash}{86c7a297bb0308913441b74427cb9f7a}
-      \strng{authornamehash}{86c7a297bb0308913441b74427cb9f7a}
-      \strng{authorfullhash}{86c7a297bb0308913441b74427cb9f7a}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Expensive optimization problem (EOP) widely exists in various significant real-world applications. However, EOP requires expensive or even unaffordable costs for evaluating candidate solutions, which is expensive for the algorithm to find a satisfactory solution. Moreover, due to the fast-growing application demands in the economy and society, such as the emergence of the smart cities, the internet of things, and the big data era, solving EOP more efficiently has become increasingly essential in various fields, which poses great challenges on the problem-solving ability of optimization approach for EOP. Among various optimization approaches, evolutionary computation (EC) is a promising global optimization tool widely used for solving EOP efficiently in the past decades. Given the fruitful advancements of EC for EOP, it is essential to review these advancements in order to synthesize and give previous research experiences and references to aid the development of relevant research fields and real-world applications. Motivated by this, this paper aims to provide a comprehensive survey to show why and how EC can solve EOP efficiently. For this aim, this paper firstly analyzes the total optimization cost of EC in solving EOP. Then, based on the analysis, three promising research directions are pointed out for solving EOP, which are problem approximation and substitution, algorithm design and enhancement, and parallel and distributed computation. Note that, to the best of our knowledge, this paper is the first that outlines the possible directions for efficiently solving EOP by analyzing the total expensive cost. Based on this, existing works are reviewed comprehensively via a taxonomy with four parts, including the above three research directions and the real-world application part. Moreover, some future research directions are also discussed in this paper. It is believed that such a survey can attract attention, encourage discussions, and stimulate new EC research ideas for solving EOP and related real-world applications more efficiently.}
-      \field{issn}{2731-538X, 2731-5398}
-      \field{journaltitle}{Machine Intelligence Research}
-      \field{langid}{english}
-      \field{month}{2}
-      \field{note}{Definición EOP \par ¿Ejemplos?}
-      \field{number}{1}
-      \field{shorttitle}{Evolutionary {{Computation}} for {{Expensive Optimization}}}
-      \field{title}{Evolutionary {{Computation}} for {{Expensive Optimization}}: {{A Survey}}}
-      \field{urlday}{5}
-      \field{urlmonth}{10}
-      \field{urlyear}{2022}
-      \field{volume}{19}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \field{pages}{3\bibrangedash 23}
-      \range{pages}{21}
-      \verb{doi}
-      \verb 10.1007/s11633-022-1317-4
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\V2I6X9CN\\Li et al. - 2022 - Evolutionary Computation for Expensive Optimizatio.pdf
-      \endverb
-    \endentry
-    \entry{lisParallelGeneticAlgorithm1996}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=5efeef6792ca4ca7b431f94e62055b6c}{%
-           family={Lis},
-           familyi={L\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{5efeef6792ca4ca7b431f94e62055b6c}
-      \strng{fullhash}{5efeef6792ca4ca7b431f94e62055b6c}
-      \strng{bibnamehash}{5efeef6792ca4ca7b431f94e62055b6c}
-      \strng{authorbibnamehash}{5efeef6792ca4ca7b431f94e62055b6c}
-      \strng{authornamehash}{5efeef6792ca4ca7b431f94e62055b6c}
-      \strng{authorfullhash}{5efeef6792ca4ca7b431f94e62055b6c}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{A parallel genetic algorithm with dynamic mutation probability is presented. This algorithm is based on the farming model of parallel computation. The basic idea of the dynamic establishing mutation rate is presented. Some experiments on function maximization problems have been performed to study the effects of varying the mutation rate for the parallel model.}
-      \field{booktitle}{Proceedings of {{IEEE International Conference}} on {{Evolutionary Computation}}}
-      \field{month}{5}
-      \field{title}{Parallel Genetic Algorithm with the Dynamic Control Parameter}
-      \field{year}{1996}
-      \field{pages}{324\bibrangedash 329}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/ICEC.1996.542383
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\GSQ4FWHM\\542383.html
-      \endverb
-      \keyw{Biological cells,Convergence,Cost function,Electronics packaging,Genetic algorithms,Genetic mutations,Optimal control,Robustness,Stochastic processes,Testing}
-    \endentry
-    \entry{loboOverviewParameterlessGenetic2008}{article}{}
-      \name{author}{2}{}{%
-        {{hash=c3db8b9316cfc29f0fa794ca5ffa1671}{%
-           family={Lobo},
-           familyi={L\bibinitperiod},
-           given={Fernando},
-           giveni={F\bibinitperiod}}}%
-        {{hash=d55a57c88a14828a53b9e8db48c889d1}{%
-           family={Goldberg},
-           familyi={G\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{3a4a3e65aa341128a192e236509bd7de}
-      \strng{fullhash}{3a4a3e65aa341128a192e236509bd7de}
-      \strng{bibnamehash}{3a4a3e65aa341128a192e236509bd7de}
-      \strng{authorbibnamehash}{3a4a3e65aa341128a192e236509bd7de}
-      \strng{authornamehash}{3a4a3e65aa341128a192e236509bd7de}
-      \strng{authorfullhash}{3a4a3e65aa341128a192e236509bd7de}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This paper presents an overview of the parameter-less genetic algorithm and shows its application to a network expansion prob-lem. The technique simplifies genetic algo-rithm operation by incorporating knowledge of parameter selection and population sizing theory in the genetic algorithm itself.}
-      \field{month}{1}
-      \field{title}{An Overview of the Parameter-Less Genetic Algorithm}
-      \field{year}{2008}
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\GWDF5GB9\\Lobo y Goldberg - 2008 - An overview of the parameter-less genetic algorith.pdf
-      \endverb
-    \endentry
-    \entry{mahfoudCrowdingPreselectionRevisited1992}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=ee1b32f1e82f50f2d319913df0f8050c}{%
-           family={Mahfoud},
-           familyi={M\bibinitperiod},
-           given={Samir\bibnamedelima W.},
-           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \strng{namehash}{ee1b32f1e82f50f2d319913df0f8050c}
-      \strng{fullhash}{ee1b32f1e82f50f2d319913df0f8050c}
-      \strng{bibnamehash}{ee1b32f1e82f50f2d319913df0f8050c}
-      \strng{authorbibnamehash}{ee1b32f1e82f50f2d319913df0f8050c}
-      \strng{authornamehash}{ee1b32f1e82f50f2d319913df0f8050c}
-      \strng{authorfullhash}{ee1b32f1e82f50f2d319913df0f8050c}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This paper considers the related algorithms, crowding and preselection, as potential multimodal function optimizers. It examines the ability of the two algorithms to preserve diversity, especially multimodal diversity. Crowding is analyzed in terms of the number of replacement errors it makes. Diierent strategies for reducing or eliminating error are proposed and examined. Finally, a variation of preselection is presented which approximates crowding, virtually eliminates replacement error, and restores selection pressure.}
-      \field{booktitle}{Parallel {{Problem Solving}} from {{Nature}}}
-      \field{note}{[TLDR] This paper considers the related algorithms, crowding and preselection, as potential multimodal function optimizers and examines the ability of the two algorithms to preserve diversity, especially multi-modal diversity.}
-      \field{title}{Crowding and {{Preselection Revisited}}}
-      \field{urlday}{17}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
-      \field{year}{1992}
-      \field{urldateera}{ce}
-    \endentry
-    \entry{martinezLightsShadowsEvolutionary2021b}{article}{}
-      \name{author}{8}{}{%
-        {{hash=8894728f1d9d2fbdc9a9aeec6e955c25}{%
-           family={Martinez},
-           familyi={M\bibinitperiod},
-           given={Aritz\bibnamedelima D.},
-           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=cad385a9bc804164f8a02ca66c24913e}{%
-           family={Del\bibnamedelima Ser},
-           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
-           given={Javier},
-           giveni={J\bibinitperiod}}}%
-        {{hash=d85a9552ff8d1af3e057e2c4e51cb2b8}{%
-           family={{Villar-Rodriguez}},
-           familyi={V\bibinitperiod},
-           given={Esther},
-           giveni={E\bibinitperiod}}}%
-        {{hash=2285f34b29e97653507b9802e0ac1a5d}{%
-           family={Osaba},
-           familyi={O\bibinitperiod},
-           given={Eneko},
-           giveni={E\bibinitperiod}}}%
-        {{hash=5dc61300e8b99fbf45049395b1eafb69}{%
-           family={Poyatos},
-           familyi={P\bibinitperiod},
-           given={Javier},
-           giveni={J\bibinitperiod}}}%
-        {{hash=5d79f34727bcbbd23065a0c111485c1b}{%
-           family={Tabik},
-           familyi={T\bibinitperiod},
-           given={Siham},
-           giveni={S\bibinitperiod}}}%
-        {{hash=381bf37312a71cebeee50fc633f67c46}{%
-           family={Molina},
-           familyi={M\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
-           family={Herrera},
-           familyi={H\bibinitperiod},
-           given={Francisco},
-           giveni={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{c8bd2a5cd759a0c9c36cbee2b3916456}
-      \strng{fullhash}{dc90df0c4052dfbdc8c2474a5255fd91}
-      \strng{bibnamehash}{c8bd2a5cd759a0c9c36cbee2b3916456}
-      \strng{authorbibnamehash}{c8bd2a5cd759a0c9c36cbee2b3916456}
-      \strng{authornamehash}{c8bd2a5cd759a0c9c36cbee2b3916456}
-      \strng{authorfullhash}{dc90df0c4052dfbdc8c2474a5255fd91}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Much has been said about the fusion of bio-inspired optimization algorithms and Deep Learning models for several purposes: from the discovery of network topologies and hyperparametric configurations with improved performance for a given task, to the optimization of the model's parameters as a replacement for gradient-based solvers. Indeed, the literature is rich in proposals showcasing the application of assorted nature-inspired approaches for these tasks. In this work we comprehensively review and critically examine contributions made so far based on three axes, each addressing a fundamental question in this research avenue: (a) optimization and taxonomy (Why?), including a historical perspective, definitions of optimization problems in Deep Learning, and a taxonomy associated with an in-depth analysis of the literature, (b) critical methodological analysis (How?), which together with two case studies, allows us to address learned lessons and recommendations for good practices following the analysis of the literature, and (c) challenges and new directions of research (What can be done, and what for?). In summary, three axes –{} optimization and taxonomy, critical analysis, and challenges –{} which outline a complete vision of a merger of two technologies drawing up an exciting future for this area of fusion research.}
-      \field{issn}{1566-2535}
-      \field{journaltitle}{Information Fusion}
-      \field{langid}{english}
-      \field{month}{3}
-      \field{note}{12 citations (Crossref) [2023-05-31] \par Neuroevolución}
-      \field{shorttitle}{Lights and Shadows in {{Evolutionary Deep Learning}}}
-      \field{title}{Lights and Shadows in {{Evolutionary Deep Learning}}: {{Taxonomy}}, Critical Methodological Analysis, Cases of Study, Learned Lessons, Recommendations and Challenges}
-      \field{urlday}{31}
-      \field{urlmonth}{5}
-      \field{urlyear}{2023}
-      \field{volume}{67}
-      \field{year}{2021}
-      \field{urldateera}{ce}
-      \field{pages}{161\bibrangedash 194}
-      \range{pages}{34}
-      \verb{doi}
-      \verb 10.1016/j.inffus.2020.10.014
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\JZ9Q3AJJ\\Martinez et al. - 2021 - Lights and shadows in Evolutionary Deep Learning .pdf
-      \endverb
-      \keyw{Deep Learning,Evolutionary Computation,Neuroevolution,Swarm Intelligence}
     \endentry
     \entry{michalewiczHandbookEvolutionaryComputation1997}{book}{}
       \name{author}{3}{}{%
@@ -1041,8 +202,8 @@
       \strng{authorbibnamehash}{59467a8975c4d97daca0924a11366b7e}
       \strng{authornamehash}{59467a8975c4d97daca0924a11366b7e}
       \strng{authorfullhash}{59467a8975c4d97daca0924a11366b7e}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Many scientists and engineers now use the paradigms of evolutionary computation (genetic algorithms, evolution strategies, evolutionary programming, genetic programming, classifier systems, and combinations or hybrids) to tackle problems that are either intractable or unrealistically time consuming to solve through traditional computational strategies. The Handbook of Evolutionary Computation addresses the need for a comprehensive source of reference in the maturing field of evolutionary computation. The handbook is available in a looseleaf print format and an online format.}
@@ -1057,246 +218,96 @@
       \verb C\:\\Users\\irene\\Zotero\\storage\\BUQU67PT\\Michalewicz, D. B. Fogel - 1997 - Handbook of Evolutionary Computation.pdf
       \endverb
     \endentry
-    \entry{pellerinSelfadaptiveParametersGenetic2004}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=e160f2afbf6e7904da33461e162d8784}{%
-           family={Pellerin},
-           familyi={P\bibinitperiod},
-           given={Eric},
-           giveni={E\bibinitperiod}}}%
-        {{hash=8fac3d14d7e1734e4dc10a96a762100e}{%
-           family={Pigeon},
-           familyi={P\bibinitperiod},
-           given={Luc},
-           giveni={L\bibinitperiod}}}%
-        {{hash=8f4ff53192a70a384ddaddcc3e038a82}{%
-           family={Delisle},
-           familyi={D\bibinitperiod},
-           given={Sylvain},
-           giveni={S\bibinitperiod}}}%
+    \entry{smithOperatorParameterAdaptation1997}{article}{}
+      \name{author}{2}{}{%
+        {{hash=24b7be5b577041e83bf3c4fe658111a5}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=476c2d5f90bcc30b8588699a3ba019ff}{%
+           family={Fogarty},
+           familyi={F\bibinitperiod},
+           given={T.\bibnamedelimi C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
-      \name{editor}{1}{}{%
-        {{hash=74394221abe52a4ba3570df0a54bd5a4}{%
-           family={Dasarathy},
-           familyi={D\bibinitperiod},
-           given={Belur\bibnamedelima V.},
-           giveni={B\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      \list{publisher}{1}{%
+        {Springer (part of Springer Nature)}%
       }
-      \list{location}{1}{%
-        {Orlando, FL}%
-      }
-      \strng{namehash}{c310db3fd626aacacf65f6fc02ee5090}
-      \strng{fullhash}{c310db3fd626aacacf65f6fc02ee5090}
-      \strng{bibnamehash}{c310db3fd626aacacf65f6fc02ee5090}
-      \strng{authorbibnamehash}{c310db3fd626aacacf65f6fc02ee5090}
-      \strng{authornamehash}{c310db3fd626aacacf65f6fc02ee5090}
-      \strng{authorfullhash}{c310db3fd626aacacf65f6fc02ee5090}
-      \strng{editorbibnamehash}{74394221abe52a4ba3570df0a54bd5a4}
-      \strng{editornamehash}{74394221abe52a4ba3570df0a54bd5a4}
-      \strng{editorfullhash}{74394221abe52a4ba3570df0a54bd5a4}
-      \field{sortinit}{P}
-      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \strng{namehash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{fullhash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{bibnamehash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{authorbibnamehash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{authornamehash}{bb76ab7a3ed9a8378e34656de7233801}
+      \strng{authorfullhash}{bb76ab7a3ed9a8378e34656de7233801}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Genetic algorithms are powerful search algorithms that can be applied to a wide range of problems. Generally, parameter setting is accomplished prior to running a Genetic Algorithm (GA) and this setting remains unchanged during execution. The problem of interest to us here is the self-adaptive parameters adjustment of a GA. In this research, we propose an approach in which the control of a genetic algorithm's parameters can be encoded within the chromosome of each individual. The parameters' values are entirely dependent on the evolution mechanism and on the problem context. Our preliminary results show that a GA is able to learn and evaluate the quality of self-set parameters according to their degree of contribution to the resolution of the problem. These results are indicative of a promising approach to the development of GAs with self-adaptive parameter settings that do not require the user to pre-adjust parameters at the outset.}
-      \field{booktitle}{Defense and {{Security}}}
-      \field{langid}{english}
-      \field{month}{4}
-      \field{title}{Self-Adaptive Parameters in Genetic Algorithms}
-      \field{urlday}{4}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
-      \field{year}{2004}
-      \field{urldateera}{ce}
-      \field{pages}{53}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1117/12.542156
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\9JDBFBSR\\Pellerin et al. - 2004 - Self-adaptive parameters in genetic algorithms.pdf
-      \endverb
-    \endentry
-    \entry{phamCompetitiveEvolutionNatural1994}{book}{}
-      \name{author}{1}{}{%
-        {{hash=ee568c9a338713e60934e67c3e29dc0a}{%
-           family={Pham},
-           familyi={P\bibinitperiod},
-           given={Tuan},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{ee568c9a338713e60934e67c3e29dc0a}
-      \strng{fullhash}{ee568c9a338713e60934e67c3e29dc0a}
-      \strng{bibnamehash}{ee568c9a338713e60934e67c3e29dc0a}
-      \strng{authorbibnamehash}{ee568c9a338713e60934e67c3e29dc0a}
-      \strng{authornamehash}{ee568c9a338713e60934e67c3e29dc0a}
-      \strng{authorfullhash}{ee568c9a338713e60934e67c3e29dc0a}
-      \field{sortinit}{P}
-      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{One of the main problems in applying evolutionary optimisation methods is the choice of operators and parameter values. This paper propose a competitive evolution method, in which several subpopulations are allowed to compete for computer time. The population with the fittest members, and that with the highest improvement rate in the recent past, are rewarded. When using identical strategies in the subpopulations, this competitive strategy provides an insurance against unlucky runs while extracting only an insignificant cost in terms of extra function evaluations. When using different strategies in the subpopulations, it ensures that the best strategies are used and again the extra cost is not great. Competitive evolution is at its best when an operator —{} or the lack of it —{} may have a very detrimental effect which is not known in advance. Occasional mixing of the best performing subpopulations leads to further improvement.}
-      \field{isbn}{978-3-540-60154-8}
-      \field{month}{1}
-      \field{shorttitle}{Competitive {{Evolution}}}
-      \field{title}{Competitive {{Evolution}}: {{A Natural Approach}} to {{Operator Selection}}.}
-      \field{volume}{956}
-      \field{year}{1994}
-      \field{pages}{60}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1007/3-540-60154-6_47
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\VDKN8S99\\Pham - 1994 - Competitive Evolution A Natural Approach to Opera.pdf
-      \endverb
-    \endentry
-    \entry{pisingerQuadraticKnapsackProblem2007}{article}{}
-      \name{author}{1}{}{%
-        {{hash=27c28bde78e62d4964a22364b7887154}{%
-           family={Pisinger},
-           familyi={P\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{27c28bde78e62d4964a22364b7887154}
-      \strng{fullhash}{27c28bde78e62d4964a22364b7887154}
-      \strng{bibnamehash}{27c28bde78e62d4964a22364b7887154}
-      \strng{authorbibnamehash}{27c28bde78e62d4964a22364b7887154}
-      \strng{authornamehash}{27c28bde78e62d4964a22364b7887154}
-      \strng{authorfullhash}{27c28bde78e62d4964a22364b7887154}
-      \field{sortinit}{P}
-      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The binary quadratic knapsack problem maximizes a quadratic objective function subject to a linear capacity constraint. Due to its simple structure and challenging difficulty it has been studied intensively during the last two decades. The present paper gives a survey of upper bounds presented in the literature, and show the relative tightness of several of the bounds. Techniques for deriving the bounds include relaxation from upper planes, linearization, reformulation, Lagrangian relaxation, Lagrangian decomposition, and semidefinite programming. A short overview of heuristics, reduction techniques, branch-and-bound algorithms and approximation results is given, followed by an overview of valid inequalities for the quadratic knapsack polytope. The paper is concluded by an experimental study where the upper bounds presented are compared with respect to strength and computational effort.}
-      \field{issn}{0166218X}
-      \field{journaltitle}{Discrete Applied Mathematics}
-      \field{langid}{english}
-      \field{month}{3}
-      \field{number}{5}
-      \field{title}{The Quadratic Knapsack Problem—a Survey}
-      \field{urlday}{26}
-      \field{urlmonth}{10}
-      \field{urlyear}{2022}
-      \field{volume}{155}
-      \field{year}{2007}
-      \field{urldateera}{ce}
-      \field{pages}{623\bibrangedash 648}
-      \range{pages}{26}
-      \verb{doi}
-      \verb 10.1016/j.dam.2006.08.007
-      \endverb
-      \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\RJ82WUKI\\Pisinger - 2007 - The quadratic knapsack problem—a survey.pdf
-      \endverb
-    \endentry
-    \entry{poyatosEvoPruneDeepTLEvolutionaryPruning2023a}{article}{}
-      \name{author}{5}{}{%
-        {{hash=5dc61300e8b99fbf45049395b1eafb69}{%
-           family={Poyatos},
-           familyi={P\bibinitperiod},
-           given={Javier},
-           giveni={J\bibinitperiod}}}%
-        {{hash=381bf37312a71cebeee50fc633f67c46}{%
-           family={Molina},
-           familyi={M\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=8894728f1d9d2fbdc9a9aeec6e955c25}{%
-           family={Martinez},
-           familyi={M\bibinitperiod},
-           given={Aritz\bibnamedelima D.},
-           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=cad385a9bc804164f8a02ca66c24913e}{%
-           family={Del\bibnamedelima Ser},
-           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
-           given={Javier},
-           giveni={J\bibinitperiod}}}%
-        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
-           family={Herrera},
-           familyi={H\bibinitperiod},
-           given={Francisco},
-           giveni={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{75dad400a6a02d18a4e0ed6fbf88dede}
-      \strng{fullhash}{ccca09bed6137595c6fcee9370871938}
-      \strng{bibnamehash}{75dad400a6a02d18a4e0ed6fbf88dede}
-      \strng{authorbibnamehash}{75dad400a6a02d18a4e0ed6fbf88dede}
-      \strng{authornamehash}{75dad400a6a02d18a4e0ed6fbf88dede}
-      \strng{authorfullhash}{ccca09bed6137595c6fcee9370871938}
-      \field{sortinit}{P}
-      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{In recent years, Deep Learning models have shown a great performance in complex optimization problems. They generally require large training datasets, which is a limitation in most practical cases. Transfer learning allows importing the first layers of a pre-trained architecture and connecting them to fully-connected layers to adapt them to a new problem. Consequently, the configuration of the these layers becomes crucial for the performance of the model. Unfortunately, the optimization of these models is usually a computationally demanding task. One strategy to optimize Deep Learning models is the pruning scheme. Pruning methods are focused on reducing the complexity of the network, assuming an expected performance penalty of the model once pruned. However, the pruning could potentially be used to improve the performance, using an optimization algorithm to identify and eventually remove unnecessary connections among neurons. This work proposes EvoPruneDeepTL, an evolutionary pruning model for Transfer Learning based Deep Neural Networks which replaces the last fully-connected layers with sparse layers optimized by a genetic algorithm. Depending on its solution encoding strategy, our proposed model can either perform optimized pruning or feature selection over the densely connected part of the neural network. We carry out different experiments with several datasets to assess the benefits of our proposal. Results show the contribution of EvoPruneDeepTL and feature selection to the overall computational efficiency of the network as a result of the optimization process. In particular, the accuracy is improved, reducing at the same time the number of active neurons in the final layers.}
-      \field{issn}{0893-6080}
-      \field{journaltitle}{Neural Networks}
+      \field{abstract}{Genetic Algorithms are a class of powerful, robust search techniques based on genetic inheritance and the Darwinian metaphor of ``Natural Selection''. These algorithms maintain a finite memory of individual points on the search landscape known as the ``population''. Members of the population are usually represented as strings written over some fixed alphabet, each of which has a scalar value attached to it reflecting its quality or ``fitness''. The search may be seen as the iterative application of a number of operators, such as selection, recombination and mutation, to the population with the aim of producing progressively fitter individuals. These operators are usually static, that is to say that their mechanisms, parameters, and probability of application are fixed at the beginning and constant throughout the run of the algorithm. However there is an increasing body of evidence that not only is there no single choice of operators which is optimal for all problems, but that in fact the optimal choice of operators for a given problem will be time-variant i.e. it will depend on such factors as the degree of convergence of the population. Based on theoretical and practical approaches, a number of authors have proposed methods of adaptively controlling one or more of the operators, usually invoking some kind of ``meta-learning'' algorithm, in order to try and improve the performance of the Genetic Algorithm as a function optimiser. In this paper we describe the background to these approaches, and suggest a framework for their classification based on the learning strategy used to control them, and what facets of the algorithm are susceptible to adaptation. We then review a number of significant pieces of work within this context, and draw some conclusions about the relative merits of various approaches and promising directions for future work.}
+      \field{issn}{1432-7643}
+      \field{journaltitle}{Soft Computing}
       \field{langid}{english}
       \field{month}{1}
-      \field{note}{1 citations (Crossref) [2023-05-31] \par Ejemplo concreto de redes neuronales en las que se vieron obligaron a bajar el número}
-      \field{shorttitle}{{{EvoPruneDeepTL}}}
-      \field{title}{{{EvoPruneDeepTL}}: {{An}} Evolutionary Pruning Model for Transfer Learning Based Deep Neural Networks}
+      \field{number}{2}
+      \field{title}{Operator and Parameter Adaptation in Genetic Algorithms}
       \field{urlday}{31}
       \field{urlmonth}{5}
       \field{urlyear}{2023}
-      \field{volume}{158}
-      \field{year}{2023}
+      \field{volume}{1}
+      \field{year}{1997}
       \field{urldateera}{ce}
-      \field{pages}{59\bibrangedash 82}
-      \range{pages}{24}
       \verb{doi}
-      \verb 10.1016/j.neunet.2022.10.011
+      \verb 10.1007/s005000050009
       \endverb
       \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\WDC5ABGW\\Poyatos et al. - 2023 - EvoPruneDeepTL An evolutionary pruning model for .pdf
+      \verb C\:\\Users\\irene\\Zotero\\storage\\N3KCIVP9\\Smith y Fogarty - 1997 - Operator and parameter adaptation in genetic algor.pdf
       \endverb
-      \keyw{Deep learning,Evolutionary algorithms,Feature selection,Pruning,Transfer learning}
     \endentry
-    \entry{qiongbingNewCrossoverMechanism2016}{article}{}
+    \entry{tuRobustStochasticGenetic2004}{article}{}
       \name{author}{2}{}{%
-        {{hash=939095101e35ce606b1d850a1015b2a9}{%
-           family={Qiongbing},
-           familyi={Q\bibinitperiod},
-           given={Zhang},
+        {{hash=9876b411874ee30ff528ecf49da69adc}{%
+           family={Tu},
+           familyi={T\bibinitperiod},
+           given={Z.},
            giveni={Z\bibinitperiod}}}%
-        {{hash=3caa3de4b0a8fb243fd8849a5de03d35}{%
-           family={Lixin},
+        {{hash=a1d6a8772a89bf1aded588e464a1eba5}{%
+           family={Lu},
            familyi={L\bibinitperiod},
-           given={Ding},
-           giveni={D\bibinitperiod}}}%
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
       }
-      \strng{namehash}{4bf297726be669aace7a3e27028f1ab3}
-      \strng{fullhash}{4bf297726be669aace7a3e27028f1ab3}
-      \strng{bibnamehash}{4bf297726be669aace7a3e27028f1ab3}
-      \strng{authorbibnamehash}{4bf297726be669aace7a3e27028f1ab3}
-      \strng{authornamehash}{4bf297726be669aace7a3e27028f1ab3}
-      \strng{authorfullhash}{4bf297726be669aace7a3e27028f1ab3}
-      \field{sortinit}{Q}
-      \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
+      \strng{namehash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{fullhash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{bibnamehash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{authorbibnamehash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{authornamehash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \strng{authorfullhash}{3ac814a3220b9af1da3257662ad8b2d0}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Genetic Algorithm (GA) has found wide application in path optimization problem. In many fields such as navigating system, oil transportation, paths between the starting node and the termination node often have distinct number of relay-nodes, which leads to the corresponding chromosomes would have different length. We refer to chromosomes with non-consistent lengths as the variable-length chromosomes. This paper first investigated GAs with variable-length chromosomes widely used and found that Same Point (SP) crossover is the most popular crossover mechanism. Then, a new crossover mechanism called Same Adjacency (SA) is proposed for GA with variable-length chromosomes for path optimization problem, which outperforms GA with SP by a better search capability as the mathematical analysis shows. The simulation study indicates that GAs with our crossover operators could obtain a better solution, as compared to GAs with SP, while still being able to converge fast in different networks with varied sizes.}
-      \field{issn}{0957-4174}
-      \field{journaltitle}{Expert Systems with Applications}
+      \field{abstract}{Many real-life problems can be formulated as numerical optimization of certain objective functions. However, often an objective function possesses numerous local optima, which could trap an algorithm from moving toward the desired global solution. Evolutionary algorithms (EAs) have emerged to enable global optimization; however, at the present stage, EAs are basically limited to solving small-scale problems due to the constraint of computational efficiency. To improve the search efficiency, this paper presents a stochastic genetic algorithm (StGA). A novel stochastic coding strategy is employed so that the search space is dynamically divided into regions using a stochastic method and explored region-by-region. In each region, a number of children are produced through random sampling, and the best child is chosen to represent the region. The variance values are decreased if at least one of five generated children results in improved fitness, otherwise, the variance values are increased. Experiments on 20 test functions of diverse complexities show that the StGA is able to find the near-optimal solution in all cases. Compared with several other algorithms, StGA achieves not only an improved accuracy, but also a considerable reduction of the computational effort. On average, the computational cost required by StGA is about one order less than the other algorithms. The StGA is also shown to be able to solve large-scale problems.}
+      \field{issn}{1089-778X}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
       \field{langid}{english}
       \field{month}{10}
-      \field{title}{A New Crossover Mechanism for Genetic Algorithms with Variable-Length Chromosomes for Path Optimization Problems}
-      \field{urlday}{4}
-      \field{urlmonth}{6}
+      \field{number}{5}
+      \field{title}{A {{Robust Stochastic Genetic Algorithm}} ({{StGA}}) for {{Global Numerical Optimization}}}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
       \field{urlyear}{2023}
-      \field{volume}{60}
-      \field{year}{2016}
+      \field{volume}{8}
+      \field{year}{2004}
       \field{urldateera}{ce}
-      \field{pages}{183\bibrangedash 189}
-      \range{pages}{7}
+      \field{pages}{456\bibrangedash 470}
+      \range{pages}{15}
       \verb{doi}
-      \verb 10.1016/j.eswa.2016.04.005
+      \verb 10.1109/TEVC.2004.831258
       \endverb
       \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\NVZMF6S6\\S0957417416301634.html
+      \verb C\:\\Users\\irene\\Zotero\\storage\\ZN4WS3BR\\Tu y Lu - 2004 - A Robust Stochastic Genetic Algorithm (StGA) for G.pdf
       \endverb
-      \keyw{Crossover,Genetic algorithm,Path optimal,Variable-length chromosomes}
     \endentry
     \entry{reevesGeneticAlgorithms2010}{incollection}{}
       \name{author}{1}{}{%
@@ -1313,8 +324,8 @@
       \strng{authornamehash}{097242ca0331ff8c3f4e829efbc67f89}
       \strng{authorfullhash}{097242ca0331ff8c3f4e829efbc67f89}
       \field{extraname}{1}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Genetic algorithms (GAs) have become popular as a means of solving hard combinatorial optimization problems. The first part of this chapter briefly traces their history, explains the basic concepts and discusses some of their theoretical aspects. It also references a number of sources for further research into their applications. The second part concentrates on the detailed implementation of a GA. It discusses the fundamentals of encoding a `genotype' in different circumstances and describes the mechanics of population selection and management and the choice of genetic `operators' for generating new populations. In closing, some specific guidelines for using GAs in practice are provided.}
@@ -1350,8 +361,8 @@
       \strng{authornamehash}{09ed34a260e2c224e25fdbc8a435f311}
       \strng{authorfullhash}{09ed34a260e2c224e25fdbc8a435f311}
       \field{extraname}{2}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Genetic algorithms have become increasingly popular as a means of solving hard combinatorial optimization problems of the type familiar in operations research. This feature article will consider what genetic algorithms have achieved in this area, discuss some of the factors that influence their success or failure, and offer a guide for operations researchers who want to get the best out of them.}
@@ -1376,88 +387,47 @@
       \endverb
       \keyw{genetic algorithms,heuristics,optimization}
     \endentry
-    \entry{rhysSelectionProblemShared1970}{article}{}
+    \entry{eshelmanCHCAdaptiveSearch1991a}{incollection}{}
       \name{author}{1}{}{%
-        {{hash=92785f8fb6cfdfc63f4a1f8eb3478874}{%
-           family={Rhys},
-           familyi={R\bibinitperiod},
-           given={J.\bibnamedelimi M.\bibnamedelimi W.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=974a2d2c0f79c9bdf70c300bcf333045}{%
+           family={Eshelman},
+           familyi={E\bibinitperiod},
+           given={Larry\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
-      \strng{namehash}{92785f8fb6cfdfc63f4a1f8eb3478874}
-      \strng{fullhash}{92785f8fb6cfdfc63f4a1f8eb3478874}
-      \strng{bibnamehash}{92785f8fb6cfdfc63f4a1f8eb3478874}
-      \strng{authorbibnamehash}{92785f8fb6cfdfc63f4a1f8eb3478874}
-      \strng{authornamehash}{92785f8fb6cfdfc63f4a1f8eb3478874}
-      \strng{authorfullhash}{92785f8fb6cfdfc63f4a1f8eb3478874}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{974a2d2c0f79c9bdf70c300bcf333045}
+      \strng{fullhash}{974a2d2c0f79c9bdf70c300bcf333045}
+      \strng{bibnamehash}{974a2d2c0f79c9bdf70c300bcf333045}
+      \strng{authorbibnamehash}{974a2d2c0f79c9bdf70c300bcf333045}
+      \strng{authornamehash}{974a2d2c0f79c9bdf70c300bcf333045}
+      \strng{authorfullhash}{974a2d2c0f79c9bdf70c300bcf333045}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{An apparently combinatorial problem is defined, and a method given for solution by reduction to a network flow problem. The basic problem defined is that of assessing the desirability of incurring a number of fixed costs, when the benefits to be obtained cannot be related to individual cost-incurring items (facilities) but only to combinations.}
-      \field{issn}{0025-1909, 1526-5501}
-      \field{journaltitle}{Management Science}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This paper describes and analyzes CHC, a nontraditional genetic algorithm which combines a conservative selection strategy that always preserves the best individuals found so far with a radical (highly disruptive) recombination operator that produces offspring that are maximally different from both parents. The traditional reasons for preferring a recombination operator with a low probability of disrupting schemata may not hold when such a conservative selection strategy is used. On the contrary, certain highly disruptive crossover operators provide more effective search. Empirical evidence is provided to support these claims.}
+      \field{booktitle}{Foundations of {{Genetic Algorithms}}}
+      \field{isbn}{978-0-08-050684-5}
       \field{langid}{english}
-      \field{month}{11}
-      \field{number}{3}
-      \field{title}{A {{Selection Problem}} of {{Shared Fixed Costs}} and {{Network Flows}}}
-      \field{urlday}{4}
+      \field{shorttitle}{The {{CHC Adaptive Search Algorithm}}}
+      \field{title}{The {{CHC Adaptive Search Algorithm}}: {{How}} to {{Have Safe Search When Engaging}} in {{Nontraditional Genetic Recombination}}}
+      \field{urlday}{3}
       \field{urlmonth}{6}
       \field{urlyear}{2023}
-      \field{volume}{17}
-      \field{year}{1970}
+      \field{volume}{1}
+      \field{year}{1991}
       \field{urldateera}{ce}
-      \field{pages}{200\bibrangedash 207}
-      \range{pages}{8}
+      \field{pages}{265\bibrangedash 283}
+      \range{pages}{19}
       \verb{doi}
-      \verb 10.1287/mnsc.17.3.200
-      \endverb
-    \endentry
-    \entry{shanSurveyModelingOptimization2010}{article}{}
-      \name{author}{2}{}{%
-        {{hash=0ffb2734f581a574572c43a43cc16a74}{%
-           family={Shan},
-           familyi={S\bibinitperiod},
-           given={Songqing},
-           giveni={S\bibinitperiod}}}%
-        {{hash=bc6ea281127d4975b45c77c681b13bab}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={G.\bibnamedelimi Gary},
-           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-      }
-      \strng{namehash}{7914caafc165fb5f99fc4524c73634d4}
-      \strng{fullhash}{7914caafc165fb5f99fc4524c73634d4}
-      \strng{bibnamehash}{7914caafc165fb5f99fc4524c73634d4}
-      \strng{authorbibnamehash}{7914caafc165fb5f99fc4524c73634d4}
-      \strng{authornamehash}{7914caafc165fb5f99fc4524c73634d4}
-      \strng{authorfullhash}{7914caafc165fb5f99fc4524c73634d4}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The integration of optimization methodologies with computational analyses/simulations has a profound impact on the product design. Such integration, however, faces multiple challenges. The most eminent challenges arise from high-dimensionality of problems, computationally-expensive analysis/simulation, and unknown function properties (i.e., black-box functions). The merger of these three challenges severely aggravates the difficulty and becomes a major hurdle for design optimization. This paper provides a survey on related modeling and optimization strategies that may help to solve High-dimensional, Expensive (computationally), Black-box (HEB) problems. The survey screens out 207 references including multiple historical reviews on relevant subjects from more than 1,000 papers in a variety of disciplines. This survey has been performed in three areas: strategies tackling high-dimensionality of problems, model approximation techniques, and direct optimization strategies for computationally-expensive black-box functions and promising ideas behind non-gradient optimization algorithms. Major contributions in each area are discussed and presented in an organized manner. The survey exposes that direct modeling and optimization strategies to address HEB problems are scarce and sporadic, partially due to the difficulty of the problem itself. Moreover, it is revealed that current modeling research tends to focus on sampling and modeling techniques themselves and neglect studying and taking the advantages of characteristics of the underlying expensive functions. Based on the survey results, two promising approaches are identified to solve HEB problems. Directions for future research are also discussed.}
-      \field{issn}{1615-1488}
-      \field{journaltitle}{Structural and Multidisciplinary Optimization}
-      \field{langid}{english}
-      \field{month}{3}
-      \field{number}{2}
-      \field{title}{Survey of Modeling and Optimization Strategies to Solve High-Dimensional Design Problems with Computationally-Expensive Black-Box Functions}
-      \field{urlday}{4}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
-      \field{volume}{41}
-      \field{year}{2010}
-      \field{urldateera}{ce}
-      \field{pages}{219\bibrangedash 241}
-      \range{pages}{23}
-      \verb{doi}
-      \verb 10.1007/s00158-009-0420-2
+      \verb 10.1016/B978-0-08-050684-5.50020-3
       \endverb
       \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\PQLG8UW6\\Shan y Wang - 2010 - Survey of modeling and optimization strategies to .pdf
+      \verb C\:\\Users\\irene\\Zotero\\storage\\4VKMBFQM\\Eshelman - 1991 - The CHC Adaptive Search Algorithm How to Have Saf.pdf
       \endverb
-      \keyw{Approximation,Black-box function,Computationally-expensive,Design optimization,High dimensional,Large-scale,Metamodeling,Surrogate}
     \endentry
     \entry{simoesCHCBasedAlgorithmsDynamic2011}{incollection}{}
       \name{author}{2}{}{%
@@ -1546,11 +516,11 @@
       \strng{authorbibnamehash}{21d5e3a8115295a661f9150d3c29be87}
       \strng{authornamehash}{21d5e3a8115295a661f9150d3c29be87}
       \strng{authorfullhash}{21d5e3a8115295a661f9150d3c29be87}
-      \strng{editorbibnamehash}{4ef223b464b3e8271b3567f094abf968}
-      \strng{editornamehash}{4ef223b464b3e8271b3567f094abf968}
+      \strng{editorbibnamehash}{c069a2103af76cc57d572b036653a10a}
+      \strng{editornamehash}{c069a2103af76cc57d572b036653a10a}
       \strng{editorfullhash}{badc638b088e416e5019af3426e9bf42}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The CHC algorithm uses an elitist selection method that, combined with an incest prevention mechanism and a method to diverge the population whenever it converges, allows the maintenance of the population diversity. This algorithm was successfully used in the past for static optimization problems. The use of memory in Evolutionary Algorithms has been proved to be advantageous when dealing with dynamic optimization problems. In this paper we investigate the use of three different explicit memory strategies included in the CHC algorithm. These strategies - direct, immigrant and associative - combined with the CHC algorithm are used to solve different instances of the dynamic Traveling Salesman Problem in cyclic, noisy and random environments. The experimental results, statistically validated, show that the memory schemes significantly improve the performance of the original CHC algorithm for all types of studied environments. Moreover, when compared with the equivalent memory-based standard EAs with the same memory schemes, the memory-based CHC algorithms obtain superior results when the environmental changes are slower.}
@@ -1573,51 +543,144 @@
       \verb C\:\\Users\\irene\\Zotero\\storage\\CWVGL5EC\\Simões y Costa - 2011 - CHC-Based Algorithms for the Dynamic Traveling Sal.pdf
       \endverb
     \endentry
-    \entry{smithOperatorParameterAdaptation1997}{article}{}
-      \name{author}{2}{}{%
-        {{hash=24b7be5b577041e83bf3c4fe658111a5}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={Jim},
+    \entry{liEvolutionaryComputationExpensive2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=80062c0a1acd84c7d5dd645d6265bbd6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jian-Yu},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=ddcbbde7f8d5969d3a8658eeb81b16e5}{%
+           family={Zhan},
+           familyi={Z\bibinitperiod},
+           given={Zhi-Hui},
+           giveni={Z\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=c085572f860d99d03a37c331ee13ff68}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jun},
            giveni={J\bibinitperiod}}}%
-        {{hash=476c2d5f90bcc30b8588699a3ba019ff}{%
-           family={Fogarty},
-           familyi={F\bibinitperiod},
-           given={T.\bibnamedelimi C.},
-           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Springer (part of Springer Nature)}%
+      \strng{namehash}{86c7a297bb0308913441b74427cb9f7a}
+      \strng{fullhash}{86c7a297bb0308913441b74427cb9f7a}
+      \strng{bibnamehash}{86c7a297bb0308913441b74427cb9f7a}
+      \strng{authorbibnamehash}{86c7a297bb0308913441b74427cb9f7a}
+      \strng{authornamehash}{86c7a297bb0308913441b74427cb9f7a}
+      \strng{authorfullhash}{86c7a297bb0308913441b74427cb9f7a}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Expensive optimization problem (EOP) widely exists in various significant real-world applications. However, EOP requires expensive or even unaffordable costs for evaluating candidate solutions, which is expensive for the algorithm to find a satisfactory solution. Moreover, due to the fast-growing application demands in the economy and society, such as the emergence of the smart cities, the internet of things, and the big data era, solving EOP more efficiently has become increasingly essential in various fields, which poses great challenges on the problem-solving ability of optimization approach for EOP. Among various optimization approaches, evolutionary computation (EC) is a promising global optimization tool widely used for solving EOP efficiently in the past decades. Given the fruitful advancements of EC for EOP, it is essential to review these advancements in order to synthesize and give previous research experiences and references to aid the development of relevant research fields and real-world applications. Motivated by this, this paper aims to provide a comprehensive survey to show why and how EC can solve EOP efficiently. For this aim, this paper firstly analyzes the total optimization cost of EC in solving EOP. Then, based on the analysis, three promising research directions are pointed out for solving EOP, which are problem approximation and substitution, algorithm design and enhancement, and parallel and distributed computation. Note that, to the best of our knowledge, this paper is the first that outlines the possible directions for efficiently solving EOP by analyzing the total expensive cost. Based on this, existing works are reviewed comprehensively via a taxonomy with four parts, including the above three research directions and the real-world application part. Moreover, some future research directions are also discussed in this paper. It is believed that such a survey can attract attention, encourage discussions, and stimulate new EC research ideas for solving EOP and related real-world applications more efficiently.}
+      \field{issn}{2731-538X, 2731-5398}
+      \field{journaltitle}{Machine Intelligence Research}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{note}{Definición EOP \par ¿Ejemplos?}
+      \field{number}{1}
+      \field{shorttitle}{Evolutionary {{Computation}} for {{Expensive Optimization}}}
+      \field{title}{Evolutionary {{Computation}} for {{Expensive Optimization}}: {{A Survey}}}
+      \field{urlday}{5}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{volume}{19}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{3\bibrangedash 23}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1007/s11633-022-1317-4
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\V2I6X9CN\\Li et al. - 2022 - Evolutionary Computation for Expensive Optimizatio.pdf
+      \endverb
+    \endentry
+    \entry{jinComprehensiveSurveyFitness2005}{article}{}
+      \name{author}{1}{}{%
+        {{hash=984d7b09d09bdcd32d9fd65096c220c9}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
       }
-      \strng{namehash}{bb76ab7a3ed9a8378e34656de7233801}
-      \strng{fullhash}{bb76ab7a3ed9a8378e34656de7233801}
-      \strng{bibnamehash}{bb76ab7a3ed9a8378e34656de7233801}
-      \strng{authorbibnamehash}{bb76ab7a3ed9a8378e34656de7233801}
-      \strng{authornamehash}{bb76ab7a3ed9a8378e34656de7233801}
-      \strng{authorfullhash}{bb76ab7a3ed9a8378e34656de7233801}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \strng{namehash}{984d7b09d09bdcd32d9fd65096c220c9}
+      \strng{fullhash}{984d7b09d09bdcd32d9fd65096c220c9}
+      \strng{bibnamehash}{984d7b09d09bdcd32d9fd65096c220c9}
+      \strng{authorbibnamehash}{984d7b09d09bdcd32d9fd65096c220c9}
+      \strng{authornamehash}{984d7b09d09bdcd32d9fd65096c220c9}
+      \strng{authorfullhash}{984d7b09d09bdcd32d9fd65096c220c9}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Genetic Algorithms are a class of powerful, robust search techniques based on genetic inheritance and the Darwinian metaphor of ``Natural Selection''. These algorithms maintain a finite memory of individual points on the search landscape known as the ``population''. Members of the population are usually represented as strings written over some fixed alphabet, each of which has a scalar value attached to it reflecting its quality or ``fitness''. The search may be seen as the iterative application of a number of operators, such as selection, recombination and mutation, to the population with the aim of producing progressively fitter individuals. These operators are usually static, that is to say that their mechanisms, parameters, and probability of application are fixed at the beginning and constant throughout the run of the algorithm. However there is an increasing body of evidence that not only is there no single choice of operators which is optimal for all problems, but that in fact the optimal choice of operators for a given problem will be time-variant i.e. it will depend on such factors as the degree of convergence of the population. Based on theoretical and practical approaches, a number of authors have proposed methods of adaptively controlling one or more of the operators, usually invoking some kind of ``meta-learning'' algorithm, in order to try and improve the performance of the Genetic Algorithm as a function optimiser. In this paper we describe the background to these approaches, and suggest a framework for their classification based on the learning strategy used to control them, and what facets of the algorithm are susceptible to adaptation. We then review a number of significant pieces of work within this context, and draw some conclusions about the relative merits of various approaches and promising directions for future work.}
-      \field{issn}{1432-7643}
+      \field{abstract}{Evolutionary algorithms (EAs) have received increasing interests both in the academy and industry. One main difficulty in applying EAs to real-world applications is that EAs usually need a large number of fitness evaluations before a satisfying result can be obtained. However, fitness evaluations are not always straightforward in many real-world applications. Either an explicit fitness function does not exist, or the evaluation of the fitness is computationally very expensive. In both cases, it is necessary to estimate the fitness function by constructing an approximate model. In this paper, a comprehensive survey of the research on fitness approximation in evolutionary computation is presented. Main issues like approximation levels, approximate model management schemes, model construction techniques are reviewed. To conclude, open questions and interesting issues in the field are discussed.}
+      \field{issn}{1433-7479}
       \field{journaltitle}{Soft Computing}
       \field{langid}{english}
       \field{month}{1}
-      \field{number}{2}
-      \field{title}{Operator and Parameter Adaptation in Genetic Algorithms}
-      \field{urlday}{31}
-      \field{urlmonth}{5}
+      \field{number}{1}
+      \field{title}{A Comprehensive Survey of Fitness Approximation in Evolutionary Computation}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
       \field{urlyear}{2023}
-      \field{volume}{1}
-      \field{year}{1997}
+      \field{volume}{9}
+      \field{year}{2005}
       \field{urldateera}{ce}
+      \field{pages}{3\bibrangedash 12}
+      \range{pages}{10}
       \verb{doi}
-      \verb 10.1007/s005000050009
+      \verb 10.1007/s00500-003-0328-5
       \endverb
       \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\N3KCIVP9\\Smith y Fogarty - 1997 - Operator and parameter adaptation in genetic algor.pdf
+      \verb C\:\\Users\\irene\\Zotero\\storage\\36P6HH5W\\Jin - 2005 - A comprehensive survey of fitness approximation in.pdf
       \endverb
+      \keyw{Evolutionary computation,Fitness approximation,Meta-model,Optimization}
+    \endentry
+    \entry{shanSurveyModelingOptimization2010}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0ffb2734f581a574572c43a43cc16a74}{%
+           family={Shan},
+           familyi={S\bibinitperiod},
+           given={Songqing},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bc6ea281127d4975b45c77c681b13bab}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={G.\bibnamedelimi Gary},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7914caafc165fb5f99fc4524c73634d4}
+      \strng{fullhash}{7914caafc165fb5f99fc4524c73634d4}
+      \strng{bibnamehash}{7914caafc165fb5f99fc4524c73634d4}
+      \strng{authorbibnamehash}{7914caafc165fb5f99fc4524c73634d4}
+      \strng{authornamehash}{7914caafc165fb5f99fc4524c73634d4}
+      \strng{authorfullhash}{7914caafc165fb5f99fc4524c73634d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The integration of optimization methodologies with computational analyses/simulations has a profound impact on the product design. Such integration, however, faces multiple challenges. The most eminent challenges arise from high-dimensionality of problems, computationally-expensive analysis/simulation, and unknown function properties (i.e., black-box functions). The merger of these three challenges severely aggravates the difficulty and becomes a major hurdle for design optimization. This paper provides a survey on related modeling and optimization strategies that may help to solve High-dimensional, Expensive (computationally), Black-box (HEB) problems. The survey screens out 207 references including multiple historical reviews on relevant subjects from more than 1,000 papers in a variety of disciplines. This survey has been performed in three areas: strategies tackling high-dimensionality of problems, model approximation techniques, and direct optimization strategies for computationally-expensive black-box functions and promising ideas behind non-gradient optimization algorithms. Major contributions in each area are discussed and presented in an organized manner. The survey exposes that direct modeling and optimization strategies to address HEB problems are scarce and sporadic, partially due to the difficulty of the problem itself. Moreover, it is revealed that current modeling research tends to focus on sampling and modeling techniques themselves and neglect studying and taking the advantages of characteristics of the underlying expensive functions. Based on the survey results, two promising approaches are identified to solve HEB problems. Directions for future research are also discussed.}
+      \field{issn}{1615-1488}
+      \field{journaltitle}{Structural and Multidisciplinary Optimization}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{Survey of Modeling and Optimization Strategies to Solve High-Dimensional Design Problems with Computationally-Expensive Black-Box Functions}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{41}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \field{pages}{219\bibrangedash 241}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1007/s00158-009-0420-2
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\PQLG8UW6\\Shan y Wang - 2010 - Survey of modeling and optimization strategies to .pdf
+      \endverb
+      \keyw{Approximation,Black-box function,Computationally-expensive,Design optimization,High dimensional,Large-scale,Metamodeling,Surrogate}
     \endentry
     \entry{tenneComputationalIntelligenceExpensive2010}{book}{}
       \name{editor}{4}{}{%
@@ -1648,14 +711,14 @@
       \list{publisher}{1}{%
         {Springer}%
       }
-      \strng{namehash}{85cee76bd81694e5f0db85392e8a5a7b}
+      \strng{namehash}{4efe8d264f72ea747122315a7248b13b}
       \strng{fullhash}{4efe8d264f72ea747122315a7248b13b}
-      \strng{bibnamehash}{85cee76bd81694e5f0db85392e8a5a7b}
-      \strng{editorbibnamehash}{85cee76bd81694e5f0db85392e8a5a7b}
-      \strng{editornamehash}{85cee76bd81694e5f0db85392e8a5a7b}
+      \strng{bibnamehash}{4efe8d264f72ea747122315a7248b13b}
+      \strng{editorbibnamehash}{4efe8d264f72ea747122315a7248b13b}
+      \strng{editornamehash}{4efe8d264f72ea747122315a7248b13b}
       \strng{editorfullhash}{4efe8d264f72ea747122315a7248b13b}
-      \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-642-10700-9 978-3-642-10701-6}
@@ -1675,50 +738,727 @@
       \endverb
       \keyw{algorithm,algorithms,computational intelligence,control,data mining,evolution,evolutionary algorithm,fuzzy,intelligence,model,modeling,neural network,neural networks,optimization,simulation}
     \endentry
-    \entry{tuRobustStochasticGenetic2004}{article}{}
-      \name{author}{2}{}{%
-        {{hash=9876b411874ee30ff528ecf49da69adc}{%
-           family={Tu},
+    \entry{martinezLightsShadowsEvolutionary2021b}{article}{}
+      \name{author}{8}{}{%
+        {{hash=8894728f1d9d2fbdc9a9aeec6e955c25}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={Aritz\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=cad385a9bc804164f8a02ca66c24913e}{%
+           family={Del\bibnamedelima Ser},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d85a9552ff8d1af3e057e2c4e51cb2b8}{%
+           family={{Villar-Rodriguez}},
+           familyi={V\bibinitperiod},
+           given={Esther},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2285f34b29e97653507b9802e0ac1a5d}{%
+           family={Osaba},
+           familyi={O\bibinitperiod},
+           given={Eneko},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5dc61300e8b99fbf45049395b1eafb69}{%
+           family={Poyatos},
+           familyi={P\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5d79f34727bcbbd23065a0c111485c1b}{%
+           family={Tabik},
            familyi={T\bibinitperiod},
-           given={Z.},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=a1d6a8772a89bf1aded588e464a1eba5}{%
-           family={Lu},
-           familyi={L\bibinitperiod},
-           given={Y.},
-           giveni={Y\bibinitperiod}}}%
+           given={Siham},
+           giveni={S\bibinitperiod}}}%
+        {{hash=381bf37312a71cebeee50fc633f67c46}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
       }
-      \strng{namehash}{3ac814a3220b9af1da3257662ad8b2d0}
-      \strng{fullhash}{3ac814a3220b9af1da3257662ad8b2d0}
-      \strng{bibnamehash}{3ac814a3220b9af1da3257662ad8b2d0}
-      \strng{authorbibnamehash}{3ac814a3220b9af1da3257662ad8b2d0}
-      \strng{authornamehash}{3ac814a3220b9af1da3257662ad8b2d0}
-      \strng{authorfullhash}{3ac814a3220b9af1da3257662ad8b2d0}
-      \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \strng{namehash}{dc90df0c4052dfbdc8c2474a5255fd91}
+      \strng{fullhash}{dc90df0c4052dfbdc8c2474a5255fd91}
+      \strng{bibnamehash}{dc90df0c4052dfbdc8c2474a5255fd91}
+      \strng{authorbibnamehash}{dc90df0c4052dfbdc8c2474a5255fd91}
+      \strng{authornamehash}{dc90df0c4052dfbdc8c2474a5255fd91}
+      \strng{authorfullhash}{dc90df0c4052dfbdc8c2474a5255fd91}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Many real-life problems can be formulated as numerical optimization of certain objective functions. However, often an objective function possesses numerous local optima, which could trap an algorithm from moving toward the desired global solution. Evolutionary algorithms (EAs) have emerged to enable global optimization; however, at the present stage, EAs are basically limited to solving small-scale problems due to the constraint of computational efficiency. To improve the search efficiency, this paper presents a stochastic genetic algorithm (StGA). A novel stochastic coding strategy is employed so that the search space is dynamically divided into regions using a stochastic method and explored region-by-region. In each region, a number of children are produced through random sampling, and the best child is chosen to represent the region. The variance values are decreased if at least one of five generated children results in improved fitness, otherwise, the variance values are increased. Experiments on 20 test functions of diverse complexities show that the StGA is able to find the near-optimal solution in all cases. Compared with several other algorithms, StGA achieves not only an improved accuracy, but also a considerable reduction of the computational effort. On average, the computational cost required by StGA is about one order less than the other algorithms. The StGA is also shown to be able to solve large-scale problems.}
-      \field{issn}{1089-778X}
-      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Much has been said about the fusion of bio-inspired optimization algorithms and Deep Learning models for several purposes: from the discovery of network topologies and hyperparametric configurations with improved performance for a given task, to the optimization of the model's parameters as a replacement for gradient-based solvers. Indeed, the literature is rich in proposals showcasing the application of assorted nature-inspired approaches for these tasks. In this work we comprehensively review and critically examine contributions made so far based on three axes, each addressing a fundamental question in this research avenue: (a) optimization and taxonomy (Why?), including a historical perspective, definitions of optimization problems in Deep Learning, and a taxonomy associated with an in-depth analysis of the literature, (b) critical methodological analysis (How?), which together with two case studies, allows us to address learned lessons and recommendations for good practices following the analysis of the literature, and (c) challenges and new directions of research (What can be done, and what for?). In summary, three axes –{} optimization and taxonomy, critical analysis, and challenges –{} which outline a complete vision of a merger of two technologies drawing up an exciting future for this area of fusion research.}
+      \field{issn}{1566-2535}
+      \field{journaltitle}{Information Fusion}
       \field{langid}{english}
-      \field{month}{10}
-      \field{number}{5}
-      \field{title}{A {{Robust Stochastic Genetic Algorithm}} ({{StGA}}) for {{Global Numerical Optimization}}}
+      \field{month}{3}
+      \field{note}{12 citations (Crossref) [2023-05-31] \par Neuroevolución}
+      \field{shorttitle}{Lights and Shadows in {{Evolutionary Deep Learning}}}
+      \field{title}{Lights and Shadows in {{Evolutionary Deep Learning}}: {{Taxonomy}}, Critical Methodological Analysis, Cases of Study, Learned Lessons, Recommendations and Challenges}
       \field{urlday}{31}
       \field{urlmonth}{5}
       \field{urlyear}{2023}
-      \field{volume}{8}
-      \field{year}{2004}
+      \field{volume}{67}
+      \field{year}{2021}
       \field{urldateera}{ce}
-      \field{pages}{456\bibrangedash 470}
-      \range{pages}{15}
+      \field{pages}{161\bibrangedash 194}
+      \range{pages}{34}
       \verb{doi}
-      \verb 10.1109/TEVC.2004.831258
+      \verb 10.1016/j.inffus.2020.10.014
       \endverb
       \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\ZN4WS3BR\\Tu y Lu - 2004 - A Robust Stochastic Genetic Algorithm (StGA) for G.pdf
+      \verb C\:\\Users\\irene\\Zotero\\storage\\JZ9Q3AJJ\\Martinez et al. - 2021 - Lights and shadows in Evolutionary Deep Learning .pdf
       \endverb
+      \keyw{Deep Learning,Evolutionary Computation,Neuroevolution,Swarm Intelligence}
+    \endentry
+    \entry{poyatosEvoPruneDeepTLEvolutionaryPruning2023a}{article}{}
+      \name{author}{5}{}{%
+        {{hash=5dc61300e8b99fbf45049395b1eafb69}{%
+           family={Poyatos},
+           familyi={P\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=381bf37312a71cebeee50fc633f67c46}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8894728f1d9d2fbdc9a9aeec6e955c25}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={Aritz\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=cad385a9bc804164f8a02ca66c24913e}{%
+           family={Del\bibnamedelima Ser},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccca09bed6137595c6fcee9370871938}
+      \strng{fullhash}{ccca09bed6137595c6fcee9370871938}
+      \strng{bibnamehash}{ccca09bed6137595c6fcee9370871938}
+      \strng{authorbibnamehash}{ccca09bed6137595c6fcee9370871938}
+      \strng{authornamehash}{ccca09bed6137595c6fcee9370871938}
+      \strng{authorfullhash}{ccca09bed6137595c6fcee9370871938}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In recent years, Deep Learning models have shown a great performance in complex optimization problems. They generally require large training datasets, which is a limitation in most practical cases. Transfer learning allows importing the first layers of a pre-trained architecture and connecting them to fully-connected layers to adapt them to a new problem. Consequently, the configuration of the these layers becomes crucial for the performance of the model. Unfortunately, the optimization of these models is usually a computationally demanding task. One strategy to optimize Deep Learning models is the pruning scheme. Pruning methods are focused on reducing the complexity of the network, assuming an expected performance penalty of the model once pruned. However, the pruning could potentially be used to improve the performance, using an optimization algorithm to identify and eventually remove unnecessary connections among neurons. This work proposes EvoPruneDeepTL, an evolutionary pruning model for Transfer Learning based Deep Neural Networks which replaces the last fully-connected layers with sparse layers optimized by a genetic algorithm. Depending on its solution encoding strategy, our proposed model can either perform optimized pruning or feature selection over the densely connected part of the neural network. We carry out different experiments with several datasets to assess the benefits of our proposal. Results show the contribution of EvoPruneDeepTL and feature selection to the overall computational efficiency of the network as a result of the optimization process. In particular, the accuracy is improved, reducing at the same time the number of active neurons in the final layers.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{note}{1 citations (Crossref) [2023-05-31] \par Ejemplo concreto de redes neuronales en las que se vieron obligaron a bajar el número}
+      \field{shorttitle}{{{EvoPruneDeepTL}}}
+      \field{title}{{{EvoPruneDeepTL}}: {{An}} Evolutionary Pruning Model for Transfer Learning Based Deep Neural Networks}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{158}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{59\bibrangedash 82}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1016/j.neunet.2022.10.011
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\WDC5ABGW\\Poyatos et al. - 2023 - EvoPruneDeepTL An evolutionary pruning model for .pdf
+      \endverb
+      \keyw{Deep learning,Evolutionary algorithms,Feature selection,Pruning,Transfer learning}
+    \endentry
+    \entry{pellerinSelfadaptiveParametersGenetic2004}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=e160f2afbf6e7904da33461e162d8784}{%
+           family={Pellerin},
+           familyi={P\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8fac3d14d7e1734e4dc10a96a762100e}{%
+           family={Pigeon},
+           familyi={P\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8f4ff53192a70a384ddaddcc3e038a82}{%
+           family={Delisle},
+           familyi={D\bibinitperiod},
+           given={Sylvain},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=74394221abe52a4ba3570df0a54bd5a4}{%
+           family={Dasarathy},
+           familyi={D\bibinitperiod},
+           given={Belur\bibnamedelima V.},
+           giveni={B\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Orlando, FL}%
+      }
+      \strng{namehash}{c310db3fd626aacacf65f6fc02ee5090}
+      \strng{fullhash}{c310db3fd626aacacf65f6fc02ee5090}
+      \strng{bibnamehash}{c310db3fd626aacacf65f6fc02ee5090}
+      \strng{authorbibnamehash}{c310db3fd626aacacf65f6fc02ee5090}
+      \strng{authornamehash}{c310db3fd626aacacf65f6fc02ee5090}
+      \strng{authorfullhash}{c310db3fd626aacacf65f6fc02ee5090}
+      \strng{editorbibnamehash}{74394221abe52a4ba3570df0a54bd5a4}
+      \strng{editornamehash}{74394221abe52a4ba3570df0a54bd5a4}
+      \strng{editorfullhash}{74394221abe52a4ba3570df0a54bd5a4}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genetic algorithms are powerful search algorithms that can be applied to a wide range of problems. Generally, parameter setting is accomplished prior to running a Genetic Algorithm (GA) and this setting remains unchanged during execution. The problem of interest to us here is the self-adaptive parameters adjustment of a GA. In this research, we propose an approach in which the control of a genetic algorithm's parameters can be encoded within the chromosome of each individual. The parameters' values are entirely dependent on the evolution mechanism and on the problem context. Our preliminary results show that a GA is able to learn and evaluate the quality of self-set parameters according to their degree of contribution to the resolution of the problem. These results are indicative of a promising approach to the development of GAs with self-adaptive parameter settings that do not require the user to pre-adjust parameters at the outset.}
+      \field{booktitle}{Defense and {{Security}}}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{title}{Self-Adaptive Parameters in Genetic Algorithms}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \field{pages}{53}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1117/12.542156
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\9JDBFBSR\\Pellerin et al. - 2004 - Self-adaptive parameters in genetic algorithms.pdf
+      \endverb
+    \endentry
+    \entry{eibenParameterControlEvolutionary1999}{article}{}
+      \name{author}{3}{}{%
+        {{hash=37f918f86142087e36a5d91ce7026b2c}{%
+           family={Eiben},
+           familyi={E\bibinitperiod},
+           given={A.E.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f22ce11ece1e793676c268f508284d07}{%
+           family={Hinterding},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f8ddcaba3477f0adbf4f08d891669b3a}{%
+           family={Michalewicz},
+           familyi={M\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff27bc905f2d782dc07c724854ea7095}
+      \strng{fullhash}{ff27bc905f2d782dc07c724854ea7095}
+      \strng{bibnamehash}{ff27bc905f2d782dc07c724854ea7095}
+      \strng{authorbibnamehash}{ff27bc905f2d782dc07c724854ea7095}
+      \strng{authornamehash}{ff27bc905f2d782dc07c724854ea7095}
+      \strng{authorfullhash}{ff27bc905f2d782dc07c724854ea7095}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The issue of controlling values of various parameters of an evolutionary algorithm is one of the most important and promising areas of research in evolutionary computation: it has a potential of adjusting the algorithm to the problem while solving the problem. In the paper we: 1) revise the terminology, which is unclear and confusing, thereby providing a classification of such control mechanisms, and 2) survey various forms of control which have been studied by the evolutionary computation community in recent years. Our classification covers the major forms of parameter control in evolutionary computation and suggests some directions for further research.}
+      \field{issn}{1941-0026}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{month}{7}
+      \field{number}{2}
+      \field{title}{Parameter Control in Evolutionary Algorithms}
+      \field{volume}{3}
+      \field{year}{1999}
+      \field{pages}{124\bibrangedash 141}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1109/4235.771166
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\5EACUB69\\Eiben et al. - 1999 - Parameter control in evolutionary algorithms.pdf;C\:\\Users\\irene\\Zotero\\storage\\2FUU3THK\\771166.html
+      \endverb
+      \keyw{Bridges,Computer science,Evolutionary computation,Genetic mutations,Information technology,Power control,Problem-solving,Real time systems,Terminology}
+    \endentry
+    \entry{loboOverviewParameterlessGenetic2008}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c3db8b9316cfc29f0fa794ca5ffa1671}{%
+           family={Lobo},
+           familyi={L\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d55a57c88a14828a53b9e8db48c889d1}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a4a3e65aa341128a192e236509bd7de}
+      \strng{fullhash}{3a4a3e65aa341128a192e236509bd7de}
+      \strng{bibnamehash}{3a4a3e65aa341128a192e236509bd7de}
+      \strng{authorbibnamehash}{3a4a3e65aa341128a192e236509bd7de}
+      \strng{authornamehash}{3a4a3e65aa341128a192e236509bd7de}
+      \strng{authorfullhash}{3a4a3e65aa341128a192e236509bd7de}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents an overview of the parameter-less genetic algorithm and shows its application to a network expansion prob-lem. The technique simplifies genetic algo-rithm operation by incorporating knowledge of parameter selection and population sizing theory in the genetic algorithm itself.}
+      \field{month}{1}
+      \field{title}{An Overview of the Parameter-Less Genetic Algorithm}
+      \field{year}{2008}
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\GWDF5GB9\\Lobo y Goldberg - 2008 - An overview of the parameter-less genetic algorith.pdf
+      \endverb
+    \endentry
+    \entry{lisParallelGeneticAlgorithm1996}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=5efeef6792ca4ca7b431f94e62055b6c}{%
+           family={Lis},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{5efeef6792ca4ca7b431f94e62055b6c}
+      \strng{fullhash}{5efeef6792ca4ca7b431f94e62055b6c}
+      \strng{bibnamehash}{5efeef6792ca4ca7b431f94e62055b6c}
+      \strng{authorbibnamehash}{5efeef6792ca4ca7b431f94e62055b6c}
+      \strng{authornamehash}{5efeef6792ca4ca7b431f94e62055b6c}
+      \strng{authorfullhash}{5efeef6792ca4ca7b431f94e62055b6c}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A parallel genetic algorithm with dynamic mutation probability is presented. This algorithm is based on the farming model of parallel computation. The basic idea of the dynamic establishing mutation rate is presented. Some experiments on function maximization problems have been performed to study the effects of varying the mutation rate for the parallel model.}
+      \field{booktitle}{Proceedings of {{IEEE International Conference}} on {{Evolutionary Computation}}}
+      \field{month}{5}
+      \field{title}{Parallel Genetic Algorithm with the Dynamic Control Parameter}
+      \field{year}{1996}
+      \field{pages}{324\bibrangedash 329}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICEC.1996.542383
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\GSQ4FWHM\\542383.html
+      \endverb
+      \keyw{Biological cells,Convergence,Cost function,Electronics packaging,Genetic algorithms,Genetic mutations,Optimal control,Robustness,Stochastic processes,Testing}
+    \endentry
+    \entry{grefenstetteOptimizationControlParameters1986}{article}{}
+      \name{author}{1}{}{%
+        {{hash=410c88dfb836a5e8d20bf0dcc26b9555}{%
+           family={Grefenstette},
+           familyi={G\bibinitperiod},
+           given={John\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{410c88dfb836a5e8d20bf0dcc26b9555}
+      \strng{fullhash}{410c88dfb836a5e8d20bf0dcc26b9555}
+      \strng{bibnamehash}{410c88dfb836a5e8d20bf0dcc26b9555}
+      \strng{authorbibnamehash}{410c88dfb836a5e8d20bf0dcc26b9555}
+      \strng{authornamehash}{410c88dfb836a5e8d20bf0dcc26b9555}
+      \strng{authorfullhash}{410c88dfb836a5e8d20bf0dcc26b9555}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The task of optimizing a complex system presents at least two levels of problems for the system designer. First, a class of optimization algorithms must be chosen that is suitable for application to the system. Second, various parameters of the optimization algorithm need to be tuned for efficiency. A class of adaptive search procedures called genetic algorithms (GA) has been used to optimize a wide variety of complex systems. GA's are applied to the second level task of identifying efficient GA's for a set of numerical optimization problems. The results are validated on an image registration problem. GA's are shown to be effective for both levels of the systems optimization problem.}
+      \field{issn}{2168-2909}
+      \field{journaltitle}{IEEE Transactions on Systems, Man, and Cybernetics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Optimization of {{Control Parameters}} for {{Genetic Algorithms}}}
+      \field{volume}{16}
+      \field{year}{1986}
+      \field{pages}{122\bibrangedash 128}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/TSMC.1986.289288
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\BMKPJM7I\\4075583.html
+      \endverb
+      \keyw{Adaptive control,Adaptive systems,Algorithm design and analysis,Control theory,Design optimization,Genetic algorithms,Image registration,Process control,Programmable control,Response surface methodology}
+    \endentry
+    \entry{phamCompetitiveEvolutionNatural1994}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ee568c9a338713e60934e67c3e29dc0a}{%
+           family={Pham},
+           familyi={P\bibinitperiod},
+           given={Tuan},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee568c9a338713e60934e67c3e29dc0a}
+      \strng{fullhash}{ee568c9a338713e60934e67c3e29dc0a}
+      \strng{bibnamehash}{ee568c9a338713e60934e67c3e29dc0a}
+      \strng{authorbibnamehash}{ee568c9a338713e60934e67c3e29dc0a}
+      \strng{authornamehash}{ee568c9a338713e60934e67c3e29dc0a}
+      \strng{authorfullhash}{ee568c9a338713e60934e67c3e29dc0a}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{One of the main problems in applying evolutionary optimisation methods is the choice of operators and parameter values. This paper propose a competitive evolution method, in which several subpopulations are allowed to compete for computer time. The population with the fittest members, and that with the highest improvement rate in the recent past, are rewarded. When using identical strategies in the subpopulations, this competitive strategy provides an insurance against unlucky runs while extracting only an insignificant cost in terms of extra function evaluations. When using different strategies in the subpopulations, it ensures that the best strategies are used and again the extra cost is not great. Competitive evolution is at its best when an operator —{} or the lack of it —{} may have a very detrimental effect which is not known in advance. Occasional mixing of the best performing subpopulations leads to further improvement.}
+      \field{isbn}{978-3-540-60154-8}
+      \field{month}{1}
+      \field{shorttitle}{Competitive {{Evolution}}}
+      \field{title}{Competitive {{Evolution}}: {{A Natural Approach}} to {{Operator Selection}}.}
+      \field{volume}{956}
+      \field{year}{1994}
+      \field{pages}{60}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/3-540-60154-6_47
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\VDKN8S99\\Pham - 1994 - Competitive Evolution A Natural Approach to Opera.pdf
+      \endverb
+    \endentry
+    \entry{chaturvediModifiedGeneticAlgorithm2019}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=3193831c4904896afb14b9367dac356b}{%
+           family={Chaturvedi},
+           familyi={C\bibinitperiod},
+           given={Stuti},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8fda527335ef1d4e7118133a1466db2f}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Vishnu\bibnamedelima P.},
+           giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=ba4342b6c00f21577ca4f15d308f5fd5}{%
+           family={Kolhe},
+           familyi={K\bibinitperiod},
+           given={Mohan\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=9f7360c37f6aa62211df726c7a616461}{%
+           family={Trivedi},
+           familyi={T\bibinitperiod},
+           given={Munesh\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=5202ce79f13cb95535e6534e37425db4}{%
+           family={Tiwari},
+           familyi={T\bibinitperiod},
+           given={Shailesh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e3eeecd558d81022680abd640a5ef986}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Vikash\bibnamedelima Kumar},
+           giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Singapore}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d44357c29c2cfc51fadb294536c8a9aa}
+      \strng{fullhash}{d44357c29c2cfc51fadb294536c8a9aa}
+      \strng{bibnamehash}{d44357c29c2cfc51fadb294536c8a9aa}
+      \strng{authorbibnamehash}{d44357c29c2cfc51fadb294536c8a9aa}
+      \strng{authornamehash}{d44357c29c2cfc51fadb294536c8a9aa}
+      \strng{authorfullhash}{d44357c29c2cfc51fadb294536c8a9aa}
+      \strng{editorbibnamehash}{a192bb9ac20d87a3a2c18dafe36a741d}
+      \strng{editornamehash}{a192bb9ac20d87a3a2c18dafe36a741d}
+      \strng{editorfullhash}{a192bb9ac20d87a3a2c18dafe36a741d}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{From several years, genetic algorithms are being used for solving many types of constrained and unconstrained optimization problems. Type of crossover operator, rate of crossover, replacement scheme and mutation rate are some of the essential factors that contribute to the efficiency of GA. Evidently, not one algorithm is suited for every problem according to the free lunch theorem but one form of crossover can solve a large number of problems. So many variants of GA are proposed in the past years with different types of crossover operators. So in this paper, we are introducing a new modified GA with improved crossover by dynamically choosing the type of crossover operator which is going to be used for the problem. Randomized mutation is used and a new virtual population is created which contains the best population so far. The modified GA is tested on 40 benchmark functions and the results are compared with the basic GA and one other GA variant.}
+      \field{booktitle}{Advances in {{Data}} and {{Information Sciences}}}
+      \field{isbn}{9789811302770}
+      \field{langid}{english}
+      \field{series}{Lecture {{Notes}} in {{Networks}} and {{Systems}}}
+      \field{title}{A {{Modified Genetic Algorithm Based}} on {{Improved Crossover Array Approach}}}
+      \field{year}{2019}
+      \field{pages}{117\bibrangedash 127}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1007/978-981-13-0277-0_10
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\624EYK8G\\Chaturvedi y Sharma - 2019 - A Modified Genetic Algorithm Based on Improved Cro.pdf
+      \endverb
+      \keyw{Crossover array,Evolutionary algorithms,GA}
+    \endentry
+    \entry{chengCrossoverIntensiveSearch1994}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bc796c41c1be05a11def32ff52085c86}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Runwei},
+           giveni={R\bibinitperiod}}}%
+        {{hash=cda827ec7da921538663a82033c89621}{%
+           family={Gen},
+           familyi={G\bibinitperiod},
+           given={Mitsuo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2abbb290d28bb3ccf502eb32ea859bcf}
+      \strng{fullhash}{2abbb290d28bb3ccf502eb32ea859bcf}
+      \strng{bibnamehash}{2abbb290d28bb3ccf502eb32ea859bcf}
+      \strng{authorbibnamehash}{2abbb290d28bb3ccf502eb32ea859bcf}
+      \strng{authornamehash}{2abbb290d28bb3ccf502eb32ea859bcf}
+      \strng{authorfullhash}{2abbb290d28bb3ccf502eb32ea859bcf}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper describes a new crossover operator for the traveling salesman problem, the greedy selection crossover operator (GSX for short), which is designed for path representation and performed at gene level. It can utilize both of local precedence and global precedence relationship among genes to perform intensive search among solution space to reproduce an improved offspring. It has been compared with other well known crossover operators and the results show that GSX operator is clearly superior to traditional operators. The proposed algorithm can be readily applied to other combinatorial optimization problems if a measure is properly defined based on the global information for a given problem.}
+      \field{issn}{0360-8352}
+      \field{journaltitle}{Computers \& Industrial Engineering}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{1}
+      \field{series}{16th {{Annual Conference}} on {{Computers}} and {{Industrial Engineering}}}
+      \field{title}{Crossover on Intensive Search and Traveling Salesman Problem}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{27}
+      \field{year}{1994}
+      \field{urldateera}{ce}
+      \field{pages}{485\bibrangedash 488}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1016/0360-8352(94)90340-9
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\F2AFVEXZ\\0360835294903409.html
+      \endverb
+      \keyw{crossover,Genetic algorithm,traveling salesman problem}
+    \endentry
+    \entry{qiongbingNewCrossoverMechanism2016}{article}{}
+      \name{author}{2}{}{%
+        {{hash=939095101e35ce606b1d850a1015b2a9}{%
+           family={Qiongbing},
+           familyi={Q\bibinitperiod},
+           given={Zhang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3caa3de4b0a8fb243fd8849a5de03d35}{%
+           family={Lixin},
+           familyi={L\bibinitperiod},
+           given={Ding},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bf297726be669aace7a3e27028f1ab3}
+      \strng{fullhash}{4bf297726be669aace7a3e27028f1ab3}
+      \strng{bibnamehash}{4bf297726be669aace7a3e27028f1ab3}
+      \strng{authorbibnamehash}{4bf297726be669aace7a3e27028f1ab3}
+      \strng{authornamehash}{4bf297726be669aace7a3e27028f1ab3}
+      \strng{authorfullhash}{4bf297726be669aace7a3e27028f1ab3}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genetic Algorithm (GA) has found wide application in path optimization problem. In many fields such as navigating system, oil transportation, paths between the starting node and the termination node often have distinct number of relay-nodes, which leads to the corresponding chromosomes would have different length. We refer to chromosomes with non-consistent lengths as the variable-length chromosomes. This paper first investigated GAs with variable-length chromosomes widely used and found that Same Point (SP) crossover is the most popular crossover mechanism. Then, a new crossover mechanism called Same Adjacency (SA) is proposed for GA with variable-length chromosomes for path optimization problem, which outperforms GA with SP by a better search capability as the mathematical analysis shows. The simulation study indicates that GAs with our crossover operators could obtain a better solution, as compared to GAs with SP, while still being able to converge fast in different networks with varied sizes.}
+      \field{issn}{0957-4174}
+      \field{journaltitle}{Expert Systems with Applications}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{A New Crossover Mechanism for Genetic Algorithms with Variable-Length Chromosomes for Path Optimization Problems}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{60}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{183\bibrangedash 189}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.eswa.2016.04.005
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\NVZMF6S6\\S0957417416301634.html
+      \endverb
+      \keyw{Crossover,Genetic algorithm,Path optimal,Variable-length chromosomes}
+    \endentry
+    \entry{fernandesStudyNonrandomMating2001}{article}{}
+      \name{author}{4}{}{%
+        {{hash=c6f5ff914bfc53a020b9f34dc8d5e376}{%
+           family={Fernandes},
+           familyi={F\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=27567c824150098384a6d1e6216aff48}{%
+           family={Rosa},
+           familyi={R\bibinitperiod},
+           given={Agostinho},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7d7f4256bdbd86a6b28c54fe506250e0}{%
+           family={Pais},
+           familyi={P\bibinitperiod},
+           given={Av},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9bfa0e95e55b7754b3f40a076da536ff}{%
+           family={Norte},
+           familyi={N\bibinitperiod},
+           given={Torre},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5f96db421abeffe2113aed6d0825fc4}
+      \strng{fullhash}{f5f96db421abeffe2113aed6d0825fc4}
+      \strng{bibnamehash}{f5f96db421abeffe2113aed6d0825fc4}
+      \strng{authorbibnamehash}{f5f96db421abeffe2113aed6d0825fc4}
+      \strng{authornamehash}{f5f96db421abeffe2113aed6d0825fc4}
+      \strng{authorfullhash}{f5f96db421abeffe2113aed6d0825fc4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we present a study on the effects of non-random mating and varying population size in Genetic Algorithms (GAs) performance. We tested two algorithms: the non-incest Genetic Algorithm with varying population size (niGAVaPS) and the negative Assortative Mating Genetic Algorithm with varying population size (nAMGAVaPS), on a Royal Road function. These algorithms mimic natural species behavior by selecting parents according to parenthood (niGAVaPS) or phenotype similarity (nAMGAVaPS). We show that both algorithms outperform simple GA in the example shown. The results suggest that this may be due to the fact that genetic diversity is kept at a higher level by niGAVaPS and nAMGAVaPS, preventing the premature convergence of the algorithms to local optima. 1 Introduction The parent selection techniques used in the Simple Genetic Algorithm (simple GA) [Holland75] [Goldberg89] only take into account the individual fitness, that is, its adaptation to the problem (environment). In ...}
+      \field{month}{4}
+      \field{title}{A {{Study}} on {{Non-random Mating}} and {{Varying Population Size}} in {{Genetic Algorithms Using}} a {{Royal Road Function}}}
+      \field{year}{2001}
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\H78UVKKP\\Fernandes et al. - 2001 - A Study on Non-random Mating and Varying Populatio.pdf
+      \endverb
+    \endentry
+    \entry{goldbergComparativeAnalysisSelection1991}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f4dae5bf19584b96b5db33b402a449d8}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=b11d1da0cc2920eef235d484e6b858ef}{%
+           family={Deb},
+           familyi={D\bibinitperiod},
+           given={Kalyanmoy},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{fullhash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{bibnamehash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{authorbibnamehash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{authornamehash}{49568d7e32fbc88366075e7c08bcc33f}
+      \strng{authorfullhash}{49568d7e32fbc88366075e7c08bcc33f}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Semantic Scholar extracted view of "A Comparative Analysis of Selection Schemes Used in Genetic Algorithms" by D. Goldberg et al.}
+      \field{booktitle}{Foundations of {{Genetic Algorithms}}}
+      \field{isbn}{978-0-08-050684-5}
+      \field{langid}{english}
+      \field{title}{A {{Comparative Analysis}} of {{Selection Schemes Used}} in {{Genetic Algorithms}}}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{1}
+      \field{year}{1991}
+      \field{urldateera}{ce}
+      \field{pages}{69\bibrangedash 93}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1016/B978-0-08-050684-5.50008-2
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\NDPJLVME\\Goldberg y Deb - 1991 - A Comparative Analysis of Selection Schemes Used i.pdf
+      \endverb
+    \endentry
+    \entry{mahfoudCrowdingPreselectionRevisited1992}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ee1b32f1e82f50f2d319913df0f8050c}{%
+           family={Mahfoud},
+           familyi={M\bibinitperiod},
+           given={Samir\bibnamedelima W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{fullhash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{bibnamehash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{authorbibnamehash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{authornamehash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \strng{authorfullhash}{ee1b32f1e82f50f2d319913df0f8050c}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper considers the related algorithms, crowding and preselection, as potential multimodal function optimizers. It examines the ability of the two algorithms to preserve diversity, especially multimodal diversity. Crowding is analyzed in terms of the number of replacement errors it makes. Diierent strategies for reducing or eliminating error are proposed and examined. Finally, a variation of preselection is presented which approximates crowding, virtually eliminates replacement error, and restores selection pressure.}
+      \field{booktitle}{Parallel {{Problem Solving}} from {{Nature}}}
+      \field{note}{[TLDR] This paper considers the related algorithms, crowding and preselection, as potential multimodal function optimizers and examines the ability of the two algorithms to preserve diversity, especially multi-modal diversity.}
+      \field{title}{Crowding and {{Preselection Revisited}}}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{year}{1992}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{galloQuadraticKnapsackProblems1980}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=f79da7455575ac36076bf62ceea1d147}{%
+           family={Gallo},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=dee838f104cdfee4f27a34524b9cebac}{%
+           family={Hammer},
+           familyi={H\bibinitperiod},
+           given={P.\bibnamedelimi L.},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=7cc0b82716efb72f6054c8711d3ecea9}{%
+           family={Simeone},
+           familyi={S\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=818e988deb2e1592c25068a5ff6c945c}{%
+           family={Padberg},
+           familyi={P\bibinitperiod},
+           given={M.\bibnamedelimi W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{63899472c2d01ca3bdb5b2b045098565}
+      \strng{fullhash}{63899472c2d01ca3bdb5b2b045098565}
+      \strng{bibnamehash}{63899472c2d01ca3bdb5b2b045098565}
+      \strng{authorbibnamehash}{63899472c2d01ca3bdb5b2b045098565}
+      \strng{authornamehash}{63899472c2d01ca3bdb5b2b045098565}
+      \strng{authorfullhash}{63899472c2d01ca3bdb5b2b045098565}
+      \strng{editorbibnamehash}{818e988deb2e1592c25068a5ff6c945c}
+      \strng{editornamehash}{818e988deb2e1592c25068a5ff6c945c}
+      \strng{editorfullhash}{818e988deb2e1592c25068a5ff6c945c}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The quadratic knapsack (QK) model naturally arises in a variety of problems in operations research, statistics and combinatorics. Some ``upper planes'' for the QK problem are derived, and their different uses in a branch-and-bound scheme for solving such a problem are discussed. Some theoretical results concerning the class of all upper planes, as well as extensive computational experience, are reported.}
+      \field{booktitle}{Combinatorial {{Optimization}}}
+      \field{isbn}{978-3-642-00802-3}
+      \field{langid}{english}
+      \field{series}{Mathematical {{Programming Studies}}}
+      \field{title}{Quadratic Knapsack Problems}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{year}{1980}
+      \field{urldateera}{ce}
+      \field{pages}{132\bibrangedash 149}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1007/BFb0120892
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\EKQS79JC\\Gallo et al. - 1980 - Quadratic knapsack problems.pdf
+      \endverb
+      \keyw{Branch-and-Bound,Computation,Knapsack Problem,Quadratic Programming,Upper Planes}
     \endentry
     \entry{witzgallMathematicalMethodsSite1975}{article}{}
       \name{author}{1}{}{%
@@ -1734,8 +1474,8 @@
       \strng{authorbibnamehash}{93cd15db827e20700dc5ecaac7f97391}
       \strng{authornamehash}{93cd15db827e20700dc5ecaac7f97391}
       \strng{authorfullhash}{93cd15db827e20700dc5ecaac7f97391}
-      \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The concept of electronic message (mail) transmission was the subject of several feasibility studies during the past decade. It requires the installation of electronic message handling facilities at selected locations. If transmission is to be via communications satellite, then any such facility can transmit to and receive from any other one. In the report, the mathematical aspects of choosing the number and locations of these facilities are examined. An inventory of solution methods is presented, along with recommendations as to which among them should be employed or developed further.}
@@ -1752,6 +1492,312 @@
       \field{pages}{18321}
       \range{pages}{1}
       \keyw{Communications and Radar,Cost Analysis,Linear Programming,Messages,Network Synthesis,Radio Relay Systems,Systems Engineering,Telecommunication}
+    \endentry
+    \entry{rhysSelectionProblemShared1970}{article}{}
+      \name{author}{1}{}{%
+        {{hash=92785f8fb6cfdfc63f4a1f8eb3478874}{%
+           family={Rhys},
+           familyi={R\bibinitperiod},
+           given={J.\bibnamedelimi M.\bibnamedelimi W.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{92785f8fb6cfdfc63f4a1f8eb3478874}
+      \strng{fullhash}{92785f8fb6cfdfc63f4a1f8eb3478874}
+      \strng{bibnamehash}{92785f8fb6cfdfc63f4a1f8eb3478874}
+      \strng{authorbibnamehash}{92785f8fb6cfdfc63f4a1f8eb3478874}
+      \strng{authornamehash}{92785f8fb6cfdfc63f4a1f8eb3478874}
+      \strng{authorfullhash}{92785f8fb6cfdfc63f4a1f8eb3478874}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An apparently combinatorial problem is defined, and a method given for solution by reduction to a network flow problem. The basic problem defined is that of assessing the desirability of incurring a number of fixed costs, when the benefits to be obtained cannot be related to individual cost-incurring items (facilities) but only to combinations.}
+      \field{issn}{0025-1909, 1526-5501}
+      \field{journaltitle}{Management Science}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{3}
+      \field{title}{A {{Selection Problem}} of {{Shared Fixed Costs}} and {{Network Flows}}}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{17}
+      \field{year}{1970}
+      \field{urldateera}{ce}
+      \field{pages}{200\bibrangedash 207}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1287/mnsc.17.3.200
+      \endverb
+    \endentry
+    \entry{ferreiraFormulationsValidInequalities1996}{article}{}
+      \name{author}{5}{}{%
+        {{hash=78cbfa603ade27f2f74ac88228031406}{%
+           family={Ferreira},
+           familyi={F\bibinitperiod},
+           given={C.\bibnamedelimi E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=eaea332f7b08db00433a4d09ca9ff7c7}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3692cb8f89fe8b5ba3b31aeae0dfbe4a}{%
+           family={{de Souza}},
+           familyi={d\bibinitperiod},
+           given={C.\bibnamedelimi C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d92e348504352810ff5793a38661b580}{%
+           family={Weismantel},
+           familyi={W\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e4a90d33c20880c276bd58892255cb63}{%
+           family={Wolsey},
+           familyi={W\bibinitperiod},
+           given={L.\bibnamedelimi A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ffb05e34e6e589dd5c01fc68797b7e6}
+      \strng{fullhash}{7ffb05e34e6e589dd5c01fc68797b7e6}
+      \strng{bibnamehash}{7ffb05e34e6e589dd5c01fc68797b7e6}
+      \strng{authorbibnamehash}{7ffb05e34e6e589dd5c01fc68797b7e6}
+      \strng{authornamehash}{7ffb05e34e6e589dd5c01fc68797b7e6}
+      \strng{authorfullhash}{7ffb05e34e6e589dd5c01fc68797b7e6}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate the problem of partitioning the nodes of a graph under capacity restriction on the sum of the node weights in each subset of the partition. The objective is to minimize the sum of the costs of the edges between the subsets of the partition. This problem has a variety of applications, for instance in the design of electronic circuits and devices. We present alternative integer programming formulations for this problem and discuss the links between these formulations. Having chosen to work in the space of edges of the multicut, we investigate the convex hull of incidence vectors of feasible multicuts. In particular, several classes of inequalities are introduced, and their strength and robustness are analyzed as various problem parameters change.}
+      \field{issn}{1436-4646}
+      \field{journaltitle}{Mathematical Programming}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{Formulations and Valid Inequalities for the Node Capacitated Graph Partitioning Problem}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{74}
+      \field{year}{1996}
+      \field{urldateera}{ce}
+      \field{pages}{247\bibrangedash 266}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1007/BF02592198
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\MSRXJVDP\\Ferreira et al. - 1996 - Formulations and valid inequalities for the node c.pdf
+      \endverb
+      \keyw{Clustering,Ear decomposition,Equipartition,Graph partitioning,Integer programming,Knapsack}
+    \endentry
+    \entry{pisingerQuadraticKnapsackProblem2007}{article}{}
+      \name{author}{1}{}{%
+        {{hash=27c28bde78e62d4964a22364b7887154}{%
+           family={Pisinger},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{27c28bde78e62d4964a22364b7887154}
+      \strng{fullhash}{27c28bde78e62d4964a22364b7887154}
+      \strng{bibnamehash}{27c28bde78e62d4964a22364b7887154}
+      \strng{authorbibnamehash}{27c28bde78e62d4964a22364b7887154}
+      \strng{authornamehash}{27c28bde78e62d4964a22364b7887154}
+      \strng{authorfullhash}{27c28bde78e62d4964a22364b7887154}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The binary quadratic knapsack problem maximizes a quadratic objective function subject to a linear capacity constraint. Due to its simple structure and challenging difficulty it has been studied intensively during the last two decades. The present paper gives a survey of upper bounds presented in the literature, and show the relative tightness of several of the bounds. Techniques for deriving the bounds include relaxation from upper planes, linearization, reformulation, Lagrangian relaxation, Lagrangian decomposition, and semidefinite programming. A short overview of heuristics, reduction techniques, branch-and-bound algorithms and approximation results is given, followed by an overview of valid inequalities for the quadratic knapsack polytope. The paper is concluded by an experimental study where the upper bounds presented are compared with respect to strength and computational effort.}
+      \field{issn}{0166218X}
+      \field{journaltitle}{Discrete Applied Mathematics}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{5}
+      \field{title}{The Quadratic Knapsack Problem—a Survey}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{volume}{155}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \field{pages}{623\bibrangedash 648}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1016/j.dam.2006.08.007
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\RJ82WUKI\\Pisinger - 2007 - The quadratic knapsack problem—a survey.pdf
+      \endverb
+    \endentry
+    \entry{latorrePrescriptionMethodologicalGuidelines2021}{article}{}
+      \name{author}{6}{}{%
+        {{hash=5ab6f1257d8b9b91ddc22c3a53873747}{%
+           family={LaTorre},
+           familyi={L\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=381bf37312a71cebeee50fc633f67c46}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2285f34b29e97653507b9802e0ac1a5d}{%
+           family={Osaba},
+           familyi={O\bibinitperiod},
+           given={Eneko},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5dc61300e8b99fbf45049395b1eafb69}{%
+           family={Poyatos},
+           familyi={P\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cad385a9bc804164f8a02ca66c24913e}{%
+           family={Del\bibnamedelima Ser},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{f44e612b695b981a48ab756ffd996575}
+      \strng{fullhash}{f44e612b695b981a48ab756ffd996575}
+      \strng{bibnamehash}{f44e612b695b981a48ab756ffd996575}
+      \strng{authorbibnamehash}{f44e612b695b981a48ab756ffd996575}
+      \strng{authornamehash}{f44e612b695b981a48ab756ffd996575}
+      \strng{authorfullhash}{f44e612b695b981a48ab756ffd996575}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bio-inspired optimization (including Evolutionary Computation and Swarm Intelligence) is a growing research topic with many competitive bio-inspired algorithms being proposed every year. In such an active area, preparing a successful proposal of a new bio-inspired algorithm is not an easy task. Given the maturity of this research field, proposing a new optimization technique with innovative elements is no longer enough. Apart from the novelty, results reported by the authors should be proven to achieve a significant advance over previous outcomes from the state of the art. Unfortunately, not all new proposals deal with this requirement properly. Some of them fail to select appropriate benchmarks or reference algorithms to compare with. In other cases, the validation process carried out is not defined in a principled way (or is even not done at all). Consequently, the significance of the results presented in such studies cannot be guaranteed. In this work we review several recommendations in the literature and propose methodological guidelines to prepare a successful proposal, taking all these issues into account. We expect these guidelines to be useful not only for authors, but also for reviewers and editors along their assessment of new contributions to the field.}
+      \field{issn}{2210-6502}
+      \field{journaltitle}{Swarm and Evolutionary Computation}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{note}{43 citations (Crossref) [2023-05-31]}
+      \field{title}{A Prescription of Methodological Guidelines for Comparing Bio-Inspired Optimization Algorithms}
+      \field{urlday}{31}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{67}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{100973}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.swevo.2021.100973
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\NCWKZRNF\\LaTorre et al. - 2021 - A prescription of methodological guidelines for co.pdf
+      \endverb
+      \keyw{Benchmarking,Bio-inspired optimization,Comparison methodologies,Guidelines,Parameter tuning,Recommendations review,Statistical analysis}
+    \endentry
+    \entry{derracPracticalTutorialUse2011}{article}{}
+      \name{author}{4}{}{%
+        {{hash=326598f55585de95b3e267ddc1235fc6}{%
+           family={Derrac},
+           familyi={D\bibinitperiod},
+           given={Joaquín},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1691f3ff4356c12149ac4f858ead7e04}{%
+           family={García},
+           familyi={G\bibinitperiod},
+           given={Salvador},
+           giveni={S\bibinitperiod}}}%
+        {{hash=381bf37312a71cebeee50fc633f67c46}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a8fa88c49eab072b90519a259a711e7}
+      \strng{fullhash}{4a8fa88c49eab072b90519a259a711e7}
+      \strng{bibnamehash}{4a8fa88c49eab072b90519a259a711e7}
+      \strng{authorbibnamehash}{4a8fa88c49eab072b90519a259a711e7}
+      \strng{authornamehash}{4a8fa88c49eab072b90519a259a711e7}
+      \strng{authorfullhash}{4a8fa88c49eab072b90519a259a711e7}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The interest in nonparametric statistical analysis has grown recently in the field of computational intelligence. In many experimental studies, the lack of the required properties for a proper application of parametric procedures –{} independence, normality, and homoscedasticity –{} yields to nonparametric ones the task of performing a rigorous comparison among algorithms.}
+      \field{issn}{22106502}
+      \field{journaltitle}{Swarm and Evolutionary Computation}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{A Practical Tutorial on the Use of Nonparametric Statistical Tests as a Methodology for Comparing Evolutionary and Swarm Intelligence Algorithms}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{volume}{1}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{3\bibrangedash 18}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/j.swevo.2011.02.002
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\R3QTVWLN\\Derrac et al. - 2011 - A practical tutorial on the use of nonparametric s.pdf
+      \endverb
+    \endentry
+    \entry{herrera-poyatosGeneticMemeticAlgorithm2017}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=17286a919796153087c09f862164d1e6}{%
+           family={{Herrera-Poyatos}},
+           familyi={H\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{1944794a1ca8eec48fb60841b3bb0334}
+      \strng{fullhash}{1944794a1ca8eec48fb60841b3bb0334}
+      \strng{bibnamehash}{1944794a1ca8eec48fb60841b3bb0334}
+      \strng{authorbibnamehash}{1944794a1ca8eec48fb60841b3bb0334}
+      \strng{authornamehash}{1944794a1ca8eec48fb60841b3bb0334}
+      \strng{authorfullhash}{1944794a1ca8eec48fb60841b3bb0334}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The lack of diversity in a genetic algorithm's population may lead to a bad performance of the genetic operators since there is not an equilibrium between exploration and exploitation. In those cases, genetic algorithms present a fast and unsuitable convergence. In this paper we develop a novel hybrid genetic algorithm which attempts to obtain a balance between exploration and exploitation. It confronts the diversity problem using the named greedy diversification operator. Furthermore, the proposed algorithm applies a competition between parent and children so as to exploit the high quality visited solutions. These operators are complemented by a simple selection mechanism designed to preserve and take advantage of the population diversity.}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{note}{\section{Anotaciones\\ (13/3/2023 1:24:59)} \par "Greedy diversification operator" (Herrera-Poyatos y Herrera, 2017, p. 6) La diversidad de la población es una hoja de doble filo. Por lo que, es deseable un operador de diversificación que solo introduzca diversidad si es necesario \par "Population diversity is a double-edged sword" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "Therefore, it is desired a diversification operator that only introduces diversity if it is necessary." (Herrera-Poyatos y Herrera, 2017, p. 6) \par "The diversification operator should delete the population's repeated chromosomes" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "the chromosomes that are left in the population should have a good objective value and be potentially good for the crossover operator" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "The diversification operator ought also to have a low computational cost" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "We propose using a greedy randomized algorithm" (Herrera-Poyatos y Herrera, 2017, p. 6) GRASP \par "Greedy randomized algorithms provide acceptable chromosomes from the objective value perspective that also contain high quality genetic material thanks to the greedy selection function. The randomized aspect of the algorithm supplies the diversity required in the generated solutions" (Herrera-Poyatos y Herrera, 2017, p. 6) Razonamiento del uso de GRASP \par "elements whose greedy value is less than (1 + {$\sigma$}) times the best element's value," (Herrera-Poyatos y Herrera, 2017, p. 6) ¿Qué elementos elegir para el GRASP? \par "This model obtains better solutions because it controls the quality of the elements added to the list. It also keeps the diversity in the generated solutions" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "we use {$\sigma$} = 0.1 although this parameter can be optimized in each application domain" (Herrera-Poyatos y Herrera, 2017, p. 7) \par "the first element of our proposal is a diversification operator which uses the greedy randomized algorithm to substitute those chromosomes that share similarity characteristics with other population solutions" (Herrera-Poyatos y Herrera, 2017, p. 7) \par "This procedure increase the diversity and also keeps the population quality" (Herrera-Poyatos y Herrera, 2017, p. 7) \par "greedy diversification operator is used instead of the mutation operator" (Herrera-Poyatos y Herrera, 2017, p. 8) El operador de diversificación Greedy (GRASP) se usa en vez del operador de mutación \par "There are also models which work under small populations" (Herrera-Poyatos y Herrera, 2017, p. 10) Hay modelos que trabajan con poblaciones pequeñas -{$>$} pedir archivo \par "Micro-genetic algorithms for stationary and non-stationary function optimization" (Herrera-Poyatos y Herrera, 2017, p. 26) Cuando tratamos con un problemas con alta dimensionalidad, puede ser difícil o costoso en términos de tiempo para todos los parámetros del modelo converger dentro de un margen de error dado. En particular, cuando el número de parámetros del modelo aumenta, también lo hace el tamaño de población requerida. Un tamaño de población grande implica grandes números de evaluación-coste.\\ Una alternativa es el uso de micro algoritmos genéticos, que evolucionan poblaciones muy pequeñas queson muy eficientes localizando áreas prometedoras del espacio de búsqueda. Obviamente, las poblaciones pequeñas son incapaces de mantener la diversidad por muchas generaciones, pero la población puede ser reiniciada cada vez que la población se pierde, manteniendo solo la mejor solución obtenida. Reiniciar la población muchas veces durante la ejecución del algoritmo genético tiene el beneficio añadido de evitar la convergencia prematura debido a la presencia de un individuo con un buen valor, lo que posee el riesgo de prevenir más exploraciones del espacio de búsqueda y haga converger al programa a un mínimo local. Además, en tanto que no estamos tratando con poblaciones largos, la convergencia puede ser alcanzada más rápidamente y con menos requisitos de memoria para almacenar la población \par Comment: 27 pages, 5 figures, 11 tables}
+      \field{number}{arXiv:1702.03594}
+      \field{title}{Genetic and {{Memetic Algorithm}} with {{Diversity Equilibrium}} Based on {{Greedy Diversification}}}
+      \field{urlday}{18}
+      \field{urlmonth}{2}
+      \field{urlyear}{2023}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 1702.03594
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\D5DHGSGV\\Herrera-Poyatos y Herrera - 2017 - Genetic and Memetic Algorithm with Diversity Equil
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,I.2.8}
     \endentry
   \enddatalist
 \endrefsection

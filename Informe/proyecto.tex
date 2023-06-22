@@ -200,7 +200,10 @@ pdfproducer = {pdflatex}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{cleveref}
-\usepackage{biblatex}
+\usepackage[style=ieee,maxnames=10]{biblatex}
+\AtEveryBibitem{%
+  \clearfield{note}%
+}
 \addbibresource{TFG.bib}
 
 \usepackage{float}
@@ -224,6 +227,7 @@ pdfproducer = {pdflatex}
 {0pt}                             % altura del pie de página
 {2cm}                           % espacio entre el texto y el pie de página
 \usepackage{pdfpages}
+%\usepackage[a4paper,left=2.25cm,right=2.25cm,top=1.5cm,bottom=1.5cm]{geometry}
 \begin{document}
 \input{portada/portada}
 \input{prefacios/prefacio}
@@ -241,10 +245,12 @@ pdfproducer = {pdflatex}
 %
 \input{capitulos/03_Repaso_Bibliografico}
 %
+\part{Parte matemática}
 \input{capitulos/04_Contexto_Matematico}
 %
 \input{capitulos/05_Problema_Diseño_Experimental}
 %
+\part{Parte informática}
 \input{capitulos/06_Algoritmos_Referencia}
 %
 \input{capitulos/07_Componentes_Propuesta}
@@ -257,8 +263,10 @@ pdfproducer = {pdflatex}
 %
 %%\nocite{*}
 \printbibliography
+\addcontentsline{toc}{chapter}{Bibliografía}
 %
-%\appendix
+\appendix
+\input{apendices/resultados}
 %\input{apendices/manual_usuario/manual_usuario}
 %%\input{apendices/paper/paper}
 %\input{glosario/entradas_glosario}

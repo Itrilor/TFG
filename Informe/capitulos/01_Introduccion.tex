@@ -45,3 +45,43 @@ En este Trabajo de Fin de Grado vamos a diseñar, implementar y proponer un algo
 El objetivo principal de este algoritmo será encontrar buenas soluciones en una cantidad de tiempo bastante reducida, lo que vamos a traducir en un menor número de iteraciones. 
 Para ello, procederemos a tomar un problema sobre el que trabajar y extraer conclusiones y un algoritmo de referencia sobre el que realizaremos un proceso recursivo: introduciremos alguna modificación y compararemos los resultados obtenidos con los del algoritmo de referencia, en caso de mejorarlos, este algoritmo con modificación se convertirá en el nuevo algoritmo de referencia. 
 De esta forma se puede garantizar que los resultados que finalmente alcanzaremos son competitivos. 
+
+\section{Objetivos}
+
+Los objetivos principales se centrarán en el desarrollo de una metaheurística útil para aplicarse a problemas combinatorios costosos:
+\begin{enumerate}
+	\item Parte matemática: Revisión teórica en la que se basa el desarrollo de algoritmos para problemas de minimización y . 
+	Dentro del mismo, encontramos los siguientes objetivos parciales:
+	\begin{itemize}
+		\item Repaso de distintos algoritmos de la literatura para resolver problemas de minimización sin restricciones. 
+		\item Exposición de algunos resultados interesantes a considerar sobre convergencia. 
+		\item Exposición de diversos \textit{tests} estadísticos para comparar algoritmos. 
+	\end{itemize}
+	
+	\item Parte informática: Propio diseño experimental del algoritmo en cuestión. 
+	Dentro del mismo, encontramos los siguientes objetivos parciales: 
+	\begin{itemize}
+		\item Exposición de los algoritmos clásicos que se han usado como base.
+		\item Diseño de varias modificaciones y mejoras a introducir a los algoritmos base para hacerlos más competitivos en nuestro problema. 
+		\item Evaluación experimental de los distintos algoritmos ejecutándolos sobre distintos conjuntos de instancias del problema concreto con el que trabajaremos, analizando los resultados obtenidos y comparándolos entre sí.
+	\end{itemize}
+	
+\end{enumerate}
+
+\section{Estructura de la memoria}
+
+Este trabajo se divide en dos partes, y estas a su vez en varios capítulos. 
+Además, se incluyen tres capítulos al comienzo. 
+Este ha sido el Capítulo 1, y a continuación encontraremos el Capítulo 2, dedicado a la planificación y presupuesto del proyecto; y el Capítulo 3, dedicado a dar un repaso bibliográfico de información necesaria para introducir el trabajo.
+
+La Parte I, más vinculada con la parte matemática del trabajo, está dedicada a analizar la base teórica matemática sobre la que se construye el desarrollo de algoritmos cuyo objetivo es alcanzar una solución óptima. 
+Tras la introducción del problema general de optimización a tratar y algunas definiciones importantes en el Capítulo 4, en el Capítulo 5 se presentan varios algoritmos que traten de resolver un problema de minimización sin restricciones. 
+Además, en el Capítulo 6 se presentan y explican una serie de test estadístico, algunos de los cuales utilizaremos posteriormente para analizar si se producen mejoras significativas entre las distintas versiones del algoritmo que se desarrollará. 
+Esta parte finaliza en el Capítulo 7, donde se desarrolla el problema concreto con el que se trabajará, aportando una definición matemática e información sobre los datos de dicho problema que se utilizarán. 
+
+La Parte II, más vinculada con la parte informática del trabajo, está dedicada a explicar y mostrar mediante pseudocódigo los distintos algoritmos y diversas modificaciones introducidas que se han usado durante el diseño de nuestra metaheurística junto con un análisis de los resultados obtenidos. 
+En el Capítulo 8 se presentan los dos algoritmos de referencia que se han usado de base para el desarrollo de un algoritmo competitivo para problemas combinatorios \textit{expensive}, mientras que en el Capítulo 9 se presentan los distintos componentes que se han ido desarrollando para aplicarlos como modificaciones sobre los algoritmos anteriores. 
+Por último, en el Capítulo 10 se proporcionarán los distintos parámetros utilizados y se realizará un análisis completo del desarrollo de nuestro algoritmo justificando por qué cada modificación ha sido introducida.
+
+Finalmente, en el Capítulo 12 se encuentran las conclusiones que se han obtenido tras realizar todo el trabajo. 
+Adicionalmente, se incluirá la bibliografía y un apéndice donde se encontrarán todas las tablas de resultados de los distintos algoritmos que se han probado en la parte experimental de este proyecto.

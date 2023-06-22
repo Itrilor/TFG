@@ -3,150 +3,168 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Estimación y Presupuesto}{3}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Objetivos}{2}{section.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Planificación}{3}{section.2.1}%
+\contentsline {section}{\numberline {1.2}Estructura de la memoria}{3}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Planificación Base}{3}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {2}Estimación y Presupuesto}{5}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Planificación Final}{4}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.1}Planificación}{5}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Tareas realizadas}{4}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.1}Planificación Base}{5}{subsection.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Tiempo dedicado}{5}{Item.11}%
+\contentsline {subsection}{\numberline {2.1.2}Planificación Final}{6}{subsection.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Presupuesto}{5}{section.2.2}%
+\contentsline {subsubsection}{Tareas realizadas}{6}{subsection.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Repaso Bibliográfico}{7}{chapter.3}%
+\contentsline {subsubsection}{Tiempo dedicado}{7}{Item.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Contexto Bibliográfico}{7}{section.3.1}%
+\contentsline {section}{\numberline {2.2}Presupuesto}{7}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Contexto matemático}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {3}Repaso Bibliográfico}{9}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Definición del problema}{11}{section.4.1}%
+\contentsline {section}{\numberline {3.1}Contexto Bibliográfico}{9}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Condición de Optimalidad}{13}{section.4.2}%
+\contentsline {part}{I\hspace {1em}Parte matemática}{13}{part.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Rendimiento de los algoritmos}{15}{section.4.3}%
+\contentsline {chapter}{\numberline {4}Introducción}{15}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Convergencia y Orden de Convergencia}{15}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.1}Definición del problema}{15}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Comportamiento numérico}{16}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.2}Condición de Optimalidad}{17}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Programación no lineal sin restricciones}{17}{section.4.4}%
+\contentsline {section}{\numberline {4.3}Rendimiento de los algoritmos}{19}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}Algoritmos de Optimización sin restricciones}{17}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.3.1}Convergencia y Orden de Convergencia}{19}{subsection.4.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Algoritmos de Búsqueda Lineal}{18}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.3.2}Comportamiento numérico}{20}{subsection.4.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.3}Métodos de Gradiente}{19}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Programación no lineal sin restricciones}{23}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.4}Métodos de Gradiente Conjugado}{20}{subsection.4.4.4}%
+\contentsline {section}{\numberline {5.1}Algoritmos de Optimización sin restricciones}{23}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.5}Métodos de Newton}{21}{subsection.4.4.5}%
+\contentsline {section}{\numberline {5.2}Algoritmos de Búsqueda Lineal}{24}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Modificaciones de Búsqueda Lineal en el Método de Newton}{22}{equation.4.4.23}%
+\contentsline {section}{\numberline {5.3}Métodos de Gradiente}{25}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Modificaciones de Regiones de Confianza en el Método de Newton}{23}{equation.4.4.25}%
+\contentsline {section}{\numberline {5.4}Métodos de Gradiente Conjugado}{26}{section.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Métodos de Newton Truncados}{25}{ALG@line.15}%
+\contentsline {section}{\numberline {5.5}Métodos de Newton}{28}{section.5.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Métodos Quasi-Newton}{26}{ALG@line.6}%
+\contentsline {subsection}{\numberline {5.5.1}Modificaciones de Búsqueda Lineal en el Método de Newton}{28}{subsection.5.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Métodos sin derivadas}{28}{proposicion.4.8}%
+\contentsline {subsection}{\numberline {5.5.2}Modificaciones de Regiones de Confianza en el Método de Newton}{30}{subsection.5.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Comparaciones por parejas}{30}{section.4.5}%
+\contentsline {subsection}{\numberline {5.5.3}Métodos de Newton Truncados}{31}{subsection.5.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}Test de signos}{30}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {5.5.4}Métodos Quasi-Newton}{33}{subsection.5.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.2}Test de posiciones con signos de Wilcoxon}{30}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {5.5.5}Métodos sin derivadas}{34}{subsection.5.5.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Múltiples comparaciones con un método de control}{31}{section.4.6}%
+\contentsline {chapter}{\numberline {6}Tests estadísticos}{37}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}Test múltiple de signos}{32}{subsection.4.6.1}%
+\contentsline {section}{\numberline {6.1}Comparaciones por parejas}{37}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Los test de Friedman, Posiciones Alineadas de Friedman y Quade}{33}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {6.1.1}Test de signos}{37}{subsection.6.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Procedimientos \textit {post-hoc}}{35}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {6.1.2}Test de posiciones con signos de Wilcoxon}{37}{subsection.6.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Estimación de contraste}{38}{subsection.4.6.4}%
+\contentsline {section}{\numberline {6.2}Múltiples comparaciones con un método de control}{38}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Problema y Diseño Experimental}{39}{chapter.5}%
+\contentsline {subsection}{\numberline {6.2.1}Test múltiple de signos}{39}{subsection.6.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Descripción del problema}{39}{section.5.1}%
+\contentsline {subsection}{\numberline {6.2.2}Los test de Friedman, Posiciones Alineadas de Friedman y Quade}{40}{subsection.6.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Quadratic Knapsack Problem}{40}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {6.2.3}Procedimientos \textit {post-hoc}}{42}{subsection.6.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Datos del problema}{40}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {6.2.4}Estimación de contraste}{45}{subsection.6.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Diseño Experimental}{41}{section.5.2}%
+\contentsline {chapter}{\numberline {7}Descripción del problema}{47}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Criterio de Parada}{41}{subsection.5.2.1}%
+\contentsline {section}{\numberline {7.1}Introducción}{47}{section.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Parámetros}{43}{subsection.5.2.2}%
+\contentsline {section}{\numberline {7.2}Quadratic Knapsack Problem}{48}{section.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Algoritmos de Referencia}{45}{chapter.6}%
+\contentsline {section}{\numberline {7.3}Datos del problema}{48}{section.7.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Algoritmo Genético Estacionario Uniforme}{45}{section.6.1}%
+\contentsline {part}{II\hspace {1em}Parte informática}{51}{part.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}Pseudocódigo}{46}{subsection.6.1.1}%
+\contentsline {chapter}{\numberline {8}Algoritmos de Referencia}{53}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.2}Componentes}{47}{subsection.6.1.2}%
+\contentsline {section}{\numberline {8.1}Algoritmo Genético Estacionario Uniforme}{53}{section.8.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operador de Reparación}{47}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {8.1.1}Pseudocódigo}{54}{subsection.8.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operador de Cruce}{48}{ALG@line.13}%
+\contentsline {subsection}{\numberline {8.1.2}Componentes}{55}{subsection.8.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Mutación}{50}{ALG@line.12}%
+\contentsline {subsubsection}{Operador de Reparación}{55}{subsection.8.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operador de Reemplazo Estacionario}{50}{ALG@line.17}%
+\contentsline {subsubsection}{Operador de Cruce}{56}{ALG@line.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}CHC}{51}{section.6.2}%
+\contentsline {subsubsection}{Mutación}{58}{ALG@line.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}Pseudocódigo}{52}{subsection.6.2.1}%
+\contentsline {subsubsection}{Operador de Reemplazo Estacionario}{58}{ALG@line.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}Componentes}{53}{subsection.6.2.2}%
+\contentsline {section}{\numberline {8.2}CHC}{59}{section.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Operador de reparación}{53}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {8.2.1}Pseudocódigo}{60}{subsection.8.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Cruce HUX}{53}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {8.2.2}Componentes}{61}{subsection.8.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Reemplazo Elitista}{53}{ALG@line.13}%
+\contentsline {subsubsection}{Operador de reparación}{61}{subsection.8.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Componentes de la propuesta}{55}{chapter.7}%
+\contentsline {subsubsection}{Cruce HUX}{61}{subsection.8.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Histórico}{55}{section.7.1}%
+\contentsline {subsubsection}{Reemplazo Elitista}{61}{ALG@line.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}GRASP}{56}{section.7.2}%
+\contentsline {chapter}{\numberline {9}Componentes de la propuesta}{63}{chapter.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Cruce Intensivo}{59}{section.7.3}%
+\contentsline {section}{\numberline {9.1}Histórico}{63}{section.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Operador NAM}{59}{section.7.4}%
+\contentsline {section}{\numberline {9.2}GRASP}{65}{section.9.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Operador Reemplazo: \textit {Crowding} Determinístico}{60}{section.7.5}%
+\contentsline {section}{\numberline {9.3}Cruce Intensivo}{67}{section.9.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Versión intensiva}{60}{subsection.7.5.1}%
+\contentsline {section}{\numberline {9.4}Diversidad en la Población Inicial}{68}{section.9.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Parte Experimental (In progress)}{63}{chapter.8}%
+\contentsline {section}{\numberline {9.5}Operador NAM}{68}{section.9.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Algoritmos de Referencia experimentación}{64}{section.8.1}%
+\contentsline {section}{\numberline {9.6}Operador Reemplazo: \textit {Crowding} Determinístico}{69}{section.9.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Resultados versión expensive}{64}{section.8.2}%
+\contentsline {subsection}{\numberline {9.6.1}Reemplazo intensivo}{70}{subsection.9.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Incorporación del histórico}{69}{section.8.3}%
+\contentsline {chapter}{\numberline {10}Evolución en la propuesta \color {red}(In progress)\color {black}}{71}{chapter.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Uso de GRASP}{70}{section.8.4}%
+\contentsline {section}{\numberline {10.1}Diseño Experimental}{71}{section.10.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.5}Operador de Cruce Intensivo}{75}{section.8.5}%
+\contentsline {subsection}{\numberline {10.1.1}Criterio de Parada}{71}{subsection.10.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.1}Utilizando GRASP}{75}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {10.1.2}Parámetros}{73}{subsection.10.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.2}Sin utilizar GRASP}{76}{subsection.8.5.2}%
+\contentsline {section}{\numberline {10.2}Algoritmos de Referencia experimentación}{75}{section.10.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.6}Estudio de la diversidad}{77}{section.8.6}%
+\contentsline {section}{\numberline {10.3}Resultados versión expensive}{75}{section.10.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.7}Incrementando la diversidad (con nuevo reemplazo)}{77}{section.8.7}%
+\contentsline {section}{\numberline {10.4}Incorporación del histórico}{77}{section.10.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.8}Tablas de prueba}{77}{section.8.8}%
+\contentsline {section}{\numberline {10.5}Uso de GRASP}{80}{section.10.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Conclusiones}{85}{chapter.9}%
+\contentsline {section}{\numberline {10.6}Operador de Cruce Intensivo}{82}{section.10.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.6.1}Utilizando GRASP}{82}{subsection.10.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.6.2}Sin utilizar GRASP}{83}{subsection.10.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.7}GACEPCHC}{85}{section.10.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.8}Estudio de la diversidad}{85}{section.10.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.9}Incrementando la diversidad (con nuevo reemplazo)}{85}{section.10.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.10}Resumen de las versiones}{85}{section.10.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {11}Conclusiones}{87}{chapter.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografía}{91}{chapter*.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Tablas de Resultados}{93}{appendix.Alph1}%
