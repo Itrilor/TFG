@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  22 JUN 2023 21:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  23 JUN 2023 15:51
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -1125,7 +1125,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 (portada/portada.tex
 \centeroffset=\skip108
-<imagenes/logo_ugr_nuevo.png, id=299, 647.2983pt x 180.1932pt>
+<imagenes/logo_ugr_nuevo.png, id=331, 647.2983pt x 180.1932pt>
 File: imagenes/logo_ugr_nuevo.png Graphic file (type png)
 <use imagenes/logo_ugr_nuevo.png>
 Package pdftex.def Info: imagenes/logo_ugr_nuevo.png  used on input line 12.
@@ -1175,12 +1175,12 @@ Overfull \hbox (0.32011pt too wide) in paragraph at lines 9--24
 | $[]$ 
  []
 
-<imagenes/etsiit_logo.png, id=301, 110.814pt x 40.4712pt>
+<imagenes/etsiit_logo.png, id=333, 110.814pt x 40.4712pt>
 File: imagenes/etsiit_logo.png Graphic file (type png)
 <use imagenes/etsiit_logo.png>
 Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 35.
 (pdftex.def)             Requested size: 110.8137pt x 40.4711pt.
-<imagenes/ciencias_logo.png, id=302, 349.7868pt x 297.2706pt>
+<imagenes/ciencias_logo.png, id=334, 349.7868pt x 297.2706pt>
 File: imagenes/ciencias_logo.png Graphic file (type png)
 <use imagenes/ciencias_logo.png>
 Package pdftex.def Info: imagenes/ciencias_logo.png  used on input line 35.
@@ -1302,7 +1302,12 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
-[2])
+[2]
+Overfull \hbox (2.79823pt too wide) detected at line 188
+\T1/lmr/m/n/10.95 10.10. 
+ []
+
+)
 \tf@toc=\write5
 \openout5 = `proyecto.toc'.
 
@@ -1346,13 +1351,84 @@ Overfull \hbox (2.79823pt too wide) detected at line 54
 \T1/lmr/m/n/10.95 10.12. 
  []
 
+
+Overfull \hbox (2.79823pt too wide) detected at line 56
+\T1/lmr/m/n/10.95 10.13. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 58
+\T1/lmr/m/n/10.95 10.14. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 60
+\T1/lmr/m/n/10.95 10.15. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 62
+\T1/lmr/m/n/10.95 10.16. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 64
+\T1/lmr/m/n/10.95 10.17. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 66
+\T1/lmr/m/n/10.95 10.18. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 68
+\T1/lmr/m/n/10.95 10.19. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 70
+\T1/lmr/m/n/10.95 10.20. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 72
+\T1/lmr/m/n/10.95 10.21. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 74
+\T1/lmr/m/n/10.95 10.22. 
+ []
+
+
+Overfull \hbox (2.79823pt too wide) detected at line 76
+\T1/lmr/m/n/10.95 10.23. 
+ []
+
 )
 \tf@lof=\write6
 \openout6 = `proyecto.lof'.
 
- [5] [6
 
-] (capitulos/01_Introduccion.tex
+Underfull \vbox (badness 3189) has occurred while \output is active []
+
+ [5]
+
+Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
+(spanish)                faked small caps on input line 239.
+
+LaTeX Info: Redefining \. on input line 239.
+LaTeX Info: Redefining \% on input line 239.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 14.1595pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.1595pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
+
+[6] (capitulos/01_Introduccion.tex
 Cap\'{\i }tulo 1.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1363,6 +1439,7 @@ been already used, duplicate ignored
                    \relax 
 l.35 
       [1
+
 
 ]
 LaTeX Info: Redefining \. on input line 76.
@@ -2815,12 +2892,12 @@ LG@line.13}) has been already used, duplicate ignored
                    \relax 
 l.158 \EndProcedure
                    
-<imagenes/Crossover1point.png, id=1054, 390.258pt x 153.57375pt>
+<imagenes/Crossover1point.png, id=1118, 390.258pt x 153.57375pt>
 File: imagenes/Crossover1point.png Graphic file (type png)
 <use imagenes/Crossover1point.png>
 Package pdftex.def Info: imagenes/Crossover1point.png  used on input line 191.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover1pointNumber.png, id=1055, 390.258pt x 153.57375pt>
+<imagenes/Crossover1pointNumber.png, id=1119, 390.258pt x 153.57375pt>
 File: imagenes/Crossover1pointNumber.png Graphic file (type png)
 <use imagenes/Crossover1pointNumber.png>
 Package pdftex.def Info: imagenes/Crossover1pointNumber.png  used on input line
@@ -2841,18 +2918,18 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [56]
-<imagenes/Crossover2point.png, id=1060, 390.258pt x 153.57375pt>
+<imagenes/Crossover2point.png, id=1124, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2point.png Graphic file (type png)
 <use imagenes/Crossover2point.png>
 Package pdftex.def Info: imagenes/Crossover2point.png  used on input line 201.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover2pointNumber.png, id=1061, 390.258pt x 153.57375pt>
+<imagenes/Crossover2pointNumber.png, id=1125, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2pointNumber.png Graphic file (type png)
 <use imagenes/Crossover2pointNumber.png>
 Package pdftex.def Info: imagenes/Crossover2pointNumber.png  used on input line
  202.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/CrossoverUniformNumber.png, id=1062, 390.258pt x 153.57375pt>
+<imagenes/CrossoverUniformNumber.png, id=1126, 390.258pt x 153.57375pt>
 File: imagenes/CrossoverUniformNumber.png Graphic file (type png)
 <use imagenes/CrossoverUniformNumber.png>
 Package pdftex.def Info: imagenes/CrossoverUniformNumber.png  used on input lin
@@ -3248,7 +3325,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [60]
-<imagenes/CrossoverHUX.png, id=1096, 539.01375pt x 153.57375pt>
+<imagenes/CrossoverHUX.png, id=1160, 539.01375pt x 153.57375pt>
 File: imagenes/CrossoverHUX.png Graphic file (type png)
 <use imagenes/CrossoverHUX.png>
 Package pdftex.def Info: imagenes/CrossoverHUX.png  used on input line 378.
@@ -4330,13 +4407,13 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [74]
-<imagenes/Experimental/AGEUvsCHC.png, id=1196, 296.307pt x 167.4255pt>
+<imagenes/Experimental/AGEUvsCHC.png, id=1260, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/AGEUvsCHC.png Graphic file (type png)
 <use imagenes/Experimental/AGEUvsCHC.png>
 Package pdftex.def Info: imagenes/Experimental/AGEUvsCHC.png  used on input lin
 e 165.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/AGEUvsCHC.png, id=1197, 230.0595pt x 173.448pt>
+<imagenes/Experimental/barras/AGEUvsCHC.png, id=1261, 230.0595pt x 173.448pt>
 File: imagenes/Experimental/barras/AGEUvsCHC.png Graphic file (type png)
 <use imagenes/Experimental/barras/AGEUvsCHC.png>
 Package pdftex.def Info: imagenes/Experimental/barras/AGEUvsCHC.png  used on in
@@ -4347,7 +4424,7 @@ put line 172.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 184.
 
-<imagenes/Experimental/DiferenciasAGEU.png, id=1200, 289.68225pt x 174.05025pt>
+<imagenes/Experimental/DiferenciasAGEU.png, id=1264, 289.68225pt x 174.05025pt>
 
 File: imagenes/Experimental/DiferenciasAGEU.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasAGEU.png>
@@ -4358,7 +4435,7 @@ ut line 223.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 231.
 
-<imagenes/Experimental/DiferenciasCHC.png, id=1205, 289.68225pt x 174.05025pt>
+<imagenes/Experimental/DiferenciasCHC.png, id=1269, 289.68225pt x 174.05025pt>
 File: imagenes/Experimental/DiferenciasCHC.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasCHC.png>
 Package pdftex.def Info: imagenes/Experimental/DiferenciasCHC.png  used on inpu
@@ -4391,6 +4468,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [76 <./imagenes/Experimental/AGEUvsCHC.png> <./imagenes/Experimental/barras/AGE
 UvsCHC.png> <./imagenes/Experimental/DiferenciasAGEU.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 LaTeX Info: Redefining \. on input line 291.
 LaTeX Info: Redefining \% on input line 291.
 
@@ -4403,37 +4482,34 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [77 <./imagenes/Experimental/DiferenciasCHC.png>]
-<imagenes/Experimental/Historico.png, id=1232, 296.307pt x 167.4255pt>
+<imagenes/Experimental/Historico.png, id=1296, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/Historico.png Graphic file (type png)
 <use imagenes/Experimental/Historico.png>
 Package pdftex.def Info: imagenes/Experimental/Historico.png  used on input lin
-e 299.
+e 302.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/Historico.png, id=1233, 210.7875pt x 174.05025pt>
+<imagenes/Experimental/barras/Historico.png, id=1297, 210.7875pt x 174.05025pt>
 
 File: imagenes/Experimental/barras/Historico.png Graphic file (type png)
 <use imagenes/Experimental/barras/Historico.png>
 Package pdftex.def Info: imagenes/Experimental/barras/Historico.png  used on in
-put line 306.
+put line 309.
 (pdftex.def)             Requested size: 211.26027pt x 174.44286pt.
-<imagenes/Experimental/AGEUvsGACEPv1.png, id=1236, 296.307pt x 167.4255pt>
+<imagenes/Experimental/AGEUvsGACEPv1.png, id=1300, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/AGEUvsGACEPv1.png Graphic file (type png)
 <use imagenes/Experimental/AGEUvsGACEPv1.png>
 Package pdftex.def Info: imagenes/Experimental/AGEUvsGACEPv1.png  used on input
- line 325.
+ line 328.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/AGEUvsGACEPv1.png, id=1237, 237.88875pt x 170.436
+<imagenes/Experimental/barras/AGEUvsGACEPv1.png, id=1301, 237.88875pt x 170.436
 75pt>
 File: imagenes/Experimental/barras/AGEUvsGACEPv1.png Graphic file (type png)
 <use imagenes/Experimental/barras/AGEUvsGACEPv1.png>
 Package pdftex.def Info: imagenes/Experimental/barras/AGEUvsGACEPv1.png  used o
-n input line 332.
+n input line 335.
 (pdftex.def)             Requested size: 211.26027pt x 151.36572pt.
-
-Underfull \vbox (badness 1484) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 345.
-LaTeX Info: Redefining \% on input line 345.
+LaTeX Info: Redefining \. on input line 348.
+LaTeX Info: Redefining \% on input line 348.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4447,20 +4523,20 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 torico.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 356.
+               Default added (so using `tbp') on input line 359.
 
-<imagenes/Experimental/DiferenciasGACEPv1.png, id=1249, 289.68225pt x 174.05025
+<imagenes/Experimental/DiferenciasGACEPv1.png, id=1313, 289.68225pt x 174.05025
 pt>
 File: imagenes/Experimental/DiferenciasGACEPv1.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasGACEPv1.png>
 Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEPv1.png  used on 
-input line 395.
+input line 398.
 (pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 402.
-LaTeX Info: Redefining \% on input line 402.
+LaTeX Info: Redefining \. on input line 417.
+LaTeX Info: Redefining \% on input line 417.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4471,25 +4547,11 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 [79 <./imagenes/Experimental/AGEUvsGACEPv1.png> <./imagenes/Experimental/barras
 /AGEUvsGACEPv1.png>]
-<imagenes/Experimental/GRASPvswoGRASP.png, id=1260, 296.307pt x 167.4255pt>
-File: imagenes/Experimental/GRASPvswoGRASP.png Graphic file (type png)
-<use imagenes/Experimental/GRASPvswoGRASP.png>
-Package pdftex.def Info: imagenes/Experimental/GRASPvswoGRASP.png  used on inpu
-t line 430.
-(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GRASPvswoGRASP.png, id=1261, 246.9225pt x 174.050
-25pt>
-File: imagenes/Experimental/barras/GRASPvswoGRASP.png Graphic file (type png)
-<use imagenes/Experimental/barras/GRASPvswoGRASP.png>
-Package pdftex.def Info: imagenes/Experimental/barras/GRASPvswoGRASP.png  used 
-on input line 437.
-(pdftex.def)             Requested size: 211.26027pt x 148.9101pt.
+Underfull \vbox (badness 1430) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 424.
+LaTeX Info: Redefining \% on input line 424.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 448.
-LaTeX Info: Redefining \% on input line 448.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4499,26 +4561,36 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [80 <./imagenes/Experimental/DiferenciasGACEPv1.png>]
+<imagenes/Experimental/GRASPvswoGRASP.png, id=1328, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/GRASPvswoGRASP.png Graphic file (type png)
+<use imagenes/Experimental/GRASPvswoGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/GRASPvswoGRASP.png  used on inpu
+t line 433.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GRASPvswoGRASP.png, id=1329, 246.9225pt x 174.050
+25pt>
+File: imagenes/Experimental/barras/GRASPvswoGRASP.png Graphic file (type png)
+<use imagenes/Experimental/barras/GRASPvswoGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GRASPvswoGRASP.png  used 
+on input line 440.
+(pdftex.def)             Requested size: 211.26027pt x 148.9101pt.
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 452.
+               Default added (so using `tbp') on input line 455.
 
-<imagenes/Experimental/DiferenciasGACEP_GRASP.png, id=1269, 289.68225pt x 174.0
+<imagenes/Experimental/DiferenciasGACEP_GRASP.png, id=1332, 289.68225pt x 174.0
 5025pt>
 File: imagenes/Experimental/DiferenciasGACEP_GRASP.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasGACEP_GRASP.png>
 Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEP_GRASP.png  used
- on input line 491.
+ on input line 494.
 (pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 502.
-LaTeX Info: Redefining \% on input line 502.
-
+LaTeX Info: Redefining \. on input line 500.
+LaTeX Info: Redefining \% on input line 500.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4530,22 +4602,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 [81 <./imagenes/Experimental/GRASPvswoGRASP.png> <./imagenes/Experimental/barra
 s/GRASPvswoGRASP.png>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 517.
-<imagenes/Experimental/GACEPcGRASP.png, id=1280, 296.307pt x 167.4255pt>
-File: imagenes/Experimental/GACEPcGRASP.png Graphic file (type png)
-<use imagenes/Experimental/GACEPcGRASP.png>
-Package pdftex.def Info: imagenes/Experimental/GACEPcGRASP.png  used on input l
-ine 525.
-(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GACEPcGRASP.png, id=1281, 258.36525pt x 174.05025
-pt>
-File: imagenes/Experimental/barras/GACEPcGRASP.png Graphic file (type png)
-<use imagenes/Experimental/barras/GACEPcGRASP.png>
-Package pdftex.def Info: imagenes/Experimental/barras/GACEPcGRASP.png  used on 
-input line 532.
-(pdftex.def)             Requested size: 211.26027pt x 142.31842pt.
-LaTeX Info: Redefining \. on input line 538.
-LaTeX Info: Redefining \% on input line 538.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 520.
+LaTeX Info: Redefining \. on input line 521.
+LaTeX Info: Redefining \% on input line 521.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4556,34 +4615,34 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [82 <./imagenes/Experimental/DiferenciasGACEP_GRASP.png>]
-<imagenes/Experimental/GACEPcwoGRASP.png, id=1289, 296.307pt x 167.4255pt>
+<imagenes/Experimental/GACEPcGRASP.png, id=1348, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/GACEPcGRASP.png Graphic file (type png)
+<use imagenes/Experimental/GACEPcGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPcGRASP.png  used on input l
+ine 528.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GACEPcGRASP.png, id=1349, 258.36525pt x 174.05025
+pt>
+File: imagenes/Experimental/barras/GACEPcGRASP.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPcGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPcGRASP.png  used on 
+input line 535.
+(pdftex.def)             Requested size: 211.26027pt x 142.31842pt.
+<imagenes/Experimental/GACEPcwoGRASP.png, id=1352, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/GACEPcwoGRASP.png Graphic file (type png)
 <use imagenes/Experimental/GACEPcwoGRASP.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPcwoGRASP.png  used on input
- line 552.
+ line 555.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GACEPcwoGRASP.png, id=1290, 236.68425pt x 174.050
+<imagenes/Experimental/barras/GACEPcwoGRASP.png, id=1353, 236.68425pt x 174.050
 25pt>
 File: imagenes/Experimental/barras/GACEPcwoGRASP.png Graphic file (type png)
 <use imagenes/Experimental/barras/GACEPcwoGRASP.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPcwoGRASP.png  used o
-n input line 559.
+n input line 562.
 (pdftex.def)             Requested size: 211.26027pt x 155.36101pt.
-<imagenes/Experimental/GACEPv3c.png, id=1292, 296.307pt x 167.4255pt>
-File: imagenes/Experimental/GACEPv3c.png Graphic file (type png)
-<use imagenes/Experimental/GACEPv3c.png>
-Package pdftex.def Info: imagenes/Experimental/GACEPv3c.png  used on input line
- 576.
-(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GACEPv3c.png, id=1293, 247.52475pt x 174.05025pt>
-
-File: imagenes/Experimental/barras/GACEPv3c.png Graphic file (type png)
-<use imagenes/Experimental/barras/GACEPv3c.png>
-Package pdftex.def Info: imagenes/Experimental/barras/GACEPv3c.png  used on inp
-ut line 583.
-(pdftex.def)             Requested size: 211.26027pt x 148.55421pt.
-LaTeX Info: Redefining \. on input line 589.
-LaTeX Info: Redefining \% on input line 589.
+LaTeX Info: Redefining \. on input line 574.
+LaTeX Info: Redefining \% on input line 574.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4596,20 +4655,312 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 [83 <./imagenes/Experimental/GACEPcGRASP.png> <./imagenes/Experimental/barras/G
 ACEPcGRASP.png> <./imagenes/Experimental/GACEPcwoGRASP.png> <./imagenes/Experim
 ental/barras/GACEPcwoGRASP.png>]
-<imagenes/Experimental/GACEPv2vsGACEPv3.png, id=1302, 296.307pt x 166.82326pt>
+<imagenes/Experimental/GACEPv3c.png, id=1360, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/GACEPv3c.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv3c.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv3c.png  used on input line
+ 579.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GACEPv3c.png, id=1361, 247.52475pt x 174.05025pt>
+
+File: imagenes/Experimental/barras/GACEPv3c.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPv3c.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv3c.png  used on inp
+ut line 586.
+(pdftex.def)             Requested size: 211.26027pt x 148.55421pt.
+<imagenes/Experimental/GACEPv2vsGACEPv3.png, id=1366, 296.307pt x 166.82326pt>
 File: imagenes/Experimental/GACEPv2vsGACEPv3.png Graphic file (type png)
 <use imagenes/Experimental/GACEPv2vsGACEPv3.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv3.png  used on in
-put line 601.
+put line 604.
 (pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
-<imagenes/Experimental/barras/GACEPv2vsGACEPv3.png, id=1303, 263.7855pt x 174.0
+<imagenes/Experimental/barras/GACEPv2vsGACEPv3.png, id=1367, 263.7855pt x 174.0
 5025pt>
 File: imagenes/Experimental/barras/GACEPv2vsGACEPv3.png Graphic file (type png)
 
 <use imagenes/Experimental/barras/GACEPv2vsGACEPv3.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv3.png  use
-d on input line 608.
+d on input line 611.
 (pdftex.def)             Requested size: 211.26027pt x 139.39441pt.
+LaTeX Info: Redefining \. on input line 629.
+LaTeX Info: Redefining \% on input line 629.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[84 <./imagenes/Experimental/GACEPv3c.png> <./imagenes/Experimental/barras/GACE
+Pv3c.png> <./imagenes/Experimental/GACEPv2vsGACEPv3.png> <./imagenes/Experiment
+al/barras/GACEPv2vsGACEPv3.png>]
+Overfull \hbox (29.60693pt too wide) in paragraph at lines 630--631
+[]\T1/lmr/m/n/10.95 En tan-to que no es una ver-sión pu-ra-men-te de GA-CEP, ca
+m-bia-re-mos su no-ta-ción a ``\T1/lmr/bx/sc/10.95 GACEPCHCv\T1/lmtt/b/n/10.95 
+x\T1/lmr/m/n/10.95 '',
+ []
+
+<imagenes/Experimental/CHCvsGACEPCHCv1.png, id=1376, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/CHCvsGACEPCHCv1.png Graphic file (type png)
+<use imagenes/Experimental/CHCvsGACEPCHCv1.png>
+Package pdftex.def Info: imagenes/Experimental/CHCvsGACEPCHCv1.png  used on inp
+ut line 653.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/CHCvsGACEPCHCv1.png, id=1377, 234.8775pt x 174.05
+025pt>
+File: imagenes/Experimental/barras/CHCvsGACEPCHCv1.png Graphic file (type png)
+<use imagenes/Experimental/barras/CHCvsGACEPCHCv1.png>
+Package pdftex.def Info: imagenes/Experimental/barras/CHCvsGACEPCHCv1.png  used
+ on input line 660.
+(pdftex.def)             Requested size: 211.26027pt x 156.54814pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 674.
+
+<imagenes/Experimental/DiferenciasGACEPCHCv1.png, id=1379, 289.68225pt x 174.05
+025pt>
+File: imagenes/Experimental/DiferenciasGACEPCHCv1.png Graphic file (type png)
+<use imagenes/Experimental/DiferenciasGACEPCHCv1.png>
+Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEPCHCv1.png  used 
+on input line 713.
+(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 724.
+LaTeX Info: Redefining \% on input line 724.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[85]
+<imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png, id=1388, 289.08pt x 174.0502
+5pt>
+File: imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png Graphic file (type png)
+<use imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png  used
+ on input line 735.
+(pdftex.def)             Requested size: 211.26027pt x 127.19637pt.
+<imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.png, id=1389, 265.59225pt 
+x 174.05025pt>
+File: imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.png Graphic file (typ
+e png)
+<use imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.pn
+g  used on input line 742.
+(pdftex.def)             Requested size: 211.26027pt x 138.4516pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 753.
+LaTeX Info: Redefining \% on input line 753.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[86 <./imagenes/Experimental/CHCvsGACEPCHCv1.png> <./imagenes/Experimental/barr
+as/CHCvsGACEPCHCv1.png>]
+<imagenes/Experimental/GACEPv2vsGACEPCHCv2.png, id=1396, 289.68225pt x 174.0502
+5pt>
+File: imagenes/Experimental/GACEPv2vsGACEPCHCv2.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv2vsGACEPCHCv2.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPCHCv2.png  used on
+ input line 758.
+(pdftex.def)             Requested size: 211.26027pt x 126.93344pt.
+<imagenes/Experimental/barras/GACEPv2vsGACEPCHCv2.png, id=1397, 257.763pt x 173
+.448pt>
+File: imagenes/Experimental/barras/GACEPv2vsGACEPCHCv2.png Graphic file (type p
+ng)
+<use imagenes/Experimental/barras/GACEPv2vsGACEPCHCv2.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPCHCv2.png  
+used on input line 765.
+(pdftex.def)             Requested size: 211.26027pt x 142.16211pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 789.
+LaTeX Info: Redefining \% on input line 789.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[87 <./imagenes/Experimental/DiferenciasGACEPCHCv1.png> <./imagenes/Experimenta
+l/GACEPCHCv1vsGACEPCHCv2.png> <./imagenes/Experimental/barras/GACEPCHCv1vsGACEP
+CHCv2.png>]
+LaTeX Info: Redefining \. on input line 809.
+LaTeX Info: Redefining \% on input line 809.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[88 <./imagenes/Experimental/GACEPv2vsGACEPCHCv2.png> <./imagenes/Experimental/
+barras/GACEPv2vsGACEPCHCv2.png>]
+<imagenes/Experimental/GACEPv2vsGACEPv4.png, id=1413, 289.08pt x 174.05025pt>
+File: imagenes/Experimental/GACEPv2vsGACEPv4.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv2vsGACEPv4.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv4.png  used on in
+put line 818.
+(pdftex.def)             Requested size: 211.26027pt x 127.19637pt.
+<imagenes/Experimental/barras/GACEPv2vsGACEPv4.png, id=1414, 248.72925pt x 174.
+05025pt>
+File: imagenes/Experimental/barras/GACEPv2vsGACEPv4.png Graphic file (type png)
+
+<use imagenes/Experimental/barras/GACEPv2vsGACEPv4.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv4.png  use
+d on input line 825.
+(pdftex.def)             Requested size: 211.26027pt x 147.8345pt.
+<imagenes/Experimental/GACEPv2vsGACEPv5.png, id=1416, 289.68225pt x 174.05025pt
+>
+File: imagenes/Experimental/GACEPv2vsGACEPv5.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv2vsGACEPv5.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv5.png  used on in
+put line 848.
+(pdftex.def)             Requested size: 211.26027pt x 126.93344pt.
+<imagenes/Experimental/barras/GACEPv2vsGACEPv5.png, id=1417, 249.93375pt x 174.
+05025pt>
+File: imagenes/Experimental/barras/GACEPv2vsGACEPv5.png Graphic file (type png)
+
+<use imagenes/Experimental/barras/GACEPv2vsGACEPv5.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv5.png  use
+d on input line 855.
+(pdftex.def)             Requested size: 211.26027pt x 147.12276pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 870.
+LaTeX Info: Redefining \% on input line 870.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[89 <./imagenes/Experimental/GACEPv2vsGACEPv4.png> <./imagenes/Experimental/bar
+ras/GACEPv2vsGACEPv4.png>]
+<imagenes/Experimental/GACEPv2vsGACEPv6.png, id=1424, 289.08pt x 173.448pt>
+File: imagenes/Experimental/GACEPv2vsGACEPv6.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv2vsGACEPv6.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv6.png  used on in
+put line 880.
+(pdftex.def)             Requested size: 211.26027pt x 126.75624pt.
+<imagenes/Experimental/barras/GACEPv2vsGACEPv6.png, id=1425, 247.52475pt x 174.
+05025pt>
+File: imagenes/Experimental/barras/GACEPv2vsGACEPv6.png Graphic file (type png)
+
+<use imagenes/Experimental/barras/GACEPv2vsGACEPv6.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv6.png  use
+d on input line 887.
+(pdftex.def)             Requested size: 211.26027pt x 148.55421pt.
+LaTeX Info: Redefining \. on input line 904.
+LaTeX Info: Redefining \% on input line 904.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[90 <./imagenes/Experimental/GACEPv2vsGACEPv5.png> <./imagenes/Experimental/bar
+ras/GACEPv2vsGACEPv5.png> <./imagenes/Experimental/GACEPv2vsGACEPv6.png> <./ima
+genes/Experimental/barras/GACEPv2vsGACEPv6.png>]
+<imagenes/Experimental/barras/GACEPv6vsGACEPv7.png, id=1433, 289.68225pt x 173.
+448pt>
+File: imagenes/Experimental/barras/GACEPv6vsGACEPv7.png Graphic file (type png)
+
+<use imagenes/Experimental/barras/GACEPv6vsGACEPv7.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv6vsGACEPv7.png  use
+d on input line 912.
+(pdftex.def)             Requested size: 289.68153pt x 173.44757pt.
+
+Underfull \vbox (badness 3954) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 934.
+LaTeX Info: Redefining \% on input line 934.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[91 <./imagenes/Experimental/barras/GACEPv6vsGACEPv7.png>]
+<imagenes/Experimental/GACEPv35.png, id=1440, 296.307pt x 166.82326pt>
+File: imagenes/Experimental/GACEPv35.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv35.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv35.png  used on input line
+ 941.
+(pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
+<imagenes/Experimental/barras/GACEPv35.png, id=1441, 253.54726pt x 174.05025pt>
+
+File: imagenes/Experimental/barras/GACEPv35.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPv35.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv35.png  used on inp
+ut line 948.
+(pdftex.def)             Requested size: 211.26027pt x 145.02998pt.
+<imagenes/Experimental/GACEPv36.png, id=1442, 296.307pt x 166.82326pt>
+File: imagenes/Experimental/GACEPv36.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv36.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv36.png  used on input line
+ 962.
+(pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
+<imagenes/Experimental/barras/GACEPv36.png, id=1443, 269.808pt x 173.448pt>
+File: imagenes/Experimental/barras/GACEPv36.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPv36.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv36.png  used on inp
+ut line 969.
+(pdftex.def)             Requested size: 211.26027pt x 135.81291pt.
+<imagenes/Experimental/GACEPv356.png, id=1444, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/GACEPv356.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv356.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv356.png  used on input lin
+e 985.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GACEPv356.png, id=1445, 242.70676pt x 174.05025pt
+>
+File: imagenes/Experimental/barras/GACEPv356.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPv356.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv356.png  used on in
+put line 992.
+(pdftex.def)             Requested size: 211.26027pt x 151.4995pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (capitulos/09_Conclusiones.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -4624,9 +4975,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[84 <./imagenes/Experimental/GACEPv3c.png> <./imagenes/Experimental/barras/GACE
-Pv3c.png> <./imagenes/Experimental/GACEPv2vsGACEPv3.png> <./imagenes/Experiment
-al/barras/GACEPv2vsGACEPv3.png>]
+[92 <./imagenes/Experimental/GACEPv35.png> <./imagenes/Experimental/barras/GACE
+Pv35.png> <./imagenes/Experimental/GACEPv36.png> <./imagenes/Experimental/barra
+s/GACEPv36.png>]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -4638,11 +4989,12 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[85] [86
+[93 <./imagenes/Experimental/GACEPv356.png> <./imagenes/Experimental/barras/GAC
+EPv356.png>] [94
 
 ]
 Cap\'{\i }tulo 11.
-) [87] [88
+) [95] [96
 
 ]
 Overfull \hbox (0.31184pt too wide) in paragraph at lines 266--266
@@ -4650,7 +5002,7 @@ Overfull \hbox (0.31184pt too wide) in paragraph at lines 266--266
 Novel-First Ta-bu Search and MOEA/D,''
  []
 
-[89]
+[97]
 LaTeX Info: Redefining \. on input line 265.
 LaTeX Info: Redefining \% on input line 265.
 
@@ -4662,7 +5014,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
-[90]
+[98]
 Overfull \hbox (1.74744pt too wide) in paragraph at lines 266--266
 []\T1/lmr/m/n/10.95 C. Witz-gall, ``Mathe-ma-ti-cal Methods of Si-te Se-lec-tio
 n for Elec-tro-nic Mes-sa-ge Sys-tems (EMS),''
@@ -4680,7 +5032,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
-[91] [92
+[99] [100
 
 ]
 Ap\'{e}ndice A.
@@ -4712,7 +5064,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 370.
 
-) [93]
+) [101]
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4721,7 +5073,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[94]
+[102]
 LaTeX Info: Redefining \. on input line 275.
 LaTeX Info: Redefining \% on input line 275.
 
@@ -4733,7 +5085,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[95]
+[103]
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4742,7 +5094,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[96]
+[104]
 LaTeX Info: Redefining \. on input line 275.
 LaTeX Info: Redefining \% on input line 275.
 
@@ -4754,7 +5106,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[97]
+[105]
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4763,7 +5115,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[98]
+[106]
 LaTeX Info: Redefining \. on input line 275.
 LaTeX Info: Redefining \% on input line 275.
 
@@ -4775,7 +5127,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[99]
+[107]
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4784,21 +5136,16 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[100] [101
+[108] [109
 
 ] (proyecto.aux
 LaTeX Info: Redefining \sptext on input line 29.
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
 )
+Package rerunfilecheck Info: File `proyecto.out' has not changed.
+(rerunfilecheck)             Checksum: 1F58C150E017499B113558B3F8373996;6066.
 
-Package rerunfilecheck Warning: File `proyecto.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `proyecto.out':
-(rerunfilecheck)             Before: 824951F06EB7643C4099AFE45D697894;5457
-(rerunfilecheck)             After:  0780A0BE5B559D738C173FEBE034881E;5523.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -4818,10 +5165,10 @@ Package logreq Info: Writing requests to 'proyecto.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25267 strings out of 479696
- 441597 string characters out of 2876991
- 1591321 words of memory out of 3000000
- 41459 multiletter control sequences out of 15000+200000
+ 25507 strings out of 479696
+ 449988 string characters out of 2876991
+ 1596522 words of memory out of 3000000
+ 41661 multiletter control sequences out of 15000+200000
  499495 words of font info for 77 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,28n,111p,4325b,2448s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -4845,9 +5192,9 @@ ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lm
 tt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Program F
 iles/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (123 pages, 1131762 bytes).
+Output written on proyecto.pdf (131 pages, 1288896 bytes).
 PDF statistics:
- 1594 PDF objects out of 1728 (max. 8388607)
- 430 named destinations out of 1000 (max. 500000)
- 738 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1741 PDF objects out of 2073 (max. 8388607)
+ 457 named destinations out of 1000 (max. 500000)
+ 902 words of extra memory for PDF output out of 10000 (max. 10000000)
 

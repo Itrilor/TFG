@@ -145,9 +145,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10.3}Resultados versión expensive}{75}{section.10.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.4}Incorporación del histórico}{77}{section.10.4}%
+\contentsline {section}{\numberline {10.4}Incorporación del histórico}{78}{section.10.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.5}Uso de GRASP}{80}{section.10.5}%
+\contentsline {section}{\numberline {10.5}Uso de GRASP}{79}{section.10.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10.6}Operador de Cruce Intensivo}{82}{section.10.6}%
 \defcounter {refsection}{0}\relax 
@@ -155,16 +155,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.6.2}Sin utilizar GRASP}{83}{subsection.10.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.7}GACEPCHC}{85}{section.10.7}%
+\contentsline {section}{\numberline {10.7}Modificaciones sobre CHC}{85}{section.10.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.8}Estudio de la diversidad}{85}{section.10.8}%
+\contentsline {subsection}{\numberline {10.7.1}Incorporación del histórico}{85}{subsection.10.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.9}Incrementando la diversidad (con nuevo reemplazo)}{85}{section.10.9}%
+\contentsline {subsection}{\numberline {10.7.2}Uso del GRASP}{86}{subsection.10.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.10}Resumen de las versiones}{85}{section.10.10}%
+\contentsline {section}{\numberline {10.8}Estudio de la diversidad}{87}{section.10.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusiones}{87}{chapter.11}%
+\contentsline {section}{\numberline {10.9}Incrementando la diversidad}{88}{section.10.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografía}{91}{chapter*.23}%
+\contentsline {subsection}{\numberline {10.9.1}Población Inicial Diversa}{88}{subsection.10.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Tablas de Resultados}{93}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {10.9.2}Versión del NAM}{89}{subsection.10.9.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.9.3}Versión del \textit {Crowding} Determinístico}{89}{subsection.10.9.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Reemplazo intensivo}{90}{figure.caption.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.9.4}Combinaciones}{91}{subsection.10.9.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{GACEPv35}{92}{subsection.10.9.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{GACEPv36}{92}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{GACEPv56}{93}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{GACEPv356}{93}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.9.5}Comparaciones}{93}{subsection.10.9.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.10}Resumen de las versiones}{93}{section.10.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {11}Conclusiones}{95}{chapter.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografía}{99}{chapter*.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Tablas de Resultados}{101}{appendix.Alph1}%

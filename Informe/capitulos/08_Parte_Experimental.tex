@@ -277,6 +277,9 @@ Esto se puede observar en el hecho de que las diferencias a la última solución
 
 Sin embargo, en la tabla \ref{DiferenciasCHC} se tiene que las soluciones convergen rápidamente a la solución final antes de llegar siquiera el 50\% de la ejecución total. 
 De esto se puede inferir que los mecanismos de aumento de la diversidad de CHC no son de mucha utilidad en nuestro caso. 
+También se debe tener en cuenta que estamos usando una modificación de CHC donde no se reinicia la población, ya que se prevee su rápida convergencia, lo que causaría una gran cantidad de reinicios y, por tanto, evaluaciones, las cuales estamos intentando mantener al mínimo. 
+En contrapartida a no usar reinicio de población, se mantiene la mutación de las soluciones con el fin de aportar más diversidad. 
+A vista de los resultados se puede entender que esto no es suficiente para mantener la diversidad. 
 
 Por otra parte, si nos fijamos en la gráfica \ref{fig:AGEUvsCHC} se puede ver cómo el algoritmo CHC es mejor que el AGEU mientras que se siguen produciendo cambios, es decir, antes de que se produzca el 50\% de la ejecución. 
 Por lo que se considerará posteriormente una mezcla de ambos algoritmos, con el fin de aprovechar los buenos resultados iniciales del CHC y la capacidad de no converger rápidamente que presenta AGEU con el fin de tener un buen punto de partida.
@@ -618,15 +621,383 @@ De hecho, las dos versiones tienen resultados muy parecidos, lo cual tiene senti
 De cualquier forma, a partir del 30\% de las iteraciones GACEPv2 obtiene mejores resultados que GACEPv3c50, aunque sea por poco. 
 Por lo tanto, ignoraremos esta tercera versión y seguiremos trabajando con la segunda versión como base. 
 
-\section{GACEPCHC}
+\section{Modificaciones sobre CHC}
 
+Llegados a este punto podemos considerar haber hecho algunos avances significativos sobre el AGEU y es momento de preguntarse si estas modificaciones se podrían aplicar al algoritmo CHC. 
+Recordemos que en \ref{fig:AGEUvsCHC_lineas} podíamos apreciar que CHC obtenía mejores resultados en la primera mitad de las iteraciones y al final resultaba peor dado a que convergía prematuramente. 
+Por lo tanto, en esta sección vamos a comprobar si aplicando los mismos cambios que al AGEU se logra mejorar los resultados del GACEP. 
 
+En tanto que no es una versión puramente de GACEP, cambiaremos su notación a ``\textbf{GACEPCHCv\texttt{x}}'', donde \texttt{x} representa el número de la versión. 
+
+\subsection{Incorporación del histórico}
+
+El uso del histórico \ref{alg:Historico_Estructura} para CHC sigue la misma lógica que para el AGEU: el aumento de la explotación de los mejores resultados. 
+Si bien a simple vista se podría pensar que el uso del histórico no debería mejorar los resultados ya que nuestro problema principal es que la población converge rápidamente a una solución se debe recordar cómo se clasificaban los distintos elementos:
+\begin{itemize}
+	\item \texttt{Mejores}: Aquellos elementos que suelen estar presentes en las mejores soluciones, pero no en las peores.
+	\item \texttt{Peores}: Aquellos elementos que suelen estar presentes en las peores soluciones, pero no en las mejores. 
+	\item \texttt{Sin información}: Aquellos elementos que frecuentemente no aparecen en las mejores ni en las peores soluciones o que aparecen en ambas (por lo que no nos aporta ninguna información ya que no se puede considerar un elemento determinista en lo buena que es una solución).
+\end{itemize}
+Por lo que si todas las soluciones son muy parecidas entre sí, teniendo todas el mismo conjunto de elementos, estos elementos no se considerarán ``mejores'' que el resto y tendrán la misma probabilidad de ser elegidas que el resto de elementos que no se han explorado anteriormente. 
+
+Esta versión se denominará \textbf{GACEPCHCv1}.
+
+Como hemos hecho previamente, obtendremos sus resultados, los cuales están almacenados en \color{red} METER TABLA EN EL APENDICE\color{black}. 
+Estos resultados los compararemos con los del CHC versión \textit{expensive} para determinar si se ha producido algún tipo de mejora. 
+Esta comparación será visible en la gráfica \ref{fig:CHCvsGACEPCHCv1}
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/CHCvsGACEPCHCv1.png}
+         \caption{Ranking durante todas las \textit{milestones}}
+         \label{fig:CHCvsGACEPCHCv1_lineas}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/barras/CHCvsGACEPCHCv1.png}
+         \caption{Ranking final}
+         \label{fig:CHCvsGACEPCHCv1_barras}
+     \end{subfigure}
+        \caption{Comparación de los resultados de CHC y GACEPCHCv1}
+        \label{fig:CHCvsGACEPCHCv1}
+\end{figure}
+
+En esta gráfica \ref{fig:CHCvsGACEPCHCv1} se puede apreciar que aunque inicialmente GACEPCHCv1 es bastante peor que CHC, tras la mitad de las ejecuciones logra mejorarlo. 
+Esto podría estar causado por el hecho de que CHC converge rápidamente antes de la mitad de las ejecuciones y que GACEPCHCv1 puede que siga mejorando poco a poco como lo harían las versiones anteriores basadas en AGEU debido a cierto aumento de la diversidad en la población. 
+Para comprobar si este es el caso, estudiaremos las diferencias entre las soluciones de las distintas \textit{milestones} y la final. 
+Esta información se mostrará en la tabla y su correspondiente gráfica
+
+%GACEPCHCv1
+\begin{table}[]
+\begin{tabular}{|ccrccrccr|}
+\hline
+\rowcolor[HTML]{FFFFC7} 
+\multicolumn{9}{|c|}{\cellcolor[HTML]{FFFFC7}GACEPCHCv1}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             \\ \hline
+\rowcolor[HTML]{F7EAC7} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{F7EAC7}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}milestone} & \multicolumn{1}{l|}{\cellcolor[HTML]{F7EAC7}Diferencia} & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}milestone} & \multicolumn{1}{l|}{\cellcolor[HTML]{F7EAC7}Diferencia} & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}milestone} & \multicolumn{1}{l|}{\cellcolor[HTML]{F7EAC7}Diferencia} \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}1}         & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}26.7201}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}1}         & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}25.7172359} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}1}         & 26.2254573                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}2}         & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}23.2096}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}2}         & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}22.3721298} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}2}         & 22.0835516                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}3}         & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}21.5554}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}3}         & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}20.5934122} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}3}         & 20.2131967                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}5}         & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}18.774}     & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}5}         & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}17.9674193} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}5}         & 17.375892                                               \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}10}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}14.7039}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}10}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}13.6488991} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}10}        & 12.7586834                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}20}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}5.48547}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}20}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}4.77580753} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}20}        & 4.55863648                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}30}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}4.59547}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}30}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}4.01781911} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}30}        & 3.702351                                                \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}40}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}2.47563}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}40}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}2.54730194} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}40}        & 2.39425407                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}50}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}1.75038}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}50}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}1.97120082} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}50}        & 1.90218522                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}60}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}1.14161}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}60}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}1.35810173} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}60}        & 1.29008322                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}70}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}0.62625}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}70}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}0.82009965} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}70}        & 0.81355995                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}80}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}0.44086}    & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}80}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DDFDFF}0.55229199} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFC7}}                                & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}80}        & 0.54620318                                              \\ \cline{2-3} \cline{5-6} \cline{8-9} 
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\multirow{-13}{*}{\cellcolor[HTML]{FFFFC7}\textbf{100}}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}90}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}0.00726}    & \multicolumn{1}{c|}{\multirow{-13}{*}{\cellcolor[HTML]{FFFFC7}\textbf{200}}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}90}        & \multicolumn{1}{r|}{\cellcolor[HTML]{DAE8FC}0.01307933} & \multicolumn{1}{c|}{\multirow{-13}{*}{\cellcolor[HTML]{FFFFC7}\textbf{300}}} & \multicolumn{1}{c|}{\cellcolor[HTML]{DAE8FC}90}        & 0.03623624                                              \\ \hline
+\end{tabular}
+\caption{\label{DiferenciasGACEPCHCv1}Diferencias de los resultados de las distintas milestones con respecto a la final para el algoritmo GACEPCHCv1}
+\end{table}
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1]{imagenes/Experimental/DiferenciasGACEPCHCv1.png}
+        \caption{Gráfica asociada a la tabla \ref{DiferenciasGACEPCHCv1}}
+        \label{fig:DiferenciasGACEPCHCv1}
+\end{figure}
+
+Efectivamente, en la gráfica \ref{fig:DiferenciasGACEPCHCv1} se puede comprobar visualmente que tiene un comportamiento parecido al de las versiones de AGEU, aunque bien es verdad que es bastante más abrupto.
+
+\subsection{Uso del GRASP}
+
+Nuestro objetivo sigue siendo aumentar la exploración del algoritmo para conseguir una población aún más diversa y que las soluciones no converjan de forma prematura. 
+Por ello se considera que este algoritmo se podría beneficiar en gran medida del uso del GRASP, podremos mantener la diversidad de la población a lo largo de la ejecución del algoritmo y, a la vez, se garantiza que las soluciones seguirán siendo competentes. 
+
+Esta nueva versión está construida usando GACEPCHCv1 de base y la denominaremos \textbf{GACEPCHCv2}.
+
+Tras su implementación, debemos recoger sus resultados, los cuales están almacenados en la tabla \color{red}METER TABLA EN EL APENDICE\color{black}. 
+Tras esto, en primer lugar compararemos GACEPCHCv1 y GACEPCHCv2 para comprobar que realmente se ha producido una mejora de los resultados con respecto a la versión anterior. 
+Esta comparación será visible en la gráfica \ref{fig:GACEPCHCv1vsGACEPCHCv2}.
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png}
+         \caption{Ranking durante todas las \textit{milestones}}
+         \label{fig:GACEPCHCv1vsGACEPCHCv2_lineas}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.png}
+         \caption{Ranking final}
+         \label{fig:GACEPCHCv1vsGACEPCHCv2_barras}
+     \end{subfigure}
+        \caption{Comparación de los resultados de GACEPCHCv1 y GACEPCHCv2}
+        \label{fig:GACEPCHCv1vsGACEPCHCv2}
+\end{figure}
+
+En esta gráfica \ref{fig:GACEPCHCv1vsGACEPCHCv2} podemos comprobar que efectivamente se produce una mejora con respecto a la versión anterior. 
+Por lo que podemos proceder a realizar una comparación con la versión equivalente para el algoritmo AGEU: GACEPv2. 
+Esta comparación será visible en la gráfica \ref{fig:GACEPv2vsGACEPCHCv2}.
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/GACEPv2vsGACEPCHCv2.png}
+         \caption{Ranking durante todas las \textit{milestones}}
+         \label{fig:GACEPv2vsGACEPCHCv2_lineas}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/barras/GACEPv2vsGACEPCHCv2.png}
+         \caption{Ranking final}
+         \label{fig:GACEPv2vsGACEPCHCv2_barras}
+     \end{subfigure}
+        \caption{Comparación de los resultados de GACEPv2 y GACEPCHCv2}
+        \label{fig:GACEPv2vsGACEPCHCv2}
+\end{figure}
+
+En la gráfica \ref{fig:GACEPv2vsGACEPCHCv2} se puede ver cómo GACEPv2 obtiene mejores resultados que GACEPCHCv2 en la mayoría de las \textit{milestones}, sobre todo y más importante, obtiene mejores resultados finales. 
+En tanto que no se ha logrado mejorar los resultados de una versión anterior, descartaremos estos cambios y seguiremos trabajando exclusivamente sobre el algoritmo GACEPv2.
 
 \section{Estudio de la diversidad}
 
+\color{red}
+Para poner las tablas de diversidad calculada como la diferencia entre las distintas soluciones de la población en las distintas milestones tendría que volver a ejecutarlo. 
+
+De todas formas, el estudio se puede resumir a que hemos estado comentando que nuestras soluciones parece que ya se encuentran muy cerca de la final durante la algo más de la mitad de las iteraciones, así que realizamos propiamente un estudio de la diversidad -> Insertamos tabla + gráfica asociada -> Efectivamente hay poca diversidad, lo que nos va a llevar a implementar una serie de modificaciones dedicadas especialmente a mantener la diversidad de la población 
+\color{black}
+
+\section{Incrementando la diversidad}
+
+Con motivo del estudio realizado en la sección anterior, resulta necesario introducir modificaciones que sean capaces de introducir y/o mantener diversidad en la población. 
+En este trabajo se proponen algunas modificaciones, las cuales se explicarán individualmente y qué sentido podría tener combinarlas, comparándolas con el algoritmo GACEPv2. 
+Finalmente, compararemos todas las versiones de esta sección entre sí para determinar cuál es la mejor y presentaremos como la versión final de este desarrollo. 
+
+Un resumen de las modificaciones que aplicaremos a continuación es:
+\begin{itemize}
+	\item Población inicial diversa \ref{alg:PD}: Nos aseguramos que la población inicial cumpla una condición de diversidad. 
+	\item Una versión del operador NAM \ref{alg:NAM}: Alteramos la elección de los padres que se utilizarán para el cruce.
+	\item Una versión del \textit{Crowding} Determinístico \ref{alg:ORC}: Modificamos el operador de reemplazo.
+\end{itemize}
+
+\subsection{Población Inicial Diversa}
+
+La motivación de esta modificación es asegurar que vamos tenemos con una población lo suficientemente diversa antes de empezar la ejecución del propio algoritmo. 
+La generación de esta población inicial no computa para el número máximo de iteraciones, ya que no nos interesa saber si estas soluciones son buenas o no, solo nos interesa saber que son lo suficientemente distintas. 
+
+Consideramos que una población será lo suficientemente diversa cuando cada una de las soluciones que la conforman difiere del resto de soluciones en al menos un \texttt{x}\% de las variables con las que tratamos. 
+Se iba a realizar un estudio individual para averiguar cuál sería un \texttt{x} adecuado, sin embargo, el máximo valor que pudimos ejecutar fue \texttt{x}$=5$, ya que para valores superiores había archivos en los que era incapaz de encontrar un conjunto de soluciones que satisficiese dichas condiciones. 
+
+Por lo tanto, para este trabajo, consideramos que una población es lo suficientemente diversa cuando cada una de las soluciones difiere del resto en, al menos, un $5\%$ de las variables que la componen. 
+
+Esta versión tomará el nombre de \textbf{GACEPv4}. 
+Los resultados de este algoritmo se encuentran en la Tabla \color{red}METER TABLA EN APÉNDICE\color{black}.
+
+El algoritmo con esta modificación podría no considerarse una versión en sí misma, sino más bien como un prerrequisito para el resto de modificaciones de esta sección. 
+Esto se debe a que la sola modificación de la población inicial no es algo que el algoritmo pueda aprovechar de forma recursiva, es solo una pequeña modificación que se hace al principio para establecer una determinada población. 
+Por lo que su resultado no puede diferir mucho con respecto al de GACEPv2, como se puede apreciar en la gráfica \ref{fig:GACEPv2vsGACEPv5} (nótese la escala en la que se encuentra el eje Y en \ref{fig:GACEPv2vsGACEPv4_lineas}). 
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/GACEPv2vsGACEPv4.png}
+         \caption{Ranking durante todas las \textit{milestones}}
+         \label{fig:GACEPv2vsGACEPv4_lineas}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/barras/GACEPv2vsGACEPv4.png}
+         \caption{Ranking final}
+         \label{fig:GACEPv2vsGACEPv4_barras}
+     \end{subfigure}
+        \caption{Comparación de los resultados de GACEPv2 y GACEPv4}
+        \label{fig:GACEPv2vsGACEPv4}
+\end{figure}
+
+\subsection{Versión del NAM}
+
+La motivación de esta modificación es que el cruce de dos padres lo suficientemente diferentes dará probablemente lugar a un par de soluciones que sean diferentes de ambos padres. 
+En esta versión del NAM elegimos el primer padre mediante un Torneo Binario, para garantizar cierta bondad, y el segundo padre mediante el método original: escoger un subconjunto de la población y elegir como padre aquella solución más diferente al primer padre. 
+Para esta modificación no hay ningún tipo de umbral de diferencias que se deba pasar para elegir al segundo padre, solo que sea lo más distinto posible. 
+
+Esta versión tomará el nombre de \textbf{GACEPv5}. 
+
+Esta versión ya si supone una gran modificación del propio algoritmo, por lo que es necesario obtener sus resultados \color{red} METER TABLA EN APÉNDICE \color{black} y compararlos con GACEPv2 para determinar si supone una mejora. 
+Esta comparación es visible en la gráfica \ref{fig:GACEPv2vsGACEPv5}.
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/GACEPv2vsGACEPv5.png}
+         \caption{Ranking durante todas las \textit{milestones}}
+         \label{fig:GACEPv2vsGACEPv5_lineas}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/barras/GACEPv2vsGACEPv5.png}
+         \caption{Ranking final}
+         \label{fig:GACEPv2vsGACEPv5_barras}
+     \end{subfigure}
+        \caption{Comparación de los resultados de GACEPv2 y GACEPv5}
+        \label{fig:GACEPv2vsGACEPv5}
+\end{figure}
+
+En la gráfica \ref{fig:GACEPv2vsGACEPv5_lineas} se puede ver que, aunque GACEPv2 obtiene resultados mejores en prácticamente todos los casos probados, a partir del 40\% de las ejecuciones se tiene que GACEPv5 mejora a GACEPv2 en casi todas las instancias del problema probadas. 
+Por lo tanto, podemos declarar que esta modificación supone una mejora. 
+
+\subsection{Versión del \textit{Crowding} Determinístico}
+
+La motivación de esta modificación es que el criterio para determinar si una nueva solución se introduce o no en la población no sea únicamente el valor de dicha solución, si no también tener en cuenta si aporta diversidad. 
+Es decir, dada una solución nueva se deberá buscar en primer lugar aquella solución en la población con la que más parecido tenga y la sustituirá si, y solo si, la supera en valor. 
+
+Esta versión tomará el nombre de \textbf{GACEPv6}. 
+
+De la misma forma que con la introducción del NAM, esta versión supone una gran modificación del propio algoritmo, por lo que es necesario obtener sus resultados \color{red} METER TABLA EN APÉNDICE \color{black} y compararlos con GACEPv2 para determinar si se ha producido una mejora. 
+Esta comparación es visible en la gráfica \ref{fig:GACEPv2vsGACEPv6}.
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/GACEPv2vsGACEPv6.png}
+         \caption{Ranking durante todas las \textit{milestones}}
+         \label{fig:GACEPv2vsGACEPv6_lineas}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/barras/GACEPv2vsGACEPv6.png}
+         \caption{Ranking final}
+         \label{fig:GACEPv2vsGACEPv6_barras}
+     \end{subfigure}
+        \caption{Comparación de los resultados de GACEPv2 y GACEPv6}
+        \label{fig:GACEPv2vsGACEPv6}
+\end{figure}
+
+En la gráfica \ref{fig:GACEPv2vsGACEPv6_lineas} se puede comprobar que la nueva versión es mejor en todas las \textit{milestones} que GACEPv2. 
+Sin embargo, es importante notar que solo se obtienen mejoras significantes durante la primera mitad de las iteraciones. 
 
 
-\section{Incrementando la diversidad (con nuevo reemplazo)}
+\subsubsection{Reemplazo intensivo}
+
+Esta versión \ref{alg:ORCv} intensifica la idea anterior, ya que no solo podrá sustituir a la solución más cercana, sino que en caso de que lo haga, se llevará un proceso de búsqueda en la población de soluciones tengan menos de cierta cantidad de diferencias con la nueva solución y nos quedaremos únicamente con aquella que sea mejor que el resto. 
+En tanto que el tamaño de la población debe ser constante, el resto de soluciones serán sustituidas por soluciones generadas aleatoriamente. 
+Nótese que dicho umbral de diferencia va a ser el mismo que se ha aplicado para generar una población inicial diversa y que las soluciones generadas aleatoriamente también deberán cumplir que sean lo suficientemente diversas con respecto a la población en las que son introducidas. 
+
+Esta versión tomará el nombre de \textbf{GACEPv7}. 
+
+En tanto que es una modificación directa sobre GACEPv6, debemos comprobar primero si se consiguen mejorar los resultados sobre esta versión. 
+Los resultados obtenidos de la ejecución de GACEPv7 se pueden encontrar en la tabla \color{red} METER TABLA EN APÉNDICE \color{black} y su comparación con los resultados de GACEPv6 se puede visualizar en la gráfica \ref{fig:GACEPv6vsGACEPv7} (se ha cambiado el formato de las gráficas para una mejor visualización).
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1]{imagenes/Experimental/barras/GACEPv6vsGACEPv7.png}
+        \caption{Comparación de los resultados de GACEPv6 y GACEPv7}
+        \label{fig:GACEPv6vsGACEPv7}
+\end{figure}
+
+Como se puede observar en la gráfica \ref{fig:GACEPv6vsGACEPv7}, ambas versiones dan exactamente los mismos resultados en todo momento. 
+De hecho, tras obtener estos resultados se realizó un estudio de cuál era la causa y resultó que por cada hijo que se iba a introducir en la población había una o ninguna solución existente en la población dentro de este umbral, por lo que el número de soluciones a comprobar siempre era constante: una. 
+Ya que incluso si no hay ninguna solución en dicho umbral, por la versión anterior se debe elegir aquella con mayor parecido para compararlas. 
+Por lo tanto, esta última modificación nunca se aplicaba. 
+Si bien no se ha producido ninguna mejora y descartaremos esta versión, esto nos ha ayudado a descubrir que de cierta forma se está manteniendo cierta diversidad en la población, que era el objetivo de esta sección. 
+
+\subsection{Combinaciones}
+
+Para este apartado, para simplificar la notación que podría llegar a tener el nombre de los algoritmos de las distintas combinaciones, estableceremos que se denominarán ``\textbf{GACEPv\texttt{xy}}'', donde \texttt{x}, \texttt{y} son dos versiones distintas de las introducidas en esta sección. 
+
+En esta sección se han obtenido resultados bastante prometedores que en todos casos mejora a su algoritmo base, GACEPv2. 
+Por lo que ahora procederemos a analizar posibles combinaciones de dichas modificaciones por si pudiesen mejorar los resultados actuales obtenidos usando GACEPv2. 
+
+\subsubsection{GACEPv35}
+
+En primer lugar, volvemos a considerar la posibilidad de usar un operador de cruce intensivo, dado establecimos la posibilidad de que su aplicación no aportaba buenos resultados debido a la falta de diversidad. 
+En tanto que con estas nuevas modificaciones conseguimos aumentar la diversidad, es una buena idea probar de nuevo su comportamiento junto con la adición de la versión del operador NAM. 
+
+En la gráfica \ref{fig:GACEPv35} se puede observar el comportamiento de esta nueva versión para los distintos porcentajes.
+ 
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/GACEPv35.png}
+         \caption{Ranking durante todas las \textit{milestones}}
+         \label{fig:GACEPv35_lineas}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/barras/GACEPv35.png}
+         \caption{Ranking final}
+         \label{fig:GACEPv35_barras}
+     \end{subfigure}
+        \caption{Comparación de los resultados de los GACEPv35c\texttt{x}}
+        \label{fig:GACEPv35}
+\end{figure}
+
+\subsubsection{GACEPv36}
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/GACEPv36.png}
+         \caption{Ranking durante todas las \textit{milestones}}
+         \label{fig:GACEPv36_lineas}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/barras/GACEPv36.png}
+         \caption{Ranking final}
+         \label{fig:GACEPv36_barras}
+     \end{subfigure}
+        \caption{Comparación de los resultados de los GACEPv36c\texttt{x}}
+        \label{fig:GACEPv36}
+\end{figure}
+
+\subsubsection{GACEPv56}
+
+\subsubsection{GACEPv356}
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/GACEPv356.png}
+         \caption{Ranking durante todas las \textit{milestones}}
+         \label{fig:GACEPv356_lineas}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{imagenes/Experimental/barras/GACEPv356.png}
+         \caption{Ranking final}
+         \label{fig:GACEPv356_barras}
+     \end{subfigure}
+        \caption{Comparación de los resultados de los GACEPv356c\texttt{x}}
+        \label{fig:GACEPv356}
+\end{figure}
+
+\subsection{Comparaciones}
 
 \section{Resumen de las versiones}
 
