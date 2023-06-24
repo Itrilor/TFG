@@ -163,32 +163,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10.8}Estudio de la diversidad}{87}{section.10.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.9}Incrementando la diversidad}{88}{section.10.9}%
+\contentsline {section}{\numberline {10.9}Incrementando la diversidad}{89}{section.10.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.9.1}Población Inicial Diversa}{88}{subsection.10.9.1}%
+\contentsline {subsection}{\numberline {10.9.1}Población Inicial Diversa}{89}{subsection.10.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.9.2}Versión del NAM}{89}{subsection.10.9.2}%
+\contentsline {subsection}{\numberline {10.9.2}Versión del NAM}{90}{subsection.10.9.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.9.3}Versión del \textit {Crowding} Determinístico}{89}{subsection.10.9.3}%
+\contentsline {subsection}{\numberline {10.9.3}Versión del \textit {Crowding} Determinístico}{91}{subsection.10.9.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Reemplazo intensivo}{90}{figure.caption.29}%
+\contentsline {subsubsection}{Reemplazo intensivo}{92}{figure.caption.30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.9.4}Combinaciones}{91}{subsection.10.9.4}%
+\contentsline {subsection}{\numberline {10.9.4}Combinaciones}{92}{subsection.10.9.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{GACEPv35}{92}{subsection.10.9.4}%
+\contentsline {subsubsection}{GACEPv35}{93}{subsection.10.9.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{GACEPv36}{92}{figure.caption.31}%
+\contentsline {subsubsection}{GACEPv36}{93}{figure.caption.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{GACEPv56}{93}{figure.caption.32}%
+\contentsline {subsubsection}{GACEPv56}{94}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{GACEPv356}{93}{figure.caption.32}%
+\contentsline {subsubsection}{GACEPv356}{94}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.9.5}Comparaciones}{93}{subsection.10.9.5}%
+\contentsline {subsection}{\numberline {10.9.5}Comparaciones}{95}{subsection.10.9.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.10}Resumen de las versiones}{93}{section.10.10}%
+\contentsline {section}{\numberline {10.10}Comparación final}{96}{section.10.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusiones}{95}{chapter.11}%
+\contentsline {section}{\numberline {10.11}Resumen de las versiones}{97}{section.10.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografía}{99}{chapter*.34}%
+\contentsline {chapter}{\numberline {11}Conclusiones}{99}{chapter.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Tablas de Resultados}{101}{appendix.Alph1}%
+\contentsline {chapter}{Bibliografía}{104}{chapter*.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Tablas de Resultados}{105}{appendix.Alph1}%

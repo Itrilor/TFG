@@ -1783,7 +1783,7 @@
       \field{eprinttype}{arxiv}
       \field{langid}{english}
       \field{month}{2}
-      \field{note}{\section{Anotaciones\\ (13/3/2023 1:24:59)} \par "Greedy diversification operator" (Herrera-Poyatos y Herrera, 2017, p. 6) La diversidad de la población es una hoja de doble filo. Por lo que, es deseable un operador de diversificación que solo introduzca diversidad si es necesario \par "Population diversity is a double-edged sword" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "Therefore, it is desired a diversification operator that only introduces diversity if it is necessary." (Herrera-Poyatos y Herrera, 2017, p. 6) \par "The diversification operator should delete the population's repeated chromosomes" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "the chromosomes that are left in the population should have a good objective value and be potentially good for the crossover operator" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "The diversification operator ought also to have a low computational cost" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "We propose using a greedy randomized algorithm" (Herrera-Poyatos y Herrera, 2017, p. 6) GRASP \par "Greedy randomized algorithms provide acceptable chromosomes from the objective value perspective that also contain high quality genetic material thanks to the greedy selection function. The randomized aspect of the algorithm supplies the diversity required in the generated solutions" (Herrera-Poyatos y Herrera, 2017, p. 6) Razonamiento del uso de GRASP \par "elements whose greedy value is less than (1 + {$\sigma$}) times the best element's value," (Herrera-Poyatos y Herrera, 2017, p. 6) ¿Qué elementos elegir para el GRASP? \par "This model obtains better solutions because it controls the quality of the elements added to the list. It also keeps the diversity in the generated solutions" (Herrera-Poyatos y Herrera, 2017, p. 6) \par "we use {$\sigma$} = 0.1 although this parameter can be optimized in each application domain" (Herrera-Poyatos y Herrera, 2017, p. 7) \par "the first element of our proposal is a diversification operator which uses the greedy randomized algorithm to substitute those chromosomes that share similarity characteristics with other population solutions" (Herrera-Poyatos y Herrera, 2017, p. 7) \par "This procedure increase the diversity and also keeps the population quality" (Herrera-Poyatos y Herrera, 2017, p. 7) \par "greedy diversification operator is used instead of the mutation operator" (Herrera-Poyatos y Herrera, 2017, p. 8) El operador de diversificación Greedy (GRASP) se usa en vez del operador de mutación \par "There are also models which work under small populations" (Herrera-Poyatos y Herrera, 2017, p. 10) Hay modelos que trabajan con poblaciones pequeñas -{$>$} pedir archivo \par "Micro-genetic algorithms for stationary and non-stationary function optimization" (Herrera-Poyatos y Herrera, 2017, p. 26) Cuando tratamos con un problemas con alta dimensionalidad, puede ser difícil o costoso en términos de tiempo para todos los parámetros del modelo converger dentro de un margen de error dado. En particular, cuando el número de parámetros del modelo aumenta, también lo hace el tamaño de población requerida. Un tamaño de población grande implica grandes números de evaluación-coste.\\ Una alternativa es el uso de micro algoritmos genéticos, que evolucionan poblaciones muy pequeñas queson muy eficientes localizando áreas prometedoras del espacio de búsqueda. Obviamente, las poblaciones pequeñas son incapaces de mantener la diversidad por muchas generaciones, pero la población puede ser reiniciada cada vez que la población se pierde, manteniendo solo la mejor solución obtenida. Reiniciar la población muchas veces durante la ejecución del algoritmo genético tiene el beneficio añadido de evitar la convergencia prematura debido a la presencia de un individuo con un buen valor, lo que posee el riesgo de prevenir más exploraciones del espacio de búsqueda y haga converger al programa a un mínimo local. Además, en tanto que no estamos tratando con poblaciones largos, la convergencia puede ser alcanzada más rápidamente y con menos requisitos de memoria para almacenar la población \par Comment: 27 pages, 5 figures, 11 tables}
+      \field{note}{Comment: 27 pages, 5 figures, 11 tables}
       \field{number}{arXiv:1702.03594}
       \field{title}{Genetic and {{Memetic Algorithm}} with {{Diversity Equilibrium}} Based on {{Greedy Diversification}}}
       \field{urlday}{18}
@@ -1798,6 +1798,96 @@
       \verb C\:\\Users\\irene\\Zotero\\storage\\D5DHGSGV\\Herrera-Poyatos y Herrera - 2017 - Genetic and Memetic Algorithm with Diversity Equil
       \endverb
       \keyw{Computer Science - Artificial Intelligence,I.2.8}
+    \endentry
+    \entry{garcia-martinezStrategicOscillationQuadratic2014}{article}{}
+      \name{author}{5}{}{%
+        {{hash=7c0af4b5eb7d36b3bfb51f3acc8c91db}{%
+           family={{García-Martínez}},
+           familyi={G\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=dc17e11972df8b60f2996162604f37ac}{%
+           family={Glover},
+           familyi={G\bibinitperiod},
+           given={Fred},
+           giveni={F\bibinitperiod}}}%
+        {{hash=2769a078d1db293a2e1ab61247850bad}{%
+           family={Rodriguez},
+           familyi={R\bibinitperiod},
+           given={Francisco\bibnamedelima J.},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=277f0ff0fa87b54f650fdac32a1b4c5a}{%
+           family={Lozano},
+           familyi={L\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7fd8dcfc9dbf729387bc490da8d9c1a5}{%
+           family={Martí},
+           familyi={M\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec85b1719a7aefdc5d8f9c50769084bf}
+      \strng{fullhash}{ec85b1719a7aefdc5d8f9c50769084bf}
+      \strng{bibnamehash}{ec85b1719a7aefdc5d8f9c50769084bf}
+      \strng{authorbibnamehash}{ec85b1719a7aefdc5d8f9c50769084bf}
+      \strng{authornamehash}{ec85b1719a7aefdc5d8f9c50769084bf}
+      \strng{authorfullhash}{ec85b1719a7aefdc5d8f9c50769084bf}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The quadratic multiple knapsack problem (QMKP) consists in assigning a set of objects, which interact through paired profit values, exclusively to different capacity-constrained knapsacks with the aim of maximising total profit. Its many applications include the assignment of workmen to different tasks when their ability to cooperate may affect the results.}
+      \field{issn}{0926-6003, 1573-2894}
+      \field{journaltitle}{Computational Optimization and Applications}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{1}
+      \field{title}{Strategic Oscillation for the Quadratic Multiple Knapsack Problem}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{volume}{58}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \field{pages}{161\bibrangedash 185}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1007/s10589-013-9623-y
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\MQAWZ92B\\García-Martínez et al. - 2014 - Strategic oscillation for the quadratic multiple k.pdf
+      \endverb
+    \endentry
+    \entry{oppacherShiftingBalanceGenetic}{article}{}
+      \name{author}{2}{}{%
+        {{hash=939a448e8584d119565fb22435b51741}{%
+           family={Oppacher},
+           familyi={O\bibinitperiod},
+           given={Franz},
+           giveni={F\bibinitperiod}}}%
+        {{hash=4ad4d28499bb44efe521353f6dd46d3b}{%
+           family={Wineberg},
+           familyi={W\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ae8e3032bdc60aa66ea629fb388be3e6}
+      \strng{fullhash}{ae8e3032bdc60aa66ea629fb388be3e6}
+      \strng{bibnamehash}{ae8e3032bdc60aa66ea629fb388be3e6}
+      \strng{authorbibnamehash}{ae8e3032bdc60aa66ea629fb388be3e6}
+      \strng{authornamehash}{ae8e3032bdc60aa66ea629fb388be3e6}
+      \strng{authorfullhash}{ae8e3032bdc60aa66ea629fb388be3e6}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Two observed deficiencies of the GA are its tendency to get trapped at local maxima and the difficulty it has handling a changing environment after convergence has occurred. A mechanism proposed by Sewall Wright in the 1930s addresses the problem of premature convergence: his Shifting Balance Theory (SBT) of evolution. In this work the SBT has been modified to remove defects inherent in its original formulation, while keeping the properties that should both increase the adaptive abilities of the GA and prevent it from prematurely converging. The system has been implemented and is called the Shifting Balance Genetic Algorithm (SBGA). Experimental results and analysis are presented demonstrating that the SBGA does, in fact, lessen the problem of premature convergence and also improves performance under a dynamic environment, thereby mitigating both deficiencies.}
+      \field{langid}{english}
+      \field{title}{The {{Shifting Balance Genetic Algorithm}}: {{Improving}} the {{GA}} in a {{Dynamic Environment}}}
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\YA44AL4J\\Oppacher y Wineberg - The Shifting Balance Genetic Algorithm Improving .pdf
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
