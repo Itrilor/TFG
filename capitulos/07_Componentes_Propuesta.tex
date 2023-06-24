@@ -1,0 +1,344 @@
+\chapter{Componentes de la propuesta}
+
+En este capítulo se presentan los distintos componentes que se han ido desarrollando como modificaciones de los distintos componentes de los algoritmos de referencia. 
+Es importante mencionar que en este capítulo no solo se harán mención de aquellas modificaciones que han resultado fructuosas, si no también aquellas que no han mejorado los resultados de versiones anteriores. 
+Estas últimas se conformarán su propia sección aparte al final del capítulo. 
+Se describirán detalladamente además de usar pseudocódigo para representarlos.
+
+Téngase en cuenta que solo se explicará brevemente el por qué de estas modificaciones, ya que entraremos en este tema en más profundidad en el siguiente capítulo. 
+
+\section{Histórico}
+
+Al tener tan pocas evaluaciones y con un tamaño tan pequeño de la población no podemos permitirnos una exploración del vecindario de las distintas soluciones en direcciones que en el momento se podrían considerar erróneas, es decir, que ocasionarían que empeorasen las soluciones. 
+Por ello, se plantea un sistema capaz de ``recordar'' buenos elementos y malos elementos de la solución; considerándose ``buenos elementos'' aquellos que aparecen en gran medida en las mejores soluciones y no se encuentran en las peores, y ``malos elementos'' aquellos que aparecen en gran medida en las peores soluciones y no se encuentran en las mejores. 
+A esto lo llamaremos \textbf{histórico}. 
+
+De esta forma, podemos guiar la exploración de vecindario hacia aquellos elementos que han demostrado ser ``buenos'' y alejarlos de aquellos que han demostrado ser ``malos''. 
+Esta lógica la podemos aplicar en el Operador de Reparación y/o en la Mutación. 
+Esto se haría sustituyendo la lógica Greedy de tener en cuenta el ratio $valor\_acumulado/peso$ a la hora de añadir o eliminar elementos por un fomento del uso de los datos del histórico: se intentarán añadir de forma aleatoria entre los mejores elementos y se intentarán eliminar de forma aleatoria entre los peores elementos. 
+
+Sin embargo, no podemos permitir que esto guíe toda la ejecución, tenemos que decidir un par de cosas:
+\begin{itemize}
+	\item ¿Cuándo se para de recopilar datos para generar el histórico? 
+	Si recopilamos información de pocas iteraciones puede ocasionar que los datos obtenidos no sean representativos, ya que es posible que no se hayan alcanzado en el momento suficientes soluciones buenas. 
+	Si recopilamos información de demasiadas iteraciones puede suponer que los datos obtenidos no sean representativos, ya que la población hubiese podido converger por lo que no hay ningún elemento que se pudiese considerar ``bueno'' o ``malo''; además de que si se dejan pocas ejecuciones para el uso del histórico no se va a poder alcanzar mucha mejora. 
+	\item ¿Durante cuántas ejecuciones deberíamos utilizar el histórico? 
+	En otras palabras, ¿una vez obtenido los datos del histórico deberíamos utilizarlos hasta el final del algoritmo? 
+	La respuesta a esto es: no se debería. 
+	Esto es porque no podemos esperar que los datos obtenidos mediante el histórico sean del todo fiables, es decir, podrían estar guiando la solución hasta un máximo local, por lo que las soluciones de la población convergerían rápidamente. 
+\end{itemize}
+
+Por lo tanto, llegamos a la conclusión de que no podemos utilizar únicamente el histórico. 
+Por ello, lo que haremos será intercalar varias etapas de recopilación de datos y uso del histórico generado. 
+Durante la recopilación de datos se procederá de la misma forma que lo haría si esta modificación no estuviese añadida, con la excepción de que se irá guardando en un archivo las distintas soluciones que estamos alcanzando para luego hacer el estudio de sus elementos. 
+Cada etapa tiene una duración de 50 iteraciones seguidas, con lo que se tendría que cada uso individual del histórico estaría compuesto de 100 iteraciones (50 iteraciones de recopilación de datos y 50 iteraciones de uso de dichos datos). 
+De esta forma, repetimos este proceso 4 veces y las 50 iteraciones restantes se dedicarán al comportamiento usual del algoritmo (por simplicidad a la hora de implementar el código, esto es equivalente a la repetición de una etapa de recopilación de datos). 
+Este esquema se ve representado de forma genérica, por simplicidad, en Algoritmo \ref{alg:Historico_Estructura}.
+
+\begin{algorithm}[H]
+\caption{Estructura General del Histórico}\label{alg:Historico_Estructura}
+\begin{algorithmic}[1]
+\Procedure \texttt{Histórico}
+\State \texttt{RecDatos} = \texttt{True}
+\For{\texttt{i = 0; i < NEVALUACIONES; ++i}}
+	\If{\texttt{i}\%50==0 \&\& \texttt{i}$\neq$ 0} /* Puntos de cambio */
+		\If{i\%100} /* Empezamos a recopilar datos */
+			\State \texttt{RecDatos = True}
+			\State Eliminar todos los datos actuales del histograma
+			\State Recopilar las soluciones de la población actual
+		\Else
+			\State \texttt{RecDatos = False}
+		\EndIf
+	\EndIf
+	\If{\texttt{RecDatos}}
+		\State Ejecutar los componentes de la manera original
+		\State Recopilar las nuevas soluciones
+	\Else 
+		\State Ejecutar los componentes usando los datos del histórico
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Las modificaciones realizadas al Operador de Reparación y a la Mutación se verán representadas respectivamente en Algoritmo \ref{alg:Historico_OR} y Algoritmo \ref{alg:Historico_Mutacion}. 
+Para el pseudocódigo \ref{alg:Historico_Mutacion} téngase en cuenta la siguiente notación:
+\begin{itemize}
+	\item \texttt{Mejores}: Aquellos elementos que suelen estar presentes en las mejores soluciones, pero no en las peores.
+	\item \texttt{Peores}: Aquellos elementos que suelen estar presentes en las peores soluciones, pero no en las mejores. 
+	\item \texttt{Sin información}: Aquellos elementos que frecuentemente no aparecen en las mejores ni en las peores soluciones o que aparecen en ambas (por lo que no nos aporta ninguna información ya que no se puede considerar un elemento determinista en lo buena que es una solución).
+\end{itemize}
+
+\begin{algorithm}
+\caption{Histórico en Operador de Reparación}\label{alg:Historico_OR}
+\begin{algorithmic}[1]
+\Procedure \texttt{Historico\_OR}($hijo$)
+\State Calcular el peso total de \texttt{hijo} $\xrightarrow{}{}$ \texttt{pesoHijo}
+\If{\texttt{pesoHijo > c}}
+	\State Eliminar de forma aleatoria los peores elementos según el histórico hasta que \texttt{pesoHijo} deje de sobrepasar \texttt{c}
+	\State Si no es posible lo anterior y sigue dándose la condición, eliminar de forma aleatoria los elementos que no aparecen en el histórico hasta que \texttt{pesoHijo} deje de sobrepasar \texttt{c}
+	\State Si no es posible lo anterior y sigue dándose la condición, eliminar de forma aleatoria los mejores elementos según el histórico hasta que \texttt{pesoHijo} deje de sobrepasar \texttt{c}
+\Else
+	\State Añadir de forma aleatoria los mejores elementos según el histórico sin que \texttt{pesoHijo} sobrepase \texttt{c}
+	\State Añadir de forma aleatoria los elementos que no aparecen en el histórico sin que \texttt{pesoHijo} sobrepase \texttt{c}
+	\State Añadir de forma aleatoria los peores	elementos según el histórico sin que \texttt{pesoHijo} sobrepase \texttt{c}
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{Histórico en Mutación}\label{alg:Historico_Mutacion}
+\begin{algorithmic}[1]
+\Procedure \texttt{Historico\_Mutacion}($solucion$)
+\State \texttt{sustituido = False}
+%\State /*Se establece una lista de prioridades sobre qué par de elementos mutar (uno se elimina y otro se añade)*/
+%\State /*Por comodidad y simplicidad se considerará que cada uno de los siguientes enunciados se comporta como una comprobación sobre si se puede realizar dicho cambio
+%\State /* - en caso positivo, lo realiza y establece \texttt{sustituido = True} y no comprueba el resto*/
+%\State /* - en caso negativo, pasa al siguiente enunciado*/
+%\State /*Para no añadir excesivo texto que pudiese hacer que los enunciados se entendiesen menos, todos los enunciados tienen la forma 'Sustituir \texttt{x} elemento existente en la solución por \texttt{y} elemento no existente en la solución' $\xrightarrow{}{}$ 'Sustituir \texttt{x} por \texttt{y}' */
+\If{\texttt{!sustituido} \&\& Se puede sustituir un \texttt{peor} elemento por un \texttt{mejor} elemento}
+	\State Sustituir \texttt{peor} por \texttt{mejor}
+	\State \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}
+\ElsIf{\texttt{!sustituido} \&\& Se puede sustituir un \texttt{sin información} elemento por un \texttt{mejor} elemento}
+	\State Sustituir \texttt{sin información} por \texttt{mejores}
+	\State \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}	
+	
+\ElsIf{\texttt{!sustituido} \&\& Se puede sustituir un \texttt{peor} elemento por un \texttt{sin información} elemento}
+	\State Sustituir \texttt{peores} por \texttt{sin información}
+	\State \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}
+
+\ElsIf{\texttt{!sustituido} \&\& Se puede sustituir un \texttt{sin información} elemento por un \texttt{sin información} elemento}	
+	\State Sustituir \texttt{sin información} por \texttt{sin información}
+	\State \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}
+	
+\ElsIf{\texttt{!sustituido} \&\& Se puede sustituir un \texttt{mejores} elemento por un \texttt{mejores} elemento}	
+	\State Sustituir \texttt{mejores} por \texttt{mejores}
+	\State \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}
+
+\ElsIf{\texttt{!sustituido} \&\& Se puede sustituir un \texttt{peores} elemento por un \texttt{peores} elemento}		
+	\State Sustituir \texttt{peores} por \texttt{peores}
+	\State \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}
+
+\ElsIf{\texttt{!sustituido} \&\& Se puede sustituir un \texttt{mejores} elemento por un \texttt{sin información} elemento}		
+	\State Sustituir \texttt{mejores} por \texttt{sin información}
+	\State \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}
+
+\ElsIf{\texttt{!sustituido} \&\& Se puede sustituir un \texttt{sin información} elemento por un \texttt{peores} elemento}	
+	\State Sustituir \texttt{sin información} por \texttt{peores}
+	\State \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}
+
+\ElsIf{\texttt{!sustituido} \&\& Se puede sustituir un \texttt{mejores} elemento por un \texttt{peores} elemento}		
+	\State Sustituir \texttt{mejores} por \texttt{peores}
+	\State \texttt{sustituido} $\leftarrow{}{}$ \texttt{true}
+	
+\EndIf
+\State Aplicar Operador de Reparación con Histórico para rellenar más las soluciones
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{GRASP}
+
+En el capítulo 6 se ha explicado por qué seguimos un enfoque \textit{Greedy} en el Operador de Reparación. 
+Sin embargo esto tiene un problema, y esto es que es bastante probable que siempre se estén eligiendo los mismos pocos elementos cada vez que se usa este componente. 
+Si realmente ocurre eso, ocasionaría que la población converja y la evolución se estanque; por ello, debemos encargarnos de encontrar otra alternativa con la que podamos aumentar la diversidad de la población. 
+
+Sin embargo, la diversidad en la población es un arma de doble filo. 
+La diversidad es necesaria para explorar el espacio de soluciones, pero puede causar que no finalice el proceso de exploración. 
+Si este es el caso, entonces no se le dedicará suficiente tiempo a la fase de explotación, que es esencial para obtener soluciones de mejor calidad. 
+Por lo tanto, utilizaremos un operador capaz de introducir cierta diversidad a la población a la vez que asegura cierta calidad. 
+Esto es, utilizaremos el operador GRASP (\textit{Greedy Randomized Adaptive Search Procedure}) \parencite{herrera-poyatosGeneticMemeticAlgorithm2017}. 
+
+El GRASP vendrá presentado en Algoritmo \ref{alg:GRASP}. 
+De forma simplificada, GRASP utiliza de base el algoritmo Greedy para obtener cierta cantidad de mejores elementos, eligirá aleatoriamente uno de ellos y lo devolverá. 
+Lo que se entiende como ``mejor elemento'' para GRASP es lo mismo que para lo que se propuso durante la justificación del operador Greedy. 
+Además, la cantidad de elementos a considerar dependerá del valor aportado por el mejor elemento; en concreto, solo se considerarán los elementos cuyo valor relativo ($valor\_acumulado/peso$) varíe en un 10\% del valor acumulado del mejor elemento, es decir:
+\begin{itemize}
+	\item Si se necesitan añadir elementos, nos quedaremos con los elementos que tengan un valor relativo mayor que $0.9*valor\_relativo\_mayor$.
+	\item Si se necesitan eliminar elementos, nos quedaremos con los elementos que tengan un valor relativo menor que $1.1*valor\_relativo\_menor$.
+\end{itemize}
+
+\begin{algorithm}
+\caption{Operador GRASP}\label{alg:GRASP}
+\begin{algorithmic}[1]
+\Procedure \texttt{GRASP}($solucion, min$)
+\If{\texttt{min}}
+	\State Almacenar en \texttt{indices} los elementos activados en \texttt{solucion}
+\Else
+	\State Almacenar en \texttt{indices} los elementos desactivados en \texttt{solucion}
+\EndIf
+\State Calcular el valor relativo de \texttt{indices} $\xrightarrow{}{}$ \texttt{valores}
+\State \texttt{encontrado = false}
+\If{\texttt{min}}
+	\State Ordenar \texttt{indices} según \texttt{valores} en orden ascendente
+	\For{$i\in 1..size(\texttt{indices}) \&\& !\texttt{encontrado}$}
+		\If{\texttt{valores}$_i$ > 1.1$\cdot$\texttt{valores}$_0$}
+			\State \texttt{encontrado = true}
+			\State Eliminar los elementos de \texttt{indices} desde $i$ hasta $size(\texttt{indices})$
+		\EndIf
+	\EndFor
+\Else
+	\State Ordenar \texttt{indices} según \texttt{valores} en orden descendente
+	\For{$i\in 1..size(\texttt{indices}) \&\& !\texttt{encontrado}$}
+		\If{\texttt{valores}$_i$ < 0.9$\cdot$\texttt{valores}$_0$}
+			\State \texttt{encontrado = true}
+			\State Eliminar los elementos de \texttt{indices} desde $i$ hasta $size(\texttt{indices})$
+		\EndIf
+	\EndFor
+\EndIf
+\State Elegir aleatoriamente algún elemento de \texttt{indices}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Cruce Intensivo}
+
+Para aumentar la explotación de buenas soluciones se propone hacer una modificación en el cruce que realizamos. 
+En vez de utilizar el cruce uniforme, que hemos establecido que a cada hijo se le asigna la mitad de los genes de cada uno de los padres (aunque sea de forma aleatoria), en este caso se le asignará un mayor porcentaje de genes del mejor de los padres. 
+
+Para ello, lógicamente tendremos que calcular cuál de los padres es la mejor solución (tiene mayor valor). 
+En este caso, no nos sirve aleatorizar una sola lista de índices, ya que la separación no va a ser igualitaria. 
+Por lo que tendremos que hacer las separaciones de genes para ambos hijos. 
+Una vez hecho esto, se procede de igual forma que en los anteriores cruces, es decir, se le asigna a cada hijo los genes de los padres correspondientes y, posteriormente, se le aplica el operado de reparación a ambos hijos. 
+Estoy viene representado en Algoritmo \ref{alg:CI}. 
+
+Por conveniencia, vamos a volver a utilizar la notación que implica que \texttt{padre$_1$} tiene un valor más elevado que \texttt{padre$_2$}.
+
+\begin{algorithm}
+\caption{Cruce Intensivo}\label{alg:CI}
+\begin{algorithmic}[1]
+\Procedure \texttt{Cruce Intensivo}($padre_1, padre_2, porcentaje$)
+\State Desordenar los índices (\texttt{indices$_1$}, \texttt{indices$_2$}) que indican la posición de cada elemento
+\State \texttt{nelem = $n$*porcentaje}
+\For{i in 0..$n$}
+	\If{\texttt{i < nelem}}
+		\State \texttt{hijo$_1$[indice$_1$[i]]} = \texttt{padre$_1$[indice$_1$[i]]}
+		\State \texttt{hijo$_2$[indice$_2$[i]]} = \texttt{padre$_1$[indice$_2$[i]]}
+	\Else
+		\State \texttt{hijo$_1$[indice$_1$[i]]} = \texttt{padre$_2$[indice$_1$[i]]}
+		\State \texttt{hijo$_2$[indice$_2$[i]]} = \texttt{padre$_2$[indice$_2$[i]]}
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+
+\section{Diversidad en la Población Inicial}
+
+Uno de los mayores problemas que se puede tener cuando la población es pequeña y no nos podemos permitir muchas ejecuciones es la falta de diversidad en dicha población. 
+Si todos los elementos son muy parecidos entre sí resultará muy difícil llevar a cabo una correcta exploración del espacio de soluciones, ya que las soluciones generadas en el cruce se seguirán pareciendo a sus padres (por lo que serán similares al resto de la población) y en la mutación, al solo intercambiar un par de elementos no se va a conseguir una solución lo suficientemente distinta del resto. 
+
+Por ello, lo primero que debemos garantizar antes de empezar el algoritmo es que tenemos una población inicial lo suficientemente diversa sobre la que trabajar. 
+Esto viene representando en el pseudocódigo \ref{alg:PD}. 
+Una población inicial diversa se consigue generando las soluciones de forma aleatoria sucesivamente a la vez que se comprueba su similitud (su distancia de Hamming) con respecto al resto de soluciones que ya forman parte de la población. 
+Si dicha nueva solución no supera un umbral de diferencias (normalmente representado como un porcentaje del número de elementos totales del problema) con respecto a todas las soluciones introducidas, se descarta esta solución y se vuelve a generar otra. 
+Este proceso se repite hasta haber alcanzado el tamaño de población necesario para empezar la ejecución del algoritmo.
+
+\begin{algorithm}
+\caption{Población Inicial Diversa}\label{alg:PD}
+\begin{algorithmic}[1]
+\Procedure \texttt{Población Diversa}($p_\delta$)
+\State \texttt{distMin} $\xleftarrow{}{} n\cdot p_\delta$
+\State \texttt{npob} $\xleftarrow{}{}$ \texttt{0}
+\State \texttt{poblacion} $\xleftarrow{}{} \emptyset$
+\While{\texttt{npob}$<$\texttt{numcro}}
+	\State Generamos una solución aleatoria $\xrightarrow{}{}$ \texttt{solucion}$_{\texttt{npob}}$
+	\State \texttt{nuevo} $\xleftarrow{}{}$ \texttt{true}
+	\ForEach{\texttt{sol}$\in$\texttt{poblacion}}
+		\If{$distHamming($\texttt{solucion}$_{\texttt{npob}},$\texttt{sol}$) < $\texttt{distMin}}
+			\State \texttt{nuevo} $\xleftarrow{}{}$ \texttt{false}
+		\EndIf
+	\EndFor
+	\If{\texttt{nuevo}}
+		\State Añadir \texttt{solucion}$_{\texttt{npob}}$ a \texttt{poblacion}
+		\State \texttt{npob++}
+	\EndIf
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Donde recordemos que $n$ es el número de variables del problema y \texttt{numcro} el tamaño de la población con la que trabajaremos. 
+$p\_delta$ representa el porcentaje de elementos del número de variables total que deben ser distintos para considerar que la nueva solución es lo suficientemente diferente al resto de soluciones introducidas en la población; por lo que \texttt{distMin} será dicho número mínimo de elementos distintos. 
+
+\section{Operador NAM}
+
+El operador de Emparejamiento Variado Inverso (\textit{Negative Assortative Mating}) o NAM
+\parencite{fernandesStudyNonrandomMating2001} está orientado a generar diversidad. 
+Esta es una alternativa a cómo se eligen los individuos de la población que se van a cruzar. 
+La lógica de este operador es parecida a la prevención de incesto que se propone en el algoritmo CHC, pero sin ser tan restrictiva. 
+Se necesita que los padres sean distintos para conseguir que los hijos aporten diversidad a la población si llegan a ser introducidos. 
+Una optativa a esto es el operador NAM. 
+En este trabajo se utilizará una versión del NAM.
+
+La implementación de este operador viene representado en el Algoritmo \ref{alg:NAM}. 
+Lo que se hace en este operador es elegir a una solución utilizando el Torneo Binario propio de los algoritmos genéticos (en el operador original simplemente se elige un individuo de la población de forma aleatoria). 
+Para la segunda solución, primero, debemos obtener algunas soluciones de la población distintas a la primera obtenida para el cruce. 
+Una vez hecho esto, elegimos como el segundo padre a la solución del segundo grupo más diferente al primer padre; esto es, se calculará la distancia de Hamming entre el primer padre y las soluciones del segundo grupo, y se elegirá como segundo padre aquella solución con mayor distancia de Hamming.
+
+\begin{algorithm}
+\caption{Operador NAM}\label{alg:NAM}
+\begin{algorithmic}[1]
+\Procedure \texttt{Operador NAM}
+\State Aplicar \texttt{Torneo Binario} para obtener al primer padre $\xrightarrow{}{}$ \texttt{padre$_1$}
+\State Elegir aleatoriamente sin repetición un subconjunto de la población distinta a \texttt{padre$_1$} $\xrightarrow{}{}$ \texttt{indices}.
+\State Calcular la distancia de Hamming entre \texttt{padre$_1$} y cada elemento de \texttt{indices}
+\State Establecer como \texttt{padre$_2$} la solución de \texttt{indices} con la mayor distancia de Hamming a \texttt{padre$_1$}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Operador Reemplazo: \textit{Crowding} Determinístico}
+
+
+Otra forma de intentar mantener cierta diversidad en la población es mediante la modificación del Operador de Reemplazo. 
+En vez de siempre eliminar las peores soluciones para introducir otras mejores, se sustituirán individuos de la población similares a las nuevas soluciones si estas últimas son mejores. 
+Esto da lugar que se permitirá mantener las peores soluciones en la población siempre que estén aportando diversidad a la población.
+
+Este operador \parencite{mahfoudCrowdingPreselectionRevisited1992} viene representado en el Algoritmo \ref{alg:ORC}. 
+En definitiva, el objetivo de este operador será comprobar si las nuevas soluciones (hijas) son mejores que las soluciones de la población actual más cercanas a ellas. 
+Si las soluciones hijas constituyen una mejora, entonces sustituirán a las soluciones más cercanas en la población. 
+
+\begin{algorithm}
+\caption{Operador de Reemplazo por Cercanía}\label{alg:ORC}
+\begin{algorithmic}[1]
+\Procedure \texttt{Reemplazo Cercanía}
+\For{i in 0..\texttt{numHijos}}
+	\State Calcular distancia de Hamming de \texttt{hijo$_i$} a todos los elementos de la población
+	\State Elegir la solución con la menor distancia de Hamming a \texttt{hijo$_i$} $\xrightarrow{}{}$ \texttt{solucion}
+	\If{\texttt{valor$_{solucion}$ < valor$_{hijo_i}$}}
+		\State Sustituir \texttt{solucion} por \texttt{hijo$_i$}
+	\EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Reemplazo intensivo}
+
+En esta versión, adicionalmente a modificar el operador de reemplazo de forma que las nuevas soluciones sustituirán a las más parecidas siempre que las mejoren, se compararán el resto de soluciones similares (tienen una distancia de Hamming menor que determinado umbral). 
+La idea de esta versión es aumentar aún más la diversidad mediante la eliminación de soluciones peores parecidas a aquellas que ya tenemos. 
+
+Si se logra introducir la nueva solución en la población se comprobará si hay más soluciones cercanas. 
+En caso negativo no se hará nada más al respecto. 
+Sin embargo, en caso positivo, nos quedaremos únicamente con la mejor solución entre todas las consideradas (la nueva y las parecidas en la población), eliminando el resto de la población. 
+Como el tamaño de la población debe ser constante, estas vacantes serán cubiertas por soluciones totalmente aleatorias que no sean parecidas a la solución que se ha conseguido mantener en la población. 
+Este funcionamiento viene representado en \ref{alg:ORCv}.
+
+\begin{algorithm}
+\caption{Operador de Reemplazo por Cercanía intensivo}\label{alg:ORCv}
+\begin{algorithmic}[1]
+\Procedure \texttt{Reemplazo Cercanía}($\delta_H$)
+\For{i in 0..\texttt{numHijos}}
+	\State Almacenar los individuos de la población tal que su distancia de Hamming a \texttt{hijo$_i$} sea menor que $\delta_H \xrightarrow{}{} $ \texttt{indCercanos}
+	\State Calculamos el elemento de \texttt{indCercanos} con mayor valor
+	\State El resto de elementos de \texttt{indCercanos} se sustituye por soluciones generadas aleatoriamente
+	\While{La solución generada aleatoriamente sea cercana a una existente}
+		\State Sustituirla por otra solución generada aleatoriamente
+	\EndWhile
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}

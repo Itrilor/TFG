@@ -1,0 +1,87 @@
+\chapter{Introducción}
+
+%<párrafo indicando lo útil que son las metaheurísticas, tanto para problemas continuos como combinatorios>
+Cuando se debe afrontar un problema, la variedad de aproximaciones a seguir resulta ser muy amplia y su elección depende en gran medida de dos factores fundamentales: qué clase de solución se desea extraer del problema, y de qué recursos se dispone para ello. 
+Por ello, la rama más clásica de la computación siempre ha tratado de resolver los problemas presentados de forma exacta. 
+Es decir, ha tratado cada problema como si solo existiera una sola solución al mismo, la óptima. 
+Esta forma de pensamiento se basa en la confianza que se tiene en que los problemas que tradicionalmente eran irresolubles para los humanos, serían más accesibles para los computadores, gracias a su capacidad superior de cómputo pesado.
+
+Esto último resulta cierto en muchos escenarios, fundamentalmente en lo referente a los problemas más puramente matemáticos: operaciones que un humano podría tardar años en resolver a mano, un ordenador podría resolverlas en cuestión de minutos. 
+Sin embargo, la mayoría de problemas que nos encontramos en el mundo real son complejos y difíciles de resolver, lo que implica que no se pueda dar con la solución óptima en un tiempo razonable. 
+
+%Resumir esta parte porque no es un problema expensive
+Uno de los problemas más conocidos capaz de ilustrar este hecho es el \textbf{Problema del Viajante de Comercio}. 
+Este problema consiste en que, dado un conjunto de ciudades por las que el comercial debe pasar, se debe encontrar el orden en que visita las ciudades de forma que el comercial recorra la menor distancia posible. 
+Aunque sea un problema sencillo de formular, la cantidad de posibles caminos incrementa en gran medida a la vez que el número de ciudades a recorrer aumenta. 
+Por tanto, al aumentar el tamaño del problema, toda técnica conocida para extraer la solución exacta requeriría de un tiempo de ejecución que deja de ser asequible incluso para los ordenadores. 
+Es decir, tenemos métodos que nos llevan a la solución, pero no existen formas de ejecutarlos. 
+%Llegados a este punto, si bien tenemos que dejar de plantearnos la pregunta ``¿cuál es el camino más corto?'', podemos empezar a formular una pregunta similar: ``¿qué camino es lo suficientemente corto?''; o sea, a veces tenemos que abandonar la idea de obtener la solución óptima y conformarnos con una solución aproximada de una calidad similar a la óptima.
+
+Por ello, tenemos que encontrar alternativas más viables para la resolución de los problemas, es decir, tenemos que usar algoritmos aproximados, que proporcionan buenas soluciones (no necesariamente la óptima) en un tiempo razonable. 
+Esto es, haremos uso de estrategias de diseño generales para procedimientos heurísticos de resolución de problemas: las metaheurísticas.
+%Los algoritmos aproximados se pueden dividir en heurísticas y metaheurísticas, estas últimas son en las que vamos a estar más interesados. 
+%Las metaheurísticas suelen ser procedimientos iterativos que guían una heurística subordinada de búsqueda, combinando de forma inteligente distintos conceptos para explorar y explotar adecuadamente el espacio de búsqueda.
+%Así, las metaheurísticas son una familia de algoritmos aproximados más generales que las heurísticas (que son dependientes del problema a tratar) y aplicables a una gran variedad de problemas de optimización, tanto continuos como combinatorios. 
+
+%<Existen problemas expensives, lo que es y algún ejemplo, y en continuo ya existe algoritmos específicos>
+Los problemas de optimización costosa (EOP) o \textbf{problemas \textit{expensives}} se refieren a los problemas que requieren costes elevados, o incluso inasequibles, con el fin de evaluar los candidatos a soluciones. 
+Este tipo de problemas existen en una gran cantidad, y cada vez con más frecuencia, de aplicaciones significativas del mundo real. 
+Un tipo de problemas \textit{expensive} podrían ser los problemas de optimización de redes neuronales profundas utilizando metaheurísticas. 
+Un ejemplo esto se podría encontrar en el artículo \parencite{buiMetaheuristicAlgorithmsOptimizing2019}; en ese estudio se proponen y se comparan tres métodos híbridos en combinación con el popular clasificador con redes neuronales para el modelado de incendios forestales.
+
+También, cabe destacar que ``coste elevado'' es más un concepto relativo que uno absoluto en la mayoría de problemas del mundo real. 
+Por ejemplo, en situaciones dinámicas, como podría ser recalcular una ruta porque se haya cortado una calle o porque se ha producido un atasco, o incluso situaciones de emergencia como epidemias o desastres naturales, transporte y envío de materiales para operaciones diarias importantes para salvar vidas, etc., el coste de optimización en situaciones normales se convierte en un coste demasiado elevado. 
+Para el caso de los problemas de parámetros reales nos encontramos con que se están planteando cada vez más algoritmos especialmente diseñados para problemas \textit{expensive} (por ejemplo, que la función de evaluación dependa de una simulación).
+
+%<El problema también se da en combinatorio, por nuevos problemas.>
+Ahora bien, cada vez es más común usar problemas combinatorios en problemas complejos, lo que implica un mayor coste de evaluación. 
+Un ejemplo de esto lo podemos encontrar en el artículo \parencite{demoraesDiversityPreservationMethod2022}, donde en su introducción se detalla el por qué el \textit{Well Placement Optimization Problem} (WPOP) en el desarrollo y gestión de campos petroleros se considera un problema \textit{expensive} (se debe al cálculo tan complejo de ecuaciones diferenciales para predecir la influencia de la estrategia de producción  en las propiedades geológicas y petrofísicas de la reserva). 
+%Un ejemplo de esto, como ya hemos comentado anteriormente, podría ser el uso de este tipo de algoritmos para optimizar redes neuronales. 
+Si bien hemos comentado que en el caso de parámetros reales (caso continuo) se han propuesto algoritmos específicos, esto no ha sido el caso para el ámbito de los problemas combinatorios \textit{expensive}, para los que no se han encontrado ninguna referencia. 
+Por lo que es de gran interés crear un algoritmo que resulte útil para este tipo de situaciones, con el fin de reducir los costes todo lo posible. 
+
+%<En este trabajo vamos a ...>
+En este Trabajo de Fin de Grado vamos a diseñar, implementar y proponer un algoritmo especialmente diseñado para problemas combinatorios \textit{expensive}. 
+El objetivo principal de este algoritmo será encontrar buenas soluciones en una cantidad de tiempo bastante reducida, lo que vamos a traducir en un menor número de iteraciones. 
+Para ello, procederemos a tomar un problema sobre el que trabajar y extraer conclusiones y un algoritmo de referencia sobre el que realizaremos un proceso recursivo: introduciremos alguna modificación y compararemos los resultados obtenidos con los del algoritmo de referencia, en caso de mejorarlos, este algoritmo con modificación se convertirá en el nuevo algoritmo de referencia. 
+De esta forma se puede garantizar que los resultados que finalmente alcanzaremos son competitivos. 
+
+\section{Objetivos}
+
+Los objetivos principales se centrarán en el desarrollo de una metaheurística útil para aplicarse a problemas combinatorios costosos:
+\begin{enumerate}
+	\item Parte matemática: Revisión teórica en la que se basa el desarrollo de algoritmos para problemas de minimización y . 
+	Dentro del mismo, encontramos los siguientes objetivos parciales:
+	\begin{itemize}
+		\item Repaso de distintos algoritmos de la literatura para resolver problemas de minimización sin restricciones. 
+		\item Exposición de algunos resultados interesantes a considerar sobre convergencia. 
+		\item Exposición de diversos \textit{tests} estadísticos para comparar algoritmos. 
+	\end{itemize}
+	
+	\item Parte informática: Propio diseño experimental del algoritmo en cuestión. 
+	Dentro del mismo, encontramos los siguientes objetivos parciales: 
+	\begin{itemize}
+		\item Exposición de los algoritmos clásicos que se han usado como base.
+		\item Diseño de varias modificaciones y mejoras a introducir a los algoritmos base para hacerlos más competitivos en nuestro problema. 
+		\item Evaluación experimental de los distintos algoritmos ejecutándolos sobre distintos conjuntos de instancias del problema concreto con el que trabajaremos, analizando los resultados obtenidos y comparándolos entre sí.
+	\end{itemize}
+	
+\end{enumerate}
+
+\section{Estructura de la memoria}
+
+Este trabajo se divide en dos partes, y estas a su vez en varios capítulos. 
+Además, se incluyen tres capítulos al comienzo. 
+Este ha sido el Capítulo 1, y a continuación encontraremos el Capítulo 2, dedicado a la planificación y presupuesto del proyecto; y el Capítulo 3, dedicado a dar un repaso bibliográfico de información necesaria para introducir el trabajo.
+
+La Parte I, más vinculada con la parte matemática del trabajo, está dedicada a analizar la base teórica matemática sobre la que se construye el desarrollo de algoritmos cuyo objetivo es alcanzar una solución óptima. 
+Tras la introducción del problema general de optimización a tratar y algunas definiciones importantes en el Capítulo 4, en el Capítulo 5 se presentan varios algoritmos que traten de resolver un problema de minimización sin restricciones. 
+Además, en el Capítulo 6 se presentan y explican una serie de test estadístico, algunos de los cuales utilizaremos posteriormente para analizar si se producen mejoras significativas entre las distintas versiones del algoritmo que se desarrollará. 
+Esta parte finaliza en el Capítulo 7, donde se desarrolla el problema concreto con el que se trabajará, aportando una definición matemática e información sobre los datos de dicho problema que se utilizarán. 
+
+La Parte II, más vinculada con la parte informática del trabajo, está dedicada a explicar y mostrar mediante pseudocódigo los distintos algoritmos y diversas modificaciones introducidas que se han usado durante el diseño de nuestra metaheurística junto con un análisis de los resultados obtenidos. 
+En el Capítulo 8 se presentan los dos algoritmos de referencia que se han usado de base para el desarrollo de un algoritmo competitivo para problemas combinatorios \textit{expensive}, mientras que en el Capítulo 9 se presentan los distintos componentes que se han ido desarrollando para aplicarlos como modificaciones sobre los algoritmos anteriores. 
+Por último, en el Capítulo 10 se proporcionarán los distintos parámetros utilizados y se realizará un análisis completo del desarrollo de nuestro algoritmo justificando por qué cada modificación ha sido introducida.
+
+Finalmente, en el Capítulo 12 se encuentran las conclusiones que se han obtenido tras realizar todo el trabajo. 
+Adicionalmente, se incluirá la bibliografía y un apéndice donde se encontrarán todas las tablas de resultados de los distintos algoritmos que se han probado en la parte experimental de este proyecto.

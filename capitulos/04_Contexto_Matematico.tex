@@ -1,0 +1,1381 @@
+\chapter{Introducción}
+
+Los algoritmos usan operadores matemáticos con el objetivo de alcanzar una solución a los problemas a los que son aplicados y también es necesario obtener el óptimo. 
+La prueba de este hecho puede ser realizada gracias a la teoría de optimización del Análisis Numérico. 
+Nos centraremos en esta teoría, aportando resultados que nos permitan saber si un punto es el óptimo de una función y su relación con los algoritmos básicos de optimización global. 
+
+La programación no lineal es un área de las matemáticas aplicadas que involucra problemas de optimización cuando las funciones son no lineales. 
+Nuestro objetivo es introducir este problema y revisar las condiciones generales de optimalidad, que son la base de muchos algoritmos por sus soluciones. 
+Tras esto, aportaremos numerosas nociones relativas al rendimiento de los algoritmos en términos de convergencia, orden de convergencia y comportamiento numérico.
+
+Cabe mencionar que aunque el problema abordado en este trabajo implica la maximización del valor de la solución, se utilizará la notación convencional y usual para tratar este tipo de problemas, es decir, la minimización del valor de la solución. 
+Esto se debe a que, al fin y al cabo, son problemas equivalentes. 
+Una forma sencilla de transformar un problema de maximización en uno de minimización es cambiar el símbolo de los valores. 
+Por ello, en tanto que ambos problemas son equivalentes, se mantendrá la notación de minimizar la función objetivo.
+
+\section{Definición del problema}
+
+En primer lugar, daremos una definición a nuestro problema.
+
+\begin{definicion}
+Consideramos el problema de calcular el valor de un vector de variables de decisión $x\in\mathbb{R}^n$ que minimiza la función objetivo $f:\mathbb{R}^n\xrightarrow{}{}\mathbb{R}$ donde $x$ pertenece a un conjunto factible de soluciones $\mathcal{F}\in\mathbb{R}^n$. 
+Consideramos el siguiente problema:
+\begin{equation}
+\min_{x\in\mathcal{F}}f(x)
+\label{eq:4.1}
+\end{equation}
+\end{definicion}
+
+\textbf{Nota}: Llamaremos \textbf{conjunto factible} al espacio de soluciones, es decir, al conjunto de todos los puntos posibles de un problema de optimización que satisface las restricciones del problema. 
+
+
+Ahora, presentamos dos casos de ello:
+\begin{itemize}
+	\item El conjunto factible de soluciones $\mathcal{F}$ es todo el espacio $\mathbb{R}^n$. 
+En este caso, el problema es el siguiente:
+\begin{equation}
+\min_{x\in\mathbb{R}^n}f(x)
+\label{eq:4.2}
+\end{equation}
+Diremos que el problema \ref{eq:4.1} es no restringido. 
+De forma general, el problema \ref{eq:4.1} es no restringido si $\mathcal{F}$ es un conjunto abierto.
+
+	\item El conjunto factible de soluciones está descrito por restricciones de desigualdad y/o igualdad en las variables de decisión:
+\begin{equation}
+\mathcal{F} = \{x\in\mathbb{R}^n : g_i(x)\leq 0, i = 1,...,p; h_j(x)=0,j=1,...,m\}
+\label{eq:4.3}
+\end{equation}
+Entonces, el problema \ref{eq:4.1} se convierte en:
+\begin{equation}
+ \begin{matrix}
+  min_{x\in\mathbb{R}^n}f(x)\\
+  g(x) \leq 0\\
+  h(x) = 0
+ \end{matrix}
+\label{eq:4.4}
+\end{equation}
+donde $g:\mathbb{R}^n\xrightarrow{}{}\mathbb{R}^p$ y $h:\mathbb{R}^n\xrightarrow{}{}\mathbb{R}^m$. 
+En este caso, diremos que el problema es restringido. 
+
+El problema \ref{eq:4.1} es no lineal cuando al menos una de las funciones del problema es no lineal, es decir, $f$,$g_i$, $i=1,...,p$, $h_j$, $j=1,...,m$ es no lineal en $x$.
+
+\end{itemize}
+
+Normalmente, asumimos que en un  problema del tipo \ref{eq:4.4} el número de condiciones de igualdad, $m$, es menor que el número de variables, $n$; en otro caso, el conjunto factible de soluciones será el vacío, a no ser que haya dependencia en las restricciones. 
+Si solo hay condiciones de igualdad, el problema se llamará ``\textbf{problema no lineal con restricciones de igualdad}''. 
+Equivalentemente, se tiene el caso de que solo aparezcan condiciones de desigualdad. 
+
+En lo siguiente asumiremos que nuestras funciones $f$,$g$,$h$ son diferenciables y continuas en $\mathbb{R}^n$. 
+Además, cuando $f$ sea una función convexa y el conjunto $\mathcal{F}$ sea también convexo, al problema se le llamará ``\textbf{problema convexo no lineal}''. 
+Particularmente, $\mathcal{F}$ es convexo si las funciones que nos aportan las restricciones de desigualdad son convexas y las funciones de las restricciones de igualdad son afines.
+
+La convexidad nos permite añadir estructura a estos problemas y poder explotarlo desde un punto de vista teórico y computacional, esto se debe a que si $f$ es una función convexa cuadrática y $g$,$h$ son afines, entonces tenemos que tratar con un problema de programación cuadrática. 
+Sin embargo, nos centraremos en problemas no lineales generales, sin asumir convexidad.
+
+\begin{definicion}
+Un punto un $x^*\in\mathcal{F}$ es un \textbf{solución global} del problema \ref{eq:4.1} si $f(x^*)\leq f(x)$, $\forall x\in\mathcal{F}$. El punto es una \textbf{solución global estricta} si $f(x^*) < f(x)$, $\forall x\in\mathcal{F}$, $x\neq x^*$.
+\end{definicion}
+
+La existencia de soluciones globales se debe a la compacidad de $\mathcal{F}$, en relación con el teorema de Weierstrass:
+
+\begin{teorema}[Teorema de Weierstrass]
+Sea $a,b\in\mathbb{R}$ con $a<b$ y sea $f:[a,b]\xrightarrow{}{}\mathbb{R}$ una función continua. 
+Entonces, el intervalo $f([a,b])$ es cerrado y acotado.
+\end{teorema}
+
+Una consecuencia directa para los problemas sin restricciones es que una solución global existe si el conjunto $\mathcal{L}^\alpha = \{x\in\mathbb{R}^n\leq\alpha\}$ es compacto para un $\alpha$ finito. 
+
+\begin{definicion}
+Un punto $x^*\in\mathcal{F}$ es una \textbf{solución local} del problema del problema \ref{eq:4.1} si existe $x^*$ en un vecindario abierto $\mathcal{B}_{x^*}$ de $x^*$ tal que $f(x^*)\leq f(x)$, $\forall x\in \mathcal{F}\bigcap\mathcal{B}_{x^*}$. 
+Además, es una \textbf{solución local estricta} si $f(x^*)<f(x)$, $\forall x\in\mathcal{F}\bigcap\mathcal{B}_{x^*}$, $x\neq x^*$.
+\end{definicion}
+
+Determinar una solución global a un problema de este tipo es normalmente una tarea complicada. 
+Los algoritmos que resuelven este tipo de problemas se usan para alcanzar óptimos locales. 
+Incluso en aplicaciones prácticas obtener este tipo de soluciones puede ser también algo bueno. 
+
+Ahora introduciremos \textbf{notación}:
+\begin{itemize}
+	\item Dado un vector $y\in\mathbb{R}^n$, definimos su \textbf{traspuesta} por $y'$. 
+	Esta definición puede ser extendida a las matrices $A\in\mathbb{R}^n\times\mathbb{R}^n$. 
+	\item Dada una función $h:\mathbb{R}^n\xrightarrow{}{}\mathbb{R}$, denotamos el vector \textbf{gradiente} por $\nabla h(x) = \left( \dfrac{\partial f(x)}{\partial x_1}, ... , \dfrac{\partial f(x)}{\partial x_n} \right)$ y la matriz \textbf{Hessiana} se denota por
+	\begin{equation*}
+	\nabla^2h(x) =
+ \begin{pmatrix}
+  \dfrac{\partial^2f(x)}{\partial x_1^2} & \dfrac{\partial^2f(x)}{\partial x_1 \partial x_2} & \cdots & \dfrac{\partial^2f(x)}{\partial x_1 \partial x_n} \\
+  \dfrac{\partial^2f(x)}{\partial x_2 \partial x_1} & \dfrac{\partial^2f(x)}{\partial x_2^2} & \cdots & \dfrac{\partial^2f(x)}{\partial x_2 \partial x_n} \\
+  \vdots & \vdots & \ddots & \vdots \\
+  \dfrac{\partial^2f(x)}{\partial x_n \partial x_1} & \dfrac{\partial^2f(x)}{\partial x_n \partial x_2} & \cdots & \dfrac{\partial^2f(x)}{\partial x_n^2}
+ \end{pmatrix}
+\label{eq:4.4}
+\end{equation*}
+	\item Dada una función vector $w:\mathbb{R}^n\xrightarrow{}{}\mathbb{R}^q$, denotamos la matriz de $n\times q$ cuyas columnas son $\nabla w_j(x)$, $j=1,...,q$ con $\nabla w(x)$.
+	
+	\item Sea $y$ un vector, $y \in \mathbb{R}^q$, denotamos la \textbf{norma Euclídea} por $||y||$. 
+	Supongamos que sus componentes son $y_i$, $i=1,...,q$ y sea $A$ una matriz cuyas columnas sean $a_j$, $j=1,...,q$. 
+	Sea $\mathcal{K} \subset \{1,...,q\}$ un subconjunto de índices. 
+	Denotamos por $y_{\mathcal{K}}$ al subvector de $y$ con componentes $y_i$ tales que $i\in\mathcal{K}$ y por $A_{\mathcal{K}}$ a la submatriz de $A$ compuesta por las columnas $a_j$ con $j\in\mathcal{K}$.
+\end{itemize}
+
+\section{Condición de Optimalidad}
+
+Nuestras soluciones locales deben satisfacer algunas condiciones de optimalidad necesarias. 
+Si nos referimos a problemas como \ref{eq:4.2}, tenemos uno de los resultados más conocidos del Análisis Numérico clásico:
+
+\begin{proposicion}
+Sea $x^*$ una solución local al problema \ref{eq:4.2}, entonces
+\begin{equation}
+\nabla f(x^*) = 0
+\label{eq:4.5}
+\end{equation}
+Además, si $f$ es continuamente 2-diferenciable, entonces
+\begin{equation}
+y'\nabla^2f(x^*)y \geq 0, \forall y \in \mathbb{R}^n
+\label{eq:4.6}
+\end{equation}
+\end{proposicion}
+
+\textbf{Nota}: Diremos que una función es continuamente $i$-diferenciable si es diferenciable $i$ veces y dichas diferenciales son continuas.
+
+Si tenemos problemas como \ref{eq:4.4}, la mayoría de las condiciones necesarias de optimalidad usadas en el desarrollo de los algoritmos asumen que una solución local debe satisfacer algunas de estas condiciones para evitar alcanzar casos degenerados. 
+Estas condiciones se suelen llamar ``\textbf{calificaciones de restricción}'' y, entre ellas, la más simple y más comúnmente usada es el requisito de restricción de independencia lineal:
+
+\begin{definicion}
+Sea $\hat{x} \in\mathcal{F}$. 
+Decimos que la restricción de desigualdad $g_i$ está \textbf{activa} en $\hat{x}$ si $g_i(\hat{x}) = 0$. 
+Denotamos por $\mathcal{F}_a(\hat{x})$ al conjunto de índices de las restricciones de desigualdad activas en $\hat{x}$:
+\begin{equation}
+\mathcal{F}_a(\hat{x}) = \{i \in\{1,...,p\} : g_i(\hat{x})=0\}
+\label{eq:4.7}
+\end{equation}
+\end{definicion}
+
+Nótese que en la definición anterior podemos concluir que las restricciones de igualdad $h_j$ son activas en $\hat{x}$. 
+La restricción de independencia lineal se satisface si el gradiente de las restricciones activas son linealmente independientes.
+
+Bajo las condiciones de independencia lineal asumidas, los problemas de restricciones como \ref{eq:4.4} pueden resolverse usando la función Lagrangiana generalizada:
+\begin{equation}
+L(x,\lambda,\mu) = f(x) +\lambda'g(x) + \mu'h(x)
+\label{eq:4.8}
+\end{equation}
+donde $\lambda\in\mathbb{R}^p$, $\mu\in\mathbb{R}^m$ son multiplicadores de Lagrange. 
+El siguiente resultado nos dan información sobre la existencia de estos multiplicadores. 
+
+\begin{proposicion}
+Sea $x^*$ una solución local del problema \ref{eq:4.4} y supongamos que la independencia lineal se satisface en $x^*$. 
+Entonces, los multiplicadores de Lagrange $\lambda^*\geq 0$, $\mu^*$ existe de tal forma que:
+\begin{equation}
+\nabla_xL(x^*,\lambda^*,\mu^*) = 0
+\label{eq:4.9}
+\end{equation}
+y
+\begin{equation*}
+\lambda'^*g(x^*) = 0
+\end{equation*}
+Además, si $f,g,h$ son continuamente 2-diferenciables, entonces:
+\begin{equation*}
+y'\nabla_x^2L(x^*,\lambda^*,\mu^*)y \geq 0, \forall y\in\mathcal{N}(x^*)
+\end{equation*}
+donde
+\begin{equation*}
+\mathcal{N}(x^*) = \{y\in\mathbb{R}^n : \nabla g'_{\mathcal{F}_a}y=0; \nabla h(x^*)'y = 0\}
+\end{equation*}
+\end{proposicion}
+
+Si $x\in\mathcal{F}$ satisface una condición de optimalidad suficiente, entonces dicho punto es una solución local al problema \ref{eq:4.1}. 
+Para problemas generales, las condiciones de optimalidad suficientes pueden ser establecidas bajo la asunción de que las funciones problemas son continuamente 2-diferenciables, así que tenemos condiciones de suficiencia de segundo orden. 
+Estas condiciones cambian si el problema a tratar es \ref{eq:4.2} o \ref{eq:4.4}. 
+Por lo tanto, los siguientes resultados mostrarán cuándo $x^*$ son óptimos locales en ambos casos.
+
+\begin{proposicion}
+Asumimos que $x^*$ satisface la condición \ref{eq:4.5}. 
+También asumiremos que 
+\begin{equation*}
+y'\nabla^2f(x^*)y > 0, \forall y\in\mathbb{R}^n, y \neq 0
+\end{equation*}
+es decir, se asume que $\nabla^2f(x^*)$ es definida positiva. 
+Entonces, $x^*$ es una solución local estricta del problema \ref{eq:4.2}.
+\end{proposicion}
+
+\begin{proposicion}
+Asumimos que $x^*\in\mathcal{F}$ y $\lambda^*,\mu^*$ satisfacen las condiciones de \ref{eq:4.9}. 
+Asumimos también que 
+\begin{equation}
+y'\nabla^2_xL(x^*,\lambda^*,\mu^*)y > 0, \forall y\in\mathcal{P}(x^*), y\neq 0
+\label{eq:4.10}
+\end{equation}
+donde
+\begin{equation*}
+\mathcal{P}(x^*) = \{y\in\mathbb{R}^n : \nabla g'_{\mathcal{F}_a} y\leq 0, \nabla h(x^*)'y = 0; \nabla g_i(x^*)'y = 0, i \in\mathcal{F}_a(x^*), \lambda_i^* \} 
+\end{equation*}
+Entonces, $x^*$ es una solución local estricta del problema \ref{eq:4.4}.
+\end{proposicion}
+
+Nótese también que $\mathcal{N}(x^*) \subseteq\mathcal{P}(x^*)$  y la igualdad se da si $\lambda_i^* >0, \forall i\in\mathcal{F}_a(x^*)$.
+
+Una característica importante y principal de los problemas convexos es que una solución global (estricta) del problema es también una solución local (estricta). 
+Además, cuando $f$ es (estrictamente) convexa, las funciones $g_i$ son también convexas y las $h_j$ son afines, entonces las condiciones de optimalidad necesarias dadas en términos de primeras derivadas parciales son suficientes para que un punto $x^*$ sea una solución global (estricta).
+
+Las condiciones de optimalidad son esenciales para problemas no lineales. 
+Si conocemos la existencia de un óptimo global, entonces el método más común de obtenerlo es el siguiente:
+\begin{enumerate}
+	\item Encontrar todos los puntos que satisfacen las condiciones necesarias de primer orden.
+	\item Tomas el óptimo global como el punto con el valor más bajo dado por la función objetivo
+	\item Si la función problema es 2-diferenciable, entonces comprueba la condición necesaria de segundo orden y elimina los puntos que no la satisfagan.
+	\item Para el resto de puntos comprobaremos la condición de suficiencia de segundo orden para encontrar el mínimo local.
+\end{enumerate}
+
+Tenemos que destacar que este método no funciona en casos prácticos excepto por casos simples, esto se debe a que tenemos que calcular la solución de un sistema de ecuaciones dado por $\nabla f(x)=0$ y este sistema es normalmente no trivial. 
+Entonces, ¿dónde son importantes estas condiciones? 
+Las condiciones de optimalidad son importantes en el desarrollo y análisis de algoritmos.
+
+Un algoritmo que intenta resolver un problema dado por \ref{eq:4.1} genera una secuencia de soluciones factibles $x^k, k=0,1,...$ y normalmente finaliza cuando se satisface un criterio de parada. 
+Este criterio se suele basar en la satisfacción de condiciones de optimalidad necesarias dentro de una tolerancia prefijada. 
+Adicionalmente, estas condiciones normalmente sugieren cómo mejorar la solución actual, con lo que la siguiente debería encontrarse más cercana al óptimo.
+
+Así, las condiciones de optimalidad necesarias nos dan la base para el análisis de convergencia de algoritmos. 
+Por lo tanto, las condiciones de suficiencia juegan un papel importante en el análisis del orden de convergencia.
+
+\section{Rendimiento de los algoritmos}
+
+\subsection{Convergencia y Orden de Convergencia}
+
+\begin{definicion}
+Sea $\Omega\subset\mathcal{F}$ el subconjunto de puntos que satisfacen las condiciones necesarias de optimalidad del problema \ref{eq:4.1}. 
+Un algoritmo se detiene cuando un punto $x^*\in\Omega$ es calculado. 
+Por lo tanto, a este conjunto se le llamará \textbf{conjunto objetivo}.
+\end{definicion}
+
+Un ejemplo de este conjunto para el problema sin restricciones podría ser $\Omega = \{x \in\mathbb{R}^n: \nabla f(x) = 0\}$; mientras que para el problema restringido este conjunto será el conjunto de puntos que satisfacen la condición \ref{eq:4.9}.
+
+\begin{definicion}
+Sea $x^k, k=0,1,...$ la secuencia de puntos generados por un algoritmo. 
+Entonces, el algoritmo es \textbf{globalmente convergente} si un punto límite $x^*$ de $x^k$ existe tal que $x^k\in\Omega$ para cualquier punto de inicio $x^0\in\mathbb{R}^n$.
+
+
+Diremos que el algoritmo es \textbf{localmente convergente} si la existencia de $x^*\in\Omega$ solo puede ser establecida si el punto inicial, $x^0$, pertenece a un vecindario de $\Omega$.
+\end{definicion}
+
+La definición de convergencia establecida anteriormente es la más débil que asegura que un punto $x^k$ arbitrariamente cercano a $\Omega$ puede ser obtenido con un $k$ suficientemente grande.
+
+En el caso de no tener restricciones, esto implica
+\begin{equation*}
+\lim_{k\xrightarrow{}{}\infty} ||\nabla f(x^k)|| = 0
+\end{equation*}
+
+El requerimiento más fuerte de convergencia nos muestra que la secuencia $x^k$ converge a un punto $x^*\in\Omega$.
+
+Ahora mostraremos cómo se puede definir el orden de convergencia de un algoritmo. 
+Así, podemos asumir por simplicidad que los algoritmos generan una secuencia $x^k$ que converge a un punto $x^*\in\Omega$. 
+El concepto más empleado en términos de convergencia es el Q-orden de convergencia, el cual considera el cociente entre dos iteraciones sucesivas dado por
+\begin{equation*}
+\dfrac{||x^{k+1} - x^*||}{||x^k - x^*||}
+\end{equation*}
+
+Entonces, podemos definir el siguiente tipo u orden de convergencia.
+
+\begin{definicion}
+El orden de convergencia es Q-lineal si existe una constante $r\in (0,1)$ tal que
+\begin{equation*}
+\dfrac{||x^{k+1}-x^*||}{||x^k-x^*||} \leq r,
+\end{equation*}
+para cualquier $k$ suficientemente grande.
+\end{definicion}
+
+\begin{definicion}
+El orden de convergencia es Q-superlineal si
+\begin{equation*}
+\lim_{k\xrightarrow{}{}\infty}\dfrac{||x^{k+1}-x^*||}{||x^k-x^*||} = 0
+\end{equation*}
+\end{definicion}
+
+\begin{definicion}
+El orden de convergencia es Q-cuadrático si
+\begin{equation*}
+\dfrac{||x^{k+1}-x^*||}{||x^k-x^*||^2} \leq R
+\end{equation*}
+para cualquier k suficientemente grande y donde $R>0$ es una constante.
+\end{definicion}
+
+\subsection{Comportamiento numérico}
+
+A pesar del rendimiento teórico que puedan tener los algoritmos, otro aspecto importante es el comportamiento práctico. 
+En efecto, si tenemos una gran cantidad de operaciones algebraicas por operación, es posible superar una tasa de convergencia rápida. 
+Tenemos numerosas medidas para evaluar el comportamiento numérico. 
+Sin embargo, si la carga computacional (operaciones algebraicas por iteración) no es despreciable, entonces podemos usar algunas medidas dadas por el número de iteraciones, número de evaluaciones de funciones objetivo, etc.
+
+Medir el rendimiento de los algoritmos es importante para problemas no lineales de gran escala. 
+El término ``gran escala'' depende de la máquina que se encargue de los datos, pero ese tipo de problema son normalmente problemas sin restricciones que verifican que $n\geq 1000$, donde $n$ es el número de variables. 
+Sin embargo, un problema con restricciones se considerará ser un problema de gran escala cuando el número de variables es $n\geq 100$ y cuando la suma de las condiciones es 100 o mayor. 
+Uno de los problemas más importantes es el trasladar algoritmos eficientes en problemas a pequeña escala a problemas de gran escala.
+
+
+\chapter{Programación no lineal sin restricciones}
+
+En este capítulo consideraremos algoritmos que traten de resolver el siguiente problema sin restricciones
+\begin{equation}
+\min_{x\in\mathbb{R}^n}f(x) 
+\label{eq:4.11}
+\end{equation}
+donde $x\in\mathbb{R}^n$ es el vector de variables de decisión y $f:\mathbb{R}^n\xrightarrow{}{}\mathbb{R}$ es la función objetivo. 
+Es lógico pensar que si somos capaces de resolver este problema, el procedimiento para ello puede ser ajustado a problemas con restricciones porque solo necesitaremos un conjunto abierto factible de soluciones $\mathcal{F}$, y un punto inicial $x^0\in\mathcal{F}$.
+
+Asumimos por simplicidad que nuestra función $f$ es continuamente 2-diferenciable en $\mathbb{R}^n$. 
+Además, asumiremos lo siguiente para asegurarnos de la existencia de una solución del problema \ref{eq:4.11}: $\mathcal{L}^0 = \{x\in\mathbb{R}:f(x)\leq f(x^0)\}$ es compacto para algún $x^0\in\mathbb{R}^n$.
+
+\section{Algoritmos de Optimización sin restricciones}
+
+Ahora presentaremos algunos modelos de algoritmos que serán usados para resolver los problemas previos. 
+Estos tipos de algoritmos están caracterizados por generar una secuencia de puntos, $\{x^k\}$, empezando por un punto inicial $x^0$, usando la siguiente iteración
+\begin{equation}
+x^{k+1} = x^k + \alpha^kd^k
+\label{eq:4.12}
+\end{equation}
+donde $d^k$ es la dirección de búsqueda y $\alpha^k$ es el tamaño de paso junto con $d^k$. 
+En este método tenemos dos parámetros a modificar: la dirección de búsqueda y el tamaño del paso, por lo tanto, dependiendo de como variamos estos datos, obtendremos diferentes métodos y esto afectará a las propiedades de convergencia. 
+El tamaño de paso afecta a la convergencia global, mientras que la dirección de búsqueda afecta a la convergencia local. 
+
+El siguiente resultado nos da una relación entre convergencia y dirección de búsqueda:
+
+\begin{proposicion}
+Sea $\{x^k\}$ la secuencia generada por \ref{eq:4.12}. 
+También asumimos:
+\begin{enumerate}
+	\item $d^k \neq 0$ si $\nabla f(x^k)\neq 0$.
+	\item $\forall k$ tenemos $f(x^{k+1}) \leq f(x^k)$.
+	\item \begin{equation}
+	\lim_{k\xrightarrow{}{}\infty}\dfrac{\nabla f(x^k)'d^k}{||d^k||} = 0
+	\label{eq:4.13}
+	\end{equation}
+	\item $\forall k$ con $d^k\neq 0$, tenemos $\dfrac{|\nabla f(x^k)'d^k|}{||d^k||} \geq c||\nabla f(x^k)||$ con $c>0$.
+\end{enumerate}
+Entonces, tenemos que, o bien, existe $\hat{k}$ tal que $x^{\hat{k}}\in\mathcal{L}^0$ y $\nabla f(x^{\hat{k}}) = 0$, o bien, se genera una secuencia infinita tal que:
+\begin{enumerate}
+	\item $\{x^k\in\mathcal{L}^0\}$.
+	\item $\{f(x^k)\}$ converge.
+	\item \begin{equation}
+	\lim_{k\xrightarrow{}{}\infty} ||\nabla f(x^k))|| = 0
+	\label{eq:4.14}
+	\end{equation}
+\end{enumerate}
+\end{proposicion}
+
+La tercera condición implica que solo necesitamos una subsecuencia que tenga un punto límite en $\Omega$. 
+Este resultado nos da información sobre cómo es la convergencia en términos de la dirección de búsqueda.
+
+Procedemos a describir dos métodos conocidos como algoritmos de Búsqueda Lineal y métodos basados en el gradiente.
+
+\section{Algoritmos de Búsqueda Lineal}
+
+Estos algoritmos están caracterizados por determinar el tamaño de paso $\alpha^k$ junto con la dirección de búsqueda $d^k$. 
+El objetivo es elegir un tamaño de paso que asegure la convergencia de \ref{eq:4.12}. 
+Una elección puede ser elegir dicho tamaño de paso tal y como se describe en la siguiente ecuación:
+\begin{equation*}
+\alpha^k = arg \min_\alpha f(x^k+\alpha d^k)
+\end{equation*}
+
+La ecuación anterior puede ser resumida en la siguiente idea: 
+el tamaño de paso es el valor que minimiza la función objetivo junto con una dirección dada. 
+Sin embargo, en esta situación es posible que el mínimo no pueda ser alcanzado porque la función necesita tener propiedades que nos permitan calcular dicho mínimo, por lo tanto, una búsqueda lineal no tiene por qué suponer la mejor solución computacionalmente hablando.
+
+Por ello, tenemos que usar métodos de aproximación. 
+Uno de ellos es calcular el gradiente de la función. 
+En estos casos podemos asumir que
+\begin{equation}
+\nabla f(x^k)'d^k < 0, \forall k
+\label{eq:4.15}
+\end{equation}
+
+Los algoritmos de búsqueda lineal más simples están proporcionados por Armijo, cuyo pseudocódigo se puede encontrar en Algoritmo ~\ref{alg:LocalSearch}.
+
+\begin{algorithm}
+\caption{Algoritmo de Búsqueda Lineal de Armijo}\label{alg:LocalSearch}
+\begin{algorithmic}[1]
+\Procedure \textsc{Busqueda\_Lineal}($\delta\in (0,1), \gamma\in (0,1/2), c\in (0,1)$)
+\State Elegir $\nabla^k$ tal que\begin{equation*}
+\nabla^k \geq c \dfrac{|\nabla f(x^k)'d^k|}{||d^k||^2}
+\end{equation*}
+\State $\alpha = \nabla^k$
+\State $N \gets n$
+\If{$f(x^k + \alpha d^k)\leq f(x^k) + \gamma\alpha\nabla f(x^k)'d^k$}
+    \State $\alpha^k = \alpha$ y parar
+\Else
+    \State Establecer $\alpha = \delta\alpha$ y volver al paso anterior.
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+La elección inicial de $\nabla^k$ se debe a la dirección $d^k$ porque garantizamos que, en un número finito de pasos, $\alpha^k$ tiene un valor tal que $f(x^{k+1})<f(x^k)$, por lo que las condiciones de convergencia de la proposición se encuentran satisfechas.
+
+Esta búsqueda lineal encuentra un tamaño de paso que satisface la condición de decrecimiento suficiente de la función objetivo y, consecuentemente, el desplazamiento suficiente de la secuencia actual.
+
+En algunos casos, necesitamos considerar que los algoritmos de búsqueda lineal no necesitan información sobre las derivadas. 
+En estos casos, la condición \ref{eq:4.15} no puede ser verificada. 
+Por lo tanto, la dirección $d^k$ no tiene por qué ser descendiente. 
+
+Otra posible modificación al algoritmo propuesto podría ser sustituir la condición de parada por la siguiente, que no tiene información sobre la derivada:
+
+\begin{equation}
+f(x^k +\alpha d^k) \leq f(x^k)-\gamma\alpha^2||d^k||^2
+\label{eq:4.16}
+\end{equation}
+
+\section{Métodos de Gradiente}
+
+El método de gradiente o método del descenso más rápido (\textit{steepest-descent}) se considera un método básico de entre todos los algoritmos de optimización no restringidos. 
+Tiene la regla básica de establecer $d^k = -\nabla f(x^k)$ en \ref{eq:4.12}. 
+Solo necesita información sobre la primera derivada y es importante debido a que el coste computacional y el almacenamiento disponibles son limitados. 
+
+Este método es un ejemplo de convergencia global, porque si usamos un algoritmo de búsqueda local adecuado, podemos establecer un resultado de convergencia global. 
+El problema es su orden de convergencia, el cual es bajo y esto es la razón por la que este algoritmo no se suele usar solo. 
+El esquema de este algoritmo es el siguiente:
+
+\begin{algorithm}
+\caption{Método de Gradiente}\label{alg:GradientMethod}
+\begin{algorithmic}[1]
+\Procedure \textsc{Gradiente}
+\State Establecer $x^0\in\mathbb{R}^n$ y $k=0$
+\While{$\nabla f(x^k)!=0$}
+	\State Establecer $d^k=-\nabla f(x^k)$ y encuentra un tamaño de paso $\alpha^k$ usando \ref{alg:LocalSearch}
+	\State Establecer $x^{k+1} = x^k - \alpha^k\nabla f(x^k)$ y $k=k+1$.
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+La elección inicial del tamaño de paso como la dada por Armijo es importante, ya que puede afectar al comportamiento del algoritmo. 
+En términos de convergencia, el siguiente resultado nos asegura la convergencia sin necesitar asumir la compacidad del conjunto $\mathcal{L}^0$.
+
+\textbf{Nota}: Sea $f:\mathbb{R}^n\xrightarrow{}{}\mathbb{R}^m$. $f$ se dice \textbf{Lipschitziana} si existe $K>0$ tal que
+\begin{equation*}
+||f(x)-f(y)|| \leq K||z-y||, \forall x,y\in\mathbb{R}^n
+\end{equation*}
+
+\begin{proposicion}
+Si $\nabla f$ es Lipschitziana, continua y $f$ está acotada inferiormente , entonces la secuencia generada por \ref{alg:GradientMethod} satisface la tesis de \ref{eq:4.5}.
+\end{proposicion}
+
+Como conclusión, con este resultados podemos comprobar que el gradiente es bueno en términos de convergencia global. 
+Sin embargo, solo podemos probar la convergencia lineal. 
+Desde un punto de vista práctico, el orden de convergencia es muy pobre y depende del número de condiciones de la matriz Hessiana.
+
+\section{Métodos de Gradiente Conjugado}
+
+Este algoritmo es muy popular debido a su simplicidad y sus bajos requerimientos computacionales. 
+En efecto, solo necesita saber sobre las derivadas de primer orden. 
+La idea principal es que la minimización de funciones cuadráticas estrictamente convexas en $\mathbb{R}^n$ como la siguiente
+\begin{equation}
+f(x) = \dfrac{1}{2}x'Qx+\alpha'x
+\label{eq:4.17}
+\end{equation}
+donde $Q$ es una matriz simétrica definida positiva, puede ser dividida en $n$ minimizaciones sobre $\mathbb{R}$. 
+Esto se puede hacer utilizando $n$ direcciones, $d^0,...,d^{n-1}$ conjugadas con respecto de la matriz Hessiana $Q$. 
+Junto con cada dirección, se realiza una búsqueda lineal.
+
+El siguiente algoritmo (Algoritmo \ref{alg:ConjugateDirection}) muestra todo lo mencionado anteriormente.
+
+Se debe notar que el valor de $\alpha^k$ que se utilizará en el tercer paso es el que minimiza la función $f(x^k + \alpha d^k)$. 
+Además, el cociente está bien definido porque para dos direcciones distintas tenemos $(d^j)Qd^i=0$, con $i,j$ tales que $i\neq j$.
+
+\begin{algorithm}
+\caption{Algoritmo de direcciones conjugadas para funciones cuadráticas}\label{alg:ConjugateDirection}
+\begin{algorithmic}[1]
+\Procedure \textsc{Direcciones\_Conjugadas} (direcciones Q-conjugadas $d^0,...,d^{n-1}$)
+\State Establecer $x^0\in\mathbb{R}^n$ y $k=0$
+\While{$\nabla f(x^k)!=0$}
+	\State Establecer $\alpha^k = \dfrac{\nabla f(x^k)'d^k}{(d^k)'Qd^k}$
+	\State Establecer $x^{k+1} = x^k - \alpha^k\nabla f(x^k)$ y $k=k+1$.
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+En este algoritmo, las direcciones provienen de los datos, mientras que en el algoritmo del gradiente conjugado se calculan de forma iterativa usando la siguiente regla:
+
+\begin{equation*}
+d^k= \left\{ \begin{array}{lcc}
+             -\nabla f(x^k) &   si  & k = 0 \\
+             \\ -\nabla f(x^k)+\beta^{k-1}d^{k-1} &  si & k\geq 1 \\
+             \end{array}
+   \right.
+\end{equation*}
+
+El escalar $\beta^k$ se elige para reforzar la conjugación entre las direcciones. 
+La opción más común es la propuesta de Fletcher-Reeves:
+
+\begin{equation}
+\beta_{FR} = \dfrac{||\nabla f(x^{k+1})||^2}{||\nabla f(x^k)||^2}
+\label{eq:4.18}
+\end{equation}
+
+Sin embargo, la fórmula de Polak-Ribiére también puede usarse:
+
+\begin{equation}
+\beta_{PR} = \dfrac{\nabla f(x^{k+1})'(\nabla f(x^{k+1})-\nabla f(x^k))}{||\nabla f(x^k)||^2}
+\label{eq:4.19}
+\end{equation}
+
+Ambas fórmulas son iguales en el caso cuadrático y diferentes cuando se trate de cualquier otro caso.
+
+El esquema del gradiente conjugado se presenta en Algoritmo ~\ref{alg:ConjugateGradiente}.
+
+\begin{algorithm}
+\caption{Algoritmo del gradiente conjugado}\label{alg:ConjugateGradiente}
+\begin{algorithmic}[1]
+\Procedure \textsc{Gradiente\_Conjugado}
+\State Establecer $x^0\in\mathbb{R}^n$ y $k=0$
+\While{$\nabla f(x^k)!=0$}
+	\State Calcular $\beta^{k-1}$ usando \ref{eq:4.18} o \ref{eq:4.19} y establecer la dirección usando \begin{equation*}
+d^k= \left\{ \begin{array}{lcc}
+             -\nabla f(x^k) &   si  & k = 0 \\
+             \\ -\nabla f(x^k)+\beta^{k-1}d^{k-1} &  si & k\geq 1 \\
+             \end{array}
+   \right.
+\end{equation*}
+	\State Encontrar $\alpha^k$ usando un algoritmo de búsqueda lineal que satisfaga las condiciones de Wolfe.
+	\State Establecer $x^{k+1} = x^k + \alpha^kd^k$ y $k=k+1$.
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Las condiciones de Wolfe mencionadas en \ref{alg:ConjugateGradiente} son las siguientes:
+\begin{equation}
+f(x^k + \alpha d^k) \leq f(x^k) + \gamma\alpha\nabla f(x^k)'d^k
+\label{eq:4.20}
+\end{equation}
+que es la misma que se usó en la Búsqueda Lineal de Armijo, con la siguiente condición siendo más fuerte
+\begin{equation}
+|\nabla f(x^k+\alpha d^k)'d^k| \leq \beta |\nabla f(x^k)'d^k|
+\label{eq:4.21}
+\end{equation}
+donde $\beta\in (\gamma,1)$ y $\gamma$ se encuentra en el mismo intervalo que antes.
+
+La forma más simple de asegurar las propiedades de convergencia global en este método es aplicando reinicios periódicos junto con dirección de descenso más rápido. 
+Aún así, el reinicio puede también suceder si alguno de los términos cuadráticos se pierden y pueden causar, o bien, que el método sea ineficiente, o bien, elecciones de caminos sin sentido.
+
+El mecanismo de reinicio se realiza cada $n$ iteraciones o si se da la siguiente condición:
+\begin{equation*}
+|\nabla f(x^k)'\nabla f(x^{k+1})| > \delta ||\nabla f(x^{k-1})||^2
+\end{equation*}
+con $0 < \delta < 1$.
+
+
+\section{Métodos de Newton}
+
+Este método se considera uno de los algoritmos más potentes para resolver problemas de optimización sin restricciones. 
+La aproximación cuadrática de la función objetivo en un vecindario de la solución actual, $x^k$, considerada es la siguiente
+
+\begin{equation*}
+q^k(s) = \dfrac{1}{2}s'\nabla^2f(x^k)s+\nabla f(x^k)'s+f(x^k) 
+\end{equation*}
+donde necesitamos saber las derivadas de primer y segundo orden de la función objetivo en la iteración número $k$. 
+Este algoritmo también necesita calcular una dirección, $d_N$, y en ese caso, se obtiene como un punto estacionario de la aproximación anterior y es la solución del sistema dado por
+\begin{equation}
+\nabla^2 f(x^k)d_N = -\nabla f(x^k)
+\label{eq:4.22}
+\end{equation}
+
+Por lo tanto, la matriz $\nabla^2f(x^k)d_N$ es no singular, tiene una inversa y la dirección es $d_N = -(\nabla^2 f(x^k))^{-1}\nabla f(x^k)$.
+
+El esquema básico algorítmico está definido por la iteración
+
+\begin{equation}
+x^{k+1} = x^k - (\nabla^2f(x^k))^{-1}\nabla f(x^k)
+\label{eq:4.23}
+\end{equation}
+
+La calidad de este método se debe al hecho de que si el punto de partida $x^0$ está próximo a la solución $x^*$, entonces la secuencia de puntos generado por la ecuación anterior converge a $x^*$ de forma superlineal o cuadrática (si la Hessiana es continuamente Lipschitziana en un vecindario de la solución).
+
+Sin embargo, este método tiene algunas desventajas. 
+Una de ellas es la singularidad de la matriz $\nabla^2f$ porque en el caso de ser singular, el método no puede definirse. 
+Otra desventaja está relacionada con el punto inicial, $x^0$. Puede ser tal que la secuencia generada por \ref{eq:4.23} no converge, pero puede ocurrir la convergencia a un punto máximo.
+
+Debido a estos hechos, el método de Newton necesita algunos cambios para asegurar la convergencia global a la solución. 
+Un método de Newton convergente debería generar una secuencia de puntos $\{x^k\}$ con las siguientes características:
+
+\begin{itemize}
+\item Admite un punto límite.
+\item Cualquier otro punto límite pertenece a $\mathcal{L}$ y es un punto estacionario de $f$.
+\item Ningún punto límite es un punto máximo de $f$.
+\item Si $x^*$ es un punto límite de $\{x^k\}$ y $\nabla^2 f(x^*)$ es definida positiva, entonces la convergencia es, al menos, superlineal.
+\end{itemize}
+
+Hay dos enfoques para diseñar un método de Newton convergente globalmente: un enfoque con búsqueda lineal y un enfoque con regiones de confianza.
+
+\subsection{Modificaciones de Búsqueda Lineal en el Método de Newton}
+
+la adaptación del método a este enfoque es el control del tamaño de paso junto con $d_N$ tal que \ref{eq:4.23} se convierte en
+\begin{equation}
+x^{k+1} = x^k - \alpha^k[\nabla^2 f(x^k)]^{-1}\nabla f(x^k)
+\label{eq:4.24}
+\end{equation}
+donde $\alpha^k$ se elige con una buena búsqueda local. 
+Un ejemplo puede ser inicializar $\Delta^k = 1$ en Algoritmo \ref{alg:LocalSearch}. 
+Adicionalmente a este cambio, la dirección $d_N$ puede ser perturbada para asegurar la convergencia global del algoritmo. 
+La forma más fácil de realizar este cambio es usar la dirección del descenso más rápido siempre cuando $d^k_N$ no satisface alguna de las condiciones de convergencia. 
+
+Un posible esquema de dicho algoritmo se presenta en Algoritmo ~\ref{alg:LSNewton}.
+
+En el tercer paso, se toma la dirección del descenso más rápido si $\nabla f(x^k)'d^k_N\geq 0$. 
+Otra posible modificación del método de Newton podría ser aquella que toma la dirección de la curvatura negativa, es decir, $d^k = -d_N^k$. 
+Esta modificación se puede hacer si las siguientes dos condiciones se cumplen:
+\begin{enumerate}
+	\item $|\nabla f(x^k)'d^k| \geq c_1||\nabla f(x^k)||^q$
+	\item $||d^k||^p \leq c_2 ||\nabla f(x^k)||$
+\end{enumerate}
+
+\begin{algorithm}[H]
+\caption{Método de Newton con Búsqueda Lineal}\label{alg:LSNewton}
+\begin{algorithmic}[1]
+\Procedure \textsc{ABLNewton} ($c_1>0,c_2>0,p\geq 2, q\geq 3$)
+\State Establecer $x^0\in\mathbb{R}^n$ y $k=0$
+\While{$\nabla f(x^k)!=0$}
+	\If{$\exists d_N^k$ solución de $\nabla^2 f(x^k)d^k_N = -\nabla f(x^k)$ y satisface \begin{equation*}
+	\nabla f(x^k)'d^k_N\leq -c_1||\nabla f(x^k)||^q, ||d_N^k||^p\leq c_2||\nabla f(x^k)||
+	\end{equation*}}
+		\State Establecer la dirección $d^k = d_N^k$
+	\Else
+		\State $d^k = -\nabla f(x^k)$
+	\EndIf
+	\State Encontrar $\alpha^k$ usando \ref{alg:LocalSearch}
+	\State Establecer $x^{k+1} = x^k+\alpha^kd^k$ y, después, $k=k+1$
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Una segunda modificación es perturbar la matriz Hessiana con una matriz definida positiva $Y^k$ y ahora la solución provendría de resolver el sistema $(\nabla^2 f(x^k) + Y^k)d = -\nabla f(x^k)$.
+
+Las modificaciones comunes de los métodos de Newton se basan en el decremento monótono de los valores de la función objetivo. 
+Con estos cambios la región de convergencia del método puede aumentar más de lo esperado, pero una secuencia convergente en este conjunto puede no ser una secuencia monótonamente descendente de los valores de la función objetivo. 
+
+La siguiente modificación está basada en las condiciones de búsqueda lineal y mantiene la propiedad de convergencia global. 
+En esta modificación, usaremos una regla no monótona. 
+Por lo tanto, el método obtenido se presenta en Algoritmo \ref{alg:NonMonotoneNewton}.
+
+\begin{algorithm}
+\caption{Método de Newton no monótono}\label{alg:NonMonotoneNewton}
+\begin{algorithmic}[1]
+\Procedure \textsc{NewtonNM} ($c_1>0,c_2>0,p\geq 2, q\geq 3$ y $M$ entero)
+\State Establecer $x^0\in\mathbb{R}^n$ y $k=0$
+\While{$\nabla f(x^k)!=0$}
+	\If{$\exists d_N^k$ solución de $\nabla^2 f(x^k)d^k_N = -\nabla f(x^k)$ y satisface \begin{equation*}
+	\nabla f(x^k)'d^k_N\leq -c_1||\nabla f(x^k)||^q, ||d_N^k||^p\leq c_2||\nabla f(x^k)||
+	\end{equation*}}
+		\State Establecer la dirección $d^k = d_N^k$
+	\Else
+		\State $d^k = -\nabla f(x^k)$
+	\EndIf
+	\State Encontrar $\alpha^k$ usando \ref{alg:LocalSearch}, tal que \begin{equation*}
+	f(x^k+\alpha d^k) \leq \max_{0\leq j\leq J}\{f(x^{k-j})\}+\gamma\alpha\nabla f(x^k)'d^k
+	\end{equation*}
+	con $J=m(k)$
+	\State Establecer $x^{k+1} = x^k+\alpha^kd^k$ y, después, $k=k+1$
+	\State Establecer $m(k) = \min\{m(k-1)+1,M\}$
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Los métodos de Búsqueda Lineal estudiados hasta ahora convergen a puntos satisfaciendo solo las condiciones de optimalidad de primer orden necesarias de la ecuación \ref{eq:4.11}. 
+Esto se debe a que el método de Newton no explota toda la información obtenida en la segunda derivada. 
+Es posible obtener una convergencia más fuerte si usamos el par de direcciones $(d^k,s^k)$ y una búsqueda curvilinear, es decir,
+\begin{equation}
+x^{k+1} = x^k + \alpha^kd^k+(\alpha^k)^{\frac{1}{2}}s^k
+\label{eq:4.25}
+\end{equation}
+donde $d^k$ es una dirección del método de Newton y $s^k$ es una dirección que incluye información de curvatura negativa con respecto a $\nabla^2 f(x^k)$. 
+Con esta idea y algunas modificaciones a la Búsqueda Lineal de Armijo, se pueden crear algoritmos globalmente convergente que además puedan satisfacer las condiciones de optimalidad de segundo orden necesarias para la ecuación \ref{eq:4.11}.
+
+\subsection{Modificaciones de Regiones de Confianza en el Método de Newton}
+
+Este tipo de algoritmos tienen su iteración principal como muestra la siguiente ecuación
+\begin{equation*}
+x^{k+1} = x^k + s^k
+\end{equation*}
+donde el paso $s^k$ se obtiene minimizando la forma cuadrática $q^k$ de la función objetivo en una región de confianza del espacio $\mathbb{R}^n$. 
+La región de confianza se define como una norma $l_p$ del paso $s$. 
+Lo más común es elegir la norma Euclidiana, con la cual, en cada iteración, $s^k$ es la solución de 
+\begin{equation*}
+\min_{s\in\mathbb{R}^n}\dfrac{1}{2}s'\nabla^2 f(x^k)s + \nabla f(x^k)'s
+\label{eq:4.26}
+\end{equation*}
+donde $||s||^2 \leq (a^k)^2$ con $a$ siendo el radio de la región de confianza. 
+Otra opción consistiría en realizar un cambio de escala a la condición previa de la siguiente forma: $||D^ks||^2\leq (a^l)^2$. 
+Por simplicidad, asumiremos que la matriz $D^k=I$, es decir, la matriz identidad en el espacio adecuado.
+
+Estos algoritmos se caracterizan por la siguiente idea: cuando la matriz $\nabla^2 f(x^k)$ es definida positiva, entonces el radio $a^k$ tiene que ser lo suficientemente grande que el minimizador de \ref{eq:4.26} no tenga restricciones y el paso dado por Newton sea un entero. 
+Además, $a^k$ se actualiza en cada iteración y su instrucción de actualización depende de la proporción $\rho^k$ entre la reducción de los valores de la función objetivo $f(x^k)-f(x^{k+1})$ y la reducción esperada $f(x^k)-q^k(s^k).$
+
+El siguiente algoritmo (Algoritmo \ref{alg:TrustRegionNewton}) presenta las ideas anteriores y también garantiza la satisfacción de las condiciones de optimalidad necesarias para \ref{eq:4.11} en su tercer paso. 
+
+Si $f$ es además continuamente 2-diferenciable, entonces la secuencia del algoritmo anterior, $\{x^k\}$, tiene un punto límite que satisface las condiciones de optimalidad necesarias de primer y segundo orden para la ecuación \ref{eq:4.11}. 
+Además, si $\{x^k\}$ converge a un punto en el que la matriz Hessiana $\nabla^2f$ es definida positiva, entonces el orden de convergencia es superlineal. 
+
+El esfuerzo computacional de este algoritmo es el subproblema de las regiones de confianza. 
+Debido a este hecho, se han ido desarrollando cada vez más algoritmos para resolverlo. 
+Sin embargo, no necesitamos una solución exacta para esta ecuación. 
+Para probar que la convergencia global del algoritmo es suficiente verificar que el valor $q^k(s^k)$ es menor que el valor en un punto de Cauchy, que es el punto que minimiza el modelo cuadrático en la región de confianza.
+
+\begin{algorithm}[H]
+\caption{Método de Newton basado en Regiones de Confianza}\label{alg:TrustRegionNewton}
+\begin{algorithmic}[1]
+\Procedure \textsc{NewtonRegionConfianza} ($0<\gamma_1\leq\gamma_2<1, 0 \delta_1 < 1 \leq\delta_2$)
+\State Establecer $x^0\in\mathbb{R}^n$, $k=0$ y $a^0=0$.
+\State Encontrar $s^k = arg \min_\{||s||\leq a^k\}q^k(s)$
+\If{$f(x^k)==q^k(s^k)$}
+	\State Parar
+\Else
+	\State Calcular la proporción \begin{equation*}
+	\rho^k = \dfrac{f(x^k)-f(x^k+s^k)}{f(x^k)-q^k(s^k)}
+	\end{equation*}
+	\If{$\rho^k\geq\gamma_1$}
+		\State Actualizar $x^{k+1}=x^k + s^k$
+	\Else
+		\State Actualizar $x^{k+1} = x^k$
+	\EndIf
+	\State Actualizar el radio $a^k$
+	\begin{equation*}
+	a^{k+1} = \left\{ \begin{array}{lcc}
+             \delta_1a^k &   si  & \rho^k < \gamma_1 \\
+             \\ a^k &  si & \rho^k\in\in [\gamma_1,\gamma_2] \\
+             \\ \delta_2a^k & si & \rho^k > \gamma_2
+             \end{array}
+   \right.
+	\end{equation*}
+	y establecer $k=k+1$, entonces volver al paso 3.
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Métodos de Newton Truncados}
+
+Los métodos de Newton necesitan calcular la solución de un sistema lineal de ecuaciones en cada iteración. 
+Si echamos un vistazo a problemas a gran escala, resolver este sistema en cada iteración puede resultar demasiada carga computacionalmente hablando. 
+Además, la solución exacta cuando $x^k$ está lejos de una solución y $||\nabla f(x^k)||$ es grande no es necesaria. 
+Debido a este hecho, se han propuesto numerosos métodos que calculan una solución aproximada a este sistema con un orden de convergencia bueno, es decir, si $\widetilde{d^k_N}$ es una solución aproximada del sistema, entonces la medida de precisión es dada por el residual de la ecuación de Newton, que sería 
+\begin{equation*}
+r^k = \nabla^2 f(x^k)\widetilde{d^k_N} + \nabla f(x^k)
+\end{equation*}
+
+Si podemos controlar este residual, entonces podemos probar la convergencia superlineal.
+
+\begin{proposicion}
+Si $\{x^k\}$ converege a una solución y si 
+\begin{equation*}
+\lim_{k\xrightarrow{}{}\infty} \dfrac{||r^k||}{||\nabla f(x^k)||} = 0
+\end{equation*}
+entonces $\{x^k\}$ converge de forma superlineal.
+\end{proposicion}
+
+Estos métodos solo requieren de operaciones matriciales-vectoriales, por lo que son adecuados para problemas a gran escala. 
+Al siguiente algoritmo se le conoce como el método de Newton truncado y se necesita que la matriz Hessiana sea definida positiva. 
+Este método se obtiene aplicando un esquema de gradiente conjugado para encontrar una solución óptima del sistema \ref{eq:4.22}.
+
+Generaremos los vectores $d_N^i$, que se van a ir aproximando a la dirección $d_N^k$ y se detendrá cuando ocurra uno de los siguientes casos:
+\begin{itemize}
+	\item El residual $r^i$ verifica que $||r^i|| \leq \epsilon^k$, para $e^k > 0$.
+	\item Si se ha encontrado una dirección de curvatura negativa, es decir, la dirección conjugada $s^i$ verifica que $(s^i)'\nabla^2f(x^k)s^i\leq 0$.
+\end{itemize}
+
+Este algoritmo tiene el mismo resultado para convergencia que el método de Newton. 
+Por simplicidad, eliminaremos las dependencias en la iteración $k$ y estableceremos $H = \nabla^2 f(x^k)$ y $g=\nabla f(x^k)$. 
+Este método genera las direcciones conjugadas $s^i$ y los vectores $p^i$ que aproximan la solución del sistema de Newton $\widetilde{d^k_N}$. 
+Esto se puede encontrar representado en el Algoritmo \ref{alg:NewtonTruncado}.
+
+\begin{algorithm}
+\caption{Algoritmo de Newton Truncado}\label{alg:NewtonTruncado}
+\begin{algorithmic}[1]
+\Procedure \textsc{NewtonRegionConfianza} ($k,H,g$ y $\eta>0$ escalar)
+\State Establecer $i=0, p^0=0,r^0=-g,s^0=r^0$ y \begin{equation*}
+	\epsilon = \eta ||g||\min\left\lbrace \dfrac{1}{k+1}, ||g|| \right\rbrace
+\end{equation*}
+\While{}
+
+\EndWhile
+\State \begin{equation*}
+	a_N = \left\{ \begin{array}{lcc}
+             \delta_1a^k &   si  & \rho^k < \gamma_1 \\
+             \\ a^k &  si & \rho^k\in\in [\gamma_1,\gamma_2] \\
+             \\ \delta_2a^k & si & \rho^k > \gamma_2
+             \end{array}
+   \right.
+	\end{equation*}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Si aplicamos este algoritmo para encontrar una solución aproximada al sistema en el cuarto paso de \ref{alg:LSNewton} o \ref{alg:NonMonotoneNewton}, entonces obtendremos la versión monótona truncada del método de Newton.
+
+\subsection{Métodos Quasi-Newton}
+
+Estos métodos han sido introducidos con el objetivo de diseñar algoritmos eficientes que no necesiten la evaluación de derivadas de segundo orden. 
+Por tanto, han establecido $d^k$ como la solución de 
+\begin{equation}
+B^kd = -\nabla f(x^k)
+\label{eq:4.27}
+\end{equation}
+donde $B^k$ es una matriz definida positiva simétrica de tamaño $n\times n$ que se ajusta de forma iterativa para que la dirección $d^k$ tienda a aproximar la dirección del método de Newton. 
+A la fórmula anterior se le conoce como \textbf{fórmula quasi-Newton} y su inversa es
+\begin{equation}
+d^k = - H^k\nabla f(x^k)
+\label{eq:4.28}
+\end{equation}
+
+Ambas matrices se modifican en cada iteración como una correción de la anterior, es decir, $B^{k+1} = B^k + \Delta B^k$, y lo mismo pasa para $H^k$. 
+Definimos las siguientes dos cantidades:
+\begin{equation*}
+\delta^k = x^{k+1} - x^k \hspace{0.5cm} \gamma^k = \nabla f(x^{k+1}) - \nabla f(x^k)
+\end{equation*}
+
+En caso de que $f$ sea una función cuadrática, entonces la ecuación quasi-Newton sería
+\begin{equation}
+\nabla^2 f(x^k)\delta^k = \gamma^k
+\label{eq:4.29}
+\end{equation}
+por lo tanto, $\Delta B^k$ (lo mismo para $\Delta H^k$) se elige de la siguiente forma
+\begin{equation}
+(B^k + \Delta B^k)\delta^k = \gamma^k
+\label{eq:4.30}
+\end{equation}
+
+La regla de actualización de $H^k$ está dada por
+\begin{equation}
+\Delta H = \dfrac{\delta^k(\delta^k)'}{(\delta^k)'\gamma^k} - \dfrac{H^k\gamma^k(H^k\gamma^k)'}{(\gamma^k)'H^k\gamma^k} + c(\gamma^k)'H^k\gamma^kv^k(v^k)'
+\label{eq:4.31}
+\end{equation}
+donde
+\begin{equation*}
+v^k = \dfrac{\delta^k}{(\delta^k)'\gamma^k} - \dfrac{H^k\gamma^k}{(\gamma^k)'H^k\gamma^k}
+\end{equation*}
+y $c>0$ es un escalar. 
+El algoritmo que vamos a mostrar ahora fue creado por Broyden, Flecher, Goldfarb y Shanno. 
+Es un método de búsqueda lineal en el que el tamaño de paso es $\alpha^k$ se obtiene mediante un algoritmo de búsqueda lineal. 
+El esquema del algoritmo se presenta en Algoritmo \ref{alg:BFGSQuasiNewton}.
+
+\begin{algorithm}
+\caption{Algoritmo BFGS Inverso Quasi-Newton}\label{alg:BFGSQuasiNewton}
+\begin{algorithmic}[1]
+\Procedure \textsc{InversaBFGSQuasiNewton}
+\State Establecer $x_0\in\mathbb{R}^n, H^0=I$ y $k=0$
+\While{$\nabla f(x^k)!=0$}
+	\State Establecer la dirección $d^k = -H^k\nabla f(x^k)$
+	\State Encontrar $\alpha^k$ mediante una búsqueda lineal que satisfaga las condiciones de Wolfe \ref{eq:4.20} y \ref{eq:4.21}
+	\State Actualizar \begin{equation}
+	\begin{matrix}
+  x^{k+1} & = & x^k+\alpha^kd^k\\
+  H^{k+1} & = & H^k + \Delta H^k
+ \end{matrix}
+	\end{equation}
+	con $\Delta H^k$ dada por la regla \ref{eq:4.31} con $c=1$.
+	\State Establecer $k = k+1$
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Distinguimos dos casos en relación a las propiedades de convergencia: caso convexo y caso no convexo. 
+Cuando no tenemos convexidad, si existe una constante $\rho$ tal que para cada $k$ se verifica la siguiente condición
+\begin{equation}
+\dfrac{||\gamma^k||^2}{(\gamma^k)'\delta^k} \leq \rho
+\label{eq:4.32}
+\end{equation}
+entonces la secuencia de puntos generada por el algoritmo satisface
+\begin{equation*}
+\lim_{k\xrightarrow{}{}\infty} inf||\nabla f(x^k)|| = 0
+\end{equation*}
+que es la condición débil de \ref{eq:4.5}. 
+Para el caso convexo, la desigualdad anterior se mantiene. 
+El siguiente resultado nos dará información sobre el orden de convergencia de este algoritmo. 
+
+\begin{proposicion}
+Sea $\{B^k\}$ una secuencia de matrices no singulares y sea $\{x^k\}$ la secuencia dada por
+\begin{equation*}
+x^{k+1} = x^k - (B^k)^{-1}\nabla f(x^k)
+\end{equation*}
+También supondremos que $\{x^k\}$ converge a un punto $x^*$ donde $\nabla^2 f(x^*)$ es también no singular. 
+Entonces, la secuencia $\{x^k\}$ converge de forma superlineal a $x^* \Leftrightarrow$
+\begin{equation*}
+\lim_{k\xrightarrow{}{}\infty}\dfrac{||[B^k-\nabla^2f(x^*)](x^{k+1}-x^k)||}{||x^{k+1}-x^k||} = 0
+\end{equation*}
+\end{proposicion}
+
+Este algoritmo está pensado para problemas de pequeña escala, ya que para los de gran escala, el almacenar una matriz como serían $B^k$ o $H^k$ ocasionaría problemas de almacenamiento. 
+Por lo tanto, para esos problemas la información se obtiene de las últimas iteraciones. 
+
+\subsection{Métodos sin derivadas}
+
+Estos métodos no calculan explícitamente las derivadas de $f$. 
+Son adecuados para cuando, o bien, el gradiente de la función objetivo no puede ser calculado, o bien, cuando es computacionalmente costoso. 
+Sin embargo, si queremos probar las propiedades de convergencia, necesitaremos suponer que $f$ es continuamente diferenciable. 
+
+De entre todos estos algoritmos, los dos más importantes son los algoritmos de búsqueda de patrones (PSA, \textit{pattern-search algorithm}) y los algoritmos de búsqueda lineal sin derivadas (DFLSA, \textit{derivative-free line-search algorithm}). 
+Estos algoritmos son similares, y su diferencia reside en las suposiciones que hacen sobre el conjunto de direcciones y en la regla que usan para encontrar el tamaño de paso junto con las direcciones. 
+Denotamos $\mathcal{D}^k = \{d^1,...,d^r\}$ con $r\geq n+1$ como el conjunto de direcciones y suponemos que son unitarias. 
+
+También asumimos el siguiente hecho para los PSA: las direcciones $d^j\in\mathcal{D}^k$ son la j-ésima columna de la matriz $B\Gamma^k$ con $B$ una matriz no singular con coeficientes reales de tamaño $n$ y $\Gamma^k\in\mathcal{M}\subset \mathbb{Z}^{n\times r}$, donde $\mathcal{M}$ es un conjunto finito	de matrices integrales tales que su rango coincide con el número de filas que tienen (\textit{full row-rank}).
+
+Esta suposición nos da una idea para entender que el PSA itera sobre $x^{k+1}$ en una red (\textit{lattice}) racional centrada en $x^k$. 
+Sea $\mathcal{P}^k$ el conjunto de candidatos para la siguiente iteracion, es decir, 
+\begin{equation*}
+\mathcal{P} = \{x^{k+1} : x^k + \alpha^kd^j, d^j\in\mathcal{D}^k\}
+\end{equation*}
+
+En este conjunto se conoce el patrón y se elige el tamaño de paso para preservar la estructura algebraica en la siguiente iteración, por lo que tenemos $f(x^k+s^k) < f(x^k)$ con $s^k = \alpha^k d^j$.
+
+Para DLFSA haremos la siguiente suposición: las direcciones $d^j\in\mathcal{D}^k$  son la j-ésima columna de una matriz $B^k$ de tamaño $n\times r$ con rango $n$. 
+En este caso, no hay suposiciones adicionales y solo tiene que verificar la reducción de la función objetivo. 
+
+Los dos siguientes algoritmos muestran una versión del PSA (Algoritmo \ref{alg:PSA}) y del DFLSA (Algoritmo \ref{alg:DFLSA}).
+
+\begin{algorithm}[H]
+\caption{Algoritmo de Búsqueda de Patrones}\label{alg:PSA}
+\begin{algorithmic}[1]
+\Procedure \textsc{PSA} ($\mathcal{D^k}$ satisfaciendo la suposición previa, $\tau\in\{1,2\}, \theta=\frac{1}{2}$)
+\State Establecer $x_0\in\mathbb{R}^n, \Delta^0>0$ y $k=0$
+\State Comprobar la convergencia
+\If{$\exists j\in\{1,\dots,r\} :$\begin{equation*}
+f(x^k + \alpha^kd^j) < f(x^k), \alpha^k=\Delta^k
+\end{equation*}
+}
+	\State Establecer $x^{k+1} = x^k$, $\Delta k+1 = \tau\Delta^k$, $k=k+1$ e ir al paso 3.
+\Else
+	\State Establecer $x^{k+1} = x^k$, $\Delta k+1=\theta\Delta^k$, $k = k+1$ 
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Algoritmo de Búsqueda Lineal sin Derivadas}\label{alg:DFLSA}
+\begin{algorithmic}[1]
+\Procedure \textsc{DFLSA} ($\mathcal{D^k}$ satisfaciendo la suposición previa, $\gamma >0$, $\theta\in(0,1)$)
+\State Establecer $x_0\in\mathbb{R}^n, \Delta^0>0$ y $k=0$
+\State Comprobar la convergencia
+\If{$\exists j\in\{1,\dots,r\} :$\begin{equation*}
+f(x^k + \alpha^kd^j) \leq f(x^k) - \gamma(\alpha^k)^2, \alpha^k\geq\Delta^k
+\end{equation*}
+}
+	\State Establecer $x^{k+1} = x^k$, $\Delta k+1 = \alpha^k$, $k=k+1$ e ir al paso 3.
+\Else
+	\State Establecer $x^{k+1} = x^k$, $\Delta k+1=\theta\Delta^k$, $k = k+1$ 
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Ambos algoritmos generan una secuencia que verifica la condición débil de convergencia de \ref{eq:4.5}, es decir,
+\begin{equation*}
+\lim_{k\xrightarrow{}{}\infty} inf||\nabla f(x^k)|| = 0
+\end{equation*}
+
+En este caso, tomamos un índice, $j$, en PSA tal que 
+
+\begin{equation*}
+f(x^k+\alpha^kd^j) = \min_{i:d^i\in\mathcal{D}^k} f(x^k+\alpha^kd^i) < f(x^k)
+\end{equation*}
+también mantenga la premisa de \ref{eq:4.5}. 
+Esto también ocurre en DFLSA, porque solo tenemos que tomar un tamaño de paso, $\alpha^k$, tal que
+\begin{equation*}
+f\left(x^k+\dfrac{\alpha^k}{\delta}d^k\right) \geq \max\left\lbrace f(x^k+\alpha^kd^k), f(x^k)-\gamma\left(\dfrac{\alpha^k}{\delta}\right)^2\right\rbrace, \delta\in(0,1)
+\end{equation*}
+
+Ambos esquemas encuentran un tamaño de paso que les permita comprobar la convergencia del algoritmo. 
+En estos algoritmos no necesitamos tener el gradiente de $f$, por lo que tenemos que comprobar la siguiente condición:
+\begin{equation}
+\sqrt[]{\dfrac{\sum_{i=1}^{n+1} (f(x^i)-\overline{f})^2}{n+1}} \leq tolerancia
+\label{eq:4.33}
+\end{equation}
+donde $\overline{f} = \dfrac{1}{n+1}\sum_{i=1}^{n+1}f(x^i)$ y $\{x^i : i=1,\dots,n+1\}$ incluye el punto actual y los $n$ puntos anteriormente generados junto con las $n$ direcciones. 
+
+Como resultado de esta teoría, tenemos algoritmos que nos permitan generar secuencias e puntos en $\mathbb{R}^n$ que converjan a los puntos óptimos y, bajo ciertas circunstancias, pueden ser el óptimo global. 
+Estos métodos son el principio de la gran cantidad de algoritmos presentados en la literatura. 
+Estos algoritmos proponen formas de alcanzar un óptimo global  de funciones basadas en una idea inspirada en la naturaleza. 
+
+Incluso si la gran cantidad de algoritmos que presentaremos en las próximas secciones, el diseño de cada uno es similar a cómo esta teoría propone el movimiento, es decir, metaheurísticas basando su movimiento en una dirección dada por un vector y el criterio de parada basado en condiciones que normalmente presentan la optimalidad del mejor individuo de la población.
+
+\chapter{Tests estadísticos}
+\section{Comparaciones por parejas}
+
+Las comparaciones por parejas son el tipo de tests estadísticos más simples que un investigador puede aplicar en el contexto de un estudio experimental. 
+Estos tests son útiles para comparar el rendimiento de dos algoritmos cuando se aplican a un conjunto de problemas común. 
+En el análisis de múltiples problemas, se requiere un valor por cada par de algoritmo-problema (frecuentemente un valor medio de varias ejecuciones). 
+
+En esta sección, nos centraremos en primer lugar en un procedimiento fácil y potente, que puede proporcionar una primera impresión sobre la comparación: el Test de Signos. 
+Entonces, introduciremos el uso del test de posiciones con signos de Wilcoxon, como un ejemplo de un test no paramétrico para comparaciones estadísticas por parejas. 
+
+\subsection{Test de signos}
+
+Una forma popular de comparar el rendimiento general de los algoritmos es contar el número de casos en los que un algoritmo es el ganador (tiene el mejor rendimiento) de entre todos. 
+Algunos autores también utilizan este conteo en estadística inferencial, con un test conocido como Test de signos. 
+Si amso algoritmos comparados son, como se asume en la hipótesis nula, equivalentes, cada uno debería ganar en aproximadamente $n/2$ de $n$ problemas. 
+
+El número de victorias se distribuye de acuerdo a una distribución binomial: para un mayor número de casos, el número de victorias está bajo la hipótesis nula de acuerdo a $n(n/2, \sqrt{n}/2)$, lo que permite el uso del Z-test: si el número de victorias es, al menos, $n/2 + 1.96\cdot \sqrt{n}/2$, entonces el algoritmo es significativamente mejor con $p < 0.05$. 
+
+\subsection{Test de posiciones con signos de Wilcoxon}
+
+Este test se utiliza para responder a la siguiente pregunta: ¿Dos muestras representan 2 poblaciones diferentes? 
+Es un procedimiento no paramétrico utilizado en situaciones de testeo de hipótesis, involucrando un deiseño con dos muestras. 
+Esto es análogo al t-test por parejas en procedimientos estadísticos no paramétricos; por lo tanto, es un test por parejas cuyo objetivo es detectar diferencias significativas entre dos  muestras,es decir, el comportamiento de dos algoritmos. 
+
+\begin{definicion}{Test de Wilcoxon}
+Sea $d_i$ la diferencia entre la puntuación del rendimiento de los algoritmos en el problema $i$-ésimo de entre $n$ problemas (si esta puntuación se pueden representar en distintas posiciones, pueden ser normalizados en el intervalo [0,1], con el objetivo de no darle prioridad a ningún problema). 
+Las diferencias se ordenan según sus valores absolutos; en caso de empates, se puede aplicar alguno de los métodos disponibles en la literatura (ignorar empates, asignar la posición más elevada, calcular todas las posibilidades y hacer la media de los resultados obtenidos para cada aplicación del test...), aunque recomendamos el uso de hacer la media de las posiciones (por ejemplo, si dos diferencias están empatadas en la asignación de posiciones 1 y 2, entonces se le asignará la posición 1.5 a ambas).
+\end{definicion} 
+
+Sea $\mathbb{R}^+$ la suma de las posiciones para los problemas tales que el primer algoritmo mejoró al segundo, y $\mathbb{R}^-$ la suma de las posiciones del caso contrario. 
+Las posiciones de $d_i = 0$ se dividen a partes iguales entre ambas sumas; si hay un número impar de estas, una de ellas se ignora:
+
+\begin{equation}
+\begin{aligned}
+R^+ & = \sum_{d_i>0} \text{rank}(d_i) + \dfrac{1}{2} \sum_{d_i=0}\text{rank}(d_i) \\
+R^- & = \sum_{d_i<0} \text{rank}(d_i) + \dfrac{1}{2} \sum_{d_i=0}\text{rank}(d_i) 
+\end{aligned}
+\label{eq:4.34}
+\end{equation}
+
+Sea $T = \min(R^+,R^-)$. 
+si $T$ es menor o igual que el valor de la distribución de Wilcoxon para $n$ grados de libertad, se rechaza la hipótesis nula de igualdad; esto significa que dicho algoritmo supera al otro, con el $p$-valor asociado. 
+
+El test de Wilcoxon es más sensible que el $t$-test. 
+Asume conmensurabilidad de diferencias, pero solo de forma cualitativa: mayores diferencias contarán más, lo que es probablemente lo que se desea, pero las magnitudes absolutas se ignoran. 
+Desde un punto de vista estadístico, este test es más seguro ya que no asume una distribución normal. 
+Además, los valores atípicos (\textit{outliers}) tienen menos efecto en el test de Wilcoxon que en el $t$-test. 
+El test de Wilcoxon asume diferencias continuas $d_i$; por lo tanto, no deberían ser redondeadas a uno o dos decimales, ya que esto reduciría la potencia del test en caso de un número elevado de empates. 
+
+\section{Múltiples comparaciones con un método de control}
+
+Una de las situaciones más frecuentes donde el uso de proceedimientos estadísticos es necesario es el análisis conjunto de resultados obtenidos por distintos algoritmos. 
+Los grupos de diferencias entre estos métodos (también llamados bloques) se suelen asociar con los problemas con los que se trabaja en el estudio experimental. 
+Cuando nos referimos a test de comparaciones múltiples, un bloque se compone de tres o más sujetos o resultados, cada uno de ellos correspondiendo a la evaluación de rendimiento del algoritmo sobre el problema. 
+
+En el análisis por parejas, si se intenta extraer una conclusión que involucre más de una comparación por parejas, obtendremos un error acumulado procedente de su combinación. 
+En términos estadísticos, estamos perdiendo el control en el error producido por familia (\textit{Family-Wise Error Rate}, FWER), definido como la probabilidad realizar descubrimientos falsos de entre todas las hipótesis cuando se usan los test múltiples por parejas. 
+La verdadera significación estadística de combinar comparaciones por parejas viene dada por: 
+
+\begin{equation*}
+\begin{aligned}
+p & = P(\text{Rechazar }H_0 | H_0 \text{ cierto}) = 1 - P(\text{Aceptar }H_0 | H_0 \text{ cierto})\\
+ & = 1 - P(\text{Aceptar }A_k=A_i, i=1,...,k -1 | H_0 \text{ cierto}) \\
+ & = 1 - \prod_{i=1}^{k-1}P(\text{Acceptar} A_k=A_i | H_0 \text{ cierto}) \\ 
+ & = 1- \prod_{i=1}^{k-1}[1 - P(\text{Rechazar } A_k=A_i | H_0 \text{ cierto} )] \\ 
+ & = 1 - \prod_{i=1}^{k-1} (1-p_{H_i})
+\end{aligned}
+\end{equation*}
+
+Por lo tanto, un test de comparación por parejas, tal como el test de Wilcoxon, no debería usarse para realizar varias comparaciones involucrando un conjunto de algoritmos, porque el FWER no está controlado. 
+
+Esta sección está dedicada a describir el uso de diversos procedimientos para comparaciones múltiples considerando un método de control. 
+En este sentido, un método de control puede ser definido como el algoritmo más interesante para el investigador del estudio experimental (normalmente este suele ser la nueva propuesta). 
+Por lo tanto, su rendimiento será contrastado con el resto de algoritmos del estudio. 
+
+\subsection{Test múltiple de signos}
+
+Dado un algoritmo de control etiquetado, el test de signos para múltiples comparaciones nos permite destacar aquellos cuyos rendimientos son estatísticamente distintos cuando comparados con el algoritmo de control. 
+Este procedimiento es el siguiente:
+\begin{enumerate}
+	\item Representaremos por $x_{i,1}$ y $x_{i,j}$ los rendimientos del algoritmo de control y el algoritmo $j$-ésimo en el $i$-ésimo problema.
+	\item Calculamos las diferencias de signos $d_{i,j} = x_{i,j} - x_{i,1}$. 
+Esto es, emparejar cada rendimiento con el control y, en cada problema, restar el rendimiento del algoritmo de control al rendimiento del $j$-ésimo algoritmo. 
+	\item Sea $r_j$ el número de diferencias, $d_{i,j}$ que tienen el signo con la menor frecuencia de aparición con un emparejamiento de un algoritmo con el de control. 
+	\item Sea $M_1$ la respuesta media de una muestra de resultados del algoritmo de control y $M_j$ la respuesta media de una muestra de los resultados del algoritmo $j$-ésimos. 
+Aplicaremos una de las siguientes reglas de decisión:
+	\begin{itemize}
+		\item Para contrastar $H_0 : M_j \geq M_1$ frente $H_1:M_j < M_1$, rechazaremos $H_0$ si el número de símbolos negativos es menor o igual al valor crítico de $R_j$ para $k-1$ (número de algoritmos excluyendo el de control), $n$ (número de problemas), y la tasa de error del experimento elegida. 
+		\item Para contrastar $H_0 : M_j \leq M_1$ frente $H_1:M_j > M_1$, rechazaremos $H_0$ si el número de símbolos positivos es menor o igual al valor crítico de $R_j$ para $k-1$, $n$, y la tasa de error del experimento elegida.  
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Los test de Friedman, Posiciones Alineadas de Friedman y Quade}
+
+El test de Friedman es un análogo no paramétrico del análisis paramétrico ANOVA. 
+Puede usarse para responder a la siguiente pregunta: 
+en un conjunto de $k\geq 2$ muestras de $n$ datos cada una, ¿hay al menos dos muestras que representen poblaciones con distintas medias? 
+El test de Friedman es análogo a repetidas medidas ANOVA en procedimientos estadísticos no paramétricos; por lo tanto, es un test de múltiples comparaciones cuyo objetivo es detectar diferencias significativas entre el comportamiento de dos o más algoritmos. 
+
+La hipótesis nula del test de Friedman establece la igualdad de medias entre las poblaciones. 
+La hipótesis alternativa se define como la negación de la hipótesis nula, por lo que es no direccional. 
+
+El primer paso para calcular el test estadístico es convertir los resultados originales en posiciones. 
+Esto se calcula utilizando el siguiente procedimiento:
+\begin{enumerate}
+	\item Reunir los resultados observados para cada par algoritmo-problema.
+	\item Por cada problema $i$, ordena los valores de $1$ (mejor resultado) a $k$ (peor resultado). 
+Denotaremos estas posiciones como $r_i^j$ ($1 \leq k$).
+	\item Para cada algoritmo $j$, hacemos la media de las posiciones obtenidas en todos los problemas para calcular la posición final $R_j = \dfrac{1}{n} \sum_{i}r_i^j$.
+\end{enumerate}
+
+Por ello, ordena los algoritmos de cada problema por separado; el algoritmo con mejor rendimiento debería obtener la posición $1$, el segundo la posición $2$, etc. 
+En caso de empate, se recomienda calcular la media de las posiciones. 
+Bajo la hipótesis nula, que establece que todos los algoritmos se comportan de forma similar (por lo tanto sus posiciones $R_j$ deberían ser iguales) la estadística de Friedman $F_j$ se puede calcular como
+\begin{equation}
+F_j = \dfrac{12n}{k(k+1)} \left[ \sum_jR_j^2 - \dfrac{k(k+1)^2}{4} \right]
+\label{eq:4.35}
+\end{equation}
+que se distribuye según una distribución $\chi^2$ con $k-1$ grados de libertad, donde $n$ y $k$ son lo suficientemente grandes (normalmente, $n>10$ y $k>5$). 
+Para menor número de algoritmos y problemas, los valores críticos ya han sido calculados. 
+
+Iman y Davenport propusieron una derivación del estadístico de Friedman en tnato que esta última métrica suele producir un efecto conservativo no deseado. 
+El estadístico propuesto es
+\begin{equation}
+F_{ID} = \dfrac{(n-1)\chi_F^2}{n(k-1) - \chi_F^2}
+\label{eq:4.36}
+\end{equation}
+que se distribuye de acuerdo a una F-distribución con $k-1$ y $(k-1)(N-1)$ grados de libertad. 
+
+Un inconveniente del esquema de posiciones empleado por el test de Friedman es que solo permite comparaciones dentro del mismo conjunto. 
+Cuando el número de algoritmos a comparar es pequeño, esto no puede ser una desventaja, en tanto que las comparaciones en el mismo conjunto pueden no ser significantes. 
+
+En el método de posiciones alineadas para el test de Friedman, el valor de una localización se calcula como la media de los rendimientos alcanzados por todos los algoritmos y problemas. 
+
+Las diferencias resultantes, que mantienen sus identidades con respecto al problema y la combinación de algoritmos a los que pertenecen, son entonces ordenados de 1 a $k\cdot n$ relativos entre sí. 
+Este esquema de posiciones es el mismo que se emplea en procedimientos de comparación múltiple que emplean muestras idependientes, como sería el test de Kruskal-Wallis. 
+Las posiciones asignadas a las observaciones alineadas se llaman posiciones alineadas. 
+
+El test estadístico de Friedman de Posiciones Alineadas se puede definir como:
+\begin{equation}
+F_{AR} = \dfrac{(k-1)\left[ \sum_{j=1}^k \hat{R}^2_j - \dfrac{kn^2}{4}(kn+1)^2 \right]}{\dfrac{kn(kn+1)(2kn+1)}{6} - \dfrac{1}{k}\sum_{i=1}^n \hat{R}_i^2} 
+\label{eq:4.37}
+\end{equation}
+donde $\hat{R}_i$ es igual a la posición total del problema $i$-ésimo y $\hat{R}_t$ es la posición total del $j$-ésimo algoritmo. 
+
+Finalmente, introduciremos un último test para realizar comparaciones múltiples: el test de Quade. 
+Este test, en contraste al test de Friedman, toma en cuenta el hecho de que algunos problemas son más difíciles o que las diferencias registradas en la ejecución de varios algoritmos sobre ellos son mayores (el test de Friedman considera todos los problemas iguales en términos de importancia). 
+Por lo tanto, las posiciones se calculan calculados en cada problema pueden ser escalados dependiendo de las diferencias observadas en el rendimiento de los algoritmos, obteniendo, como resultado, un análisis de \textit{ranking} con pesos de las muestras de resultados. 
+
+El procedimiento empieza encontrando las posiciones $r_i^j$ de la misma forma que el test de Friedman. 
+El siguiente paso requiere los valores originales del rendimiento de los algoritmos $x_i^j$. 
+Las posiciones se asignan a los propios problemas de acuerdo con el tamaño del rango de la muestra en cada problema. 
+El rango de la muestra dentro de los prolemas $i$ es la diferencia entre las mayores y menores observaciones en dicho problema:
+\begin{equation}
+\text{Rango en un problema}: i = \max_j x_i^j - \min_j x^j_i
+\label{eq:4.38}
+\end{equation}
+
+Obviamente, hay $n$ rangos de muestra, uno por cada problema. 
+Asignando la posición 1 al problema con el menor rango, la posición 2 al problema con el segundo menor rango... 
+Se usan las posiciones medias en caso de empate. 
+Sean $Q_1, Q_2, ..., Q_n$ las posiciones asignadas a los problemas $1,2,...,N$, respectivamente. 
+
+Finalmente, la posición de problema $Q_i$ se multiplica por la diferencia entre la posición dentro del problema $i$, $r_i^j$, y la posición media dentro de los problemas, $(k+1)/2$, para obtener el producto $S_i^j$, donde
+\begin{equation}
+S_i^j = Q_i \left[ r_i^j - \dfrac{k+1}{2} \right]
+\label{eq:4.39}
+\end{equation}
+es un estadístico que representa el tamaño relativo de cada observación dentro de un problema, ajustado para reflejar la significancia relativa del problema en el que aparece. 
+Además, definimos $S_j$ como la suma de cada algoritmo, $S_j = \sum_{i=1}^n S_i^j$, para $j=1,2,...k$.
+
+Por conveniencia, y para establecer una relación con el test de Friedman, también usaremos \textit{rankings} sin ajustes de medias,
+\begin{equation}
+W_i^j = Q_i \left[ r_i^j \right]
+\label{eq:4.40}
+\end{equation}
+y la posición media para el $j$-ésimo algoritmo, $T_j$, dado por
+\begin{equation}
+T_j = \dfrac{W_j}{n(n+1)/2}
+\label{eq:4.41}
+\end{equation}
+donde $W_j = \sum_{i=1}^n W_i^j$, para $j=1,2,...,k$.
+
+Se deben establecer algunas definiciones para calcular el test estadístico, $F_Q$. 
+Sean los términos $A$ y $B$
+\begin{equation}
+\begin{aligned}
+A & = \dfrac{n(n+1)(2n+1)k(k+1)(k-1)}{72} \\
+B & = \dfrac{1}{n} \sum_{j=1}kS_j^2
+\end{aligned}
+\label{eq:4.42}
+\end{equation}
+
+El test estadístico, $F_Q$, es
+\begin{equation}
+F_Q = \dfrac{(n-1)B}{A-B}
+\label{eq:4.43}
+\end{equation}
+que se distribuye de acuerdo a la $F$-distribución con $k-1$ y $(k-1)(n-1)$ grados de libertad. 
+Cuando se calcula el estadístico, nótese que, si $A=B$, debemos considerar que el punto se encuentra en la región crítica de la distribución estadística. 
+
+Para cada uno de estos test, una vez se hayan calculado los propios estadísticos, es posible calcular un $p$-valor mediante aproximaciones normales. 
+Si hallamos la existencia de diferencias significantes, podemos proceder con el procesamiento \textit{post-hoc} para caracterizar estas diferencias. 
+
+\subsection{Procedimientos \textit{post-hoc}}
+
+El principal inconveniente para los test de Friedman, Iman-Davenport, Friedman \textit{Aligned} y Quade es que solo pueden detectar diferencias significativas sobre la comparación múltiple en su totalidad, siendo incapaz de establecer comparaciones propias entre algunos de los algoritmos considerados. 
+Cuando el objetivo de la aplicación de tests múltiples es el realizar una comparación considerando un método de control y un conjunto de algoritmos, se puede definir una familia de hipótesis, relacionados con el método de control. 
+Entonces, el uso de un test \textit{post-hoc} puede conducir a la obtención de un $p$-valoro que determine el grado de rechazo de cada hipótesis. 
+
+Una familia de hipótesis es un conjunto de hipótesis de comparación lógicamente interrelacionadas tales que, en $1\times N$ comparaciones, compara los $k-1$ alogoritmos del estudio (excluyendo el de control) con el método de control, mientras que en $N\times N$ comparaciones, considera las $k(k-1)/2$ posibles comparaciones entre algoritmos. 
+Por lo tanto, la familia estará compuesta de $k-1$ o $k(k-1)/2$ hipótesis, respectivamente, tales que pueden ser ordenadas por su $p$-valor, desde el menor hasta el mayor. 
+
+El $p$-valor de cada hipótesis en la familia se puede obtener mediante una conversión de posiciones calculados por cada test mediante el uso de una aproximacicón normal. 
+El test estadístico para comparar el $i$-ésimo y el $j$-ésimo algoritmo, $z$ depende del procedimiento no paramétrico principal utilizado:
+\begin{itemize}
+	\item \textbf{Test de Friedman}
+	\begin{equation}
+		z = (R_i-R_j)/\sqrt{\dfrac{k(k+1)}{6n}}
+	\label{eq:4.44}
+	\end{equation}
+	donde $R_i$ y $R_j$ son la posiciones medias por el test de Friedman de los algoritmos comparados.
+	\item \textbf{Test de Friedman \textit{Aligned}}
+	\begin{equation}
+		z = (\hat{R}_i - \hat{R}_j) / \sqrt{\dfrac{k(n+1)}{6}}
+	\label{eq:4.45}
+	\end{equation}
+	donde $\hat{R}_i$ y $\hat{R}_j$ son las posiciones medias por el test de Posiciones Alineadas de Friedman	para los algoritmos comparados.
+	\item \textbf{Test de Quade}
+	\begin{equation}
+		z = (T_i-T_j) / \dfrac{k(k+1)(2n+1)(k-1)}{18n(n+1)}
+	\label{eq:4.46}
+	\end{equation}
+	donde $T_i = \dfrac{W_i}{n(n+1)/2}$, $T_j = \dfrac{W_j}{n(n+1)/2}$ y $W_i$ y $W_j$ son las posiciones sin el ajuste de medias por el test de Quade de los algoritmos comparados. 
+\end{itemize}
+
+Sin embargo, estos $p$-valores no son adecuados para comparaciones múltiples. 
+Cuando un $p$-valor es considerado en un test múltiple, refleja la posibilidad de error de una cierta comparación, pero no toma en consideración el resto de comparaciones pertenecientes a la familia. 
+Si $k$ algoritmos se comparan y en cada comparación el nivel de significancia es $\alpha$, entonces en una comparación individual la probabilidad de no hacer un error de Tipo 1 (rechazar una hipótesis nula cierta) es (1-$\alpha$), y la posibilidad de no hacer un error de Tipo 1 en $k-1$ comparaciones es $(1-\alpha)^{k-1}$. 
+Por lo tanto, la posibilidad de hacer uno o más errores de tipo 1 es $1-(1-\alpha)^{k-1}$. 
+
+El $z$-valor en todos los casos se usa para encontrar la probabilidad correspondiente $p$-value de la tabla de la distribución normal $N(0,1)$, el cual es entonces comparado con un nivel de significancia, $\alpha$, apropiado. 
+Los tests \textit{post-hoc} se diferencian en la forma en la que ajustan el valor de $\alpha$ para compensar las comparaciones múltiples.
+
+A continuación, definiremos un conjunto de procedimientos \textit{post-hoc} y explicaremos cómo calcular los APVs (\textit{Analysis of Partial Variance}) dependiendo del procedimiento \textit{post-hoc} usado en el análisis. 
+La notación usada para describir el cálculo de las APVs es la siguiente:
+\begin{itemize}
+	\item Índices $i$ y $j$ corresponden a una comparación en concreto o una hipótesis en una familia de hipótesis, de acuerdo con un orden incremental de sus $p$-valores. 
+El índice $i$ siempre se refiere a la hipótesis cuyo APV se está calculando y el índice $j$ se refiere a otra hipótesis de en la familia. 
+	\item $p_j$ es el $p$-valor obtenido por la $j$-ésimo hipótesis. 
+\end{itemize}
+
+Los procedimientos del ajuste de $p$-valores pueden ser clasificados en distintos casos:
+\begin{itemize}
+	\item \textbf{Un paso}: 
+	\begin{itemize}
+		\item El procedimiento de Bonferroni-Dunn: 
+		Ajusta los valores de $\alpha$ en un único paso mediante su división entre el número de comparaciones realizadas ($k-1$). 
+		Este procedimiento es el más simple, pero el menos potente. 
+		
+		Bonferroni $APV_i$: $\min\{v,1\}$, donde $v = (k-1)p_i$.
+	\end{itemize}
+	\item \textbf{\textit{Step-down}}:
+	\begin{itemize}
+		\item El procedimiento de Holm: 
+		Ajusta el valor de $\alpha$ en una forma \textit{step-down}. 
+		Sean $p_1,p_2,...,p_{k-1}$ $p$-valores ordenados (de menor a mayor), tal que $p_1 \leq p_2 \leq \cdots \leq p_{k-1}$, y sean $H_1,H_2,...,H_{k-1}$ las hipótesis correspondientes. 
+		El procedimiento de Holm rechaza $H_1$ a $H_{i-1}$ si $i$ es el menor entero tal que $p_i > \alpha (k-1)$. 
+		Este procedimiento empieza con el $p$-valor con mayor significancia. 
+		Si $p_1$ es menor que $\alpha /(k-1)$, se rechaza la hipótesis correspondiente y procedemos a comparar $p_2$ con $\alpha /(k-2)$. 
+		Si la segunda hipótesis es rechazada, el test procede con la tercera, y así sucesivamente. 
+		En cuanto alguna hipótesis nula no pueda ser rechazada, el resto de hipótesis se mantienen también. 
+		
+		Holm $APV_i$: $\min\{v,1\}$, donde $v = \max\{(k-j)p_j : l\leq j \leq i\}$
+		\item El procedimiento de Holland: Ajusta el valor de $\alpha$ en una forma \textit{step-down}, como el método de Holm. 
+		Rechaza $H_1$ a $H_{i-1}$ si $i$ es el menor entero tal que $p_i > 1 - (1-\alpha)^{k-i}$
+		
+		Holland $APV_i$: $\min\{v,1\}$, donde $v = \max\{1 - (1-p_j)^{k-j} : l\leq j \leq i\}$
+		\item El procedimiento de Finner: Ajusta el valor de $\alpha$ en una forma \textit{step-down}, como el método de Holm y el método de Holland. 
+		Rechaza $H_1$ a $H_{i-1}$ si $i$ es el menor entero tal que $p_i > 1 - (1-\alpha)^{(k-1)/i}$
+		
+		Finner $APV_i$: $\min\{v,1\}$, donde $v = \max\{1 - (1-p_j)^{(k-1)/j} : l\leq j \leq i\}$
+	\end{itemize}
+	
+	\item \textbf{\textit{Step-up}}
+	\begin{itemize}
+		\item El procedimiento de Hochberg: 
+		Ajusta el valor de $\alpha$ de una forma \textit{step-up}. 
+		Funciona comparando el mayor $p$-valor con $\alpha$, el siguiente mayor $p$-valor con $\alpha/2$, y así sucesivamente, hasta que se encuentre una hipótesis que se pueda rechazar. 
+		Todas las hipótesis con menor $p$-valor son rechazadas también. 
+		
+		Hochberg $APV_i$: $\max\{(k-j)p_j : (k-1) \geq j \geq i\}$
+		
+		\item El procedimiento de Hommel:
+		Este es un procedimiento más complicado que el resto, funciona encontrando el mayor $j$ para el que $p_{n-j+k} > k\alpha/j$ para todo $k = 1,...,j$. 
+		Si no existe tal $j$, se rechazan todas las hipótesis; en otro caso, se rechazan todas que cumplan $p_i \leq \alpha/j$.
+		
+		Hommel $APV_i$: Compruebése el algoritmo para el APV de Hommel en el Algoritmo \ref{alg:HommelAPV}
+		
+		\begin{algorithm}
+		\caption{Método para calcular el APV del test de Hommel}\label{alg:HommelAPV}
+\begin{algorithmic}[1]
+\Procedure \textsc{HommelAPV}
+\State Establecer $APV_i = p_i$ $\forall i$
+\ForEach{$j = k-1, k-2,...,2$ (\textit{en dicho orden})}
+	\State Establecer $B = \emptyset$
+	\ForEach{$i, i > (k-1-j)$}
+		\State Calcular el valor $c_i = (j \cdot p_i)/(j+i-k+1)$
+		\State Establecer $B = B \bigcup c_i$
+	\EndFor
+	\State Encontrar el menor valor $c_i$ en $B \xrightarrow{}{} c_{min}$
+	\If{$APV_i < c_{min}$}
+		\State Establecer $APV_i = c_{min}$
+	\EndIf
+	\ForEach{$i,i\leq (k-1-j)$}
+		\State Establecer $c_i = \min(c_{min}, j \cdot p_i)$
+		\If{$APV_i < c_i$}
+			\State Establecer $APV_i = c_i$
+		\EndIf
+	\EndFor
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+		
+		\item El procedimiento de Rom:  
+		Es una modificación del procedimiento de Hochberg para aumentar su potencia. 
+		Se comporta de la misma forma que el procedimiento de Hochberg, excepto que los $\alpha$-valores se calculan a través de la expresión:
+		\begin{equation}
+		\alpha_{k-i} = \left[ \sum_{j=1}^{i-1}\alpha^j - \sum_{j=1}^{i-2} \begin{pmatrix}
+		i \\ k
+\end{pmatrix}	\alpha_{k-1-j}^{i-j}	 \right] / i
+		\label{eq:4.47}	
+		\end{equation}
+		donde $\alpha_{k-1} = \alpha$ y $\alpha_{k-2} = \alpha /2$
+		
+		Rom $APV_i$ : $\max\{(r_{k-j})p_j : (k-1) \geq j \geq i\}$, donde $r_{k-j}$ pueden obtenidos a partir de la ecuación \ref{eq:4.47}
+	\end{itemize}
+	
+	\item \textbf{Dos pasos}
+	\begin{itemize}
+		\item El procedimiento de Li: 
+		Se propuse un procedimiento de rechazo en dos pasos:
+		\begin{enumerate}
+			\item Rechazar todas las $H_i$ si $p_{k-1} \leq \alpha$. 
+			En otro caso, aceptar las hipótesis asociadas a $p_{k-1}$ e ir al siguiente paso. 
+			\item Rechazar las $H_i$ restantes con $p_i \leq (1-p_{k-1})/(1-\alpha)\alpha$.
+			
+			Li $APV_i$: $p_i/(p_i+1-p_{k-1})$
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}
+
+\subsection{Estimación de contraste}
+
+La estimación de contrate (\textit{Contrast Estimation}) basada en medias puede ser usada para estimar la diferencia entre rendimiento de dos algoritmos. 
+Asume que las diferencias esperadas entre rendimiento de los algoritmos son iguales a través de los problemas. 
+Por lo tanto, el rendimiento de los algoritmos está reflejado por las magnitudes de las diferencias entre ellos en cada dominio. 
+
+El interés de este test se basa en la estimación de contrate entre las medias de las muestras de resultados considerando todas las comparaciones por parejas. 
+El test obtiene una diferencia cuantitativa calculada usando las medias entre los dos algoritmos en múltiples problemas, procediendo como sigue:
+\begin{enumerate}
+	\item Para cada par de $k$ algoritmos en el experimento, calculamos la diferencia entre el rendimiento de los dos algoritmos en cada uno de los $n$ problemas. 
+	Esto es, calculamos las diferencias
+	\begin{equation}
+	D_{i(u,v)} = x_{iu} - x_{iv}
+	\label{eq:4.48}
+	\end{equation}
+	donde $i=1,...,n$; $u=1,...,k$; $v = 1,...,k$.
+	\item Encontrar la media para cada conjunto de diferencias ($Z_{uv}$, que puede ser considerado como un \textit{estimador no ajustado} de las medias del algoritmo $u$ y $v$, $M_u - M_v$). 
+	En tanto que $Z_{uv} = Z_{vu}$, solo se necesita calcular $Z_{uv}$ en los casos donde $u < v$. 
+	También, nótese que $Z_{uu} = 0$.
+	\item Calcular la media de cada conjunto de medias no ajustadas teniendo el mismo primer subíndice, $m_u$:
+	\begin{equation}
+	m_u = \dfrac{\sum_{j=1}^{k}Z_{uj}}{k}, \hspace{0.5cm} u = 1,...,k
+	\label{eq:4.49}
+	\end{equation}
+	\item El estimador de $M_u-M_v$ es $m_u - m_v$, donde $u,v \in$[$1,k$].
+\end{enumerate}
+
+Estos estimadores se pueden entender como una medida de rendimiento global avanzada. 
+Aunque este test no puede aportar una probabilidad de error asociada con el rechazo de la hipótesis nula de igualdad, es especialmente útil para estimar en cuánta cantidad un algoritmo tiene un mejor rendimiento que otro. 

@@ -1,0 +1,159 @@
+\chapter{Estimación y Presupuesto}
+
+En este capítulo se detalla cómo se ha organizado el trabajo y el tiempo dedicado a cada una de ellas. 
+El orden en el que se han realizado dichas tareas, queda representado en un Diagrama de Gantt () para su mejor comprensión.
+Además, se realiza una estimación del presupuesto necesario para desarrollar el proyecto.
+
+\section{Planificación}
+
+La planificación previa de este proyecto se ha realizado siguiendo una metodología ágil. 
+Es decir, la planificación se va adaptando dependiendo cómo hayan transcurrido las tareas anteriores. 
+Es el modelo de planificación que más se ajusta a este tipo de trabajo, ya que, $\textit{a priori}$, se desconoce la dificultad de las tareas a realizar. 
+
+Sin embargo, es cierto que antes de empezar el trabajo se estableció una planificación base bastante amplia para poder asegurar que se iba a finalizar el proyecto a tiempo. 
+
+\subsection{Planificación Base}
+
+La planificación inicial que se estableció antes de iniciar el proyecto se puede expresar mediante la información representada en la tabla \ref{Planificación Base}:
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{F7EAC7} 
+\textbf{Resumen}                                                                                             & \textbf{Tareas}                                                                                                                             & \textbf{Planificación}                                                        \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+\cellcolor[HTML]{ECF4FF}                                                                                     & Obtener instancias del problema                                                                                                            & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}}                            \\ \cline{2-2}
+\rowcolor[HTML]{ECF4FF} 
+\cellcolor[HTML]{ECF4FF}                                                                                     & Buscar algoritmos que lo resuelvan                                                                                                         & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}}                            \\ \cline{2-2}
+\rowcolor[HTML]{ECF4FF} 
+\multirow{-3}{*}{\cellcolor[HTML]{ECF4FF}\begin{tabular}[c]{@{}l@{}}Investigar el\\ problema\end{tabular}}   & Buscar posibles implementaciones                                                                                                           & \multicolumn{1}{c|}{\multirow{-3}{*}{\cellcolor[HTML]{ECF4FF}Noviembre}} \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\cellcolor[HTML]{DDFDFF}                                                                                     & \begin{tabular}[c]{@{}l@{}}Elegir un algoritmo como referencia\\ y estudiarlo\end{tabular}                                                 & \cellcolor[HTML]{DDFDFF}                                                 \\ \cline{2-2}
+\rowcolor[HTML]{DDFDFF} 
+\multirow{-2}{*}{\cellcolor[HTML]{DDFDFF}\begin{tabular}[c]{@{}l@{}}Algoritmos\\ de referencia\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Reducir el problema y meter \\ equilibrio\end{tabular}                                                          & \multirow{-2}{*}{\cellcolor[HTML]{DDFDFF}Enero-Febrero}                  \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Experimentación                                                                                              & \begin{tabular}[c]{@{}l@{}}Formas de inicialización no\\ aleatorias $\xrightarrow{}{}$ Diseño experimental\end{tabular} & 2 semanas                                                                \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+Modificaciones                                                                                                    & \begin{tabular}[c]{@{}l@{}}Propuesta de modificaciones\\Obtención de resultados\end{tabular} & Marzo-Abril                                                                    \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Memoria                                                                                                      & Escribir el informe                                                                                                                        & Mayo                                                                     \\ \hline
+\end{tabular}
+\caption{\label{Planificación Base}Planificación Base}
+\end{table}
+
+\subsection{Planificación Final}
+
+
+\subsubsection{Tareas realizadas}
+
+Si bien es cierto que se han realizado una gran cantidad de tareas (sobre todo distintas modificaciones sobre algoritmos), con el fin de mantener la simplicidad, se han agrupado algunas tareas que tenían funciones similares. 
+Esta agrupación también es de ayuda para simplificar la estimación del tiempo que se le ha dedicado a cada una de las tareas. 
+Así, las tareas realizadas se resumen en la siguiente lista:
+
+\begin{enumerate}
+	\item \textbf{Planteamiento y comprensión del problema}: Revisión del trabajo a realizar y reuniones con los tutores para proponer modificaciones y comprender mejor y aclarar todos los matices del Trabajo de Fin de Grado.
+	
+	\item \textbf{Búsqueda de información y lecturas}: Búsqueda y lectura comprensiva de todos los artículos y documentos necesarios para la realización del proyecto.
+	
+	\item \textbf{Planificación del proyecto}: Planificación de algunos aspectos que usar como base, así como las tareas que eran necesarias inicialmente. 
+También hace referencia a partes de reuniones con los tutores para modificar las planificaciones (añadiendo o eliminando tareas) dependiendo del progreso alcanzado y los resultados obtenidos.
+	
+	\item \textbf{Implementación de la propuesta inicial}: Implementación del código de los algoritmos base.
+	
+	\item \textbf{Adaptación de los algoritmos base}: Modificación del código de los algoritmos base para adaptarlos al problema en cuestión.
+	
+	\item \textbf{Modificación de los algoritmos}: Sucesivas modificaciones sobre el algoritmo base y los algoritmos que mejores resultados proporcionaban con el fin de mejorarlos aún más.
+	
+	\item \textbf{Obtención de resultados}: Ejecución del código para obtener todos los resultados y cambiarlos de formato para su posterior análisis.
+	
+	\item \textbf{Análisis de los resultados}: Interpretación de los resultados obtenidos.
+	
+	\item \textbf{Revisión de la parte experimental}: Una vez dada por finalizada la parte experimental, se ha hecho una revisión exhaustiva de los códigos y de los resultados obtenidos.
+	
+	\item \textbf{Elaboración de la memoria}: Desarrollo del informe.
+	
+	\item \textbf{Revisión de la memoria}: Una vez terminado el trabajo, se ha hecho una revisión exhaustiva de la memoria.
+\end{enumerate}
+
+Téngase en cuenta hay tareas que se han realizado casi simultáneamente, como serían la ``Modificación de los algoritmos'', ``Obtención de los resultados'' y ``Análisis de los resultados''. 
+Esto se debe a la necesidad de saber cómo han influido las modificaciones para empezar a estudiar qué otra modificación podría ser beneficiosa. 
+Por ejemplo, si se converge rápidamente a una solución, hay que estudiar por qué ha pasado y, una vez hecha la hipótesis, estudiar qué se podría modificar para que no suceda.
+
+Una estimación del tiempo (en horas) dedicado a cada tarea se puede encontrar en la tabla \ref{Tiempo_Dedicado}.
+
+\subsubsection{Tiempo dedicado}
+
+\begin{table}[H]
+\begin{tabular}{|l|c|}
+\hline
+\rowcolor[HTML]{F7EAC7} 
+\textbf{Actividad}                       & \multicolumn{1}{l|}{\cellcolor[HTML]{F7EAC7}\textbf{Duración (horas)}} \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Planteamiento y comprensión del problema & 20                                                                     \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+Búsqueda de información y lecturas       & 15                                                                     \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Planificación del proyecto               & 5                                                                      \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+Implementación de la propuesta inicial   & 10                                                                     \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Adaptación de los algoritmos bases       & 5                                                                      \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+Modificación de los algoritmos           & 200                                                                    \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Obtención de resultados                  & 50                                                                     \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+Análisis de los resultados               & 10                                                                     \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Revisión de la parte experimental        & 5                                                                     \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+Elaboración de la memoria                & 170                                                                    \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Revisión de la memoria                   & 10                                                                     \\ \hline
+\rowcolor[HTML]{F7EAC7} 
+\textbf{Total}                           & \cellcolor[HTML]{FCE6AB}500                                            \\ \hline
+\end{tabular}
+\caption{\label{Tiempo_Dedicado}Tiempo dedicado}
+\end{table}
+
+\section{Presupuesto}
+
+Si quisiéramos valorar económicamente el proyecto, tenemos que tener en cuenta dos aspectos fundamentales: el precio de la mano de obra y el de cómputo como si tuviésemos que pagarlo. 
+Además, también se incluirá el precio del ordenador en el que se ha realizado todo el trabajo. 
+En la tabla \ref{Presupuesto} se puede ver un resumen de los cálculos realizados junto con el presupuesto final necesario.
+
+El precio de la mano de obra son 25\texteuro\xspace la hora. 
+
+El ordenador portátil usado para la realización de las ejecuciones ha sido un Asus Tuf Gaming A15 FA506IU-HN278 con un procesador AMD\textregistered\xspace Ryzen\texttrademark\xspace 7 4800H APU
+%https://www.pccomponentes.com/asus-tuf-gaming-a15-fa506iu-hn278-amd-ryzen-7-4800h-apu-16gb-1tb-ssd-gtx-1660ti-156
+y 16GB (8GB$\times$2) de RAM. 
+Tras una breve búsqueda se puede comprobar que el precio actual de dicho portátil sería de 1300\texteuro\xspace. 
+
+Para calcular el coste de tiempo de cómputo es ha utilizado la calculadora de precios de Amazon Web Services (\href{https://calculator.aws}{AWS Pricing Calculator}). 
+Elegiremos el servicio EC2, y dentro de eso elegimos las características más similares al ordenador utilizado; lo que nos lleva a la instancia c5d.2xlarge. 
+Comprobamos el coste por hora del uso de dicho servicio y tenemos que este sería 0.48\$/hora, es decir, aproximadamente 0.443\texteuro /hora.
+%https://calculator.aws/#/addService/ec2-enhancement
+
+Teniendo todos estos datos, podemos proceder a calcular cuál sería el presupuesto final de del proyecto:
+\begin{equation*}
+450h\cdot 25\dfrac{\text{\texteuro}}{h} + 1300\text{\texteuro} + 50h\cdot 0.443\dfrac{\text{\texteuro}}{h} = 12572.15\text{\texteuro}
+\end{equation*}
+
+
+\begin{table}[h]
+\begin{tabular}{|l|cc|c|}
+\hline
+\rowcolor[HTML]{FFFFC7} 
+\textbf{Concepto}                      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFC7}\textbf{Precio base (\texteuro)}} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFC7}\textbf{Tiempo (h)}} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFC7}\textbf{Precio total (\texteuro)}} \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Mano de obra                           & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}25}                   & 450                                                              & 11250                                                              \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+Ordenador                              & \multicolumn{1}{c|}{\cellcolor[HTML]{DDFDFF}1300}                 & -----                                                             & 1300                                                               \\ \hline
+\rowcolor[HTML]{ECF4FF} 
+Tiempo de cómputo                      & \multicolumn{1}{c|}{\cellcolor[HTML]{ECF4FF}0.443}                & 50                                                               & 22.15                                                              \\ \hline
+\cellcolor[HTML]{FFFFC7}\textbf{Total} & \multicolumn{1}{l}{}                                              & \multicolumn{1}{l|}{}                                            & \cellcolor[HTML]{FCE6AB}\textbf{12572.15}                          \\ \cline{1-1} \cline{4-4} 
+\end{tabular}
+\caption{\label{Presupuesto}Cálculo del presupuesto}
+\end{table}
+
+En resumen, el \textbf{presupuesto de este proyecto queda fijado en 12572.15\texteuro}.
