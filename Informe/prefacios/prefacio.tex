@@ -24,17 +24,25 @@ Irene Trigueros Lorca\\
 \vspace{0.7cm}
 \noindent{\textbf{Resumen}}\\
 
-Existen problemas de mucho interés cuyo coste de evaluación es excesivamente elevado (a este tipo de problemas los llamaremos problemas costosos o problemas \textit{expensive}), como podrían ser los problemas de optimización de redes neuronales, por lo que resulta interesante desarrollar algoritmos capaces de obtener soluciones competitivas en muy pocas evaluaciones. 
-Además, en la literatura ya encontramos algoritmos específicos en problemas \textit{expensives} de optimización continua; pero no ocurre lo mismo con el caso de problemas combinatorios, para los que no se han hallado ningún algoritmo capaz de resolverlos.
+Existen problemas de mucho interés, no solo teórico, sino también que poseen aplicaciones significativas en el mundo real, cuyo coste de evaluación es excesivamente elevado, o incluso inasequibles (a este tipo de problemas los llamaremos problemas costosos o problemas \textit{expensive}), como podrían ser los problemas de optimización de redes neuronales, por lo que resulta interesante desarrollar algoritmos capaces de obtener soluciones competitivas en muy pocas evaluaciones. 
+Además, en la literatura ya es posible encontrar algoritmos específicos en problemas \textit{expensives} de optimización continua; pero no ocurre lo mismo con el caso de problemas combinatorios, para los que no se han diseñado algoritmos específicamente para este tipo de problemas, pero que son importantes de tratar ya que es cada vez más común usar problemas combinatorios en problemas complejos.
 
-Por lo tanto, en este proyecto se propone un algoritmo metaheurístico nuevo para resolver problemas combinatorios costosos (\textit{expensive}), siguiendo un formato semejante al de un diario de desarrollo. 
-Se tomará como algoritmo base un algoritmo genético y, una vez analizado su rendimiento, se implementarán una serie de modificaciones que, progresivamente, compondrán la versión final del algoritmo. 
+Por lo tanto, en este proyecto se propone un algoritmo metaheurístico nuevo especialmente diseñado para la resolución problemas combinatorios costosos (\textit{expensive}), siguiendo un formato semejante al de un diario de desarrollo. 
+El objetivo principal de este algoritmo será encontrar buenas soluciones en una reducida cantidad de tiempo. 
+
+Inicialmente se presentará un contexto matemático necesario para entender cómo resolver problemas de minimización sin restricciones y el cómo y porqué usar tests estadísticos (y cuáles usar) para la comparación de los distintos algoritmos. 
+
+Tras esto, se sigue la exposición de los algoritmos genéticos clásicos que se han usado como base para el diseño del algoritmo a desarrollar y las modificaciones que se le introducirán a estos conforme se avance en el desarrollo del algoritmo; ambas contendrán pseudocódigo asociado para su más fácil interpretación. 
+
+El diseño del algoritmo objetivo se hará como se indica a continuación. 
+En primer lugar, se tomará como algoritmo base un algoritmo genético y, una vez analizado su rendimiento, se implementarán una serie de modificaciones que, progresivamente, compondrán la versión final del algoritmo. 
 Estas modificaciones se justificarán observando y analizando los resultados obtenidos en los intentos anteriores con el objetivo de encontrar formas de aprovechar al máximo las pocas evaluaciones que nos podemos permitir en este tipo de problemas. 
 Se describen detalladamente las tareas adicionales llevadas a cabo propias del desarrollo de un algoritmo de esta clase. 
-%Además, se realizan análisis experimentales donde se compara el algoritmo base y las sucesivas versiones del algoritmo a crear. 
-Además, se realizarán análisis experimentales que irán demostrando que las sucesivas versiones del algoritmo van mejorando las anteriores.
-Las conclusiones que se alcanzan indican que el algoritmo presentado en este proyecto es altamente competitivo. 
+Además, se realizarán análisis experimentales que irán demostrando que las sucesivas versiones del algoritmo van mejorando las anteriores. 
 
+Como no existen algoritmos específicos para la resolución de problemas combinatorios costosos, no podemos comparar los resultados finales obtenidos con ningún tipo de \textit{benchmark} con el fin de obtener unas conclusiones. 
+Por ello, el análisis de la potencia del algoritmo desarrollado se basará en la comparación con los resultados de las anteriores versiones desarrolladas y un análisis del porcentaje de mejora con respecto algoritmo genético clásico que se ha usado como base. 
+Las conclusiones que se alcanzan indican que el algoritmo presentado en este proyecto es altamente competitivo. 
 
 
 \cleardoublepage
@@ -56,25 +64,34 @@ Irene Trigueros Lorca\\
 \vspace{0.7cm}
 \noindent{\textbf{Abstract}}\\
 
-There are very interesting problems which their computational cost is excessively high (these kind of problems will be refered as expensive problems), such as the neural network optimization problems, therefore it is compelling to develope algorithms that are able to obtain competitive solutions in few evaluations. 
-Furthermore, specific algorithms for the optimization of expensive continous problems can be found in the literature; but that is not the case for the combinatory expensive problems, for those which no algorithms able to solve them have been found.
+There are very interesting problems, not only in the theoretical field, but they also have significants applications in real life, which their computational cost is excessively high, or even unafforadable (these kind of problems will be refered as expensive problems), such as the neural network optimization problems, therefore it is compelling to develope algorithms that are able to obtain competitive solutions in few evaluations. 
+Furthermore, specific algorithms for the optimization of expensive continous problems can be found in the literature; but that is not the case for the combinatory expensive problems, for those which no algorithms able to solve them have been developed, though they are important to deal with as is increasingly common to use combinatorial problems in complex problems.
 
-Hence, throughout this project, an original metaheuristic algorithm is going to be proposed with the purpose of solving expensive problems, following a format similar to that of a developer diary. 
-A genetic algorithm is going to be chosen as the base algorithm and, once its performance is analyzed, a series of modifications are going  to be implemented, which, at the end, will compose the final version of the algorithm. 
+Hence, throughout this project, an original metaheuristic algorithm is going to be proposed with the purpose of solving combinatory expensive problems, following a format similar to that of a developer diary. 
+The main objective of this algorithm will be to find good solutions in a greatly reduced amount of  time. 
+
+Initially, a mathematical frame necessary to understand how to solve unconstrained minimization problems and how and why to use statistical tests (and which ones to use) for the comparison of the different algorithms will be presented. 
+
+This will be followed by an exposition fo the classical genetic algorithms that have been used as a basis for the design of the algorithm to be developed and the modifications that will be introduced to it as the algorithm development progresses will be presented; both of them will contain asssociated pseudocode for an easier interpretation. 
+
+The design of the target algorithm will be carried out as follows. 
+First, a genetic algorithm is going to be chosen as the base algorithm and, once its performance is analyzed, a series of modifications are going  to be implemented, which, at the end, will compose the final version of the algorithm. 
 These modifications are going to be justified by observing and analyzing the results obtained through the previous attempts with the objective of finding ways of making the most of the few iterations available in these kind of problems. 
-Additional tasks regarding the development of this type of algorithms are described in depth. 
-Furthermore, experimental analysis is included, where both base and the following versions algorithms are compared. 
-The final conclusions suggest that the algorithm presented within this project is highly performant.
+Additional tasks regarding the development of this type of algorithms are described in detail. 
+%Furthermore, experimental analysis is included, where both base and the following versions algorithms are compared. 
+Furthermore, experimental analyses will be performed to show that successive version of the algorithm improve on the previous ones. 
+
+Since there are no specific algorithms for solving expensive combinatory problems, we are not able to compare the final results obtained with any kind of benchmark in order to obtain conclusions. 
+Therefore, the analysis of the performance of the developed algorithm will be based on the comparison with the results of the previous developed versions and an analysis of the percentage of improvement regarding the classical genetic algorithm that has been used as a basis. 
+The conclusions reached indicate that the algorithm presented within this project is highly performant.
 
 \chapter*{}
 \thispagestyle{empty}
 
 \noindent\rule[-1ex]{\textwidth}{2pt}\\[4.5ex]
 
-Yo, \textbf{Irene Trigueros Lorca}, alumno de la titulación Doble Grado en Ingeniería Informática y Matemáticas de la \textbf{Escuela Técnica Superior
-de Ingenierías Informática y de Telecomunicación de la Universidad de Granada} y de la \textbf{Facultad de Ciencias}, con DNI 77385991F, autorizo la
-ubicación de la siguiente copia de mi Trabajo Fin de Grado en la biblioteca de ambos centro para que pueda ser
-consultada por las personas que lo deseen.
+Yo, \textbf{Irene Trigueros Lorca}, alumna de la titulación Doble Grado en Ingeniería Informática y Matemáticas de la \textbf{Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación de la Universidad de Granada} y de la \textbf{Facultad de Ciencias}, con DNI 77385991F, autorizo la
+ubicación de la siguiente copia de mi Trabajo Fin de Grado en la biblioteca de ambos centro para que pueda ser consultada por las personas que lo deseen.
 
 \vspace{6cm}
 
@@ -83,7 +100,7 @@ consultada por las personas que lo deseen.
 \vspace{2cm}
 
 \begin{flushright}
-Granada a, \today.
+Granada, a \today.
 \end{flushright}
 
 
@@ -119,7 +136,7 @@ Y para que conste, expiden y firman el presente informe en Granada a \today.
 
 \vspace{5cm}
 
-\noindent \textbf{Daniel Molina Cabrera \ \ \ \ \ Francisco Herrera Triguero}
+\noindent \textbf{Daniel Molina Cabrera \hspace{5cm} Francisco Herrera Triguero}
 
 \chapter*{Agradecimientos}
 \thispagestyle{empty}
@@ -127,5 +144,12 @@ Y para que conste, expiden y firman el presente informe en Granada a \today.
        \vspace{1cm}
 
 
-Poner aquí agradecimientos...
+En primer lugar, quiero agradecer y dedicar este proyecto a mis padres porque gracias a ellos he conseguido llegar a este punto de mi vida, por apoyarme en todo lo que pueden, por educarme para ser una persona que ponga todos sus esfuerzos en conseguir lo que se propone y por las incontables horas de llamadas a lo largo de estos cinco años aunque fuese solo para preguntarme si me iba bien o tenía algún problema. 
 
+También a mi hermana que siempre sabe como animarme y me ha inspirado todos estos años a mejorar como persona para poder ser la mejor influencia para ella. 
+
+A todos los amigos que he hecho en la universidad, por todas las horas de estudio, por todo el apoyo y la ayuda que nos hemos aportado a lo largo de los años, por todas las conversaciones absurdas solo para distraernos de los problemas... 
+Empezaron como desconocidos y se convirtieron en una segunda familia. 
+
+Finalmente, agradecer a mis tutores, ya que sin ellos este trabajo no habría sido posible. 
+Pero sobre todo agradecer a Daniel Molina Cabrera, por haberme guiado y aconsejado a lo largo del desarrollo de este trabajo, así como su tiempo dedicado para ello, por haberme ayudado siempre que lo necesitaba aunque no tuviese mucho tiempo. 

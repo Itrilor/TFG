@@ -203,6 +203,8 @@ pdfproducer = {pdflatex}
 \usepackage[style=ieee,maxnames=10]{biblatex}
 \AtEveryBibitem{%
   \clearfield{note}%
+  \clearfield{urlyear}
+  \clearfield{urlmonth}
 }
 \addbibresource{TFG.bib}
 
@@ -233,7 +235,7 @@ pdfproducer = {pdflatex}
 \input{prefacios/prefacio}
 \frontmatter
 { \hypersetup{hidelinks} \tableofcontents }
-\listoffigures
+{ \hypersetup{hidelinks} \listoffigures }
 %\listoftables
 %
 \mainmatter

@@ -1004,6 +1004,17 @@ Las comparaciones por parejas son el tipo de tests estadísticos más simples qu
 Estos tests son útiles para comparar el rendimiento de dos algoritmos cuando se aplican a un conjunto de problemas común. 
 En el análisis de múltiples problemas, se requiere un valor por cada par de algoritmo-problema (frecuentemente un valor medio de varias ejecuciones). 
 
+%Distinción entre test paramétricos (t-student y ANOVA) y no paramétricos (Wilcoxon y post hoc), que aunque los primeros son los más usados exigen una serie de condiciones (indicar cuales) que ya se ha demostrado en ciertos benchmarks no se puede suele cumplir (incluir referencia de Molina sobre ello), por eso aplicaremos los segundos
+Dentro de los tests estadísticos debemos diferenciar entre test paramétricos y no paramétricos. 
+La diferencia fundamental entre ambos tests está basada en el conocimiento o desconocimiento de la distribución de probabilidad de la variable que se pretende estudiar. 
+De entre los tests paramétricos es importante destacar el test de \textit{t-student} (usado para comparar las medias de dos grupos y determinar si las diferencias entre ellas probablemente provengan de la aleatoriedad) y ANOVA (generaliza el test \textit{t-student}, ya que permite estudiar si las medias de dos o más poblaciones son iguales). 
+De entre los test no paramétricos, debemos destacar el test de Wilcoxon y los procedimientos \textit{post-hoc}; ambos se explicarán en detalle más adelante. 
+
+Los tests paramétricos se suelen usar en el análisis de experimentos en inteligencia computacional. 
+Desafortunadamente, se basan en suposiciones que con casi toda seguridad no se cumplen al analizar el rendimiento de algoritmos estocásticos basados en inteligencia computacional \parencite{garciaStudyUseNonparametric2009}. 
+Estas suposiciones se conocen como independencia, normalidad y homocedasticidad. 
+Para superar este problema, nos centraremos en los procedimientos estadísticos no paramétricos, que aportan al investigador una herramienta práctica a usar cuando las suposiciones previas no pueden ser satisfechas, especialmente en el análisis de múltiples problemas. 
+
 En esta sección, nos centraremos en primer lugar en un procedimiento fácil y potente, que puede proporcionar una primera impresión sobre la comparación: el Test de Signos. 
 Entonces, introduciremos el uso del test de posiciones con signos de Wilcoxon, como un ejemplo de un test no paramétrico para comparaciones estadísticas por parejas. 
 
@@ -1040,11 +1051,11 @@ R^- & = \sum_{d_i<0} \text{rank}(d_i) + \dfrac{1}{2} \sum_{d_i=0}\text{rank}(d_i
 Sea $T = \min(R^+,R^-)$. 
 si $T$ es menor o igual que el valor de la distribución de Wilcoxon para $n$ grados de libertad, se rechaza la hipótesis nula de igualdad; esto significa que dicho algoritmo supera al otro, con el $p$-valor asociado. 
 
-El test de Wilcoxon es más sensible que el $t$-test. 
+El test de Wilcoxon es más robusto que el $t$-test. 
 Asume conmensurabilidad de diferencias, pero solo de forma cualitativa: mayores diferencias contarán más, lo que es probablemente lo que se desea, pero las magnitudes absolutas se ignoran. 
 Desde un punto de vista estadístico, este test es más seguro ya que no asume una distribución normal. 
 Además, los valores atípicos (\textit{outliers}) tienen menos efecto en el test de Wilcoxon que en el $t$-test. 
-El test de Wilcoxon asume diferencias continuas $d_i$; por lo tanto, no deberían ser redondeadas a uno o dos decimales, ya que esto reduciría la potencia del test en caso de un número elevado de empates. 
+%El test de Wilcoxon asume diferencias continuas $d_i$; por lo tanto, no deberían ser redondeadas a uno o dos decimales, ya que esto reduciría la potencia del test en caso de un número elevado de empates. 
 
 \section{Múltiples comparaciones con un método de control}
 

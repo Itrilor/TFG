@@ -1,4 +1,4 @@
-\chapter{Evolución en la propuesta \color{red}(In progress)\color{black}}
+\chapter{Evolución en la propuesta}\label{Chapter8}
 
 En este capítulo se realizará un análisis completo paso por paso del proceso de desarrollo del algoritmo. 
 Se mostrarán distintas tablas y gráficas comparativas y sus interpretaciones con el fin de justificar la motivación de las distintas modificaciones introducidas explicadas en el capítulo anterior.
@@ -130,18 +130,18 @@ Tambiés es necesario comentar que los datos tienen distintas escalas, por lo qu
 Por ello se ha intentado normalizar los intervalos considerando que el resultado final es el máximo del intervalo y 0 el mínimo (ya que en nuestro problema todos los valores de los elementos, individuales y combinados, son no negativos). 
 Por tanto, en las tablas de diferencias y sus respectivas gráficas se ven representados los porcentajes de dichos intervalos asociados a las diferencias entre el resultado final y el resultado de cada \textit{milestone}.
 
-Todos los códigos y resultados pueden ser encontrados en el \href{https://github.com/Itrilor/TFG/tree/main}{respositorio de Github de este trabajo}. 
+Todos los códigos y resultados pueden ser encontrados en el \href{https://github.com/Itrilor/TFG/tree/main}{respositorio de Github de este trabajo}\footnote{https://github.com/Itrilor/TFG}. 
 
-\section{Algoritmos de Referencia experimentación}
-
-\color{red}
-
-Para empezar, debemos mostrar los resultados obtenidos de aplicar los algoritmos de referencia al problema con sus condiciones iniciales, esto es, con 90000 iteraciones en vez de 450. 
-
-
-Preguntar si ha habido algún progreso con esto
-
-\color{black}
+%\section{Algoritmos de Referencia experimentación}
+%
+%\color{red}
+%
+%Para empezar, debemos mostrar los resultados obtenidos de aplicar los algoritmos de referencia al problema con sus condiciones iniciales, esto es, con 90000 iteraciones en vez de 450. 
+%
+%
+%Preguntar si ha habido algún progreso con esto
+%
+%\color{black}
 
 \section{Resultados versión expensive}
 
@@ -153,9 +153,9 @@ También es interesante observar lo mucho que empeoran los resultados frente a s
 
 Por ello, en la tabla \ref{AGEU450}, se muestran los resultados de la ejecución del AGE, mientras que en la tabla \ref{CHC450}, se muestran los resultados de la ejecución del CHC. 
 
-Cabe mencionar que originalmente el único algoritmo de referencia que se consideró era el AG. 
+Cabe mencionar que originalmente el único algoritmo de referencia que se consideró era el AGE. 
 Sin embargo, durante el desarrollo se consideró la posibilidad de introducir elementos propios del algoritmo CHC, ya que es un algoritmo bastante balanceado que suele dar buenos resultados. 
-Por ello, también se realizó una comparación entre los resultados obtenidos por el AG y los del CHC. 
+Por ello, también se realizó una comparación entre los resultados obtenidos por el AGE y los del CHC. 
 Esta comparación se puede apreciar en la gráfica \ref{fig:AGEUvsCHC}.
 
 \begin{figure}
@@ -178,14 +178,14 @@ Esta comparación se puede apreciar en la gráfica \ref{fig:AGEUvsCHC}.
 \end{figure}
 
 
-También podemos apreciar en la tabla \ref{diferenciasAGEU} la media de las distancias entre las soluciones obtenidas en cada \textit{milestone} en la ejecución de AGEU con la final (también más visible en la gráfica \ref{fig:DiferenciasAGEU}). 
+También podemos apreciar en la tabla \ref{diferenciasAGEU} la media de las distancias entre las soluciones obtenidas en cada \textit{milestone} en la ejecución de AGE con la final (también más visible en la gráfica \ref{fig:DiferenciasAGEU}). 
 
 %Diferencias AGEU
 \begin{table}[]
 \begin{tabular}{|cclcclccl|}
 \hline
 \rowcolor[HTML]{FFFFC7} 
-\multicolumn{9}{|c|}{\cellcolor[HTML]{FFFFC7}AGEU   450}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 \\ \hline
+\multicolumn{9}{|c|}{\cellcolor[HTML]{FFFFC7}AGE   450}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 \\ \hline
 \rowcolor[HTML]{F7EAC7} 
 \multicolumn{1}{|c|}{\cellcolor[HTML]{F7EAC7}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}milestone} & \multicolumn{1}{l|}{\cellcolor[HTML]{F7EAC7}Diferencia} & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}milestone} & \multicolumn{1}{l|}{\cellcolor[HTML]{F7EAC7}Diferencia} & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}milestone} & Diferencia  \\ \hline
 \rowcolor[HTML]{DAE8FC} 
@@ -281,8 +281,8 @@ También se debe tener en cuenta que estamos usando una modificación de CHC don
 En contrapartida a no usar reinicio de población, se mantiene la mutación de las soluciones con el fin de aportar más diversidad. 
 A vista de los resultados se puede entender que esto no es suficiente para mantener la diversidad. 
 
-Por otra parte, si nos fijamos en la gráfica \ref{fig:AGEUvsCHC} se puede ver cómo el algoritmo CHC es mejor que el AGEU mientras que se siguen produciendo cambios, es decir, antes de que se produzca el 50\% de la ejecución. 
-Por lo que se considerará posteriormente una mezcla de ambos algoritmos, con el fin de aprovechar los buenos resultados iniciales del CHC y la capacidad de no converger rápidamente que presenta AGEU con el fin de tener un buen punto de partida.
+Por otra parte, si nos fijamos en la gráfica \ref{fig:AGEUvsCHC} se puede ver cómo el algoritmo CHC es mejor que el AGE mientras que se siguen produciendo cambios, es decir, antes de que se produzca el 50\% de la ejecución. 
+Por lo que se considerará posteriormente una mezcla de ambos algoritmos, con el fin de aprovechar los buenos resultados iniciales del CHC y la capacidad de no converger rápidamente que presenta AGE con el fin de tener un buen punto de partida.
 
 \section{Incorporación del histórico}
 
@@ -336,13 +336,13 @@ Para confirmar esta idea y poder asegurarnos de que se ha dado un paso en una di
          \caption{Ranking final}
          \label{fig:AGEUvsGACEPv1_barras}
      \end{subfigure}
-        \caption{Comparación de los resultados del AGEU y GACEPv1}
+        \caption{Comparación de los resultados del AGE y GACEPv1}
         \label{fig:AGEUvsGACEPv1}
 \end{figure}
 
 Con esta gráfica \ref{fig:AGEUvsGACEPv1} quedan confirmadas nuestras suposiciones. 
 Es importante mencionar que en sus primeras iteraciones ambos algoritmos obtienen los mismos resultados ya que se comportan de la misma forma. 
-Recordemos que cada fase del histórico ocupa 50 iteraciones, por lo que durante las primeras 50 iteraciones va a mantener el mismo comportamiento que AGEU, con la excepción de que va a ir almacenando las soluciones para su posterior análisis. 
+Recordemos que cada fase del histórico ocupa 50 iteraciones, por lo que durante las primeras 50 iteraciones va a mantener el mismo comportamiento que AGE, con la excepción de que va a ir almacenando las soluciones para su posterior análisis. 
 Estas 50 iteraciones suponen un poco más del 10\% inicial de las iteraciones totales, por lo que es obvio que para todas estas \textit{milestones} sus resultados van a ser iguales. 
 También cabe la pena mencionar que en el momento en el que difieren los resultados de los algoritmos, su clasificación se mantiene casi constante, por lo que queda claro que el uso del histórico hace que el algoritmo sea consistentemente mejor.  
 
@@ -400,10 +400,25 @@ Esto se puede ver en la tabla \ref{DiferenciasGACEPv1} y en su gráfica asociada
         \label{fig:DiferenciasGACEPv1}
 \end{figure}
 
-En la tabla \ref{DiferenciasGACEPv1} se puede ver que GACEP tiene un comportamiento similar con respecto a la progresión de las mejores soluciones a lo largo de la ejecución que el algoritmo base AGEU. 
+En la tabla \ref{DiferenciasGACEPv1} se puede ver que GACEP tiene un comportamiento similar con respecto a la progresión de las mejores soluciones a lo largo de la ejecución que el algoritmo base AGE. 
 Se observa que no se produce ninguna convergencia prematura, aunque es cierto que en la segunda mitad de las evaluaciones se producen muchos menos cambios que en el resto. 
 
+También aplicaremos el test estadístico de $p$-valores de Wilcoxon para determinar si hay diferencias significativas entre AGE y GACEPv1. 
+Este test viene representado en la tabla \ref{WilcoxonGACEPv1}.
 
+\begin{table}[h]
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+\multicolumn{1}{l|}{}                  & \textbf{AGE}                    & \textbf{GACEPv1}                & \textbf{Accumulated Error   (\%)} \\ \hline
+\multicolumn{1}{|c|}{\textbf{AGE}}     & 1                               & {\color[HTML]{FF0000} 4.90E-04} & 5                                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{GACEPv1}} & {\color[HTML]{0000FF} 4.90E-04} & 1                               & 5                                 \\ \hline
+\end{tabular}
+\caption{\label{WilcoxonGACEPv1}Test de Wilcoxon de AGE Y GACEPv1}
+\end{table}
+
+En dicha tabla \ref{WilcoxonGACEPv1} podemos observar que GACEPv1 es mejor que AGE con una significación menor del 5\%. 
+Esta comparación tiene un error acumulado del 5\%. 
+Por lo que podemos decir con bastante seguridad es que GACEPv1 es, efectivamente, superior a AGE.
 
 \section{Uso de GRASP}
 
@@ -498,12 +513,29 @@ A continuación, se mostrará una tabla \ref{DiferenciasGACEP_GRASP} que almacen
 
 Comparando las tablas de diferencias \ref{DiferenciasGACEPv1} y \ref{DiferenciasGACEP_GRASP} se puede ver que al principio parece que sí introduce algo más de diversidad (ya que las soluciones en dichas \textit{milestones} son más diferentes), aunque esto es solo notable para los tamaños $n=200$ y $n=300$. 
 
+También aplicaremos el test estadístico de $p$-valores de Wilcoxon para determinar si hay diferencias significativas entre GACEPv1 y GACEPv2. 
+Este test viene representado en la tabla \ref{WilcoxonGACEPv2}.
+
+\begin{table}[h]
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+\multicolumn{1}{l|}{}                  & \textbf{GACEPv2}                                     & \textbf{GACEPv1}                & \textbf{Accumulated Error   (\%)} \\ \hline
+\multicolumn{1}{|c|}{\textbf{GACEPv2}} & 1                                                    & {\color[HTML]{0000FF} 1.38E-13} & 5                                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{GACEPv1}} & \multicolumn{1}{l|}{{\color[HTML]{FF0000} 1.38E-13}} & 1                               & 5                                 \\ \hline
+\end{tabular}
+\caption{\label{WilcoxonGACEPv2}Test de Wilcoxon de GACEPv1 Y GACEPv2}
+\end{table}
+
+En dicha tabla \ref{WilcoxonGACEPv1} podemos observar que GACEPv2 es mejor que GACEPv1 con una significación menor del 5\%. 
+Esta comparación tiene un error acumulado del 5\%. 
+Por lo que podemos decir con bastante seguridad es que GACEPv2 es, efectivamente, superior a GACEPv1.
+
 \section{Operador de Cruce Intensivo}
 
 La siguiente idea a seguir tiene que ver de nuevo con la explotación de las características de las mejores soluciones. 
 Anteriormente se propuso introducir una modificación para mejorar la explotación en el propio operador de reparación y en la mutación; en este caso, se pretende introducir este operador en el propio operador de cruce directamente. 
 
-Esta modificación se basa en que las soluciones hijas heredarán una mayor cantidad de genes del mejor de los dos padres. 
+Esta modificación se basa en que las soluciones hijas heredarán una mayor cantidad de genes del mejor de los dos padres \ref{alg:CI}. 
 La motivación de este cambio es la generación de nuevas soluciones muy parecidas a las buenas que ya forman parte de la población, con lo que hay una mayor probabilidad de que se sigan desarrollando las soluciones en ese ámbito. 
 
 Para este trabajo probaremos con varios porcentajes de elementos que deben ser pertenecientes al mejor padre: 50\%, 60\%, 70\% y 80\%, para decidir cuál sería la mejor proporción. 
@@ -623,17 +655,32 @@ De hecho, las dos versiones tienen resultados muy parecidos, lo cual tiene senti
 De cualquier forma, a partir del 30\% de las iteraciones GACEPv2 obtiene mejores resultados que GACEPv3c50, aunque sea por poco. 
 Por lo tanto, ignoraremos esta tercera versión y seguiremos trabajando con la segunda versión como base. 
 
+También aplicaremos el test estadístico de $p$-valores de Wilcoxon para determinar si hay diferencias significativas entre GACEPv2 y GACEPv3c50. 
+Este test viene representado en la tabla \ref{WilcoxonGACEPv3}.
+
+\begin{table}[h]
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+\multicolumn{1}{l|}{}                     & \textbf{GACEPv2} & \textbf{GACEPv3c50} & \textbf{Accumulated Error   (\%)} \\ \hline
+\multicolumn{1}{|c|}{\textbf{GACEPv2}}    & 1                & 0.494187            & 5                                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{GACEPv3c50}} & 0.494187         & 1                   & 5                                 \\ \hline
+\end{tabular}
+\caption{\label{WilcoxonGACEPv3}Test de Wilcoxon de GACEPv2 Y GACEPv3c50}
+\end{table}
+
+En dicha tabla \ref{WilcoxonGACEPv1} podemos observar que no se han detectado diferencias significantes entre GACEPv2 y GACEPv3c50 con un error estadístico del 5\%.
+
 \section{Modificaciones sobre CHC}
 
-Llegados a este punto podemos considerar haber hecho algunos avances significativos sobre el AGEU y es momento de preguntarse si estas modificaciones se podrían aplicar al algoritmo CHC. 
+Llegados a este punto podemos considerar haber hecho algunos avances significativos sobre el AGE y es momento de preguntarse si estas modificaciones se podrían aplicar al algoritmo CHC. 
 Recordemos que en \ref{fig:AGEUvsCHC_lineas} podíamos apreciar que CHC obtenía mejores resultados en la primera mitad de las iteraciones y al final resultaba peor dado a que convergía prematuramente. 
-Por lo tanto, en esta sección vamos a comprobar si aplicando los mismos cambios que al AGEU se logra mejorar los resultados del GACEP. 
+Por lo tanto, en esta sección vamos a comprobar si aplicando los mismos cambios que al AGE se logra mejorar los resultados del GACEP. 
 
-En tanto que no es una versión puramente de GACEP, cambiaremos su notación a ``\textbf{GACEPCHCv\texttt{x}}'', donde \texttt{x} representa el número de la versión. 
+En tanto que no es una versión puramente de GACEP, cambiaremos la notación que se le da a ``\textbf{GACEPCHCv\texttt{x}}'', donde \texttt{x} representa el número de la versión. 
 
 \subsection{Incorporación del histórico}
 
-El uso del histórico \ref{alg:Historico_Estructura} para CHC sigue la misma lógica que para el AGEU: el aumento de la explotación de los mejores resultados. 
+El uso del histórico \ref{alg:Historico_Estructura} para CHC sigue la misma lógica que para el AGE: el aumento de la explotación de los mejores resultados. 
 Si bien a simple vista se podría pensar que el uso del histórico no debería mejorar los resultados ya que nuestro problema principal es que la población converge rápidamente a una solución se debe recordar cómo se clasificaban los distintos elementos:
 \begin{itemize}
 	\item \texttt{Mejores}: Aquellos elementos que suelen estar presentes en las mejores soluciones, pero no en las peores.
@@ -668,7 +715,7 @@ Esta comparación será visible en la gráfica \ref{fig:CHCvsGACEPCHCv1}
 \end{figure}
 
 En esta gráfica \ref{fig:CHCvsGACEPCHCv1} se puede apreciar que aunque inicialmente GACEPCHCv1 es bastante peor que CHC, tras la mitad de las ejecuciones logra mejorarlo. 
-Esto podría estar causado por el hecho de que CHC converge rápidamente antes de la mitad de las ejecuciones y que GACEPCHCv1 puede que siga mejorando poco a poco como lo harían las versiones anteriores basadas en AGEU debido a cierto aumento de la diversidad en la población. 
+Esto podría estar causado por el hecho de que CHC converge rápidamente antes de la mitad de las ejecuciones y que GACEPCHCv1 puede que siga mejorando poco a poco como lo harían las versiones anteriores basadas en AGE debido a cierto aumento de la diversidad en la población. 
 Para comprobar si este es el caso, estudiaremos las diferencias entre las soluciones de las distintas \textit{milestones} y la final. 
 Esta información se mostrará en la tabla y su correspondiente gráfica
 
@@ -717,7 +764,7 @@ Esta información se mostrará en la tabla y su correspondiente gráfica
         \label{fig:DiferenciasGACEPCHCv1}
 \end{figure}
 
-Efectivamente, en la gráfica \ref{fig:DiferenciasGACEPCHCv1} se puede comprobar visualmente que tiene un comportamiento parecido al de las versiones de AGEU, aunque bien es verdad que es bastante más abrupto.
+Efectivamente, en la gráfica \ref{fig:DiferenciasGACEPCHCv1} se puede comprobar visualmente que tiene un comportamiento parecido al de las versiones de AGE, aunque bien es verdad que es bastante más abrupto.
 
 \subsection{Uso del GRASP}
 
@@ -750,8 +797,8 @@ Esta comparación será visible en la gráfica \ref{fig:GACEPCHCv1vsGACEPCHCv2}.
 \end{figure}
 
 En esta gráfica \ref{fig:GACEPCHCv1vsGACEPCHCv2} podemos comprobar que efectivamente no se produce una mejora con respecto a la versión anterior, aunque los resultados finales son muy cercanos. 
-Por lo que podemos proceder a realizar una comparación de GACEPCHCv1 con la mejor versión hasta el momento para el algoritmo AGEU: GACEPv2. 
-Esta comparación será visible en la gráfica \ref{fig:GACEPv2vsGACEPCHCv2}.
+Por lo que podemos proceder a realizar una comparación de GACEPCHCv1 con la mejor versión hasta el momento para el algoritmo AGE: GACEPv2. 
+Esta comparación será visible en la gráfica \ref{fig:GACEPv2vsGACEPCHCv1}.
 
 \begin{figure}[h]
      \centering
@@ -775,19 +822,36 @@ Esta comparación será visible en la gráfica \ref{fig:GACEPv2vsGACEPCHCv2}.
 En la gráfica \ref{fig:GACEPv2vsGACEPCHCv1} se puede ver cómo GACEPv2 obtiene mejores resultados que GACEPCHCv1 en la mayoría de las \textit{milestones}, sobre todo y más importante, obtiene mejores resultados finales. 
 En tanto que no se ha logrado mejorar los resultados de una versión anterior, descartaremos estos cambios y seguiremos trabajando exclusivamente sobre el algoritmo GACEPv2.
 
+También aplicaremos el test estadístico de $p$-valores de Wilcoxon para determinar si hay diferencias significativas entre GACEPv2 y GACEPCHCv1. 
+Este test viene representado en la tabla \ref{WilcoxonGACEPv4}.
+
+\begin{table}[h]
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+\multicolumn{1}{l|}{}                     & \textbf{GACEPv2}                   & \textbf{GACEPCHCv1}              & \textbf{Accumulated Error   (\%)} \\ \hline
+\multicolumn{1}{|c|}{\textbf{GACEPv2}}      & 1                                & {\color[HTML]{0000FF} 6.864E-11} & 5                                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{GACEPCHCv1}} & {\color[HTML]{FF0000} 6.864E-11} & 1                                & 5                                 \\ \hline
+\end{tabular}
+\caption{\label{WilcoxonGACEPv4}Test de Wilcoxon de GACEPv2 Y GACEPCHCv1}
+\end{table}
+
+En dicha tabla \ref{WilcoxonGACEPv4} podemos observar que GACEPv2 es mejor que GACEPCHCv1 con una significación menor del 5\%. 
+Esta comparación tiene un error acumulado del 5\%. 
+Por lo que podemos decir con bastante seguridad es que GACEPv2 es, efectivamente, superior a GACEPCHCv1.
 
 
 \section{Estudio de la diversidad}
 
 Durante este capítulo hemos asociado la abrupta convergencia a una solución como falta de diversidad en la población. 
-Para comprobar esto, se ha decidido utilizar la fórmula para el cálculo de la diversidad propuesta en \parencite{oppacherShiftingBalanceGenetic}, donde se tiene que:
+Para comprobar esto, se ha decidido utilizar la fórmula para el cálculo de la diversidad propuesta en \parencite{oppacherShiftingBalanceGenetic1999a}, donde se tiene que:
 \begin{equation}
 \text{Diversidad}(P) = \dfrac{1}{n\cdot \texttt{numcro}(\texttt{numcro}-1)}\sum_{i=1}^{\texttt{numcro}}\sum_{j=1}^{\texttt{numcro}} HD(p_i,p_j)
 \label{eq:Diversidad}
 \end{equation}
 donde $P$ es la población, $n$ es la longitud del individuo, $HD$ es la función de la distancia de Hamming y $p_i$ es el individuo $i$-ésimo de la población $P$.
 
-Se han almacenado en la Tabla \ref{GACEPv2Diversity} los resultados de aplicar la fórmula \ref{eq:Diversidad} a la población que hemos conseguido en cada \textit{milestone}
+Los resultados finales de aplicar la fórmula \ref{eq:Diversidad} para cada una de las instancias del problema se encuentran en la Tabla \ref{res:GACEPv2_Diversity}. 
+Por otra parte, se han almacenado en la Tabla \ref{GACEPv2Diversity} los resultados de aplicar la fórmula \ref{eq:Diversidad} a la población que hemos conseguido en cada \textit{milestone}.
 
 \begin{table}[h]
 \begin{tabular}{|cclcclccl|}
@@ -865,7 +929,7 @@ Se iba a realizar un estudio individual para averiguar cuál sería un \texttt{x
 Por lo tanto, para este trabajo, consideramos que una población es lo suficientemente diversa cuando cada una de las soluciones difiere del resto en, al menos, un $5\%$ de las variables que la componen. 
 
 Esta versión tomará el nombre de \textbf{GACEPv4}. 
-Los resultados de este algoritmo se encuentran en la Tabla \color{red}METER TABLA EN APÉNDICE\color{black}.
+Los resultados de este algoritmo se encuentran en la Tabla \ref{res:GACEPv4}.
 
 El algoritmo con esta modificación podría no considerarse una versión en sí misma, sino más bien como un prerrequisito para el resto de modificaciones de esta sección. 
 Esto se debe a que la sola modificación de la población inicial no es algo que el algoritmo pueda aprovechar de forma recursiva, es solo una pequeña modificación que se hace al principio para establecer una determinada población. 
@@ -898,7 +962,7 @@ Para esta modificación no hay ningún tipo de umbral de diferencias que se deba
 
 Esta versión tomará el nombre de \textbf{GACEPv5}. 
 
-Esta versión ya si supone una gran modificación del propio algoritmo, por lo que es necesario obtener sus resultados \color{red} METER TABLA EN APÉNDICE \color{black} y compararlos con GACEPv2 para determinar si supone una mejora. 
+Esta versión ya si supone una gran modificación del propio algoritmo, por lo que es necesario obtener sus resultados \ref{res:GACEPv5} y compararlos con GACEPv2 para determinar si supone una mejora. 
 Esta comparación es visible en la gráfica \ref{fig:GACEPv2vsGACEPv5}.
 
 \begin{figure}[h]
@@ -930,7 +994,7 @@ Es decir, dada una solución nueva se deberá buscar en primer lugar aquella sol
 
 Esta versión tomará el nombre de \textbf{GACEPv6}. 
 
-De la misma forma que con la introducción del NAM, esta versión supone una gran modificación del propio algoritmo, por lo que es necesario obtener sus resultados \color{red} METER TABLA EN APÉNDICE \color{black} y compararlos con GACEPv2 para determinar si se ha producido una mejora. 
+De la misma forma que con la introducción del NAM, esta versión supone una gran modificación del propio algoritmo, por lo que es necesario obtener sus resultados \ref{res:GACEPv6} y compararlos con GACEPv2 para determinar si se ha producido una mejora. 
 Esta comparación es visible en la gráfica \ref{fig:GACEPv2vsGACEPv6}.
 
 \begin{figure}[h]
@@ -965,7 +1029,7 @@ Nótese que dicho umbral de diferencia va a ser el mismo que se ha aplicado para
 Esta versión tomará el nombre de \textbf{GACEPv7}. 
 
 En tanto que es una modificación directa sobre GACEPv6, debemos comprobar primero si se consiguen mejorar los resultados sobre esta versión. 
-Los resultados obtenidos de la ejecución de GACEPv7 se pueden encontrar en la tabla \color{red} METER TABLA EN APÉNDICE \color{black} y su comparación con los resultados de GACEPv6 se puede visualizar en la gráfica \ref{fig:GACEPv6vsGACEPv7} (se ha cambiado el formato de las gráficas para una mejor visualización).
+Los resultados obtenidos de la ejecución de GACEPv7 se pueden encontrar en la tabla \ref{res:GACEPv7} y su comparación con los resultados de GACEPv6 se puede visualizar en la gráfica \ref{fig:GACEPv6vsGACEPv7} (se ha cambiado el formato de las gráficas para una mejor visualización).
 
 \begin{figure}[h]
 		\centering
@@ -982,16 +1046,18 @@ Si bien no se ha producido ninguna mejora y descartaremos esta versión, esto no
 
 \subsection{Combinaciones}
 
-Para este apartado, para simplificar la notación que podría llegar a tener el nombre de los algoritmos de las distintas combinaciones, estableceremos que se denominarán ``\textbf{GACEPv\texttt{xy}}'', donde \texttt{x}, \texttt{y} son dos versiones distintas de las introducidas en esta sección. 
+%Para este apartado, para simplificar la notación que podría llegar a tener el nombre de los algoritmos de las distintas combinaciones, estableceremos que se denominarán ``\textbf{GACEPv\texttt{xy}}'', donde \texttt{x}, \texttt{y} son dos versiones distintas de las introducidas en esta sección. 
 
 En esta sección se han obtenido resultados bastante prometedores que en todos casos mejora a su algoritmo base, GACEPv2. 
-Por lo que ahora procederemos a analizar posibles combinaciones de dichas modificaciones por si pudiesen mejorar los resultados actuales obtenidos usando GACEPv2. 
+Por lo que ahora procederemos a analizar posibles combinaciones de dichas modificaciones por si pudiesen mejorar los resultados actuales.% obtenidos usando GACEPv2. 
 
-\subsubsection{GACEPv35}
+\subsubsection{GACEPv8}
 
 En primer lugar, volvemos a considerar la posibilidad de usar un operador de cruce intensivo, dado establecimos la posibilidad de que su aplicación no aportaba buenos resultados debido a la falta de diversidad. 
 En tanto que con estas nuevas modificaciones conseguimos aumentar la diversidad, es una buena idea probar de nuevo su comportamiento junto con la adición de la versión del operador NAM. 
-Los resultados de las ejecuciones de esta versión para los distintos porcentajes se encuentran en \color{red} METER TABLA EN APÉNDICE \color{black}.
+Por tanto, a la combinación de cruce intensivo y NAM se le denominará \textbf{GACEPv8}.
+
+Los resultados de las ejecuciones de esta versión para los distintos porcentajes se encuentran en las tablas \ref{res:GACEPv8c50}, \ref{res:GACEPv8c60}, \ref{res:GACEPv8c70} y \ref{res:GACEPv8c80}.
 
 En la gráfica \ref{fig:GACEPv35} se puede observar el comportamiento de esta nueva versión para los distintos porcentajes.
  
@@ -1010,7 +1076,7 @@ En la gráfica \ref{fig:GACEPv35} se puede observar el comportamiento de esta nu
          \caption{Ranking final}
          \label{fig:GACEPv35_barras}
      \end{subfigure}
-        \caption{Comparación de los resultados de los GACEPv35c\texttt{x}}
+        \caption{Comparación de los resultados de los GACEPv8c\texttt{x}}
         \label{fig:GACEPv35}
 \end{figure}
 
@@ -1018,11 +1084,13 @@ Se puede apreciar en \ref{fig:GACEPv35_lineas} que el cruce intensivo sigue pres
 Aunque también es verdad que en este caso los porcentajes 50\%, 60\% y 70\% tienen rendimiento similar durante el primer 30\% de las iteraciones y el \textit{ranking} del 60\% se mantiene cercano al del 50\% durante toda la ejecución. 
 Por lo que el mejor porcentaje para esta modificación sería el del 50\%.
 
-\subsubsection{GACEPv36}
+\subsubsection{GACEPv9}
 
 A continuación, consideramos la posibilidad de usar de nuevo el operador de cruce intensivo, pero esta vez junto con la versión que implementaba la modificación del operador de reemplazo. 
-La motivación de esta versión es la misma que la de GACEPv35, se le quiere dar una nueva oportunidad al operador de cruce intensivo ahora que se ha aumentado la diversidad de la población en todo momento de la ejecución. 
-Los resultados de las ejecuciones de esta versión para los distintos porcentajes se encuentran en \color{red} METER TABLA EN APÉNDICE \color{black}.
+La motivación de esta versión es la misma que la de GACEPv8, se le quiere dar una nueva oportunidad al operador de cruce intensivo ahora que se ha aumentado la diversidad de la población en todo momento de la ejecución.
+Por tanto, a la combinación de cruce intensivo y \textit{Crowding} determinístico se le denominará \textbf{GACEPv9}.
+ 
+Los resultados de las ejecuciones de esta versión para los distintos porcentajes se encuentran en las tablas \ref{res:GACEPv9c50}, \ref{res:GACEPv9c60}, \ref{res:GACEPv9c70} y \ref{res:GACEPv9c80}.
 
 En la gráfica \ref{fig:GACEPv36} se puede observar el comportamiento de esta nueva versión para los distintos porcentajes. 
 
@@ -1041,27 +1109,30 @@ En la gráfica \ref{fig:GACEPv36} se puede observar el comportamiento de esta nu
          \caption{Ranking final}
          \label{fig:GACEPv36_barras}
      \end{subfigure}
-        \caption{Comparación de los resultados de los GACEPv36c\texttt{x}}
+        \caption{Comparación de los resultados de los GACEPv9c\texttt{x}}
         \label{fig:GACEPv36}
 \end{figure}
 
-En este caso se puede observar en \ref{fig:GACEPv36_lineas} que GACEPv36 tiene un comportamiento muy similar al GACEPv35 en \ref{fig:GACEPv35_lineas} en tanto que a mayor sea la intensidad del cruce peores serán los resultados y que el cruce para los porcentajes 50\% y 60\% tienen rendimientos algo más similares. 
+En este caso se puede observar en \ref{fig:GACEPv36_lineas} que GACEPv9 tiene un comportamiento muy similar al GACEPv8 en \ref{fig:GACEPv35_lineas} en tanto que a mayor sea la intensidad del cruce peores serán los resultados y que el cruce para los porcentajes 50\% y 60\% tienen rendimientos algo más similares. 
 En definitiva, el mejor porcentaje a utilizar para esta versión sería el del 50\%.
 
-\subsubsection{GACEPv56}
+\subsubsection{GACEPv10}
 
 En esta versión se quiere combinar las dos nuevas modificaciones de esta sección: la modificación del operador de selección de padres y la modificación del operador de reemplazo. 
 La motivación de esta versión viene dada al observar las gráficas \ref{fig:GACEPv2vsGACEPv5_lineas} y \ref{fig:GACEPv2vsGACEPv6_lineas}. 
 Como mencionamos respectivamente en los apartados de estas versiones, GACEPv5 consigue superar en prácticamente todos los casos a GACEPv2, pero solo a partir del 30\% de las iteraciones; mientras que GACEPv6, aunque supera a GACEPv2 para todas las \textit{milestones}, esta mejora es solo notable hasta la primera mitad de las iteraciones. 
 Por ello, con esta modificación se pretende combinar ambos comportamientos para que el algoritmo sea consistentemente mejor que GACEPv2. 
-Los resultados de las ejecuciones de esta versión se encuentran en \color{red} METER TABLA EN APÉNDICE \color{black}.
+Al algoritmo resultado de combinar los operadores de NAM y \textit{Crowding} determinístico se le denominará \textbf{GACEPv10}. 
+
+Los resultados de las ejecuciones de esta versión se encuentran en la tabla \ref{res:GACEPv10}.
 
 
-\subsubsection{GACEPv356}
+\subsubsection{GACEPv11}
 
-Finalmente, consideramos introducir el operador de cruce intensivo en la versión GACEPv56 basándonos en que las suposiciones sobre el comportamiento de GACEPv56. 
+Finalmente, consideramos introducir el operador de cruce intensivo en la versión GACEPv10 basándonos en que las suposiciones sobre el comportamiento de dicha versión.% GACEPv56. 
 La motivación de esta versión es que dicha suposición consiga mejorar el comportamiento que tiene el cruce intensivo convirtiéndolo en una versión más competente. 
-Los resultados de las ejecuciones de esta versión para los distintos porcentajes se encuentran en \color{red} METER TABLA EN APÉNDICE \color{black}. 
+Por tanto, al algoritmo resultante de la combinación de cruce intensivo, operador NAM y \textit{Crowding} determinístico se le denominará \textbf{GACEPv11}.
+Los resultados de las ejecuciones de esta versión para los distintos porcentajes se encuentran en las tablas \ref{res:GACEPv11c50}, \ref{res:GACEPv11c60}, \ref{res:GACEPv11c70} y \ref{res:GACEPv11c80}. 
 
 En la gráfica \ref{fig:GACEPv356} se puede observar el comportamiento de esta nueva versión para los distintos porcentajes. 
 
@@ -1080,7 +1151,7 @@ En la gráfica \ref{fig:GACEPv356} se puede observar el comportamiento de esta n
          \caption{Ranking final}
          \label{fig:GACEPv356_barras}
      \end{subfigure}
-        \caption{Comparación de los resultados de los GACEPv356c\texttt{x}}
+        \caption{Comparación de los resultados de los GACEPv11c\texttt{x}}
         \label{fig:GACEPv356}
 \end{figure}
 
@@ -1113,15 +1184,15 @@ En la gráfica \ref{fig:GACEP3103vsGACEPv2} vienen representado los \textit{rank
         \label{fig:GACEP3103vsGACEPv2}
 \end{figure}
 
-Como se puede comprobar en \ref{fig:GACEP3103vsGACEPv2_lineas} todas las versiones excepto GACEPv36 ofrecen mejores resultados las instancias del problema con las que hemos trabajado. 
+Como se puede comprobar en \ref{fig:GACEP3103vsGACEPv2_lineas} todas las versiones excepto GACEPv9 ofrecen mejores resultados las instancias del problema con las que hemos trabajado. 
 Recuérdese que GACEPv4 aportaba unos resultados muy parecidos a GACEPv2, por lo que en \ref{fig:GACEP3103vsGACEPv2_lineas} se visualiza como la misma línea. 
-Es interesante mencionar que GACEPv5 y GACEPv35 presentan un comportamiento muy similar, en las primeras iteraciones aportan los peores resultados y a medida que avanza la ejecución logra mejorar la mitad de las versiones, aunque GACEPv35 resulta ser vagamente peor. 
-En contraposición, nos encontramos con GACEPv6 y GACEPv36, que presentan un comportamiento muy similar, en las primeras iteraciones aportan buenos resultados y a medida que avanza la ejecución obtiene peores resultados comparándolos con el resto de versiones, aunque en este caso la versión con cruce intensivo resulta bastante peor que la versión sin cruce intensivo. 
-Por otra parte, el \textit{ranking} de GACEPv356 se mantiene relativamente constante durante todas las iteraciones aportando uno de los mejores resultados, aunque en la segunda mitad de la ejecución su \textit{ranking} converge con el de GACEPv5 y GACEPv35; de hecho, al final consigue el mismo \textit{ranking} que GACEPv35, siendo peor que GACEPv5 por una diferencia de centésimas. 
+Es interesante mencionar que GACEPv5 y GACEPv8 presentan un comportamiento muy similar, en las primeras iteraciones aportan los peores resultados y a medida que avanza la ejecución logra mejorar la mitad de las versiones, aunque GACEPv8 resulta ser vagamente peor. 
+En contraposición, nos encontramos con GACEPv6 y GACEPv9, que presentan un comportamiento muy similar, en las primeras iteraciones aportan buenos resultados y a medida que avanza la ejecución obtiene peores resultados comparándolos con el resto de versiones, aunque en este caso la versión con cruce intensivo resulta bastante peor que la versión sin cruce intensivo. 
+Por otra parte, el \textit{ranking} de GACEPv11 se mantiene relativamente constante durante todas las iteraciones aportando uno de los mejores resultados, aunque en la segunda mitad de la ejecución su \textit{ranking} converge con el de GACEPv5 y GACEPv8; de hecho, al final consigue el mismo \textit{ranking} que GACEPv8, siendo peor que GACEPv5 por una diferencia de centésimas. 
 Con esto llegamos a la conclusión definitiva que la introducción de cruce intensivo en el algoritmo no logra mejorarlo en ningún momento, como máximo es capaz de lograr resultados similares. 
 
 Finalmente, y más importante, hemos descubierto cuál es la mejor versión y la que consideraremos la versión final de este proceso de diseño de metaheurísticas. 
-Se tiene que GACEPv56 es consistemente la mejor versión entre todas las presentadas en esta sección. 
+Se tiene que GACEPv10 es consistemente la mejor versión entre todas las presentadas en esta sección. 
 Con eso se confirma nuestra hipótesis, presentada anteriormente, de que el uso de la versión de NAM y el cambio del operador de reemplazo iba a suponer la mezcla de los mejores comportamientos de cada versión individual: ser mejor que GACEPv2 en la mayoría de los casos durante la primera mitad de la ejecución (GACEPv6) y ser mejor que GACEPv2 en la mayoría de los casos durante la segunda mitad de la ejecución (GACEPv5).
 
 Tras esto, mostraremos una tabla \ref{DiferenciasGACEPv56} y su gráfica \ref{fig:DiferenciasGACEPv56} asociada sobre las diferencias entre las mejores soluciones de cada \textit{milestone} para poder comprobar su evolución. 
@@ -1130,7 +1201,7 @@ Tras esto, mostraremos una tabla \ref{DiferenciasGACEPv56} y su gráfica \ref{fi
 \begin{tabular}{|cclcclccl|}
 \hline
 \rowcolor[HTML]{FFFFC7} 
-\multicolumn{9}{|c|}{\cellcolor[HTML]{FFFFC7}GACEPv56}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\ \hline
+\multicolumn{9}{|c|}{\cellcolor[HTML]{FFFFC7}GACEPv10}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\ \hline
 \rowcolor[HTML]{F7EAC7} 
 \multicolumn{1}{|c|}{\cellcolor[HTML]{F7EAC7}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}milestone} & \multicolumn{1}{l|}{\cellcolor[HTML]{F7EAC7}Diferencia} & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}milestone} & \multicolumn{1}{l|}{\cellcolor[HTML]{F7EAC7}Diferencia} & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}n}                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F7EAC7}milestone} & Diferencia \\ \hline
 \rowcolor[HTML]{DAE8FC} 
@@ -1171,13 +1242,69 @@ Tras esto, mostraremos una tabla \ref{DiferenciasGACEPv56} y su gráfica \ref{fi
 \end{figure}
 
 
-Por tanto, a la versión de GACEPv56 se le considerará la versión final, a la que nombraremos \textbf{GACEPvf}.
+Por tanto, a la versión de GACEPv10 se le considerará la versión final, a la que nombraremos \textbf{GACEPvf}.
 
 \section{Comparación final}
 
-En esta sección se compararán todas las versiones más destacables (AGEU, GACEPv1, GACEPv2 y GACEPv3c50) con la versión final, GACEPvf. 
+En esta sección se recordarán todas las versiones que se han utilizado a lo largo del capítulo y compararán todas las versiones más destacables (AGE, GACEPv1, GACEPv2 y GACEPv3c50) con la versión final, GACEPvf. 
 
-En primer lugar, mostraremos una gráfica \ref{fig:Final} con los \textit{ranking} de cada una de las versiones para las distintas \textit{milestones} junto con una gráfica de barras para indicar el \textit{ranking} final de dichas versiones. 
+\subsection{Resumen de versiones}
+
+A modo de resumen de este capítulo, reuniremos todas las versiones mencionadas en una tabla \ref{ResumenVersiones}. 
+Donde las siglas representan lo siguiente:
+\begin{itemize}
+	\item \textbf{CI}: Cruce Intensivo \ref{alg:CI}.
+	\item \textbf{PID}: Población inicial diversa \ref{alg:PD}.
+	\item \textbf{NAM}: Versión del operador NAM \ref{alg:NAM}.
+	\item \textbf{CR}: \textit{Crowding Replacement} \ref{alg:ORC}.
+\end{itemize}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{FFFFC7} 
+Algoritmo        & Características                    \\ \hline
+\rowcolor[HTML]{F7EAC7} 
+AGE              &                                    \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+GACEPv1          & \textbf{Histórico}\ref{alg:Historico_Estructura}                 \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+GACEPv2          & Histórico, \textbf{GRASP}\ref{alg:GRASP}                   \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+GACEPv3c         & Histórico, GRASP, \textbf{CI}               \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+GACEPv3cxwo      & Histórico, \textbf{CI}                      \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+GACEPv4          & Histórico, GRASP, \textbf{PID}              \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+GACEPv5          & Histórico, GRASP, PID, \textbf{NAM}         \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+GACEPv6          & Histórico, GRASP, PID, \textbf{CR}          \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+GACEPv7          & Histórico, GRASP, PID, \textbf{CRI}         \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+GACEPv8cx        & Histórico, GRASP, PID, \textbf{NAM}, \textbf{CI}     \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+GACEPv9cx        & Histórico, GRASP, PID, \textbf{CR}, \textbf{CI}      \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+GACEPv10         & Histórico, GRASP, PID, \textbf{NAM}, \textbf{CR}     \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+GACEPv11cx       & Histórico, GRASP, PID, \textbf{NAM}, \textbf{CR}, \textbf{CI} \\ \hline
+\rowcolor[HTML]{F7EAC7} 
+CHC              &                                    \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+GACEPCHCv1       & \textbf{Histórico}                 \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+GACEPCHCv2       & Histórico, \textbf{GRASP}                   \\ \hline
+\rowcolor[HTML]{F7EAC7} 
+\textbf{GACEPvf} & \textbf{GACEPv10}                  \\ \hline
+\end{tabular}
+\caption{\label{ResumenVersiones}Resumen de las distintas versiones de los algoritmos utilizadas}
+\end{table}
+
+\subsection{Comparación}
+
+En primer lugar, mostraremos una gráfica \ref{fig:Final} con los \textit{ranking} de cada una de las versiones para las distintas \textit{milestones} junto con una gráfica de barras para indicar el \textit{ranking} final de dichas versiones.  
 
 \begin{figure}[h]
      \centering
@@ -1198,16 +1325,95 @@ En primer lugar, mostraremos una gráfica \ref{fig:Final} con los \textit{rankin
         \label{fig:Final}
 \end{figure}
 
-En la gráfica \ref{fig:Final_lineas} se puede comprobar como nuestra versión final del algoritmo es mejor que el resto para prácticamente todas las instancias del problema con las que hemos trabajado en todo momento de la ejecución. 
-Por otra parte, podemos observar en \ref{fig:Final_barras} cómo la clasificación de las distintas versiones presentadas ha ido mejorando a las anteriores.
+Además, para resaltar las diferencias entre los distintos algoritmos también se incluirá en este caso al tabla completa de los \textit{ranking} promedios para todas la \textit{milestones} \ref{RankingFinal}. 
+En dicha tabla viene representado la evolución de la clasificación de cada uno de los algoritmos en los distintos momentos de la ejecución, donde cada celda de la tabla representa el \textit{ranking} del algoritmo que encabeza su columna con respecto al resto en la \textit{milestone} señalada al principio de su fila. 
+Esto se ha conseguido asignándole una clasificación a cada algoritmo por cada instancia y cada \textit{milestone}, tras esto se calcula la media de las clasificaciones de cada algoritmo relativas todas las instancias para cada \textit{milestone} y este valor es el que se almacenará en la tabla.
 
-Finalizaremos esta comparación haciendo uso de un test estadístico no paramétrico para comparaciones múltiples mostrado en la Tabla \ref{TestFinal}.
+\begin{table}[h]
+\begin{tabular}{c|c|c|c|c|c|}
+\cline{2-6}
+\multicolumn{1}{l|}{}              & \textbf{AGE} & \textbf{GACEPv1} & \textbf{GACEPvf}                & \textbf{GACEPv2} & \textbf{GACEPv3c50} \\ \hline
+\multicolumn{1}{|c|}{\textbf{1}}   & 4.005155      & 4.005155         & {\color[HTML]{4169E1} 1.020619} & 3.061856         & 2.907216            \\ \hline
+\multicolumn{1}{|c|}{\textbf{2}}   & 4.262887      & 4.262887         & {\color[HTML]{4169E1} 1.010309} & 2.742268         & 2.721649            \\ \hline
+\multicolumn{1}{|c|}{\textbf{3}}   & 4.365979      & 4.365979         & {\color[HTML]{4169E1} 1}        & 2.731959         & 2.536082            \\ \hline
+\multicolumn{1}{|c|}{\textbf{5}}   & 4.469072      & 4.469072         & {\color[HTML]{4169E1} 1}        & 2.731959         & 2.329897            \\ \hline
+\multicolumn{1}{|c|}{\textbf{10}}  & 4.5           & 4.5              & {\color[HTML]{4169E1} 1}        & 2.670103         & 2.329897            \\ \hline
+\multicolumn{1}{|c|}{\textbf{20}}  & 4.185567      & 4.412371         & {\color[HTML]{4169E1} 1.061856} & 2.670103         & 2.670103            \\ \hline
+\multicolumn{1}{|c|}{\textbf{30}}  & 4.536082      & 4.247423         & {\color[HTML]{4169E1} 1.072165} & 2.556701         & 2.587629            \\ \hline
+\multicolumn{1}{|c|}{\textbf{40}}  & 4.85567       & 3.917526         & {\color[HTML]{4169E1} 1.041237} & 2.43299          & 2.752577            \\ \hline
+\multicolumn{1}{|c|}{\textbf{50}}  & 4.845361      & 3.814433         & {\color[HTML]{4169E1} 1.072165} & 2.494845         & 2.773196            \\ \hline
+\multicolumn{1}{|c|}{\textbf{60}}  & 4.773196      & 3.876289         & {\color[HTML]{4169E1} 1.082474} & 2.556701         & 2.71134             \\ \hline
+\multicolumn{1}{|c|}{\textbf{70}}  & 4.762887      & 3.824742         & {\color[HTML]{4169E1} 1.082474} & 2.56701          & 2.762887            \\ \hline
+\multicolumn{1}{|c|}{\textbf{80}}  & 4.742268      & 3.845361         & {\color[HTML]{4169E1} 1.082474} & 2.587629         & 2.742268            \\ \hline
+\multicolumn{1}{|c|}{\textbf{90}}  & 4.742268      & 3.804124         & {\color[HTML]{4169E1} 1.082474} & 2.608247         & 2.762887            \\ \hline
+\multicolumn{1}{|c|}{\textbf{100}} & 4.742268      & 3.804124         & {\color[HTML]{4169E1} 1.082474} & 2.608247         & 2.762887            \\ \hline
+\end{tabular}
+\caption{\label{RankingFinal}Ranking de las versiones destacables para todas la milestones}
+\end{table}
+
+En la gráfica \ref{fig:Final_lineas} y en la tabla \ref{RankingFinal} se puede comprobar como nuestra versión final del algoritmo es mejor que el resto para prácticamente todas las instancias del problema con las que hemos trabajado en todo momento de la ejecución, ya que su \textit{ranking} siempre es 1 o valores muy próximos a 1. 
+Por otra parte, podemos observar en \ref{fig:Final_barras} cómo la clasificación de las distintas versiones presentadas ha ido mejorando a las anteriores. 
+También es importante notar que para cada modificación significante se produce una gran mejora de su \textit{ranking} (ya establecimos anteriormente que el cruce intensivo del 50\% de GACEPv3c50 es bastante similar al cruce uniforme de GACEPv2, por lo que esto no supone una modificación significativa). 
+
+Una vez que sabemos que todos estos algoritmos son mejores que el de referencia profundizaremos un poco más y estudiaremos si se ha producido una mejora significante. 
+Esto se hará calculando la media del porcentaje de mejora de todas las soluciones de estos algoritmos con respecto a las soluciones de AGE. 
+Es decir, para algoritmo \texttt{GACEPvx} y cada \texttt{y} \textit{milestone} se calculará cada entrada de la tabla como:
+\begin{equation}
+\text{Mejora}_{\texttt{GACEPvx}}[\texttt{y}] (\%) = \dfrac{\text{valor}_{\texttt{GACEPvx}}[\texttt{y}] - \text{valor}_{\texttt{AGE}}[\texttt{y}]}{\text{valor}_{\texttt{AGE}}[\texttt{y}]}\cdot 100
+\label{eq:MejoraPorcentual}
+\end{equation}
+donde ``valor$_{\texttt{x}}[\texttt{y}]$'' representa la media de los valores asociados a la mejores soluciones de todas las instancias del problema con el que se ha trabajado del algoritmo \texttt{x} para la \textit{milestone} \texttt{y}. 
+El resultado de dicha operación \ref{eq:MejoraPorcentual} será almacenado en cada celda correspondiente de la tabla \ref{PorcentajeFinal}. 
+Por tanto, dicha tabla \ref{PorcentajeFinal} contiene el porcentaje de mejora medio que presenta cada algoritmo para cada \textit{milestone} con respecto a los resultados del AGE.
+%Adicionalmente, también incluimos una tabla que contiene una valoración en forma de porcentaje de cuánto ha mejorado las soluciones de media cada algoritmo anterior con respecto a la del algoritmo de referencia \ref{PorcentajeFinal}. 
+
+\begin{table}[h]
+\begin{tabular}{l|l|l|l|l|}
+\cline{2-5}
+                                                  & \cellcolor[HTML]{FFFFC7}GACEPv1 & \cellcolor[HTML]{FFFFC7}GACEPv2 & \cellcolor[HTML]{FFFFC7}GACEPv3c50 & \cellcolor[HTML]{FFFFC7}GACEPv10 \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}1}   & 0                               & 0.901815                        & 1.110863221                        & 10.652529                        \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}2}   & 0                               & 1.560207                        & 1.796883169                        & 9.5872114                        \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}3}   & 0                               & 1.6203                          & 2.007854799                        & 9.0990544                        \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}5}   & 0                               & 1.995523                        & 2.55603081                         & 8.5221226                        \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}10}  & 0                               & 2.581898                        & 2.851348575                        & 7.1178565                        \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}20}  & 0.47747                         & 2.30909                         & 2.392188425                        & 6.9379563                        \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}30}  & 0.964412                        & 2.715243                        & 2.744708684                        & 6.0968514                        \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}40}  & 2.908935                        & 4.972009                        & 4.738301258                        & 9.0957422                        \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}50}  & 3.39837                         & 5.308774                        & 5.104018653                        & 8.7712942                        \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}60}  & 3.365162                        & 5.369517                        & 5.243753741                        & 8.5328747                        \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}70}  & 3.421865                        & 5.390454                        & 5.27964846                         & 8.3044041                        \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}80}  & 3.334575                        & 5.249718                        & 5.144348826                        & 8.140204                         \\ \hline
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}90}  & 3.352948                        & 5.160873                        & 5.057682881                        & 8.0153536                        \\ \hline
+\rowcolor[HTML]{DDFDFF} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{FFFFC7}100} & 3.283904                        & 5.072261                        & 4.969288035                        & 7.9231946                        \\ \hline
+\end{tabular}
+\caption{\label{PorcentajeFinal}Mejora porcentual media de las versiones destacables sobre AGE}
+\end{table}
+
+En esta tabla \ref{PorcentajeFinal} se puede comprobar que si bien GACEPv1 mejora a AGE, no parece una mejora muy significante, en tanto que no supera los resultados ni en un 3.5\% en todo momento de la ejecución. 
+Por otra parte, se tiene que tanto GACEPv2 y GACEPv3c50 producen mejoras significativas con respecto a los resultados originales a partir del 40\% de las iteraciones y estas mejoras se mantienen consistentes durante el resto de ejecución, siendo dichas, aproximadamente, del 5\%. 
+Finalmente se tiene que GACEPv10 presenta mejoras significativas sobre las soluciones originales durante toda la ejecución, todas las soluciones superan a las de AGE en al menos un 6\%, siendo la media de 8.34\%. 
+
+Para confirmar que efectivamente se han producido mejoras significativas, haremos uso de un test estadístico no paramétrico para comparaciones múltiples mostrado en la Tabla \ref{TestFinal}.
 
 \begin{table}[h]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\multicolumn{1}{|l|}{Algorithms vs  GACEPvf} & \textbf{Original} & \textbf{Holm}                   & \textbf{Hommel}                 & \textbf{Hochberg}               \\ \hline
-\textbf{AGEU}                                & 1.24E-17          & {\color[HTML]{0000FF} 4.95E-17} & {\color[HTML]{0000FF} 3.25E-17} & {\color[HTML]{0000FF} 3.66E-17} \\ \hline
+\multicolumn{1}{|l|}{Algoritmos vs  GACEPvf} & \textbf{Original} & \textbf{Holm}                   & \textbf{Hommel}                 & \textbf{Hochberg}               \\ \hline
+\textbf{AGE}                                & 1.24E-17          & {\color[HTML]{0000FF} 4.95E-17} & {\color[HTML]{0000FF} 3.25E-17} & {\color[HTML]{0000FF} 3.66E-17} \\ \hline
 \textbf{GACEPv1}                             & 3.66E-17          & {\color[HTML]{0000FF} 4.95E-17} & {\color[HTML]{0000FF} 3.66E-17} & {\color[HTML]{0000FF} 3.66E-17} \\ \hline
 \textbf{GACEPv2}                             & 2.16E-17          & {\color[HTML]{0000FF} 4.95E-17} & {\color[HTML]{0000FF} 3.66E-17} & {\color[HTML]{0000FF} 3.66E-17} \\ \hline
 \textbf{GACEPv3c50}                          & 1.28E-17          & {\color[HTML]{0000FF} 4.95E-17} & {\color[HTML]{0000FF} 3.25E-17} & {\color[HTML]{0000FF} 3.66E-17} \\ \hline
@@ -1215,53 +1421,72 @@ Finalizaremos esta comparación haciendo uso de un test estadístico no paramét
 \caption{\label{TestFinal}Test de $p$-valores para comparaciones múltiples referente la comparación final (Error Global: 5\%)}
 \end{table}
 
-\color{red}
-No sé muy bien como interpretarlo
-\color{black}
+En \ref{TestFinal} se ve de forma clara que GACEPvf mejora de forma significativa no solo el algoritmo original, sino también todas las versiones destacadas previas. 
 
-\section{Resumen de las versiones}
+Como conclusión, procedemos a repasar las modificaciones que se han introducido en GACEPvf con el fin de analizar por qué la combinación de estas produce tan buenos resultados: Histórico, GRASP, PID, NAM y CR. 
 
-A modo de resumen de este capítulo, reuniremos todas las versiones mencionadas en una tabla \ref{ResumenVersiones}.
+Lo que se intentó hacer en un principio fue intensificar tanto la exploración como la explotación de resultados, pero intentando siempre mantener un equilibrio entre ambas. 
+Por ello, tras introducir el Histórico, que suponía una mejora de la explotación, en tanto que priorizaba el uso de determinadas variables que se habían supuesto buenas por pertenecer únicamente a las mejores soluciones de la población, lo lógico fue buscar una modificación que nos permitiese mejorar la exploración del espacio de soluciones sin que se superpusiese con los cambios del Histórico, en nuestro caso esto resultó en el uso del algoritmo GRASP. 
+En tanto que ambas modificaciones nunca se utilizaban al mismo tiempo, tenemos garantizado que no iba a reducir la eficacia de forma directa de ninguno de los dos; es más, como se almacenaban los datos para usar posteriormente el histórico mientras que se usaba el algoritmo GRASP se suponía que iba a aumentar la muestra de soluciones a considerar para determinar cuáles eran mejores y cuáles peores, teniendo algo más de diversidad de elección. 
 
-\begin{table}[h]
-\begin{tabular}{|l|l|l|}
-\hline
-\rowcolor[HTML]{FFFFC7} 
-Algoritmo   & Base       & Descripción                                                                                                                                    \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-AGEU        &            & Algoritmo de referencia AGEU ejecutado con 450 iteraciones                                                                                     \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-GACEPv1     & AGEU       & \begin{tabular}[c]{@{}l@{}}Se introduce el histórico para el Operador de Reparación\\ y Mutación\end{tabular}                                  \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-GACEPv2     & GACEPv1    & Se introduce GRASP al Operador de Reparación                                                                                                   \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-GACEPv3cx   & GACEPv2    & \begin{tabular}[c]{@{}l@{}}Se modifica el operador de cruce a un Operador de Cruce \\ Intensivo, en vez de usar un Cruce Uniforme\end{tabular} \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-GACEPv3cxwo & GACEPv1    & \begin{tabular}[c]{@{}l@{}}Se modifica el operador de cruce a un Operador de Cruce \\ Intensivo, en vez de usar un Cruce Uniforme\end{tabular}                                                                                                                                                \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-GACEPv4     & GACEPv2    & Se introduce una Población Inicial Diversa                                                                                                     \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-GACEPv5     & GACEPv4    & Se introduce una versión del Operador NAM                                                                                                      \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-GACEPv6     & GACEPv4    & Se introduce un nuevo Operador de Reemplazo por Cercanía                                                                                       \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-GACEPv7     & GACEPv6    & \begin{tabular}[c]{@{}l@{}}Se introduce una intensificación de dicho Operador de\\ Reemplazo\end{tabular}                                      \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-GACEPv35cx  & GACEPv5    & Se vuelve a introducir el Operador de Cruce Intensivo                                                                                          \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-GACEPv36cx  & GACEPv6    & Se vuelve a introducir el Operador de Cruce Intensivo                                                                                          \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-GACEPv56    & GACEPv4    & Se introducen las modificaciones de GACEPv5 y GACEPv6                                                                                          \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-GACEPv356cx & GACEPv56   & Se vuelve a introducir el Operador de Cruce Intensivo                                                                                          \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-CHC         &            & Algoritmo de referencia CHC ejecutado con 450 iteraciones                                                                                      \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-GACEPCHCv1  & CHC        & \begin{tabular}[c]{@{}l@{}}Se introduce el histórico para el Operador de Reparación\\ y Mutación\end{tabular}                                  \\ \hline
-\rowcolor[HTML]{DDFDFF} 
-GACEPCHCv2  & GACEPCHCv1 & Se introduce GRASP al Operador de Reparación                                                                                                   \\ \hline
-\rowcolor[HTML]{DAE8FC} 
-GACEPvf     &            & Versión final del algoritmo, será GACEPv56                                                                                                     \\ \hline
-\end{tabular}
-\caption{\label{ResumenVersiones}Resumen de las distintas versiones de los algoritmos utilizadas}
-\end{table}
+Tras esto se realizó un estudio sobre la diversidad y se comprobó que era bastante insuficiente, por lo que dirigimos nuestros esfuerzos a la búsqueda de modificaciones que pudiesen incluirse en nuestro algoritmo de forma que nos permitiese aumentar la diversidad de la población. 
+Lo mínimo se puede pedir si se quiere, como mínimo, mantener la diversidad de una población es que esta ya sea diversa; por ello, es necesario la introducción de la modificación PID. 
+Aunque la inclusión de PID no aporte resultados novedosos, ya que sin ningún operador para mantener dicha diversidad es, a efectos prácticos, equivalente a no usar nada, esta modificación va a ser de importancia como base para los siguientes cambios. 
+
+Por otra parte, estudiamos la incorporación de las modificaciones NAM y CR por separado (\ref{fig:GACEPv2vsGACEPv5} y \ref{fig:GACEPv2vsGACEPv6} respectivamente), obteniendo que la aplicación de NAM daba buenos resultados a partir del 40\% de las iteraciones, mientras que la aplicación de CR solo mejoraba en la mayoría de los casos hasta el 40\% de las iteraciones: 
+\begin{itemize}
+	\item Podemos suponer que esto ocurre ya que CR necesita de otro operador para aumentar la diversidad, debido a que CR es un operador de reemplazo de la población, por lo que por pura probabilidad, se tiene que en algún momento las soluciones introducidas a la población sean cada vez más parecidas al resto de soluciones contenidas, perdiendo así la diversidad en etapas avanzadas de la ejecución.
+	
+	\item En cuanto a NAM se tiene justo lo contrario, en las primeras iteraciones obtendrá peores resultados ya al elegir como segundo padre a la solución más distinta respecto al primer padre (elegido mediante Torneo Binario, para garantizar cierta bondad) es probable que este segundo sea mucho peor, con lo que las soluciones resultantes del cruce es probable que posean un valor bastante reducido, lo que causa una disminución de reemplazos en la población y este comportamiento se mantendrá hasta que se logren introducir suficientes soluciones como mínimo decentes en la población y el uso de este operador no resulte un \textit{handicap}. 
+\end{itemize} 
+Por lo tanto, la combinación de ambas modificaciones puede resultar en una buena idea, ya que aunque el uso de CR evita eliminar la diversidad de la población, el solo uso de este operador resulta insuficiente en tanto que no genera diversidad, por ello tenemos que combinarlo con una técnica que incorpore mayor diversidad, en nuestro caso podremos utilizar el operador NAM. 
+%y por otro lado, NAM necesita de un operador cuyo objetivo sea mantener la diversidad se va a encargar de aumentar la diversidad en la población constantemente de forma que se pueda seguir aprovechando los beneficios de CR.
+
+%\section{Resumen de las versiones}
+
+%A modo de resumen de este capítulo, reuniremos todas las versiones mencionadas en una tabla \ref{ResumenVersiones}. 
+
+%\begin{table}[h]
+%\begin{tabular}{|l|l|l|}
+%\hline
+%\rowcolor[HTML]{FFFFC7} 
+%Algoritmo   & Base       & Descripción                                                                                                                                    \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%AGE        &            & Algoritmo de referencia AGE ejecutado con 450 iteraciones                                                                                     \\ \hline
+%\rowcolor[HTML]{DDFDFF} 
+%GACEPv1     & AGE       & \begin{tabular}[c]{@{}l@{}}Se introduce el histórico para el Operador de Reparación\\ y Mutación\end{tabular}                                  \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%GACEPv2     & GACEPv1    & Se introduce GRASP al Operador de Reparación                                                                                                   \\ \hline
+%\rowcolor[HTML]{DDFDFF} 
+%GACEPv3cx   & GACEPv2    & \begin{tabular}[c]{@{}l@{}}Se modifica el operador de cruce a un Operador de Cruce \\ Intensivo, en vez de usar un Cruce Uniforme\end{tabular} \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%GACEPv3cxwo & GACEPv1    & \begin{tabular}[c]{@{}l@{}}Se modifica el operador de cruce a un Operador de Cruce \\ Intensivo, en vez de usar un Cruce Uniforme\end{tabular}                                                                                                                                                \\ \hline
+%\rowcolor[HTML]{DDFDFF} 
+%GACEPv4     & GACEPv2    & Se introduce una Población Inicial Diversa                                                                                                     \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%GACEPv5     & GACEPv4    & Se introduce una versión del Operador NAM                                                                                                      \\ \hline
+%\rowcolor[HTML]{DDFDFF} 
+%GACEPv6     & GACEPv4    & Se introduce un nuevo Operador de Reemplazo por Cercanía                                                                                       \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%GACEPv7     & GACEPv6    & \begin{tabular}[c]{@{}l@{}}Se introduce una intensificación de dicho Operador de\\ Reemplazo\end{tabular}                                      \\ \hline
+%\rowcolor[HTML]{DDFDFF} 
+%GACEPv35cx  & GACEPv5    & Se vuelve a introducir el Operador de Cruce Intensivo                                                                                          \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%GACEPv36cx  & GACEPv6    & Se vuelve a introducir el Operador de Cruce Intensivo                                                                                          \\ \hline
+%\rowcolor[HTML]{DDFDFF} 
+%GACEPv56    & GACEPv4    & Se introducen las modificaciones de GACEPv5 y GACEPv6                                                                                          \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%GACEPv356cx & GACEPv56   & Se vuelve a introducir el Operador de Cruce Intensivo                                                                                          \\ \hline
+%\rowcolor[HTML]{DDFDFF} 
+%CHC         &            & Algoritmo de referencia CHC ejecutado con 450 iteraciones                                                                                      \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%GACEPCHCv1  & CHC        & \begin{tabular}[c]{@{}l@{}}Se introduce el histórico para el Operador de Reparación\\ y Mutación\end{tabular}                                  \\ \hline
+%\rowcolor[HTML]{DDFDFF} 
+%GACEPCHCv2  & GACEPCHCv1 & Se introduce GRASP al Operador de Reparación                                                                                                   \\ \hline
+%\rowcolor[HTML]{DAE8FC} 
+%GACEPvf     &            & Versión final del algoritmo, será GACEPv56                                                                                                     \\ \hline
+%\end{tabular}
+%\caption{\label{ResumenVersiones}Resumen de las distintas versiones de los algoritmos utilizadas}
+%\end{table}
+
+

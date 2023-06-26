@@ -1,1 +1,35 @@
-\chapter{Conclusiones}
+\chapter{Conclusiones y trabajo futuro}
+
+El caso más habitual que se da en el diseño de algoritmos que se encuentra en la literatura implica tomar un algoritmo que es de por sí competitivo en lo relativo, al menos, al problema que se está tratando como base para el desarrollo que se va a realizar y se concluye con un análisis comparativo entre el propio algoritmo resultado del diseño y otros algoritmos competitivos de la literatura. 
+Sin embargo, esto no ha sido posible en nuestro caso debido a la inexistencia de un algoritmo previo que tuviese como objetivo la resolución de problemas de optimización combinatorios \textit{expensive}. 
+Por ello, este trabajo resulta ser un estudio novedoso en el ámbito de la resolución de dichos problemas: se ha tenido que empezar desde cero, desde un algoritmo genético clásico y básico como es el AGE que no aporta especialmente buenos resultados en este ámbito de trabajo, y repasar campos de estudio de diferentes problemas con el fin de obtener inspiración para superar los inconvenientes que han surgido a lo largo del desarrollo. 
+
+Por este motivo, probablemente el mayor reto ha devenido en lidiar con los problemas propios de un proceso creativo (falta de inspiración, resultados insuficientes, \dots) y en la naturaleza de un proyecto individual de tan larga duración donde la planificación y el trabajo constante han sido vitales para lograr presentar un proyecto de calidad finalizado. 
+En este sentido, las prácticas desarrollados previamente a lo largo del doble grado (principalmente en las asignaturas del Grado de Ingeniería Informática, donde la realización de diversos trabajos para la evaluación de la parte práctica eran frecuentes), si bien de menor envergadura y mucho más guiados, fueron los cimientos para afrontar dichas situaciones adversas y superarlas adecuadamente. 
+
+Por lo tanto, podemos afirmar que este trabajo no solo destaca por presentar un algoritmo con el que se ha conseguido alcanzar satisfactoriamente el objetivo principal de este proyecto, esto es, el diseño de una metaheurística útil para ser aplicada en problemas combinatorios \textit{expensive}, sino que lo hace también por lo siguiente:
+
+\begin{itemize}
+	\item Se detalla cómo debe ser un proceso creativo desde el inicio cuyo objetivo sea el desarrollo de un algoritmo de esta clase.
+	
+	\item Se trata un problema que no ha sido explorado con anterioridad, por lo que es un estudio sin antecedentes en su campo.
+	
+	\item Se trata de un estudio con una gran utilidad, debido al creciente uso de problemas combinatorios en problemas complejos. 
+\end{itemize}
+
+Además, ha resultado un proyecto muy completo que ha posibilitado no solo afianzar los conocimientos teóricos adquiridos durante el doble grado, sino también ampliarlos y ponerlos en práctica: 
+obviamente ha sido necesario un predominante conocimiento sobre asignaturas orientadas al estudio de algoritmos (como sería Metaheurística y Algorítmica), se han analizado resultados usando métodos con bases matemáticas (en el ámbito de la estadística, análisis y matemáticas aplicadas), se han consultado numerosas fuentes bibliográficas, se ha utilizado uno de los lenguajes de programación que más he usado durante estos cinco años (\texttt{C++}), se han utilizado herramientas experimentales\dots 
+Como se puede comprobar, los conocimientos necesarios para llevar a cabo estas tareas provienen de una gran variedad de asignaturas del doble grado, evidenciando así la condición transversal de este proyecto. 
+
+Personalmente he disfrutado en gran medida el experimentar de primera mano cómo es el procedimiento a seguir cuando se quiere desarrollar algo nuevo y propio, aunque ha habido muchos momentos de frustración porque no lograba alcanzar los resultados deseados, todos palidecían en comparación a la alegría que se siente cuando tras tanto esfuerzo consigues superar el problema con el que te enfrentabas. 
+También me ha parecido muy interesante todo el proceso de búsqueda de información/inspiración, ya que siempre me ha llamado la atención la cantidad de ideas tan diferentes que se le pueden ocurrir a distintas personas cuando afrontan el mismo problema; esto me permite no solo aprender más acerca de los distintos operadores que se podrían implementar, sino también me permite descubrir otros puntos de vista, aumentando mis horizontes y mejorando mi capacidad de razonamiento. 
+Sin embargo, la parte de documentar todo el trabajo en esta memoria se me ha hecho bastante tedioso, ya que era solo formalizar cosas que ya sabía y veía muy obvias por haber estado un curso entero trabajando en ello; supongo que así es cómo se sienten muchos profesores cuando intentan explicarnos cosas que para ellos son obvias y nosotros seguimos sin enterarnos. 
+
+Para finalizar, cabe destacar que sigue siendo necesario realizar más estudios sobre cómo resolver problemas combinatorios \textit{expensive}, dado que son problemas con una gran cantidad de aplicaciones en el mundo real, y que el algoritmo aquí presentado, como cualquier otra metaheurística existente, no está terminado, puesto que siempre queda margen de mejora. 
+Sería interesante que se partiese del algoritmo propuesto en este trabajo y se realizasen las modificaciones sobre él y/o se utilizase para realizar comparaciones de los nuevos algoritmos que se desarrollasen (ya que al fin y al cabo es el único existente para este tipo de problemas en el momento en que se está escribiendo esto). 
+Algunas de las modificaciones que podrían ser interesantes de comprobar serían, entre otras:
+\begin{itemize}
+	\item Estudiar y aplicar otros operadores de cruce, ya que ha sido la única característica propia del AGE que se ha mantenido hasta el algoritmo final propuesto. 
+	\item Estudiar la aplicación de parámetros auto-adaptativos que no requieran que el usuario lo pre-ajuste, ya que en la literatura se ha indicado como un enfoque prometedor de desarrollo de algoritmo genéticos. 
+\end{itemize}
+Es importante mencionar que no siempre tener un algoritmo más complejo implica que se vayan a obtener mejores resultados.

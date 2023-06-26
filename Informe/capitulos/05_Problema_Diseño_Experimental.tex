@@ -61,32 +61,16 @@ También se considera una versión restringida del \textit{Quadratic 0-1 Program
 Como uno cabría esperar, debido a su generalidad, el QKP tiene un amplio espectro de aplicaciones. 
 Witzgall \parencite{witzgallMathematicalMethodsSite1975} presentó un problema que surge en telecomunicación cuando un número de localizaciones para satélites tienen que ser seleccionados, tales que el tráfico global entre estas estaciones se maximice y la limitación de presupuesto se cumpla; este problema resulta ser un QKP. 
 
-%En tanto que QKP es un problema $\mathcal{NP}-hard$, no podemos esperar encontrar una aproximación totalmente polinómica a no ser que $\mathcal{NP}=\mathcal{P}$. 
-%Sin embargo, Rader y Woeginger %referencias
-%desarrollaron un esquema de aproximación en tiempo completamente polinómico (FPTAS, \textit{Fully polynomial-time approximation scheme}) para el caso especial donde todos los beneficios $p_{ij}\geq 0$ y donde 
+En tanto que QKP es un problema $\mathcal{NP}-hard$, no podemos esperar encontrar una aproximación totalmente polinómica a no ser que $\mathcal{NP}=\mathcal{P}$. 
+Sin embargo, Rader y Woeginger \parencite{raderjrQuadraticKnapsackProblem2002}
+desarrollaron un esquema de aproximación en tiempo completamente polinómico (FPTAS, \textit{Fully polynomial-time approximation scheme}) para el caso especial donde todos los beneficios $p_{ij}\geq 0$. 
+También probaron que si el problema tiene coeficientes de la función objetivo positivos y negativos, entonces el problema es fuertemente $\mathcal{NP}-hard$, por lo que no podemos esperar encontrar ningún FPTAS (a no ser que $\mathcal{NP}=\mathcal{P}$).
 
 \section{Datos del problema}
 
-Utilizaremos 97 archivos de datos generados aleatoriamente de \href{http://cedric.cnam.fr/~soutif/QKP/QKP.html}{(QKP) \textit{instances}}, los cuales se pueden distribuir de forma que se indica en la Tabla \ref{DatosProblema}
+Utilizaremos 97 archivos de datos generados aleatoriamente de \href{http://cedric.cnam.fr/~soutif/QKP/QKP.html}{(QKP) \textit{instances}}\footnote{http://cedric.cnam.fr/~soutif/QKP/QKP.html}, los cuales se pueden distribuir de forma que se indica en la Tabla \ref{DatosProblema}.
 
-Se entiende como ``densidad'' al porcentaje de beneficios combinados positivos, es decir, $p_{ij} > 0$. 
-Particularmente QP tendría densidad 0\%.
-
-Ahora bien, todos los archivos tienen el mismo formato, lo cual resulta útil para definir funciones capaces de obtener los datos más relevantes para nuestros algoritmos. 
-El formato que siguen los archivos es el siguiente:
-\begin{itemize}
-	\item La referencia de la instancia: Su nombre.
-	\item El número de variables ($n$)
-	\item Los coeficientes lineales de la función objetivo $p_{jj}$
-	\item Los coeficientes cuadráticos $p_{ij}$: representados en líneas
-	\item Una línea en blanco
-	\item 0 si la restricción es de tipo $\leq$, lo cual siempre va a ocurrir ya que estamos considerando instancias QKP.
-	\item La capacidad $c$ de la mochila.
-	\item Los coeficientes de capacidad/peso, $w_j$.
-	\item Algunos comentarios.
-\end{itemize}
-
-\begin{table}[H]
+\begin{table}[h]
 \caption{Datos del Problema}
 \label{DatosProblema}
 \begin{tabular}{|c|c|c|}
@@ -111,4 +95,52 @@ El formato que siguen los archivos es el siguiente:
 \end{tabular}
 \end{table}
 
+Se entiende como ``densidad'' al porcentaje de beneficios combinados positivos, es decir, $p_{ij} > 0$. 
+Particularmente, QP tendría densidad 0\%.
+
+Ahora bien, todos los archivos tienen el mismo formato, lo cual resulta útil para definir funciones capaces de obtener los datos más relevantes para nuestros algoritmos. 
+En primer lugar, mencionar que todos los archivos de datos tienen el mismo formato de nombre:
+\begin{equation*}
+\text{jeu\_}n\text{\_}d\_x\text{.txt}
+\end{equation*}
+donde $n$ representa el número de variables que contiene, $d$ la densidad y $x$ el número asociado a dicha instancia. 
+
+Dentro de cada archivo de datos se sigue el siguiente formato para representar los datos:
+\begin{itemize}
+	\item La referencia de la instancia: Su nombre.
+	\item El número de variables ($n$)
+	\item Los coeficientes lineales de la función objetivo $p_{jj}$
+	\item Los coeficientes cuadráticos $p_{ij}$: representados en líneas
+	\item Una línea en blanco
+	\item 0 si la restricción es de tipo $\leq$, lo cual siempre va a ocurrir ya que estamos considerando instancias QKP.
+	\item La capacidad $c$ de la mochila.
+	\item Los coeficientes de capacidad/peso, $w_j$.
+	\item Algunos comentarios.
+\end{itemize}
+
 %Introducir algún ejemplo?
+Un ejemplo breve con 10 variables de qué contendría un archivo y cómo analizarlo sería el siguiente:
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{imagenes/ejemploInstancia.png}
+        \caption{Ejemplo de instancia de problema}
+        \label{fig:ejemploInstancia}
+\end{figure}
+
+En este caso se tiene:
+\begin{itemize}
+	\item La referencia de la instancia (r\_10\_100\_13)
+	\item El número de variables: 10
+	\item Los coeficientes lineales de la función objetivo $p_{ii}$: 91 78 22 4 48 85 46 81 3 26
+	\item Los coeficientes cuadráticos de la función objetivo $p_(ij)$: la matriz triangular
+	\item Tras la línea en blanco tenemos un 0 que representa el tipo de restricción (todas las instancias con las que trabajamos en este caso tienen este tipo de restricción). 
+	\item La capacidad total: 145.
+	\item La capacidad que necesita cada variable $w_i$: 34 33 12 3 43 26 10 2 48 39
+	\item Comentarios:
+	\begin{itemize}
+		\item La densidad: 100.00\%. Que la podemos obtener de la propia referencia, por lo que no nos es de mucha utilidad este dato. 
+		\item La semilla: 13. Como se explicará más adelante, utilizaremos varias semillas con el fin de que los resultados sean reproducibles y poder utilizar tests estadísticos. Por lo tanto, tampoco nos es de mucha utilidad este dato. 
+	\end{itemize}
+\end{itemize}
+

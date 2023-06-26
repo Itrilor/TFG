@@ -14,7 +14,8 @@ Uno de los problemas más conocidos capaz de ilustrar este hecho es el \textbf{P
 Este problema consiste en que, dado un conjunto de ciudades por las que el comercial debe pasar, se debe encontrar el orden en que visita las ciudades de forma que el comercial recorra la menor distancia posible. 
 Aunque sea un problema sencillo de formular, la cantidad de posibles caminos incrementa en gran medida a la vez que el número de ciudades a recorrer aumenta. 
 Por tanto, al aumentar el tamaño del problema, toda técnica conocida para extraer la solución exacta requeriría de un tiempo de ejecución que deja de ser asequible incluso para los ordenadores. 
-Es decir, tenemos métodos que nos llevan a la solución, pero no existen formas de ejecutarlos. 
+%Es decir, tenemos métodos que nos llevan a la solución, pero no existen formas de ejecutarlos. 
+A este tipo de problemas se les denominan problemas NP (\textit{Nondeterministic Polynomial Time}), por lo que no pueden ser resueltos de forma realista exacta en tiempo polinomial. 
 %Llegados a este punto, si bien tenemos que dejar de plantearnos la pregunta ``¿cuál es el camino más corto?'', podemos empezar a formular una pregunta similar: ``¿qué camino es lo suficientemente corto?''; o sea, a veces tenemos que abandonar la idea de obtener la solución óptima y conformarnos con una solución aproximada de una calidad similar a la óptima.
 
 Por ello, tenemos que encontrar alternativas más viables para la resolución de los problemas, es decir, tenemos que usar algoritmos aproximados, que proporcionan buenas soluciones (no necesariamente la óptima) en un tiempo razonable. 
@@ -42,7 +43,7 @@ Por lo que es de gran interés crear un algoritmo que resulte útil para este ti
 
 %<En este trabajo vamos a ...>
 En este Trabajo de Fin de Grado vamos a diseñar, implementar y proponer un algoritmo especialmente diseñado para problemas combinatorios \textit{expensive}. 
-El objetivo principal de este algoritmo será encontrar buenas soluciones en una cantidad de tiempo bastante reducida, lo que vamos a traducir en un menor número de iteraciones. 
+El objetivo principal de este algoritmo será encontrar buenas soluciones en una cantidad de tiempo bastante reducida, lo que vamos a traducir en evaluar un número muy reducido de soluciones. 
 Para ello, procederemos a tomar un problema sobre el que trabajar y extraer conclusiones y un algoritmo de referencia sobre el que realizaremos un proceso recursivo: introduciremos alguna modificación y compararemos los resultados obtenidos con los del algoritmo de referencia, en caso de mejorarlos, este algoritmo con modificación se convertirá en el nuevo algoritmo de referencia. 
 De esta forma se puede garantizar que los resultados que finalmente alcanzaremos son competitivos. 
 
@@ -50,7 +51,7 @@ De esta forma se puede garantizar que los resultados que finalmente alcanzaremos
 
 Los objetivos principales se centrarán en el desarrollo de una metaheurística útil para aplicarse a problemas combinatorios costosos:
 \begin{enumerate}
-	\item Parte matemática: Revisión teórica en la que se basa el desarrollo de algoritmos para problemas de minimización y . 
+	\item Parte matemática: Revisión teórica en la que se basa el desarrollo de algoritmos para problemas de minimización. 
 	Dentro del mismo, encontramos los siguientes objetivos parciales:
 	\begin{itemize}
 		\item Repaso de distintos algoritmos de la literatura para resolver problemas de minimización sin restricciones. 

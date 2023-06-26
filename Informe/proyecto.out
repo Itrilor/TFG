@@ -55,29 +55,29 @@
 \BOOKMARK [1][-]{section.9.5}{Operador NAM}{chapter.9}% 55
 \BOOKMARK [1][-]{section.9.6}{Operador Reemplazo: Crowding Determin\355stico}{chapter.9}% 56
 \BOOKMARK [2][-]{subsection.9.6.1}{Reemplazo intensivo}{section.9.6}% 57
-\BOOKMARK [0][-]{chapter.10}{Evoluci\363n en la propuesta red\(In progress\)black}{part.2}% 58
+\BOOKMARK [0][-]{chapter.10}{Evoluci\363n en la propuesta}{part.2}% 58
 \BOOKMARK [1][-]{section.10.1}{Dise\361o Experimental}{chapter.10}% 59
 \BOOKMARK [2][-]{subsection.10.1.1}{Criterio de Parada}{section.10.1}% 60
 \BOOKMARK [2][-]{subsection.10.1.2}{Par\341metros}{section.10.1}% 61
-\BOOKMARK [1][-]{section.10.2}{Algoritmos de Referencia experimentaci\363n}{chapter.10}% 62
-\BOOKMARK [1][-]{section.10.3}{Resultados versi\363n expensive}{chapter.10}% 63
-\BOOKMARK [1][-]{section.10.4}{Incorporaci\363n del hist\363rico}{chapter.10}% 64
-\BOOKMARK [1][-]{section.10.5}{Uso de GRASP}{chapter.10}% 65
-\BOOKMARK [1][-]{section.10.6}{Operador de Cruce Intensivo}{chapter.10}% 66
-\BOOKMARK [2][-]{subsection.10.6.1}{Utilizando GRASP}{section.10.6}% 67
-\BOOKMARK [2][-]{subsection.10.6.2}{Sin utilizar GRASP}{section.10.6}% 68
-\BOOKMARK [1][-]{section.10.7}{Modificaciones sobre CHC}{chapter.10}% 69
-\BOOKMARK [2][-]{subsection.10.7.1}{Incorporaci\363n del hist\363rico}{section.10.7}% 70
-\BOOKMARK [2][-]{subsection.10.7.2}{Uso del GRASP}{section.10.7}% 71
-\BOOKMARK [1][-]{section.10.8}{Estudio de la diversidad}{chapter.10}% 72
-\BOOKMARK [1][-]{section.10.9}{Incrementando la diversidad}{chapter.10}% 73
-\BOOKMARK [2][-]{subsection.10.9.1}{Poblaci\363n Inicial Diversa}{section.10.9}% 74
-\BOOKMARK [2][-]{subsection.10.9.2}{Versi\363n del NAM}{section.10.9}% 75
-\BOOKMARK [2][-]{subsection.10.9.3}{Versi\363n del Crowding Determin\355stico}{section.10.9}% 76
-\BOOKMARK [2][-]{subsection.10.9.4}{Combinaciones}{section.10.9}% 77
-\BOOKMARK [2][-]{subsection.10.9.5}{Comparaciones}{section.10.9}% 78
-\BOOKMARK [1][-]{section.10.10}{Comparaci\363n final}{chapter.10}% 79
-\BOOKMARK [1][-]{section.10.11}{Resumen de las versiones}{chapter.10}% 80
-\BOOKMARK [0][-]{chapter.11}{Conclusiones}{part.2}% 81
-\BOOKMARK [0][-]{chapter*.38}{Bibliograf\355a}{part.2}% 82
-\BOOKMARK [0][-]{appendix.Alph1}{Tablas de Resultados}{part.2}% 83
+\BOOKMARK [1][-]{section.10.2}{Resultados versi\363n expensive}{chapter.10}% 62
+\BOOKMARK [1][-]{section.10.3}{Incorporaci\363n del hist\363rico}{chapter.10}% 63
+\BOOKMARK [1][-]{section.10.4}{Uso de GRASP}{chapter.10}% 64
+\BOOKMARK [1][-]{section.10.5}{Operador de Cruce Intensivo}{chapter.10}% 65
+\BOOKMARK [2][-]{subsection.10.5.1}{Utilizando GRASP}{section.10.5}% 66
+\BOOKMARK [2][-]{subsection.10.5.2}{Sin utilizar GRASP}{section.10.5}% 67
+\BOOKMARK [1][-]{section.10.6}{Modificaciones sobre CHC}{chapter.10}% 68
+\BOOKMARK [2][-]{subsection.10.6.1}{Incorporaci\363n del hist\363rico}{section.10.6}% 69
+\BOOKMARK [2][-]{subsection.10.6.2}{Uso del GRASP}{section.10.6}% 70
+\BOOKMARK [1][-]{section.10.7}{Estudio de la diversidad}{chapter.10}% 71
+\BOOKMARK [1][-]{section.10.8}{Incrementando la diversidad}{chapter.10}% 72
+\BOOKMARK [2][-]{subsection.10.8.1}{Poblaci\363n Inicial Diversa}{section.10.8}% 73
+\BOOKMARK [2][-]{subsection.10.8.2}{Versi\363n del NAM}{section.10.8}% 74
+\BOOKMARK [2][-]{subsection.10.8.3}{Versi\363n del Crowding Determin\355stico}{section.10.8}% 75
+\BOOKMARK [2][-]{subsection.10.8.4}{Combinaciones}{section.10.8}% 76
+\BOOKMARK [2][-]{subsection.10.8.5}{Comparaciones}{section.10.8}% 77
+\BOOKMARK [1][-]{section.10.9}{Comparaci\363n final}{chapter.10}% 78
+\BOOKMARK [2][-]{subsection.10.9.1}{Resumen de versiones}{section.10.9}% 79
+\BOOKMARK [2][-]{subsection.10.9.2}{Comparaci\363n}{section.10.9}% 80
+\BOOKMARK [0][-]{chapter.11}{Conclusiones y trabajo futuro}{part.2}% 81
+\BOOKMARK [0][-]{chapter*.39}{Bibliograf\355a}{part.2}% 82
+\BOOKMARK [0][-]{appendix.Alph1}{Ap\351ndice: Tablas de Resultados Individuales}{part.2}% 83

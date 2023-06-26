@@ -64,7 +64,8 @@ En \parencite{liEvolutionaryComputationExpensive2022} se hacen referencia y se e
 Sin embargo, si bien somos capaces de encontrar una gran cantidad de investigaciones para EOPs, debemos notar que la vasta mayoría se refieren a problemas con parámetros reales, es decir, que pertenecen a los casos continuos. 
 Esto implica que para el ámbito de los problemas combinatorios \textit{expensive} nos encontramos con una sequía de estudios al respecto y, por tanto, algoritmos desarrollados para optimizar su resolución. 
 Un ejemplo de este tipo de problemas lo podemos encontrar en el artículo \parencite{martinezLightsShadowsEvolutionary2021b}, donde se emplea una fusión de algoritmos de optimización basados en la biología y modelos de \textit{Deep Learning}. 
-Para recalcar la necesidad de algoritmos pensados para problemas combinatorios \textit{expensive} podemos mencionar el artículo \parencite{poyatosEvoPruneDeepTLEvolutionaryPruning2023a}, donde los propios autores reconocen que estuvieron obligados a reducir en gran medida el número de evaluaciones de los algoritmos utilizados, lo que impedía el uso de tests estadísticos para estudiar el nivel de significación de las diferencias encontradas, debido a los elevados tiempos de ejecución para cada simulación. 
+Para recalcar la necesidad de algoritmos pensados para problemas combinatorios \textit{expensive} podemos mencionar el artículo \parencite{poyatosEvoPruneDeepTLEvolutionaryPruning2023a}, donde se propone el uso de EvoPruneDeepTL (un modelo de poda evolutiva para aprendizaje por transferencia basado en redes neuronales profundas) aplicado a un problema de clasificación de imágenes. 
+En dicho artículo los propios autores reconocen que estuvieron obligados a reducir en gran medida el número de evaluaciones de los algoritmos utilizados, lo que impedía el uso de tests estadísticos para estudiar el nivel de significación de las diferencias encontradas, debido a los elevados tiempos de ejecución para cada simulación. 
 
 %Describir posibles opciones a considerar
 %  - Uso de parámetros adaptativos y auto-adaptativos [referencia], guiándose no solo por mejor actual, si no por histórico.
@@ -76,7 +77,7 @@ Así, los valores son totalmente dependientes del mecanismo de evolución y del 
 Pellerin et al. \parencite{pellerinSelfadaptiveParametersGenetic2004} realizan  un estudio sobre este tipo de comportamiento y obtienen resultados que indican un enfoque prometedor de desarrollo de AGs con parámetros auto-adaptativos que no requieran que el usuario los pre-ajuste. 
 Podemos también encontrar una breve clasificación de los distintos métodos de auto-adaptabilidad propuestos en la literatura: empírico y adaptativo \parencite{eibenParameterControlEvolutionary1999} \parencite{loboOverviewParameterlessGenetic2008}: 
 \begin{itemize}
-	\item Enfoque empírico: Se basan solo en la experimentación y en la observación . 
+	\item Enfoque empírico: Se basan solo en la experimentación y en la observación. 
 	Miden el rendimiento de las AG por ensayo y error, a la vez que se modifican los parámetros del algoritmo \parencite{eibenParameterControlEvolutionary1999}. 
 	Por lo tanto, es necesario encontrar buenos valores para dichos parámetros antes de ejecutar el algoritmo, y estos valores se mantendrán constantes durante la ejecución. 
 	\item Enfoque adaptativo. 
@@ -89,7 +90,7 @@ Podemos también encontrar una breve clasificación de los distintos métodos de
 
 %  - Modificación del operador de cruce [referencia]
 Como ya se ha indicado, los AGs tienen gran capacidad de adaptarse a la estructura del espacio de soluciones y controlar el equilibrio entre búsquedas locales y globales, incluso sin ajustar sus parámetros, como serían la probabilidad de cruce o mutación. 
-Obviamente, ningún algoritmo es perfectamente adecuado para todos los problemas de acuerdo al teorema \textit{Not free lunch}, pero un determinado tipo de cruce puede llegar a resolver un gran número de problemas. 
+Obviamente, ningún algoritmo es perfectamente adecuado para todos los problemas de acuerdo al teorema \textit{No free lunch} \parencite{wolpertNoFreeLunch1997}, pero un determinado tipo de cruce puede llegar a resolver un gran número de problemas. 
 Por ello, se han propuesto una gran cantidad de variantes de AGs en las que se modifican el tipo de cruce a lo largo de estos últimos años. 
 Chaturvedi y Sharma en el capítulo \textit{A Modified Genetic Algorithm Based on Improved Crossover Array Approach} \parencite{chaturvediModifiedGeneticAlgorithm2019} estudiaron la introducción de un AG con un operador de cruce mejorado de tal forma que se eligiese dinámicamente el tipo de operador de cruce que se iba a utilizar en el problema. 
 Cheng y Gen \parencite{chengCrossoverIntensiveSearch1994} propusieron un nuevo operador de cruce para el problema del viajante de comercio con el objetivo de mejorar el AG tanto en tiempo como en precisión mediante el uso de relaciones de precedencia local entre los genes para obtener candidatos de posibles \textit{edges} y relaciones de precedencia global entre los genes para obtener al mejor entre los candidatos. 
@@ -126,7 +127,7 @@ Pisinger \parencite{pisingerQuadraticKnapsackProblem2007} realizó un estudio so
 
 %  - Describir que usarás la guía de buenas prácticas [referencia]
 
-Por último, se debe mencionar que se ha intentado seguir una guía de buenas prácticas (artículo \parencite{latorrePrescriptionMethodologicalGuidelines2021}), aunque hay algunos puntos que no se pueden cumplir por motivos explicados más adelante. 
+Por último, se debe mencionar que se ha intentado seguir una guía de buenas prácticas (artículo \parencite{latorrePrescriptionMethodologicalGuidelines2021}), aunque hay un punto que no se ha podido cumplir: el uso de benchmarks, debido a la ausencia de algoritmos diseñados específicamente para resolver este tipo de problemas. 
 Podemos resumir lo utilizado de dicha guía en: 
 \begin{itemize}
 	\item \textbf{Validación de los resultados}: 
