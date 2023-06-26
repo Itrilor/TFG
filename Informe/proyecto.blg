@@ -1,18 +1,18 @@
 [0] Config.pm:312> INFO - This is Biber 2.15 (beta)
 [0] Config.pm:315> INFO - Logfile is 'proyecto.blg'
-[85] biber-MSWIN64:330> INFO - === 
-[102] Biber.pm:415> INFO - Reading 'proyecto.bcf'
-[204] Biber.pm:952> INFO - Found 39 citekeys in bib section 0
-[220] Biber.pm:4334> INFO - Processing section 0
-[236] Biber.pm:4523> INFO - Looking for bibtex format file 'TFG.bib' for section 0
-[256] bibtex.pm:1682> INFO - LaTeX decoding ...
-[394] bibtex.pm:1494> INFO - Found BibTeX data source 'TFG.bib'
-[483] Utils.pm:395> WARN - ISBN '978-3-642-20524-8 978-3-642-20525-5' in entry 'simoesCHCBasedAlgorithmsDynamic2011' is invalid - run biber with '--validate_datamodel' for details.
-[503] Utils.pm:395> WARN - ISBN '978-3-642-10700-9 978-3-642-10701-6' in entry 'tenneComputationalIntelligenceExpensive2010' is invalid - run biber with '--validate_datamodel' for details.
-[549] Utils.pm:395> WARN - ISBN '9789811302770' in entry 'chaturvediModifiedGeneticAlgorithm2019' is invalid - run biber with '--validate_datamodel' for details.
-[661] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[661] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[661] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[688] bbl.pm:651> INFO - Writing 'proyecto.bbl' with encoding 'UTF-8'
-[715] bbl.pm:754> INFO - Output to proyecto.bbl
-[715] Biber.pm:128> INFO - WARNINGS: 3
+[87] biber-MSWIN64:330> INFO - === 
+[105] Biber.pm:415> INFO - Reading 'proyecto.bcf'
+[209] Biber.pm:952> INFO - Found 42 citekeys in bib section 0
+[226] Biber.pm:4334> INFO - Processing section 0
+[241] Biber.pm:4523> INFO - Looking for bibtex format file 'TFG.bib' for section 0
+[262] bibtex.pm:1682> INFO - LaTeX decoding ...
+[427] bibtex.pm:1494> INFO - Found BibTeX data source 'TFG.bib'
+[518] Utils.pm:395> WARN - ISBN '978-3-642-20524-8 978-3-642-20525-5' in entry 'simoesCHCBasedAlgorithmsDynamic2011' is invalid - run biber with '--validate_datamodel' for details.
+[537] Utils.pm:395> WARN - ISBN '978-3-642-10700-9 978-3-642-10701-6' in entry 'tenneComputationalIntelligenceExpensive2010' is invalid - run biber with '--validate_datamodel' for details.
+[590] Utils.pm:395> WARN - ISBN '9789811302770' in entry 'chaturvediModifiedGeneticAlgorithm2019' is invalid - run biber with '--validate_datamodel' for details.
+[718] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[718] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[718] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[749] bbl.pm:651> INFO - Writing 'proyecto.bbl' with encoding 'UTF-8'
+[779] bbl.pm:754> INFO - Output to proyecto.bbl
+[779] Biber.pm:128> INFO - WARNINGS: 3

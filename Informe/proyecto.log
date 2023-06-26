@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  24 JUN 2023 11:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2023.3.11)  26 JUN 2023 20:37
 entering extended mode
 **./proyecto.tex
 (proyecto.tex
@@ -1032,25 +1032,25 @@ LaTeX Warning: Label `fig:AGEUvsGACEPv1@cref' multiply defined.
 )
 \openout1 = `proyecto.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 231.
-LaTeX Font Info:    ... okay on input line 231.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 231.
-LaTeX Font Info:    ... okay on input line 231.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 231.
-LaTeX Font Info:    ... okay on input line 231.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 231.
-LaTeX Font Info:    ... okay on input line 231.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 231.
-LaTeX Font Info:    ... okay on input line 231.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 231.
-LaTeX Font Info:    ... okay on input line 231.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 231.
-LaTeX Font Info:    ... okay on input line 231.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 231.
-LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 233.
+LaTeX Font Info:    ... okay on input line 233.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 233.
+LaTeX Font Info:    ... okay on input line 233.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 233.
+LaTeX Font Info:    ... okay on input line 233.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 233.
+LaTeX Font Info:    ... okay on input line 233.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 233.
+LaTeX Font Info:    ... okay on input line 233.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 233.
+LaTeX Font Info:    ... okay on input line 233.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 233.
+LaTeX Font Info:    ... okay on input line 233.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 233.
+LaTeX Font Info:    ... okay on input line 233.
 \c@lstlisting=\count452
-LaTeX Info: Redefining \. on input line 231.
-LaTeX Info: Redefining \% on input line 231.
+LaTeX Info: Redefining \. on input line 233.
+LaTeX Info: Redefining \% on input line 233.
  ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count453
@@ -1069,7 +1069,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring ON on input line 231.
+Package hyperref Info: Link coloring ON on input line 233.
 
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1082,9 +1082,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count459
 )
-LaTeX Info: Redefining \ref on input line 231.
-LaTeX Info: Redefining \pageref on input line 231.
-LaTeX Info: Redefining \nameref on input line 231.
+LaTeX Info: Redefining \ref on input line 233.
+LaTeX Info: Redefining \pageref on input line 233.
+LaTeX Info: Redefining \nameref on input line 233.
 
 (proyecto.out) (proyecto.out)
 \@outlinefile=\write4
@@ -1108,8 +1108,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'proyecto.bbl' found.
  (proyecto.bbl)
-Package biblatex Info: Reference section=0 on input line 231.
-Package biblatex Info: Reference segment=0 on input line 231.
+Package biblatex Info: Reference section=0 on input line 233.
+Package biblatex Info: Reference segment=0 on input line 233.
 
 ("C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape.sty"
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1240,35 +1240,35 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 \cleardoublepage
+l.48 \cleardoublepage
                       [3]pdfTeX warning (ext4): destination with the same ident
 ifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 \cleardoublepage
+l.48 \cleardoublepage
                       [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 [5] [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 [7] [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
@@ -1302,26 +1302,16 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
-[2]
-Overfull \hbox (2.79823pt too wide) detected at line 188
-\T1/lmr/m/n/10.95 10.10. 
- []
-
-
-Overfull \hbox (2.79823pt too wide) detected at line 190
-\T1/lmr/m/n/10.95 10.11. 
- []
-
-)
+[2])
 \tf@toc=\write5
 \openout5 = `proyecto.toc'.
 
-LaTeX Info: Redefining \. on input line 236.
-LaTeX Info: Redefining \% on input line 236.
+LaTeX Info: Redefining \. on input line 238.
+LaTeX Info: Redefining \% on input line 238.
 
 
 Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
-(spanish)                faked small caps on input line 236.
+(spanish)                faked small caps on input line 238.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1337,100 +1327,97 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 LaTeX Info: Redefining \sptext on input line 2.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-8.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
+0.
  ("C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (2.79823pt too wide) detected at line 50
+Overfull \hbox (2.79823pt too wide) detected at line 52
 \T1/lmr/m/n/10.95 10.10. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 52
+Overfull \hbox (2.79823pt too wide) detected at line 54
 \T1/lmr/m/n/10.95 10.11. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 54
+Overfull \hbox (2.79823pt too wide) detected at line 56
 \T1/lmr/m/n/10.95 10.12. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 56
+Overfull \hbox (2.79823pt too wide) detected at line 58
 \T1/lmr/m/n/10.95 10.13. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 58
+Overfull \hbox (2.79823pt too wide) detected at line 60
 \T1/lmr/m/n/10.95 10.14. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 60
+Overfull \hbox (2.79823pt too wide) detected at line 62
 \T1/lmr/m/n/10.95 10.15. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 62
+Overfull \hbox (2.79823pt too wide) detected at line 64
 \T1/lmr/m/n/10.95 10.16. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 64
+Overfull \hbox (2.79823pt too wide) detected at line 66
 \T1/lmr/m/n/10.95 10.17. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 66
+Overfull \hbox (2.79823pt too wide) detected at line 68
 \T1/lmr/m/n/10.95 10.18. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 68
+Overfull \hbox (2.79823pt too wide) detected at line 70
 \T1/lmr/m/n/10.95 10.19. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 70
+Overfull \hbox (2.79823pt too wide) detected at line 72
 \T1/lmr/m/n/10.95 10.20. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 72
+Overfull \hbox (2.79823pt too wide) detected at line 74
 \T1/lmr/m/n/10.95 10.21. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 74
+Overfull \hbox (2.79823pt too wide) detected at line 76
 \T1/lmr/m/n/10.95 10.22. 
  []
 
-
-Overfull \hbox (2.79823pt too wide) detected at line 76
+[5]
+Overfull \hbox (2.79823pt too wide) detected at line 78
 \T1/lmr/m/n/10.95 10.23. 
  []
 
 
-Underfull \vbox (badness 3189) has occurred while \output is active []
-
- [5]
-Overfull \hbox (2.79823pt too wide) detected at line 78
+Overfull \hbox (2.79823pt too wide) detected at line 80
 \T1/lmr/m/n/10.95 10.24. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 80
+Overfull \hbox (2.79823pt too wide) detected at line 82
 \T1/lmr/m/n/10.95 10.25. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 82
+Overfull \hbox (2.79823pt too wide) detected at line 84
 \T1/lmr/m/n/10.95 10.26. 
  []
 
 
-Overfull \hbox (2.79823pt too wide) detected at line 84
+Overfull \hbox (2.79823pt too wide) detected at line 86
 \T1/lmr/m/n/10.95 10.27. 
  []
 
@@ -1441,10 +1428,10 @@ Overfull \hbox (2.79823pt too wide) detected at line 84
 
 
 Package spanish Warning: Replacing `T1/lmr/bx/sc' by 
-(spanish)                faked small caps on input line 239.
+(spanish)                faked small caps on input line 241.
 
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
+LaTeX Info: Redefining \. on input line 241.
+LaTeX Info: Redefining \% on input line 241.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 14.1595pt, for example:
@@ -1462,13 +1449,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 
+l.36 
       [1
 
 
 ]
-LaTeX Info: Redefining \. on input line 76.
-LaTeX Info: Redefining \% on input line 76.
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1482,8 +1469,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 
-      [2]) (capitulos/02_Estimacion_y_Presupuesto.tex
+l.68 	\end{itemize}
+                    [2]) (capitulos/02_Estimacion_y_Presupuesto.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -1511,7 +1498,7 @@ l.1 \chapter
 ]
 Cap\'{\i }tulo 2.
 
-Underfull \vbox (badness 1057) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
@@ -1574,8 +1561,8 @@ been already used, duplicate ignored
 l.30 	\item U
              na función \textit{fitness} que asigna un valor numérico a ca...
 [9]
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+LaTeX Info: Redefining \. on input line 69.
+LaTeX Info: Redefining \% on input line 69.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1589,7 +1576,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 
+l.69 
       [10]
 LaTeX Info: Redefining \. on input line 105.
 LaTeX Info: Redefining \% on input line 105.
@@ -1606,11 +1593,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.105 	\item E
-              mparejamiento Variado inverso (\textit{Negative Assortative Ma...
-[11])
-LaTeX Info: Redefining \. on input line 248.
-LaTeX Info: Redefining \% on input line 248.
+l.105 	\item
+             Una Selección por Torneo clásica, donde se eligen de forma al...
+[11]
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -1624,13 +1611,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.248 \part
-           {Parte matemática} [12] [13
+l.142 	
+        [12])
+LaTeX Info: Redefining \. on input line 250.
+LaTeX Info: Redefining \% on input line 250.
 
-] [14]
-(capitulos/04_Contexto_Matematico.tex
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[13] [14
+
+] [15] [16] (capitulos/04_Contexto_Matematico.tex
 Cap\'{\i }tulo 4.
-[15
+[17
 
 ]
 LaTeX Info: Redefining \. on input line 101.
@@ -1644,7 +1642,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[16]
+[18]
 Overfull \hbox (9.10548pt too wide) in paragraph at lines 101--102
 []\T1/lmr/m/n/10.95 Dada una fun-ci�n $\OML/lmm/m/it/10.95 h \OT1/lmr/m/n/10.95
  : \U/msb/m/n/10.95 R[] [] []R$\T1/lmr/m/n/10.95 , de-no-ta-mos el vec-tor \T1/
@@ -1663,7 +1661,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[17]
+[19]
 LaTeX Info: Redefining \. on input line 222.
 LaTeX Info: Redefining \% on input line 222.
 
@@ -1675,7 +1673,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[18]
+[20]
 LaTeX Info: Redefining \. on input line 257.
 LaTeX Info: Redefining \% on input line 257.
 
@@ -1687,7 +1685,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[19]
+[21]
 LaTeX Info: Redefining \. on input line 311.
 LaTeX Info: Redefining \% on input line 311.
 
@@ -1699,7 +1697,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[20]
+[22]
 LaTeX Info: Redefining \. on input line 313.
 LaTeX Info: Redefining \% on input line 313.
 
@@ -1711,11 +1709,11 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[21] [22
+[23] [24
 
 ]
 Cap\'{\i }tulo 5.
-[23]
+[25]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 392.
 LaTeX Info: Redefining \. on input line 418.
@@ -1729,7 +1727,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[24]
+[26]
 LaTeX Info: Redefining \. on input line 453.
 LaTeX Info: Redefining \% on input line 453.
 
@@ -1741,7 +1739,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[25pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
+[27pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1827,7 +1825,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[26]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[28]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1884,7 +1882,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[27]
+[29]
 LaTeX Info: Redefining \. on input line 618.
 LaTeX Info: Redefining \% on input line 618.
 
@@ -1896,7 +1894,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[28]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[30]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2019,7 +2017,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[29]
+[31]
 LaTeX Info: Redefining \. on input line 714.
 LaTeX Info: Redefining \% on input line 714.
 
@@ -2031,7 +2029,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[30pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
+[32pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1
 1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -2126,7 +2124,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[31]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[33]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2170,7 +2168,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[32]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[34]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2232,7 +2230,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[33]
+[35]
 LaTeX Info: Redefining \. on input line 925.
 LaTeX Info: Redefining \% on input line 925.
 
@@ -2244,7 +2242,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[34]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[36]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2356,7 +2354,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[35]
+[37]
 LaTeX Info: Redefining \. on input line 1000.
 LaTeX Info: Redefining \% on input line 1000.
 
@@ -2368,39 +2366,13 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[36]
+[38]
 Cap\'{\i }tulo 6.
-[37
+[39
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 1067.
-LaTeX Info: Redefining \% on input line 1067.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[38]
-LaTeX Info: Redefining \. on input line 1098.
-LaTeX Info: Redefining \% on input line 1098.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[39]
-LaTeX Info: Redefining \. on input line 1138.
-LaTeX Info: Redefining \% on input line 1138.
+LaTeX Info: Redefining \. on input line 1069.
+LaTeX Info: Redefining \% on input line 1069.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2411,8 +2383,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [40]
-LaTeX Info: Redefining \. on input line 1191.
-LaTeX Info: Redefining \% on input line 1191.
+LaTeX Info: Redefining \. on input line 1099.
+LaTeX Info: Redefining \% on input line 1099.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2423,8 +2395,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [41]
-LaTeX Info: Redefining \. on input line 1228.
-LaTeX Info: Redefining \% on input line 1228.
+LaTeX Info: Redefining \. on input line 1144.
+LaTeX Info: Redefining \% on input line 1144.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2435,22 +2407,46 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [42]
-Overfull \hbox (9.90993pt too wide) in paragraph at lines 1264--1272
+LaTeX Info: Redefining \. on input line 1186.
+LaTeX Info: Redefining \% on input line 1186.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[43]
+LaTeX Info: Redefining \. on input line 1231.
+LaTeX Info: Redefining \% on input line 1231.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[44]
+Overfull \hbox (9.90993pt too wide) in paragraph at lines 1275--1283
 []\T1/lmr/m/n/10.95 El pro-ce-di-mien-to de Holm: Ajus-ta el va-lor de $\OML/lm
 m/m/it/10.95 $ \T1/lmr/m/n/10.95 en una for-ma \T1/lmr/m/it/10.95 step-down\T1
 /lmr/m/n/10.95 . Sean $\OML/lmm/m/it/10.95 p[]; p[]; :::; p[]$
  []
 
 
-Overfull \hbox (20.26982pt too wide) in paragraph at lines 1264--1272
+Overfull \hbox (20.26982pt too wide) in paragraph at lines 1275--1283
 \OML/lmm/m/it/10.95 p$\T1/lmr/m/n/10.95 -valores or-de-na-dos (de me-nor a ma-y
 or), tal que $\OML/lmm/m/it/10.95 p[] \OMS/lmsy/m/n/10.95  \OML/lmm/m/it/10.95
  p[] \OMS/lmsy/m/n/10.95  []  \OML/lmm/m/it/10.95 p[]$\T1/lmr/m/n/10.95 , y s
 ean $\OML/lmm/m/it/10.95 H[]; H[]; :::; H[]$
  []
 
-LaTeX Info: Redefining \. on input line 1276.
-LaTeX Info: Redefining \% on input line 1276.
+LaTeX Info: Redefining \. on input line 1283.
+LaTeX Info: Redefining \% on input line 1283.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2459,92 +2455,92 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[43]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[45]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1302 \Procedure
+l.1313 \Procedure
                   \textsc{HommelAPV}pdfTeX warning (ext4): destination with the
  same identifier (name{ALG@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1303 \State
+l.1314 \State
               Establecer $APV_i = p_i$ $\forall i$pdfTeX warning (ext4): destin
 ation with the same identifier (name{ALG@line.3}) has been already used, duplic
 ate ignored
 <to be read again> 
                    \relax 
-l.1304 \ForEach
+l.1315 \ForEach
                {$j = k-1, k-2,...,2$ (\textit{en dicho orden})}pdfTeX warning (
 ext4): destination with the same identifier (name{ALG@line.4}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1305 	\State
+l.1316 	\State
                Establecer $B = \emptyset$pdfTeX warning (ext4): destination wit
 h the same identifier (name{ALG@line.5}) has been already used, duplicate ignor
 ed
 <to be read again> 
                    \relax 
-l.1306 	\ForEach
+l.1317 	\ForEach
                 {$i, i > (k-1-j)$}pdfTeX warning (ext4): destination with the s
 ame identifier (name{ALG@line.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1307 		\State
+l.1318 		\State
                 Calcular el valor $c_i = (j \cdot p_i)/(j+i-k+1)$pdfTeX warning
  (ext4): destination with the same identifier (name{ALG@line.7}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1308 		\State
+l.1319 		\State
                 Establecer $B = B \bigcup c_i$pdfTeX warning (ext4): destinatio
 n with the same identifier (name{ALG@line.8}) has been already used, duplicate 
 ignored
 <to be read again> 
                    \relax 
-l.1309 	\EndFor
+l.1320 	\EndFor
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{ALG@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1310 	\State
+l.1321 	\State
                Encontrar el menor valor $c_i$ en $B \xrightarrow{}{} c_{min}$pd
 fTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1311 	\If
+l.1322 	\If
            {$APV_i < c_{min}$}pdfTeX warning (ext4): destination with the same 
 identifier (name{ALG@line.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1312 		\State
+l.1323 		\State
                 Establecer $APV_i = c_{min}$pdfTeX warning (ext4): destination 
 with the same identifier (name{ALG@line.12}) has been already used, duplicate i
 gnored
 <to be read again> 
                    \relax 
-l.1313 	\EndIf
+l.1324 	\EndIf
               pdfTeX warning (ext4): destination with the same identifier (name
 {ALG@line.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1314 	\ForEach
+l.1325 	\ForEach
                 {$i,i\leq (k-1-j)$}pdfTeX warning (ext4): destination with the 
 same identifier (name{ALG@line.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1315 		\State
+l.1326 		\State
                 Establecer $c_i = \min(c_{min}, j \cdot p_i)$pdfTeX warning (ex
 t4): destination with the same identifier (name{ALG@line.15}) has been already 
 used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1316 		\If
+l.1327 		\If
             {$APV_i < c_i$}
-LaTeX Info: Redefining \. on input line 1333.
-LaTeX Info: Redefining \% on input line 1333.
+LaTeX Info: Redefining \. on input line 1369.
+LaTeX Info: Redefining \% on input line 1369.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2554,7 +2550,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[44]) (capitulos/05_Problema_Diseño_Experimental.tex
+[46]) (capitulos/05_Problema_Diseño_Experimental.tex
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 
@@ -2566,13 +2562,29 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[45] [46
+[47]
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[48]
+Cap\'{\i }tulo 7.
+[49
 
 ]
-Cap\'{\i }tulo 7.
-[47]
-LaTeX Info: Redefining \. on input line 78.
-LaTeX Info: Redefining \% on input line 78.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 71.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 71.
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2582,9 +2594,15 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[48])
-LaTeX Info: Redefining \. on input line 253.
-LaTeX Info: Redefining \% on input line 253.
+[50]
+<imagenes/ejemploInstancia.png, id=1113, 408.52625pt x 531.9875pt>
+File: imagenes/ejemploInstancia.png Graphic file (type png)
+<use imagenes/ejemploInstancia.png>
+Package pdftex.def Info: imagenes/ejemploInstancia.png  used on input line 126.
+
+(pdftex.def)             Requested size: 204.26262pt x 265.9931pt.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2594,345 +2612,251 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[49] [50
+[51])
+LaTeX Info: Redefining \. on input line 255.
+LaTeX Info: Redefining \% on input line 255.
 
-] [51] [52] (capitulos/06_Algoritmos_Referencia.tex
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[52 <./imagenes/ejemploInstancia.png>] [53
+
+] [54]
+(capitulos/06_Algoritmos_Referencia.tex
 Cap\'{\i }tulo 8.
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.26 \Procedure
+l.25 \Procedure
                 \texttt{AG}($EMax > 0, nelem > 0, pcruce \in [0,1], pmut \in...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 \State
+l.26 \State
             Generar una población inicial aleatoriapdfTeX warning (ext4): dest
 ination with the same identifier (name{ALG@line.3}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.28 \State
+l.27 \State
             Calcular la función \textit{fitness} de cada individuopdfTeX warni
 ng (ext4): destination with the same identifier (name{ALG@line.4}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 \State
+l.28 \State
             \texttt{generacion} = 0pdfTeX warning (ext4): destination with the 
 same identifier (name{ALG@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 \While
+l.29 \While
            {\texttt{generacion} < EMax}pdfTeX warning (ext4): destination with 
 the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
 
 <to be read again> 
                    \relax 
-l.31 	\State
+l.30 	\State
              Calcular el número de parejas a formar para el cruce $\xrighta...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 	\State
+l.31 	\State
              Seleccionar aleatoriamente con repetición $4*ncruce$ solucione...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 	\State
+l.32 	\State
              Aplicar torneo de 2 en 2 soluciones del conjunto anterior y alm...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 	\For
+l.33 	\For
           {$i\in[0,ncruce]; i+=2$}pdfTeX warning (ext4): destination with the s
 ame identifier (name{ALG@line.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 		\State
+l.34 		\State
               Generar 2 hijos cruzando \texttt{padres}$[i]$ y \texttt{padres...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 		\State
+l.35 		\State
               Aplicar el Operador de Reparación sobre ambos hijospdfTeX warnin
 g (ext4): destination with the same identifier (name{ALG@line.12}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 		\State
+l.36 		\State
               Calcular la función \textit{fitness} de cada hijopdfTeX warning 
 (ext4): destination with the same identifier (name{ALG@line.13}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.38 		\State
+l.37 		\State
               Almacenar dichos hijos $\xrightarrow{}{}$ \texttt{hijos}pdfTeX wa
 rning (ext4): destination with the same identifier (name{ALG@line.14}) has been
  already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 	\EndFor
+l.38 	\EndFor
              	pdfTeX warning (ext4): destination with the same identifier (name
 {ALG@line.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 	\State
+l.39 	\State
              Calcular el número de soluciones a mutar $\xrightarrow{}{} nmu...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 	\State
+l.40 	\State
              Mutar $nmut$ soluciones distintaspdfTeX warning (ext4): destinatio
 n with the same identifier (name{ALG@line.17}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.42 	\State
+l.41 	\State
              Calcular la función \textit{fitness} de las nuevas solucionespdfT
 eX warning (ext4): destination with the same identifier (name{ALG@line.18}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 	\State
+l.42 	\State
              Aplicar el Operador de Selección sobre la población actual e ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 	\State
+l.43 	\State
              \texttt{generacion} = \texttt{generacion}+1pdfTeX warning (ext4): 
 destination with the same identifier (name{ALG@line.20}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.45 \EndWhile
-               [53
+l.44 \EndWhile
+               [55
 
-]
-LaTeX Info: Redefining \. on input line 85.
-LaTeX Info: Redefining \% on input line 85.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[54]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
-1}) has been already used, duplicate ignored
+]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1})
+ has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.89 \Procedure
+l.88 \Procedure
                 \texttt{AG}($EMax > 0, nelem > 0, pmut \in [0,1]$)pdfTeX warnin
 g (ext4): destination with the same identifier (name{ALG@line.2}) has been alre
 ady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.90 \State
+l.89 \State
             Generar una población inicial aleatoriapdfTeX warning (ext4): dest
 ination with the same identifier (name{ALG@line.3}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.91 \State
+l.90 \State
             Calcular la función \textit{fitness} de cada individuopdfTeX warni
 ng (ext4): destination with the same identifier (name{ALG@line.4}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.92 \State
+l.91 \State
             \texttt{generacion} = 0pdfTeX warning (ext4): destination with the 
 same identifier (name{ALG@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.93 \While
+l.92 \While
            {\texttt{generacion} < EMax}pdfTeX warning (ext4): destination with 
 the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
 
 <to be read again> 
                    \relax 
-l.94 	\State
+l.93 	\State
              Seleccionar aleatoriamente 4 soluciones de la población sin re...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 	\State
+l.94 	\State
              Aplicar torneo de 2 en 2 soluciones del conjunto anterior y alm...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.96 	\State
+l.95 	\State
              Generar 2 hijos cruzando \texttt{padres$_1$} y \texttt{padres$_2$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.97 	\State
+l.96 	\State
              Aplicar el Operador de Reparación sobre ambos hijospdfTeX warning
  (ext4): destination with the same identifier (name{ALG@line.10}) has been alre
 ady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 	\State
+l.97 	\State
              Calcular la función \textit{fitness} de cada hijopdfTeX warning (
 ext4): destination with the same identifier (name{ALG@line.11}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.99 	\State
+l.98 	\State
              Almacenar dichos hijos $\xrightarrow{}{}$ \texttt{hijos}pdfTeX war
 ning (ext4): destination with the same identifier (name{ALG@line.12}) has been 
 already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.100 	\State
-              Calcular el número de soluciones a mutar $\xrightarrow{}{} nm...
+l.99 	\State
+             Calcular el número de soluciones a mutar $\xrightarrow{}{} nmu...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.101 	\State
+l.100 	\State
               Mutar $nmut$ soluciones distintaspdfTeX warning (ext4): destinati
 on with the same identifier (name{ALG@line.14}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
-l.102 	\State
+l.101 	\State
               Calcular la función \textit{fitness} de las nuevas solucionespdf
 TeX warning (ext4): destination with the same identifier (name{ALG@line.15}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.103 	\State
+l.102 	\State
               Aplicar el Operador de Selección Estacionario sobre la poblac...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.104 	\State
+l.103 	\State
               \texttt{generacion} = \texttt{generacion}+1pdfTeX warning (ext4):
  destination with the same identifier (name{ALG@line.17}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.105 \EndWhile
+l.104 \EndWhile
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{ALG@line.18}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.106 \EndProcedure
+l.105 \EndProcedure
                    
-LaTeX Info: Redefining \. on input line 134.
-LaTeX Info: Redefining \% on input line 134.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[55]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
-1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.146 \Procedure
-                 \texttt{Operador Reparación}($hijo$)pdfTeX warning (ext4): de
-stination with the same identifier (name{ALG@line.2}) has been already used, du
-plicate ignored
-<to be read again> 
-                   \relax 
-l.147 \State
-             Calcular el peso total de $hijo \xrightarrow{}{}$ \texttt{pesoH...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.148 \If
-         {\texttt{pesoHijo} > \texttt{c}}pdfTeX warning (ext4): destination wit
-h the same identifier (name{ALG@line.4}) has been already used, duplicate ignor
-ed
-<to be read again> 
-                   \relax 
-l.149 	\While
-             {\texttt{pesoHijo} > \texttt{c}}pdfTeX warning (ext4): destination
- with the same identifier (name{ALG@line.5}) has been already used, duplicate i
-gnored
-<to be read again> 
-                   \relax 
-l.150 		\State
-               Eliminar elemento usando GreedypdfTeX warning (ext4): destinatio
-n with the same identifier (name{ALG@line.6}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.151 	\EndWhile
-                pdfTeX warning (ext4): destination with the same identifier (na
-me{ALG@line.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.152 \Else
-           pdfTeX warning (ext4): destination with the same identifier (name{AL
-G@line.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.153 	\State
-              \texttt{anadido = true}pdfTeX warning (ext4): destination with th
-e same identifier (name{ALG@line.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.154 	\While
-             {\texttt{anadido}}pdfTeX warning (ext4): destination with the same
- identifier (name{ALG@line.10}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.155 		\State
-               \texttt{anadido} = Añadir elemento usando GreedypdfTeX warning 
-(ext4): destination with the same identifier (name{ALG@line.11}) has been alrea
-dy used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.156 	\EndWhile
-                pdfTeX warning (ext4): destination with the same identifier (na
-me{ALG@line.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.157 \EndIf
-            pdfTeX warning (ext4): destination with the same identifier (name{A
-LG@line.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.158 \EndProcedure
-                   
-<imagenes/Crossover1point.png, id=1135, 390.258pt x 153.57375pt>
-File: imagenes/Crossover1point.png Graphic file (type png)
-<use imagenes/Crossover1point.png>
-Package pdftex.def Info: imagenes/Crossover1point.png  used on input line 191.
-(pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover1pointNumber.png, id=1136, 390.258pt x 153.57375pt>
-File: imagenes/Crossover1pointNumber.png Graphic file (type png)
-<use imagenes/Crossover1pointNumber.png>
-Package pdftex.def Info: imagenes/Crossover1pointNumber.png  used on input line
- 192.
-(pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-
-Underfull \vbox (badness 6493) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 196.
-LaTeX Info: Redefining \% on input line 196.
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -2943,93 +2867,201 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [56]
-<imagenes/Crossover2point.png, id=1141, 390.258pt x 153.57375pt>
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[57]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.145 \Procedure
+                 \texttt{Operador Reparación}($hijo$)pdfTeX warning (ext4): de
+stination with the same identifier (name{ALG@line.2}) has been already used, du
+plicate ignored
+<to be read again> 
+                   \relax 
+l.146 \State
+             Calcular el peso total de $hijo \xrightarrow{}{}$ \texttt{pesoH...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.147 \If
+         {\texttt{pesoHijo} > \texttt{c}}pdfTeX warning (ext4): destination wit
+h the same identifier (name{ALG@line.4}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.148 	\While
+             {\texttt{pesoHijo} > \texttt{c}}pdfTeX warning (ext4): destination
+ with the same identifier (name{ALG@line.5}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.149 		\State
+               Eliminar elemento usando GreedypdfTeX warning (ext4): destinatio
+n with the same identifier (name{ALG@line.6}) has been already used, duplicate 
+ignored
+<to be read again> 
+                   \relax 
+l.150 	\EndWhile
+                pdfTeX warning (ext4): destination with the same identifier (na
+me{ALG@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.151 \Else
+           pdfTeX warning (ext4): destination with the same identifier (name{AL
+G@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.152 	\State
+              \texttt{anadido = true}pdfTeX warning (ext4): destination with th
+e same identifier (name{ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.153 	\While
+             {\texttt{anadido}}pdfTeX warning (ext4): destination with the same
+ identifier (name{ALG@line.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.154 		\State
+               \texttt{anadido} = Añadir elemento usando GreedypdfTeX warning 
+(ext4): destination with the same identifier (name{ALG@line.11}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.155 	\EndWhile
+                pdfTeX warning (ext4): destination with the same identifier (na
+me{ALG@line.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.156 \EndIf
+            pdfTeX warning (ext4): destination with the same identifier (name{A
+LG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.157 \EndProcedure
+                   
+<imagenes/Crossover1point.png, id=1158, 390.258pt x 153.57375pt>
+File: imagenes/Crossover1point.png Graphic file (type png)
+<use imagenes/Crossover1point.png>
+Package pdftex.def Info: imagenes/Crossover1point.png  used on input line 190.
+(pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
+<imagenes/Crossover1pointNumber.png, id=1159, 390.258pt x 153.57375pt>
+File: imagenes/Crossover1pointNumber.png Graphic file (type png)
+<use imagenes/Crossover1pointNumber.png>
+Package pdftex.def Info: imagenes/Crossover1pointNumber.png  used on input line
+ 191.
+(pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
+<imagenes/Crossover2point.png, id=1160, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2point.png Graphic file (type png)
 <use imagenes/Crossover2point.png>
-Package pdftex.def Info: imagenes/Crossover2point.png  used on input line 201.
+Package pdftex.def Info: imagenes/Crossover2point.png  used on input line 200.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/Crossover2pointNumber.png, id=1142, 390.258pt x 153.57375pt>
+<imagenes/Crossover2pointNumber.png, id=1161, 390.258pt x 153.57375pt>
 File: imagenes/Crossover2pointNumber.png Graphic file (type png)
 <use imagenes/Crossover2pointNumber.png>
 Package pdftex.def Info: imagenes/Crossover2pointNumber.png  used on input line
- 202.
+ 201.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
-<imagenes/CrossoverUniformNumber.png, id=1143, 390.258pt x 153.57375pt>
+LaTeX Info: Redefining \. on input line 205.
+LaTeX Info: Redefining \% on input line 205.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[58 <./imagenes/Crossover1point.png> <./imagenes/Crossover1pointNumber.png>]
+<imagenes/CrossoverUniformNumber.png, id=1166, 390.258pt x 153.57375pt>
 File: imagenes/CrossoverUniformNumber.png Graphic file (type png)
 <use imagenes/CrossoverUniformNumber.png>
 Package pdftex.def Info: imagenes/CrossoverUniformNumber.png  used on input lin
-e 210.
+e 209.
 (pdftex.def)             Requested size: 195.12851pt x 76.78668pt.
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.231 \Procedure
+l.230 \Procedure
                  \texttt{Cruce Uniforme}($padre_1, padre_2$)pdfTeX warning (ext
 4): destination with the same identifier (name{ALG@line.2}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.232 \State
+l.231 \State
              Desordenar los índices que indican la posición de cada elementop
 dfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.233 \For
+l.232 \For
           {i in 0..$n$}pdfTeX warning (ext4): destination with the same identif
 ier (name{ALG@line.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.234 	\If
+l.233 	\If
           {i < $n/2$}pdfTeX warning (ext4): destination with the same identifie
 r (name{ALG@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.235 		\State
+l.234 		\State
                \texttt{hijo$_1$[indice[i]]} = \texttt{padre$_1$[indice[i]]}pdfT
 eX warning (ext4): destination with the same identifier (name{ALG@line.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 		\State
+l.235 		\State
                \texttt{hijo$_2$[indice[i]]} = \texttt{padre$_2$[indice[i]]}pdfT
 eX warning (ext4): destination with the same identifier (name{ALG@line.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.237 	\Else
+l.236 	\Else
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.238 		\State
+l.237 		\State
                \texttt{hijo$_1$[indice[i]]} = \texttt{padre$_2$[indice[i]]}pdfT
 eX warning (ext4): destination with the same identifier (name{ALG@line.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.239 		\State
+l.238 		\State
                \texttt{hijo$_2$[indice[i]]} = \texttt{padre$_1$[indice[i]]}pdfT
 eX warning (ext4): destination with the same identifier (name{ALG@line.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.240 	\EndIf
+l.239 	\EndIf
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.241 \EndFor
+l.240 \EndFor
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.242 \EndProcedure
+l.241 \EndProcedure
                    
-LaTeX Info: Redefining \. on input line 249.
-LaTeX Info: Redefining \% on input line 249.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 251.
+LaTeX Info: Redefining \% on input line 251.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3038,104 +3070,103 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[57 <./imagenes/Crossover1point.png> <./imagenes/Crossover1pointNumber.png> <./
-imagenes/Crossover2point.png> <./imagenes/Crossover2pointNumber.png> <./imagene
-s/CrossoverUniformNumber.png>]pdfTeX warning (ext4): destination with the same 
-identifier (name{ALG@line.1}) has been already used, duplicate ignored
+[59 <./imagenes/Crossover2point.png> <./imagenes/Crossover2pointNumber.png> <./
+imagenes/CrossoverUniformNumber.png>]pdfTeX warning (ext4): destination with th
+e same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.261 \Procedure
+l.260 \Procedure
                  \texttt{Mutación}($poblacion$, $prob\_mut$)pdfTeX warning (ex
 t4): destination with the same identifier (name{ALG@line.2}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.262 \State
+l.261 \State
              Calcular el número de cromosomas que mutarán $\xrightarrow{}{...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.263 \State
+l.262 \State
              Almacenar de forma aleatoria sin repetición \texttt{nmut} crom...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.264 \For
+l.263 \For
           {i in 0..\texttt{nmut}}pdfTeX warning (ext4): destination with the sa
 me identifier (name{ALG@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.265 	\State
+l.264 	\State
               Elegir dos genes con distinto valor de forma aleatoriapdfTeX warn
 ing (ext4): destination with the same identifier (name{ALG@line.6}) has been al
 ready used, duplicate ignored
 <to be read again> 
                    \relax 
-l.266 	\If
+l.265 	\If
           {Al intercambiar los genes sigue siendo válido}pdfTeX warning (ext4)
 : destination with the same identifier (name{ALG@line.7}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.267 		\State
+l.266 		\State
                Intercambiar los genespdfTeX warning (ext4): destination with th
 e same identifier (name{ALG@line.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.268 	\Else
+l.267 	\Else
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.269 		\State
+l.268 		\State
                Volver al paso anteriorpdfTeX warning (ext4): destination with t
 he same identifier (name{ALG@line.10}) has been already used, duplicate ignored
 
 <to be read again> 
                    \relax 
-l.270 	\EndIf
+l.269 	\EndIf
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.271 	\State
+l.270 	\State
               \texttt{anadido = true}pdfTeX warning (ext4): destination with th
 e same identifier (name{ALG@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.272 	\While
+l.271 	\While
              {\texttt{anadido}}pdfTeX warning (ext4): destination with the same
  identifier (name{ALG@line.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.273 		\State
+l.272 		\State
                \texttt{anadido} = Añadir elemento usando GreedypdfTeX warning 
 (ext4): destination with the same identifier (name{ALG@line.14}) has been alrea
 dy used, duplicate ignored
 <to be read again> 
                    \relax 
-l.274 	\EndWhile
+l.273 	\EndWhile
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{ALG@line.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.275 	\State
+l.274 	\State
               Calcular el valor de la función \textit{fitness}pdfTeX warning (
 ext4): destination with the same identifier (name{ALG@line.16}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.276 \EndFor
+l.275 \EndFor
              pdfTeX warning (ext4): destination with the same identifier (name{
 ALG@line.17}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.277 \EndProcedure
+l.276 \EndProcedure
                    
-LaTeX Info: Redefining \. on input line 293.
-LaTeX Info: Redefining \% on input line 293.
+LaTeX Info: Redefining \. on input line 284.
+LaTeX Info: Redefining \% on input line 284.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -3145,77 +3176,65 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[58]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[60]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.297 \Procedure
+l.296 \Procedure
                  \texttt{Op Reemplazo Estacionario}pdfTeX warning (ext4): desti
 nation with the same identifier (name{ALG@line.2}) has been already used, dupli
 cate ignored
 <to be read again> 
                    \relax 
-l.298 \State
+l.297 \State
              Calcular los 2 peores padres de la población actual $\xrightar...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.299 \If
+l.298 \If
          {\texttt{hijo$_1$} > \texttt{padre$_1$} \&\& \texttt{hijo$_2$} > \t...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.300 	\State
+l.299 	\State
               Intercambiar ambas soluciones de la población por ambos hijospdf
 TeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.301 \ElsIf
+l.300 \ElsIf
             {\texttt{hijo$_1$} > \texttt{padre$_2$}}pdfTeX warning (ext4): dest
 ination with the same identifier (name{ALG@line.6}) has been already used, dupl
 icate ignored
 <to be read again> 
                    \relax 
-l.302 	\State
+l.301 	\State
               Intercambiar la peor solución de la población por el mejor hijo
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.303 \Else
+l.302 \Else
            pdfTeX warning (ext4): destination with the same identifier (name{AL
 G@line.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.304 	\State
+l.303 	\State
               No hacer nada, ya que los dos hijos son peores que las peores ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.305 \EndIf
+l.304 \EndIf
             pdfTeX warning (ext4): destination with the same identifier (name{A
 LG@line.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.306 \EndProcedure
-                   
-LaTeX Info: Redefining \. on input line 322.
-LaTeX Info: Redefining \% on input line 322.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[59]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
-1}) has been already used, duplicate ignored
+l.305 \EndProcedure
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.333 \Procedure
@@ -3336,10 +3355,8 @@ eady used, duplicate ignored
                    \relax 
 l.353 			\State
                 Almacenar dichos hijos $\xrightarrow{}{}$ \texttt{hijos}
-Underfull \vbox (badness 4673) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 368.
-LaTeX Info: Redefining \% on input line 368.
+LaTeX Info: Redefining \. on input line 361.
+LaTeX Info: Redefining \% on input line 361.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -3349,12 +3366,16 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[60]
-<imagenes/CrossoverHUX.png, id=1177, 539.01375pt x 153.57375pt>
+[61]
+<imagenes/CrossoverHUX.png, id=1188, 539.01375pt x 153.57375pt>
 File: imagenes/CrossoverHUX.png Graphic file (type png)
 <use imagenes/CrossoverHUX.png>
 Package pdftex.def Info: imagenes/CrossoverHUX.png  used on input line 378.
 (pdftex.def)             Requested size: 269.50621pt x 76.78668pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) 
 has been already used, duplicate ignored
 <to be read again> 
@@ -3428,9 +3449,11 @@ ALG@line.13}) has been already used, duplicate ignored
                    \relax 
 l.398 \EndProcedure
                    
-LaTeX Info: Redefining \. on input line 408.
-LaTeX Info: Redefining \% on input line 408.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 407.
+LaTeX Info: Redefining \% on input line 407.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -3439,8 +3462,8 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[61 <./imagenes/CrossoverHUX.png>]pdfTeX warning (ext4): destination with the s
-ame identifier (name{ALG@line.1}) has been already used, duplicate ignored
+[62]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.416 \Procedure
@@ -3492,12 +3515,12 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[62]
-Cap\'{\i }tulo 9.
-[63
+[63 <./imagenes/CrossoverHUX.png>] [64
 
-]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1})
- has been already used, duplicate ignored
+]
+Cap\'{\i }tulo 9.
+[65]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.41 \Procedure
@@ -3619,7 +3642,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[64]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[66]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3859,7 +3882,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[65]
+[67]
 LaTeX Info: Redefining \. on input line 160.
 LaTeX Info: Redefining \% on input line 160.
 
@@ -3871,7 +3894,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[66]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[68]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -4106,7 +4129,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[67]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[69]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -4219,7 +4242,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[68]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[70]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -4265,7 +4288,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[69]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
+[71]pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -4383,17 +4406,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[70]
+[72]
 Cap\'{\i }tulo 10.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 1.
-
-[71
+[73
 
 ]
 LaTeX Info: Redefining \. on input line 70.
@@ -4407,7 +4422,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[72]
+[74]
 LaTeX Info: Redefining \. on input line 96.
 LaTeX Info: Redefining \% on input line 96.
 
@@ -4419,7 +4434,7 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[73]
+[75]
 LaTeX Info: Redefining \. on input line 132.
 LaTeX Info: Redefining \% on input line 132.
 
@@ -4431,14 +4446,14 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[74]
-<imagenes/Experimental/AGEUvsCHC.png, id=1279, 296.307pt x 167.4255pt>
+[76]
+<imagenes/Experimental/AGEUvsCHC.png, id=1303, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/AGEUvsCHC.png Graphic file (type png)
 <use imagenes/Experimental/AGEUvsCHC.png>
 Package pdftex.def Info: imagenes/Experimental/AGEUvsCHC.png  used on input lin
 e 165.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/AGEUvsCHC.png, id=1280, 230.0595pt x 173.448pt>
+<imagenes/Experimental/barras/AGEUvsCHC.png, id=1304, 230.0595pt x 173.448pt>
 File: imagenes/Experimental/barras/AGEUvsCHC.png Graphic file (type png)
 <use imagenes/Experimental/barras/AGEUvsCHC.png>
 Package pdftex.def Info: imagenes/Experimental/barras/AGEUvsCHC.png  used on in
@@ -4449,28 +4464,49 @@ put line 172.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 184.
 
-<imagenes/Experimental/DiferenciasAGEU.png, id=1283, 289.68225pt x 174.05025pt>
+<imagenes/Experimental/DiferenciasAGEU.png, id=1307, 289.68225pt x 174.05025pt>
 
 File: imagenes/Experimental/DiferenciasAGEU.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasAGEU.png>
 Package pdftex.def Info: imagenes/Experimental/DiferenciasAGEU.png  used on inp
 ut line 223.
 (pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
+LaTeX Info: Redefining \. on input line 229.
+LaTeX Info: Redefining \% on input line 229.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[77 <./imagenes/Experimental/AGEUvsCHC.png> <./imagenes/Experimental/barras/AGE
+UvsCHC.png>]
+LaTeX Info: Redefining \. on input line 229.
+LaTeX Info: Redefining \% on input line 229.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[78 <./imagenes/Experimental/DiferenciasAGEU.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 231.
 
-<imagenes/Experimental/DiferenciasCHC.png, id=1288, 289.68225pt x 174.05025pt>
+<imagenes/Experimental/DiferenciasCHC.png, id=1324, 289.68225pt x 174.05025pt>
 File: imagenes/Experimental/DiferenciasCHC.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasCHC.png>
 Package pdftex.def Info: imagenes/Experimental/DiferenciasCHC.png  used on inpu
 t line 270.
 (pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 283.
-LaTeX Info: Redefining \% on input line 283.
+LaTeX Info: Redefining \. on input line 284.
+LaTeX Info: Redefining \% on input line 284.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4479,62 +4515,22 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[75]
-LaTeX Info: Redefining \. on input line 283.
-LaTeX Info: Redefining \% on input line 283.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[76 <./imagenes/Experimental/AGEUvsCHC.png> <./imagenes/Experimental/barras/AGE
-UvsCHC.png> <./imagenes/Experimental/DiferenciasAGEU.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 291.
-LaTeX Info: Redefining \% on input line 291.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[77 <./imagenes/Experimental/DiferenciasCHC.png>]
-<imagenes/Experimental/Historico.png, id=1315, 296.307pt x 167.4255pt>
+[79 <./imagenes/Experimental/DiferenciasCHC.png>]
+<imagenes/Experimental/Historico.png, id=1339, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/Historico.png Graphic file (type png)
 <use imagenes/Experimental/Historico.png>
 Package pdftex.def Info: imagenes/Experimental/Historico.png  used on input lin
 e 302.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/Historico.png, id=1316, 210.7875pt x 174.05025pt>
+<imagenes/Experimental/barras/Historico.png, id=1340, 210.7875pt x 174.05025pt>
 
 File: imagenes/Experimental/barras/Historico.png Graphic file (type png)
 <use imagenes/Experimental/barras/Historico.png>
 Package pdftex.def Info: imagenes/Experimental/barras/Historico.png  used on in
 put line 309.
 (pdftex.def)             Requested size: 211.26027pt x 174.44286pt.
-<imagenes/Experimental/AGEUvsGACEPv1.png, id=1319, 296.307pt x 167.4255pt>
-File: imagenes/Experimental/AGEUvsGACEPv1.png Graphic file (type png)
-<use imagenes/Experimental/AGEUvsGACEPv1.png>
-Package pdftex.def Info: imagenes/Experimental/AGEUvsGACEPv1.png  used on input
- line 328.
-(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/AGEUvsGACEPv1.png, id=1320, 237.88875pt x 170.436
-75pt>
-File: imagenes/Experimental/barras/AGEUvsGACEPv1.png Graphic file (type png)
-<use imagenes/Experimental/barras/AGEUvsGACEPv1.png>
-Package pdftex.def Info: imagenes/Experimental/barras/AGEUvsGACEPv1.png  used o
-n input line 335.
-(pdftex.def)             Requested size: 211.26027pt x 151.36572pt.
-LaTeX Info: Redefining \. on input line 348.
-LaTeX Info: Redefining \% on input line 348.
+LaTeX Info: Redefining \. on input line 320.
+LaTeX Info: Redefining \% on input line 320.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4544,13 +4540,27 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[78 <./imagenes/Experimental/Historico.png> <./imagenes/Experimental/barras/His
+[80 <./imagenes/Experimental/Historico.png> <./imagenes/Experimental/barras/His
 torico.png>]
+<imagenes/Experimental/AGEUvsGACEPv1.png, id=1350, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/AGEUvsGACEPv1.png Graphic file (type png)
+<use imagenes/Experimental/AGEUvsGACEPv1.png>
+Package pdftex.def Info: imagenes/Experimental/AGEUvsGACEPv1.png  used on input
+ line 328.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/AGEUvsGACEPv1.png, id=1351, 237.88875pt x 170.436
+75pt>
+File: imagenes/Experimental/barras/AGEUvsGACEPv1.png Graphic file (type png)
+<use imagenes/Experimental/barras/AGEUvsGACEPv1.png>
+Package pdftex.def Info: imagenes/Experimental/barras/AGEUvsGACEPv1.png  used o
+n input line 335.
+(pdftex.def)             Requested size: 211.26027pt x 151.36572pt.
+
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 359.
 
-<imagenes/Experimental/DiferenciasGACEPv1.png, id=1332, 289.68225pt x 174.05025
+<imagenes/Experimental/DiferenciasGACEPv1.png, id=1356, 289.68225pt x 174.05025
 pt>
 File: imagenes/Experimental/DiferenciasGACEPv1.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasGACEPv1.png>
@@ -4560,8 +4570,12 @@ input line 398.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 417.
-LaTeX Info: Redefining \% on input line 417.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 408.
+LaTeX Info: Redefining \% on input line 408.
+
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4570,13 +4584,13 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[79 <./imagenes/Experimental/AGEUvsGACEPv1.png> <./imagenes/Experimental/barras
+[81 <./imagenes/Experimental/AGEUvsGACEPv1.png> <./imagenes/Experimental/barras
 /AGEUvsGACEPv1.png>]
-Underfull \vbox (badness 1430) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 424.
-LaTeX Info: Redefining \% on input line 424.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
+LaTeX Info: Redefining \. on input line 432.
+LaTeX Info: Redefining \% on input line 432.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4585,33 +4599,50 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[80 <./imagenes/Experimental/DiferenciasGACEPv1.png>]
-<imagenes/Experimental/GRASPvswoGRASP.png, id=1347, 296.307pt x 167.4255pt>
+[82 <./imagenes/Experimental/DiferenciasGACEPv1.png>]
+<imagenes/Experimental/GRASPvswoGRASP.png, id=1375, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/GRASPvswoGRASP.png Graphic file (type png)
 <use imagenes/Experimental/GRASPvswoGRASP.png>
 Package pdftex.def Info: imagenes/Experimental/GRASPvswoGRASP.png  used on inpu
-t line 433.
+t line 448.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GRASPvswoGRASP.png, id=1348, 246.9225pt x 174.050
+<imagenes/Experimental/barras/GRASPvswoGRASP.png, id=1376, 246.9225pt x 174.050
 25pt>
 File: imagenes/Experimental/barras/GRASPvswoGRASP.png Graphic file (type png)
 <use imagenes/Experimental/barras/GRASPvswoGRASP.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GRASPvswoGRASP.png  used 
-on input line 440.
+on input line 455.
 (pdftex.def)             Requested size: 211.26027pt x 148.9101pt.
-<imagenes/Experimental/DiferenciasGACEP_GRASP.png, id=1351, 289.68225pt x 174.0
+LaTeX Info: Redefining \. on input line 505.
+LaTeX Info: Redefining \% on input line 505.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[83 <./imagenes/Experimental/GRASPvswoGRASP.png> <./imagenes/Experimental/barra
+s/GRASPvswoGRASP.png>]
+<imagenes/Experimental/DiferenciasGACEP_GRASP.png, id=1384, 289.68225pt x 174.0
 5025pt>
 File: imagenes/Experimental/DiferenciasGACEP_GRASP.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasGACEP_GRASP.png>
 Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEP_GRASP.png  used
- on input line 494.
+ on input line 509.
 (pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 500.
-LaTeX Info: Redefining \% on input line 500.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 537.
+LaTeX Info: Redefining \% on input line 537.
+
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4620,144 +4651,28 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[81 <./imagenes/Experimental/GRASPvswoGRASP.png> <./imagenes/Experimental/barra
-s/GRASPvswoGRASP.png>]
+[84 <./imagenes/Experimental/DiferenciasGACEP_GRASP.png>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 520.
-LaTeX Info: Redefining \. on input line 522.
-LaTeX Info: Redefining \% on input line 522.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[82 <./imagenes/Experimental/DiferenciasGACEP_GRASP.png>]
-<imagenes/Experimental/GACEPcGRASP.png, id=1371, 296.307pt x 167.4255pt>
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 552.
+<imagenes/Experimental/GACEPcGRASP.png, id=1402, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/GACEPcGRASP.png Graphic file (type png)
 <use imagenes/Experimental/GACEPcGRASP.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPcGRASP.png  used on input l
-ine 529.
+ine 561.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GACEPcGRASP.png, id=1372, 258.36525pt x 174.05025
+<imagenes/Experimental/barras/GACEPcGRASP.png, id=1403, 258.36525pt x 174.05025
 pt>
 File: imagenes/Experimental/barras/GACEPcGRASP.png Graphic file (type png)
 <use imagenes/Experimental/barras/GACEPcGRASP.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPcGRASP.png  used on 
-input line 536.
+input line 568.
 (pdftex.def)             Requested size: 211.26027pt x 142.31842pt.
-<imagenes/Experimental/GACEPcwoGRASP.png, id=1379, 296.307pt x 167.4255pt>
-File: imagenes/Experimental/GACEPcwoGRASP.png Graphic file (type png)
-<use imagenes/Experimental/GACEPcwoGRASP.png>
-Package pdftex.def Info: imagenes/Experimental/GACEPcwoGRASP.png  used on input
- line 557.
-(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GACEPcwoGRASP.png, id=1380, 236.68425pt x 174.050
-25pt>
-File: imagenes/Experimental/barras/GACEPcwoGRASP.png Graphic file (type png)
-<use imagenes/Experimental/barras/GACEPcwoGRASP.png>
-Package pdftex.def Info: imagenes/Experimental/barras/GACEPcwoGRASP.png  used o
-n input line 564.
-(pdftex.def)             Requested size: 211.26027pt x 155.36101pt.
-LaTeX Info: Redefining \. on input line 576.
-LaTeX Info: Redefining \% on input line 576.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[83 <./imagenes/Experimental/GACEPcGRASP.png> <./imagenes/Experimental/barras/G
-ACEPcGRASP.png> <./imagenes/Experimental/GACEPcwoGRASP.png> <./imagenes/Experim
-ental/barras/GACEPcwoGRASP.png>]
-<imagenes/Experimental/GACEPv3c.png, id=1395, 296.307pt x 167.4255pt>
-File: imagenes/Experimental/GACEPv3c.png Graphic file (type png)
-<use imagenes/Experimental/GACEPv3c.png>
-Package pdftex.def Info: imagenes/Experimental/GACEPv3c.png  used on input line
- 581.
-(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GACEPv3c.png, id=1396, 247.52475pt x 174.05025pt>
-
-File: imagenes/Experimental/barras/GACEPv3c.png Graphic file (type png)
-<use imagenes/Experimental/barras/GACEPv3c.png>
-Package pdftex.def Info: imagenes/Experimental/barras/GACEPv3c.png  used on inp
-ut line 588.
-(pdftex.def)             Requested size: 211.26027pt x 148.55421pt.
-<imagenes/Experimental/GACEPv2vsGACEPv3.png, id=1401, 296.307pt x 166.82326pt>
-File: imagenes/Experimental/GACEPv2vsGACEPv3.png Graphic file (type png)
-<use imagenes/Experimental/GACEPv2vsGACEPv3.png>
-Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv3.png  used on in
-put line 606.
-(pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
-<imagenes/Experimental/barras/GACEPv2vsGACEPv3.png, id=1402, 263.7855pt x 174.0
-5025pt>
-File: imagenes/Experimental/barras/GACEPv2vsGACEPv3.png Graphic file (type png)
-
-<use imagenes/Experimental/barras/GACEPv2vsGACEPv3.png>
-Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv3.png  use
-d on input line 613.
-(pdftex.def)             Requested size: 211.26027pt x 139.39441pt.
-LaTeX Info: Redefining \. on input line 631.
-LaTeX Info: Redefining \% on input line 631.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[84 <./imagenes/Experimental/GACEPv3c.png> <./imagenes/Experimental/barras/GACE
-Pv3c.png> <./imagenes/Experimental/GACEPv2vsGACEPv3.png> <./imagenes/Experiment
-al/barras/GACEPv2vsGACEPv3.png>]
-Overfull \hbox (29.60693pt too wide) in paragraph at lines 632--633
-[]\T1/lmr/m/n/10.95 En tan-to que no es una ver-si�n pu-ra-men-te de GA-CEP, ca
-m-bia-re-mos su no-ta-ci�n a ``\T1/lmr/bx/sc/10.95 GACEPCHCv\T1/lmtt/b/n/10.95 
-x\T1/lmr/m/n/10.95 '',
- []
-
-<imagenes/Experimental/CHCvsGACEPCHCv1.png, id=1412, 296.307pt x 167.4255pt>
-File: imagenes/Experimental/CHCvsGACEPCHCv1.png Graphic file (type png)
-<use imagenes/Experimental/CHCvsGACEPCHCv1.png>
-Package pdftex.def Info: imagenes/Experimental/CHCvsGACEPCHCv1.png  used on inp
-ut line 655.
-(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/CHCvsGACEPCHCv1.png, id=1413, 234.8775pt x 174.05
-025pt>
-File: imagenes/Experimental/barras/CHCvsGACEPCHCv1.png Graphic file (type png)
-<use imagenes/Experimental/barras/CHCvsGACEPCHCv1.png>
-Package pdftex.def Info: imagenes/Experimental/barras/CHCvsGACEPCHCv1.png  used
- on input line 662.
-(pdftex.def)             Requested size: 211.26027pt x 156.54814pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imagenes/Experimental/DiferenciasGACEPCHCv1.png, id=1415, 289.68225pt x 174.05
-025pt>
-File: imagenes/Experimental/DiferenciasGACEPCHCv1.png Graphic file (type png)
-<use imagenes/Experimental/DiferenciasGACEPCHCv1.png>
-Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEPCHCv1.png  used 
-on input line 715.
-(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 1005) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 726.
-LaTeX Info: Redefining \% on input line 726.
-
+LaTeX Info: Redefining \. on input line 582.
+LaTeX Info: Redefining \% on input line 582.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4767,34 +4682,151 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [85]
-<imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png, id=1426, 289.08pt x 174.0502
+<imagenes/Experimental/GACEPcwoGRASP.png, id=1419, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/GACEPcwoGRASP.png Graphic file (type png)
+<use imagenes/Experimental/GACEPcwoGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPcwoGRASP.png  used on input
+ line 589.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GACEPcwoGRASP.png, id=1420, 236.68425pt x 174.050
+25pt>
+File: imagenes/Experimental/barras/GACEPcwoGRASP.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPcwoGRASP.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPcwoGRASP.png  used o
+n input line 596.
+(pdftex.def)             Requested size: 211.26027pt x 155.36101pt.
+<imagenes/Experimental/GACEPv3c.png, id=1422, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/GACEPv3c.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv3c.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv3c.png  used on input line
+ 613.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/GACEPv3c.png, id=1423, 247.52475pt x 174.05025pt>
+
+File: imagenes/Experimental/barras/GACEPv3c.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPv3c.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv3c.png  used on inp
+ut line 620.
+(pdftex.def)             Requested size: 211.26027pt x 148.55421pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imagenes/Experimental/GACEPv2vsGACEPv3.png, id=1428, 296.307pt x 166.82326pt>
+File: imagenes/Experimental/GACEPv2vsGACEPv3.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv2vsGACEPv3.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv3.png  used on in
+put line 638.
+(pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
+<imagenes/Experimental/barras/GACEPv2vsGACEPv3.png, id=1429, 263.7855pt x 174.0
+5025pt>
+File: imagenes/Experimental/barras/GACEPv2vsGACEPv3.png Graphic file (type png)
+
+<use imagenes/Experimental/barras/GACEPv2vsGACEPv3.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv3.png  use
+d on input line 645.
+(pdftex.def)             Requested size: 211.26027pt x 139.39441pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 657.
+LaTeX Info: Redefining \% on input line 657.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[86 <./imagenes/Experimental/GACEPcGRASP.png> <./imagenes/Experimental/barras/G
+ACEPcGRASP.png> <./imagenes/Experimental/GACEPcwoGRASP.png> <./imagenes/Experim
+ental/barras/GACEPcwoGRASP.png>]
+Underfull \vbox (badness 1968) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 678.
+LaTeX Info: Redefining \% on input line 678.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[87 <./imagenes/Experimental/GACEPv3c.png> <./imagenes/Experimental/barras/GACE
+Pv3c.png> <./imagenes/Experimental/GACEPv2vsGACEPv3.png> <./imagenes/Experiment
+al/barras/GACEPv2vsGACEPv3.png>]
+<imagenes/Experimental/CHCvsGACEPCHCv1.png, id=1451, 296.307pt x 167.4255pt>
+File: imagenes/Experimental/CHCvsGACEPCHCv1.png Graphic file (type png)
+<use imagenes/Experimental/CHCvsGACEPCHCv1.png>
+Package pdftex.def Info: imagenes/Experimental/CHCvsGACEPCHCv1.png  used on inp
+ut line 702.
+(pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
+<imagenes/Experimental/barras/CHCvsGACEPCHCv1.png, id=1452, 234.8775pt x 174.05
+025pt>
+File: imagenes/Experimental/barras/CHCvsGACEPCHCv1.png Graphic file (type png)
+<use imagenes/Experimental/barras/CHCvsGACEPCHCv1.png>
+Package pdftex.def Info: imagenes/Experimental/barras/CHCvsGACEPCHCv1.png  used
+ on input line 709.
+(pdftex.def)             Requested size: 211.26027pt x 156.54814pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imagenes/Experimental/DiferenciasGACEPCHCv1.png, id=1454, 289.68225pt x 174.05
+025pt>
+File: imagenes/Experimental/DiferenciasGACEPCHCv1.png Graphic file (type png)
+<use imagenes/Experimental/DiferenciasGACEPCHCv1.png>
+Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEPCHCv1.png  used 
+on input line 762.
+(pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1005) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 773.
+LaTeX Info: Redefining \% on input line 773.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[88]
+<imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png, id=1465, 289.08pt x 174.0502
 5pt>
 File: imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png Graphic file (type png)
 <use imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPCHCv1vsGACEPCHCv2.png  used
- on input line 737.
+ on input line 784.
 (pdftex.def)             Requested size: 211.26027pt x 127.19637pt.
-<imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.png, id=1427, 265.59225pt 
+<imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.png, id=1466, 265.59225pt 
 x 174.05025pt>
 File: imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.png Graphic file (typ
 e png)
 <use imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPCHCv1vsGACEPCHCv2.pn
-g  used on input line 744.
+g  used on input line 791.
 (pdftex.def)             Requested size: 211.26027pt x 138.4516pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `fig:GACEPv2vsGACEPCHCv2' on page 86 undefined on inpu
-t line 754.
-
-
 Underfull \vbox (badness 1024) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 755.
-LaTeX Info: Redefining \% on input line 755.
+LaTeX Info: Redefining \. on input line 802.
+LaTeX Info: Redefining \% on input line 802.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4804,29 +4836,29 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[86 <./imagenes/Experimental/CHCvsGACEPCHCv1.png> <./imagenes/Experimental/barr
+[89 <./imagenes/Experimental/CHCvsGACEPCHCv1.png> <./imagenes/Experimental/barr
 as/CHCvsGACEPCHCv1.png>]
-<imagenes/Experimental/GACEPv2vsGACEPCHCv1.png, id=1434, 296.307pt x 167.4255pt
+<imagenes/Experimental/GACEPv2vsGACEPCHCv1.png, id=1474, 296.307pt x 167.4255pt
 >
 File: imagenes/Experimental/GACEPv2vsGACEPCHCv1.png Graphic file (type png)
 <use imagenes/Experimental/GACEPv2vsGACEPCHCv1.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPCHCv1.png  used on
- input line 760.
+ input line 807.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GACEPv2vsGACEPCHCv1.png, id=1435, 245.718pt x 174
+<imagenes/Experimental/barras/GACEPv2vsGACEPCHCv1.png, id=1475, 245.718pt x 174
 .05025pt>
 File: imagenes/Experimental/barras/GACEPv2vsGACEPCHCv1.png Graphic file (type p
 ng)
 <use imagenes/Experimental/barras/GACEPv2vsGACEPCHCv1.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPCHCv1.png  
-used on input line 767.
+used on input line 814.
 (pdftex.def)             Requested size: 211.26027pt x 149.65106pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 790.
-LaTeX Info: Redefining \% on input line 790.
+LaTeX Info: Redefining \. on input line 841.
+LaTeX Info: Redefining \% on input line 841.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4835,28 +4867,27 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[87 <./imagenes/Experimental/DiferenciasGACEPCHCv1.png> <./imagenes/Experimenta
+[90 <./imagenes/Experimental/DiferenciasGACEPCHCv1.png> <./imagenes/Experimenta
 l/GACEPCHCv1vsGACEPCHCv2.png> <./imagenes/Experimental/barras/GACEPCHCv1vsGACEP
 CHCv2.png>]
-Overfull \hbox (7.80205pt too wide) in paragraph at lines 793--828
+Overfull \hbox (7.80205pt too wide) in paragraph at lines 857--892
 [][] 
  []
 
-<imagenes/Experimental/GACEPv2_Diversity.png, id=1447, 289.08pt x 174.05025pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imagenes/Experimental/GACEPv2_Diversity.png, id=1489, 289.08pt x 174.05025pt>
 File: imagenes/Experimental/GACEPv2_Diversity.png Graphic file (type png)
 <use imagenes/Experimental/GACEPv2_Diversity.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPv2_Diversity.png  used on i
-nput line 833.
+nput line 897.
 (pdftex.def)             Requested size: 289.07928pt x 174.0498pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 849.
-LaTeX Info: Redefining \% on input line 849.
-
+LaTeX Info: Redefining \. on input line 913.
+LaTeX Info: Redefining \% on input line 913.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4865,10 +4896,12 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[88 <./imagenes/Experimental/GACEPv2vsGACEPCHCv1.png> <./imagenes/Experimental/
+[91 <./imagenes/Experimental/GACEPv2vsGACEPCHCv1.png> <./imagenes/Experimental/
 barras/GACEPv2vsGACEPCHCv1.png>]
-LaTeX Info: Redefining \. on input line 867.
-LaTeX Info: Redefining \% on input line 867.
+Underfull \vbox (badness 1509) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 925.
+LaTeX Info: Redefining \% on input line 925.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4878,76 +4911,69 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[89 <./imagenes/Experimental/GACEPv2_Diversity.png>]
-<imagenes/Experimental/GACEPv2vsGACEPv4.png, id=1464, 289.08pt x 174.05025pt>
+[92 <./imagenes/Experimental/GACEPv2_Diversity.png>]
+<imagenes/Experimental/GACEPv2vsGACEPv4.png, id=1510, 289.08pt x 174.05025pt>
 File: imagenes/Experimental/GACEPv2vsGACEPv4.png Graphic file (type png)
 <use imagenes/Experimental/GACEPv2vsGACEPv4.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv4.png  used on in
-put line 878.
+put line 942.
 (pdftex.def)             Requested size: 211.26027pt x 127.19637pt.
-<imagenes/Experimental/barras/GACEPv2vsGACEPv4.png, id=1465, 248.72925pt x 174.
+<imagenes/Experimental/barras/GACEPv2vsGACEPv4.png, id=1511, 248.72925pt x 174.
 05025pt>
 File: imagenes/Experimental/barras/GACEPv2vsGACEPv4.png Graphic file (type png)
 
 <use imagenes/Experimental/barras/GACEPv2vsGACEPv4.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv4.png  use
-d on input line 885.
+d on input line 949.
 (pdftex.def)             Requested size: 211.26027pt x 147.8345pt.
-<imagenes/Experimental/GACEPv2vsGACEPv5.png, id=1467, 289.68225pt x 174.05025pt
+LaTeX Info: Redefining \. on input line 963.
+LaTeX Info: Redefining \% on input line 963.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[93 <./imagenes/Experimental/GACEPv2vsGACEPv4.png> <./imagenes/Experimental/bar
+ras/GACEPv2vsGACEPv4.png>]
+<imagenes/Experimental/GACEPv2vsGACEPv5.png, id=1520, 289.68225pt x 174.05025pt
 >
 File: imagenes/Experimental/GACEPv2vsGACEPv5.png Graphic file (type png)
 <use imagenes/Experimental/GACEPv2vsGACEPv5.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv5.png  used on in
-put line 908.
+put line 972.
 (pdftex.def)             Requested size: 211.26027pt x 126.93344pt.
-<imagenes/Experimental/barras/GACEPv2vsGACEPv5.png, id=1468, 249.93375pt x 174.
+<imagenes/Experimental/barras/GACEPv2vsGACEPv5.png, id=1521, 249.93375pt x 174.
 05025pt>
 File: imagenes/Experimental/barras/GACEPv2vsGACEPv5.png Graphic file (type png)
 
 <use imagenes/Experimental/barras/GACEPv2vsGACEPv5.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv5.png  use
-d on input line 915.
+d on input line 979.
 (pdftex.def)             Requested size: 211.26027pt x 147.12276pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 930.
-LaTeX Info: Redefining \% on input line 930.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[90 <./imagenes/Experimental/GACEPv2vsGACEPv4.png> <./imagenes/Experimental/bar
-ras/GACEPv2vsGACEPv4.png>]
-<imagenes/Experimental/GACEPv2vsGACEPv6.png, id=1475, 289.08pt x 173.448pt>
+<imagenes/Experimental/GACEPv2vsGACEPv6.png, id=1525, 289.08pt x 173.448pt>
 File: imagenes/Experimental/GACEPv2vsGACEPv6.png Graphic file (type png)
 <use imagenes/Experimental/GACEPv2vsGACEPv6.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPv2vsGACEPv6.png  used on in
-put line 940.
+put line 1004.
 (pdftex.def)             Requested size: 211.26027pt x 126.75624pt.
-<imagenes/Experimental/barras/GACEPv2vsGACEPv6.png, id=1476, 247.52475pt x 174.
+<imagenes/Experimental/barras/GACEPv2vsGACEPv6.png, id=1526, 247.52475pt x 174.
 05025pt>
 File: imagenes/Experimental/barras/GACEPv2vsGACEPv6.png Graphic file (type png)
 
 <use imagenes/Experimental/barras/GACEPv2vsGACEPv6.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPv2vsGACEPv6.png  use
-d on input line 947.
+d on input line 1011.
 (pdftex.def)             Requested size: 211.26027pt x 148.55421pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 964.
-LaTeX Info: Redefining \% on input line 964.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
+LaTeX Info: Redefining \. on input line 1028.
+LaTeX Info: Redefining \% on input line 1028.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -4956,19 +4982,18 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[91 <./imagenes/Experimental/GACEPv2vsGACEPv5.png> <./imagenes/Experimental/bar
-ras/GACEPv2vsGACEPv5.png> <./imagenes/Experimental/GACEPv2vsGACEPv6.png> <./ima
-genes/Experimental/barras/GACEPv2vsGACEPv6.png>]
-<imagenes/Experimental/barras/GACEPv6vsGACEPv7.png, id=1484, 289.68225pt x 173.
+[94 <./imagenes/Experimental/GACEPv2vsGACEPv5.png> <./imagenes/Experimental/bar
+ras/GACEPv2vsGACEPv5.png>]
+<imagenes/Experimental/barras/GACEPv6vsGACEPv7.png, id=1537, 289.68225pt x 173.
 448pt>
 File: imagenes/Experimental/barras/GACEPv6vsGACEPv7.png Graphic file (type png)
 
 <use imagenes/Experimental/barras/GACEPv6vsGACEPv7.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPv6vsGACEPv7.png  use
-d on input line 972.
+d on input line 1036.
 (pdftex.def)             Requested size: 289.68153pt x 173.44757pt.
-LaTeX Info: Redefining \. on input line 989.
-LaTeX Info: Redefining \% on input line 989.
+LaTeX Info: Redefining \. on input line 1046.
+LaTeX Info: Redefining \% on input line 1046.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -4978,38 +5003,25 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[92 <./imagenes/Experimental/barras/GACEPv6vsGACEPv7.png>]
-<imagenes/Experimental/GACEPv35.png, id=1491, 296.307pt x 166.82326pt>
+[95 <./imagenes/Experimental/GACEPv2vsGACEPv6.png> <./imagenes/Experimental/bar
+ras/GACEPv2vsGACEPv6.png> <./imagenes/Experimental/barras/GACEPv6vsGACEPv7.png>
+]
+<imagenes/Experimental/GACEPv35.png, id=1549, 296.307pt x 166.82326pt>
 File: imagenes/Experimental/GACEPv35.png Graphic file (type png)
 <use imagenes/Experimental/GACEPv35.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPv35.png  used on input line
- 1002.
+ 1068.
 (pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
-<imagenes/Experimental/barras/GACEPv35.png, id=1492, 253.54726pt x 174.05025pt>
+<imagenes/Experimental/barras/GACEPv35.png, id=1550, 253.54726pt x 174.05025pt>
 
 File: imagenes/Experimental/barras/GACEPv35.png Graphic file (type png)
 <use imagenes/Experimental/barras/GACEPv35.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPv35.png  used on inp
-ut line 1009.
+ut line 1075.
 (pdftex.def)             Requested size: 211.26027pt x 145.02998pt.
-<imagenes/Experimental/GACEPv36.png, id=1497, 296.307pt x 166.82326pt>
-File: imagenes/Experimental/GACEPv36.png Graphic file (type png)
-<use imagenes/Experimental/GACEPv36.png>
-Package pdftex.def Info: imagenes/Experimental/GACEPv36.png  used on input line
- 1033.
-(pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
-<imagenes/Experimental/barras/GACEPv36.png, id=1498, 269.808pt x 173.448pt>
-File: imagenes/Experimental/barras/GACEPv36.png Graphic file (type png)
-<use imagenes/Experimental/barras/GACEPv36.png>
-Package pdftex.def Info: imagenes/Experimental/barras/GACEPv36.png  used on inp
-ut line 1040.
-(pdftex.def)             Requested size: 211.26027pt x 135.81291pt.
+LaTeX Info: Redefining \. on input line 1092.
+LaTeX Info: Redefining \% on input line 1092.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 1050.
-LaTeX Info: Redefining \% on input line 1050.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -5018,55 +5030,67 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[93 <./imagenes/Experimental/GACEPv35.png> <./imagenes/Experimental/barras/GACE
+[96 <./imagenes/Experimental/GACEPv35.png> <./imagenes/Experimental/barras/GACE
 Pv35.png>]
-<imagenes/Experimental/GACEPv356.png, id=1509, 296.307pt x 167.4255pt>
+<imagenes/Experimental/GACEPv36.png, id=1567, 296.307pt x 166.82326pt>
+File: imagenes/Experimental/GACEPv36.png Graphic file (type png)
+<use imagenes/Experimental/GACEPv36.png>
+Package pdftex.def Info: imagenes/Experimental/GACEPv36.png  used on input line
+ 1101.
+(pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
+<imagenes/Experimental/barras/GACEPv36.png, id=1568, 269.808pt x 173.448pt>
+File: imagenes/Experimental/barras/GACEPv36.png Graphic file (type png)
+<use imagenes/Experimental/barras/GACEPv36.png>
+Package pdftex.def Info: imagenes/Experimental/barras/GACEPv36.png  used on inp
+ut line 1108.
+(pdftex.def)             Requested size: 211.26027pt x 135.81291pt.
+LaTeX Info: Redefining \. on input line 1136.
+LaTeX Info: Redefining \% on input line 1136.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[97 <./imagenes/Experimental/GACEPv36.png> <./imagenes/Experimental/barras/GACE
+Pv36.png>]
+<imagenes/Experimental/GACEPv356.png, id=1588, 296.307pt x 167.4255pt>
 File: imagenes/Experimental/GACEPv356.png Graphic file (type png)
 <use imagenes/Experimental/GACEPv356.png>
 Package pdftex.def Info: imagenes/Experimental/GACEPv356.png  used on input lin
-e 1072.
+e 1143.
 (pdftex.def)             Requested size: 211.26027pt x 119.37364pt.
-<imagenes/Experimental/barras/GACEPv356.png, id=1510, 242.70676pt x 174.05025pt
+<imagenes/Experimental/barras/GACEPv356.png, id=1589, 242.70676pt x 174.05025pt
 >
 File: imagenes/Experimental/barras/GACEPv356.png Graphic file (type png)
 <use imagenes/Experimental/barras/GACEPv356.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEPv356.png  used on in
-put line 1079.
+put line 1150.
 (pdftex.def)             Requested size: 211.26027pt x 151.4995pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 1094.
-LaTeX Info: Redefining \% on input line 1094.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[94 <./imagenes/Experimental/GACEPv36.png> <./imagenes/Experimental/barras/GACE
-Pv36.png>]
-<imagenes/Experimental/GACEP3103vsGACEPv2.png, id=1517, 289.68225pt x 174.05025
-pt>
+<imagenes/Experimental/GACEP3103vsGACEPv2.png, id=1592, 362.10281pt x 217.5628p
+t>
 File: imagenes/Experimental/GACEP3103vsGACEPv2.png Graphic file (type png)
 <use imagenes/Experimental/GACEP3103vsGACEPv2.png>
 Package pdftex.def Info: imagenes/Experimental/GACEP3103vsGACEPv2.png  used on 
-input line 1101.
+input line 1172.
 (pdftex.def)             Requested size: 211.26027pt x 126.93344pt.
-<imagenes/Experimental/barras/GACEP3103vsGACEPv2.png, id=1518, 289.08pt x 173.4
-48pt>
+<imagenes/Experimental/barras/GACEP3103vsGACEPv2.png, id=1593, 361.35pt x 216.8
+1pt>
 File: imagenes/Experimental/barras/GACEP3103vsGACEPv2.png Graphic file (type pn
 g)
 <use imagenes/Experimental/barras/GACEP3103vsGACEPv2.png>
 Package pdftex.def Info: imagenes/Experimental/barras/GACEP3103vsGACEPv2.png  u
-sed on input line 1108.
-(pdftex.def)             Requested size: 211.26027pt x 126.75624pt.
-LaTeX Info: Redefining \. on input line 1122.
-LaTeX Info: Redefining \% on input line 1122.
+sed on input line 1179.
+(pdftex.def)             Requested size: 211.26027pt x 126.75558pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 1193.
+LaTeX Info: Redefining \% on input line 1193.
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -5075,54 +5099,102 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[95 <./imagenes/Experimental/GACEPv356.png> <./imagenes/Experimental/barras/GAC
-EPv356.png> <./imagenes/Experimental/GACEP3103vsGACEPv2.png> <./imagenes/Experi
-mental/barras/GACEP3103vsGACEPv2.png>]
-<imagenes/Experimental/DiferenciasGACEPv56.png, id=1527, 289.68225pt x 174.0502
+[98 <./imagenes/Experimental/GACEPv356.png> <./imagenes/Experimental/barras/GAC
+EPv356.png>]
+<imagenes/Experimental/DiferenciasGACEPv56.png, id=1606, 289.68225pt x 174.0502
 5pt>
 File: imagenes/Experimental/DiferenciasGACEPv56.png Graphic file (type png)
 <use imagenes/Experimental/DiferenciasGACEPv56.png>
 Package pdftex.def Info: imagenes/Experimental/DiferenciasGACEPv56.png  used on
- input line 1168.
+ input line 1239.
 (pdftex.def)             Requested size: 289.68153pt x 174.0498pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imagenes/Experimental/Final.png, id=1531, 296.307pt x 166.82326pt>
+LaTeX Info: Redefining \. on input line 1250.
+LaTeX Info: Redefining \% on input line 1250.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[99 <./imagenes/Experimental/GACEP3103vsGACEPv2.png> <./imagenes/Experimental/b
+arras/GACEP3103vsGACEPv2.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imagenes/Experimental/Final.png, id=1622, 370.38374pt x 208.52907pt>
 File: imagenes/Experimental/Final.png Graphic file (type png)
 <use imagenes/Experimental/Final.png>
-Package pdftex.def Info: imagenes/Experimental/Final.png  used on input line 11
-86.
-(pdftex.def)             Requested size: 211.26027pt x 118.94426pt.
-<imagenes/Experimental/barras/Final.png, id=1532, 289.68225pt x 174.05025pt>
+Package pdftex.def Info: imagenes/Experimental/Final.png  used on input line 13
+13.
+(pdftex.def)             Requested size: 211.26027pt x 118.94234pt.
+<imagenes/Experimental/barras/Final.png, id=1623, 362.10281pt x 217.5628pt>
 File: imagenes/Experimental/barras/Final.png Graphic file (type png)
 <use imagenes/Experimental/barras/Final.png>
 Package pdftex.def Info: imagenes/Experimental/barras/Final.png  used on input 
-line 1193.
+line 1320.
 (pdftex.def)             Requested size: 211.26027pt x 126.93344pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 1204.
-LaTeX Info: Redefining \% on input line 1204.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[96]
-Overfull \hbox (9.12312pt too wide) in paragraph at lines 1227--1266
-[][] 
- []
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (capitulos/09_Conclusiones.tex
+LaTeX Info: Redefining \. on input line 1357.
+LaTeX Info: Redefining \% on input line 1357.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[100 <./imagenes/Experimental/DiferenciasGACEPv56.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1364.
+LaTeX Info: Redefining \% on input line 1364.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[101 <./imagenes/Experimental/Final.png> <./imagenes/Experimental/barras/Final.
+png>]
+LaTeX Info: Redefining \. on input line 1409.
+LaTeX Info: Redefining \% on input line 1409.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[102]
+LaTeX Info: Redefining \. on input line 1439.
+LaTeX Info: Redefining \% on input line 1439.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[103]) (capitulos/09_Conclusiones.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -5134,128 +5206,11 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[97 <./imagenes/Experimental/DiferenciasGACEPv56.png> <./imagenes/Experimental/
-Final.png> <./imagenes/Experimental/barras/Final.png>] [98]
-Cap\'{\i }tulo 11.
-) [99
-
-] [100
-
-]
-Overfull \hbox (0.31184pt too wide) in paragraph at lines 266--266
-\T1/lmr/m/n/10.95 objective com-bi-na-to-rial op-ti-mi-za-tion pro-blems using 
-Novel-First Ta-bu Search and MOEA/D,''
- []
-
-[101]
-LaTeX Info: Redefining \. on input line 265.
-LaTeX Info: Redefining \% on input line 265.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
-
-[102]
-Overfull \hbox (1.74744pt too wide) in paragraph at lines 266--266
-[]\T1/lmr/m/n/10.95 C. Witz-gall, ``Mathe-ma-ti-cal Methods of Si-te Se-lec-tio
-n for Elec-tro-nic Mes-sa-ge Sys-tems (EMS),''
- []
-
-LaTeX Info: Redefining \. on input line 265.
-LaTeX Info: Redefining \% on input line 265.
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
-
-[103] (apendices/resultados.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 14.1595pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.1595pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
-
 [104]
-Ap\'{e}ndice A.
+Cap\'{\i }tulo 11.
+[105
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 4.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 65.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 126.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 187.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 248.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 309.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 370.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 431.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 492.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 553.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 615.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 676.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 737.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 798.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 859.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 920.
-
-) [105
-
-]
+])
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -5265,60 +5220,64 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [106]
-LaTeX Info: Redefining \. on input line 275.
-LaTeX Info: Redefining \% on input line 275.
+Overfull \hbox (0.31184pt too wide) in paragraph at lines 268--268
+\T1/lmr/m/n/10.95 objective com-bi-na-to-rial op-ti-mi-za-tion pro-blems using 
+Novel-First Ta-bu Search and MOEA/D,''
+ []
+
+[107
+
+]
+LaTeX Info: Redefining \. on input line 267.
+LaTeX Info: Redefining \% on input line 267.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                Make it at least 14.1595pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.1595pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[107]
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+(fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
 [108]
-LaTeX Info: Redefining \. on input line 275.
-LaTeX Info: Redefining \% on input line 275.
+Overfull \hbox (1.74744pt too wide) in paragraph at lines 268--268
+[]\T1/lmr/m/n/10.95 C. Witz-gall, ``Mathe-ma-ti-cal Methods of Si-te Se-lec-tio
+n for Elec-tro-nic Mes-sa-ge Sys-tems (EMS),''
+ []
+
+LaTeX Info: Redefining \. on input line 267.
+LaTeX Info: Redefining \% on input line 267.
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 14.1595pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.1595pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
+
+[109] (apendices/resultados.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                Make it at least 14.1595pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.1595pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[109]
-
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+(fancyhdr)                \addtolength{\topmargin}{-4.1595pt}.
 
 [110]
-LaTeX Info: Redefining \. on input line 275.
-LaTeX Info: Redefining \% on input line 275.
+Ap\'{e}ndice A.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [111
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Package fancyhdr Warning: \headheight is too small (10.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
-
-[111]
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -5328,8 +5287,10 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [112]
-LaTeX Info: Redefining \. on input line 275.
-LaTeX Info: Redefining \% on input line 275.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 196.
+LaTeX Info: Redefining \% on input line 196.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -5340,6 +5301,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [113]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -5349,8 +5313,10 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [114]
-LaTeX Info: Redefining \. on input line 275.
-LaTeX Info: Redefining \% on input line 275.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 318.
+LaTeX Info: Redefining \% on input line 318.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -5361,6 +5327,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [115]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -5370,8 +5339,10 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [116]
-LaTeX Info: Redefining \. on input line 275.
-LaTeX Info: Redefining \% on input line 275.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 440.
+LaTeX Info: Redefining \% on input line 440.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -5382,6 +5353,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [117]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -5391,8 +5365,10 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [118]
-LaTeX Info: Redefining \. on input line 275.
-LaTeX Info: Redefining \% on input line 275.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 562.
+LaTeX Info: Redefining \% on input line 562.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -5403,6 +5379,9 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [119]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -5412,8 +5391,10 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
 [120]
-LaTeX Info: Redefining \. on input line 275.
-LaTeX Info: Redefining \% on input line 275.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 685.
+LaTeX Info: Redefining \% on input line 685.
 
 
 Package fancyhdr Warning: \headheight is too small (10.0pt): 
@@ -5423,21 +5404,328 @@ Package fancyhdr Warning: \headheight is too small (10.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
 
-[121] [122
+[121]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [123] (proyecto.aux
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[122]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 807.
+LaTeX Info: Redefining \% on input line 807.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[123]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[124]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 929.
+LaTeX Info: Redefining \% on input line 929.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[125]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[126]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1051.
+LaTeX Info: Redefining \% on input line 1051.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[127]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[128]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1173.
+LaTeX Info: Redefining \% on input line 1173.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[129]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[130]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1295.
+LaTeX Info: Redefining \% on input line 1295.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[131]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[132]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1417.
+LaTeX Info: Redefining \% on input line 1417.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[133]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[134]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1539.
+LaTeX Info: Redefining \% on input line 1539.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[135]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[136]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1661.
+LaTeX Info: Redefining \% on input line 1661.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[137]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[138]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1783.
+LaTeX Info: Redefining \% on input line 1783.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[139]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[140]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1905.
+LaTeX Info: Redefining \% on input line 1905.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[141]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[142]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 2027.
+LaTeX Info: Redefining \% on input line 2027.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[143])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[144]
+LaTeX Info: Redefining \. on input line 277.
+LaTeX Info: Redefining \% on input line 277.
+
+
+Package fancyhdr Warning: \headheight is too small (10.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.59999pt}.
+
+[145] [146
+
+] [147] (proyecto.aux
 LaTeX Info: Redefining \sptext on input line 29.
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
 )
 Package rerunfilecheck Info: File `proyecto.out' has not changed.
-(rerunfilecheck)             Checksum: EF2EB3C147FB5223FFF2CCB44533B202;6136.
+(rerunfilecheck)             Checksum: 0DC3A5E816BD8588F2816A723006B9D3;6134.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -5447,11 +5735,11 @@ Package logreq Info: Writing requests to 'proyecto.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25632 strings out of 479696
- 453400 string characters out of 2876991
- 2189362 words of memory out of 3000000
- 41747 multiletter control sequences out of 15000+200000
- 499495 words of font info for 77 fonts, out of 3000000 for 9000
+ 25789 strings out of 479696
+ 456304 string characters out of 2876991
+ 1353363 words of memory out of 3000000
+ 41838 multiletter control sequences out of 15000+200000
+ 507508 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,28n,111p,2205b,2448s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTe
@@ -5474,9 +5762,9 @@ ogram Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lm
 tt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Program F
 iles/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on proyecto.pdf (145 pages, 1423657 bytes).
+Output written on proyecto.pdf (169 pages, 1589031 bytes).
 PDF statistics:
- 1884 PDF objects out of 2073 (max. 8388607)
- 492 named destinations out of 1000 (max. 500000)
- 940 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2093 PDF objects out of 2487 (max. 8388607)
+ 549 named destinations out of 1000 (max. 500000)
+ 945 words of extra memory for PDF output out of 10000 (max. 10000000)
 

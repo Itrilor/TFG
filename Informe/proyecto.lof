@@ -15,73 +15,75 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Cruce en un punto\relax }}{57}{figure.caption.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Cruce en dos puntos\relax }}{57}{figure.caption.8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Cruce Uniforme\relax }}{57}{figure.caption.9}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Cruce HUX\relax }}{61}{figure.caption.10}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Ejemplo de instancia de problema\relax }}{52}{figure.caption.7}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Cruce en un punto\relax }}{58}{figure.caption.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Cruce en dos puntos\relax }}{59}{figure.caption.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Cruce Uniforme\relax }}{59}{figure.caption.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Cruce HUX\relax }}{63}{figure.caption.11}%
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.1}{\ignorespaces Comparación de AGEU y CHC\relax }}{76}{figure.caption.11}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.2}{\ignorespaces Gráfica asociada a la tabla \ref {diferenciasAGEU}\relax }}{76}{figure.caption.12}%
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Comparación de AGEU y CHC\relax }}{77}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.3}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasCHC}\relax }}{77}{figure.caption.13}%
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Gráfica asociada a la tabla \ref {diferenciasAGEU}\relax }}{78}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.4}{\ignorespaces Comparación de las distintas versiones del histórico\relax }}{78}{figure.caption.14}%
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasCHC}\relax }}{79}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.5}{\ignorespaces Comparación de los resultados del AGEU y GACEPv1\relax }}{79}{figure.caption.15}%
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Comparación de las distintas versiones del histórico\relax }}{80}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.6}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEPv1}\relax }}{80}{figure.caption.16}%
+\contentsline {figure}{\numberline {10.5}{\ignorespaces Comparación de los resultados del AGE y GACEPv1\relax }}{81}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.7}{\ignorespaces Comparación de los resultados del GACEPv1 y GACEPv2\relax }}{81}{figure.caption.17}%
+\contentsline {figure}{\numberline {10.6}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEPv1}\relax }}{82}{figure.caption.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.8}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEP_GRASP}\relax }}{82}{figure.caption.18}%
+\contentsline {figure}{\numberline {10.7}{\ignorespaces Comparación de los resultados del GACEPv1 y GACEPv2\relax }}{83}{figure.caption.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.9}{\ignorespaces Comparación de los resultados de los GACEPv3c\texttt {x}\relax }}{83}{figure.caption.19}%
+\contentsline {figure}{\numberline {10.8}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEP_GRASP}\relax }}{84}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.10}{\ignorespaces Comparación de los resultados de los GACEPv3c\texttt {x}wo\relax }}{83}{figure.caption.20}%
+\contentsline {figure}{\numberline {10.9}{\ignorespaces Comparación de los resultados de los GACEPv3c\texttt {x}\relax }}{86}{figure.caption.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.11}{\ignorespaces Comparación de los resultados de los GACEPv3c50 y GACEPv3c50wo\relax }}{84}{figure.caption.21}%
+\contentsline {figure}{\numberline {10.10}{\ignorespaces Comparación de los resultados de los GACEPv3c\texttt {x}wo\relax }}{86}{figure.caption.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.12}{\ignorespaces Comparación de los resultados de los GACEPv2 y GACEPv3c50\relax }}{84}{figure.caption.22}%
+\contentsline {figure}{\numberline {10.11}{\ignorespaces Comparación de los resultados de los GACEPv3c50 y GACEPv3c50wo\relax }}{87}{figure.caption.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.13}{\ignorespaces Comparación de los resultados de CHC y GACEPCHCv1\relax }}{86}{figure.caption.23}%
+\contentsline {figure}{\numberline {10.12}{\ignorespaces Comparación de los resultados de los GACEPv2 y GACEPv3c50\relax }}{87}{figure.caption.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.14}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEPCHCv1}\relax }}{87}{figure.caption.24}%
+\contentsline {figure}{\numberline {10.13}{\ignorespaces Comparación de los resultados de CHC y GACEPCHCv1\relax }}{89}{figure.caption.24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.15}{\ignorespaces Comparación de los resultados de GACEPCHCv1 y GACEPCHCv2\relax }}{87}{figure.caption.25}%
+\contentsline {figure}{\numberline {10.14}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEPCHCv1}\relax }}{90}{figure.caption.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.16}{\ignorespaces Comparación de los resultados de GACEPv2 y GACEPCHCv1\relax }}{88}{figure.caption.26}%
+\contentsline {figure}{\numberline {10.15}{\ignorespaces Comparación de los resultados de GACEPCHCv1 y GACEPCHCv2\relax }}{90}{figure.caption.26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.17}{\ignorespaces Gráfica asociada a la tabla \ref {GACEPv2Diversity}\relax }}{89}{figure.caption.27}%
+\contentsline {figure}{\numberline {10.16}{\ignorespaces Comparación de los resultados de GACEPv2 y GACEPCHCv1\relax }}{91}{figure.caption.27}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.18}{\ignorespaces Comparación de los resultados de GACEPv2 y GACEPv4\relax }}{90}{figure.caption.28}%
+\contentsline {figure}{\numberline {10.17}{\ignorespaces Gráfica asociada a la tabla \ref {GACEPv2Diversity}\relax }}{92}{figure.caption.28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.19}{\ignorespaces Comparación de los resultados de GACEPv2 y GACEPv5\relax }}{91}{figure.caption.29}%
+\contentsline {figure}{\numberline {10.18}{\ignorespaces Comparación de los resultados de GACEPv2 y GACEPv4\relax }}{93}{figure.caption.29}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.20}{\ignorespaces Comparación de los resultados de GACEPv2 y GACEPv6\relax }}{91}{figure.caption.30}%
+\contentsline {figure}{\numberline {10.19}{\ignorespaces Comparación de los resultados de GACEPv2 y GACEPv5\relax }}{94}{figure.caption.30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.21}{\ignorespaces Comparación de los resultados de GACEPv6 y GACEPv7\relax }}{92}{figure.caption.31}%
+\contentsline {figure}{\numberline {10.20}{\ignorespaces Comparación de los resultados de GACEPv2 y GACEPv6\relax }}{95}{figure.caption.31}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.22}{\ignorespaces Comparación de los resultados de los GACEPv35c\texttt {x}\relax }}{93}{figure.caption.32}%
+\contentsline {figure}{\numberline {10.21}{\ignorespaces Comparación de los resultados de GACEPv6 y GACEPv7\relax }}{95}{figure.caption.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.23}{\ignorespaces Comparación de los resultados de los GACEPv36c\texttt {x}\relax }}{94}{figure.caption.33}%
+\contentsline {figure}{\numberline {10.22}{\ignorespaces Comparación de los resultados de los GACEPv8c\texttt {x}\relax }}{96}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.24}{\ignorespaces Comparación de los resultados de los GACEPv356c\texttt {x}\relax }}{95}{figure.caption.34}%
+\contentsline {figure}{\numberline {10.23}{\ignorespaces Comparación de los resultados de los GACEPv9c\texttt {x}\relax }}{97}{figure.caption.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.25}{\ignorespaces Comparación de los resultados de las versiones de esta sección con GACEPv2\relax }}{95}{figure.caption.35}%
+\contentsline {figure}{\numberline {10.24}{\ignorespaces Comparación de los resultados de los GACEPv11c\texttt {x}\relax }}{98}{figure.caption.35}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.26}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEPv56}\relax }}{97}{figure.caption.36}%
+\contentsline {figure}{\numberline {10.25}{\ignorespaces Comparación de los resultados de las versiones de esta sección con GACEPv2\relax }}{99}{figure.caption.36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10.27}{\ignorespaces Comparación de los resultados de las versiones de esta sección con GACEPv2\relax }}{97}{figure.caption.37}%
+\contentsline {figure}{\numberline {10.26}{\ignorespaces Gráfica asociada a la tabla \ref {DiferenciasGACEPv56}\relax }}{100}{figure.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10.27}{\ignorespaces Comparación de los resultados de las versiones de esta sección con GACEPv2\relax }}{101}{figure.caption.38}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

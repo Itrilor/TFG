@@ -1117,6 +1117,47 @@
       \verb C\:\\Users\\irene\\Zotero\\storage\\VDKN8S99\\Pham - 1994 - Competitive Evolution A Natural Approach to Opera.pdf
       \endverb
     \endentry
+    \entry{wolpertNoFreeLunch1997}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9e3b028ab5fe6676668bb388f38a5dea}{%
+           family={Wolpert},
+           familyi={W\bibinitperiod},
+           given={D.H.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=27dff62574d6d47b2419ae464415e631}{%
+           family={Macready},
+           familyi={M\bibinitperiod},
+           given={W.G.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{fullhash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{bibnamehash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{authorbibnamehash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{authornamehash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{authorfullhash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A framework is developed to explore the connection between effective optimization algorithms and the problems they are solving. A number of "no free lunch" (NFL) theorems are presented which establish that for any algorithm, any elevated performance over one class of problems is offset by performance over another class. These theorems result in a geometric interpretation of what it means for an algorithm to be well suited to an optimization problem. Applications of the NFL theorems to information-theoretic aspects of optimization and benchmark measures of performance are also presented. Other issues addressed include time-varying optimization problems and a priori "head-to-head" minimax distinctions between optimization algorithms, distinctions that result despite the NFL theorems' enforcing of a type of uniformity over all algorithms.}
+      \field{issn}{1941-0026}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{No Free Lunch Theorems for Optimization}
+      \field{volume}{1}
+      \field{year}{1997}
+      \field{pages}{67\bibrangedash 82}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/4235.585893
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\5PM3TG2V\\Wolpert y Macready - 1997 - No free lunch theorems for optimization.pdf;C\:\\Users\\irene\\Zotero\\storage\\JUK3GCAH\\585893.html
+      \endverb
+      \keyw{Algorithm design and analysis,Bayesian methods,Evolutionary computation,Information theory,Iron,Minimax techniques,Performance analysis,Probability distribution,Simulated annealing}
+    \endentry
     \entry{chaturvediModifiedGeneticAlgorithm2019}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=3193831c4904896afb14b9367dac356b}{%
@@ -1254,8 +1295,8 @@
       \strng{authorbibnamehash}{4bf297726be669aace7a3e27028f1ab3}
       \strng{authornamehash}{4bf297726be669aace7a3e27028f1ab3}
       \strng{authorfullhash}{4bf297726be669aace7a3e27028f1ab3}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Genetic Algorithm (GA) has found wide application in path optimization problem. In many fields such as navigating system, oil transportation, paths between the starting node and the termination node often have distinct number of relay-nodes, which leads to the corresponding chromosomes would have different length. We refer to chromosomes with non-consistent lengths as the variable-length chromosomes. This paper first investigated GAs with variable-length chromosomes widely used and found that Same Point (SP) crossover is the most popular crossover mechanism. Then, a new crossover mechanism called Same Adjacency (SA) is proposed for GA with variable-length chromosomes for path optimization problem, which outperforms GA with SP by a better search capability as the mathematical analysis shows. The simulation study indicates that GAs with our crossover operators could obtain a better solution, as compared to GAs with SP, while still being able to converge fast in different networks with varied sizes.}
@@ -1726,8 +1767,8 @@
       \strng{authorbibnamehash}{4a8fa88c49eab072b90519a259a711e7}
       \strng{authornamehash}{4a8fa88c49eab072b90519a259a711e7}
       \strng{authorfullhash}{4a8fa88c49eab072b90519a259a711e7}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The interest in nonparametric statistical analysis has grown recently in the field of computational intelligence. In many experimental studies, the lack of the required properties for a proper application of parametric procedures –{} independence, normality, and homoscedasticity –{} yields to nonparametric ones the task of performing a rigorous comparison among algorithms.}
@@ -1750,6 +1791,98 @@
       \endverb
       \verb{file}
       \verb C\:\\Users\\irene\\Zotero\\storage\\R3QTVWLN\\Derrac et al. - 2011 - A practical tutorial on the use of nonparametric s.pdf
+      \endverb
+    \endentry
+    \entry{garciaStudyUseNonparametric2009}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1691f3ff4356c12149ac4f858ead7e04}{%
+           family={García},
+           familyi={G\bibinitperiod},
+           given={Salvador},
+           giveni={S\bibinitperiod}}}%
+        {{hash=381bf37312a71cebeee50fc633f67c46}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=277f0ff0fa87b54f650fdac32a1b4c5a}{%
+           family={Lozano},
+           familyi={L\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9f81f46436ba77791311a5db20ff5c25}{%
+           family={Herrera},
+           familyi={H\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{8eeb0e50f662970d4f4cf2a1abc4c46f}
+      \strng{fullhash}{8eeb0e50f662970d4f4cf2a1abc4c46f}
+      \strng{bibnamehash}{8eeb0e50f662970d4f4cf2a1abc4c46f}
+      \strng{authorbibnamehash}{8eeb0e50f662970d4f4cf2a1abc4c46f}
+      \strng{authornamehash}{8eeb0e50f662970d4f4cf2a1abc4c46f}
+      \strng{authorfullhash}{8eeb0e50f662970d4f4cf2a1abc4c46f}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In recent years, there has been a growing interest for the experimental analysis in the field of evolutionary algorithms. It is noticeable due to the existence of numerous papers which analyze and propose different types of problems, such as the basis for experimental comparisons of algorithms, proposals of different methodologies in comparison or proposals of use of different statistical techniques in algorithms' comparison.}
+      \field{issn}{1572-9397}
+      \field{journaltitle}{Journal of Heuristics}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{6}
+      \field{shorttitle}{A Study on the Use of Non-Parametric Tests for Analyzing the Evolutionary Algorithms' Behaviour}
+      \field{title}{A Study on the Use of Non-Parametric Tests for Analyzing the Evolutionary Algorithms' Behaviour: A~Case Study on~the~{{CEC}}'2005 {{Special Session}} on~{{Real Parameter Optimization}}}
+      \field{urlday}{24}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{volume}{15}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \field{pages}{617\bibrangedash 644}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1007/s10732-008-9080-4
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\irene\\Zotero\\storage\\2MXT6LPB\\García et al. - 2009 - A study on the use of non-parametric tests for ana.pdf
+      \endverb
+      \keyw{Evolutionary algorithms,Non-parametric~tests,Parametric tests,Statistical analysis of experiments}
+    \endentry
+    \entry{raderjrQuadraticKnapsackProblem2002}{article}{}
+      \name{author}{2}{}{%
+        {{hash=42f529a22426fe52a73b1d6ebd9893f4}{%
+           family={Rader\bibnamedelima Jr},
+           familyi={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e310acd82680d78595c854fd57d9156a}{%
+           family={Woeginger},
+           familyi={W\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{23ae5269d280f014bf3ab731956cfbae}
+      \strng{fullhash}{23ae5269d280f014bf3ab731956cfbae}
+      \strng{bibnamehash}{23ae5269d280f014bf3ab731956cfbae}
+      \strng{authorbibnamehash}{23ae5269d280f014bf3ab731956cfbae}
+      \strng{authornamehash}{23ae5269d280f014bf3ab731956cfbae}
+      \strng{authorfullhash}{23ae5269d280f014bf3ab731956cfbae}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider various special cases of the quadratic 0–1 knapsack problem (QKP) for which the underlying graph structure is fairly simple. For the variant with edge series–parallel graphs, we give a dynamic programming algorithm with pseudo-polynomial time complexity, and a fully polynomial time approximation scheme. In strong contrast to this, the variant with vertex series–parallel graphs is shown to be strongly NP-complete.}
+      \field{journaltitle}{Operations Research Letters}
+      \field{month}{6}
+      \field{title}{The Quadratic 0–1 Knapsack Problem with Series–Parallel Support}
+      \field{volume}{30}
+      \field{year}{2002}
+      \field{pages}{159\bibrangedash 166}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/S0167-6377(02)00122-0
       \endverb
     \endentry
     \entry{herrera-poyatosGeneticMemeticAlgorithm2017}{misc}{}
@@ -1859,7 +1992,7 @@
       \verb C\:\\Users\\irene\\Zotero\\storage\\MQAWZ92B\\García-Martínez et al. - 2014 - Strategic oscillation for the quadratic multiple k.pdf
       \endverb
     \endentry
-    \entry{oppacherShiftingBalanceGenetic}{article}{}
+    \entry{oppacherShiftingBalanceGenetic1999a}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=939a448e8584d119565fb22435b51741}{%
            family={Oppacher},
@@ -1872,6 +2005,12 @@
            given={Mark},
            giveni={M\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {San Francisco, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann Publishers Inc.}%
+      }
       \strng{namehash}{ae8e3032bdc60aa66ea629fb388be3e6}
       \strng{fullhash}{ae8e3032bdc60aa66ea629fb388be3e6}
       \strng{bibnamehash}{ae8e3032bdc60aa66ea629fb388be3e6}
@@ -1881,12 +2020,23 @@
       \field{sortinit}{4}
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
+      \field{labeltitlesource}{shorttitle}
       \field{abstract}{Two observed deficiencies of the GA are its tendency to get trapped at local maxima and the difficulty it has handling a changing environment after convergence has occurred. A mechanism proposed by Sewall Wright in the 1930s addresses the problem of premature convergence: his Shifting Balance Theory (SBT) of evolution. In this work the SBT has been modified to remove defects inherent in its original formulation, while keeping the properties that should both increase the adaptive abilities of the GA and prevent it from prematurely converging. The system has been implemented and is called the Shifting Balance Genetic Algorithm (SBGA). Experimental results and analysis are presented demonstrating that the SBGA does, in fact, lessen the problem of premature convergence and also improves performance under a dynamic environment, thereby mitigating both deficiencies.}
-      \field{langid}{english}
-      \field{title}{The {{Shifting Balance Genetic Algorithm}}: {{Improving}} the {{GA}} in a {{Dynamic Environment}}}
+      \field{booktitle}{Proceedings of the 1st {{Annual Conference}} on {{Genetic}} and {{Evolutionary Computation}} - {{Volume}} 1}
+      \field{isbn}{978-1-55860-611-1}
+      \field{month}{7}
+      \field{series}{{{GECCO}}'99}
+      \field{shorttitle}{The {{Shifting Balance Genetic Algorithm}}}
+      \field{title}{The {{Shifting Balance Genetic Algorithm}}: Improving the {{GA}} in a Dynamic Environment}
+      \field{urlday}{25}
+      \field{urlmonth}{6}
+      \field{urlyear}{2023}
+      \field{year}{1999}
+      \field{urldateera}{ce}
+      \field{pages}{504\bibrangedash 510}
+      \range{pages}{7}
       \verb{file}
-      \verb C\:\\Users\\irene\\Zotero\\storage\\YA44AL4J\\Oppacher y Wineberg - The Shifting Balance Genetic Algorithm Improving .pdf
+      \verb C\:\\Users\\irene\\Zotero\\storage\\NRWQAYUW\\Oppacher y Wineberg - 1999 - The Shifting Balance Genetic Algorithm improving .pdf
       \endverb
     \endentry
   \enddatalist
